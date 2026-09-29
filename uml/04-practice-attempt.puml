@@ -1,0 +1,51 @@
+@startuml
+title SEQ-04 - Practice Session, Exercise and Authoritative Attempt
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+database DB as "product_gotit"
+participant Speech as "Speech Provider (optional)"
+
+User -> Web: Start smart/manual session
+Web -> GotIt: POST /practice/sessions\nIdempotency-Key + type/scope/count
+GotIt -> Core: Authenticate + practice.play entitlement
+GotIt -> DB: Rank queue / validate explicit scope
+critical Create or replay session
+  GotIt -> DB: Save selection snapshot + receipt
+end
+GotIt --> Web: session
+opt Introductory study
+  Web -> GotIt: GET /sessions/:id/study
+  GotIt -> DB: Load owned current-revision cards
+  GotIt --> Web: source + primary translation
+end
+Web -> GotIt: POST /sessions/:id/exercises
+GotIt -> DB: Create private exercises\nexpected answers + expiry + revision
+GotIt --> Web: prompts/opaque choices only
+Web --> User: Render exercise
+User -> Web: Answer / choice / rating / skip
+opt Pronunciation
+  Web -> GotIt: POST /pronunciation/assessments\nWAV + exerciseId + Idempotency-Key
+  GotIt -> Speech: Transient assessment
+  Speech --> GotIt: transcript/confidence/score evidence
+else Other exercise
+  Web -> GotIt: POST /practice/attempts\nIdempotency-Key + one answer mode
+end
+critical Score and commit atomically
+  GotIt -> DB: Lock exercise/session/item
+  GotIt -> GotIt: Verify owner, expiry, unused, current revision
+  GotIt -> GotIt: Calculate score/result/skill effects
+  GotIt -> DB: Consume exercise + insert attempt/effects
+  GotIt -> DB: Project skills/mastery/review schedule
+  GotIt -> DB: Insert XP ledger + daily activity + algorithm event + receipt
+end
+GotIt --> Web: authoritative receipt
+Web --> User: Feedback, XP, progress and next review
+note over Web,GotIt
+The client never submits score, result, XP or mastery.
+Skip creates no learning progress, streak or XP.
+end note
+@enduml
+

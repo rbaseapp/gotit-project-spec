@@ -1,0 +1,53 @@
+@startuml
+title SEQ-11 - Controlled Migration and Deployment
+autonumber
+actor Owner as "Release Owner"
+participant CI
+participant Backup
+control Migrator
+database DB
+control Core
+control GotIt
+control Web
+control Chrome as "Chrome Store Candidate"
+participant Monitor
+
+Owner -> CI: Approve exact commits and release scope
+CI -> CI: Typecheck/lint/unit/contract/build/security checks
+break Quality gate fails
+  CI --> Owner: Block release with evidence
+end
+Owner -> Backup: Create managed + schema backup
+Backup --> Owner: Backup identifier verified
+Owner -> Migrator: Run preflight/normalization audit
+Migrator -> DB: Read-only compatibility checks
+Migrator --> Owner: Expected baseline
+Owner -> Migrator: Run additive migration with dedicated credential
+Migrator -> DB: Advisory lock + forward migrations
+Migrator --> Owner: Version and verification result
+alt Migration fails
+  Owner -> Owner: Stop deployment, assess restore/forward-fix
+else Migration succeeds
+  Owner -> Core: Deploy compatible Core if required
+  Owner -> GotIt: Deploy product backend
+  GotIt -> DB: Startup schema/privilege check
+  Owner -> Web: Deploy gateway/client
+  Owner -> Chrome: Build/package candidate (store release may lag)
+  par Health and readiness
+    Monitor -> Core: /health and /ready
+    Monitor -> GotIt: /health and /ready
+    Monitor -> Web: /health and /ready
+  end
+  Owner -> Monitor: Authenticated smoke critical flows
+  alt Smoke/metrics fail
+    Owner -> Owner: Roll back compatible images or forward-fix\nDo not run destructive down migration blindly
+  else Healthy
+    Owner -> Owner: Record evidence, version and status
+  end
+end
+note over Owner,DB
+Runtime and migrator credentials must be separated.
+Production completion requires live acceptance, not only CI success.
+end note
+@enduml
+

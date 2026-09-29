@@ -1,0 +1,53 @@
+@startuml
+title SEQ-01 - Registration, Login and OAuth
+autonumber
+actor User
+boundary Client as "Web / Chrome"
+control Core
+database CoreDB as "PostgreSQL core"
+participant OAuth as "Google / Facebook"
+
+User -> Client: Choose email/password or OAuth
+alt Email registration
+  Client -> Core: POST /auth/register\nX-Application-Key: gotit\n{email,password}
+  Core -> CoreDB: Resolve active application
+  Core -> CoreDB: Find user by application + normalized email
+  break Existing identity cannot register
+    Core --> Client: 409 USER_ALREADY_EXISTS
+  end
+  Core -> Core: Argon2id hash password
+  critical Atomic account creation
+    Core -> CoreDB: Insert application_user
+    Core -> CoreDB: Insert password_credential
+    Core -> CoreDB: Insert auth_session(refresh hash)
+  end
+else Email login
+  Client -> Core: POST /auth/login\n{email,password}
+  Core -> CoreDB: Load scoped credential/user
+  Core -> Core: Verify Argon2id
+  break Missing/wrong/disabled
+    Core --> Client: 401 INVALID_CREDENTIALS or USER_DISABLED
+  end
+  Core -> CoreDB: Insert auth_session(refresh hash)
+else OAuth
+  Client -> OAuth: Interactive provider flow
+  OAuth --> Client: ID token or user access token
+  Client -> Core: POST /auth/google|facebook
+  Core -> CoreDB: Load provider client for application
+  Core -> OAuth: Verify token, audience/app, expiry, email
+  OAuth --> Core: verified subject + verified email
+  critical Resolve identity
+    Core -> CoreDB: Reuse provider subject OR link verified email OR create user
+    Core -> CoreDB: Insert/update oauth_identity + session
+  end
+end
+Core -> Core: Sign short-lived JWT\nformat rotating refresh token
+Core --> Client: user + accessToken + refreshToken + expiresIn
+Client -> Client: Access in memory/session\nRefresh in approved storage
+Client --> User: Authenticated application
+note over Core,CoreDB
+No global user. Email and provider identity are scoped by application.
+Role is loaded from DB, never accepted from registration input.
+end note
+@enduml
+

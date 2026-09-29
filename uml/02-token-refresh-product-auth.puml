@@ -1,0 +1,48 @@
+@startuml
+title SEQ-02 - Token Refresh and GotIt Product Authentication
+autonumber
+actor User
+boundary Client
+control Core
+control GotIt as "GotIt Backend"
+database CoreDB as "core"
+
+User -> Client: Open protected screen / invoke action
+alt Access token valid beyond skew
+  Client -> GotIt: Product request\nAuthorization: Bearer JWT
+else Access missing or near expiry
+  Client -> Core: POST /auth/refresh\n{refreshToken}
+  Core -> CoreDB: SELECT session FOR UPDATE
+  Core -> Core: Validate application/user/hash/expiry/revocation
+  break Invalid or replayed refresh
+    Core --> Client: 401 INVALID_REFRESH_TOKEN
+    Client -> Client: Clear tokens
+    Client --> User: Sign-in required
+  end
+  critical Rotate secret
+    Core -> CoreDB: Replace refresh hash + last_used_at
+    Core -> Core: Sign new access JWT
+  end
+  Core --> Client: rotated tokens
+  Client -> GotIt: Product request with new JWT
+end
+GotIt -> Core: GET /auth/me\nX-Application-Key: gotit\nBearer same JWT
+Core -> Core: Verify signature, issuer, audience, app and claims
+Core -> CoreDB: Load current user status and role
+alt Valid active identity
+  Core --> GotIt: trusted user/application/role
+  GotIt -> GotIt: Build gotitAuth scope
+  GotIt -> GotIt: Entitlement lookup when route requires it
+  GotIt --> Client: Product response
+else Invalid/disabled/wrong application
+  Core --> GotIt: 401/403
+  GotIt --> Client: fail closed
+else Core unavailable
+  GotIt --> Client: 503 CORE_AUTH_UNAVAILABLE
+end
+note over Client,GotIt
+Client never supplies application_user_id as authority.
+GotIt does not bypass Core when Core is unavailable.
+end note
+@enduml
+

@@ -1,0 +1,51 @@
+@startuml
+title SEQ-08 - Paddle Checkout, Webhook Fulfillment and Access
+autonumber
+actor User
+boundary Web
+control Gateway as "Frontend Gateway"
+control Core
+participant Paddle
+database DB as "core billing"
+control GotIt
+
+User -> Web: Choose paid plan
+Web -> Core: POST /billing/checkout\nBearer + Idempotency-Key + planKey
+Core -> DB: Authenticate user and load active plan
+critical Checkout idempotency
+  Core -> DB: Lock/create checkout attempt
+  Core -> Paddle: Create scoped hosted transaction
+  Paddle --> Core: transactionId + checkout URL
+  Core -> DB: Save provider transaction/reference
+end
+Core --> Web: hosted URL
+Web -> Gateway: GET /runtime-config
+Gateway --> Web: public Paddle token/environment/price IDs
+Web -> Paddle: Open checkout overlay
+User -> Paddle: Payment/confirmation
+Paddle --> User: Provider result
+Paddle -> Core: POST /billing/webhooks/paddle\nraw body + signature
+Core -> Core: Verify exact raw-body signature
+break Invalid signature
+  Core --> Paddle: non-2xx for retry/security
+end
+critical Idempotent fulfillment
+  Core -> DB: Lock webhook event ID
+  alt Duplicate successfully processed
+    Core --> Paddle: duplicate acknowledgement
+  else New/retryable event
+    Core -> Core: Reject stale lifecycle transition
+    Core -> DB: Upsert customer/subscription/transaction projection
+    Core -> DB: Mark event processed/failed
+  end
+end
+Core --> Paddle: 2xx processed/ignored/duplicate
+Web -> Core: GET /billing/status
+Core -> DB: Derive paid/trial/free and entitlements
+Core --> Web: status
+Web -> GotIt: Product mutation
+GotIt -> Core: GET billing/status for guarded capability
+Core --> GotIt: entitlements
+GotIt --> Web: allowed or SUBSCRIPTION_REQUIRED
+@enduml
+

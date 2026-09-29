@@ -1,0 +1,44 @@
+@startuml
+title SEQ-10 - Data Export and Idempotent Capture Import
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+database DB as "product_gotit"
+
+alt Export
+  User -> Web: Export library
+  loop Until nextCursor is null
+    Web -> GotIt: GET /export?cursor&limit
+    GotIt -> Core: Authenticate
+    GotIt -> DB: Read owned current non-deleted items\ntranslations/skills/tags/progress
+    GotIt --> Web: learning_library_v1 page + nextCursor
+  end
+  Web -> Web: Validate/assemble versioned JSON
+  Web --> User: Download file
+else Import
+  User -> Web: Select JSON file
+  Web -> Web: Enforce size and parse capture_requests_v1
+  break Invalid format/file
+    Web --> User: Local validation error
+  end
+  Web -> GotIt: POST /import\n1..100 eventId+capture entries
+  GotIt -> Core: Authenticate + vocabulary.write
+  loop Each entry within total deadline
+    GotIt -> GotIt: Invoke capture save with entry.eventId
+    GotIt -> DB: Create/replay idempotent capture receipt
+    alt Success
+      GotIt -> GotIt: Add succeeded result
+    else Entry-specific failure
+      GotIt -> GotIt: Add safe error code and continue
+    end
+  end
+  GotIt --> Web: 200 all succeeded / 207 partial results
+  Web --> User: Per-entry results + retry failed only
+end
+note over Web,GotIt
+Import does not accept client-provided attempts, mastery, scores or XP.
+end note
+@enduml
+

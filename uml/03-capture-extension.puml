@@ -1,0 +1,54 @@
+@startuml
+title SEQ-03 - Chrome Context Capture, Preview and Idempotent Save
+autonumber
+actor User
+boundary Page
+boundary Content as "Content Script"
+control Worker as "Extension Service Worker"
+control Core
+control GotIt
+participant Provider as "Translation / AI"
+database DB as "product_gotit"
+
+User -> Page: Select/double-click text
+Page -> Content: Selection event
+Content -> Content: Extract bounded sentence/title/URL/language hint
+Content -> Worker: Validated capture context message
+Worker -> Worker: Validate message shape and feature settings
+Worker -> Core: Refresh if access token is missing/expiring
+Worker -> GotIt: POST /captures/preview\nBearer + bounded context
+GotIt -> Core: /auth/me
+GotIt -> DB: Load profile and existing senses
+GotIt -> Provider: Translate/enrich untrusted bounded data
+Provider --> GotIt: Candidate meanings
+GotIt -> GotIt: Validate/normalize output
+GotIt -> DB: Store bounded enrichment trace
+GotIt -> GotIt: Sign candidate selection tokens
+GotIt --> Worker: Preview + candidates + existing senses
+Worker --> Content: Inline preview (no tokens)
+Content --> User: Show meanings and sense choices
+User -> Content: Choose candidate + merge/new sense
+Content -> Worker: INLINE_SAVE(captureId,candidateIndex)
+Worker -> Worker: Reconstruct server-validated payload\nReuse stable event UUID
+Worker -> GotIt: POST /captures\nIdempotency-Key + payload
+critical Atomic save
+  GotIt -> DB: Advisory lock by user+event
+  alt Existing receipt, same hash
+    DB --> GotIt: Stored receipt
+  else Existing key, different hash
+    GotIt --> Worker: 409 IDEMPOTENCY_CONFLICT
+  else New event
+    GotIt -> GotIt: Verify signed selection and sense decision
+    GotIt -> DB: Lock lexical scope
+    GotIt -> DB: Create/merge item + translations + occurrence + skills + receipt
+  end
+end
+GotIt --> Worker: Created/merged capture receipt
+Worker --> Content: Saved state + practice invitation
+Content --> User: Confirmation
+note over Content,Worker
+Content script never receives access/refresh/provider tokens.
+Retry is safe only with the same event UUID and payload.
+end note
+@enduml
+

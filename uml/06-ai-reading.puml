@@ -1,0 +1,53 @@
+@startuml
+title SEQ-06 - AI Reading Preview, Publication and Quiz
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+participant AI as "Configured Reading Provider"
+database DB as "product_gotit"
+
+User -> Web: Configure topic/language/level/type/length/items
+Web -> GotIt: GET /reading/quota
+GotIt -> Core: Authenticate + reading.ai entitlement
+GotIt -> DB: Read quota bucket
+GotIt --> Web: limit/used/remaining/reset
+User -> Web: Generate
+Web -> GotIt: POST /reading/preview
+GotIt -> DB: Reserve quota atomically
+GotIt -> DB: Resolve owned explicit/smart target items
+GotIt -> AI: Structured generation\nUntrusted topic and target meanings
+AI --> GotIt: title + bodyText
+GotIt -> GotIt: Validate length/schema and bind exact target ranges
+alt Missing targets
+  GotIt -> AI: One bounded repair with previous draft + missing targets
+  AI --> GotIt: repaired draft
+  GotIt -> GotIt: Validate or deterministic salvage/bind
+end
+alt Generation fails
+  GotIt -> DB: Release quota reservation
+  GotIt --> Web: Safe provider error
+else Valid preview
+  GotIt -> GotIt: Create signed/encrypted publication token
+  GotIt --> Web: preview + targets + token
+end
+Web --> User: Show unpublished preview
+User -> Web: Open/save reading
+Web -> GotIt: POST /reading\nIdempotency-Key + publicationToken
+critical Publish or replay
+  GotIt -> GotIt: Verify token scope/expiry/snapshots
+  GotIt -> DB: Insert generated_content + target bindings + receipt
+end
+GotIt --> Web: Opened reading
+opt Article quiz
+  Web -> GotIt: Create article_quiz practice session
+  GotIt -> DB: Bind exercises to reading targets
+  GotIt --> Web: Server-scored quiz flow
+end
+note over Web,DB
+Preview alone is not persisted as opened content and grants no learning evidence.
+Only scored quiz attempts affect learning.
+end note
+@enduml
+

@@ -1,0 +1,172 @@
+<div id="gotit-course-demo" class="viz-dotted-background" lang="he" dir="rtl">
+  <style>
+    #gotit-course-demo { --g-surface:light-dark(#ffffff,#18212d); --g-soft:light-dark(#f3f6fb,#222e3d); --g-ink:light-dark(#17283f,#edf3fc); --g-muted:light-dark(#53657a,#bac9dc); --g-line:light-dark(#dce4ef,#3b4a60); --g-brand:light-dark(#2457b5,#b7cfff); --g-onbrand:light-dark(#ffffff,#142e57); --g-positive:light-dark(#196348,#9ce0c3); --g-note:light-dark(#edf4ff,#263954); padding:20px 10px; font:400 16px/1.6 "Segoe UI",Arial,sans-serif; color:var(--g-ink); }
+    #gotit-course-demo * { box-sizing:border-box; }
+    #gotit-course-demo .g-window { max-width:680px; margin:auto; background:var(--g-surface); border:1px solid var(--g-line); border-radius:22px; overflow:clip; }
+    #gotit-course-demo .g-header { padding:16px 24px 0; border-bottom:1px solid var(--g-line); }
+    #gotit-course-demo .g-brand-row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    #gotit-course-demo .g-logo { color:var(--g-brand); font-size:21px; font-weight:500; letter-spacing:-.6px; }
+    #gotit-course-demo .g-meta { color:var(--g-muted); font-size:13px; }
+    #gotit-course-demo .g-nav { display:flex; flex-wrap:wrap; gap:4px; }
+    #gotit-course-demo button { font:inherit; color:inherit; }
+    #gotit-course-demo .g-nav button { background:transparent; border:0; border-bottom:3px solid transparent; padding:10px 13px; min-height:44px; font-size:14px; }
+    #gotit-course-demo .g-nav button[aria-pressed="true"] { color:var(--g-brand); border-bottom-color:var(--g-brand); font-weight:500; }
+    #gotit-course-demo .g-main { padding:24px; }
+    #gotit-course-demo h2 { font-size:25px; line-height:1.3; font-weight:500; margin:5px 0 10px; }
+    #gotit-course-demo h3 { font-size:18px; font-weight:500; margin:0 0 7px; }
+    #gotit-course-demo p { margin:7px 0; }
+    #gotit-course-demo .g-eyebrow { color:var(--g-brand); font-size:13px; font-weight:500; }
+    #gotit-course-demo .g-lead { color:var(--g-muted); margin-bottom:18px; }
+    #gotit-course-demo .g-button { border:1px solid var(--g-line); border-radius:11px; padding:10px 16px; background:var(--g-surface); min-height:44px; }
+    #gotit-course-demo .g-primary { color:var(--g-onbrand); background:var(--g-brand); border-color:transparent; font-weight:500; }
+    #gotit-course-demo .g-button:disabled { opacity:.5; cursor:not-allowed; }
+    #gotit-course-demo .g-link { border:0; padding:9px 0; min-height:44px; color:var(--g-brand); background:transparent; }
+    #gotit-course-demo .g-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:18px; }
+    #gotit-course-demo .g-unit { border-bottom:1px solid var(--g-line); }
+    #gotit-course-demo .g-unit summary { display:flex; align-items:flex-start; gap:12px; list-style:none; padding:16px 0; }
+    #gotit-course-demo .g-unit summary::-webkit-details-marker { display:none; }
+    #gotit-course-demo .g-unit summary::after { content:'+'; margin-inline-start:auto; color:var(--g-brand); font-size:20px; }
+    #gotit-course-demo .g-unit[open] summary::after { content:'−'; }
+    #gotit-course-demo .g-number { width:31px; height:31px; flex:0 0 31px; display:grid; place-items:center; border-radius:9px; background:var(--g-soft); font-size:14px; color:var(--g-muted); }
+    #gotit-course-demo .g-unit-title { font-weight:500; }
+    #gotit-course-demo .g-unit-outcome { font-size:14px; color:var(--g-muted); margin-top:3px; }
+    #gotit-course-demo.g-compact .g-unit:not([open]) .g-unit-outcome { display:none; }
+    #gotit-course-demo .g-unit-detail { padding:0 43px 16px 0; font-size:14px; }
+    #gotit-course-demo .g-unit-detail ol { margin:8px 0 12px; padding-inline-start:22px; }
+    #gotit-course-demo .g-unit-detail li { padding:3px 0; }
+    #gotit-course-demo .g-band { border-radius:13px; padding:16px; background:var(--g-note); margin:17px 0; }
+    #gotit-course-demo .g-progress { height:5px; border-radius:3px; background:var(--g-soft); margin:12px 0 24px; overflow:hidden; }
+    #gotit-course-demo .g-progress span { display:block; height:100%; background:var(--g-brand); }
+    #gotit-course-demo .g-success { color:var(--g-positive); }
+    #gotit-course-demo .g-separator { height:1px; background:var(--g-line); margin:20px 0; }
+    #gotit-course-demo .g-quote { direction:ltr; text-align:left; font-size:22px; padding:18px; background:var(--g-soft); border-radius:12px; margin:18px 0; overflow-wrap:anywhere; }
+    #gotit-course-demo .g-choices { display:flex; gap:10px; margin:16px 0; direction:ltr; }
+    #gotit-course-demo .g-choice { flex:1; min-width:0; padding:12px; }
+    #gotit-course-demo .g-choice[aria-pressed="true"] { background:var(--g-brand); color:var(--g-onbrand); border-color:transparent; }
+    #gotit-course-demo input { width:100%; font:inherit; font-size:18px; border:1px solid var(--g-line); padding:13px 14px; border-radius:11px; background:var(--g-surface); color:var(--g-ink); direction:ltr; text-align:left; }
+    #gotit-course-demo label { display:block; margin:12px 0 6px; font-size:14px; }
+    #gotit-course-demo .g-feedback { margin-top:14px; background:var(--g-soft); border-radius:11px; padding:14px; }
+    #gotit-course-demo .g-outcome { padding:12px 0; border-bottom:1px solid var(--g-line); display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+    #gotit-course-demo .g-outcome span:last-child { color:var(--g-muted); font-size:14px; }
+    #gotit-course-demo .g-footer { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    #gotit-course-demo [hidden] { display:none !important; }
+    @media(max-width:440px) { #gotit-course-demo { padding:8px 0; } #gotit-course-demo .g-main { padding:18px 16px; } #gotit-course-demo .g-header { padding:14px 16px 0; } #gotit-course-demo h2 { font-size:22px; } #gotit-course-demo .g-nav button { padding:10px 8px; font-size:13px; } #gotit-course-demo .g-unit-detail { padding-inline-start:0; } #gotit-course-demo .g-actions .g-primary { flex:1; } }
+  </style>
+  <section class="g-window" aria-label="תוכנית קורס ושיעורי בית ב־GotIt">
+    <header class="g-header">
+      <div class="g-brand-row"><span class="g-logo" dir="ltr">GotIt</span><span class="g-meta">אנגלית · הסברים בעברית</span></div>
+      <nav class="g-nav" aria-label="אזורי הקורס">
+        <button type="button" class="cursor-interaction" data-view="course" aria-pressed="true">תוכנית הקורס</button>
+        <button type="button" class="cursor-interaction" data-view="summary" aria-pressed="false">סיכום שיעור</button>
+        <button type="button" class="cursor-interaction" data-view="homework" aria-pressed="false">שיעורי הבית</button>
+      </nav>
+    </header>
+    <main class="g-main" id="gotit-course-main" aria-label="תוכן הקורס"></main>
+  </section>
+  <script>
+    (() => {
+      const root = document.getElementById('gotit-course-demo');
+      const main = document.getElementById('gotit-course-main');
+      const units = [
+        { title:'משפט ראשון: am / is / are', outcome:'להציג אדם ולשאול עליו', topics:'כינויי גוף, חיוב, שאלות ושלילה', lessons:['התאמת am / is / are במשפט חיובי','שואלים עם am / is / are','משפטי שלילה ושיחה מסכמת'], end:'להציג את עצמך, לשאול על אדם אחר ולענות במשפט קצר.', practice:'השלמת משפט, שינוי כינוי הגוף ותשובה קצרה.', prerequisite:'היכרות ראשונית עם מילים וקריאה באנגלית' },
+        { title:'שמות עצם ושייכות', outcome:'לתאר חפצים ולמי הם שייכים', topics:'יחיד ורבים, a/an/the, כינויי שייכות', lessons:['יחיד, רבים ותוויות יידוע','מתארים למי חפץ שייך','משלבים תיאור ושייכות'], end:'לתאר כמה חפצים ולומר למי הם שייכים.', practice:'בחירה בהקשר, השלמה ותיאור חפץ.', prerequisite:'משפטים בסיסיים עם am / is / are' },
+        { title:'Present Simple', outcome:'לספר על יום רגיל ולשאול אחרים', topics:'שגרה, גוף שלישי, do/does ומילות תדירות', lessons:['מתארים שגרה במשפט חיובי','שאלות ושלילה עם do/does','שיחה על יום רגיל'], end:'לתאר שגרה ולענות לשאלות עליה.', practice:'השלמת פועל, יצירת שאלה ותיאור שגרה.', prerequisite:'כינויי גוף ומבנה משפט בסיסי' },
+        { title:'Present Continuous', outcome:'להבחין בין שגרה לבין מה שקורה עכשיו', topics:'be + ing והשוואה ל־Present Simple', lessons:['מה עושים עכשיו?','שאלות ושלילה בזמן מתמשך','שגרה לעומת עכשיו'], end:'לתאר מה קורה עכשיו ולהשוות להרגל.', practice:'בחירת מבנה לפי הקשר ותיאור מצב.', prerequisite:'am/is/are ו־Present Simple' },
+        { title:'עבר בסיסי', outcome:'לספר בקצרה מה קרה', topics:'was/were, Past Simple, did ופעלים נפוצים', lessons:['was/were ומשפטי עבר','פעולות בעבר ושאלות עם did','מספרים על אירוע קצר'], end:'לתאר אירוע קצר ולענות לשאלת המשך.', practice:'השלמת פועל, בניית שאלה וסיפור קצר.', prerequisite:'שאלות ומבנה משפט בסיסי' },
+        { title:'עתיד ושימוש משולב', outcome:'לתאר תוכנית ולנהל שיחה קצרה', topics:'שימושים ראשונים ב־will וב־going to', lessons:['כוונות ותוכניות','החלטות ושאלות על העתיד','משימת סיום הקורס'], end:'לנהל שיחה קצרה שמשלבת שגרה, אירוע ותוכנית.', practice:'בחירת ניסוח והפקת תשובה בהקשר חדש.', prerequisite:'היחידות הקודמות בקורס' }
+      ];
+      const tasks = [
+        { title:'בוחרים את הצורה המתאימה', prompt:'She ___ at home.', type:'choice', expected:['is'], hint:'עם she משתמשים ב־is.', skill:'בחירה עם she' },
+        { title:'משלימים בלי אפשרויות', prompt:'They ___ in class.', type:'word', expected:['are'], hint:'עם they משתמשים ב־are.', skill:'השלמה עם they' },
+        { title:'משנים את המשפט', prompt:'I am at home.', type:'sentence', expected:['we are at home',"we're at home"], hint:'החליפו את I ב־We ואת am ב־are.', skill:'משפט עם we' }
+      ];
+      const initial = () => ({view:'course',confirmed:false,afterLesson:false,begun:false,q:0,answer:'',hint:false,tries:0,feedback:'',accepted:false,results:[],done:false,openUnits:[]});
+      function readState(value) {
+        const p = value && value.privateContent;
+        if (!p || p.schema !== 'gotit-course-v1') return initial();
+        const s = {...initial(),...p.state};
+        if (!['course','summary','homework'].includes(s.view)) s.view='course';
+        s.q = Number.isInteger(s.q) ? Math.max(0,Math.min(2,s.q)) : 0;
+        s.results = Array.isArray(s.results) ? s.results.slice(0,3).map(v=>['independent','assisted','shown','skipped'].includes(v)?v:'skipped') : [];
+        s.openUnits = Array.isArray(s.openUnits) ? s.openUnits.filter(n=>Number.isInteger(n)&&n>=0&&n<6) : [];
+        s.answer = typeof s.answer==='string' ? s.answer.slice(0,180) : '';
+        s.feedback = ['','wrong','right','shown','empty'].includes(s.feedback)?s.feedback:'';
+        s.done = s.done && s.results.length===3;
+        return s;
+      }
+      let state = readState(window.openai?.widgetState);
+      const design = {previewGoals:true};
+      function remember() {
+        if (window.openai?.setWidgetState) window.openai.setWidgetState({modelContent:{demonstration:'course_and_homework',screen:state.view,homeworkFinished:state.done},privateContent:{schema:'gotit-course-v1',state}}).catch(()=>{});
+      }
+      const button = (label,action,primary=false) => `<button type="button" class="g-button ${primary?'g-primary ':''}cursor-interaction" data-action="${action}">${label}</button>`;
+      function course() {
+        const homeworkBand = state.afterLesson ? `<div class="g-band"><h3>${state.done?'התרגול מהשיעור האחרון הסתיים':state.begun?'ממשיכים את שיעורי הבית':'שיעורי הבית שלך מוכנים'}</h3><p>${state.done?'השיעור הבא: שאלות עם am / is / are.':`התאמת am / is / are · ${state.results.length} מתוך 3 משימות הסתיימו`}</p><div class="g-actions">${button(state.done?'לתוצאות התרגול':state.begun?'המשך מהמקום ששמרנו':'מתחילים לתרגל','homework',true)}</div></div>` : '';
+        return `<div class="g-eyebrow">${state.afterLesson?'הקורס שלי':state.confirmed?'התוכנית שלך':'התוכנית שלך מוכנה'}</div><h2>יסודות הדקדוק באנגלית</h2><p class="g-lead">נבנה משפטים, נכיר זמנים בסיסיים ונשתמש בהם בשיחה קצרה.</p><div class="g-meta">6 יחידות · 18 שיעורי בסיס מתוכננים · תרגול תמיכה לפי הצורך</div>${homeworkBand}<div style="margin-top:20px"><h3>מה נלמד בקורס?</h3><p class="g-meta">אפשר לפתוח כל יחידה ולראות מראש את התוכן שלה.</p>${units.map((u,i)=>`<details class="g-unit" data-unit="${i}" ${state.openUnits.includes(i)?'open':''}><summary class="cursor-interaction"><span class="g-number">${i+1}</span><span><span class="g-unit-title">${u.title}</span><span class="g-unit-outcome" style="display:block">${u.outcome}</span>${state.afterLesson&&i===0?'<span class="g-eyebrow" style="display:block">כאן אנחנו · שיעור ראשון הסתיים</span>':''}</span></summary><div class="g-unit-detail"><p><strong style="font-weight:500">הנושאים:</strong> ${u.topics}</p><ol>${u.lessons.map(l=>`<li>${l}</li>`).join('')}</ol><p><strong style="font-weight:500">בסיום:</strong> ${u.end}</p><p><strong style="font-weight:500">בבית:</strong> ${u.practice}</p><p class="g-meta">ידע מקדים: ${u.prerequisite}</p></div></details>`).join('')}</div>${!state.afterLesson?`<div class="g-actions">${button(state.confirmed?'פרטי השיעור הראשון':'התוכנית מתאימה לי',state.confirmed?'first':'confirm',true)}</div>${state.confirmed?'<p class="g-meta" role="status">השיעור הראשון שלך: התאמת am / is / are במשפט חיובי.</p>':''}`:''}`;
+      }
+      function summary() {
+        return `<div class="g-eyebrow">יחידה 1 · שיעור 1</div><h2>המשפטים הראשונים שלך</h2><p class="g-lead">התאמת am / is / are במשפט חיובי</p><div class="g-separator"></div><p class="g-success">✓ השתמשת ב־I am וב־They are בלי רמז.</p><p>נחזק את הבחירה ב־is עם he / she / it.</p><details style="margin-top:16px"><summary class="cursor-interaction" style="color:var(--g-brand)">הכלל והדוגמאות מהשיעור</summary><div class="g-quote" lang="en">I am at home.<br>She is at home.<br>They are in class.</div><p>משתמשים ב־am עם I, ב־is עם he/she/it וב־are עם you/we/they.</p></details><div class="g-band"><h3>${state.done?'שיעורי הבית הסתיימו':'שיעורי הבית שלך מוכנים'}</h3><p>נשתמש באותם מבנים במשפטים מעט שונים.</p><p class="g-meta">כ־3 דקות · 3 משימות</p><div class="g-actions">${button(state.done?'לתוצאות התרגול':state.begun?'ממשיכים לתרגל':'מתחילים לתרגל','homework',true)}${!state.done?'<button type="button" class="g-link cursor-interaction" data-action="later">אשלים אחר כך</button>':''}</div></div><p class="g-meta">בשיעור הבא: נלמד לשאול שאלות עם am / is / are.</p>`;
+      }
+      function homework() {
+        if(state.done) return finish();
+        const t=tasks[state.q];
+        const input = t.type==='choice' ? `<div class="g-choices" role="group" aria-label="בחרו את הצורה המתאימה">${['am','is','are'].map(c=>`<button type="button" class="g-button g-choice cursor-interaction" data-choice="${c}" aria-pressed="${state.answer===c}" ${state.accepted||state.feedback==='shown'?'disabled':''}>${c}</button>`).join('')}</div>` : `<label for="gotit-homework-answer">${t.type==='sentence'?'כתבו את המשפט עם We':'המילה החסרה'}</label><input id="gotit-homework-answer" maxlength="180" autocomplete="off" spellcheck="false" lang="en" ${state.accepted||state.feedback==='shown'?'disabled':''}>`;
+        const feedback = state.feedback==='right'?`<div class="g-feedback" role="status"><span class="g-success">נכון.</span> ${state.hint||state.tries?'הצלחת עם עזרה; נחזור על המבנה בהמשך.':'הצלחת ללא רמז.'}</div>` : state.feedback==='wrong'?`<div class="g-feedback" role="status">${t.hint} נסו שוב.</div>` : state.feedback==='shown'?`<div class="g-feedback" role="status">נמשיך עם דוגמה: <bdi lang="en">${state.q===0?'She is at home.':state.q===1?'They are in class.':'We are at home.'}</bdi><br>המשימה תסומן לתרגול נוסף.</div>` : state.feedback==='empty'?'<div class="g-feedback" role="alert">הוסיפו תשובה כדי לבדוק אותה.</div>':'';
+        return `<div class="g-eyebrow">שיעורי בית · am / is / are</div><div class="g-meta">משימה ${state.q+1} מתוך 3</div><div class="g-progress" role="progressbar" aria-label="משימות שהסתיימו" aria-valuemin="0" aria-valuemax="3" aria-valuenow="${state.results.length}"><span style="width:${state.results.length/3*100}%"></span></div><h2>${t.title}</h2>${t.type==='sentence'?'<p>אותו מבנה, עם כינוי גוף אחר.</p>':''}<div class="g-quote" lang="en">${t.prompt}</div>${input}${state.hint&&state.feedback!=='wrong'&&state.feedback!=='shown'?`<p class="g-meta" role="status">רמז: ${t.hint}</p>`:''}${feedback}<div class="g-actions">${state.accepted||state.feedback==='shown'?button(state.q===2?'לסיום התרגול':'למשימה הבאה','next',true):`${button('בדיקת תשובה','check',true)}<button type="button" class="g-link cursor-interaction" data-action="hint">רמז קצר</button>`}</div><div class="g-footer"><button type="button" class="g-link cursor-interaction" data-action="later">אשלים אחר כך</button>${!state.accepted&&state.feedback!=='shown'?'<button type="button" class="g-link cursor-interaction" data-action="skip">דילוג על המשימה</button>':''}</div>`;
+      }
+      function finish() {
+        const independent=state.results.filter(r=>r==='independent').length;
+        const support=state.results.some(r=>r!=='independent');
+        const labels={independent:'ללא רמז',assisted:'עם עזרה',shown:'נדרשת חזרה',skipped:'דולגה'};
+        return `<div class="g-eyebrow">שיעורי הבית · סיכום</div><h2>${state.results.includes('skipped')?'התרגול הסתיים חלקית':'סיימת את התרגול'}</h2><p class="g-lead">${independent} מתוך 3 משימות נפתרו נכון ללא רמז.</p>${tasks.map((t,i)=>`<div class="g-outcome"><span>${t.skill}</span><span>${labels[state.results[i]]}</span></div>`).join('')}<div class="g-band"><h3>מכאן ממשיכים</h3><p>${support?'נפתח את השיעור הבא בחזרה קצרה על המשימות שבהן נדרשה עזרה או שלא הושלמו.':'נבדוק שוב בקצרה את המבנים בתחילת השיעור הבא.'}</p><p>אחר כך נלמד לשאול שאלות עם am / is / are.</p></div><div class="g-actions">${button('בחזרה לקורס','course',true)}</div><p class="g-meta">סיום התרגול נשמר בנפרד מהערכת השליטה ביחידה.</p>`;
+      }
+      function render(focusSelector) {
+        root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===state.view)));
+        main.innerHTML=state.view==='course'?course():state.view==='summary'?summary():homework();
+        const field=main.querySelector('input'); if(field) field.value=state.answer;
+        main.querySelectorAll('details[data-unit]').forEach(d=>d.addEventListener('toggle',()=>{const n=Number(d.dataset.unit);const was=state.openUnits.includes(n);if(was===d.open)return;state.openUnits=d.open?[...state.openUnits,n]:state.openUnits.filter(v=>v!==n);remember();}));
+        if(focusSelector) main.querySelector(focusSelector)?.focus({preventScroll:true});
+      }
+      function move(view) {
+        state.view=view;
+        if(view!=='course') {state.afterLesson=true;state.confirmed=true;}
+        if(view==='homework') state.begun=true;
+        render();remember();
+      }
+      function normalize(v) {return v.toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?]+$/g,'').trim().replace(/\s+/g,' ');}
+      function check() {
+        if(state.accepted||state.feedback==='shown'||state.done)return;
+        if(!state.answer.trim()){state.feedback='empty';render('#gotit-homework-answer, [data-choice]');return;}
+        const right=tasks[state.q].expected.includes(normalize(state.answer));
+        if(right){state.accepted=true;state.feedback='right';state.results[state.q]=state.hint||state.tries?'assisted':'independent';}
+        else{state.tries++;state.hint=true;state.feedback=state.tries>=2?'shown':'wrong';if(state.feedback==='shown')state.results[state.q]='shown';}
+        render(state.accepted||state.feedback==='shown'?'[data-action="next"]':'#gotit-homework-answer, [data-choice][aria-pressed="true"]');remember();
+      }
+      function next(skip=false) {
+        if(!skip&&!state.accepted&&state.feedback!=='shown')return;
+        if(skip)state.results[state.q]='skipped';
+        if(state.q===2){state.done=true;}else{state.q++;state.answer='';state.hint=false;state.tries=0;state.feedback='';state.accepted=false;}
+        render(state.done?'[data-action="course"]':'#gotit-homework-answer, [data-choice]');remember();
+      }
+      root.addEventListener('input',e=>{if(e.target.id==='gotit-homework-answer'){state.answer=e.target.value;remember();}});
+      root.addEventListener('keydown',e=>{if(e.target.id==='gotit-homework-answer'&&e.key==='Enter'){e.preventDefault();check();}});
+      root.addEventListener('click',e=>{
+        const b=e.target.closest('button');if(!b||!root.contains(b)||b.disabled)return;
+        if(b.dataset.view){move(b.dataset.view);return;}
+        if(b.dataset.choice){state.answer=b.dataset.choice;state.feedback='';render('[data-choice][aria-pressed="true"]');remember();return;}
+        const a=b.dataset.action;
+        if(['course','summary','homework'].includes(a))move(a);
+        else if(a==='confirm'){state.confirmed=true;render();remember();}
+        else if(a==='first'){state.openUnits=[0];render();remember();}
+        else if(a==='later'){move('course');}
+        else if(a==='hint'){state.hint=true;render('[data-action="hint"]');remember();}
+        else if(a==='check')check();
+        else if(a==='next')next();
+        else if(a==='skip')next(true);
+      });
+      window.addEventListener('openai:set_globals',e=>{if(e.detail?.globals?.widgetState){const incoming=readState(e.detail.globals.widgetState);if(JSON.stringify(incoming)!==JSON.stringify(state)){state=incoming;render();}}});
+      render();
+      if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:()=>root.classList.toggle('g-compact',!design.previewGoals)});tweak.addToggle(design,'previewGoals',{label:'יעד קצר לצד כל יחידה'});}
+    })();
+  </script>
+</div>

@@ -1,0 +1,51 @@
+@startuml
+title SEQ-07 - Realtime Private Lesson and Persisted Assessment
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+participant OpenAI as "OpenAI Realtime / Report Model"
+database DB as "product_gotit"
+
+User -> Web: Open private lesson
+Web -> GotIt: GET /private-lessons/setup?targetLanguageCode
+GotIt -> Core: Authenticate + practice.play entitlement
+GotIt -> DB: Load profile, preferences, roadmap, continuity, mastered words
+GotIt --> Web: setup catalog/current state
+User -> Web: Save preferences / choose roadmap
+Web -> GotIt: PUT preferences / POST roadmaps
+GotIt -> DB: Persist scoped configuration
+User -> Web: Start lesson
+Web -> GotIt: POST /private-lessons/realtime-sessions
+GotIt -> DB: Resolve focus, milestone, evidence and vocabulary
+GotIt -> OpenAI: Create short-lived Realtime client secret + bounded instructions
+OpenAI --> GotIt: ephemeral secret/session configuration
+GotIt -> DB: Insert lesson journal row (no server key/audio)
+GotIt --> Web: lesson + ephemeral secret
+Web -> OpenAI: WebRTC offer authenticated by ephemeral secret
+OpenAI --> Web: WebRTC answer + audio/data channel
+loop Until duration/stop/disconnect
+  User -> Web: Speech / mute / translate latest
+  Web <-> OpenAI: Realtime audio and events
+  Web -> Web: Collect bounded transcript turns
+end
+Web -> OpenAI: Send wrap-up event
+OpenAI --> Web: Recap and goodbye audio
+Web -> GotIt: POST /private-lessons/:id/complete\nreason + duration + bounded turns
+GotIt -> OpenAI: Structured report from untrusted turns
+OpenAI --> GotIt: strengths/corrections/skills/next step
+GotIt -> GotIt: Validate, normalize and assess evidence
+critical Complete lesson
+  GotIt -> DB: Save report/continuity
+  GotIt -> DB: Insert skill and milestone evidence
+  GotIt -> DB: Update skill profiles, CEFR range/confidence, roadmap progress
+end
+GotIt --> Web: completed lesson/report
+Web --> User: Report, level, suggested review
+note over Web,DB
+Raw microphone audio and provider secret are not persisted by GotIt.
+Transcript turns are accepted only at explicit completion and are bounded.
+end note
+@enduml
+

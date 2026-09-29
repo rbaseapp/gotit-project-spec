@@ -1,0 +1,36 @@
+@startuml
+title SEQ-05 - Learning Item Semantic Edit and Revision Reset
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+database DB as "product_gotit"
+
+User -> Web: Open item detail
+Web -> GotIt: GET /learning-items/:id
+GotIt -> Core: Authenticate
+GotIt -> DB: Load owned item/detail
+GotIt --> Web: item + translations + updatedAt + evidence
+User -> Web: Edit source/languages/meaning/type
+Web --> User: Warn current learning evidence will reset
+User -> Web: Confirm
+Web -> GotIt: PATCH /learning-items/:id\nexpectedUpdatedAt + semantic patch
+GotIt -> Core: Check vocabulary.write
+critical Semantic update
+  GotIt -> DB: SELECT owned item FOR UPDATE
+  alt updatedAt differs
+    GotIt --> Web: 409 stale/conflict
+  else Current row
+    GotIt -> GotIt: Validate language/sense/translation invariants
+    GotIt -> DB: Increment learning_revision
+    GotIt -> DB: Replace current translation state/history
+    GotIt -> DB: Reset current skill/review/mastery projections
+    GotIt -> DB: Clear revision-bound study image
+    GotIt -> DB: Preserve attempts, occurrences, XP and historical provenance
+  end
+end
+GotIt --> Web: Updated item detail
+Web --> User: New revision and learning state
+@enduml
+

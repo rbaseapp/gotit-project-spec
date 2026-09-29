@@ -1,0 +1,40 @@
+@startuml
+title SEQ-09 - Word Pack Selection and Safe Installation
+autonumber
+actor User
+boundary Web
+control GotIt
+control Core
+database DB as "product_gotit"
+
+User -> Web: Browse packs
+Web -> GotIt: GET /word-packs
+GotIt -> Core: Authenticate
+GotIt -> DB: Filter active catalog by profile language pair
+GotIt -> DB: Aggregate installation/progress
+GotIt --> Web: topics/tracks/packs
+User -> Web: Open pack
+Web -> GotIt: GET /word-packs/:id
+GotIt -> DB: Load entries and existing links
+GotIt --> Web: pack detail
+User -> Web: Select 1..100 entries and Add
+Web -> GotIt: POST /word-packs/:id/add\n{entryIds}
+GotIt -> Core: Check vocabulary.write
+critical Install pack
+  GotIt -> DB: Lock user+pack and validate compatibility/version
+  GotIt -> DB: Upsert active user_word_pack
+  loop Selected entries
+    GotIt -> DB: Find same source/language/accepted meaning
+    alt Existing compatible item
+      GotIt -> DB: Link and reactivate/restore when required
+    else No compatible item
+      GotIt -> DB: Create item + catalog translation/example + skill rows
+      GotIt -> DB: Create pack-entry link
+    end
+  end
+  GotIt -> DB: Mark unselected entries excluded
+end
+GotIt --> Web: added/linked/restored/excluded receipt
+Web --> User: Updated pack progress and practice CTA
+@enduml
+
