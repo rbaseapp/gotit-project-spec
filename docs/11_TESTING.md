@@ -1,5 +1,50 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## תיקון רצף השיעור — ראיות מקומיות 2026-09-30
+
+- Backend: `npm.cmd run typecheck`, `npm.cmd test` — 157/157, ו־`npm.cmd run build` עברו.
+  חוזה קורס באנגלית עם שפת עזר עברית בודק פתיחה בשפת היעד ושימור ההנחיות
+  והיעד המאושר בכל ארבע הפעולות; בדיקות ערבית ומתחילים בספרדית נשמרו.
+- Web: `npm.cmd run check` עבר: typecheck, lint, 115/115 Vitest, build ו־13/13 gateway.
+  שמונה בדיקות בקר מכסות השמעה אחרי response.done, דיבור והפרעה, מד שמע,
+  תקציב פניות, השהיה, שגיאה ומרוץ VAD. בדיקת רכיב מפעילה את השעון והאירועים,
+  ממשיכה ידנית ומוודאת עצירה בהשתקה, בסיום וביציאה. נבדקה תאימות לשרת ישן.
+- דפדפן: `npx.cmd playwright test --config playwright.lesson.config.ts` — 8/8 Edge,
+  he/en ברוחב 320/390/844/1440 כולל landscape. ה־Web וה־connection adapter אמיתיים;
+  HTTP, מיקרופון ו־Realtime מדומים. נבדקים סיום השמעה, שתי פניות אוטומטיות,
+  כפתור המשך ידני, נראות בתוך המסך, ללא גלישה אופקית וללא חפיפה בין אזורי השיעור.
+  בדיקת תמונות חשפה חפיפת כותרת/מילים ברוחב landscape; תוקנו עמודות מינימום
+  והקצאת הכותרת לשורה מלאה, ונוספה בדיקת מלבני האזורים. תוצרים:
+  `gotIt-front/test-results/lesson-resume-{he,en}-{width}.png`.
+- לאחר עיצוב כפתור ההמשך הורצו lint ו־build שוב; אזהרת chunk ראשי הקיימת נשארה.
+  SEQ-07 עבר בדיקת PlantUML. לא נדרשה ולא הורצה שוב בדיקת DB: התיקון אינו משנה
+  שאילתות, טבלאות או מיגרציות. ראיות PostgreSQL מהסבב הקודם מופיעות בהמשך.
+
+איכות ההוראה הקולית עדיין מחייבת קבלה מול הספק והמיקרופון בפועל. אלו בדיקות
+חוזה/בקר/ממשק, לא הוכחה שהמודל תמיד יפעל לפי ההנחיות ולא אישור פריסה.
+הגדרות PLQ-01–05 וגבולות המימוש: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## קורסים ושיעורי בית — ראיות מקומיות 2026-09-30
+
+- Backend: `npm.cmd run typecheck`, `npm.cmd test` — 156/156, `npm.cmd run build` עברו.
+- PostgreSQL: `npm.cmd run test:integration` — 49/49 עברו במסדי Docker disposable,
+  כולל scope, CAS, receipts, שמירה/חזרה, הרשאות ומיגרציות up/down/up. אין מיגרציית production.
+- Web: `npm.cmd run check` עבר: typecheck, lint, 105/105 Vitest, build ו־13/13 gateway.
+- Edge: `npm.cmd exec playwright -- test --config playwright.courses.config.ts` — 37 בדיקות
+  מצבים/פריסה/מקלדת עברו, בשישה מצבים ב־he/en וברוחב 320/390/1440. צילומי המסך נבדקו חזותית.
+  בדיקת הקראת אפשרויות נוספת עברה בהרצה ממוקדת אחרי תיקון ה־mock של SpeechSynthesis:
+  `--grep 'oral support' --output test-results/voice-check`.
+  ארבע בדיקות נוספות של תוכנית ובית ב־768×1024 וב־844×390 עברו עם
+  `--grep 'additional viewport' --output test-results/viewport-check`.
+  בסך הכול עברו 42 תרחישי דפדפן; בבדיקת הבית נבחרת תשובה לפני בדיקת זמינות כפתור השליחה.
+- מסמכים: 74 קישורים יחסיים ו־workspace JSON נבדקו; שני תרשימי PlantUML עברו `-checkonly`.
+
+במהלך ההרצה תוקנו fixtures שהתיישנו: ספירת migrations/טבלאות/word packs, הרשאות
+לתפקידי בדיקה לאחר יצירה מחדש, וספירת image assets ביחס ל־baseline של התרחיש.
+הבדיקות משתמשות בספקים מדומים; אין קבלת ספק/מיקרופון/מכשיר פיזי, מחקר ילדים או
+אימות פדגוגי רב־לשוני. לא הורצה בסבב זה כל חבילת responsive הישנה של האתר.
+אזהרת chunk ראשי מעל 500KB נשארה. [עקיבות ומגבלות 22](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
 ## 1. פירמידת בדיקות
 
 | שכבה | מטרה | דוגמאות |
@@ -106,4 +151,3 @@ provider/OAuth/Paddle acceptance, smoke after deploy ו־rollback readiness.
 הקוד כולל suites בכל ארבעת המאגרים. מסמך זה אינו קובע pass לפי שמות קבצים;
 תוצאת הרצה מתוארכת נרשמת ב־[13_TRACEABILITY](13_TRACEABILITY.md) וב־CHANGELOG.
 בדיקות live אינן מוחלפות ב־mock או jsdom.
-

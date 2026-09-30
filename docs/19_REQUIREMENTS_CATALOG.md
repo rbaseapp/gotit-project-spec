@@ -1,5 +1,25 @@
 # 19 — קטלוג דרישות ממוספר
 
+## תיקון רצף השיעור — 2026-09-30
+
+נוספו PLQ-01–05 בעקבות דיווח משתמש: שפה עקבית, הוראה לפני הפקה, התקדמות
+והובלת מורה, המשך לאחר שתיקה ושימור הקשר בכל תור. קריטריוני הקבלה המפורטים
+וההבחנה בין חוזה דטרמיניסטי לאיכות מודל: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## דרישות קורס אישי — נוספו 2026-09-30
+
+| ID | דרישה וקבלה | מקור | מצב |
+|---|---|---|---|
+| FR-PC-001 | שיחה מותאמת והעדפות שמורות, קול/טקסט ותיקון | PC-19–23, 26–27 | Implemented; live voice acceptance pending |
+| FR-PC-002 | כל היחידות מראש ושני אישורים לפי גרסה | PC-01–04, 22–25, 28 | Implemented locally |
+| FR-PC-003 | שיעור בעל יעד, סיכום קצר ובית מחומר שנלמד | PC-05–07, 13–14, 18 | Implemented; provider/content QA pending |
+| FR-PC-004 | משימה אחת, משוב, רמז, שקילות, שמירה, retry בטוח | PC-08–12, 17 | Implemented locally |
+| FR-PC-005 | התאמה לגיל/קריאה, שפה, RTL ומכשיר | PC-15–16, 20 | UI verified; child/device acceptance pending |
+
+קריטריוני הקבלה המלאים נשמרו ב־[21](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md).
+[22](22_PERSONAL_COURSES_IMPLEMENTATION.md) ממפה מימוש ובדיקות ומבדיל כיסוי חומר,
+עצמאות ושימור שלא נבדק; אין דרישה להמציא רמת CEFR או לשנות XP.
+
 ## 1. שיטת ניהול
 
 Priority: Must / Should / Could.  
@@ -157,4 +177,3 @@ process/screen mapping, data/API owner, security/cost impact והחלטות מו
 
 דרישה הושלמה רק כאשר הסטטוס, הקוד, הבדיקות, המסמכים, rollout וראיית הסביבה
 תואמים. `Implemented` לבדו אינו `Production verified`.
-

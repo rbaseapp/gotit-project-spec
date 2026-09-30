@@ -7,6 +7,13 @@ security regressions and loss of user-owned work.
 
 Last specification update: **2026-09-30**.
 
+Current local addition: personal courses and homework are implemented in Backend/Web,
+with 39 product tables and 68 cataloged routes after the new migration. See
+[docs/22_PERSONAL_COURSES_IMPLEMENTATION.md](docs/22_PERSONAL_COURSES_IMPLEMENTATION.md)
+and [docs/11_TESTING.md](docs/11_TESTING.md) for exact behavior and verification.
+The older commit, dirty-tree and route/table snapshots below are historical;
+inspect current worktrees before acting. This update is not production deployment evidence.
+
 ---
 
 ## 1. Mission

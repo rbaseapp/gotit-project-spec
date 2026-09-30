@@ -1,5 +1,18 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## תיקון רצף השיעור — 2026-09-30
+
+PLQ-01/02/03/05 מקושרות ל־private-lesson.prompt/service ולבדיקות private-lesson
+ו־courses ב־Backend; PLQ-04 מקושרת ל־PrivateLessonFlow, PrivateLessonPage ולבדיקות
+flow/component/browser ב־Web. ההגדרות והגבולות הקובעים: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## תוספת קורס אישי — 2026-09-30
+
+FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי CoursePage/HomeworkPage,
+ל־12 נתיבי API ול־learning_documents/learning_commands. פירוט דרישה→מימוש→בדיקה
+ב־[22, סעיף 7](22_PERSONAL_COURSES_IMPLEMENTATION.md); תוצאות סופיות ב־[11](11_TESTING.md).
+מצב: ממומש ונבדק מקומית, טרם נפרס; קבלת ספק, מכשיר ואיכות פדגוגית נשארות נפרדות.
+
 ## 1. דרישה → מימוש
 
 | ID | דרישה | רכיב | API | נתונים | בדיקה עיקרית | מצב |
@@ -42,9 +55,11 @@
 
 ## 2. בעלות RACI מוצעת
 
-הרחבה מוצעת, שאינה ממומשת: [קורסים אישיים ושיעורי בית](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md).
-קריטריוני PC-01–PC-18 במסמך זה מקשרים את הרחבת P08–P09/P12–P13 למסכי SCR-PC-01–04
-ול־SCR-10. הם מתארים בדיקות קבלה מתוכננות; אין שינוי בסטטוס המימוש או בראיות הבדיקה שבטבלאות לעיל.
+דרישות שאושרו ומומשו מקומית: [קורסים אישיים ושיעורי בית](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md).
+קריטריוני PC-01–PC-28 במסמך זה מקשרים את הרחבת P08–P09/P12–P13 למסכי SCR-PC-00A–00B,
+SCR-PC-01–04 ול־SCR-10. הם כוללים סשן היכרות בכתב ובקול, אישור העדפות לפני יצירה
+ואישור תוכנית או בקשת שינויים לפני הפעלה. ראיות הבדיקה וגבולות המימוש נוספו ב־
+[22](22_PERSONAL_COURSES_IMPLEMENTATION.md), בנפרד מטבלאות ה־baseline ההיסטוריות.
 
 | תחום | Responsible | Accountable | Consulted |
 |---|---|---|---|
@@ -76,8 +91,8 @@
 
 | ID | פער | השפעה | תיקון מוצע |
 |---|---|---|---|
-| DRIFT-01 | GotIt API catalog מציג 49 במקום 56 | discovery/docs לא מלאים | הוספת 7 lesson routes ו־test שסופר route mounts |
-| DRIFT-02 | Backend README מציין 29 product tables | schema count ישן; בפועל 37 | לעדכן README ממיגרציות |
+| DRIFT-01 | תוקן בסבב קורסים: קטלוג 68 נתיבים, כולל 7 lesson ו־12 course | בדיקת ספירה/ייחודיות ו־HTTP נוספה | יצירה אוטומטית מתוך mounts עדיין הרחבה |
+| DRIFT-02 | תוקן Backend README ל־39 טבלאות לאחר מיגרציית קורסים | ספירה מאומתת ב־PostgreSQL | baseline הישן היה 37 |
 | DRIFT-03 | Extension README מזכיר current 41-route release | נתון היסטורי | להפנות ל־API catalog generated |
 | DRIFT-04 | מסמכים היסטוריים כוללים סטטוסים ישנים | החלטות עלולות להתבסס על snapshot | הפרויקט הזה הוא entrypoint חדש |
 

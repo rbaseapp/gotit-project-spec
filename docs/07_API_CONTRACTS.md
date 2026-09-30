@@ -1,5 +1,19 @@
 # 07 — חוזי API
 
+## תיקון רצף השיעור — 2026-09-30
+
+תגובה ליצירת שיעור מוסיפה `realtime.continuationEvent` אופציונלי בלקוח. אירועי
+`response.create` נושאים כעת הוראות מלאות והוראת תור; גבול הלקוח 128,000 תווים.
+אין נתיב חדש. פרטי תאימות והקשר: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## תוספת מקומית 2026-09-30 — Courses
+
+נוספו 12 נתיבים תחת `/api/v1/courses`; חוזה מלא, payloads ושגיאות נמצאים ב־
+[22, סעיף 5](22_PERSONAL_COURSES_IMPLEMENTATION.md). פעולות כתיבה מקבלות `eventId`
+ו־`revision`, עם replay של snapshot ו־CAS. תמלול הוא פעולה חולפת ללא receipt.
+`courseId` אופציונלי נוסף לפתיחת שיעור; capability בשם `courses` נוספה.
+קטלוג הקוד תוקן ל־68 נתיבים, כולל שבעת נתיבי השיעורים שנעדרו ממנו קודם.
+
 ## 1. כללים משותפים
 
 ### Headers
@@ -253,4 +267,3 @@ Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beg
 - enum חדש עלול להיות breaking ללקוח strict ולכן דורש תיאום.
 - שינוי scoring/learning policy אינו API version, אך מחייב `algorithmVersion` חדש.
 - API catalog, מסמך זה, parsers ובדיקות contract חייבים להתעדכן באותו change set.
-

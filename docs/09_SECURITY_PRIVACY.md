@@ -1,5 +1,19 @@
 # 09 — אבטחה ופרטיות
 
+## תיקון רצף השיעור — 2026-09-30
+
+תורות Realtime יזומים כוללים כעת את הקשר השיעור המלא של המשתמש; אין לשלוח
+או לתעד מפתח ספק שרתי. שתיקה ופניות המורה אינן מוסיפות ראיות למידה. אין שמירת
+אודיו חדשה או הרשאה נוספת. הגבולות והצמצום: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## עדכון קורסים — 2026-09-30
+
+בעלות נגזרת מ־Core, זכאות `practice.play`, סכמה strict, CAS, receipts ומפתחות תשובות
+פרטיים מגינים על כתיבות הקורס והבית. קלטי שיחה הם תוכן בלתי מהימן להנחיות הספק.
+נוספו שמירת העדפות ושיחת היכרות מוגבלת, מקטעי לימוד, תשובות ו־snapshots של receipts;
+אין שמירת קול גולמי או תמליל שיעור מלא במודול. טיוטת בית מקומית ב־sessionStorage
+מסומנת כלא מסונכרנת. [רשימת מידע, מגבלות מחיקה ו־retention ב־22](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
 ## 1. נכסים רגישים
 
 - סיסמאות ו־password hashes.
@@ -137,4 +151,3 @@ deletion/export, lawful basis/consent, provider subprocessors, age policy ו־DP
 - backup/restore ו־migration rollback review;
 - privacy/legal review;
 - incident owner, rotation runbook ו־contact מוגדרים.
-
