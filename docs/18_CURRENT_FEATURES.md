@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — English catalog source, rollout unverified
+
+`gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` contains a three-level Hebrew-to-English catalog with 60 units of 50 entries. It is currently implemented through the generic word-pack data model and screen. The dedicated language-learning path requested afterward is not present in this source commit. Migration execution and production availability have not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Initial vocabulary reading-guide pilot
 
 Backend `c138f5464de818552a54ca584c43ccdaee980da0` exposes the existing

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Initial English catalog regression scope
+
+`gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` includes `test/daily-english-catalog.test.ts` for counts, 50-entry grouping, disjoint vocabulary, Hebrew meanings, representative expressions, migration statements, and protected rollback. An exact-commit test report and authenticated production smoke have not been recorded. The rollout gate is a dedicated migration followed by `en`/`he` catalog, detail, and 50-entry install checks. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Mixed-direction alignment regression
 
 `gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` passed

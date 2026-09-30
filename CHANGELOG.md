@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Initial English catalog in source
+
+- `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` adds a Hebrew-to-English catalog of three 1,000-entry tracks, 60 units of 50, and migration `1790800006000_daily-english-catalog.js`.
+- Source commit and regression test are present. Production migration, catalog availability, and exact-commit smoke are unverified. The dedicated course screen and course-oriented label requested afterward remain to be implemented. See [English learning path handoff](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Smart review matching rotation
 
 - `gotIt-backend@d659b274397421685ff840c9013437a366ab1718` makes successful drag-board words rotate across days using the last current-revision matching success. Eligible words without a matching success come first; the learning algorithm version is `gotit-v1.3`. No schema or API payload change.

@@ -62,6 +62,7 @@ Chrome Extension ──┤
 | [20_USE_CASE_CATALOG](20_USE_CASE_CATALOG.md) | Product/UX/Engineering | Actors, preconditions, flows ו־postconditions |
 | [21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md) | Product/UX/Learning | דרישות קורס אישי ושיעורי בית שאושרו לפיתוח |
 | [22_PERSONAL_COURSES_IMPLEMENTATION](22_PERSONAL_COURSES_IMPLEMENTATION.md) | Product/Engineering/QA | מימוש, חוזים, נתונים, בדיקות וגבולות שחרור |
+| [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md) | Product/Engineering/QA | Hebrew-to-English catalog, rollout status, and path handoff |
 
 ## עקרונות שאינם נתונים לפרשנות
 

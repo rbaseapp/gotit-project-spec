@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — English catalog data migration
+
+`gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` adds migration `1790800006000_daily-english-catalog.js`: one `word_topics` row, three `word_tracks` rows, 60 `word_packs`, and 3,000 `word_pack_entries` for source `en` and translation `he`. No new table or column is introduced. The migration must run with the dedicated migrator; source presence is not evidence it ran in production. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Existing phonetic columns
 
 `gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` reuses

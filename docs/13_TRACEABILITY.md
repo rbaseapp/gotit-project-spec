@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — Initial English learning catalog trace
+
+The Hebrew-to-English path request maps to existing PACK-01, the word-pack process, `SCR-07`, `/api/v1/word-packs*`, and the existing pack tables. `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` supplies the catalog migration and `test/daily-english-catalog.test.ts`; it does not supply a dedicated path screen. Production migration/smoke are unverified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — FR-LIB-008 visual correction
 
 `gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` addresses
