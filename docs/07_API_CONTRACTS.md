@@ -1,5 +1,15 @@
 # 07 — חוזי API
 
+## 2026-10-01 — Library list pronunciation fields
+
+`gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` adds nullable
+`phoneticText` and `phoneticScheme` to each owned item in
+`GET /api/v1/learning-items`. Existing clients can ignore these additive fields.
+For a Hebrew reading guide to an English expression, the scheme is
+`transliteration:he`; `hebrew_niqqud` remains a separate existing scheme.
+`GET /api/v1/learning-items/:id` already includes both fields. The list
+requires the same authenticated GotIt scope as before.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תגובה ליצירת שיעור מוסיפה `realtime.continuationEvent` אופציונלי בלקוח. אירועי

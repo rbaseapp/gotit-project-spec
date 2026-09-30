@@ -1,5 +1,15 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — Existing phonetic columns
+
+`gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` reuses
+`product_gotit.learning_items.phonetic_text` and `phonetic_scheme` for the
+initial English-to-Hebrew reading guides. The scheme `transliteration:he`
+distinguishes them from existing `hebrew_niqqud` data. No migration occurred.
+An owner-scoped data update populated 84 active English items in the requested
+account; deleted items and non-English source items were excluded. A source
+expression or source-language edit still clears both phonetic columns.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תיקון הובלת השיעור אינו משנה טבלאות או ספי התקדמות. מצב דיבור/השמעה ותקציב

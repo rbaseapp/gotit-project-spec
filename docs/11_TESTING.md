@@ -1,5 +1,15 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Reading guide backend evidence
+
+`gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0`: typecheck,
+201/201 fast tests, targeted PostgreSQL integration 26/26, and build passed.
+The new regression verifies that a stored `transliteration:he` guide reaches
+the owner in `GET /learning-items` while another user receives no item.
+Production data was read back as 84/84 active English items with guides.
+Repository-wide `format:check` reports 37 pre-existing unformatted files.
+No deployment or live HTTP smoke result is claimed at this stage.
+
 ## תיקון רצף השיעור — ראיות מקומיות 2026-09-30
 
 - Backend: `npm.cmd run typecheck`, `npm.cmd test` — 157/157, ו־`npm.cmd run build` עברו.

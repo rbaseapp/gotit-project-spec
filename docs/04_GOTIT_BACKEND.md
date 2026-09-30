@@ -1,5 +1,18 @@
 # 04 — מפרט GotIt Backend
 
+## 2026-10-01 — Library reading guides (backend)
+
+Source: `gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0`.
+The owner-scoped `GET /api/v1/learning-items` list now includes nullable
+`phoneticText` and `phoneticScheme` from the existing `learning_items` row.
+`transliteration:he` identifies a Hebrew-script reading guide for an English
+expression; `hebrew_niqqud` retains its existing meaning. The detail endpoint
+already returned both fields. No migration, new route, entitlement or learning
+evidence change is involved. PostgreSQL integration verified owner isolation.
+The 84 active English items in the requested GotIt account were populated and
+verified by a scoped read; this data operation is separate from deploying code.
+The backend deployment for this commit is pending verification.
+
 ## עדכון 2026-09-30 — קורסים אישיים
 
 נוסף `modules/courses`: סכמה, סילבוסים, ספק, repository, service ונתיבים. זהו שירות מוצר

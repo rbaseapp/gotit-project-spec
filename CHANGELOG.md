@@ -1,5 +1,14 @@
 # יומן שינויים
 
+## 2026-10-01 — Backend vocabulary reading guides
+
+- `gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` exposes
+  existing phonetic text and scheme on owner-scoped library list items.
+- The requested account's 84 active English words received Hebrew-script
+  reading guides in production data; scoped readback confirmed 84/84.
+- Local verification: backend typecheck, 201 fast tests, 26 PostgreSQL
+  integration tests and build passed. Backend deployment remains unverified.
+
 ## 2026-09-30
 
 - תיקון איכות שיעור פרטי לפי דיווח משתמש: שפת יעד בפתיחה, הסבר לפני תרגול,

@@ -1,5 +1,16 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — Vocabulary reading guide
+
+Initial pilot: owner-scoped English expressions can carry a Hebrew reading guide
+in existing phonetic columns. Backend source:
+`gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0`;
+`library.repository.ts` list fields; regression:
+`test/integration/practice.integration.test.ts` (owner and foreign user).
+84/84 active English items in the requested account were populated and read
+back in the production database. Web rendering and HTTP deployment evidence
+are tracked separately; this backend source commit is locally verified.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 PLQ-01/02/03/05 מקושרות ל־private-lesson.prompt/service ולבדיקות private-lesson
