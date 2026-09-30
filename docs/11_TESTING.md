@@ -85,7 +85,7 @@ generation for future captures.
 
 ## 1. פירמידת בדיקות
 
-Smart review rotation regression: `test/integration/practice.integration.test.ts` backdates successful matching attempts by two days and verifies that the next queue still selects untouched words first. The test passed against disposable PostgreSQL. On the source commit, 203 fast tests passed; the full integration suite had five unrelated catalog/migration expectation failures, and typecheck/build/format checks were blocked by unrelated current files. Production behavior remains unverified until deployment.
+Smart review rotation regression: `test/integration/practice.integration.test.ts` backdates successful matching attempts by two days and verifies that the next queue still selects untouched words first. The test passed against disposable PostgreSQL. On the source commit, 203 fast tests passed; the full integration suite had five unrelated catalog/migration expectation failures, and typecheck/build/format checks were blocked by unrelated current files. Render deployment `dep-daup51s9v7es73aeastg` is Live for the source SHA; read-only production-data queue evaluation selected three words outside the reported repeated board. Authenticated HTTP queue and browser submission were not exercised.
 
 | שכבה | מטרה | דוגמאות |
 |---|---|---|

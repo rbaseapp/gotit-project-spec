@@ -8,7 +8,8 @@
 ## 2026-10-01 — Smart review matching rotation
 
 - `gotIt-backend@d659b274397421685ff840c9013437a366ab1718` makes successful drag-board words rotate across days using the last current-revision matching success. Eligible words without a matching success come first; the learning algorithm version is `gotit-v1.3`. No schema or API payload change.
-- The reported account has persisted matching successes for the pictured words, confirming the repeat was a queue-order issue rather than a missing attempt write. The two-day PostgreSQL regression passed, as did 203 fast tests. Full integration and global quality gates have unrelated existing failures. This entry records local implementation; deployment and live smoke are pending.
+- The reported account has persisted matching successes for the pictured words, confirming the repeat was a queue-order issue rather than a missing attempt write. The two-day PostgreSQL regression passed, as did 203 fast tests. Full integration and global quality gates have unrelated existing failures.
+- Deployment follow-up: Render `dep-daup51s9v7es73aeastg` reported `Deploy succeeded | Live` for the exact source SHA. `/health`, `/ready`, and `/api/v1` returned 200. Read-only evaluation of the committed queue service against the reported account's production data returned `gotit-v1.3-e531b7086602` and selected `maintenance`, `sanction`, `mediation` instead of the three words in the screenshot. An authenticated HTTP queue request was unavailable in this session; this verification does not claim an end-to-end browser review submission.
 
 ## 2026-10-01 — Reading guide alignment
 

@@ -126,7 +126,7 @@ deployment evidence, לא תאריך מסמך בלבד.
 | demotion after failures | Stable | active recall policy |
 | XP, daily cap, level, streak | Stable | Backend ledger/projections |
 
-Smart review queue rotation (`gotIt-backend@d659b274397421685ff840c9013437a366ab1718`): among eligible words, a current-revision word with no successful matching attempt precedes one already solved in matching. Previously solved words rotate from oldest to newest matching success across calendar days. Due status, mastery gaps and active-recall requirements remain in the server policy. This is implemented and PostgreSQL-tested locally; deployment verification is pending.
+Smart review queue rotation (`gotIt-backend@d659b274397421685ff840c9013437a366ab1718`): among eligible words, a current-revision word with no successful matching attempt precedes one already solved in matching. Previously solved words rotate from oldest to newest matching success across calendar days. Due status, mastery gaps and active-recall requirements remain in the server policy. Render deployment `dep-daup51s9v7es73aeastg` is Live; production-data queue evaluation selected three different English words from the reported board.
 
 ## 7. Dashboard
 
