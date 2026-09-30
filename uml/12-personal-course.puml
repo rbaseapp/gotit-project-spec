@@ -1,0 +1,69 @@
+@startuml
+title SEQ-12 - Personal Course and Homework
+autonumber
+actor Learner
+boundary Web
+control GotIt
+control Core
+participant AI
+database DB as "product_gotit"
+
+Learner -> Web: Build a course with the teacher
+Web -> GotIt: POST /courses/intake\neventId + language pair
+GotIt -> Core: Authenticate + practice.play
+GotIt -> AI: One adaptive needs question
+GotIt -> DB: Save intake + command receipt
+GotIt --> Web: Question + suggestions + preferences draft
+loop Relevant questions
+  Learner -> Web: Text or recorded answer
+  opt Voice
+    Web -> GotIt: POST /courses/transcribe\ntransient WAV
+    GotIt -> AI: Transcribe
+    GotIt --> Web: Editable text
+  end
+  Web -> GotIt: POST /courses/:id/turns\nrevision + eventId
+  GotIt -> AI: Adapt question and draft preferences
+  GotIt -> DB: CAS document + receipt in one transaction
+  GotIt --> Web: Updated saved state
+end
+Web --> Learner: Review preferences, reported needs and recommendations
+Learner -> Web: Explicit preference approval
+Web -> GotIt: POST /preferences/approve
+GotIt -> DB: Save approved snapshot
+Web -> GotIt: POST /plan
+GotIt -> AI: Generate complete language-specific units
+GotIt -> GotIt: Validate coverage, prerequisites and preserved history
+GotIt -> DB: CAS new draft version + receipt
+GotIt --> Web: Full plan for review
+Learner -> Web: Approve exact plan version
+Web -> GotIt: POST /activate\nrevision + version + eventId
+GotIt -> DB: Activate version
+Web -> GotIt: Start private lesson with courseId
+GotIt -> DB: Resolve approved next objective + homework context
+ref over Web,DB
+SEQ-07 - Private lesson, summary and queued homework
+end ref
+Learner -> Web: Open homework
+Web -> GotIt: GET /courses/homework/:id
+opt Pending assignment
+  Web -> GotIt: POST /homework/:id/prepare
+  GotIt -> AI: Generate only from taught excerpts
+  GotIt -> GotIt: Validate exact source quote
+  GotIt -> DB: CAS tasks and private answer keys
+end
+loop One task at a time
+  Learner -> Web: Answer, hint, skip or save draft
+  Web -> GotIt: POST /homework/:id/actions\nrevision + eventId
+  opt Open answer requires judgment
+    GotIt -> AI: Evaluate stated objective; uncertainty is not failure
+  end
+  GotIt -> DB: Commit attempt and receipt atomically
+  GotIt --> Web: Feedback, saved progress, solution only when done
+  Web --> Learner: Feedback then explicit next action
+end
+note over Web,DB
+Owner comes from Core. Stale writes fail.
+Replay returns the original committed snapshot.
+Raw audio is not persisted. Existing vocabulary XP/mastery is unchanged.
+end note
+@enduml

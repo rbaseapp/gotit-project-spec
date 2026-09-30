@@ -30,6 +30,7 @@ Chrome Extension ──┤
 | Practice, five-skill evidence, queue, mastery, XP | ממומש |
 | AI reading, study images, speech | ממומש ומותנה בספקים ובהרשאות |
 | שיעור פרטי Realtime, roadmap והערכת רמה | ממומש; דורש אימות ספק/מכשיר מתמשך |
+| קורס אישי, שני אישורים ושיעורי בית באפליקציה | ממומש מקומית; לא נפרס; [פרטים וגבולות](22_PERSONAL_COURSES_IMPLEMENTATION.md) |
 | Web application ו־production gateway | ממומש |
 | Chrome MV3 capture client | ממומש |
 | password reset ואימות דוא״ל | לא ממומש |
@@ -59,7 +60,8 @@ Chrome Extension ──┤
 | [18_CURRENT_FEATURES](18_CURRENT_FEATURES.md) | כולם/AI handoff | מה קיים, conditional, חלקי או בתהליך |
 | [19_REQUIREMENTS_CATALOG](19_REQUIREMENTS_CATALOG.md) | Product/BA/QA/AI | BR/FR/NFR ממוספרים, עדיפות וקבלה |
 | [20_USE_CASE_CATALOG](20_USE_CASE_CATALOG.md) | Product/UX/Engineering | Actors, preconditions, flows ו־postconditions |
-| [21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md) | Product/UX/Learning | הצעה: תוכנית קורס מלאה מראש, יחידות ושיעורי בית באפליקציה |
+| [21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL](21_PERSONAL_COURSES_AND_HOMEWORK_PROPOSAL.md) | Product/UX/Learning | דרישות קורס אישי ושיעורי בית שאושרו לפיתוח |
+| [22_PERSONAL_COURSES_IMPLEMENTATION](22_PERSONAL_COURSES_IMPLEMENTATION.md) | Product/Engineering/QA | מימוש, חוזים, נתונים, בדיקות וגבולות שחרור |
 
 ## עקרונות שאינם נתונים לפרשנות
 

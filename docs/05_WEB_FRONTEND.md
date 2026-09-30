@@ -1,5 +1,13 @@
 # 05 — מפרט Web Frontend
 
+## עדכון 2026-09-30 — חוויית קורס ותרגול
+
+נוספו CoursePage, HomeworkPage, CourseComposer וכרטיס המשך בדף הבית/למידה.
+`/courses`, `/courses/:courseId`, `/homework/:homeworkId` נטענים באופן עצל ודורשים
+live וזכאות. כניסת `/private-lesson` מציעה קורס, עם שיחה חופשית נגישה.
+פעולה ראשית אחת, שאלה אחת, תמלול לעריכה, סקירת העדפות, אישור תוכנית, יחידות נפתחות
+ותרגול מדורג מחליפים טפסים ודוח ארוך. [החוזה והמצבים ב־22](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
 ## 1. Stack ופריסה
 
 - React 19, TypeScript strict, Vite 7, React Router 7.
@@ -149,4 +157,3 @@ Billing public config: `PADDLE_CLIENT_TOKEN`, `PADDLE_ENVIRONMENT`,
 - mutation retry שומר idempotency key;
 - analytics/privacy event מוגדר אם נאסף;
 - תרגומים לכל locale או fallback מאושר.
-

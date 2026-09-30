@@ -18,17 +18,31 @@ Web -> GotIt: PUT preferences / POST roadmaps
 GotIt -> DB: Persist scoped configuration
 User -> Web: Start lesson
 Web -> GotIt: POST /private-lessons/realtime-sessions
+opt Personal courseId supplied
+  GotIt -> DB: Resolve approved course version, next lesson and recent homework
+  GotIt -> GotIt: Bind objective, grammar, vocabulary and support language
+end
 GotIt -> DB: Resolve focus, milestone, evidence and vocabulary
 GotIt -> OpenAI: Create short-lived Realtime client secret + bounded instructions
 OpenAI --> GotIt: ephemeral secret/session configuration
 GotIt -> DB: Insert lesson journal row (no server key/audio)
-GotIt --> Web: lesson + ephemeral secret
+GotIt --> Web: lesson + ephemeral secret + response directives\nEach directive retains the complete teaching context
 Web -> OpenAI: WebRTC offer authenticated by ephemeral secret
 OpenAI --> Web: WebRTC answer + audio/data channel
 loop Until duration/stop/disconnect
   User -> Web: Speech / mute / translate latest
   Web <-> OpenAI: Realtime audio and events
   Web -> Web: Collect bounded transcript turns
+  Web -> Web: Track learner speech and actual audio playback
+  opt Thinking interval elapsed, active/unmuted/visible/online, no pending response
+    alt Fewer than two automatic hints without learner activity
+      Web -> OpenAI: continuationEvent with context + unique event_id
+      OpenAI --> Web: Fresh hint or next objective-based activity
+    else Automatic hint budget exhausted
+      Web --> User: Show Continue lesson action
+      User -> Web: Continue when ready
+    end
+  end
 end
 Web -> OpenAI: Send wrap-up event
 OpenAI --> Web: Recap and goodbye audio
@@ -36,16 +50,26 @@ Web -> GotIt: POST /private-lessons/:id/complete\nreason + duration + bounded tu
 GotIt -> OpenAI: Structured report from untrusted turns
 OpenAI --> GotIt: strengths/corrections/skills/next step
 GotIt -> GotIt: Validate, normalize and assess evidence
+opt Actual teaching and learner participation observed
+  GotIt -> DB: Queue homework once by lesson ID with bounded teaching excerpts
+  GotIt -> DB: Record course evidence with revision check and lesson deduplication
+end
 critical Complete lesson
   GotIt -> DB: Save report/continuity
   GotIt -> DB: Insert skill and milestone evidence
   GotIt -> DB: Update skill profiles, CEFR range/confidence, roadmap progress
 end
 GotIt --> Web: completed lesson/report
-Web --> User: Report, level, suggested review
+Web --> User: Short report, next step and homework action\nFull report in expandable details
 note over Web,DB
+Standard lessons start and continue in the target language;
+support language is available on request. Absolute beginners receive bilingual teaching.
+Explain and model before guided and independent practice; vary examples after success.
+response.done is not playback completion. Stop recovery timers on dispose.
 Raw microphone audio and provider secret are not persisted by GotIt.
 Transcript turns are accepted only at explicit completion and are bounded.
+Only bounded teaching excerpts are retained for homework.
+Homework/course writes precede journal completion and are retry-safe,
+not one shared transaction with the lesson journal.
 end note
 @enduml
-

@@ -1,5 +1,12 @@
 # 04 — מפרט GotIt Backend
 
+## עדכון 2026-09-30 — קורסים אישיים
+
+נוסף `modules/courses`: סכמה, סילבוסים, ספק, repository, service ונתיבים. זהו שירות מוצר
+בבעלות GotIt; Core ממשיך לספק זהות וזכאות. מודול השיעורים מקבל הקשר קורס מאושר ומייצר
+חבילת בית לאחר למידה. [22](22_PERSONAL_COURSES_IMPLEMENTATION.md) הוא המקור לחוזים,
+עסקאות, נתונים, גרסאות ומגבלות ספק. השינוי מקומי וטרם נפרס.
+
 ## 1. תפקיד ו־Stack
 
 שירות מוצר עצמאי ב־Node.js 24, TypeScript ו־Express 5. הוא בעל דומיין הלמידה
@@ -170,4 +177,3 @@ Providers: משתני OpenAI, Anthropic, Google, Azure ו־Pixabay המתועד�
 8. provider failure classes ו־timeouts מוגדרים.
 9. logs ללא תוכן רגיש.
 10. rollout ו־rollback מתועדים.
-

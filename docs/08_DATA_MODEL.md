@@ -1,5 +1,18 @@
 # 08 — מודל נתונים ומיגרציות
 
+## תיקון רצף השיעור — 2026-09-30
+
+תיקון הובלת השיעור אינו משנה טבלאות או ספי התקדמות. מצב דיבור/השמעה ותקציב
+פניות נשמרים בזיכרון הלקוח בלבד ונמחקים ביציאה. ההקשר המאושר הקיים נשמר: [22, סעיף 9](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
+## עדכון מקומי 2026-09-30 — 39 טבלאות מוצר
+
+מיגרציה additive `1789488019000_personal-courses.js` מוסיפה `learning_documents`,
+`learning_commands` ו־`private_lesson_sessions.course_context`. המסמכים והקבלות
+מבודדים ב־application/user עם FK מורכבים, revision ו־snapshot תוצאה.
+הספירה הקודמת של 37 להלן היא baseline; מלאי המוצר לאחר המיגרציה הוא 39, ללא שינוי ב־Core.
+[מבנה, פרטיות וקשר ליומן שיעורים ב־22](22_PERSONAL_COURSES_IMPLEMENTATION.md).
+
 ## 1. עקרונות
 
 - PostgreSQL עם schemas לוגיים `core` ו־`product_gotit`.
@@ -158,4 +171,3 @@ DDL; בהקשחת Production רצוי pre-deploy job נפרד כדי שה־runti
 - down migration רק על DB חד־פעמי; אינו rollback production אוטומטי.
 - rollback אפליקטיבי חייב לתמוך ב־schema החדש או להתבצע אחרי restore מתוכנן.
 - RPO/RTO ותרגיל restore רבעוני הם החלטה תפעולית פתוחה.
-
