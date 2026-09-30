@@ -1,5 +1,14 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Mixed-direction alignment regression
+
+`gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` passed
+`npm.cmd run check`: typecheck, lint, 154/154 Vitest tests, build, and
+16/16 gateway tests. The vocabulary regression now asserts that the guide
+shares a left-to-right reading group with its source word. The failure was
+observed in live list/detail screenshots on the preceding Web commit;
+repeat browser smoke after deployment is required.
+
 ## 2026-10-01 — Reading guide Web evidence
 
 `gotIt-front@c585b8860756e739859137d6e391643c321c5282` passed

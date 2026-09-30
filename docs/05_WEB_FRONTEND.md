@@ -1,5 +1,14 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 — Mixed-direction guide alignment correction
+
+`gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` groups the source
+expression and its reading guide in one left-to-right layout in both the live
+library list and detail. The guide keeps its own language and automatic text
+direction, so Hebrew letters remain readable directly beneath English text.
+The initial live smoke exposed separated alignment in the RTL page; the fix
+passed `npm.cmd run check` locally and awaits deployment and repeat smoke.
+
 ## 2026-10-01 — Vocabulary reading guides
 
 Source: `gotIt-front@c585b8860756e739859137d6e391643c321c5282`.

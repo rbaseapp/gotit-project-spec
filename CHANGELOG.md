@@ -1,5 +1,12 @@
 # יומן שינויים
 
+## 2026-10-01 — Reading guide alignment
+
+- `gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` keeps the
+  English expression and Hebrew reading guide together in RTL layouts.
+- Local Web check passed: typecheck, lint, 154 Vitest, build, 16 gateway.
+  Deployment and repeat live visual smoke are pending.
+
 ## 2026-10-01 — Web vocabulary reading guides
 
 - `gotIt-front@c585b8860756e739859137d6e391643c321c5282` displays

@@ -1,5 +1,13 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 — SCR-05/06 mixed-direction placement
+
+`gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` keeps the
+English expression and Hebrew reading guide in a shared reading group in
+SCR-05 and SCR-06. This corrects a live-observed RTL layout where the two
+lines were on opposite sides of the row. Local regression checks the group
+and direction; production visual recheck is pending.
+
 ## 2026-10-01 — SCR-05/06 pronunciation guide
 
 In the live vocabulary list (SCR-05), a saved reading guide appears in smaller

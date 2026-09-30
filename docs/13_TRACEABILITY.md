@@ -1,5 +1,13 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-LIB-008 visual correction
+
+`gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` addresses
+the SCR-05/06 RTL alignment failure for UC-13. The changed
+`LiveVocabularyPage.tsx`, `production.css`, and `test/live.test.tsx`
+connect source and guide in one reading group. Web check passed locally
+(154 Vitest, 16 gateway); live recheck is pending.
+
 ## 2026-10-01 — FR-LIB-008 / UC-13 / SCR-05 and SCR-06
 
 Web `gotIt-front@c585b8860756e739859137d6e391643c321c5282`
