@@ -7,7 +7,9 @@
 16/16 gateway tests. The vocabulary regression now asserts that the guide
 shares a left-to-right reading group with its source word. The failure was
 observed in live list/detail screenshots on the preceding Web commit;
-repeat browser smoke after deployment is required.
+The corrected Web deployment `dep-dauormu0tbcc73c43lkg` was observed Live;
+browser smoke confirmed aligned English source/guide in the list and Arabic
+source/guide in the list and detail.
 
 ## 2026-10-01 — Reading guide Web evidence
 
@@ -15,7 +17,7 @@ repeat browser smoke after deployment is required.
 `npm.cmd run check`: typecheck, lint, 154/154 Vitest tests, build and 16/16
 gateway tests. The new live vocabulary regression checks placement of a
 Hebrew guide and omission of a non-transliteration scheme. Browser/device
-acceptance and deployment smoke have not yet been performed.
+acceptance was performed in the live vocabulary browser on 2026-10-01.
 
 ## 2026-10-01 — Reading guide backend evidence
 
@@ -25,7 +27,12 @@ The new regression verifies that a stored `transliteration:he` guide reaches
 the owner in `GET /learning-items` while another user receives no item.
 Production data was read back as 84/84 active English items with guides.
 Repository-wide `format:check` reports 37 pre-existing unformatted files.
-No deployment or live HTTP smoke result is claimed at this stage.
+Backend deployment `dep-dauope8jo6nc73e0n2dg` was observed Live for this
+commit; backend `/ready` and Web `/ready` returned HTTP 200. Scoped production
+readback confirmed 12/12 active Arabic-to-Hebrew items with
+`transliteration:he` after the follow-up data backfill; live list and detail
+smoke showed the Hebrew reading guides. These checks do not cover automatic
+generation for future captures.
 
 ## תיקון רצף השיעור — ראיות מקומיות 2026-09-30
 

@@ -5,7 +5,8 @@
 - `gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` keeps the
   English expression and Hebrew reading guide together in RTL layouts.
 - Local Web check passed: typecheck, lint, 154 Vitest, build, 16 gateway.
-  Deployment and repeat live visual smoke are pending.
+  Render deployment `dep-dauormu0tbcc73c43lkg` was observed Live and the
+  corrected alignment was confirmed in the live vocabulary browser.
 
 ## 2026-10-01 — Web vocabulary reading guides
 
@@ -13,7 +14,8 @@
   stored learner-script guides below source expressions in the live list and
   detail. It tolerates older API responses and omits unrelated phonetic schemes.
 - Local Web check passed: typecheck, lint, 154 Vitest tests, build and
-  16 gateway tests. Deployment and live UI smoke remain pending.
+  16 gateway tests. The initial Web deployment was observed Live, followed
+  by the alignment correction and live browser smoke.
 
 ## 2026-10-01 — Backend vocabulary reading guides
 
@@ -22,7 +24,12 @@
 - The requested account's 84 active English words received Hebrew-script
   reading guides in production data; scoped readback confirmed 84/84.
 - Local verification: backend typecheck, 201 fast tests, 26 PostgreSQL
-  integration tests and build passed. Backend deployment remains unverified.
+  integration tests and build passed. Backend deployment
+  `dep-dauope8jo6nc73e0n2dg` was observed Live; `/ready` returned HTTP 200.
+- Follow-up: the same account's 12 active Arabic-to-Hebrew items received
+  Hebrew-script reading guides in production data. Scoped readback confirmed
+  12/12 and live vocabulary list/detail smoke showed the guides. New captures
+  still require an automatic generation path.
 
 ## 2026-09-30
 

@@ -179,3 +179,15 @@ subscription ו־transaction IDs; אין לערוך DB ידנית בלי audit.
 - export/import חלקי.
 - Web deep links, CSP, mobile/RTL.
 - Extension unpacked + Web Store candidate.
+
+## 2026-10-01 vocabulary reading-guide release evidence
+
+Render showed Backend deployment `dep-dauope8jo6nc73e0n2dg` Live for
+`gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` and Web
+deployment `dep-dauormu0tbcc73c43lkg` Live for
+`gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe`. Backend and
+Web `/ready` returned HTTP 200. The live vocabulary page showed aligned
+English/Hebrew guides and, after a guarded account-scoped production data
+backfill, Arabic/Hebrew guides in the list and detail. Readback confirmed
+12/12 active Arabic-to-Hebrew items with `transliteration:he`. This data
+change used existing columns; it required no migration or service deploy.

@@ -6,10 +6,13 @@ Backend `c138f5464de818552a54ca584c43ccdaee980da0` exposes the existing
 phonetic fields on owner-scoped library lists. Web
 `c585b8860756e739859137d6e391643c321c5282` displays saved
 `transliteration:<language>` guides below expressions in the live library and
-detail. Both code changes passed local tests. The requested account has a
-production-data pilot: 84/84 active English items have Hebrew-script guides.
-This is a one-time data backfill, not automatic generation for new items.
-Code deployment and live UI verification remain pending.
+detail; `adb2011869d851c3e01dc0dfa247e06084604dbe` aligns the guide with
+the source expression in RTL layouts. All three code commits passed their
+local tests and were observed Live on Render on 2026-10-01. The requested
+account has a production-data pilot: 84/84 active English items and 12/12
+active Arabic-to-Hebrew items have Hebrew-script guides. The Arabic additions
+were verified in the live vocabulary list and item detail. These are one-time
+data backfills, not automatic generation for new items.
 
 ## תיקון רצף השיעור — 2026-09-30
 

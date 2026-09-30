@@ -6,7 +6,11 @@
 the SCR-05/06 RTL alignment failure for UC-13. The changed
 `LiveVocabularyPage.tsx`, `production.css`, and `test/live.test.tsx`
 connect source and guide in one reading group. Web check passed locally
-(154 Vitest, 16 gateway); live recheck is pending.
+(154 Vitest, 16 gateway). Render deployment `dep-dauormu0tbcc73c43lkg`
+was observed Live on 2026-10-01 and the corrected English alignment was
+confirmed in the live browser. Arabic-to-Hebrew follow-up data readback
+confirmed 12/12 populated items; live SCR-05/06 smoke confirmed the reading
+guide for an Arabic item in the list and detail.
 
 ## 2026-10-01 — FR-LIB-008 / UC-13 / SCR-05 and SCR-06
 
@@ -15,7 +19,8 @@ maps the additive library phonetic fields to the list and detail guide.
 `test/live.test.tsx` verifies Hebrew guide placement and rejects the
 `hebrew_niqqud` scheme. `npm.cmd run check` passed locally
 (154 Vitest, 16 gateway). The backend trace and 84/84 data readback are
-recorded below. Deployment and live UI verification are still pending.
+recorded below. The Web commits were observed Live on Render and the live
+vocabulary list/detail showed saved reading guides on 2026-10-01.
 
 ## 2026-10-01 — Vocabulary reading guide
 
@@ -25,8 +30,10 @@ in existing phonetic columns. Backend source:
 `library.repository.ts` list fields; regression:
 `test/integration/practice.integration.test.ts` (owner and foreign user).
 84/84 active English items in the requested account were populated and read
-back in the production database. Web rendering and HTTP deployment evidence
-are tracked separately; this backend source commit is locally verified.
+back in the production database. Backend deployment
+`dep-dauope8jo6nc73e0n2dg` was observed Live for this commit and `/ready`
+returned HTTP 200. Web rendering and Arabic follow-up evidence are recorded
+above.
 
 ## תיקון רצף השיעור — 2026-09-30
 
