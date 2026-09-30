@@ -1,5 +1,14 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-LIB-008 / UC-13 / SCR-05 and SCR-06
+
+Web `gotIt-front@c585b8860756e739859137d6e391643c321c5282`
+maps the additive library phonetic fields to the list and detail guide.
+`test/live.test.tsx` verifies Hebrew guide placement and rejects the
+`hebrew_niqqud` scheme. `npm.cmd run check` passed locally
+(154 Vitest, 16 gateway). The backend trace and 84/84 data readback are
+recorded below. Deployment and live UI verification are still pending.
+
 ## 2026-10-01 — Vocabulary reading guide
 
 Initial pilot: owner-scoped English expressions can carry a Hebrew reading guide

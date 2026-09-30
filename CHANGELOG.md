@@ -1,5 +1,13 @@
 # יומן שינויים
 
+## 2026-10-01 — Web vocabulary reading guides
+
+- `gotIt-front@c585b8860756e739859137d6e391643c321c5282` displays
+  stored learner-script guides below source expressions in the live list and
+  detail. It tolerates older API responses and omits unrelated phonetic schemes.
+- Local Web check passed: typecheck, lint, 154 Vitest tests, build and
+  16 gateway tests. Deployment and live UI smoke remain pending.
+
 ## 2026-10-01 — Backend vocabulary reading guides
 
 - `gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0` exposes

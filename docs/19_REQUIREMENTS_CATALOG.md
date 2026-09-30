@@ -84,6 +84,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-LIB-005 | tags/examples/occurrences/history | Should | ownership + limits | Stable |
 | FR-LIB-006 | bulk actions עד 100 | Should | all IDs scoped/validated | Stable |
 | FR-LIB-007 | permanent deletion | Must for privacy GA | policy/SLA/audit | Open |
+| FR-LIB-008 | optional learner-script reading guide in vocabulary | Should | saved guide appears below the source word, is distinguished from translation and niqqud, and absent guides do not break the list | Locally verified pilot; deployment pending |
 
 ## 6. Packs, Practice ו־Learning
 

@@ -1,5 +1,16 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Initial vocabulary reading-guide pilot
+
+Backend `c138f5464de818552a54ca584c43ccdaee980da0` exposes the existing
+phonetic fields on owner-scoped library lists. Web
+`c585b8860756e739859137d6e391643c321c5282` displays saved
+`transliteration:<language>` guides below expressions in the live library and
+detail. Both code changes passed local tests. The requested account has a
+production-data pilot: 84/84 active English items have Hebrew-script guides.
+This is a one-time data backfill, not automatic generation for new items.
+Code deployment and live UI verification remain pending.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תיקון נוסף מקומי: פתיחת שיעור בשפה הנלמדת, הוראה לפני תרגול, דוגמאות מתקדמות

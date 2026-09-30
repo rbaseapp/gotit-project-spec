@@ -1,5 +1,15 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 — Vocabulary reading guides
+
+Source: `gotIt-front@c585b8860756e739859137d6e391643c321c5282`.
+The live vocabulary list and detail show a stored pronunciation guide directly
+below the source expression when `phoneticScheme` starts with
+`transliteration:`. The suffix supplies the guide's `lang` attribute and
+`dir=auto` handles its script. The API parser tolerates older list responses
+without these additive fields. `hebrew_niqqud` is not shown as a transliteration.
+The Web check passed locally; deployment and browser smoke remain to be verified.
+
 ## עדכון 2026-09-30 — חוויית קורס ותרגול
 
 נוספו CoursePage, HomeworkPage, CourseComposer וכרטיס המשך בדף הבית/למידה.

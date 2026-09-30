@@ -1,5 +1,13 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Reading guide Web evidence
+
+`gotIt-front@c585b8860756e739859137d6e391643c321c5282` passed
+`npm.cmd run check`: typecheck, lint, 154/154 Vitest tests, build and 16/16
+gateway tests. The new live vocabulary regression checks placement of a
+Hebrew guide and omission of a non-transliteration scheme. Browser/device
+acceptance and deployment smoke have not yet been performed.
+
 ## 2026-10-01 — Reading guide backend evidence
 
 `gotIt-backend@c138f5464de818552a54ca584c43ccdaee980da0`: typecheck,

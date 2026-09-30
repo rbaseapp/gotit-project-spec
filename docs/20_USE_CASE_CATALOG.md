@@ -1,5 +1,19 @@
 # 20 — קטלוג Use Cases
 
+## UC-13 — Read a source expression with a familiar script (pilot)
+
+Actor: authenticated learner viewing owned vocabulary. Trigger: open SCR-05
+or SCR-06. The client reads the owner-scoped library response and places a
+stored `transliteration:<language>` guide below the source expression when
+present. The primary translation remains a separate line. Without a guide,
+or for `hebrew_niqqud`, the reading-guide line is omitted. The learner
+may still use the existing reference audio separately. Current pilot data:
+84 active English expressions in the requested account have Hebrew guides;
+new words do not receive guides automatically. Requirement: FR-LIB-008.
+Backend `c138f5464de818552a54ca584c43ccdaee980da0`; Web
+`c585b8860756e739859137d6e391643c321c5282`. Locally tested; live
+screen verification pending.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 חלופה ב־Private Lesson: המשתמש שותק אחרי תום ההשמעה; ה־Web ממתין לזמן חשיבה

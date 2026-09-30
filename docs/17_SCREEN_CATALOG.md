@@ -1,5 +1,16 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 — SCR-05/06 pronunciation guide
+
+In the live vocabulary list (SCR-05), a saved reading guide appears in smaller
+text immediately below the source expression and above its meaning. The item
+detail (SCR-06) repeats the guide below the title. The guide is shown only for
+`phoneticScheme=transliteration:<learner-language>`; missing guides and
+`hebrew_niqqud` data leave the existing layout intact. The text has the
+guide language and automatic direction. Source:
+`gotIt-front@c585b8860756e739859137d6e391643c321c5282`.
+Locally verified by `test/live.test.tsx`; live browser verification is pending.
+
 ## תיקון רצף השיעור — 2026-09-30
 
 במסך השיעור הפעיל נוספו מצב „ממשיכים עם המורה…” וכפתור „נמשיך בשיעור”
