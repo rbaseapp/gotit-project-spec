@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Smart review matching rotation
+
+- `gotIt-backend@d659b274397421685ff840c9013437a366ab1718` makes successful drag-board words rotate across days using the last current-revision matching success. Eligible words without a matching success come first; the learning algorithm version is `gotit-v1.3`. No schema or API payload change.
+- The reported account has persisted matching successes for the pictured words, confirming the repeat was a queue-order issue rather than a missing attempt write. The two-day PostgreSQL regression passed, as did 203 fast tests. Full integration and global quality gates have unrelated existing failures. This entry records local implementation; deployment and live smoke are pending.
+
 ## 2026-10-01 — Reading guide alignment
 
 - `gotIt-front@adb2011869d851c3e01dc0dfa247e06084604dbe` keeps the

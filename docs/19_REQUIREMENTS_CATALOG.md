@@ -94,6 +94,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-PACK-002 | selective safe installation | Should | reuse same-sense/no duplicate | Stable |
 | FR-PACK-003 | safe removal | Should | keep or archive exclusive only | Stable |
 | FR-PRAC-001 | smart/manual session | Must | server selection snapshot | Stable |
+| FR-PRAC-005 | smart review matching rotation | Must | A successful drag board remains behind eligible words with no current-revision matching success on subsequent days; exhausted words rotate by oldest success | Implemented locally; deployment pending |
 | FR-PRAC-002 | private exercises | Must | answer not exposed, expires/consumes | Stable |
 | FR-PRAC-003 | flashcard/recall/listening/matching/pronunciation/quiz | Must/Should | server scoring | Stable conditional |
 | FR-PRAC-004 | attempt idempotency | Must | stored authoritative receipt | Stable |

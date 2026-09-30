@@ -63,6 +63,7 @@ FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי Co
 | LIB-01 | browse/filter/edit/bulk | Backend/Web | `/learning-items*` | vocabulary tables | library/client tests | ממומש |
 | PACK-01 | leveled word packs | Backend/Web | `/word-packs*` | pack tables | word-pack tests | ממומש |
 | PRAC-01 | server-authoritative exercises | Backend/Web | `/practice/*` | sessions/exercises/attempts | practice integration | ממומש |
+| PRAC-02 | cross-day smart matching rotation | Backend/Web | `/learning/queue`, `/practice/sessions` | current-revision matching attempts | practice integration: next-day queue after correct board | Implemented locally; deployment pending |
 | LEARN-01 | five-skill evidence + mastery | Backend/Web | `/learning/*` | progress/effects/events | learning tests | ממומש |
 | GAME-01 | XP/level/streak | Backend/Web | dashboard/gamification | XP/daily/gamification | learning/dashboard tests | ממומש |
 | READ-01 | AI reading + quiz | Backend/Web | `/reading*` | generated content | reading/client tests | ממומש; provider acceptance נדרש |

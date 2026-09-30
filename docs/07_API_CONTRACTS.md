@@ -190,6 +190,8 @@ mark/return mastery, priority normal/high, hard/clear.
 | POST | `/practice/sessions/:id/exercises` | issue 1–100 private exercises |
 | POST | `/practice/attempts` | idempotent authoritative scoring |
 | GET | `/learning/queue` | limit ≤100 |
+
+`GET /learning/queue` keeps its response shape. Algorithm `gotit-v1.3` orders eligible words by the last successful current-revision matching attempt: no success first, then oldest success. Queue score breaks ties. A newly created smart review session snapshots this order; explicit item selections retain their supplied scope.
 | GET | `/learning/config` | policy + algorithmVersion |
 
 Session input מאפשר `sessionType`, עד 100 item IDs, `readingId`, scope יחיד
