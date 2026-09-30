@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — Versioned English catalog correction
+
+`gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` adds forward migration `1790800007000_english-learning-path.js` after the immutable initial seed. It updates one `word_topics` slug/title/description and 72 `word_pack_entries` translations using expected previous values; it adds no table or column and leaves user-owned `learning_items`, translations, and evidence untouched. The down path refuses rollback if any of the 60 packs has user installation/progress. Disposable PostgreSQL migration verification passed; production migration has not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English catalog data migration
 
 `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` adds migration `1790800006000_daily-english-catalog.js`: one `word_topics` row, three `word_tracks` rows, 60 `word_packs`, and 3,000 `word_pack_entries` for source `en` and translation `he`. No new table or column is introduced. The migration must run with the dedicated migrator; source presence is not evidence it ran in production. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

@@ -191,3 +191,7 @@ English/Hebrew guides and, after a guarded account-scoped production data
 backfill, Arabic/Hebrew guides in the list and detail. Readback confirmed
 12/12 active Arabic-to-Hebrew items with `transliteration:he`. This data
 change used existing columns; it required no migration or service deploy.
+
+## 2026-10-01 English learning path catalog rollout
+
+For `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`, run the dedicated migrator with `GOTIT_MIGRATION_DATABASE_URL` after the documented backup/preflight process. Apply `1790800006000_daily-english-catalog.js` then `1790800007000_english-learning-path.js`. Ordinary Render commit deployment and backend startup do not insert the catalog. Verify the named topic, 3 tracks, 60 units, 3,000 entries and an authenticated `en`/`he` catalog/detail/install flow before marking production available. Keep production down migrations out of automatic rollback; the follow-up down rejects user installations/progress. No production execution is recorded yet.

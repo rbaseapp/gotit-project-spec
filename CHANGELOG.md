@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — English learning path catalog correction
+
+- `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` adds a versioned follow-up migration to rename the catalog "מסלול לימוד אנגלית" and correct 72 Hebrew catalog meanings while preserving installed learning items.
+- Local backend typecheck, 204 fast tests, build, and 26 PostgreSQL integration subtests passed. Production migration and smoke are pending; see [path handoff](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Initial English catalog in source
 
 - `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` adds a Hebrew-to-English catalog of three 1,000-entry tracks, 60 units of 50, and migration `1790800006000_daily-english-catalog.js`.

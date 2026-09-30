@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — PACK-01 English path data correction
+
+`gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` maps the requested course name and corrected Hebrew meanings to `word_topics`, `word_pack_entries`, migrations `1790800006000` and `1790800007000`, `test/daily-english-catalog.test.ts`, and the PostgreSQL catalog subtest in `test/integration/practice.integration.test.ts`. API shape is unchanged. Local gates passed as recorded in [11_TESTING](11_TESTING.md); production migration and smoke remain open.
+
 ## 2026-10-01 — Initial English learning catalog trace
 
 The Hebrew-to-English path request maps to existing PACK-01, the word-pack process, `SCR-07`, `/api/v1/word-packs*`, and the existing pack tables. `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` supplies the catalog migration and `test/daily-english-catalog.test.ts`; it does not supply a dedicated path screen. Production migration/smoke are unverified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

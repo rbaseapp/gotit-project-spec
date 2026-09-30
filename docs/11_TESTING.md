@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — English path migration verification
+
+`gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`: typecheck, 204/204 fast tests, build, and 26/26 targeted PostgreSQL integration subtests passed locally. The integration checks the renamed topic, 3 tracks, 60 units, 3,000 entries, a corrected meaning, and language filtering. Targeted formatting passed; the repository-wide formatting gate reports 38 existing files outside the changed path. No production migration or authenticated smoke was observed.
+
 ## 2026-10-01 — Initial English catalog regression scope
 
 `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` includes `test/daily-english-catalog.test.ts` for counts, 50-entry grouping, disjoint vocabulary, Hebrew meanings, representative expressions, migration statements, and protected rollback. An exact-commit test report and authenticated production smoke have not been recorded. The rollout gate is a dedicated migration followed by `en`/`he` catalog, detail, and 50-entry install checks. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

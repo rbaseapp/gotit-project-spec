@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Named English learning catalog
+
+`gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` locally verifies a follow-up migration that renames the English catalog as a learning path and corrects 72 catalog meanings. The source migration preserves installed learning items. Production migration and availability have not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English catalog source, rollout unverified
 
 `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a` contains a three-level Hebrew-to-English catalog with 60 units of 50 entries. It is currently implemented through the generic word-pack data model and screen. The dedicated language-learning path requested afterward is not present in this source commit. Migration execution and production availability have not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

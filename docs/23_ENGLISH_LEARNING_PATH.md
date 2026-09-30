@@ -1,5 +1,14 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Named path and reviewed corrections
+
+Source: `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`.
+Migration `1790800007000_english-learning-path.js` follows the published initial catalog migration without editing it. It changes the topic slug to `english-learning-path-en-he` and the learner-facing title to "מסלול לימוד אנגלית". A separate correction asset identifies 72 Hebrew meanings by stable entry ID, validates their previous values, and updates catalog entries transactionally. Existing installed learning items and learning evidence are not rewritten. There is no API or schema shape change.
+
+Local verification: backend typecheck, 204/204 fast tests, build, and the 26/26 targeted PostgreSQL integration subtests passed. The integration checked the topic title and slug, 3 tracks, 60 units, 3,000 entries, and a representative corrected meaning. Repository-wide formatting still reports pre-existing unrelated files; the changed migration and tests pass targeted formatting. Production migration and authenticated smoke remain unverified.
+
+The intended learner path is a dedicated Web screen with level and unit progress, next unit, preview, and practice entry. That Web source commit is tracked separately. Rollout requires both migrations in sequence through the dedicated migrator before or alongside the Web deploy. Existing saved user translations may differ from corrected catalog meanings; they remain under user ownership.
+
 Source: `gotIt-backend@ba9ab573749d7a2705f44738c40b45d4d30c777a`.
 Status on 2026-10-01: implemented as a data migration in source control. Production migration execution and an authenticated catalog smoke test have not been verified. A backend code deployment alone does not insert this content.
 
