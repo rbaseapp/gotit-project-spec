@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — English unit level label regression
 
-`gotIt-front@66767de`: `test/live.test.tsx` renders Basic unit 1 and Advanced unit 5 on the dedicated path, then asserts each card displays its own level while retaining the existing 50-entry installation request coverage. `npm.cmd run check` passed: typecheck, lint, 157/157 Vitest, production build, and 16/16 gateway tests. Production smoke for the new card label is pending.
+`gotIt-front@66767de`: `test/live.test.tsx` renders Basic unit 1 and Advanced unit 5 on the dedicated path, then asserts each card displays its own level while retaining the existing 50-entry installation request coverage. `npm.cmd run check` passed: typecheck, lint, 157/157 Vitest, production build, and 16/16 gateway tests. Render deployment `dep-dav2m90jo6nc73f7uefg` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/english-learning` browser smoke showed the new level label in Basic unit 5 and Advanced unit 5 cards; the Advanced unit 5 preview contained `satellite`.
 
 ## 2026-10-01 — English path production verification
 

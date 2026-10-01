@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — Unit level label clarification
 
-Production read-only catalog inspection places `satellite` (COCA rank 3117) in Advanced unit 5, not Basic unit 5. `gotIt-front@66767de` adds the level name to every unit card to keep this distinction visible after scrolling. The local Web gate passed (157 Vitest, 16 gateway plus typecheck, lint and build); deployment and live label verification are pending. A separate scan of the committed catalog JSON found no weekday or month names as calendar terms (`may` is a modal verb and `march` means to walk), placed `table` in Basic unit 12 and `chair` in Good unit 5, and found no refrigerator, oven or washing machine. That editorial coverage gap is not changed by the card-label fix.
+Production read-only catalog inspection places `satellite` (COCA rank 3117) in Advanced unit 5, not Basic unit 5. `gotIt-front@66767de` adds the level name to every unit card to keep this distinction visible after scrolling. The local Web gate passed (157 Vitest, 16 gateway plus typecheck, lint and build). Render deployment `dep-dav2m90jo6nc73f7uefg` reports `Deploy succeeded | Live` for the exact SHA; Web `/ready` returned HTTP 200. An authenticated browser saw the level labels on Basic and Advanced unit 5 cards and opened Advanced unit 5, whose 50-entry preview includes `satellite`. A separate scan of the committed catalog JSON found no weekday or month names as calendar terms (`may` is a modal verb and `march` means to walk), placed `table` in Basic unit 12 and `chair` in Good unit 5, and found no refrigerator, oven or washing machine. That editorial coverage gap is not changed by the card-label fix.
 
 ## 2026-10-01 — Production activation
 

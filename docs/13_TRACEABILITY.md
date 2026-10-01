@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — SCR-16 unit identity
 
-`gotIt-front@66767de` maps the level-identification requirement on each English path card to `EnglishLearningPathPage.tsx`, `production.css`, and the Basic/Advanced combined-card regression in `test/live.test.tsx`. Production `satellite` data was checked separately and remains Advanced unit 5. Local Web check passed; live label smoke is pending. No API or data migration.
+`gotIt-front@66767de` maps the level-identification requirement on each English path card to `EnglishLearningPathPage.tsx`, `production.css`, and the Basic/Advanced combined-card regression in `test/live.test.tsx`. Production `satellite` data was checked separately and remains Advanced unit 5. Local Web check passed. Render deployment `dep-dav2m90jo6nc73f7uefg` is Live for that SHA; `/ready` returned 200, and the authenticated browser showed both card labels and `satellite` in the Advanced unit 5 preview. No API or data migration.
 
 ## 2026-10-01 — FR-PACK-004 production activation
 

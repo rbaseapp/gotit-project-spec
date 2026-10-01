@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — English path card clarity (source)
 
-`gotIt-front@66767de` shows each unit's level name inside its card, so Basic unit 5 and Advanced unit 5 cannot be confused after scrolling. Production catalog inspection confirmed `satellite` in Advanced unit 5. Local Web checks passed; the new label is not yet production verified. See [SCR-16](17_SCREEN_CATALOG.md).
+`gotIt-front@66767de` shows each unit's level name inside its card, so Basic unit 5 and Advanced unit 5 can be distinguished after scrolling. Production catalog inspection confirmed `satellite` in Advanced unit 5. Local Web checks passed. Render deployment `dep-dav2m90jo6nc73f7uefg` is Live for the exact SHA; Web `/ready` returned 200 and an authenticated browser verified both card labels and the Advanced unit 5 preview. See [SCR-16](17_SCREEN_CATALOG.md).
 
 ## 2026-10-01 — English path live state
 

@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — SCR-16 unit level context
 
-`gotIt-front@66767de` places the translated level name within each `/english-learning` unit card. The level remains identifiable when a learner scrolls beyond its section heading and sees another unit with the same number. This addresses a report that `satellite` appeared in Basic unit 5; production catalog readback places it in Advanced unit 5. No catalog or API data changes. Basic/Advanced card regression and the complete local Web check passed; production verification is pending.
+`gotIt-front@66767de` places the translated level name within each `/english-learning` unit card. The level remains identifiable when a learner scrolls beyond its section heading and sees another unit with the same number. This addresses a report that `satellite` appeared in Basic unit 5; production catalog readback places it in Advanced unit 5. No catalog or API data changes. Basic/Advanced card regression and the complete local Web check passed. Render deployment `dep-dav2m90jo6nc73f7uefg` is Live for that SHA; authenticated production smoke showed the labels and opened the Advanced unit 5 preview containing `satellite`.
 
 ## 2026-10-01 — SCR-05/06 mixed-direction placement
 
