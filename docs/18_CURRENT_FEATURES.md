@@ -1,5 +1,11 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — אווטארים, מאומת מקומית
+
+`gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` משפר תנועת פה ומצמוץ
+עם פריים מעוגל נוסף לכל דמות. Web check ו־10 בדיקות דפדפן עברו; פריסה
+ו־smoke חי ממתינים. [ראיות וגבולות](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 — Unique English path in production
 
 Backend `10602736bdf5422116eb838e57e9d708318156be` is Live in Render deployment `dep-davb9j9srm7s73bb3p70` after the dedicated version-4 catalog migration. Production readback confirms 60 packs, 50 entries each and 3,000 distinct English entries, the title **לימוד שפה מאפס**, archived prior known/link rows and exact-sense restoration. Restricted preflight and three public endpoints passed. A signed-in `ori` browser opened Basic unit 3 with 50 words and its existing 48 known declarations. Editorial review of the new model-drafted Hebrew translations remains open. See [path handoff](23_ENGLISH_LEARNING_PATH.md).

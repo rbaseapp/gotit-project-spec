@@ -1,5 +1,12 @@
 # 19 — קטלוג דרישות ממוספר
 
+## FR-LESS-006 — תנועת אווטאר בזמן השמעה
+
+Should: שתי דמויות המורה מציגות מעברים רציפים בין צורות פה, סגירה בשתיקה,
+מצמוץ עצמאי בדיבור ונשימה עדינה; reduced motion ורוחב 320px נתמכים.
+ממומש ומאומת מקומית במקור `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`;
+[קבלה ובדיקות](25_TUTOR_AVATAR_MOTION.md). Production ממתין.
+
 ## 2026-10-01 — FR-PACK-005 unique catalog amendment
 
 The current learner-approved source supersedes the earlier repeated-word catalog for SCR-16: three levels, 60 supplied units, 50 entries per unit, **3,000 unique English words or phrases across the whole path**, Hebrew translation coverage and title **לימוד שפה מאפס**. On migration, a changed ordinal entry ID must not transfer a learner's known or linked state to a different English form or Hebrew sense. Retain unmatched prior declarations and links for audit/recovery, without erasing their underlying learning evidence. Backend `10602736bdf5422116eb838e57e9d708318156be` passed local and disposable PostgreSQL acceptance; production acceptance remains pending.

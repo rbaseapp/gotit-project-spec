@@ -1,5 +1,11 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 — תנועת מורה טבעית יותר
+
+`gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` מוסיף צורת פה מעוגלת
+לגבר ולאישה, שילוב צורות סמוכות, מד קול מהיר ומצמוץ בזמן דיבור.
+ממומש ומאומת מקומית; פריסה ממתינה. [התנהגות וראיות](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 - English preview action layout
 
 `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` gives the English unit preview a 700px maximum width and a three-column action grid, switching to two columns on narrow phones. The full-unit practice action spans two columns; each footer button has flexible width and wrapped copy. The word list still scrolls independently. No route, data, entitlement or known-state contract changes. Local Web check and phone/tablet/desktop modal regression passed; production deploy pending.

@@ -1,5 +1,12 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-01 — חיווי המורה ב־UC-07 / UC-11
+
+בהשמעת המורה שנבחר, האווטאר מציג צורות פה לפי מעטפת העוצמה וממצמץ עצמאית;
+בהפסקה הוא חוזר למנוחה/האזנה/חשיבה. ב־reduced motion אין תנועת פנים.
+החיווי אינו משנה רצף שיעור או זכאות. FR-LESS-006;
+[מקור וראיות](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 — UC-04B unique unit catalog
 
 The learner opens the English path and sees 60 units of 50 translated words or phrases with no English entry repeated anywhere in the path. Marking one word known changes only that entry's unit progress. During the version-4 catalog migration, prior known declarations follow identical English/Hebrew senses, and prior learning links follow identical senses within the same installed pack; unmatched originals remain archived without assigning progress to replacement words. The existing known toggle, selection and practice flows remain. Backend `10602736bdf5422116eb838e57e9d708318156be` passed local/disposable PostgreSQL checks; live acceptance pending.

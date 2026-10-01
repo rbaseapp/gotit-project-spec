@@ -1,5 +1,13 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-LESS-006
+
+P12, UC-07/UC-11, SCR-10/SCR-PC-00A → `TeacherAvatar.tsx`, `avatarMotion.ts`,
+מד השמע ב־`privateLesson.ts`, CSS ונכסי שני המורים → בדיקות avatar-motion,
+teacher-avatar, private-lesson-connection, private-lesson ו־Playwright.
+מקור: `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`;
+[ראיות](25_TUTOR_AVATAR_MOTION.md), פריסה ממתינה.
+
 ## 2026-10-01 — FR-PACK-005 production evidence
 
 `gotIt-backend@10602736bdf5422116eb838e57e9d708318156be` is deployed as Render `dep-davb9j9srm7s73bb3p70`. The dedicated migration and product-only preflight passed, then production readback verified 60×50, 3,000 unique English entries, version 4, the renamed topic and archived/remapped prior progress. Authenticated SCR-16 smoke opened Basic unit 3 and read its 50 entries and existing known/unknown state. This closes the catalog and display acceptance for the observed release; new Hebrew draft meanings still need editorial review. See [23](23_ENGLISH_LEARNING_PATH.md).
