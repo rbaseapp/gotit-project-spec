@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-01 — UC-04B distinct senses
+
+When a learner marks a known word in a named English unit, the server marks matching entries in other units only if the English expression and Hebrew meaning are the same after normalization. A different meaning of the same spelling remains available to learn. `May` as a month and modal `may` are the tested alternative flow in `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966`; local PostgreSQL verification passed, production smoke pending.
+
 ## 2026-10-01 — UC-04B Web flow implemented locally
 
 On `/english-learning`, the learner may mark a named unit known directly from its card or inspect its preview and mark one English/Hebrew entry. The card/preview reload server state after each action; an entire known unit is complete, and the next unfinished unit advances. If the learner opens an incomplete unit, the install request contains only unknown IDs. Billing restrictions follow the existing `vocabulary.write` route; API errors use existing feedback. Local source `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` passed flow and responsive regression; production smoke pending.

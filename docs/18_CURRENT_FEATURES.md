@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — English path sense refinement
+
+Backend source `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` corrects 213 context-sensitive Hebrew catalog meanings and keeps known-word propagation within a shared English/Hebrew sense. Local and PostgreSQL verification passed; the production correction migration/deploy remains pending at this source checkpoint. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English prior-knowledge controls in Web source
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` locally verifies named unit cards, a one-click whole-unit known action, per-word known actions in the preview, reversal, and skipping known entries during installation. It consumes the backend known/completed fields from `gotIt-backend@14012a0`. `npm.cmd run check` passed (160 Vitest, 16 gateway), and 374 Playwright responsive checks passed. Production deployment and authenticated smoke pending. See [SCR-16](17_SCREEN_CATALOG.md).

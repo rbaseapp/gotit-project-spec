@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-01 — FR-PACK-005 sense acceptance
+
+Repeated spellings in the English path share an already-known declaration only for the same Hebrew meaning. Distinct contextual meanings remain individually learnable, including calendar `May` and modal `may`. The 60 supplied names and 50-entry unit sizes remain the acceptance baseline. Backend source `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` passed local and PostgreSQL regressions; production acceptance pending at this source checkpoint.
+
 ## 2026-10-01 — FR-PACK-005 Web acceptance
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` implements the learner controls for FR-PACK-005: theme name per 50-entry unit, whole-unit and per-entry known toggles, known and completed progress, next unfinished unit, and installation of only unknown IDs. The live-flow regression verifies 50 IDs with no prior knowledge and 49 after marking one word; it also marks and reverses an entire unit. Local Web gates and 374 responsive checks passed. Production acceptance still requires the guarded catalog migration, both service deployments and authenticated smoke. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

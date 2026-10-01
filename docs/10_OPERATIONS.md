@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Contextual English catalog rollout
+
+After the already applied version-2 course migration, apply `1790800010000_english-communication-senses.js` with the dedicated `gotit_migrator` credential, then deploy Backend `10bf19712bc9831a77dd9672c5f78701577a2966`. Take and validate a fresh product/migration-metadata backup, preflight the restricted runtime, verify the migration row, 60 units/3,000 entries, selected version-3 packs and `May` versus `may`, both `/ready` endpoints, and an authenticated known-word sense smoke. Web `cbc5bac2a374e150c3d1ef31e77041cba27f387e` already contains the one-click controls. Production result is pending at this source checkpoint; do not run a destructive down in production.
+
 ## 2026-10-01 — English migration retry after role-boundary failure
 
 The initial `node scripts/migrate-provisioned.js gotit-v1-up` stopped with SQLSTATE 42501 (`permission denied for schema core`) in the known-entry table migration. No catalog version change was observed afterward. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` moves the new FK to `product_gotit.user_profiles` so the existing dedicated migrator can apply it without Core schema access. Fresh local schema and full product/migration-metadata backups were created and `pg_restore --list` validated the full archive: `gotit-schema-before-v1-2026-10-01T11-32-28-745Z.dump` (SHA-256 `2c4623432c9d0a168c6e564c230f68deb38c776c5204eb4781919d9b8def826d`) and `gotit-product-full-before-named-english-2026-10-01T11-32-28-741Z.dump` (SHA-256 `c0c508b726a1055f6c0f2b247d296698fc367525a5b629c1f3ba94555d1f2375`). Recheck path installations/links, retry the dedicated migration, then verify schema/catalog and deploy Backend/Web. Do not grant the migrator Core access or use runtime credentials for migration.

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Contextual English meanings
+
+`gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966`: `npm.cmd run typecheck`, `npm.cmd run build`, 207/207 fast tests, 59/59 disposable PostgreSQL integration tests, and targeted Prettier passed. The integration migrates up/down, checks `May`/`may` translation and known-state separation, carries the same modal sense to a later unit, and preserves cross-unit same-sense propagation. Production migration, exact-SHA deploy and authenticated smoke are pending at this checkpoint.
+
 ## 2026-10-01 — First-profile known action and migration role correction
 
 `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` passed typecheck, build, 206/206 fast tests, 59/59 PostgreSQL integration tests, and targeted Prettier. The new integration branch starts with a Core-authenticated user who has no GotIt profile, marks a repeated English word known, verifies profile creation and cross-unit known state, then reverses the state. The production migration's first attempt failed on the original direct Core FK (SQLSTATE 42501) before catalog replacement; no production success is claimed for that attempt. Retry with the corrected source is pending.

@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## 2026-10-01 — Known-word sense matching
+
+`gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` preserves the `PUT /api/v1/word-packs/:id/known` request and response shape. Cross-unit propagation within the English path now requires equal normalized source and translation, so distinct senses of the same English spelling remain independent. The PostgreSQL regression covers `May` (month) versus `may` (possibility) and propagation between identical modal senses. Production deploy pending at this source checkpoint.
+
 ## 2026-10-01 — Known English-unit entries
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds protected `PUT /api/v1/word-packs/:id/known` (`vocabulary.write`). Strict body: `{"entryIds": [1..100 distinct UUIDs from this pack], "known": boolean}`; success 200 `{"packId": UUID, "knownCount": integer, "requestId": string}`. A foreign or missing pack returns 404; IDs outside that pack return 400; entitlement failure uses the existing write gate. Repeating the same request is state-idempotent. Within the English learning topic, the selected normalized source words are marked or unmarked in every unit containing them; other topics remain pack-local. `GET /word-packs` and `GET /word-packs/:id` add `progress.known` and `progress.completed` (known ∪ mastered), and detail entries add `known`. Existing progress fields remain. Pack-scoped practice omits known entries without changing mastery, evidence or XP. PostgreSQL regression covers isolation and full-unit marking. Production rollout pending.

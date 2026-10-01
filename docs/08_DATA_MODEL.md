@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — Forward contextual correction
+
+`gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` adds migration `1790800010000_english-communication-senses.js` and a 213-row correction asset. It checks the previous English source and Hebrew translation for each stable entry ID, updates only catalog translation/normalized translation, and raises affected pack versions from 2 to 3. It changes no table or learner-owned row. Known-entry propagation now joins catalog entries by normalized source and translation, limiting cross-unit state to the same sense. Local disposable PostgreSQL up/down and API regression passed; production migration pending at this checkpoint.
+
 ## 2026-10-01 — Known-entry FK follows the product profile
 
 `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` corrects migration `1790800008000` before it has applied in production: `user_word_pack_known_entries` references the existing GotIt `user_profiles(application_id, application_user_id)` scoped key with cascade rather than directly referencing Core. GotIt profiles themselves retain their validated Core user FK. This keeps the dedicated product migrator out of the Core schema. First known-word mutation inserts standard profile defaults with `ON CONFLICT DO NOTHING`; the PostgreSQL suite verifies that first-use path. Production retry pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

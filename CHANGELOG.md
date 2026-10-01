@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Contextual meanings in English units
+
+- `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` adds forward migration `1790800010000` for 213 contextual Hebrew corrections in the supplied 60-unit course. Affected packs move from version 2 to 3. Already-known propagation now requires the same normalized English expression and Hebrew meaning, keeping month `May` separate from modal `may`.
+- Local typecheck, build, 207 fast tests, 59 PostgreSQL integration tests and targeted formatting passed. Production migration and exact-SHA deploy are pending in this source record. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English known-state migration role fix
 
 - `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` changes the new known-entry FK to the GotIt profile and initializes that profile on first known-word action. The first production migration attempt had stopped at a Core schema permission denial before catalog replacement; no extra Core grant is required.
