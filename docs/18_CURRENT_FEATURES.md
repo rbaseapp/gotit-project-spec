@@ -129,7 +129,7 @@ deployment evidence, לא תאריך מסמך בלבד.
 | Email verification | — | — | — | Planned P0 | UI אינו מבטיח |
 | Password reset | — | — | — | Planned P0 | ספק email חסר |
 
-Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK/domain settings and icon are saved, and Core's provider row points to App ID `2207127606520765`. The owner reported rotating the App Secret and replacing Core configuration; the new Core environment deployment is Live and its invalid-token verifier smoke passed. The Web SDK-readiness fix at `gotIt-front@8423c90012bd803bf4f9c231559fa1226c21c792` passed local quality gates and opened a Meta popup locally; production deployment is pending. Meta's connected business portfolio remains Unverified, keeping Publish disabled. Real-account acceptance remains pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
+Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK/domain settings and icon are saved, and Core's provider row points to App ID `2207127606520765`. The owner-reported replacement Core configuration deployment and negative verifier smoke passed. The Web SDK-readiness fix is deployed; the follow-up explicit-popup fix `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c` passed local quality gates and awaits deployment. Meta's portfolio remains Unverified and the owner has no registered business, so publication requires a supported verification path. Real-account acceptance remains pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
 
 ## 3. Profile ו־Preferences
 

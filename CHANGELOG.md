@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Select Facebook popup OAuth explicitly
+
+- `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c` sets `fedCM: false` and verifies the popup SDK contract in the regression. Web check passed (167 Vitest, 16 gateway, typecheck, lint, build), deployment pending. The earlier readiness fix deployed as `dep-davbbu6k1f9s739lb390` with passing public smoke, but HTTPS login remained unanswered. The owner has no registered business; Meta publication remains blocked while the supported verification path is checked. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-01 — Unique English path deployed
 
 - Backend `10602736bdf5422116eb838e57e9d708318156be` is Live in Render `dep-davb9j9srm7s73bb3p70` after a validated backup, dedicated migration and passing restricted preflight. Production readback confirmed 3,000 unique English entries in 60 version-4 units, the new title and archived prior progress; public health/readiness and signed-in unit-3 preview passed. See [evidence](docs/23_ENGLISH_LEARNING_PATH.md). Editorial review of new Hebrew drafts remains open.
