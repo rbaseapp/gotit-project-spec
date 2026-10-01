@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Verify deployed Facebook popup and bounded waiting
+
+- Render Web `dep-davbhmqd0e5s73fbfn5g` is Live at `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c`. Readiness/login/bundle HTTP smoke passed; production opens Meta's consent popup and an unanswered attempt exits with retry. Real-account exchange remains pending because the continuation controls were disabled during observation. This app exposes only incomplete business verification; the owner has no registered business, so public publication is blocked pending a supported verification path. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-01 - Select Facebook popup OAuth explicitly
 
 - `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c` sets `fedCM: false` and verifies the popup SDK contract in the regression. Web check passed (167 Vitest, 16 gateway, typecheck, lint, build), deployment pending. The earlier readiness fix deployed as `dep-davbbu6k1f9s739lb390` with passing public smoke, but HTTPS login remained unanswered. The owner has no registered business; Meta publication remains blocked while the supported verification path is checked. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
