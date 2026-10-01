@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 production evidence
+
+`gotIt-backend@10602736bdf5422116eb838e57e9d708318156be` is deployed as Render `dep-davb9j9srm7s73bb3p70`. The dedicated migration and product-only preflight passed, then production readback verified 60×50, 3,000 unique English entries, version 4, the renamed topic and archived/remapped prior progress. Authenticated SCR-16 smoke opened Basic unit 3 and read its 50 entries and existing known/unknown state. This closes the catalog and display acceptance for the observed release; new Hebrew draft meanings still need editorial review. See [23](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — FR-PACK-005 / UC-04B / SCR-16 unique-unit correction
 
 The requested no-duplicate English path maps to `gotIt-backend@10602736bdf5422116eb838e57e9d708318156be`, `migrations/1790800011000_english-unique-catalog.js`, its source/catalog assets, `test/word-packs.test.ts`, `test/integration/practice.integration.test.ts` and `test/integration/english-catalog.integration.test.ts`. The existing `/word-packs*` contracts and Web unit view consume the same pack IDs and API fields. Acceptance: 60×50 entries, 3,000 unique English forms, Hebrew coverage, title **לימוד שפה מאפס**, and no known progress assigned to a changed word or sense. Saved old associations are archived and exact matches restored. Local/unit/PostgreSQL evidence passed; production migration and smoke remain pending at this checkpoint.

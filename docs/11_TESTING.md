@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Unique catalog production smoke
+
+Following Backend `10602736bdf5422116eb838e57e9d708318156be`, dedicated migration/preflight passed and production readback returned one new migration row, 60 version-4 packs, 3,000/3,000 distinct entries, 50 per pack, 1,418 archived known rows, 51 archived links, 710 active distinct known marks and 51 active links. An exact source-and-meaning archive join found zero unexplained active known marks. Render `dep-davb9j9srm7s73bb3p70` is Live for that SHA. Public Backend `/ready`, `/health` and Web `/english-learning` were HTTP 200. Authenticated `ori` preview displayed Basic unit 3's 50 entries with 48 known and two unknown; no live mutation was performed. The UI session did not expose an email address. Backup identity and draft-translation limits are recorded in [23](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Unique English catalog regression
 
 Backend `10602736bdf5422116eb838e57e9d708318156be`: `npm.cmd test` 208/208, `npm.cmd run test:integration` 59/59, focused `english-catalog.integration.test.ts` 1/1, `npm.cmd run typecheck` and `npm.cmd run build` passed. The catalog regression compares all 60 unit titles and ordered words to the user-supplied file, checks 50 Hebrew entries per unit and 3,000 globally unique case-insensitive English entries. The API regression verifies that a known `work` in unit 2 does not appear in unit 12. The focused disposable PostgreSQL migration seeds old `work`, modal `may` and removed `seek` as known, then proves only the matching `work` remains known, calendar `May` stays unknown and all three originals are archived. Targeted Prettier and `git diff --check` passed. Repository-wide `format:check` reports 36 unrelated pre-existing files. No production test is claimed here.

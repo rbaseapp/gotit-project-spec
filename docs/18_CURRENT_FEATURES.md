@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Unique English path in production
+
+Backend `10602736bdf5422116eb838e57e9d708318156be` is Live in Render deployment `dep-davb9j9srm7s73bb3p70` after the dedicated version-4 catalog migration. Production readback confirms 60 packs, 50 entries each and 3,000 distinct English entries, the title **לימוד שפה מאפס**, archived prior known/link rows and exact-sense restoration. Restricted preflight and three public endpoints passed. A signed-in `ori` browser opened Basic unit 3 with 50 words and its existing 48 known declarations. Editorial review of the new model-drafted Hebrew translations remains open. See [path handoff](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Unique English path source
 
 Backend `10602736bdf5422116eb838e57e9d708318156be` is committed and locally/integration verified for the learner-supplied 3,000 unique English entries in 60 units and the title **לימוד שפה מאפס**. The forward migration archives old known/link rows before changing catalog entries and restores only identical source/meaning matches. The previous production catalog and Web release observations below are historical until the new migration and exact Backend deployment are verified. New model-drafted Hebrew meanings still require editorial review.

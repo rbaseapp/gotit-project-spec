@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — English progress archive production readback
+
+Migration `1790800011000` for Backend `10602736bdf5422116eb838e57e9d708318156be` is applied in production once. The new archive contains 1,418 `known` and 51 `link` rows from the previous catalog. The active version-4 catalog has 3,000 globally distinct English entries and retains 710 exact-sense known rows and 51 same-pack learning links. A read-only join found no active known row without a matching archived source and meaning. The archive remains available for reviewed recovery; no automatic destructive production rollback was used.
+
 ## 2026-10-01 — English catalog progress archive (source verified)
 
 `gotIt-backend@10602736bdf5422116eb838e57e9d708318156be` adds one product table, `english_catalog_progress_archive`, through migration `1790800011000`. Its composite key is `(kind, application_id, application_user_id, pack_id, entry_id)`. `kind` is `known` or `link`; each row retains the old English source, Hebrew meaning, original scoped association JSON and archive time. The table preserves unmatched user declarations and pack links during the 60-pack, 3,000-entry version-4 catalog replacement. Matching English **and** meaning restores known marks; links also require the original installed pack. Historical `learning_items`, evidence and practice rows remain. There are 50 product tables after this migration in the disposable PostgreSQL fixture. This is local/integration evidence; production application remains unverified at this checkpoint.

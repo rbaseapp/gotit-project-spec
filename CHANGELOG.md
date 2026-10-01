@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — Unique English path deployed
+
+- Backend `10602736bdf5422116eb838e57e9d708318156be` is Live in Render `dep-davb9j9srm7s73bb3p70` after a validated backup, dedicated migration and passing restricted preflight. Production readback confirmed 3,000 unique English entries in 60 version-4 units, the new title and archived prior progress; public health/readiness and signed-in unit-3 preview passed. See [evidence](docs/23_ENGLISH_LEARNING_PATH.md). Editorial review of new Hebrew drafts remains open.
+
 ## 2026-10-01 - Wait for complete Meta SDK readiness
 
 - `gotIt-front@8423c90012bd803bf4f9c231559fa1226c21c792` waits for `fbAsyncInit`, retains the 15-second bundle-loading deadline, cleans up a queued bootstrap for retry and initializes replacement SDK instances. The regression covers incomplete bundle loading and a successful retry. Web check passed (167 Vitest, 16 gateway, typecheck, lint, build); local Chrome opened Meta's OAuth dialog. Production deployment and real-account acceptance remain pending. Core's owner-reported replacement secret deploy `dep-davb4unavr4c73b9ing0` is Live, with passing readiness and invalid-token smoke. Meta business portfolio is connected but Unverified. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
