@@ -188,6 +188,7 @@ Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in
 - application context ו־cross-product rejection.
 - register/login generic errors, password hash parameters.
 - Google web/extension audience ו־Facebook app binding.
+- Facebook Web blank-build-override regression: `gotIt-front/test/facebook.test.tsx` verifies the public GotIt App ID initializes the SDK when `VITE_FACEBOOK_APP_ID` is empty. At `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722`, `npm.cmd run check` passed 164/164 Vitest and 16/16 gateway tests with typecheck, lint and build. Live Meta consent and Core token exchange remain pending; see [rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md).
 - verified email linking ואי־קישור בין applications.
 - JWT claims, expiry, wrong audience/application.
 - refresh rotation, replay, expiry, logout, disabled user.

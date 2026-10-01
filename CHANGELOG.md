@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 - GotIt Facebook Login configuration in progress
+
+- `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722` supplies Meta App ID `2207127606520765` when the build override is blank, so the Facebook button can initialize the SDK. The regression covers the blank override. Local `npm.cmd run check` passed: typecheck, lint, 164 Vitest tests, build, and 16 gateway tests.
+- Meta app `gotit` has `email` ready for testing, JavaScript SDK login enabled, allowed domain `gotit.rbaseapp.com`, exact root redirect URI, and the GotIt privacy, terms and deletion-instructions links. Core production's `gotit` Facebook provider row was set to the same App ID and read back enabled. App Secret configuration, Meta publication, Web deployment and live sign-in smoke are pending; see [Facebook rollout](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-01 - Selected English words: known and undo actions
 
 - `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` keeps multiword checkboxes and Add selected, replaces Remove selected with bulk I already know and Undo known actions, and clears the checks only after a successful known-state write. It uses the existing protected `PUT /word-packs/:id/known`; the Backend empty-selection add contract remains available but is no longer a preview removal action. Local check passed (164 Vitest, 16 gateway, typecheck, lint, build), and targeted 320px/525px/desktop responsive Playwright passed (1/1). Production deployment and authenticated smoke pending at this source checkpoint.

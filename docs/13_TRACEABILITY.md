@@ -141,7 +141,7 @@ FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי Co
 |---|---|---|---|---|---|---|
 | AUTH-01 | register/login מבודד application | Core | `/auth/register`,`/login` | users, credentials, sessions | core auth integration | ממומש |
 | AUTH-02 | Google Web + Extension | Core/Web/Chrome | `/auth/google*` | provider clients, identities | google auth suites + live | ממומש; live config נדרש |
-| AUTH-03 | Facebook | Core/Web | `/auth/facebook` | identities | facebook suite + live | ממומש; live config נדרש |
+| AUTH-03 | Facebook | Core/Web | `/auth/facebook` | identities | `gotIt-front/test/facebook.test.tsx`, Core Facebook suites + live | source `gotIt-front@c5c6e01` locally verified; Meta/Core App ID configured; secret, publish, deploy and live acceptance pending ([evidence](24_FACEBOOK_LOGIN_ROLLOUT.md)) |
 | AUTH-04 | email verification/reset | Core/Web | TBD | TBD | TBD | מתוכנן P0 |
 | BILL-01 | plans/status/trial | Core/clients | `/billing/plans`,`/status` | billing tables | billing/access tests | ממומש |
 | BILL-02 | checkout/webhook/portal | Core/Web | billing mutations | checkout/subscription/events | webhook + live Paddle | ממומש; rollout נדרש |
