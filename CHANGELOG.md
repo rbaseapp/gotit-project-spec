@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Dedicated English learning path in Web source
+
+- `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` adds `/english-learning` with three levels, ordered 50-item units, progress, next unit, preview, and direct practice. The general word-pack screen links to the path and no longer lists these course units as generic packs.
+- Web typecheck, lint, 155/155 Vitest tests, build, and 16/16 gateway tests passed. Production deployment, authenticated path smoke, and database migration remain unverified. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English learning path catalog correction
 
 - `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` adds a versioned follow-up migration to rename the catalog "מסלול לימוד אנגלית" and correct 72 Hebrew catalog meanings while preserving installed learning items.

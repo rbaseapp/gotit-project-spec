@@ -202,3 +202,7 @@ provider config mismatch, smoke regression; stop/rollback compatible images/forw
 אין destructive production down אוטומטי.
 
 קישורים: NFR-OPS-001/002, NFR-COMP-001; P16; SEQ-11.
+
+## UC-04A — Follow the English learning path
+
+Actor: authenticated English-source/Hebrew-translation learner. Preconditions: the two English catalog migrations have run and compatible packs are returned by the existing API. Trigger: open `/english-learning` from navigation or SCR-08. Main flow: view three ordered levels and server progress, open the next 50-entry unit, inspect English/Hebrew pairs, install those 50 IDs through the existing add operation, then enter pack-scoped smart practice; revisit the path to see authoritative mastery. Alternatives: catalog unavailable, different profile language pair, API failure/retry, missing vocabulary write entitlement, existing installed unit, or incomplete practice. No progress is inferred from viewing or installing. Source `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`; local Web gates passed, production smoke pending. Links FR-PACK-004 and SCR-16.

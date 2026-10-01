@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-004 / UC-04 / SCR-16
+
+`gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` maps the dedicated English course requirement to `/english-learning`, `EnglishLearningPathPage.tsx`, existing `/api/v1/word-packs*`, existing catalog/progress tables, and `test/live.test.tsx`. Source path slugs tolerate the original and renamed catalog during rollout. Local Web check passed; production deploy and authenticated catalog smoke remain unverified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — PACK-01 English path data correction
 
 `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` maps the requested course name and corrected Hebrew meanings to `word_topics`, `word_pack_entries`, migrations `1790800006000` and `1790800007000`, `test/daily-english-catalog.test.ts`, and the PostgreSQL catalog subtest in `test/integration/practice.integration.test.ts`. API shape is unchanged. Local gates passed as recorded in [11_TESTING](11_TESTING.md); production migration and smoke remain open.

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Dedicated English path Web verification
+
+`gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` passed `npm.cmd run check`: typecheck, lint, 155/155 Vitest tests, production build, and 16/16 gateway tests. `test/live.test.tsx` verifies the dedicated route, three-level entry, preview, and 50-entry installation request. The i18n test verifies all eight locale catalogs contain the new keys. Production browser and authenticated API smoke are pending.
+
 ## 2026-10-01 — English path migration verification
 
 `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`: typecheck, 204/204 fast tests, build, and 26/26 targeted PostgreSQL integration subtests passed locally. The integration checks the renamed topic, 3 tracks, 60 units, 3,000 entries, a corrected meaning, and language filtering. Targeted formatting passed; the repository-wide formatting gate reports 38 existing files outside the changed path. No production migration or authenticated smoke was observed.

@@ -440,3 +440,7 @@ auto-close after save, theme ושפות default. שינוי feature שדורש b
 7. analytics event מינימלי ומאושר אם נדרש.
 8. component/route tests ו־acceptance criteria.
 9. עדכון App routing, i18n, Help, Current Features ו־Traceability.
+
+## SCR-16 — English learning path
+
+Route: `/english-learning` (live Web). Actor: authenticated learner with an English-source/Hebrew-translation profile. Entry: primary navigation or a link from SCR-08. Goal: work through Basic, Good and Advanced in ordered 50-entry units. The screen shows server-reported mastery, next unfinished unit, a preview of all entries, and actions to install/start or resume pack-scoped smart practice. Exit: smart practice or another navigation destination. Data owner: existing GotIt word-pack APIs; entitlement: `vocabulary.write` to install, practice entitlement checked by the session route. States: loading, error/retry, no compatible catalog, preview, installing, billing restriction, installed, partial, mastered. Modal focus follows the shared modal component. Layout uses responsive unit grids and supports RTL/LTR and 320px. Acceptance: no 1,000-entry bulk installation; 50 IDs are submitted for one unit; existing SCR-08 excludes course units and links here. Source: `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. Production smoke pending.

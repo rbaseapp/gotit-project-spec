@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Dedicated English learning path Web source
+
+`gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` implements `/english-learning` with three ordered levels, 50-item units, server-reported mastery, next-unit guidance, preview, and practice. Generic word packs link to it but do not duplicate its units. Local Web check passed (155 Vitest, 16 gateway). The required catalog migrations and live availability have not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Named English learning catalog
 
 `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` locally verifies a follow-up migration that renames the English catalog as a learning path and corrects 72 catalog meanings. The source migration preserves installed learning items. Production migration and availability have not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

@@ -1,5 +1,11 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Dedicated Web path
+
+Source: `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. A live learner opens `/english-learning` from the primary navigation or the generic word-pack explorer. The screen filters the existing catalog to English source and Hebrew translation and accepts both the original and renamed topic slugs during rollout. It shows Basic, Good, and Advanced in order, units by module number, verified mastered counts, the next unfinished unit, a 50-entry preview, and an add-and-practice action. It uses the existing protected `/api/v1/word-packs*` and smart-practice contracts. The generic explorer excludes these course units while linking to the dedicated path. No backend API change or new user data table is introduced.
+
+Screen states: loading, API error/retry, unavailable catalog or language pair, preview, installing, billing restriction, installed/practice, and completed-unit progress. New UI strings are authored in Hebrew and English; the other six supported locales have English fallback strings. The path groups by practical frequency progression, not unsupported thematic chapter labels. Web `npm.cmd run check` passed: typecheck, lint, 155/155 Vitest tests, production build, and 16/16 gateway tests. The live-flow regression covers route discovery, preview, and installing all 50 entries. This is source/local verification, not a production path smoke.
+
 ## 2026-10-01 — Named path and reviewed corrections
 
 Source: `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`.
