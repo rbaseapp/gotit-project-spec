@@ -1,5 +1,10 @@
 # 19 — קטלוג דרישות ממוספר
 
+## FR-PACK-005 — Named units and already-known words (backend source)
+
+Must: the English/Hebrew path uses the 60 user-supplied unit names, three levels of 20 units and 50 translated entries per unit. A learner can mark one entry or a complete unit known in one request and reverse it. Repeated source words across this path share known state; installed pack practice omits known entries. Known state contributes to path completion without fabricated learning mastery or XP. Access is application/user scoped and requires `vocabulary.write`. Acceptance: catalog audit, per-user isolation, 50-entry action, cross-unit propagation, reversal and practice omission. Backend source `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` passed local and PostgreSQL gates; Web source/deploy pending. Maps to UC-04A, SCR-16 and [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## תיקון רצף השיעור — 2026-09-30
 
 נוספו PLQ-01–05 בעקבות דיווח משתמש: שפה עקבית, הוראה לפני הפקה, התקדמות

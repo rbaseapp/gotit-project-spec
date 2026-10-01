@@ -1,5 +1,11 @@
 # יומן שינויים
 
+## 2026-10-01 — Supplied English units and known-word backend
+
+- `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` replaces the English path catalog with 60 named thematic units (50 entries each) and adds a protected one-action known-word API, cross-unit propagation for repeated English forms, completed counts and pack-practice omission. It preserves evidence/XP and guards the content migration against existing learner progress.
+- Local gates passed: typecheck, build, 206 fast tests, 59 disposable PostgreSQL integration tests and targeted formatting. Repository-wide formatting reports 36 pre-existing files. Production migration, deployment and authenticated smoke remain pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 - Remove duplicate shell level card and live notice
 
 - `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` removes the sidebar lesson-level card and the generic live-account notice. The latest lesson assessment remains linked in the top bar; Free read-only and demo notices remain. `test/app-shell.test.tsx` covers the reported duplicate and both retained notice states. Local `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests; `npm.cmd run test:responsive` passed 374/374 Playwright checks. No API, schema, or configuration change.

@@ -1,5 +1,10 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Named English catalog rollout pending
+
+For `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`, run the additive known-state migration and guarded version-2 catalog migration with the dedicated migrator after a fresh product/migration-metadata backup. The Backend runtime role cannot run DDL, and startup does not migrate. Read-only precheck found 60 version-1 English packs and zero installed/linked entries; recheck immediately before migration because the content replacement aborts if a learner has begun a pack. Deploy Backend only after both migrations, then deploy the matching Web source. Verify exact source SHAs, both `/ready` endpoints, 60 titled packs with 50 entries, representative early words, an authenticated `PUT .../known` and a pack practice session on a test user. Do not run production down automatically. Production migration/deploy not yet verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תיקון רצף השיעור דורש Web עם סכמת הוראות מורחבת; יש לפרוס אותו לפני או יחד

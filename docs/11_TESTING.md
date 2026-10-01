@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Named English units and known-word backend
+
+`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`: `npm.cmd run typecheck`, `npm.cmd test` (206/206), `npm.cmd run build`, `npm.cmd run test:integration` (59/59 on disposable PostgreSQL), and targeted Prettier passed. `test/word-packs.test.ts` validates all supplied unit names/words, 50 translated entries per unit, calendar/home coverage and no Basic `satellite`. `test/integration/practice.integration.test.ts` validates the migrated catalog, one-action 50-word known marking, cross-unit repeated-word state, isolation, reversal, and omission from pack practice. Migration down/up also ran on disposable PostgreSQL. Repository-wide `format:check` still reports 36 pre-existing unrelated files. Production migration, deployment, and authenticated known-word smoke are pending.
+
+
 ## 2026-10-01 - Shell duplicate regression
 
 `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` adds `test/app-shell.test.tsx`: an assessed live account has exactly the top-bar level link and no sidebar card or generic live notice; Free and demo keep their respective notices. `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests. `npm.cmd run test:responsive` passed 374/374 Playwright checks.

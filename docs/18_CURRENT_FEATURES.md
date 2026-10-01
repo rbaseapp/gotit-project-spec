@@ -1,5 +1,10 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Named English units and known-word backend source
+
+`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally verifies 60 supplied themed English/Hebrew units and a learner-declared known state. A protected single request can mark an entry or all 50 entries; repeated English words across units share that state. Pack practice skips known entries; completion counts known ∪ mastered without granting mastery/XP. Disposable PostgreSQL tests passed. Production still serves the previous version until the guarded migration and deployment are verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 - Shell assessment and notice placement
 
 `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` keeps the latest private-lesson assessment shortcut in the top bar and removes its duplicate sidebar card. The generic live-account notice is removed; Free read-only and demo notices remain. Local Web check and responsive suite passed. See [SCR-00](17_SCREEN_CATALOG.md).

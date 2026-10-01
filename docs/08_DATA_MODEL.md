@@ -1,5 +1,10 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — Known entry state and named-unit replacement
+
+`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds `product_gotit.user_word_pack_known_entries` with primary key `(application_id, application_user_id, pack_id, entry_id)`, compound Core user FK, `(pack_id, entry_id)` catalog FK with cascade, `known_at`, and a scoped lookup index. One known row represents a learner-declared word, not learning evidence. English path repeated source forms are propagated to matching pack entries in the same topic. Migration `1790800009000` changes 3,000 catalog rows and 60 pack titles/versions in place; it refuses changes when path installations, links or known rows exist. The reverse migration has the same guard. The prior migrations are immutable. Local PostgreSQL up/down and isolation tests passed; production migration pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — Versioned English catalog correction
 
 `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f` adds forward migration `1790800007000_english-learning-path.js` after the immutable initial seed. It updates one `word_topics` slug/title/description and 72 `word_pack_entries` translations using expected previous values; it adds no table or column and leaves user-owned `learning_items`, translations, and evidence untouched. The down path refuses rollback if any of the 60 packs has user installation/progress. Disposable PostgreSQL migration verification passed; production migration has not been verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
@@ -120,6 +125,7 @@ expression or source-language edit still clears both phonetic columns.
 | `word_pack_entries` | curated words/translations/examples |
 | `user_word_packs` | installation/removal state |
 | `learning_item_pack_entries` | link, exclusion, keep-by-user |
+| `user_word_pack_known_entries` | application-scoped learner-declared known catalog entries |
 
 ### Private Lessons
 

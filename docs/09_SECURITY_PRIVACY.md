@@ -1,5 +1,10 @@
 # 09 — אבטחה ופרטיות
 
+## 2026-10-01 — Declared known-word ownership
+
+The new known-entry write is authorized with the existing Core-authenticated application/user scope and `vocabulary.write`; clients cannot submit owner IDs. Requested entry IDs must belong to the selected accessible pack before any insert/delete. Repeated English words propagate only within the same learning-path topic and owner scope. Known rows store catalog IDs and a timestamp, not a new source of user text or inferred mastery. The integration suite checked a second user's known count stays zero and rejects unrelated entry IDs. Source: `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`; production rollout pending.
+
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תורות Realtime יזומים כוללים כעת את הקשר השיעור המלא של המשתמש; אין לשלוח

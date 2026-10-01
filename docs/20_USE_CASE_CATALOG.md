@@ -1,5 +1,10 @@
 # 20 — קטלוג Use Cases
 
+## UC-04B — Skip a known English word or unit
+
+Actor: authenticated learner in the English/Hebrew path. Trigger: declare one preview entry or a whole 50-entry unit already known. The client sends the selected pack entry IDs to `PUT /word-packs/:id/known`; the server validates pack ownership and write entitlement, records the learner's declaration, propagates repeated English forms within the path, and reports known/completed counts. Subsequent pack practice excludes those words. Alternative: unmark reverses the declaration; wrong-pack IDs fail without partial writes; a billing restriction blocks the write; a pack with pre-existing learning evidence retains that evidence without awarding more. Backend source `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally and integration verified; Web/deploy pending. Links FR-PACK-005 and SCR-16.
+
+
 ## UC-13 — Read a source expression with a familiar script (pilot)
 
 Actor: authenticated learner viewing owned vocabulary. Trigger: open SCR-05

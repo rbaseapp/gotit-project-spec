@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 backend trace
+
+`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` maps FR-PACK-005 / UC-04B / SCR-16 to migrations `1790800008000` and `1790800009000`, the 60-unit catalog asset, `PUT /api/v1/word-packs/:id/known`, additive `GET` progress/entry fields, and known filtering in pack practice. Regression: `test/word-packs.test.ts` and `test/integration/practice.integration.test.ts`, plus migration down/up in the disposable PostgreSQL suite. Backend gates passed (206 fast, 59 integration); Web commit and production verification are pending. Canonical detail: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 - SCR-00 shell assessment placement
 
 `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` maps the removal of duplicate lesson-level UI and generic live notice to `src/components/AppShell.tsx`, `src/styles.css`, and `test/app-shell.test.tsx`. The top-bar assessment link and Free/demo notice cases passed locally in 159 Vitest tests; 374 Playwright responsive checks and 16 gateway tests passed. No API or data migration.
