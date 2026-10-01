@@ -4,6 +4,10 @@
 
 - `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` adds male/female rounded speech frames, adjacent source-over mouth blending, approximately 30Hz time-based audio smoothing, eyelid-only blinking during speech and subdued continuous breathing. Reduced motion and invalid/inactive/silent input are covered. Web check passed (172 Vitest, 16 gateway, typecheck/lint/build); eight focused avatar/audio regressions and ten avatar/lesson-flow Playwright checks passed. Pose grid visually inspected. Production deploy and smoke pending; see [avatar motion](docs/25_TUTOR_AVATAR_MOTION.md).
 
+## 2026-10-01 - Diagnose rejected Facebook server credential
+
+- A real user token passed Meta inspection for the correct GotIt app, email scope, email and future expiry. A read-only check using the active production Core runtime configuration returned Meta HTTP 400/code 1 `Error validating client secret.` The owner was handed the exact Meta and Render screens to enter the current secret and save/rebuild/deploy. No source/API/schema changed, and no credential values were recorded. Positive Core exchange remains pending; the earlier invalid-token 401 did not prove that the secret was valid. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-01 - Verify deployed Facebook popup and bounded waiting
 
 - Render Web `dep-davbhmqd0e5s73fbfn5g` is Live at `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c`. Readiness/login/bundle HTTP smoke passed; production opens Meta's consent popup and an unanswered attempt exits with retry. Real-account exchange remains pending because the continuation controls were disabled during observation. This app exposes only incomplete business verification; the owner has no registered business, so public publication is blocked pending a supported verification path. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
