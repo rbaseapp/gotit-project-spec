@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — English preview known-button layout
+
+- `gotIt-front@383482331ca895c1491123643138bd0973fd7395` gives each English-path preview row a two-column layout so the single-word known button stays on one line at desktop and 320px phone widths. Component and layout regressions were added. `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); 375/375 Playwright responsive checks passed. Web deploy pending at this source checkpoint.
+- Backend `10bf19712bc9831a77dd9672c5f78701577a2966` is Live in Render deployment `dep-dav4i2p7lnhs73aqouc0`. The dedicated migration applied and readback confirmed all 213 corrections, 3,000 entries and zero pre-existing known rows. Backend/Web `/ready` returned 200; authenticated browser smoke saw the corrected meanings and kept month `May` independent of modal `may`.
+
 ## 2026-10-01 — Contextual meanings in English units
 
 - `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` adds forward migration `1790800010000` for 213 contextual Hebrew corrections in the supplied 60-unit course. Affected packs move from version 2 to 3. Already-known propagation now requires the same normalized English expression and Hebrew meaning, keeping month `May` separate from modal `may`.

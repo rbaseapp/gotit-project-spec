@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Live English senses and preview source
+
+Backend `10bf19712bc9831a77dd9672c5f78701577a2966` and migration `1790800010000` are production verified by Render exact-SHA Live status, database readback and authenticated month/modal smoke. Web source `383482331ca895c1491123643138bd0973fd7395` fixes wrapping of the single-word known control and passed local UI checks; its deploy is pending at this checkpoint. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — English path sense refinement
 
 Backend source `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` corrects 213 context-sensitive Hebrew catalog meanings and keeps known-word propagation within a shared English/Hebrew sense. Local and PostgreSQL verification passed; the production correction migration/deploy remains pending at this source checkpoint. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

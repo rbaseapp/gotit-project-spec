@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 — SCR-16 preview control readability
+
+`gotIt-front@383482331ca895c1491123643138bd0973fd7395` keeps the one-click per-word known control on one line in the 50-entry preview at 320px and desktop widths. The English/Hebrew pair wraps in the remaining row space. Component and Playwright layout regressions passed locally; production Web deploy and visual smoke pending at this source checkpoint.
+
 ## 2026-10-01 — SCR-16 named units and prior knowledge
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` shows the server-supplied theme name alongside each unit number and level. Each card has a one-click mark/unmark-whole-unit control and a known count; the preview offers per-entry mark/unmark. Known or truly mastered entries count toward path completion, but only mastery comes from scored evidence. Starting a unit sends only unknown entry IDs; a fully known unit is treated as complete. Existing loading, unavailable, error/retry, billing, modal and pack-practice states remain. Hebrew copy was authored and six other non-English locale catalogs have English fallback text. A live-flow regression and 374 responsive Playwright checks passed locally; production smoke pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Sense rollout verified; Web layout pending
+
+The dedicated migrator applied backend migration `1790800010000`; readback found 213 corrected senses across 3,000 entries and no saved known rows before smoke. Backup identifiers and hashes are recorded in [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md). Render Backend `dep-dav4i2p7lnhs73aqouc0` is Live for exact SHA `10bf19712bc9831a77dd9672c5f78701577a2966`, restricted-runtime preflight passed, both `/ready` endpoints returned 200, and authenticated month/modal smoke passed. Next deploy Web `383482331ca895c1491123643138bd0973fd7395` and verify the single-word control visually in production.
+
 ## 2026-10-01 — Contextual English catalog rollout
 
 After the already applied version-2 course migration, apply `1790800010000_english-communication-senses.js` with the dedicated `gotit_migrator` credential, then deploy Backend `10bf19712bc9831a77dd9672c5f78701577a2966`. Take and validate a fresh product/migration-metadata backup, preflight the restricted runtime, verify the migration row, 60 units/3,000 entries, selected version-3 packs and `May` versus `may`, both `/ready` endpoints, and an authenticated known-word sense smoke. Web `cbc5bac2a374e150c3d1ef31e77041cba27f387e` already contains the one-click controls. Production result is pending at this source checkpoint; do not run a destructive down in production.

@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 readable one-click controls
+
+`gotIt-front@383482331ca895c1491123643138bd0973fd7395` maps SCR-16 per-word known-button readability to `EnglishLearningPathPage.tsx`, `production.css`, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. Local 160 Vitest, 16 gateway and 375 Playwright checks passed. Backend sense handling is production verified on `10bf197`/Render `dep-dav4i2p7lnhs73aqouc0`; Web visual deployment remains pending at this checkpoint.
+
 ## 2026-10-01 — FR-PACK-005 contextual sense correction
 
 `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` maps the named English-unit content and already-known skip requirement to forward migration `1790800010000`, its 213-row correction asset, the sense-aware known-entry join, `test/word-packs.test.ts`, and `test/integration/practice.integration.test.ts`. The latter verifies that month `May` stays separate from modal `may`, while identical modal senses propagate. Local 207 fast/59 PostgreSQL tests passed; production verification pending at this checkpoint. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
