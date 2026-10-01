@@ -1,5 +1,10 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-01 — FR-PACK-005 Web acceptance
+
+`gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` implements the learner controls for FR-PACK-005: theme name per 50-entry unit, whole-unit and per-entry known toggles, known and completed progress, next unfinished unit, and installation of only unknown IDs. The live-flow regression verifies 50 IDs with no prior knowledge and 49 after marking one word; it also marks and reverses an entire unit. Local Web gates and 374 responsive checks passed. Production acceptance still requires the guarded catalog migration, both service deployments and authenticated smoke. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## FR-PACK-005 — Named units and already-known words (backend source)
 
 Must: the English/Hebrew path uses the 60 user-supplied unit names, three levels of 20 units and 50 translated entries per unit. A learner can mark one entry or a complete unit known in one request and reverse it. Repeated source words across this path share known state; installed pack practice omits known entries. Known state contributes to path completion without fabricated learning mastery or XP. Access is application/user scoped and requires `vocabulary.write`. Acceptance: catalog audit, per-user isolation, 50-entry action, cross-unit propagation, reversal and practice omission. Backend source `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` passed local and PostgreSQL gates; Web source/deploy pending. Maps to UC-04A, SCR-16 and [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

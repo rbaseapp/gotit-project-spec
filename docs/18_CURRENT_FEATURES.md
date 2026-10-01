@@ -1,5 +1,10 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — English prior-knowledge controls in Web source
+
+`gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` locally verifies named unit cards, a one-click whole-unit known action, per-word known actions in the preview, reversal, and skipping known entries during installation. It consumes the backend known/completed fields from `gotIt-backend@14012a0`. `npm.cmd run check` passed (160 Vitest, 16 gateway), and 374 Playwright responsive checks passed. Production deployment and authenticated smoke pending. See [SCR-16](17_SCREEN_CATALOG.md).
+
+
 ## 2026-10-01 — Named English units and known-word backend source
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally verifies 60 supplied themed English/Hebrew units and a learner-declared known state. A protected single request can mark an entry or all 50 entries; repeated English words across units share that state. Pack practice skips known entries; completion counts known ∪ mastered without granting mastery/XP. Disposable PostgreSQL tests passed. Production still serves the previous version until the guarded migration and deployment are verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

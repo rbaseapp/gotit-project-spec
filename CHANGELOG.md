@@ -1,5 +1,11 @@
 # יומן שינויים
 
+## 2026-10-01 — English named-unit and known-word Web controls
+
+- `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` adds named unit cards, one-click whole-unit and per-word known toggles, completed/known progress and unknown-only unit installation on `/english-learning`. Hebrew and English copy plus six English fallback locale catalogs are included.
+- Local `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); 374 Playwright responsive checks passed. Production deployment and authenticated smoke remain pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — Supplied English units and known-word backend
 
 - `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` replaces the English path catalog with 60 named thematic units (50 entries each) and adds a protected one-action known-word API, cross-unit propagation for repeated English forms, completed counts and pack-practice omission. It preserves evidence/XP and guards the content migration against existing learner progress.

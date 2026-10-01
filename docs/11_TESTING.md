@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Named-unit Web regression
+
+`gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` passed `npm.cmd run check`: typecheck, lint, 160/160 Vitest tests, production build and 16/16 gateway tests. `npm.cmd run test:responsive` passed 374/374 Playwright checks. `test/live.test.tsx` covers the named unit, a 50-ID initial install, whole-unit known mark/unmark, single-word known mark, and a 49-ID install that excludes the known word. Exact-SHA production deployment and authenticated smoke remain pending. Backend counterpart and its 59 PostgreSQL checks are recorded above.
+
+
 ## 2026-10-01 — Named English units and known-word backend
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`: `npm.cmd run typecheck`, `npm.cmd test` (206/206), `npm.cmd run build`, `npm.cmd run test:integration` (59/59 on disposable PostgreSQL), and targeted Prettier passed. `test/word-packs.test.ts` validates all supplied unit names/words, 50 translated entries per unit, calendar/home coverage and no Basic `satellite`. `test/integration/practice.integration.test.ts` validates the migrated catalog, one-action 50-word known marking, cross-unit repeated-word state, isolation, reversal, and omission from pack practice. Migration down/up also ran on disposable PostgreSQL. Repository-wide `format:check` still reports 36 pre-existing unrelated files. Production migration, deployment, and authenticated known-word smoke are pending.

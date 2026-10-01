@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 Web trace
+
+`gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` maps FR-PACK-005 / UC-04B / SCR-16 to `/english-learning`, `EnglishLearningPathPage.tsx`, the additive word-pack parser, eight locale catalogs and `test/live.test.tsx`. The test covers unit names, full-unit and per-entry known actions, reversal and the unknown-only install payload. Local Web check (160 Vitest, 16 gateway) and 374 responsive checks passed. Backend source is `gotIt-backend@14012a0`; production verification is pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — FR-PACK-005 backend trace
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` maps FR-PACK-005 / UC-04B / SCR-16 to migrations `1790800008000` and `1790800009000`, the 60-unit catalog asset, `PUT /api/v1/word-packs/:id/known`, additive `GET` progress/entry fields, and known filtering in pack practice. Regression: `test/word-packs.test.ts` and `test/integration/practice.integration.test.ts`, plus migration down/up in the disposable PostgreSQL suite. Backend gates passed (206 fast, 59 integration); Web commit and production verification are pending. Canonical detail: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

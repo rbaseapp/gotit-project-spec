@@ -1,5 +1,10 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-01 — UC-04B Web flow implemented locally
+
+On `/english-learning`, the learner may mark a named unit known directly from its card or inspect its preview and mark one English/Hebrew entry. The card/preview reload server state after each action; an entire known unit is complete, and the next unfinished unit advances. If the learner opens an incomplete unit, the install request contains only unknown IDs. Billing restrictions follow the existing `vocabulary.write` route; API errors use existing feedback. Local source `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` passed flow and responsive regression; production smoke pending.
+
+
 ## UC-04B — Skip a known English word or unit
 
 Actor: authenticated learner in the English/Hebrew path. Trigger: declare one preview entry or a whole 50-entry unit already known. The client sends the selected pack entry IDs to `PUT /word-packs/:id/known`; the server validates pack ownership and write entitlement, records the learner's declaration, propagates repeated English forms within the path, and reports known/completed counts. Subsequent pack practice excludes those words. Alternative: unmark reverses the declaration; wrong-pack IDs fail without partial writes; a billing restriction blocks the write; a pack with pre-existing learning evidence retains that evidence without awarding more. Backend source `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally and integration verified; Web/deploy pending. Links FR-PACK-005 and SCR-16.
