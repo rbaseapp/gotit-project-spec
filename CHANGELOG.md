@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Chrome Web Store ZIP 1.4.4 with separate local identity
+
+- `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`: the local unpacked build retains its stable public key; the Store package is now named `gotit-chrome-WEBSTORE-v1.4.4.zip` and its archived manifest is checked for the expected version and absence of `manifest.key`. A failed archive check removes the ZIP. The README identifies the correct upload file.
+- Local verification passed: typecheck, 39/39 tests, unpacked identity check, Store package build, and independent ZIP inspection (one root manifest, version 1.4.4, no key or sourcemaps). This is a prepared local artifact, not a Chrome Web Store upload or published release. Authenticated translation and settings smoke from the Store package remains pending.
+
 ## 2026-10-01 — English unit cards identify their level
 
 - `gotIt-front@66767de` displays Basic, Good, or Advanced on every English path unit card, including cards viewed after their section heading scrolls offscreen. Production data confirms `satellite` belongs to Advanced unit 5 (COCA rank 3117), not Basic unit 5. The regression renders Basic and Advanced cards together and checks both labels. Local `npm.cmd run check` passed: typecheck, lint, 157 Vitest tests, build, and 16 gateway tests. Render deployment `dep-dav2m90jo6nc73f7uefg` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200; an authenticated browser showed the level name in Basic and Advanced cards and opened Advanced unit 5 with `satellite` in its 50-entry preview.

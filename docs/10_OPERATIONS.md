@@ -67,6 +67,12 @@ npm run package
 
 ב־Windows ניתן להשתמש ב־`npm.cmd` אם execution policy חוסם `npm.ps1`.
 
+לשחרור Chrome Web Store מעלים רק `gotIt-chrome/artifacts/gotit-chrome-WEBSTORE-v<version>.zip`
+לפריט הקיים. `dist/manifest.json` כולל מפתח ציבורי לזהות מקומית קבועה ואינו
+מיועד להעלאה. `npm run package` בודק גם את ה־manifest בתוך ה־ZIP הסופי.
+יש לבדוק את ה־ZIP בפרופיל Chrome נקי ואת מסלולי התרגום וההגדרות בחשבון מחובר
+לפני הגשה לבדיקת החנות. בניית ZIP מקומית אינה פרסום בחנות.
+
 ## 4. Migration Runbook — GotIt
 
 1. ודא commit/image מדויקים ו־maintenance window.

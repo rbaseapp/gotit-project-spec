@@ -144,6 +144,12 @@ SCR-PC-01–04 ול־SCR-10. הם כוללים סשן היכרות בכתב וב
 | core-platform | `1e9d259` | clean | typecheck, 26/26 tests, build — עבר |
 | gotIt-chrome | `d6659b1` | clean | typecheck, 28/28 tests, build, package verify — עבר |
 
+Release 1.4.4 של `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`
+מעדכן את ראיית EXT-01 לאריזת החנות: `npm run verify` עבר עם 39/39 בדיקות,
+ו־`npm run package` בדק את ה־manifest מתוך ה־ZIP הסופי, ללא מפתח ובגרסה
+הצפויה. הזהות הקבועה של `dist` אומתה בנפרד. ה־ZIP טרם הועלה לחנות;
+בדיקת translation/settings מחוברת מתוך מועמד החנות עוד נדרשת.
+
 ההרצה אינה כוללת integration suites שדורשים PostgreSQL, את 276 בדיקות Playwright
 הרספונסיביות, או acceptance חי מול OAuth/Paddle/AI/Speech. build ה־Web עבר עם
 אזהרת performance על chunk ראשי גדול מ־500KB; היא אינה שגיאת build אך רשומה ב־Roadmap.

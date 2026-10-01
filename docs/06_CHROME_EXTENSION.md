@@ -5,7 +5,7 @@
 Manifest V3 client ללכידת מילה או ביטוי מתוך עמוד Web, preview של משמעות בהקשר,
 בחירת סנס ושמירה ל־GotIt. התוסף אינו מנוע תרגום ואינו מחזיק provider secrets.
 
-גרסה שנבדקה: `1.4.3`; יעד build: Chrome 127+.
+גרסה שנבדקה מקומית: `1.4.4`; יעד build: Chrome 127+.
 
 ## 2. רכיבים
 
@@ -104,9 +104,12 @@ update/delete אינם מקבלים retry אוטומטי. כל בקשת מוצר
 
 ## 10. Build ו־Identity
 
-`npm run build` יוצר `dist`; `npm run package` יוצר ZIP staging ב־`artifacts`.
+`npm run build` יוצר `dist`; `npm run package` יוצר
+`artifacts/gotit-chrome-WEBSTORE-v<version>.zip` מתוך staging מבודד.
 unpacked build כולל public key קבוע ל־extension ID יציב. Web Store package חייב
-להשמיט `manifest.key`, כי החנות בעלת identity הייצור.
+להשמיט `manifest.key`, כי החנות בעלת identity הייצור. אין לארוז ידנית את `dist`
+או להעלות אותו לחנות. תהליך האריזה בודק את ה־manifest מתוך ה־ZIP הסופי,
+מוודא שהמפתח חסר והגרסה תואמת, ומוחק ZIP שנכשל בבדיקה.
 
 ברירות build:
 
@@ -125,7 +128,8 @@ Chrome `_locales` וה־UI תומכים ar/de/en/es/fr/he/ru/zh. ה־popup וה�
 ## 12. Web Store Release Checklist
 
 1. `npm ci && npm run verify && npm run package`.
-2. בדיקת ZIP שאין `manifest.key`, sourcemaps, secrets או artifacts מיותרים.
+2. העלאת `gotit-chrome-WEBSTORE-v<version>.zip` לפריט החנות הקיים; בדיקת ZIP
+   שאין `manifest.key`, sourcemaps, secrets או artifacts מיותרים.
 3. OAuth Chrome client קשור ל־Web Store item ID הקבוע.
 4. אותו client רשום ב־Core ל־`gotit` כ־`chrome_extension`.
 5. origins מדויקים מותרים ב־Core/GotIt policy.
@@ -144,4 +148,3 @@ Chrome `_locales` וה־UI תומכים ar/de/en/es/fr/he/ru/zh. ה־popup וה�
 - permission חדש מוצדק ומתועד.
 - tests ל־state/messages/settings/i18n ו־`verify-build` עוברים.
 - נבדק ידנית Chrome profile נקי ו־Web Store build.
-

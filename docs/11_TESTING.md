@@ -173,6 +173,14 @@ Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in
 - settings migration/sync/optional content registration.
 - inline/popup i18n, direction, size/theme.
 - generated manifest permissions, key rules ו־package contents.
+- ZIP סופי: `manifest.json` בשורש, גרסה צפויה, ללא `manifest.key`; בדיקת כשל
+  ל־ZIP עם מפתח או גרסה שגויה. בניית `dist` מקומית שומרת את המפתח הקבוע.
+
+אימות release מקומי ב־2026-10-01 עבור `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`:
+`npm run verify` עבר (typecheck, 39/39 tests, build ובדיקת זהות מקומית);
+`npm run package` עבר. בדיקה עצמאית של ZIP 1.4.4 מצאה manifest יחיד בשורש,
+גרסה `1.4.4`, ללא `key` או sourcemaps. לא בוצעו העלאה לחנות או בדיקה
+ידנית מחוברת של התרגום וההגדרות מתוך ה־ZIP.
 
 ## 6. Test Data
 
