@@ -1,8 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
-## 2026-10-01 ? Shell duplicate regression
+## 2026-10-01 - Shell duplicate regression
 
-`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` adds `test/app-shell.test.tsx`: an assessed live account has exactly the top-bar level link and no sidebar card or generic live notice; Free and demo keep their respective notices. `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests. `npm.cmd run test:responsive` passed 374/374 Playwright checks. Authenticated production smoke is pending.
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` adds `test/app-shell.test.tsx`: an assessed live account has exactly the top-bar level link and no sidebar card or generic live notice; Free and demo keep their respective notices. `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests. `npm.cmd run test:responsive` passed 374/374 Playwright checks.
+
+Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/dashboard` browser reload showed the English A2-B2 assessment in the top bar, no sidebar assessment card, and no generic live-account notice.
 
 ## 2026-10-01 — English unit level label regression
 

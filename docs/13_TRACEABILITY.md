@@ -1,8 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
-## 2026-10-01 ? SCR-00 shell assessment placement
+## 2026-10-01 - SCR-00 shell assessment placement
 
-`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` maps the removal of duplicate lesson-level UI and generic live notice to `src/components/AppShell.tsx`, `src/styles.css`, and `test/app-shell.test.tsx`. The top-bar assessment link and Free/demo notice cases passed locally in 159 Vitest tests; 374 Playwright responsive checks and 16 gateway tests passed. Production deployment and authenticated smoke are pending. No API or data migration.
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` maps the removal of duplicate lesson-level UI and generic live notice to `src/components/AppShell.tsx`, `src/styles.css`, and `test/app-shell.test.tsx`. The top-bar assessment link and Free/demo notice cases passed locally in 159 Vitest tests; 374 Playwright responsive checks and 16 gateway tests passed. No API or data migration.
+
+Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/dashboard` browser reload showed the English A2-B2 assessment in the top bar, no sidebar assessment card, and no generic live-account notice.
 
 ## 2026-10-01 — SCR-16 unit identity
 

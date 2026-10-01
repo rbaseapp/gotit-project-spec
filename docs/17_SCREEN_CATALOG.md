@@ -1,8 +1,10 @@
 # 17 — קטלוג מסכים ותיאור UX
 
-## 2026-10-01 ? SCR-00 shell level placement
+## 2026-10-01 - SCR-00 shell level placement
 
-`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` shows the latest completed lesson assessment only in the top bar, linked to `/private-lesson?view=level`; the duplicate sidebar card is removed. The generic live-account notice is removed from standard screens. Demo labeling and the Free read-only notice remain. This affects desktop sidebar and mobile drawer in RTL/LTR; navigation and account data are unchanged. `test/app-shell.test.tsx` covers the regression, and 374 responsive Playwright checks passed locally. Deployment and authenticated production smoke are pending.
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` shows the latest completed lesson assessment only in the top bar, linked to `/private-lesson?view=level`; the duplicate sidebar card is removed. The generic live-account notice is removed from standard screens. Demo labeling and the Free read-only notice remain. This affects desktop sidebar and mobile drawer in RTL/LTR; navigation and account data are unchanged. `test/app-shell.test.tsx` covers the regression, and 374 responsive Playwright checks passed locally.
+
+Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/dashboard` browser reload showed the English A2-B2 assessment in the top bar, no sidebar assessment card, and no generic live-account notice.
 
 ## 2026-10-01 — SCR-16 unit level context
 

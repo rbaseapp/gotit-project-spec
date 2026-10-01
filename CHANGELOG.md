@@ -1,8 +1,10 @@
 # יומן שינויים
 
-## 2026-10-01 ? Remove duplicate shell level card and live notice
+## 2026-10-01 - Remove duplicate shell level card and live notice
 
-- `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` removes the sidebar lesson-level card and the generic live-account notice. The latest lesson assessment remains linked in the top bar; Free read-only and demo notices remain. `test/app-shell.test.tsx` covers the reported duplicate and both retained notice states. Local `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests; `npm.cmd run test:responsive` passed 374/374 Playwright checks. Production deployment and smoke are pending. No API, schema, or configuration change.
+- `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` removes the sidebar lesson-level card and the generic live-account notice. The latest lesson assessment remains linked in the top bar; Free read-only and demo notices remain. `test/app-shell.test.tsx` covers the reported duplicate and both retained notice states. Local `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests; `npm.cmd run test:responsive` passed 374/374 Playwright checks. No API, schema, or configuration change.
+
+Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/dashboard` browser reload showed the English A2-B2 assessment in the top bar, no sidebar assessment card, and no generic live-account notice.
 
 ## 2026-10-01 — Chrome Web Store ZIP 1.4.4 with separate local identity
 

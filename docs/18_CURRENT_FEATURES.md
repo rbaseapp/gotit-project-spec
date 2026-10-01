@@ -1,8 +1,10 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
-## 2026-10-01 ? Shell assessment and notice placement
+## 2026-10-01 - Shell assessment and notice placement
 
-`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` keeps the latest private-lesson assessment shortcut in the top bar and removes its duplicate sidebar card. The generic live-account notice is removed; Free read-only and demo notices remain. Local Web check and responsive suite passed. Deployment is pending; see [SCR-00](17_SCREEN_CATALOG.md).
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` keeps the latest private-lesson assessment shortcut in the top bar and removes its duplicate sidebar card. The generic live-account notice is removed; Free read-only and demo notices remain. Local Web check and responsive suite passed. See [SCR-00](17_SCREEN_CATALOG.md).
+
+Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` for the exact source SHA. Production Web `/ready` returned HTTP 200. An authenticated `/dashboard` browser reload showed the English A2-B2 assessment in the top bar, no sidebar assessment card, and no generic live-account notice.
 
 ## 2026-10-01 — English path card clarity (source)
 
