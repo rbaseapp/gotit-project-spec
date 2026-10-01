@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Backend empty-selection regression
+
+`gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`: `npm.cmd run typecheck`, `npm.cmd run build`, 207/207 fast tests, 59/59 disposable PostgreSQL integration tests and targeted Prettier passed. `test/word-packs.test.ts` accepts an empty unique selection; `test/integration/practice.integration.test.ts` verifies partial exclusion, removal of the final link with `entryIds: []`, and restoration without deleting the installed pack. These are local/integration results, not production deployment evidence.
+
 ## 2026-10-01 — Hebrew path preview production check
 
 Render `dep-dav8pnk9v7es73fjv47g` is Live for exact Web SHA `5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, served CSS and JavaScript returned 200. CSS includes the new modal footer and fixed action-column rules; JavaScript includes "לימוד שפה מאפס". The production browser opened at Login, so a signed-in visual preview check was not performed. Local 50-word Playwright geometry remains the functional layout regression.

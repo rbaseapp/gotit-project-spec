@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 selected-word removal backend
+
+`gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` maps the requested remove-only-selected action in SCR-16 to the existing transactional pack selection replacement and its newly accepted empty `entryIds` payload. Source: `src/modules/word-packs/word-packs.validation.ts`; regressions: `test/word-packs.test.ts`, `test/integration/practice.integration.test.ts`. 207 fast and 59 PostgreSQL tests passed locally; production deployment and authenticated smoke are pending.
+
 ## 2026-10-01 — SCR-16 production deployment evidence
 
 The Hebrew path name and preview alignment `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` are deployed as Render `dep-dav8pnk9v7es73fjv47g` (Live, exact source SHA). Public route and `/ready` passed; served CSS and JS contain the changed rules and text. Authenticated visual unit smoke remains unverified because the production browser presented Login.

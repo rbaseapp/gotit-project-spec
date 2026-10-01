@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Backend support for clearing selected unit words
+
+`gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` accepts an empty full selection on the existing protected pack add operation. This lets the unit preview remove its last linked word while keeping the unit installed. Omitted links are excluded, not archived or deleted from the learner's library; adding a selected subset must preserve other linked IDs in the replacement payload. No migration or new route is needed. Local typecheck/build, 207 fast tests and 59 PostgreSQL integration tests passed, including removal to zero and restoration. Backend production deploy and live smoke are pending.
+
 ## 2026-10-01 — Hebrew label and preview deployed
 
 Render Web `dep-dav8pnk9v7es73fjv47g` reports `Deploy succeeded | Live` for `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready` and `/english-learning` returned 200. Served CSS `index-R3SsXn_J.css` includes the new row/footer layout and served JavaScript `index-BqsjPd1-.js` includes "לימוד שפה מאפס"; both assets returned 200. A fresh browser tab showed Login, so the post-deploy authenticated visual check is unverified. Local 50-word layout regressions passed at 320px, 525px and desktop. No API or database change.

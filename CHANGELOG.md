@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — Empty word-pack selection supported in Backend source
+
+- `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` allows `POST /api/v1/word-packs/:id/add` with `{"entryIds":[]}`. The existing transactional replacement of the pack selection can now exclude its last linked word while retaining the installed unit. Backend typecheck, build, 207 fast tests, 59 PostgreSQL integration tests and targeted formatting passed. Production deploy and authenticated selection smoke are pending.
+
 ## 2026-10-01 — Hebrew path preview Web deployed
 
 - Render Web `dep-dav8pnk9v7es73fjv47g` is Live for exact `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, CSS and JS returned 200; the served assets contain the new preview layout and Hebrew title. A fresh browser tab showed Login, so authenticated visual unit smoke remains unverified.

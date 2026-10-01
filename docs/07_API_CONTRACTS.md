@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## 2026-10-01 — Clearing a pack selection
+
+`gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` changes the existing protected `POST /api/v1/word-packs/:id/add` request to accept 0–100 distinct pack-entry UUIDs. `entryIds` remains required. The submitted list is the complete desired selection: the repository excludes linked entries omitted from it and links or reactivates those included, inside one transaction. An empty array excludes every currently linked entry without removing the pack membership or archiving learning items. The response shape is unchanged. `vocabulary.write`, pack validation and application/user scoping remain in effect. Repeating the same complete selection is state-idempotent. Web clients using a partial action must include previously retained entries in this full replacement payload. PostgreSQL regression covers partial removal, zero links and restoration. Locally verified; production deploy pending.
+
 ## 2026-10-01 — Known-word sense matching
 
 `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` preserves the `PUT /api/v1/word-packs/:id/known` request and response shape. Cross-unit propagation within the English path now requires equal normalized source and translation, so distinct senses of the same English spelling remain independent. The PostgreSQL regression covers `May` (month) versus `may` (possibility) and propagation between identical modal senses. Production deploy pending at this source checkpoint.
