@@ -1,8 +1,13 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — Known-entry FK follows the product profile
+
+`gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` corrects migration `1790800008000` before it has applied in production: `user_word_pack_known_entries` references the existing GotIt `user_profiles(application_id, application_user_id)` scoped key with cascade rather than directly referencing Core. GotIt profiles themselves retain their validated Core user FK. This keeps the dedicated product migrator out of the Core schema. First known-word mutation inserts standard profile defaults with `ON CONFLICT DO NOTHING`; the PostgreSQL suite verifies that first-use path. Production retry pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — Known entry state and named-unit replacement
 
-`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds `product_gotit.user_word_pack_known_entries` with primary key `(application_id, application_user_id, pack_id, entry_id)`, compound Core user FK, `(pack_id, entry_id)` catalog FK with cascade, `known_at`, and a scoped lookup index. One known row represents a learner-declared word, not learning evidence. English path repeated source forms are propagated to matching pack entries in the same topic. Migration `1790800009000` changes 3,000 catalog rows and 60 pack titles/versions in place; it refuses changes when path installations, links or known rows exist. The reverse migration has the same guard. The prior migrations are immutable. Local PostgreSQL up/down and isolation tests passed; production migration pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+`gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds `product_gotit.user_word_pack_known_entries` with primary key `(application_id, application_user_id, pack_id, entry_id)`, compound GotIt profile FK, `(pack_id, entry_id)` catalog FK with cascade, `known_at`, and a scoped lookup index. One known row represents a learner-declared word, not learning evidence. English path repeated source forms are propagated to matching pack entries in the same topic. Migration `1790800009000` changes 3,000 catalog rows and 60 pack titles/versions in place; it refuses changes when path installations, links or known rows exist. The reverse migration has the same guard. The prior migrations are immutable. Local PostgreSQL up/down and isolation tests passed; production migration pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
 
 
 ## 2026-10-01 — Versioned English catalog correction

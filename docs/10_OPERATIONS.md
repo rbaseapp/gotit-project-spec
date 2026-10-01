@@ -1,5 +1,10 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — English migration retry after role-boundary failure
+
+The initial `node scripts/migrate-provisioned.js gotit-v1-up` stopped with SQLSTATE 42501 (`permission denied for schema core`) in the known-entry table migration. No catalog version change was observed afterward. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` moves the new FK to `product_gotit.user_profiles` so the existing dedicated migrator can apply it without Core schema access. Fresh local schema and full product/migration-metadata backups were created and `pg_restore --list` validated the full archive: `gotit-schema-before-v1-2026-10-01T11-32-28-745Z.dump` (SHA-256 `2c4623432c9d0a168c6e564c230f68deb38c776c5204eb4781919d9b8def826d`) and `gotit-product-full-before-named-english-2026-10-01T11-32-28-741Z.dump` (SHA-256 `c0c508b726a1055f6c0f2b247d296698fc367525a5b629c1f3ba94555d1f2375`). Recheck path installations/links, retry the dedicated migration, then verify schema/catalog and deploy Backend/Web. Do not grant the migrator Core access or use runtime credentials for migration.
+
+
 ## 2026-10-01 — Named English catalog rollout pending
 
 For `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`, run the additive known-state migration and guarded version-2 catalog migration with the dedicated migrator after a fresh product/migration-metadata backup. The Backend runtime role cannot run DDL, and startup does not migrate. Read-only precheck found 60 version-1 English packs and zero installed/linked entries; recheck immediately before migration because the content replacement aborts if a learner has begun a pack. Deploy Backend only after both migrations, then deploy the matching Web source. Verify exact source SHAs, both `/ready` endpoints, 60 titled packs with 50 entries, representative early words, an authenticated `PUT .../known` and a pack practice session on a test user. Do not run production down automatically. Production migration/deploy not yet verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

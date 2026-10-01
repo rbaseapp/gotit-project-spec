@@ -1,5 +1,10 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Dedicated migrator compatibility fix
+
+The first production migration attempt against `gotIt-backend@14012a0` stopped on SQLSTATE 42501, `permission denied for schema core`, while creating the new known-entry table. The catalog migration did not run; read-only inspection still found 60 version-1 packs and zero path installations/links. This is a role-boundary failure, not a successful deployment. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` changes the new table's scoped user foreign key to `product_gotit.user_profiles(application_id, application_user_id)` with cascade, preserving Core user ownership through the already-established profile FK. The known-word endpoint creates a standard GotIt profile on a first action if none exists, so marking a word does not depend on previously visiting Profile. The migrator needs no new Core grant. Typecheck, build, 206/206 fast tests, 59/59 disposable PostgreSQL integration tests and targeted formatting passed; the integration now exercises a user with no profile. The production migration retry and live smoke are still pending at this point.
+
+
 ## 2026-10-01 — Named-unit learner controls in Web source
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` renders each server-provided unit name beneath its number and level on `/english-learning`. A learner can mark an entire unit known from its card with one click, or mark/unmark an individual entry in the 50-word preview. Repeating the unit action reverses a complete known marking. The path uses server `progress.completed` to select the next unfinished unit and displays declared-known counts separately. Starting a unit submits only entries not marked known, so a unit with one known word sends 49 IDs. Pack practice remains linked for installed units; the backend excludes known entries. The control follows the existing `vocabulary.write` billing gate and shows API errors through the existing feedback UI. Hebrew and English strings are authored; the other six locale catalogs carry English fallback text.

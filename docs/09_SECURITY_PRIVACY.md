@@ -1,5 +1,10 @@
 # 09 — אבטחה ופרטיות
 
+## 2026-10-01 — Product-only migrator boundary for known state
+
+The first migration attempt failed because the dedicated GotIt migrator correctly lacks Core schema privileges. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` uses the existing scoped GotIt profile FK instead of widening the migrator's Core grants. A first known action inserts only standard profile defaults for its Core-authenticated owner; compound ownership and cascade deletion remain. A fresh-user PostgreSQL regression passed; production retry pending.
+
+
 ## 2026-10-01 — Declared known-word ownership
 
 The new known-entry write is authorized with the existing Core-authenticated application/user scope and `vocabulary.write`; clients cannot submit owner IDs. Requested entry IDs must belong to the selected accessible pack before any insert/delete. Repeated English words propagate only within the same learning-path topic and owner scope. Known rows store catalog IDs and a timestamp, not a new source of user text or inferred mastery. The integration suite checked a second user's known count stays zero and rejects unrelated entry IDs. Source: `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`; production rollout pending.

@@ -1,5 +1,11 @@
 # יומן שינויים
 
+## 2026-10-01 — English known-state migration role fix
+
+- `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` changes the new known-entry FK to the GotIt profile and initializes that profile on first known-word action. The first production migration attempt had stopped at a Core schema permission denial before catalog replacement; no extra Core grant is required.
+- Local typecheck, build, 206 fast tests, 59 PostgreSQL integration tests and targeted formatting passed. Production migration retry and deployment pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — English named-unit and known-word Web controls
 
 - `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` adds named unit cards, one-click whole-unit and per-word known toggles, completed/known progress and unknown-only unit installation on `/english-learning`. Hebrew and English copy plus six English fallback locale catalogs are included.

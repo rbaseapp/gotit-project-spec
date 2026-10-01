@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-005 migrator compatibility trace
+
+`gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` maps the protected first-known-word flow to the product-profile FK and standard profile initialization. `test/integration/practice.integration.test.ts` covers no prior profile, scoped state, cross-unit propagation and reversal; local 206 fast/59 PostgreSQL tests passed. The initial production migration failed on a Core schema permission denial before replacing catalog content; corrected migration retry and deploy remain pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+
 ## 2026-10-01 — FR-PACK-005 Web trace
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` maps FR-PACK-005 / UC-04B / SCR-16 to `/english-learning`, `EnglishLearningPathPage.tsx`, the additive word-pack parser, eight locale catalogs and `test/live.test.tsx`. The test covers unit names, full-unit and per-entry known actions, reversal and the unknown-only install payload. Local Web check (160 Vitest, 16 gateway) and 374 responsive checks passed. Backend source is `gotIt-backend@14012a0`; production verification is pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
