@@ -1,8 +1,12 @@
 # 13 — מטריצת עקיבות ואחריות
 
-## 2026-10-01 — FR-PACK-004 deployment gap
+## 2026-10-01 — FR-PACK-004 production activation
 
-Backend `74eb91d` and Web `4da3411` were observed deployed; service health and the dedicated SCR-16 route passed live smoke. PACK-01/FR-PACK-004 content is blocked at the data-rollout step: production has 9 topics, no new English path topic, and no dedicated migrator variable in the current service/local environment. Required follow-up: backup/preflight, migrations `6000` then `7000`, catalog/detail/install smoke, then status update. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+Backend `74eb91d` and Web `4da3411` are deployed. Migrations `6000` and `7000` ran with the dedicated role after local schema/full backups and read-only preflight. PACK-01/FR-PACK-004 and SCR-16 were verified in production by exact data counts (3 tracks, 60 packs, 3,000 entries, 50 each), both `/ready` endpoints, and authenticated first/last unit previews. The test-account 50-entry installation remains unverified in production. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
+## 2026-10-01 — Initial FR-PACK-004 deployment gap (resolved)
+
+Backend `74eb91d` and Web `4da3411` were initially observed with a healthy but empty route and 9 topics. The dedicated credential was found in the ignored provisioning file and the content migration completed as recorded above.
 
 ## 2026-10-01 — FR-PACK-004 / UC-04 / SCR-16
 

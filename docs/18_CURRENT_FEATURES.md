@@ -1,8 +1,8 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
-## 2026-10-01 — English path deploy state
+## 2026-10-01 — English path live state
 
-Backend `74eb91d` and Web `4da3411` are deployed on Render; `/ready` returned 200 and the dedicated path/navigation were observed in an authenticated live browser. The catalog data is **not production available**: read-only production count remains 9 topics, and the path shows an empty state. Dedicated migrator access is missing, so migrations `6000` and `7000` have not run. Evidence and next rollout step: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+Backend `74eb91d` and Web `4da3411` are deployed on Render. Migrations `6000` and `7000` have run with the dedicated migrator. Production has 10 topics, including the named English learning path with 3 levels, 60 units, and 3,000 entries; each unit has 50. `/ready` returned 200 on both services, and an authenticated browser showed all levels and first/last unit previews. A separate test-account installation was not executed. Evidence: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
 
 ## 2026-10-01 — Dedicated English learning path Web source
 

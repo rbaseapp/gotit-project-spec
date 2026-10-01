@@ -1,9 +1,14 @@
 # יומן שינויים
 
-## 2026-10-01 — English path deployments; data rollout blocked
+## 2026-10-01 — English learning path activated in production
+
+- `gotIt-backend@74eb91d` migrations `1790800006000` and `1790800007000` ran through the existing dedicated `gotit_migrator` credential in an ignored local generated environment. Production readback found 10 topics, the named `en`/`he` path, 3 tracks, 60 packs of exactly 50, and 3,000 entries. Authenticated browser smoke displayed all levels and first/last pack previews; both `/ready` endpoints returned 200. A 50-entry installation on a separate test account remains untested.
+- Render Free has no managed backup. Before the additive migration, local schema and full product/migration-metadata dumps were created and checked with `pg_restore --list`; normalization audit and runtime preflight passed. See [rollout evidence](docs/23_ENGLISH_LEARNING_PATH.md).
+
+## 2026-10-01 — English path deployments; initial data gap
 
 - Render Backend `dep-dav2078473hc73d6n53g` deployed `74eb91d`; Web `dep-dav20jo473hc73d6okp0` deployed `4da3411`. Both `/ready` endpoints returned 200; live navigation and `/english-learning` were observed.
-- Production still has 9 `word_topics` and the dedicated path shows its empty state. The two catalog migrations have not run because no dedicated `GOTIT_MIGRATION_DATABASE_URL` is available in the current local/Render service environment. Content availability remains blocked; see [rollout evidence](docs/23_ENGLISH_LEARNING_PATH.md).
+- The first live check found 9 `word_topics` and an empty path. The dedicated credential was subsequently found in the ignored local provisioning file and the catalog was migrated; see the activation entry above.
 
 ## 2026-10-01 — Free removed from selectable billing offers
 

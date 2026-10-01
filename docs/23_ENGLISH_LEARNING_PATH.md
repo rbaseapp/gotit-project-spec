@@ -1,10 +1,16 @@
 # English learning path: initial catalog handoff
 
-## 2026-10-01 — Production rollout observation
+## 2026-10-01 — Production activation
+
+The initial Backend `74eb91d` and Web `4da3411` deployments exposed an empty path because production had only 9 topics. The dedicated `gotit_migrator` credential was then located in the ignored `.env.production.generated` provisioning artifact; it was never added to the Render runtime service or Git. Render Recovery reports that managed backups are unavailable on the Free database plan. Before changing production, a local schema dump (`gotit-schema-before-v1-2026-10-01T09-03-13-760Z.dump`, SHA-256 `b1f444b0078d5fa45ca7a9a783d62b91bd76066660f64e3633fbaa2e4cd84750`) and a full product plus migration-metadata dump (`gotit-product-full-before-english-path-2026-10-01T09-03-21-059Z.dump`, SHA-256 `b5972bedd426851f80ac854ce2dd66c86784b5dd8010777fcf99feea6aa9692c`) were created in ignored `.local-backups` and validated with `pg_restore --list`. Read-only normalization inspection had zero mismatches; restricted runtime preflight passed.
+
+`node scripts/migrate-provisioned.js gotit-v1-up` applied `1790800006000_daily-english-catalog` then `1790800007000_english-learning-path` using the dedicated role and returned a passing runtime preflight. Production readback confirmed 10 topics, the named `english-learning-path-en-he` topic, 3 `en`/`he` tracks, 60 packs, 3,000 entries, and exactly 50 entries in each pack. Backend and Web `/ready` each returned HTTP 200. After refreshing a signed-in browser session, `/english-learning` displayed all three levels and 20 units per level. First Basic unit and last Advanced unit opened with 50 English/Hebrew entries each. No installation was performed on the user's account; the 50-entry installation flow remains covered by local regression rather than production test-account smoke.
+
+## 2026-10-01 — Initial production rollout observation (resolved)
 
 Render Backend deployment `dep-dav2078473hc73d6n53g` reports Live at `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`. Web deployment `dep-dav20jo473hc73d6okp0` reports Deploy succeeded for `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. Both public `/ready` endpoints returned HTTP 200, and `/english-learning` returned HTTP 200. An authenticated live browser showed the new navigation entry and dedicated page, but its content was empty. A read-only query through the production Backend runtime connection returned **9 word topics**, the pre-catalog count. The initial 60-unit migration has therefore not run; the 3,000 entries and follow-up correction are not live.
 
-The Render Backend environment lists `DATABASE_URL` but no `GOTIT_MIGRATION_DATABASE_URL`; the local process also lacks the dedicated migrator variable. The documented migration runner refuses a runtime `DATABASE_URL` fallback. An operator must provide or run a dedicated migrator credential, take the documented backup/preflight steps, apply migrations `1790800006000` and `1790800007000` in order, and then verify topic count 10, three tracks, 60 packs, 3,000 entries, an authenticated first/last detail, and one 50-entry test-account installation. No production migration or content smoke is claimed.
+At the initial check, the Render Backend environment listed `DATABASE_URL` but no `GOTIT_MIGRATION_DATABASE_URL`, and the process environment lacked the dedicated variable. The existing ignored local provisioning file provided the dedicated credential for the completed migration above. Runtime `DATABASE_URL` was not used for migration.
 
 ## 2026-10-01 — Dedicated Web path
 

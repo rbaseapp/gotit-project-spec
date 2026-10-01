@@ -1,8 +1,12 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
-## 2026-10-01 — English path production observation
+## 2026-10-01 — English path production verification
 
-Render reports deployed Backend `74eb91d` (`dep-dav2078473hc73d6n53g`) and Web `4da3411` (`dep-dav20jo473hc73d6okp0`). Both `/ready` endpoints returned 200. Authenticated live browser smoke verified the navigation link, dedicated route and honest empty state. A read-only runtime DB query counted 9 topics, proving the catalog migrations were not applied. No production first/last detail or 50-entry installation test can pass until the dedicated migrator runs; these checks remain pending.
+The dedicated migrator applied both catalog migrations after a local schema and full product backup. Read-only verification found 10 topics, 3 path tracks, 60 packs, 3,000 entries, and no pack outside 50 entries. Restricted runtime preflight passed. Backend and Web `/ready` returned 200; the authenticated browser displayed all 60 units and opened the first Basic and last Advanced unit previews with 50 English/Hebrew entries. A separate test-account 50-entry installation was not performed; the local Web regression covers that request path.
+
+## 2026-10-01 — Initial English path production observation (resolved)
+
+Render deployed Backend `74eb91d` (`dep-dav2078473hc73d6n53g`) and Web `4da3411` (`dep-dav20jo473hc73d6okp0`). The first authenticated live check showed the empty state and 9 topics, which triggered the subsequent migration and verification above.
 
 ## 2026-10-01 — Dedicated English path Web verification
 
