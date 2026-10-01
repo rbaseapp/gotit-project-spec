@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Free removed from selectable billing offers
+
+- `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` keeps Core-assigned Free in the current-plan summary and removes its offer card. Paid subscriptions and the one-time minutes pack remain selectable; no API or data contract changes.
+- Local `npm run check` passed: typecheck, lint, 157 Vitest tests including Free and paid status regression, build, and 16 gateway tests. Deployment and production smoke are pending.
+
 ## 2026-10-01 — Dedicated English learning path in Web source
 
 - `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` adds `/english-learning` with three levels, ordered 50-item units, progress, next unit, preview, and direct practice. The general word-pack screen links to the path and no longer lists these course units as generic packs.

@@ -218,6 +218,7 @@ acceptance; test מקומי אינו הוכחה לחוויה חיה.
 - signed webhook fulfillment ו־idempotency.
 - grace ל־past_due.
 - Web subscription banner ו־billing screen.
+- Web billing מציג Free רק כתוכנית נוכחית לפי Core, ולא כהצעה לבחירה בקטלוג.
 - Backend guards ל־vocabulary write, practice, reading ו־speech.
 - admin bypass לפי role מהמסד.
 

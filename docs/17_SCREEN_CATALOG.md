@@ -364,12 +364,14 @@ Route: `/billing`.
 ```text
 Current plan / tier / trial days / subscription status
 Entitlements summary
-Plan cards: Free / Pro monthly / Pro yearly
+Selectable plan cards: Pro / AI Tutor subscriptions / one-time minutes pack
 [Upgrade] [Manage subscription]
 ```
 
 מצבים: admin, free, active trial, paid, past_due grace, paused/canceled, billing not
 configured, portal/checkout error. אין הצגת provider customer/subscription IDs.
+Free מוצגת רק בסיכום התוכנית הנוכחית כשהיא הוקצתה בידי Core; היא אינה כרטיס
+לבחירה גם אם היא מופיעה בקטלוג התוכניות.
 
 ## 17. SCR-14 — Checkout Handoff
 

@@ -165,6 +165,9 @@ Actor: משתמש free/trial; Paddle.
 Preconditions: paid plan ו־Paddle config קיימים.  
 Trigger: Upgrade.
 
+On the billing screen, a Core-assigned Free plan appears in the current-plan summary.
+The offer grid contains purchasable plans only; Free cannot be selected from it.
+
 Main flow: checkout UUID → Core creates/replays hosted transaction → Web opens Paddle →
 Paddle sends signed event → Core verifies raw body/idempotency/staleness and updates
 projections → billing status derives paid entitlements → clients refresh access.

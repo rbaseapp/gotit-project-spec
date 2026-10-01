@@ -131,6 +131,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-BILL-003 | signed webhook fulfillment | Must | raw signature/duplicate/stale | Stable |
 | FR-BILL-004 | hosted portal | Must | provider IDs server-resolved | Stable |
 | FR-BILL-005 | entitlement enforcement | Must | backend guard + UI state | Stable |
+| FR-BILL-006 | Free is status-only in Web billing | Must | when Core reports Free, show it as current plan; never render it among selectable offers even when present in catalog | Implemented locally; production pending |
 | FR-TRN-001 | paginated export | Must | versioned current library | Stable |
 | FR-TRN-002 | idempotent bounded import | Should | per-entry 200/207 | Stable |
 | FR-LEG-001 | terms/privacy/refund pages | Must | public routes | Stable; legal review ongoing |

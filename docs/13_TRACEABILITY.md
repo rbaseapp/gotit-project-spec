@@ -70,6 +70,7 @@ FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי Co
 | AUTH-04 | email verification/reset | Core/Web | TBD | TBD | TBD | מתוכנן P0 |
 | BILL-01 | plans/status/trial | Core/clients | `/billing/plans`,`/status` | billing tables | billing/access tests | ממומש |
 | BILL-02 | checkout/webhook/portal | Core/Web | billing mutations | checkout/subscription/events | webhook + live Paddle | ממומש; rollout נדרש |
+| BILL-03 / FR-BILL-006 | Free status-only in billing UI | Web | Core plans + status | none | `gotIt-front/test/billing-page.test.tsx` (Free and paid states), `npm run check` | local pass at `gotIt-front@196cf9593cda52360160d620d02091071b421ce5`; deploy pending |
 | CAP-01 | contextual preview | Backend/Web/Chrome | `/captures/preview` | enrichment_runs | enrichment/capture tests | ממומש |
 | CAP-02 | sense-safe save | Backend/clients | `/captures` | items/translations/occurrences | integration + replay | ממומש |
 | LIB-01 | browse/filter/edit/bulk | Backend/Web | `/learning-items*` | vocabulary tables | library/client tests | ממומש |

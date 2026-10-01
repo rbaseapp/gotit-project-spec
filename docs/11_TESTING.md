@@ -104,6 +104,8 @@ Smart review rotation regression: `test/integration/practice.integration.test.ts
 | Browser/E2E | routing/layout/browser APIs | Playwright/manual Chrome |
 | Live acceptance | providers, OAuth, billing, deploy | staging/production checklist |
 
+Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in the catalog and status, it appears only in the current-plan summary; with a paid status, Free is absent. `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` passed `npm run check` (typecheck, lint, 157 Vitest tests, build, 16 gateway tests). Production smoke remains pending.
+
 ## 2. Core Coverage חובה
 
 - application context ו־cross-product rejection.
