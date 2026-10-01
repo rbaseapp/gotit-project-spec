@@ -6,7 +6,9 @@
 16 gateway, TypeScript/lint/build עברו; 8 בדיקות ממוקדות לאחר הרחבת מד הקול
 ו־10 Playwright עברו. הרגרסיה מכסה דליפת פה סגור, עדכון מד קול מהיר,
 שתיקה, שתי הדמויות, מצמוץ בדיבור, ניקוי ותנועה מופחתת.
-[מיפוי בדיקות וצילום](25_TUTOR_AVATAR_MOTION.md). Production ממתין.
+[מיפוי בדיקות וצילום](25_TUTOR_AVATAR_MOTION.md). Render Live ב־SHA המדויק;
+readiness, bytes של נכסי PNG ו־smoke פונקציות מהרכיב המוגש עברו.
+שיחה קולית חיה לא אומתה עקב timeout בחלון Google; אלו ראיות נכסים/קוד בלבד.
 
 ## 2026-10-01 — Unique catalog production smoke
 

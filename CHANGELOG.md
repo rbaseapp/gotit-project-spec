@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — Tutor avatar Web deployed
+
+- Render `dep-davbpls9v7es73f6nk7g` is Live for exact `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`. Web/Backend readiness, the private-lesson route, delivered CSS/JS and both generated frames returned 200. PNG bytes match source hashes; delivered component/helper pose, inactive, invalid-input and silence smoke passed. Live voice acceptance remains unverified because Google chooser input timed out. [Evidence and limits](docs/25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 — Tutor avatar motion locally verified
 
 - `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` adds male/female rounded speech frames, adjacent source-over mouth blending, approximately 30Hz time-based audio smoothing, eyelid-only blinking during speech and subdued continuous breathing. Reduced motion and invalid/inactive/silent input are covered. Web check passed (172 Vitest, 16 gateway, typecheck/lint/build); eight focused avatar/audio regressions and ten avatar/lesson-flow Playwright checks passed. Pose grid visually inspected. Production deploy and smoke pending; see [avatar motion](docs/25_TUTOR_AVATAR_MOTION.md).

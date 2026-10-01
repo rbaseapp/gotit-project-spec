@@ -1,5 +1,15 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Tutor avatar Web rollout
+
+Render `dep-davbpls9v7es73f6nk7g` reports `Deploy succeeded | Live` for exact
+`gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` (47.8s manual deploy).
+Web/Backend `/ready`, `/private-lesson?free=1`, CSS, JavaScript and both new PNGs
+returned 200. Generated PNG SHA-256 matches source; delivered pure component/helper
+pose and silence smoke passed. No migration/configuration change. Google chooser
+input timed out, so an authenticated live voice conversation was not started.
+[Full verification and limits](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 — Unique English catalog rollout (production verified)
 
 Completed: validated full product/migration-metadata backup `gotit-product-full-before-unique-english-2026-10-01T19-27-38-494Z.dump` (SHA-256 `b2ae90a62f5fbee4882c3d5e8f781064d7219af1561a3a34c990dba152e7559c`); dedicated `migrate-provisioned` up and restricted runtime preflight; one migration row; 60 version-4 packs with 50 entries, 3,000 distinct English forms; 1,418 archived known and 51 archived links; 710 active known and 51 active links. Render `dep-davb9j9srm7s73bb3p70` is Live for Backend `10602736bdf5422116eb838e57e9d708318156be`. Public Backend `/ready`, `/health` and Web `/english-learning` returned 200; signed-in `ori` unit-3 preview opened with 50 entries and 48 known. Preserve the archive for recovery and use a reviewed forward fix for any future content/progress issue.

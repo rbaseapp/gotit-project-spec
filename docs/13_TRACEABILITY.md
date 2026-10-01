@@ -6,7 +6,8 @@ P12, UC-07/UC-11, SCR-10/SCR-PC-00A → `TeacherAvatar.tsx`, `avatarMotion.ts`,
 מד השמע ב־`privateLesson.ts`, CSS ונכסי שני המורים → בדיקות avatar-motion,
 teacher-avatar, private-lesson-connection, private-lesson ו־Playwright.
 מקור: `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`;
-[ראיות](25_TUTOR_AVATAR_MOTION.md), פריסה ממתינה.
+[ראיות](25_TUTOR_AVATAR_MOTION.md): Render Live ו־smoke של קוד ונכסים עברו;
+שיחה קולית חיה ומכשיר פיזי לא אומתו.
 
 ## 2026-10-01 — FR-PACK-005 production evidence
 

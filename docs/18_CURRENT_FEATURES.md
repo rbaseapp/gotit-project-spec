@@ -1,10 +1,12 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
-## 2026-10-01 — אווטארים, מאומת מקומית
+## 2026-10-01 — אווטארים, נפרסו ונבדקו בנכסי Production
 
 `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` משפר תנועת פה ומצמוץ
-עם פריים מעוגל נוסף לכל דמות. Web check ו־10 בדיקות דפדפן עברו; פריסה
-ו־smoke חי ממתינים. [ראיות וגבולות](25_TUTOR_AVATAR_MOTION.md).
+עם פריים מעוגל נוסף לכל דמות. Web check ו־10 בדיקות דפדפן עברו; Render
+`dep-davbpls9v7es73f6nk7g` הוא Live ב־SHA המדויק. readiness ונכסים עברו,
+וכן smoke פונקציות הרכיב המוגש. שיחה קולית חיה לא אומתה עקב timeout
+בחלון Google. [ראיות וגבולות](25_TUTOR_AVATAR_MOTION.md).
 
 ## 2026-10-01 — Unique English path in production
 

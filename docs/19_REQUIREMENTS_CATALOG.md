@@ -5,7 +5,8 @@
 Should: שתי דמויות המורה מציגות מעברים רציפים בין צורות פה, סגירה בשתיקה,
 מצמוץ עצמאי בדיבור ונשימה עדינה; reduced motion ורוחב 320px נתמכים.
 ממומש ומאומת מקומית במקור `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`;
-[קבלה ובדיקות](25_TUTOR_AVATAR_MOTION.md). Production ממתין.
+[קבלה ובדיקות](25_TUTOR_AVATAR_MOTION.md). נפרס ב־Render ו־smoke קוד/נכסים
+מוגשים עבר; קבלה קולית חיה טרם אומתה.
 
 ## 2026-10-01 — FR-PACK-005 unique catalog amendment
 
