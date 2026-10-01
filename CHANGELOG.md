@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Wait for complete Meta SDK readiness
+
+- `gotIt-front@8423c90012bd803bf4f9c231559fa1226c21c792` waits for `fbAsyncInit`, retains the 15-second bundle-loading deadline, cleans up a queued bootstrap for retry and initializes replacement SDK instances. The regression covers incomplete bundle loading and a successful retry. Web check passed (167 Vitest, 16 gateway, typecheck, lint, build); local Chrome opened Meta's OAuth dialog. Production deployment and real-account acceptance remain pending. Core's owner-reported replacement secret deploy `dep-davb4unavr4c73b9ing0` is Live, with passing readiness and invalid-token smoke. Meta business portfolio is connected but Unverified. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-01 — Unique English path replacement, source verified
 
 - Backend `10602736bdf5422116eb838e57e9d708318156be` replaces the repeated catalog with the learner-supplied 60×50 globally unique English entries, renames the topic to **לימוד שפה מאפס**, and archives prior known/learning links before remapping exact source-and-meaning matches. 208 fast, 59 existing PostgreSQL and one focused migration regression passed, along with typecheck/build/targeted formatting. Production migration and deployment are pending at this checkpoint; new draft Hebrew translations need editorial review. See [path handoff](docs/23_ENGLISH_LEARNING_PATH.md).
