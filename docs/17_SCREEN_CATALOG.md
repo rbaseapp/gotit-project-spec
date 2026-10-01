@@ -128,6 +128,8 @@ flowchart TD
 
 ## 4. SCR-01 — Auth
 
+On Web startup after closing and reopening the browser, a valid saved refresh session restores live mode without displaying the login form (`gotIt-front@9fb80b2`). Explicit logout or an invalid/expired session shows this screen. A transient startup request failure may show the signed-out screen with an error while preserving the saved token for retry on reload. Core's default absolute session lifetime remains 30 days. Locally verified; production browser restart smoke pending.
+
 Route: כל route לא־משפטי כאשר `mode=signed-out`.
 
 ```text

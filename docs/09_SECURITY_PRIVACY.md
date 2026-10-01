@@ -60,12 +60,12 @@ IDs נבדקים מול scope; אין trust ב־application user, role, tier, sc
 
 - access token קצר; refresh token random ומסובב.
 - במסד נשמר רק hash של refresh secret.
-- Web: access בזיכרון, refresh ב־sessionStorage, ללא cookies.
+- Web: access token in memory; rotating refresh token in `localStorage` with legacy `sessionStorage` migration; no auth cookies. Explicit logout removes both values.
 - Extension: access ב־session storage, refresh ב־local trusted context.
 - logout/revocation idempotent.
 - אין להדפיס Authorization, Cookie, Set-Cookie, tokens או request bodies ללוג.
 
-סיכון שיורי: XSS ב־Web יכול לגשת ל־sessionStorage. mitigations: CSP, no inline
+Residual Web risk: XSS can read the persistent refresh token from `localStorage`, including across browser restarts. Mitigations: CSP, no inline
 scripts ככל האפשר, runtime validation, dependency audit, same-origin gateway ו־
 React escaping. מעבר עתידי ל־HttpOnly cookie דורש CSRF design ואינו שינוי נקודתי.
 

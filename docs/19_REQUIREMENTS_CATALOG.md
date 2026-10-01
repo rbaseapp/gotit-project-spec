@@ -71,6 +71,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-AUTH-008 | user/admin role מהמסד | Must | input/JWT אינו סמכות | Stable |
 | FR-AUTH-009 | אימות דוא״ל | Must before public password GA | expiry/single use/resend | Planned |
 | FR-AUTH-010 | password reset | Must before public password GA | secure token/revoke policy | Planned |
+| FR-AUTH-011 | Web sign-in survives browser restart | Must | A valid Core refresh session restores identity after tab close/reopen; rotation updates persistent storage, explicit logout and invalid refresh clear it; transient startup failure preserves it for retry | Locally verified in `gotIt-front@9fb80b2`; production pending |
 
 ## 4. Profile ו־Onboarding
 

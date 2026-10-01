@@ -57,6 +57,8 @@ SCR-PC-03–04; SEQ-07/12. [פרטי המימוש והחריגים ב־22](22_PE
 
 ## UC-01 — יצירת session משתמש
 
+Web continuation (`gotIt-front@9fb80b2`): on reopening the browser, the client reads its saved rotating refresh token, exchanges it with Core, and hydrates the live account. A legacy tab token is migrated when read. An expired/revoked token leads to signed-out state and local credential cleanup; explicit logout clears both browser stores. A transient Core/network error leaves the saved token for a later retry. Core's default 30-day absolute expiry still bounds this flow. Locally verified; production restart smoke pending. Maps FR-AUTH-011 / SCR-01.
+
 | שדה | ערך |
 |---|---|
 | Actor ראשי | משתמש לא מזוהה |

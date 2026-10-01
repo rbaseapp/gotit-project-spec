@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Web sign-in persistence, source `9fb80b2`
+
+`gotIt-front/test/api.test.ts` verifies refresh after tab storage is cleared and the API module reloads, migration from legacy tab storage, cross-tab rotation, and logout clearing persistent storage. `test/app.test.tsx` verifies that login stores the refresh token persistently. Focused Vitest: 23/23 passed; typecheck, lint, production build, 16/16 gateway tests and targeted Prettier passed. Full Vitest: 163/164 passed, with one failure in the concurrently edited English unit bulk-action UI (`test/live.test.tsx`), outside the auth change. Production authenticated close/reopen smoke pending.
+
 ## 2026-10-01 - Selected-word production smoke
 
 Render Backend `dep-dav9ef1srm7s73eegcng` reports Live at `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `dep-dav9f0lg1s2s73couufg` reports Live at `623202a3e1f5c51b71baf12bd1c78c4a0967860b`. `GET https://gotit-backend.onrender.com/ready` returned 200 with database ready; `GET https://gotit.rbaseapp.com/ready` and `/english-learning` returned 200. In an authenticated production path, a unit preview showed 50 labeled checkboxes, select all/clear and both bulk buttons. Checking two words changed the count to 2 and enabled both actions; clear returned count 0 and disabled them. A linked word was then removed: selecting it offered Add and disabled Remove. Re-adding restored the reverse button state. The selection was cleared and modal closed. This verifies one reversible server mutation and the deployed UI; first-time new-item creation and last-link removal remain covered by local/PostgreSQL tests rather than production account mutation.

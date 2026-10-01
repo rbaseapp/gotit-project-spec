@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — Persistent Web sign-in, locally verified
+
+- `gotIt-front@9fb80b2` stores the rotating refresh token in browser local storage, migrates existing tab storage, and restores the account after a browser restart. Logout clears both stores; an invalid session still requires sign-in. Transient startup network failures retain the token for a later retry. Core's existing session expiry remains 30 days by default from login; no Core API or database change. Focused tests passed 23/23, typecheck, lint, build, gateway 16/16 and targeted formatting passed. The full Vitest run had one unrelated English unit test failure on concurrent uncommitted edits. Production deployment and authenticated restart smoke pending.
+
 ## 2026-10-01 - Multiword unit controls deployed
 
 - Render Backend `dep-dav9ef1srm7s73eegcng` is Live at `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`; Web `dep-dav9f0lg1s2s73couufg` is Live at `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b`. Both `/ready` endpoints and `/english-learning` returned HTTP 200. An authenticated production unit preview displayed selection controls; two checks changed the selected count and action states. A linked word was removed and re-added, with the original removable state restored.

@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-AUTH-011 persistent Web session
+
+`gotIt-front@9fb80b2`: `src/lib/api.ts` and `src/context/AppContext.tsx` implement SCR-01/UC-01 restoration from browser local storage, with regressions in `test/api.test.ts` and `test/app.test.tsx`. Local focused tests and build passed; production deploy and authenticated browser restart are pending. Core's default absolute refresh expiry remains 30 days.
+
 ## 2026-10-01 - FR-PACK-006 production evidence
 
 Backend `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` is Live on Render `dep-dav9ef1srm7s73eegcng`; Web `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` is Live on `dep-dav9f0lg1s2s73couufg`. Public readiness and path checks passed. Authenticated SCR-16 smoke verified two-word selection, clear/disabled states and removal/re-addition of an existing link, restoring the original state. PostgreSQL regression covers clearing the final link. Maps FR-PACK-006 / UC-04C to production UI plus Backend contract evidence.

@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Persistent Web authentication
+
+`gotIt-front@9fb80b2` keeps the rotating Core refresh token across browser restarts and hydrates the live account at the next visit. Existing tab sessions migrate when used. Explicit logout and invalid refresh clear the saved token; transient Core/network failure leaves it available for retry. The access token remains memory-only. Core refresh sessions currently expire 30 days after issue by default, even if refreshed. Locally verified; production deployment and browser restart smoke pending.
+
 ## 2026-10-01 - Multiword English unit actions in production
 
 Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `623202a3e1f5c51b71baf12bd1c78c4a0967860b` are Live on Render (deploys `dep-dav9ef1srm7s73eegcng` and `dep-dav9f0lg1s2s73couufg`). In `/english-learning`, the unit preview allows multiple checked words, select all/clear, add selected and remove selected. The existing pack endpoint accepts an empty complete selection so the last link can be excluded without deleting the unit. Both readiness endpoints and the path returned 200. Authenticated smoke verified selection and a reversible remove/re-add of a linked word; zero-link behavior was verified in disposable PostgreSQL, not mutated in production.

@@ -75,7 +75,7 @@ live וזכאות. כניסת `/private-lesson` מציעה קורס, עם שיח
 ## 4. Auth ו־Token Lifecycle
 
 - access token נשמר בזיכרון בלבד.
-- refresh token נשמר ב־`sessionStorage` תחת `gotit.refresh`.
+- Web refresh token: `localStorage` key `gotit.refresh`; existing `sessionStorage` value migrates on first use. Core default expiry is 30 days from issue.
 - `api.token()` מרענן 30 שניות לפני expiry.
 - refresh מקביל מאוחד ל־promise אחד.
 - 401 לאחר retry מנקה session ומשדר `gotit:session-expired`.
