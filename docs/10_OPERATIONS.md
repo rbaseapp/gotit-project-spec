@@ -241,4 +241,4 @@ Deployment observation: Backend `dep-dav2078473hc73d6n53g` at `74eb91d` and Web 
 
 ## 2026-10-01 Facebook Login activation
 
-Follow [the Facebook rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md) for the Meta app settings, Core provider configuration, server-only App Secret, Web deployment and live smoke checks. The Web source commit is `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722`; the local check passed, while publication, secret configuration, deployment and live acceptance remain pending at this checkpoint.
+Follow [the Facebook rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md) for the Meta app settings, Core provider configuration, server-only App Secret, Web deployment and live smoke checks. The Web source commit is `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722`; local checks passed and Render Web deploy `dep-dav9uak1nsns73at2gk0` is Live with HTTP 200 readiness and served-bundle smoke. Publication, secret configuration and live provider acceptance remain pending at this checkpoint.

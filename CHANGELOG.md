@@ -3,7 +3,7 @@
 ## 2026-10-01 - GotIt Facebook Login configuration in progress
 
 - `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722` supplies Meta App ID `2207127606520765` when the build override is blank, so the Facebook button can initialize the SDK. The regression covers the blank override. Local `npm.cmd run check` passed: typecheck, lint, 164 Vitest tests, build, and 16 gateway tests.
-- Meta app `gotit` has `email` ready for testing, JavaScript SDK login enabled, allowed domain `gotit.rbaseapp.com`, exact root redirect URI, and the GotIt privacy, terms and deletion-instructions links. Core production's `gotit` Facebook provider row was set to the same App ID and read back enabled. App Secret configuration, Meta publication, Web deployment and live sign-in smoke are pending; see [Facebook rollout](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+- Meta app `gotit` has `email` ready for testing, JavaScript SDK login enabled, allowed domain `gotit.rbaseapp.com`, exact root redirect URI, and the GotIt privacy, terms and deletion-instructions links. Core production's `gotit` Facebook provider row was set to the same App ID and read back enabled. Render Web deployment `dep-dav9uak1nsns73at2gk0` is Live at the exact source commit; `/ready`, `/` and the served JavaScript returned 200, and the bundle contains the App ID and SDK loader. App Secret configuration, Meta publication and live sign-in smoke remain pending; see [Facebook rollout](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
 
 ## 2026-10-01 - Selected English words: known and undo actions
 
