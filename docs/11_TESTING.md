@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Selected-word production smoke
+
+Render Backend `dep-dav9ef1srm7s73eegcng` reports Live at `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `dep-dav9f0lg1s2s73couufg` reports Live at `623202a3e1f5c51b71baf12bd1c78c4a0967860b`. `GET https://gotit-backend.onrender.com/ready` returned 200 with database ready; `GET https://gotit.rbaseapp.com/ready` and `/english-learning` returned 200. In an authenticated production path, a unit preview showed 50 labeled checkboxes, select all/clear and both bulk buttons. Checking two words changed the count to 2 and enabled both actions; clear returned count 0 and disabled them. A linked word was then removed: selecting it offered Add and disabled Remove. Re-adding restored the reverse button state. The selection was cleared and modal closed. This verifies one reversible server mutation and the deployed UI; first-time new-item creation and last-link removal remain covered by local/PostgreSQL tests rather than production account mutation.
+
 ## 2026-10-01 - Selected English unit words in Web source
 
 `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b`: `npm.cmd run check` passed TypeScript, ESLint, 161/161 Vitest tests, build and 16/16 gateway tests. The selected-word live test verifies preserving an existing link while adding one checked word, removing a different checked word, removing the final link with an empty selection and adding one word back. `npm.cmd run test:responsive -- --grep "English unit"` passed 2/2 at 320px, 525px and desktop after updating the modal fixture with checkboxes and bulk buttons. Targeted Prettier passed. Production authenticated selection smoke remains pending.

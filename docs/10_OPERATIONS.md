@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 selected-word release
+
+No database migration or configuration change was needed. Manual Render deploys `dep-dav9ef1srm7s73eegcng` (Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`) and `dep-dav9f0lg1s2s73couufg` (Web `623202a3e1f5c51b71baf12bd1c78c4a0967860b`) both reported `Deploy succeeded | Live`. Public Backend and Web `/ready` each returned HTTP 200; `/english-learning` returned HTTP 200. Authenticated smoke in one unit selected two words, confirmed both bulk actions enabled, cleared the selection, removed one previously linked word and added it back. The modal was closed with no selection left.
+
 ## 2026-10-01 — Hebrew path preview Web deployment
 
 Render Web deployment `dep-dav8pnk9v7es73fjv47g` reports `Deploy succeeded | Live` for exact source `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` after manual "Deploy latest commit". Public Web `/ready` and `/english-learning` returned HTTP 200. The served CSS `index-R3SsXn_J.css` and JavaScript `index-BqsjPd1-.js` returned HTTP 200; CSS contains the aligned preview/footer rules and JavaScript contains the new Hebrew title. A new production browser tab presented Login, so an authenticated visual unit-preview smoke was unavailable. No Backend deployment or migration was required.

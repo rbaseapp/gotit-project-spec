@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 - Selected-word production verification
+
+Render Backend `dep-dav9ef1srm7s73eegcng` is Live for `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `dep-dav9f0lg1s2s73couufg` is Live for `623202a3e1f5c51b71baf12bd1c78c4a0967860b`. Both `/ready` endpoints and `/english-learning` returned 200. An authenticated 50-word preview showed labeled checkboxes and add/remove-selected actions. Selecting two words produced a count of 2 and enabled both actions; clearing disabled them. Removing one existing link switched that word to an Add candidate, and re-adding switched it back to Remove. The selection was cleared and modal closed. The final-link empty payload and new-item subset remain integration/live-flow regression evidence, not production mutations.
+
 ## 2026-10-01 - Selected-word unit controls in Web source
 
 `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds independent checkboxes and select all/clear controls to each unit preview. Add checked words retains existing links; remove checked words omits only those links, including the last one via Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`. The client reloads server detail/progress after success, clears the selection, and leaves known-word and full-unit actions intact. Web check passed (161 Vitest, 16 gateway, typecheck, lint, build), along with two responsive Playwright checks at 320px, 525px and desktop. Production deploy and authenticated add/remove smoke are pending.

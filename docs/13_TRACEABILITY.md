@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 - FR-PACK-006 production evidence
+
+Backend `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` is Live on Render `dep-dav9ef1srm7s73eegcng`; Web `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` is Live on `dep-dav9f0lg1s2s73couufg`. Public readiness and path checks passed. Authenticated SCR-16 smoke verified two-word selection, clear/disabled states and removal/re-addition of an existing link, restoring the original state. PostgreSQL regression covers clearing the final link. Maps FR-PACK-006 / UC-04C to production UI plus Backend contract evidence.
+
 ## 2026-10-01 - FR-PACK-006 / UC-04C / SCR-16
 
 `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` maps the multiword unit request to `EnglishLearningPathPage.tsx`, responsive CSS, eight UI catalogs, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` accepts the zero-ID replacement and has schema/PostgreSQL regressions. Web check (161 Vitest, 16 gateway) and two targeted Playwright checks passed; exact-commit deployment and authenticated live smoke pending.

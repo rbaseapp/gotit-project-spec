@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Multiword unit controls deployed
+
+- Render Backend `dep-dav9ef1srm7s73eegcng` is Live at `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`; Web `dep-dav9f0lg1s2s73couufg` is Live at `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b`. Both `/ready` endpoints and `/english-learning` returned HTTP 200. An authenticated production unit preview displayed selection controls; two checks changed the selected count and action states. A linked word was removed and re-added, with the original removable state restored.
+
 ## 2026-10-01 - Multiword controls in the English unit preview
 
 - `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds checkboxes, select all/clear, and add/remove-selected actions in SCR-16. Existing linked words remain included when adding a subset; removal affects checked linked words only, including the final link through Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`. Web check passed (161 Vitest, 16 gateway, typecheck, lint, build); two targeted Playwright layout checks passed. Production Web deploy and authenticated smoke are pending.

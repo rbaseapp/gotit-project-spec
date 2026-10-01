@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 - Multiword English unit actions in production
+
+Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `623202a3e1f5c51b71baf12bd1c78c4a0967860b` are Live on Render (deploys `dep-dav9ef1srm7s73eegcng` and `dep-dav9f0lg1s2s73couufg`). In `/english-learning`, the unit preview allows multiple checked words, select all/clear, add selected and remove selected. The existing pack endpoint accepts an empty complete selection so the last link can be excluded without deleting the unit. Both readiness endpoints and the path returned 200. Authenticated smoke verified selection and a reversible remove/re-add of a linked word; zero-link behavior was verified in disposable PostgreSQL, not mutated in production.
+
 ## 2026-10-01 — English path final deployment state
 
 Backend `10bf197` and Web `3834823` are Live on Render. The contextual meanings and known-state separation had an authenticated production smoke before the Web layout release; the Web layout release has public route, health and served CSS/JS verification, with 375 local responsive checks. Signed-in visual inspection of the final button layout remains unverified because the earlier authenticated browser tab was unavailable after deployment. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
