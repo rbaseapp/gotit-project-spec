@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 - Bulk-known Web release
+
+No Backend, migration or configuration change was needed for the final responsive footer. Render Web deployment `dep-davaakflot8c73cu3sig` reports `Deploy succeeded | Live` for exact SHA `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c`. `https://gotit.rbaseapp.com/ready`, `/english-learning` and `https://gotit-backend.onrender.com/ready` each returned HTTP 200. In an authenticated production English path unit, two checked words enabled the bulk known action; the wider footer showed Hebrew Add, known and undo controls without a selected-word removal action. The checks were cleared and the modal closed; the unit stayed at 2/50 known. The previous corrected-copy deploy `dep-dava57ghfsis73c06h0g` had verified reversible bulk known/undo on the same two initially unknown words with the original 2/50 count restored.
+
 ## 2026-10-01 — Web auth persistence deployment
 
 Render manual deployment `dep-dav9obaj9qps73e5j320` is Live for exact `gotIt-front@9fb80b2d02a3017511080eefbb3470e750968a4c`. Web and Backend `/ready` returned 200 and the production Web bundle includes the persistent refresh-token code. No Core, Backend, migration, or configuration rollout was needed. Authenticated browser restart smoke remains pending account-owner completion of the Google chooser.

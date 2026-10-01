@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 - Bulk known and undo in production
+
+The current Web release `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` is Live in Render `dep-davaakflot8c73cu3sig`. English unit previews retain multiword checkboxes and Add selected, and offer bulk I already know and Undo known without a Remove selected button. Authenticated smoke confirmed the final Hebrew two-row footer with two selected words, then cleared the checks; the unit remained at 2/50 known. The immediately preceding `e519242` Live release passed reversible bulk known/undo server smoke on two initially unknown words and restored the original count. Web and Backend readiness and the public path returned 200.
+
 ## 2026-10-01 - Bulk known verified live; footer layout source verified
 
 Web `e5192422075850a7db6c64134a13565d3c3acf58` was Live in Render deployment `dep-dava57ghfsis73c06h0g`. Authenticated smoke on the English unit preview selected `illegal` and `regulation`, bulk-marked both known, then bulk-unmarked both; the original 2/50 known count returned. Public Web and Backend readiness and `/english-learning` were 200. Web `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` improves the five-button footer width and passed local check/responsive regression, but its own production deploy is pending at this source checkpoint.

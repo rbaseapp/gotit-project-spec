@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Final English preview production smoke
+
+Render Web `dep-davaakflot8c73cu3sig` is Live for exact `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c`. Public Web and Backend readiness and `/english-learning` returned 200. Authenticated preview inspection showed the wider two-row footer, correctly rendered Hebrew bulk known/undo labels, two selected words and no selected-word removal action. Clearing the selection disabled its bulk known action; closing the modal left Advanced unit 10 at 2/50 known. Reversible server-write smoke for the same feature passed on the immediately preceding `e519242` deploy; final CSS changed only width/grid layout. Local final-source gates: `npm.cmd run check` passed 165 Vitest, 16 gateway, typecheck/lint/build; targeted responsive Playwright passed 1/1 at 320px/525px/1920px.
+
 ## 2026-10-01 - Five-action modal layout regression
 
 `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` passed `npm.cmd run check`: TypeScript, ESLint, 165/165 Vitest, build and 16/16 gateway. `npm.cmd run test:responsive -- --grep "English unit preview"` passed 1/1 at 320px/568px, 525px/709px and 1920px/900px. The modal regression now requires every footer button to be at least 100px wide as well as inside the modal, with the 50-word list scrolling. The preceding `e519242` deployment passed authenticated bulk known/undo smoke with two initially unknown entries and restored their original states and 2/50 count. This layout revision awaits production visual verification.

@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Final bulk-known footer deployed
+
+- Render Web `dep-davaakflot8c73cu3sig` reported `Deploy succeeded | Live` for exact `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c`. Web `/ready`, `/english-learning` and Backend `/ready` returned 200. Authenticated Advanced unit 10 visual smoke showed two selected words, readable Hebrew Add selected / I already know / Undo known controls in a two-row footer, and no Remove selected action. The selection was cleared and the modal closed; the unit remained at its original 2/50 known count. The preceding `e519242` release had already passed reversible two-word known/undo server smoke.
+
 ## 2026-10-01 - Readable bulk-action footer
 
 - `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` widens the English unit preview and lays out its five footer actions in a responsive grid. This follows an authenticated live check in which the new long Hebrew labels were readable but compressed into narrow vertical buttons. Local Web check passed (165 Vitest, 16 gateway, typecheck, lint, build); targeted 320px/525px/desktop responsive Playwright passed 1/1 with a minimum action width assertion. This CSS release's deploy is pending at the source checkpoint.
