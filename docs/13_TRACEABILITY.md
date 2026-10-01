@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — SCR-16 Web release evidence
+
+The FR-PACK-005/SCR-16 one-click layout fix `gotIt-front@383482331ca895c1491123643138bd0973fd7395` is Live on Render `dep-dav4nrgjo6nc73fgnt9g`. Public route/health and served CSS/JS asset smoke passed; post-deploy authenticated visual rendering remains unverified because the signed-in tab was unavailable. Local component and 320px/1920px layout regressions plus 375 responsive checks passed. Backend sense smoke had passed earlier on its exact release.
+
 ## 2026-10-01 — FR-PACK-005 readable one-click controls
 
 `gotIt-front@383482331ca895c1491123643138bd0973fd7395` maps SCR-16 per-word known-button readability to `EnglishLearningPathPage.tsx`, `production.css`, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. Local 160 Vitest, 16 gateway and 375 Playwright checks passed. Backend sense handling is production verified on `10bf197`/Render `dep-dav4i2p7lnhs73aqouc0`; Web visual deployment remains pending at this checkpoint.

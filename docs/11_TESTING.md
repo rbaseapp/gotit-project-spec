@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Final Web deployment verification
+
+Render Web `dep-dav4nrgjo6nc73fgnt9g` is Live at exact `383482331ca895c1491123643138bd0973fd7395`. Production `/english-learning`, Web `/ready`, Backend `/ready`, CSS and dynamically loaded path JavaScript returned 200; the latter assets contain the new row/no-wrap selectors and class. The production visual button check in an authenticated session could not be repeated after Web deploy because the prior tab was lost and a new one showed Login. Local regression passed 160 Vitest, 16 gateway, 375 Playwright checks including the 320px/1920px one-line assertion.
+
 ## 2026-10-01 — Known-control visual regression and live backend smoke
 
 `gotIt-front@383482331ca895c1491123643138bd0973fd7395` passed `npm.cmd run check` (160 Vitest, 16 gateway, typecheck, lint, build), 375/375 Playwright responsive checks, and targeted Prettier. The component regression asserts the scoped modal/row classes, while Playwright measures a one-line button and no row overflow at 320px and 1920px. Backend `10bf197` is Live on Render `dep-dav4i2p7lnhs73aqouc0`; authenticated Web smoke displayed `second = שנייה`, `May = מאי`, and an unmarked modal `may = ייתכן ש־` after the month was temporarily marked. The test mark was reversed. Web layout deploy pending at this source checkpoint.

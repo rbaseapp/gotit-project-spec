@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Web release result
+
+Render Web deployment `dep-dav4nrgjo6nc73fgnt9g` is Live for exact SHA `383482331ca895c1491123643138bd0973fd7395`. The public route and both service `/ready` endpoints returned 200; the served HTML, CSS and English path JavaScript expose the committed layout change. Database readback after smoke retained 213 corrections and zero known rows. The signed-in tab disappeared before a visual check of the new Web layout, so that check remains unverified; no additional production migration or backend deployment is needed.
+
 ## 2026-10-01 — Sense rollout verified; Web layout pending
 
 The dedicated migrator applied backend migration `1790800010000`; readback found 213 corrected senses across 3,000 entries and no saved known rows before smoke. Backup identifiers and hashes are recorded in [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md). Render Backend `dep-dav4i2p7lnhs73aqouc0` is Live for exact SHA `10bf19712bc9831a77dd9672c5f78701577a2966`, restricted-runtime preflight passed, both `/ready` endpoints returned 200, and authenticated month/modal smoke passed. Next deploy Web `383482331ca895c1491123643138bd0973fd7395` and verify the single-word control visually in production.

@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — English preview Web deployment
+
+- Render Web deployment `dep-dav4nrgjo6nc73fgnt9g` reports `Deploy succeeded | Live` for exact source `gotIt-front@383482331ca895c1491123643138bd0973fd7395`. Public `/ready` returned 200, `/english-learning` returned 200, and the served CSS plus dynamically imported English path JavaScript contain the scoped row layout. Backend `/ready` remained 200; readback still found 213 corrections, 3,000 entries and zero known rows after reversing the smoke mark. The prior authenticated browser tab was lost before a post-Web visual check, so the button's production rendering has not been visually confirmed after this Web deploy.
+
 ## 2026-10-01 — English preview known-button layout
 
 - `gotIt-front@383482331ca895c1491123643138bd0973fd7395` gives each English-path preview row a two-column layout so the single-word known button stays on one line at desktop and 320px phone widths. Component and layout regressions were added. `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); 375/375 Playwright responsive checks passed. Web deploy pending at this source checkpoint.

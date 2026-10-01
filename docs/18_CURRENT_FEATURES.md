@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — English path final deployment state
+
+Backend `10bf197` and Web `3834823` are Live on Render. The contextual meanings and known-state separation had an authenticated production smoke before the Web layout release; the Web layout release has public route, health and served CSS/JS verification, with 375 local responsive checks. Signed-in visual inspection of the final button layout remains unverified because the earlier authenticated browser tab was unavailable after deployment. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Live English senses and preview source
 
 Backend `10bf19712bc9831a77dd9672c5f78701577a2966` and migration `1790800010000` are production verified by Render exact-SHA Live status, database readback and authenticated month/modal smoke. Web source `383482331ca895c1491123643138bd0973fd7395` fixes wrapping of the single-word known control and passed local UI checks; its deploy is pending at this checkpoint. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
