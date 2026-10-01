@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 - Selected-word unit controls in Web source
+
+`gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds independent checkboxes and select all/clear controls to each unit preview. Add checked words retains existing links; remove checked words omits only those links, including the last one via Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`. The client reloads server detail/progress after success, clears the selection, and leaves known-word and full-unit actions intact. Web check passed (161 Vitest, 16 gateway, typecheck, lint, build), along with two responsive Playwright checks at 320px, 525px and desktop. Production deploy and authenticated add/remove smoke are pending.
+
 ## 2026-10-01 — Backend support for clearing selected unit words
 
 `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` accepts an empty full selection on the existing protected pack add operation. This lets the unit preview remove its last linked word while keeping the unit installed. Omitted links are excluded, not archived or deleted from the learner's library; adding a selected subset must preserve other linked IDs in the replacement payload. No migration or new route is needed. Local typecheck/build, 207 fast tests and 59 PostgreSQL integration tests passed, including removal to zero and restoration. Backend production deploy and live smoke are pending.

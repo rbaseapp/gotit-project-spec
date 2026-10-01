@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 - SCR-16 selected words
+
+The English unit preview now offers a labeled checkbox per word, select all, clear selection, a selected count, and add/remove-selected buttons. Add includes already linked words in the full replacement payload; remove excludes only checked linked words. Actions are disabled without an applicable selection or during a write. Detail and progress refresh after success; API errors use the existing feedback UI. The known-word control and full-unit start remain available. Source `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b`; live-flow regression covers partial add, selective removal, clearing the last link and re-adding; Playwright covers 320px, 525px and desktop modal geometry. Backend dependency `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`. Locally verified; production smoke pending.
+
 ## 2026-10-01 — SCR-16 production rollout observation
 
 Render Web `dep-dav8pnk9v7es73fjv47g` is Live at `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Web `/ready`, `/english-learning` and changed CSS/JS assets returned 200. The browser opened at Login, so the 50-word preview was not visually inspected after deployment; local 320px/525px/desktop layout regression passed.

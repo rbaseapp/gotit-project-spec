@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## FR-PACK-006 - Select multiple English unit words
+
+Must: in SCR-16 an authenticated learner can check multiple preview words and add only those not already linked or remove only the checked linked words. Previously linked unselected words remain linked, an empty final selection is supported, and server detail/progress refresh after each change. No learning evidence, mastery or XP is inferred from selection changes; the existing `vocabulary.write` gate applies. Acceptance: first-time subset, partial removal, final-link removal, re-add, disabled inapplicable actions and mobile/RTL layout. Web `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` and Backend `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` passed local gates; production verification pending. Maps to UC-04C and SCR-16.
+
 ## 2026-10-01 — FR-PACK-005 sense acceptance
 
 Repeated spellings in the English path share an already-known declaration only for the same Hebrew meaning. Distinct contextual meanings remain individually learnable, including calendar `May` and modal `may`. The 60 supplied names and 50-entry unit sizes remain the acceptance baseline. Backend source `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` passed local and PostgreSQL regressions; production acceptance pending at this source checkpoint.

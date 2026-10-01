@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 - FR-PACK-006 / UC-04C / SCR-16
+
+`gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` maps the multiword unit request to `EnglishLearningPathPage.tsx`, responsive CSS, eight UI catalogs, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` accepts the zero-ID replacement and has schema/PostgreSQL regressions. Web check (161 Vitest, 16 gateway) and two targeted Playwright checks passed; exact-commit deployment and authenticated live smoke pending.
+
 ## 2026-10-01 — FR-PACK-005 selected-word removal backend
 
 `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` maps the requested remove-only-selected action in SCR-16 to the existing transactional pack selection replacement and its newly accepted empty `entryIds` payload. Source: `src/modules/word-packs/word-packs.validation.ts`; regressions: `test/word-packs.test.ts`, `test/integration/practice.integration.test.ts`. 207 fast and 59 PostgreSQL tests passed locally; production deployment and authenticated smoke are pending.

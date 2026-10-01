@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Multiword controls in the English unit preview
+
+- `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds checkboxes, select all/clear, and add/remove-selected actions in SCR-16. Existing linked words remain included when adding a subset; removal affects checked linked words only, including the final link through Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`. Web check passed (161 Vitest, 16 gateway, typecheck, lint, build); two targeted Playwright layout checks passed. Production Web deploy and authenticated smoke are pending.
+
 ## 2026-10-01 — Empty word-pack selection supported in Backend source
 
 - `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` allows `POST /api/v1/word-packs/:id/add` with `{"entryIds":[]}`. The existing transactional replacement of the pack selection can now exclude its last linked word while retaining the installed unit. Backend typecheck, build, 207 fast tests, 59 PostgreSQL integration tests and targeted formatting passed. Production deploy and authenticated selection smoke are pending.

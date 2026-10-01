@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## UC-04C - Manage selected words in an English unit
+
+Actor: authenticated learner with `vocabulary.write`. Trigger: open an English unit preview and check one or more words. Add flow: retain existing linked IDs and include checked IDs in the complete `POST /word-packs/:id/add` selection. Remove flow: omit only checked linked IDs; the empty array clears the last link while the unit remains installed. Refresh server detail/catalog and clear the checks on success. Alternatives: inapplicable action disabled, write in progress, billing restriction, or API error without clearing the selection. This changes pack inclusion, not known state or mastery. Sources: `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` and `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`; local Web/PostgreSQL regressions passed, production smoke pending. Links FR-PACK-006 and SCR-16.
+
 ## 2026-10-01 — UC-04B distinct senses
 
 When a learner marks a known word in a named English unit, the server marks matching entries in other units only if the English expression and Hebrew meaning are the same after normalization. A different meaning of the same spelling remains available to learn. `May` as a month and modal `may` are the tested alternative flow in `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966`; local PostgreSQL verification passed, production smoke pending.

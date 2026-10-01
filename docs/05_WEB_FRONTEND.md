@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 - Multiword unit preview
+
+`gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds independently checked word rows in `/english-learning` and bulk add/remove controls. The client computes the full desired pack selection from server detail plus the checked IDs before sending `POST /word-packs/:id/add`, preserving unrelated linked entries. After success it refetches detail and catalog, clears the checkboxes, and reports the result. The controls keep the existing `vocabulary.write` gate, known-word action and full-unit start. Hebrew and English copy are authored; other supported catalogs contain English fallback strings. Web check and targeted responsive regressions passed locally; deployment pending.
+
 ## 2026-10-01 — English learning path
 
 `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` adds live route `/english-learning` to the main navigation and links it from `/word-packs`. `EnglishLearningPathPage` reads the existing catalog API, filters the English/Hebrew path, orders three levels and modules, displays server progress and next unit, previews a unit, installs all 50 entries through the existing add endpoint, and enters smart practice. The generic pack explorer omits those course units. Loading, unavailable catalog, error/retry, billing restriction, installing, and installed states are represented. Hebrew and English strings are authored; six other UI locales use English fallback strings. The Web check passed locally; deploy and authenticated smoke remain open.

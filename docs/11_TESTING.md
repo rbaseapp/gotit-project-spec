@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Selected English unit words in Web source
+
+`gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b`: `npm.cmd run check` passed TypeScript, ESLint, 161/161 Vitest tests, build and 16/16 gateway tests. The selected-word live test verifies preserving an existing link while adding one checked word, removing a different checked word, removing the final link with an empty selection and adding one word back. `npm.cmd run test:responsive -- --grep "English unit"` passed 2/2 at 320px, 525px and desktop after updating the modal fixture with checkboxes and bulk buttons. Targeted Prettier passed. Production authenticated selection smoke remains pending.
+
 ## 2026-10-01 — Backend empty-selection regression
 
 `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`: `npm.cmd run typecheck`, `npm.cmd run build`, 207/207 fast tests, 59/59 disposable PostgreSQL integration tests and targeted Prettier passed. `test/word-packs.test.ts` accepts an empty unique selection; `test/integration/practice.integration.test.ts` verifies partial exclusion, removal of the final link with `entryIds: []`, and restoration without deleting the installed pack. These are local/integration results, not production deployment evidence.
