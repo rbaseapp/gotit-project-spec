@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Five-action modal layout regression
+
+`gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` passed `npm.cmd run check`: TypeScript, ESLint, 165/165 Vitest, build and 16/16 gateway. `npm.cmd run test:responsive -- --grep "English unit preview"` passed 1/1 at 320px/568px, 525px/709px and 1920px/900px. The modal regression now requires every footer button to be at least 100px wide as well as inside the modal, with the 50-word list scrolling. The preceding `e519242` deployment passed authenticated bulk known/undo smoke with two initially unknown entries and restored their original states and 2/50 count. This layout revision awaits production visual verification.
+
 ## 2026-10-01 - Hebrew bulk-known encoding regression
 
 `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` asserts the exact four Hebrew bulk-known action/feedback strings in `test/i18n.test.ts`. `npm.cmd run check` passed TypeScript, ESLint, 165/165 Vitest, production build and 16/16 gateway tests. Focused i18n/live tests passed 30/30 after the unrelated Facebook Login fast-forward. Production visual check on `4512a93` found the four labels rendered as question marks, so that deployment is not accepted for Hebrew UI. Corrected deploy and known/undo smoke pending.

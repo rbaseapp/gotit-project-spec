@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 - Bulk-known smoke and footer width correction
+
+Render Web `dep-dava57ghfsis73c06h0g` reported `Deploy succeeded | Live` for exact `e5192422075850a7db6c64134a13565d3c3acf58`. Web `/ready`, `/english-learning` and Backend `/ready` returned 200. In an authenticated Advanced unit 10 preview, the new Hebrew bulk controls rendered correctly. Two initially unknown entries, `illegal` and `regulation`, were selected and marked known in one bulk action, with selection cleared and both row controls switching to Undo known. Selecting the same two and invoking bulk undo returned both to unknown and the unit to its original 2/50 known count. No pack-link action was used. The live screenshot exposed cramped footer labels; `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` widens the modal and grids five actions. Local Web check passed (165 Vitest, 16 gateway, typecheck, lint, build) and targeted responsive passed 1/1 at phone/tablet/desktop widths. This final layout commit's deploy and visual smoke are pending.
+
 ## 2026-10-01 - First bulk-known deploy exposed Hebrew encoding failure
 
 Render Web `dep-dav9s5btqb8s73d0bvd0` reached `Deploy succeeded | Live` for exact `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e`, but authenticated SCR-16 inspection showed the new Hebrew mark-known/undo-known labels as question marks. No bulk known-state production mutation was attempted on that build. `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` fixes all four affected strings and adds exact-copy regression; 165 Vitest, 16 gateway, typecheck/lint/build and 30 focused i18n/live tests passed. Redeploy and reversible production smoke pending.

@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 - English preview action layout
+
+`gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` gives the English unit preview a 700px maximum width and a three-column action grid, switching to two columns on narrow phones. The full-unit practice action spans two columns; each footer button has flexible width and wrapped copy. The word list still scrolls independently. No route, data, entitlement or known-state contract changes. Local Web check and phone/tablet/desktop modal regression passed; production deploy pending.
+
 ## 2026-10-01 - Bulk known state in English unit preview
 
 `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` keeps the existing checkboxes, select all/clear and Add selected. The former Remove selected control is replaced by I already know the selected words and Undo known for selected words. Each sends exactly the checked IDs to the existing `PUT /word-packs/:id/known` with `known: true` or `false`; the action is disabled when no selected entry needs the requested change. Pack detail/catalog refresh and checks clear on success. An API failure retains selection for retry. No API, database or pack-link removal occurs in this Web change. The write still requires `vocabulary.write`. Local Web and modal layout regressions passed; production deployment pending.

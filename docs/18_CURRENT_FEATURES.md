@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 - Bulk known verified live; footer layout source verified
+
+Web `e5192422075850a7db6c64134a13565d3c3acf58` was Live in Render deployment `dep-dava57ghfsis73c06h0g`. Authenticated smoke on the English unit preview selected `illegal` and `regulation`, bulk-marked both known, then bulk-unmarked both; the original 2/50 known count returned. Public Web and Backend readiness and `/english-learning` were 200. Web `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` improves the five-button footer width and passed local check/responsive regression, but its own production deploy is pending at this source checkpoint.
+
 ## 2026-10-01 - Corrected bulk known controls (source verified)
 
 Web `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` replaces the previously deployed Remove selected button in `/english-learning` with bulk mark-known and undo-known for checked words. Add selected and the checkboxes remain. The existing `PUT /word-packs/:id/known` updates learner declarations, without changing pack inclusion or awarding mastery/XP. Local Web check (164 Vitest, 16 gateway, typecheck, lint, build) and targeted responsive Playwright passed. This commit's production deployment and authenticated smoke are pending at this source checkpoint; the older add/remove deployment below is historical.

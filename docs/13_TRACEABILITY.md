@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 - SCR-16 footer readability
+
+`gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` maps the bulk-known action readability requirement to `src/production.css` and the 320px/525px/1920px modal checks in `test/e2e/responsive.spec.ts`. The new check enforces at least 100px of width per footer action. Local Web check passed (165 Vitest, 16 gateway, typecheck, lint, build) and targeted responsive passed 1/1. Preceding `e519242` is production verified for the Hebrew copy and reversible two-word known/undo flow in Render `dep-dava57ghfsis73c06h0g`; this layout commit's deploy is pending.
+
 ## 2026-10-01 - FR-PACK-006 / UC-04C / SCR-16 bulk known correction
 
 `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` maps the corrected selected-word behavior to `src/pages/EnglishLearningPathPage.tsx`, eight locale catalogs, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. The Web uses existing Backend `PUT /word-packs/:id/known` (`gotIt-backend@14012a0`); Backend `d8d930a` empty `POST /add` support remains but is not triggered by the preview. Regression includes failed-write retry, selected-ID scope, preserved links and 320px/525px/desktop layout. Local check: 164 Vitest, 16 gateway, typecheck/lint/build; targeted responsive 1/1. Deploy pending at this source checkpoint.

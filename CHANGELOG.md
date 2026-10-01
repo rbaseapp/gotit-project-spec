@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 - Readable bulk-action footer
+
+- `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` widens the English unit preview and lays out its five footer actions in a responsive grid. This follows an authenticated live check in which the new long Hebrew labels were readable but compressed into narrow vertical buttons. Local Web check passed (165 Vitest, 16 gateway, typecheck, lint, build); targeted 320px/525px/desktop responsive Playwright passed 1/1 with a minimum action width assertion. This CSS release's deploy is pending at the source checkpoint.
+- The preceding corrected-copy Web release `e5192422075850a7db6c64134a13565d3c3acf58` reached Live in Render `dep-dava57ghfsis73c06h0g`. Web and Backend `/ready` and `/english-learning` returned 200. Authenticated smoke bulk-marked `illegal` and `regulation` known, then bulk-unmarked them; both row states and the unit's original known count (2/50) returned.
+
 ## 2026-10-01 - Repair Hebrew bulk-known labels
 
 - `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` restores four Hebrew strings that were encoded as question marks in the first bulk-known release and adds an exact-copy regression. Web check passed (165 Vitest, 16 gateway, typecheck, lint, build); focused i18n/live tests passed 30/30 after incorporating the unrelated Facebook Login commit. The first bulk-known Render deployment `dep-dav9s5btqb8s73d0bvd0` was Live for `4512a93` but its Hebrew bulk buttons displayed question marks; this fix's deployment and authenticated smoke are pending at this source checkpoint.

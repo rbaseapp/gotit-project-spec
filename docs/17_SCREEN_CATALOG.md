@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 - SCR-16 readable bulk-action footer
+
+`gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` arranges the English unit preview's Add selected, I already know, Undo known, Close and full-unit practice controls in a responsive grid. The wider modal and minimum-width action columns avoid the narrow, vertical wrapping observed in authenticated production on `e519242`. The list of 50 words remains scrollable and the footer stays visible at 320px/568px, 525px/709px and desktop in local Playwright. Backend behavior is unchanged; production visual check of this layout commit pending.
+
 ## 2026-10-01 - SCR-16 Hebrew bulk-known copy correction
 
 The first deployed bulk-known source `4512a93` rendered its four new Hebrew action/feedback strings as question marks. `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` restores the intended Hebrew strings for mark-known, undo-known and both success messages, with exact-copy regression coverage. Local check passed; production redeployment and visual smoke pending at this source checkpoint.
