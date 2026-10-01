@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-01 — FR-PACK-005 unique catalog amendment
+
+The current learner-approved source supersedes the earlier repeated-word catalog for SCR-16: three levels, 60 supplied units, 50 entries per unit, **3,000 unique English words or phrases across the whole path**, Hebrew translation coverage and title **לימוד שפה מאפס**. On migration, a changed ordinal entry ID must not transfer a learner's known or linked state to a different English form or Hebrew sense. Retain unmatched prior declarations and links for audit/recovery, without erasing their underlying learning evidence. Backend `10602736bdf5422116eb838e57e9d708318156be` passed local and disposable PostgreSQL acceptance; production acceptance remains pending.
+
 ## FR-PACK-006 - Corrected selected-word acceptance, 2026-10-01
 
 In SCR-16, a learner may check multiple preview words, add checked words to a pack, mark checked words already known, or undo known marking for checked words. No selected-word removal button is presented. Add preserves previously linked unchecked words; known/undo uses the existing protected known-state operation and changes neither pack inclusion nor evidence/XP. The corresponding action is disabled when no checked word can change; failed writes retain the checks, and successful writes refresh server state and clear them. Acceptance: selected-ID scope, add-link preservation, mark/undo, failed-write retry, RTL/mobile modal layout. Web `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` passed local regressions; production verification pending. The earlier FR-PACK-006 remove-button text below records the superseded 2026-10-01 implementation.

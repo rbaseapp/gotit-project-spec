@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## 2026-10-01 — Unique English catalog, stable pack API
+
+Backend `10602736bdf5422116eb838e57e9d708318156be` changes catalog data, not routes, request fields or response shapes. The 60 `/api/v1/word-packs` pack IDs and slugs stay stable; titles and 50-entry contents update to the learner's unique list, all packs report version 4, and the topic title changes to the new Hebrew course name. Since an English term appears in only one new unit, `PUT /word-packs/:id/known` no longer creates apparent progress in other English units. The existing sense-aware rule and entitlement gate remain. Production verification is pending at this source checkpoint.
+
 ## 2026-10-01 — Clearing a pack selection
 
 `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` changes the existing protected `POST /api/v1/word-packs/:id/add` request to accept 0–100 distinct pack-entry UUIDs. `entryIds` remains required. The submitted list is the complete desired selection: the repository excludes linked entries omitted from it and links or reactivates those included, inside one transaction. An empty array excludes every currently linked entry without removing the pack membership or archiving learning items. The response shape is unchanged. `vocabulary.write`, pack validation and application/user scoping remain in effect. Repeating the same complete selection is state-idempotent. Web clients using a partial action must include previously retained entries in this full replacement payload. PostgreSQL regression covers partial removal, zero links and restoration. Locally verified; production deploy pending.

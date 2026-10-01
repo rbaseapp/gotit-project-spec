@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — Unique English path replacement, source verified
+
+- Backend `10602736bdf5422116eb838e57e9d708318156be` replaces the repeated catalog with the learner-supplied 60×50 globally unique English entries, renames the topic to **לימוד שפה מאפס**, and archives prior known/learning links before remapping exact source-and-meaning matches. 208 fast, 59 existing PostgreSQL and one focused migration regression passed, along with typecheck/build/targeted formatting. Production migration and deployment are pending at this checkpoint; new draft Hebrew translations need editorial review. See [path handoff](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 - Facebook activation checkpoint
 
 - Meta Basic settings visibly show the saved GotIt icon and required policy/deletion URLs. Publish remains disabled because Meta requires a new business portfolio and business verification. The owner reported resetting the initially exposed Meta App Secret; the replacement Core Render configuration and deployment have not yet been verified. Real-account acceptance remains pending. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).

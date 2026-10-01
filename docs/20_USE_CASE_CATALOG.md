@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-01 — UC-04B unique unit catalog
+
+The learner opens the English path and sees 60 units of 50 translated words or phrases with no English entry repeated anywhere in the path. Marking one word known changes only that entry's unit progress. During the version-4 catalog migration, prior known declarations follow identical English/Hebrew senses, and prior learning links follow identical senses within the same installed pack; unmatched originals remain archived without assigning progress to replacement words. The existing known toggle, selection and practice flows remain. Backend `10602736bdf5422116eb838e57e9d708318156be` passed local/disposable PostgreSQL checks; live acceptance pending.
+
 ## UC-04C - Corrected selected-word flow, 2026-10-01
 
 Actor: authenticated learner with `vocabulary.write`. In the English unit preview, check one or more words and choose Add selected, I already know, or Undo known. Add sends the complete desired linked-ID selection while preserving existing unchecked links. Known/undo sends exactly the checked entry IDs with a boolean to `PUT /word-packs/:id/known`; the server owns known state and any same-sense propagation. Refresh detail/progress and clear checks on success. On API failure, show feedback and keep checks for retry. The former selected-word removal action is absent. Source: `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e`, locally verified; production smoke pending. The prior UC-04C text below describes the historical UI.

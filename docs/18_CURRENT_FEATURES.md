@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — Unique English path source
+
+Backend `10602736bdf5422116eb838e57e9d708318156be` is committed and locally/integration verified for the learner-supplied 3,000 unique English entries in 60 units and the title **לימוד שפה מאפס**. The forward migration archives old known/link rows before changing catalog entries and restores only identical source/meaning matches. The previous production catalog and Web release observations below are historical until the new migration and exact Backend deployment are verified. New model-drafted Hebrew meanings still require editorial review.
+
 ## 2026-10-01 - Bulk known and undo in production
 
 The current Web release `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c` is Live in Render `dep-davaakflot8c73cu3sig`. English unit previews retain multiword checkboxes and Add selected, and offer bulk I already know and Undo known without a Remove selected button. Authenticated smoke confirmed the final Hebrew two-row footer with two selected words, then cleared the checks; the unit remained at 2/50 known. The immediately preceding `e519242` Live release passed reversible bulk known/undo server smoke on two initially unknown words and restored the original count. Web and Backend readiness and the public path returned 200.

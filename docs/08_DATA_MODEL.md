@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-01 — English catalog progress archive (source verified)
+
+`gotIt-backend@10602736bdf5422116eb838e57e9d708318156be` adds one product table, `english_catalog_progress_archive`, through migration `1790800011000`. Its composite key is `(kind, application_id, application_user_id, pack_id, entry_id)`. `kind` is `known` or `link`; each row retains the old English source, Hebrew meaning, original scoped association JSON and archive time. The table preserves unmatched user declarations and pack links during the 60-pack, 3,000-entry version-4 catalog replacement. Matching English **and** meaning restores known marks; links also require the original installed pack. Historical `learning_items`, evidence and practice rows remain. There are 50 product tables after this migration in the disposable PostgreSQL fixture. This is local/integration evidence; production application remains unverified at this checkpoint.
+
 ## 2026-10-01 — Forward contextual correction
 
 `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` adds migration `1790800010000_english-communication-senses.js` and a 213-row correction asset. It checks the previous English source and Hebrew translation for each stable entry ID, updates only catalog translation/normalized translation, and raises affected pack versions from 2 to 3. It changes no table or learner-owned row. Known-entry propagation now joins catalog entries by normalized source and translation, limiting cross-unit state to the same sense. Local disposable PostgreSQL up/down and API regression passed; production migration pending at this checkpoint.

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Unique English catalog regression
+
+Backend `10602736bdf5422116eb838e57e9d708318156be`: `npm.cmd test` 208/208, `npm.cmd run test:integration` 59/59, focused `english-catalog.integration.test.ts` 1/1, `npm.cmd run typecheck` and `npm.cmd run build` passed. The catalog regression compares all 60 unit titles and ordered words to the user-supplied file, checks 50 Hebrew entries per unit and 3,000 globally unique case-insensitive English entries. The API regression verifies that a known `work` in unit 2 does not appear in unit 12. The focused disposable PostgreSQL migration seeds old `work`, modal `may` and removed `seek` as known, then proves only the matching `work` remains known, calendar `May` stays unknown and all three originals are archived. Targeted Prettier and `git diff --check` passed. Repository-wide `format:check` reports 36 unrelated pre-existing files. No production test is claimed here.
+
 ## 2026-10-01 - Final English preview production smoke
 
 Render Web `dep-davaakflot8c73cu3sig` is Live for exact `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c`. Public Web and Backend readiness and `/english-learning` returned 200. Authenticated preview inspection showed the wider two-row footer, correctly rendered Hebrew bulk known/undo labels, two selected words and no selected-word removal action. Clearing the selection disabled its bulk known action; closing the modal left Advanced unit 10 at 2/50 known. Reversible server-write smoke for the same feature passed on the immediately preceding `e519242` deploy; final CSS changed only width/grid layout. Local final-source gates: `npm.cmd run check` passed 165 Vitest, 16 gateway, typecheck/lint/build; targeted responsive Playwright passed 1/1 at 320px/525px/1920px.
