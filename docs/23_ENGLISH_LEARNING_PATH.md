@@ -1,5 +1,11 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Production rollout observation
+
+Render Backend deployment `dep-dav2078473hc73d6n53g` reports Live at `gotIt-backend@74eb91d5691b357cbbe60e8262135977a5d2921f`. Web deployment `dep-dav20jo473hc73d6okp0` reports Deploy succeeded for `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. Both public `/ready` endpoints returned HTTP 200, and `/english-learning` returned HTTP 200. An authenticated live browser showed the new navigation entry and dedicated page, but its content was empty. A read-only query through the production Backend runtime connection returned **9 word topics**, the pre-catalog count. The initial 60-unit migration has therefore not run; the 3,000 entries and follow-up correction are not live.
+
+The Render Backend environment lists `DATABASE_URL` but no `GOTIT_MIGRATION_DATABASE_URL`; the local process also lacks the dedicated migrator variable. The documented migration runner refuses a runtime `DATABASE_URL` fallback. An operator must provide or run a dedicated migrator credential, take the documented backup/preflight steps, apply migrations `1790800006000` and `1790800007000` in order, and then verify topic count 10, three tracks, 60 packs, 3,000 entries, an authenticated first/last detail, and one 50-entry test-account installation. No production migration or content smoke is claimed.
+
 ## 2026-10-01 — Dedicated Web path
 
 Source: `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. A live learner opens `/english-learning` from the primary navigation or the generic word-pack explorer. The screen filters the existing catalog to English source and Hebrew translation and accepts both the original and renamed topic slugs during rollout. It shows Basic, Good, and Advanced in order, units by module number, verified mastered counts, the next unfinished unit, a 50-entry preview, and an add-and-practice action. It uses the existing protected `/api/v1/word-packs*` and smart-practice contracts. The generic explorer excludes these course units while linking to the dedicated path. No backend API change or new user data table is introduced.

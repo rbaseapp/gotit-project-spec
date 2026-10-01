@@ -1,9 +1,14 @@
 # יומן שינויים
 
+## 2026-10-01 — English path deployments; data rollout blocked
+
+- Render Backend `dep-dav2078473hc73d6n53g` deployed `74eb91d`; Web `dep-dav20jo473hc73d6okp0` deployed `4da3411`. Both `/ready` endpoints returned 200; live navigation and `/english-learning` were observed.
+- Production still has 9 `word_topics` and the dedicated path shows its empty state. The two catalog migrations have not run because no dedicated `GOTIT_MIGRATION_DATABASE_URL` is available in the current local/Render service environment. Content availability remains blocked; see [rollout evidence](docs/23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — Free removed from selectable billing offers
 
 - `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` keeps Core-assigned Free in the current-plan summary and removes its offer card. Paid subscriptions and the one-time minutes pack remain selectable; no API or data contract changes.
-- Local `npm run check` passed: typecheck, lint, 157 Vitest tests including Free and paid status regression, build, and 16 gateway tests. Deployment and production smoke are pending.
+- Local `npm run check` passed: typecheck, lint, 157 Vitest tests including Free and paid status regression, build, and 16 gateway tests. Render deployment `dep-dav2137pn0mc739o6l30` reported `Deploy succeeded | Live` for the exact Web SHA. Production `/ready` and the new `BillingPage-CkcRmmd0.js` asset returned 200; the served asset retains the current-plan marker and omits the Free-offer marker. Authenticated billing UI smoke was unavailable because the test tab had no session.
 
 ## 2026-10-01 — Dedicated English learning path in Web source
 

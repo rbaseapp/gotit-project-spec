@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — FR-PACK-004 deployment gap
+
+Backend `74eb91d` and Web `4da3411` were observed deployed; service health and the dedicated SCR-16 route passed live smoke. PACK-01/FR-PACK-004 content is blocked at the data-rollout step: production has 9 topics, no new English path topic, and no dedicated migrator variable in the current service/local environment. Required follow-up: backup/preflight, migrations `6000` then `7000`, catalog/detail/install smoke, then status update. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
+
 ## 2026-10-01 — FR-PACK-004 / UC-04 / SCR-16
 
 `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` maps the dedicated English course requirement to `/english-learning`, `EnglishLearningPathPage.tsx`, existing `/api/v1/word-packs*`, existing catalog/progress tables, and `test/live.test.tsx`. Source path slugs tolerate the original and renamed catalog during rollout. Local Web check passed; production deploy and authenticated catalog smoke remain unverified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
@@ -70,7 +74,7 @@ FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי Co
 | AUTH-04 | email verification/reset | Core/Web | TBD | TBD | TBD | מתוכנן P0 |
 | BILL-01 | plans/status/trial | Core/clients | `/billing/plans`,`/status` | billing tables | billing/access tests | ממומש |
 | BILL-02 | checkout/webhook/portal | Core/Web | billing mutations | checkout/subscription/events | webhook + live Paddle | ממומש; rollout נדרש |
-| BILL-03 / FR-BILL-006 | Free status-only in billing UI | Web | Core plans + status | none | `gotIt-front/test/billing-page.test.tsx` (Free and paid states), `npm run check` | local pass at `gotIt-front@196cf9593cda52360160d620d02091071b421ce5`; deploy pending |
+| BILL-03 / FR-BILL-006 | Free status-only in billing UI | Web | Core plans + status | none | `gotIt-front/test/billing-page.test.tsx` (Free and paid states), `npm run check`; Render `dep-dav2137pn0mc739o6l30`, `/ready`, billing asset smoke | local pass at `gotIt-front@196cf9593cda52360160d620d02091071b421ce5`; deployed asset verified; authenticated UI smoke pending |
 | CAP-01 | contextual preview | Backend/Web/Chrome | `/captures/preview` | enrichment_runs | enrichment/capture tests | ממומש |
 | CAP-02 | sense-safe save | Backend/clients | `/captures` | items/translations/occurrences | integration + replay | ממומש |
 | LIB-01 | browse/filter/edit/bulk | Backend/Web | `/learning-items*` | vocabulary tables | library/client tests | ממומש |

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — English path production observation
+
+Render reports deployed Backend `74eb91d` (`dep-dav2078473hc73d6n53g`) and Web `4da3411` (`dep-dav20jo473hc73d6okp0`). Both `/ready` endpoints returned 200. Authenticated live browser smoke verified the navigation link, dedicated route and honest empty state. A read-only runtime DB query counted 9 topics, proving the catalog migrations were not applied. No production first/last detail or 50-entry installation test can pass until the dedicated migrator runs; these checks remain pending.
+
 ## 2026-10-01 — Dedicated English path Web verification
 
 `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af` passed `npm.cmd run check`: typecheck, lint, 155/155 Vitest tests, production build, and 16/16 gateway tests. `test/live.test.tsx` verifies the dedicated route, three-level entry, preview, and 50-entry installation request. The i18n test verifies all eight locale catalogs contain the new keys. Production browser and authenticated API smoke are pending.
@@ -104,7 +108,7 @@ Smart review rotation regression: `test/integration/practice.integration.test.ts
 | Browser/E2E | routing/layout/browser APIs | Playwright/manual Chrome |
 | Live acceptance | providers, OAuth, billing, deploy | staging/production checklist |
 
-Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in the catalog and status, it appears only in the current-plan summary; with a paid status, Free is absent. `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` passed `npm run check` (typecheck, lint, 157 Vitest tests, build, 16 gateway tests). Production smoke remains pending.
+Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in the catalog and status, it appears only in the current-plan summary; with a paid status, Free is absent. `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` passed `npm run check` (typecheck, lint, 157 Vitest tests, build, 16 gateway tests). Render `dep-dav2137pn0mc739o6l30` is Live for that SHA; `/ready` and the new billing asset returned 200. The served asset has the current-plan marker and lacks the Free-offer marker. Authenticated UI smoke remains unverified because the test tab was not signed in.
 
 ## 2. Core Coverage חובה
 
