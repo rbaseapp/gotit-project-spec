@@ -1,5 +1,10 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Hebrew path preview Web deployment
+
+Render Web deployment `dep-dav8pnk9v7es73fjv47g` reports `Deploy succeeded | Live` for exact source `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` after manual "Deploy latest commit". Public Web `/ready` and `/english-learning` returned HTTP 200. The served CSS `index-R3SsXn_J.css` and JavaScript `index-BqsjPd1-.js` returned HTTP 200; CSS contains the aligned preview/footer rules and JavaScript contains the new Hebrew title. A new production browser tab presented Login, so an authenticated visual unit-preview smoke was unavailable. No Backend deployment or migration was required.
+
+
 ## 2026-10-01 — Web release result
 
 Render Web deployment `dep-dav4nrgjo6nc73fgnt9g` is Live for exact SHA `383482331ca895c1491123643138bd0973fd7395`. The public route and both service `/ready` endpoints returned 200; the served HTML, CSS and English path JavaScript expose the committed layout change. Database readback after smoke retained 213 corrections and zero known rows. The signed-in tab disappeared before a visual check of the new Web layout, so that check remains unverified; no additional production migration or backend deployment is needed.

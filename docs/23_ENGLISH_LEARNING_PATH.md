@@ -1,5 +1,10 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Hebrew label and preview deployed
+
+Render Web `dep-dav8pnk9v7es73fjv47g` reports `Deploy succeeded | Live` for `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready` and `/english-learning` returned 200. Served CSS `index-R3SsXn_J.css` includes the new row/footer layout and served JavaScript `index-BqsjPd1-.js` includes "לימוד שפה מאפס"; both assets returned 200. A fresh browser tab showed Login, so the post-deploy authenticated visual check is unverified. Local 50-word layout regressions passed at 320px, 525px and desktop. No API or database change.
+
+
 ## 2026-10-01 — Hebrew path label and preview controls
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` changes the Hebrew path label in navigation and the page heading to "לימוד שפה מאפס". The 50-word preview now uses aligned English/Hebrew/action columns, stacks the row on phones up to 420px, and keeps padded footer actions visible while the list scrolls. Local Web check passed (160 Vitest, 16 gateway, typecheck, lint, build) and two targeted Playwright regressions passed at 320px, 525px and desktop. Production deployment and authenticated visual smoke are pending at this source checkpoint.

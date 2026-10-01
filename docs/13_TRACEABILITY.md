@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — SCR-16 production deployment evidence
+
+The Hebrew path name and preview alignment `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` are deployed as Render `dep-dav8pnk9v7es73fjv47g` (Live, exact source SHA). Public route and `/ready` passed; served CSS and JS contain the changed rules and text. Authenticated visual unit smoke remains unverified because the production browser presented Login.
+
+
 ## 2026-10-01 — SCR-16 path name and preview controls
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` maps the requested Hebrew path name and SCR-16 unit preview alignment to `src/locales/he/translation.json`, `src/production.css`, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. The local gate passed 160 Vitest, 16 gateway and two targeted Playwright tests across 320px, 525px and desktop. Exact-SHA production deployment and visual smoke remain pending.

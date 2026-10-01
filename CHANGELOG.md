@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Hebrew path preview Web deployed
+
+- Render Web `dep-dav8pnk9v7es73fjv47g` is Live for exact `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, CSS and JS returned 200; the served assets contain the new preview layout and Hebrew title. A fresh browser tab showed Login, so authenticated visual unit smoke remains unverified.
+
+
 ## 2026-10-01 — Hebrew path name and unit preview alignment
 
 - `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` changes the Hebrew path label to "לימוד שפה מאפס" in navigation and the heading. The 50-word preview aligns word, meaning and known buttons and keeps the footer controls padded within the modal on short screens. Local `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); two targeted Playwright checks passed at 320px, 525px and desktop. Production deploy and visual smoke are pending at this checkpoint.

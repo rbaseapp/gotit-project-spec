@@ -1,5 +1,10 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 — SCR-16 production rollout observation
+
+Render Web `dep-dav8pnk9v7es73fjv47g` is Live at `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Web `/ready`, `/english-learning` and changed CSS/JS assets returned 200. The browser opened at Login, so the 50-word preview was not visually inspected after deployment; local 320px/525px/desktop layout regression passed.
+
+
 ## 2026-10-01 — SCR-16 Hebrew path name and unit preview alignment
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` labels the Hebrew navigation item and path heading "לימוד שפה מאפס". The unit preview aligns English, Hebrew and the per-word known control in stable columns; at phone widths up to 420px the word pair and control stack. Fifty entries scroll inside the modal while its close and add/practice actions remain padded and visible at short viewport heights. The row control has a visible border. A component heading regression and 320px/525px/desktop Playwright layout checks passed locally. Production deployment and visual smoke are pending at this source checkpoint.

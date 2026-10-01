@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Hebrew path preview production check
+
+Render `dep-dav8pnk9v7es73fjv47g` is Live for exact Web SHA `5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, served CSS and JavaScript returned 200. CSS includes the new modal footer and fixed action-column rules; JavaScript includes "לימוד שפה מאפס". The production browser opened at Login, so a signed-in visual preview check was not performed. Local 50-word Playwright geometry remains the functional layout regression.
+
+
 ## 2026-10-01 — Hebrew path label and preview alignment
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`: `npm.cmd run check` passed TypeScript, ESLint, 160/160 Vitest tests, production build and 16/16 gateway tests. Targeted `npm.cmd run test:responsive -- --grep "English unit"` passed 2/2 Playwright tests. The regression checks the new Hebrew heading and a 50-word modal at 320px/568px, 525px/709px and 1920px/900px: known buttons stay aligned and on one line, the list scrolls, and both footer actions remain inside the modal. Production deploy and authenticated visual smoke are pending.
