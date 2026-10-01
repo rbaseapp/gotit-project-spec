@@ -69,7 +69,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-AUTH-002 | כניסה עם שגיאה גנרית ל־credentials | Must | ללא account enumeration | Stable |
 | FR-AUTH-003 | Google Web login | Must | audience per web client | Stable |
 | FR-AUTH-004 | Google Chrome login | Must | extension client/access token | Stable |
-| FR-AUTH-005 | Facebook login | Should | app/scopes/expiry/email verified | Stable |
+| FR-AUTH-005 | Facebook login | Should | app/scopes/expiry/email verified; unanswered Web SDK callback ends within 60 seconds with localized retry, late callbacks ignored | Core/Web implemented; live Meta activation pending |
 | FR-AUTH-006 | access token קצר ו־refresh rotation | Must | token ישן נדחה | Stable |
 | FR-AUTH-007 | logout/revocation | Must | idempotent revoked session | Stable |
 | FR-AUTH-008 | user/admin role מהמסד | Must | input/JWT אינו סמכות | Stable |

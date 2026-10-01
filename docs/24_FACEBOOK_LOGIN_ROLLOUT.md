@@ -10,6 +10,7 @@ Status on 2026-10-01: configuration in progress. This document distinguishes loc
 
 ## Source and test evidence
 
+- `gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d` bounds an unanswered Meta SDK login to 60 seconds. The Web button leaves its loading state, shows a localized retry message, and ignores an expired attempt's late callback. `test/facebook.test.tsx` covers the missing callback, timeout, late token and retry. `npm.cmd run check` passed locally: typecheck, ESLint, 166/166 Vitest, production build and 16/16 gateway tests. This is a client failure-state fix, not evidence that the Meta login or Core token exchange succeeds. Deployment of this commit is pending at this source checkpoint.
 - Source: `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722`. The public fallback App ID is `2207127606520765`. An empty `VITE_FACEBOOK_APP_ID` is treated as unset so the SDK receives the fallback in local and production builds. A nonempty override remains supported.
 - `npm.cmd run check` passed locally: typecheck, ESLint, 164/164 Vitest tests (including the blank-override regression in `test/facebook.test.tsx`), production build and 16/16 gateway tests. These tests use a fake Meta SDK and do not prove a live Facebook account login.
 

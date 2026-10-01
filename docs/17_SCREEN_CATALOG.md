@@ -166,6 +166,8 @@ Route: כל route לא־משפטי כאשר `mode=signed-out`.
 | שגיאות | invalid credentials, existing user, disabled, provider config/token, network |
 | חסר נוכחי | forgot password, email verification |
 
+Facebook button failure state (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d`): after a user click, the button is busy while the Meta SDK login callback is pending. If no callback arrives within 60 seconds, it becomes available again and displays a localized message instructing the user to close the Facebook window and retry. A late callback from the expired attempt cannot create a Core session. This state is locally verified by `test/facebook.test.tsx`; production rollout and real Meta login remain pending.
+
 ## 5. SCR-02 — Dashboard
 
 Route: `/dashboard`; רכיבים נפרדים ל־demo ול־live.

@@ -121,7 +121,7 @@ deployment evidence, לא תאריך מסמך בלבד.
 | Email verification | — | — | — | Planned P0 | UI אינו מבטיח |
 | Password reset | — | — | — | Planned P0 | ספק email חסר |
 
-Production activation status for Facebook Login on 2026-10-01: Meta `email` and SDK/domain settings are saved and the Core provider row points to App ID `2207127606520765`. The Web fallback fix at `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722` is locally verified and deployed with a passing public bundle/readiness smoke. App Secret, publication and live provider acceptance remain pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
+Production activation status for Facebook Login on 2026-10-01: Meta `email` and SDK/domain settings are saved and the Core provider row points to App ID `2207127606520765`. The Web fallback fix at `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722` is deployed with a passing public bundle/readiness smoke. The unanswered-SDK timeout fix at `gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d` is locally verified and awaiting deployment at this checkpoint. App Secret, publication and live provider acceptance remain pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
 
 ## 3. Profile ו־Preferences
 

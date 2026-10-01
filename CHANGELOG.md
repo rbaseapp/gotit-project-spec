@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Bound unanswered Facebook login attempts
+
+- `gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d` adds a 60-second deadline around the Meta SDK login callback. An unanswered popup now releases the loading button, presents a localized retry message and discards late callbacks. Regression covers the missing callback and retry. Local `npm.cmd run check` passed: typecheck, ESLint, 166/166 Vitest, build and 16/16 gateway tests. Deployment is pending at this source checkpoint; Meta App Secret, icon, publication and live account acceptance remain pending.
+
 ## 2026-10-01 - Final bulk-known footer deployed
 
 - Render Web `dep-davaakflot8c73cu3sig` reported `Deploy succeeded | Live` for exact `gotIt-front@5bb3f95e7bd16c252d5b57f1d8ec537c2217d99c`. Web `/ready`, `/english-learning` and Backend `/ready` returned 200. Authenticated Advanced unit 10 visual smoke showed two selected words, readable Hebrew Add selected / I already know / Undo known controls in a two-row footer, and no Remove selected action. The selection was cleared and the modal closed; the unit remained at its original 2/50 known count. The preceding `e519242` release had already passed reversible two-word known/undo server smoke.
