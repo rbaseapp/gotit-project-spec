@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 ? Remove duplicate shell level card and live notice
+
+- `gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` removes the sidebar lesson-level card and the generic live-account notice. The latest lesson assessment remains linked in the top bar; Free read-only and demo notices remain. `test/app-shell.test.tsx` covers the reported duplicate and both retained notice states. Local `npm.cmd run check` passed typecheck, lint, 159/159 Vitest tests, production build, and 16/16 gateway tests; `npm.cmd run test:responsive` passed 374/374 Playwright checks. Production deployment and smoke are pending. No API, schema, or configuration change.
+
 ## 2026-10-01 — Chrome Web Store ZIP 1.4.4 with separate local identity
 
 - `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`: the local unpacked build retains its stable public key; the Store package is now named `gotit-chrome-WEBSTORE-v1.4.4.zip` and its archived manifest is checked for the expected version and absence of `manifest.key`. A failed archive check removes the ZIP. The README identifies the correct upload file.

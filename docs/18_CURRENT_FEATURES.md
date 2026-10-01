@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 ? Shell assessment and notice placement
+
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` keeps the latest private-lesson assessment shortcut in the top bar and removes its duplicate sidebar card. The generic live-account notice is removed; Free read-only and demo notices remain. Local Web check and responsive suite passed. Deployment is pending; see [SCR-00](17_SCREEN_CATALOG.md).
+
 ## 2026-10-01 — English path card clarity (source)
 
 `gotIt-front@66767de` shows each unit's level name inside its card, so Basic unit 5 and Advanced unit 5 can be distinguished after scrolling. Production catalog inspection confirmed `satellite` in Advanced unit 5. Local Web checks passed. Render deployment `dep-dav2m90jo6nc73f7uefg` is Live for the exact SHA; Web `/ready` returned 200 and an authenticated browser verified both card labels and the Advanced unit 5 preview. See [SCR-16](17_SCREEN_CATALOG.md).

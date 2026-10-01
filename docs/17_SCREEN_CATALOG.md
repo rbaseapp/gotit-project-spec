@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 ? SCR-00 shell level placement
+
+`gotIt-front@d2d59437d57580ba3e9db5b8cdc933baf798b2db` shows the latest completed lesson assessment only in the top bar, linked to `/private-lesson?view=level`; the duplicate sidebar card is removed. The generic live-account notice is removed from standard screens. Demo labeling and the Free read-only notice remain. This affects desktop sidebar and mobile drawer in RTL/LTR; navigation and account data are unchanged. `test/app-shell.test.tsx` covers the regression, and 374 responsive Playwright checks passed locally. Deployment and authenticated production smoke are pending.
+
 ## 2026-10-01 — SCR-16 unit level context
 
 `gotIt-front@66767de` places the translated level name within each `/english-learning` unit card. The level remains identifiable when a learner scrolls beyond its section heading and sees another unit with the same number. This addresses a report that `satellite` appeared in Basic unit 5; production catalog readback places it in Advanced unit 5. No catalog or API data changes. Basic/Advanced card regression and the complete local Web check passed. Render deployment `dep-dav2m90jo6nc73f7uefg` is Live for that SHA; authenticated production smoke showed the labels and opened the Advanced unit 5 preview containing `satellite`.
@@ -83,7 +87,7 @@ flowchart TD
 │ Private lesson                 │          Page content            │
 │ Vocabulary / Packs / Reading   │                                  │
 │ Transfer / Settings / Billing  │                                  │
-│ Level card / Help / Legal      │                                  │
+│ Tip / Help / Legal      │                                  │
 └─────────────────────────────────┴──────────────────────────────────┘
 ```
 
