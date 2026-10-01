@@ -1,5 +1,10 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Hebrew path label and preview controls
+
+`gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` changes the Hebrew path label in navigation and the page heading to "לימוד שפה מאפס". The 50-word preview now uses aligned English/Hebrew/action columns, stacks the row on phones up to 420px, and keeps padded footer actions visible while the list scrolls. Local Web check passed (160 Vitest, 16 gateway, typecheck, lint, build) and two targeted Playwright regressions passed at 320px, 525px and desktop. Production deployment and authenticated visual smoke are pending at this source checkpoint.
+
+
 ## 2026-10-01 — Web layout deployed
 
 Render Web `dep-dav4nrgjo6nc73fgnt9g` reports `Deploy succeeded | Live` for exact `gotIt-front@383482331ca895c1491123643138bd0973fd7395`. `/english-learning`, Web `/ready` and Backend `/ready` returned HTTP 200. Production HTML loads CSS `index-BpVLUlXj.css` with the English word-row/no-wrap rules and JavaScript entry `index-CUZymYT1.js`, which dynamically loads `EnglishLearningPathPage-QgIgA9pz.js` with the new row class; both assets returned 200. Post-smoke database readback still shows all 213 corrections, 3,000 entries, and zero known rows. The authenticated tab used for the earlier month/modal smoke became unavailable before this Web deploy, and a fresh tab opened at Login, so the post-deploy visual button layout was not inspected with a signed-in session. Local layout regression covers 320px and 1920px; no claim is made of a signed-in visual production check for this final Web commit.

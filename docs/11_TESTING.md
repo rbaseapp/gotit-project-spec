@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — Hebrew path label and preview alignment
+
+`gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`: `npm.cmd run check` passed TypeScript, ESLint, 160/160 Vitest tests, production build and 16/16 gateway tests. Targeted `npm.cmd run test:responsive -- --grep "English unit"` passed 2/2 Playwright tests. The regression checks the new Hebrew heading and a 50-word modal at 320px/568px, 525px/709px and 1920px/900px: known buttons stay aligned and on one line, the list scrolls, and both footer actions remain inside the modal. Production deploy and authenticated visual smoke are pending.
+
+
 ## 2026-10-01 — Final Web deployment verification
 
 Render Web `dep-dav4nrgjo6nc73fgnt9g` is Live at exact `383482331ca895c1491123643138bd0973fd7395`. Production `/english-learning`, Web `/ready`, Backend `/ready`, CSS and dynamically loaded path JavaScript returned 200; the latter assets contain the new row/no-wrap selectors and class. The production visual button check in an authenticated session could not be repeated after Web deploy because the prior tab was lost and a new one showed Login. Local regression passed 160 Vitest, 16 gateway, 375 Playwright checks including the 320px/1920px one-line assertion.

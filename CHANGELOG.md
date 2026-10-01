@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-01 — Hebrew path name and unit preview alignment
+
+- `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` changes the Hebrew path label to "לימוד שפה מאפס" in navigation and the heading. The 50-word preview aligns word, meaning and known buttons and keeps the footer controls padded within the modal on short screens. Local `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); two targeted Playwright checks passed at 320px, 525px and desktop. Production deploy and visual smoke are pending at this checkpoint.
+
+
 ## 2026-10-01 — English preview Web deployment
 
 - Render Web deployment `dep-dav4nrgjo6nc73fgnt9g` reports `Deploy succeeded | Live` for exact source `gotIt-front@383482331ca895c1491123643138bd0973fd7395`. Public `/ready` returned 200, `/english-learning` returned 200, and the served CSS plus dynamically imported English path JavaScript contain the scoped row layout. Backend `/ready` remained 200; readback still found 213 corrections, 3,000 entries and zero known rows after reversing the smoke mark. The prior authenticated browser tab was lost before a post-Web visual check, so the button's production rendering has not been visually confirmed after this Web deploy.
