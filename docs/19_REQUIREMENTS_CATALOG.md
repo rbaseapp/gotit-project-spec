@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## FR-PACK-006 - Corrected selected-word acceptance, 2026-10-01
+
+In SCR-16, a learner may check multiple preview words, add checked words to a pack, mark checked words already known, or undo known marking for checked words. No selected-word removal button is presented. Add preserves previously linked unchecked words; known/undo uses the existing protected known-state operation and changes neither pack inclusion nor evidence/XP. The corresponding action is disabled when no checked word can change; failed writes retain the checks, and successful writes refresh server state and clear them. Acceptance: selected-ID scope, add-link preservation, mark/undo, failed-write retry, RTL/mobile modal layout. Web `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` passed local regressions; production verification pending. The earlier FR-PACK-006 remove-button text below records the superseded 2026-10-01 implementation.
+
 ## FR-PACK-006 - Select multiple English unit words
 
 Must: in SCR-16 an authenticated learner can check multiple preview words and add only those not already linked or remove only the checked linked words. Previously linked unselected words remain linked, an empty final selection is supported, and server detail/progress refresh after each change. No learning evidence, mastery or XP is inferred from selection changes; the existing `vocabulary.write` gate applies. Acceptance: first-time subset, partial removal, final-link removal, re-add, disabled inapplicable actions and mobile/RTL layout. Web `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` and Backend `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` passed local gates; production verification pending. Maps to UC-04C and SCR-16.

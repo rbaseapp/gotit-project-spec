@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Selected English words: known and undo actions
+
+- `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` keeps multiword checkboxes and Add selected, replaces Remove selected with bulk I already know and Undo known actions, and clears the checks only after a successful known-state write. It uses the existing protected `PUT /word-packs/:id/known`; the Backend empty-selection add contract remains available but is no longer a preview removal action. Local check passed (164 Vitest, 16 gateway, typecheck, lint, build), and targeted 320px/525px/desktop responsive Playwright passed (1/1). Production deployment and authenticated smoke pending at this source checkpoint.
+
 ## 2026-10-01 — Persistent Web sign-in, locally verified
 
 - `gotIt-front@9fb80b2` stores the rotating refresh token in browser local storage, migrates existing tab storage, and restores the account after a browser restart. Logout clears both stores; an invalid session still requires sign-in. Transient startup network failures retain the token for a later retry. Core's existing session expiry remains 30 days by default from login; no Core API or database change. Focused tests passed 23/23, typecheck, lint, build, gateway 16/16 and targeted formatting passed. The full Vitest run had one unrelated English unit test failure on concurrent uncommitted edits. Authenticated restart smoke pending.

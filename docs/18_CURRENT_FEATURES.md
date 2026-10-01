@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 - Corrected bulk known controls (source verified)
+
+Web `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` replaces the previously deployed Remove selected button in `/english-learning` with bulk mark-known and undo-known for checked words. Add selected and the checkboxes remain. The existing `PUT /word-packs/:id/known` updates learner declarations, without changing pack inclusion or awarding mastery/XP. Local Web check (164 Vitest, 16 gateway, typecheck, lint, build) and targeted responsive Playwright passed. This commit's production deployment and authenticated smoke are pending at this source checkpoint; the older add/remove deployment below is historical.
+
 ## 2026-10-01 — Persistent Web authentication
 
 `gotIt-front@9fb80b2` keeps the rotating Core refresh token across browser restarts and hydrates the live account at the next visit. Existing tab sessions migrate when used. Explicit logout and invalid refresh clear the saved token; transient Core/network failure leaves it available for retry. The access token remains memory-only. Core refresh sessions currently expire 30 days after issue by default, even if refreshed. Locally verified and deployed on Render `dep-dav9obaj9qps73e5j320`; public readiness and served-bundle checks passed. Authenticated browser restart smoke pending.

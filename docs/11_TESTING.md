@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Bulk known and undo Web regression
+
+`gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` passed `npm.cmd run check`: TypeScript, ESLint, 164/164 Vitest, production build and 16/16 gateway tests. `test/live.test.tsx` verifies add-selected preserves existing links, the removed UI action is absent, bulk known/undo sends only selected IDs to `PUT /known`, a failed write retains checks for retry, success clears them, and no pack-link update occurs during known actions. `npm.cmd run test:responsive -- --grep "English unit preview"` passed 1/1 at 320px/568px, 525px/709px and 1920px/900px with the five-action footer. Production smoke pending at this source checkpoint.
+
 ## 2026-10-01 — Web sign-in persistence, source `9fb80b2`
 
 `gotIt-front/test/api.test.ts` verifies refresh after tab storage is cleared and the API module reloads, migration from legacy tab storage, cross-tab rotation, and logout clearing persistent storage. `test/app.test.tsx` verifies that login stores the refresh token persistently. Focused Vitest: 23/23 passed; typecheck, lint, production build, 16/16 gateway tests and targeted Prettier passed. Full Vitest: 163/164 passed, with one failure in the concurrently edited English unit bulk-action UI (`test/live.test.tsx`), outside the auth change. Production authenticated close/reopen smoke pending.

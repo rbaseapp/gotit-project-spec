@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 - Selected words now use bulk known/undo
+
+`gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` corrects the unit preview controls: checkboxes, select all/clear and Add selected remain; Remove selected is replaced with bulk I already know and Undo known. The new controls call the existing protected known endpoint with only checked entry IDs, reload the server's detail/progress and clear checks after success. A failed write leaves checks selected for retry. Known state does not remove pack links or award mastery/XP. The Backend empty-selection add capability remains supported for clients but is no longer surfaced as preview removal. Local `npm.cmd run check` passed (164 Vitest, 16 gateway, typecheck, lint, build); targeted modal Playwright passed 1/1 across phone, tablet and desktop sizes. Production deployment and authenticated smoke pending at this source checkpoint.
+
 ## 2026-10-01 - Selected-word production verification
 
 Render Backend `dep-dav9ef1srm7s73eegcng` is Live for `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` and Web `dep-dav9f0lg1s2s73couufg` is Live for `623202a3e1f5c51b71baf12bd1c78c4a0967860b`. Both `/ready` endpoints and `/english-learning` returned 200. An authenticated 50-word preview showed labeled checkboxes and add/remove-selected actions. Selecting two words produced a count of 2 and enabled both actions; clearing disabled them. Removing one existing link switched that word to an Add candidate, and re-adding switched it back to Remove. The selection was cleared and modal closed. The final-link empty payload and new-item subset remain integration/live-flow regression evidence, not production mutations.

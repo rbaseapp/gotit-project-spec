@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 - FR-PACK-006 / UC-04C / SCR-16 bulk known correction
+
+`gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` maps the corrected selected-word behavior to `src/pages/EnglishLearningPathPage.tsx`, eight locale catalogs, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. The Web uses existing Backend `PUT /word-packs/:id/known` (`gotIt-backend@14012a0`); Backend `d8d930a` empty `POST /add` support remains but is not triggered by the preview. Regression includes failed-write retry, selected-ID scope, preserved links and 320px/525px/desktop layout. Local check: 164 Vitest, 16 gateway, typecheck/lint/build; targeted responsive 1/1. Deploy pending at this source checkpoint.
+
 ## 2026-10-01 — FR-AUTH-011 persistent Web session
 
 `gotIt-front@9fb80b2`: `src/lib/api.ts` and `src/context/AppContext.tsx` implement SCR-01/UC-01 restoration from browser local storage, with regressions in `test/api.test.ts` and `test/app.test.tsx`. Local focused tests and build passed. Render `dep-dav9obaj9qps73e5j320` is Live at the exact SHA and public readiness passed; authenticated browser restart remains pending. Core's default absolute refresh expiry remains 30 days.

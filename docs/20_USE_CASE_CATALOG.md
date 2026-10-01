@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## UC-04C - Corrected selected-word flow, 2026-10-01
+
+Actor: authenticated learner with `vocabulary.write`. In the English unit preview, check one or more words and choose Add selected, I already know, or Undo known. Add sends the complete desired linked-ID selection while preserving existing unchecked links. Known/undo sends exactly the checked entry IDs with a boolean to `PUT /word-packs/:id/known`; the server owns known state and any same-sense propagation. Refresh detail/progress and clear checks on success. On API failure, show feedback and keep checks for retry. The former selected-word removal action is absent. Source: `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e`, locally verified; production smoke pending. The prior UC-04C text below describes the historical UI.
+
 ## UC-04C - Manage selected words in an English unit
 
 Actor: authenticated learner with `vocabulary.write`. Trigger: open an English unit preview and check one or more words. Add flow: retain existing linked IDs and include checked IDs in the complete `POST /word-packs/:id/add` selection. Remove flow: omit only checked linked IDs; the empty array clears the last link while the unit remains installed. Refresh server detail/catalog and clear the checks on success. Alternatives: inapplicable action disabled, write in progress, billing restriction, or API error without clearing the selection. This changes pack inclusion, not known state or mastery. Sources: `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` and `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`; local Web/PostgreSQL regressions passed, production smoke pending. Links FR-PACK-006 and SCR-16.

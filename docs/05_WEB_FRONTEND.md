@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-01 - Bulk known state in English unit preview
+
+`gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` keeps the existing checkboxes, select all/clear and Add selected. The former Remove selected control is replaced by I already know the selected words and Undo known for selected words. Each sends exactly the checked IDs to the existing `PUT /word-packs/:id/known` with `known: true` or `false`; the action is disabled when no selected entry needs the requested change. Pack detail/catalog refresh and checks clear on success. An API failure retains selection for retry. No API, database or pack-link removal occurs in this Web change. The write still requires `vocabulary.write`. Local Web and modal layout regressions passed; production deployment pending.
+
 ## 2026-10-01 - Multiword unit preview
 
 `gotIt-front@623202a3e1f5c51b71baf12bd1c78c4a0967860b` adds independently checked word rows in `/english-learning` and bulk add/remove controls. The client computes the full desired pack selection from server detail plus the checked IDs before sending `POST /word-packs/:id/add`, preserving unrelated linked entries. After success it refetches detail and catalog, clears the checkboxes, and reports the result. The controls keep the existing `vocabulary.write` gate, known-word action and full-unit start. Hebrew and English copy are authored; other supported catalogs contain English fallback strings. Web check and targeted responsive regressions passed locally; deployment pending.
