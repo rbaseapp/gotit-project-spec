@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-01 - SCR-16 Hebrew bulk-known copy correction
+
+The first deployed bulk-known source `4512a93` rendered its four new Hebrew action/feedback strings as question marks. `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` restores the intended Hebrew strings for mark-known, undo-known and both success messages, with exact-copy regression coverage. Local check passed; production redeployment and visual smoke pending at this source checkpoint.
+
 ## 2026-10-01 - SCR-16 selected-word known actions
 
 `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` keeps labeled word checkboxes, select all/clear, selected count and Add selected in the English unit preview. The selected-word removal button is replaced by bulk "I already know" and "Undo known" controls, each enabled only when at least one checked word can change to that state. A successful action reloads known counts and row states, clears the checks and announces success; an API error leaves checks in place. Individual known and full-unit actions remain. The five footer actions fit the modal at 320px, 525px and desktop in the targeted Playwright regression. Locally verified; production smoke pending.

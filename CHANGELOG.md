@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 - Repair Hebrew bulk-known labels
+
+- `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` restores four Hebrew strings that were encoded as question marks in the first bulk-known release and adds an exact-copy regression. Web check passed (165 Vitest, 16 gateway, typecheck, lint, build); focused i18n/live tests passed 30/30 after incorporating the unrelated Facebook Login commit. The first bulk-known Render deployment `dep-dav9s5btqb8s73d0bvd0` was Live for `4512a93` but its Hebrew bulk buttons displayed question marks; this fix's deployment and authenticated smoke are pending at this source checkpoint.
+
 ## 2026-10-01 - GotIt Facebook Login configuration in progress
 
 - `gotIt-front@c5c6e0173515a1de05baf55a3f4c56c2452e0722` supplies Meta App ID `2207127606520765` when the build override is blank, so the Facebook button can initialize the SDK. The regression covers the blank override. Local `npm.cmd run check` passed: typecheck, lint, 164 Vitest tests, build, and 16 gateway tests.

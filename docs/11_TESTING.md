@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 - Hebrew bulk-known encoding regression
+
+`gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` asserts the exact four Hebrew bulk-known action/feedback strings in `test/i18n.test.ts`. `npm.cmd run check` passed TypeScript, ESLint, 165/165 Vitest, production build and 16/16 gateway tests. Focused i18n/live tests passed 30/30 after the unrelated Facebook Login fast-forward. Production visual check on `4512a93` found the four labels rendered as question marks, so that deployment is not accepted for Hebrew UI. Corrected deploy and known/undo smoke pending.
+
 ## 2026-10-01 - Bulk known and undo Web regression
 
 `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` passed `npm.cmd run check`: TypeScript, ESLint, 164/164 Vitest, production build and 16/16 gateway tests. `test/live.test.tsx` verifies add-selected preserves existing links, the removed UI action is absent, bulk known/undo sends only selected IDs to `PUT /known`, a failed write retains checks for retry, success clears them, and no pack-link update occurs during known actions. `npm.cmd run test:responsive -- --grep "English unit preview"` passed 1/1 at 320px/568px, 525px/709px and 1920px/900px with the five-action footer. Production smoke pending at this source checkpoint.

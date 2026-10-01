@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 - First bulk-known deploy exposed Hebrew encoding failure
+
+Render Web `dep-dav9s5btqb8s73d0bvd0` reached `Deploy succeeded | Live` for exact `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e`, but authenticated SCR-16 inspection showed the new Hebrew mark-known/undo-known labels as question marks. No bulk known-state production mutation was attempted on that build. `gotIt-front@e5192422075850a7db6c64134a13565d3c3acf58` fixes all four affected strings and adds exact-copy regression; 165 Vitest, 16 gateway, typecheck/lint/build and 30 focused i18n/live tests passed. Redeploy and reversible production smoke pending.
+
 ## 2026-10-01 - Selected words now use bulk known/undo
 
 `gotIt-front@4512a93c648867af130c973867fdecfb09f96a1e` corrects the unit preview controls: checkboxes, select all/clear and Add selected remain; Remove selected is replaced with bulk I already know and Undo known. The new controls call the existing protected known endpoint with only checked entry IDs, reload the server's detail/progress and clear checks after success. A failed write leaves checks selected for retry. Known state does not remove pack links or award mastery/XP. The Backend empty-selection add capability remains supported for clients but is no longer surfaced as preview removal. Local `npm.cmd run check` passed (164 Vitest, 16 gateway, typecheck, lint, build); targeted modal Playwright passed 1/1 across phone, tablet and desktop sizes. Production deployment and authenticated smoke pending at this source checkpoint.
