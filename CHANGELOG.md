@@ -2,7 +2,7 @@
 
 ## 2026-10-01 - Bound unanswered Facebook login attempts
 
-- `gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d` adds a 60-second deadline around the Meta SDK login callback. An unanswered popup now releases the loading button, presents a localized retry message and discards late callbacks. Regression covers the missing callback and retry. Local `npm.cmd run check` passed: typecheck, ESLint, 166/166 Vitest, build and 16/16 gateway tests. Deployment is pending at this source checkpoint; Meta App Secret, icon, publication and live account acceptance remain pending.
+- `gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d` adds a 60-second deadline around the Meta SDK login callback. An unanswered popup now releases the loading button, presents a localized retry message and discards late callbacks. Regression covers the missing callback and retry. Local `npm.cmd run check` passed: typecheck, ESLint, 166/166 Vitest, build and 16/16 gateway tests. Render Web `dep-davai067bikc73da9usg` is Live at that exact SHA; public readiness/root/asset returned 200 and the asset contains the new Hebrew timeout copy. Core Render secret configuration was saved and environment deployment `dep-davaj95g1s2s739oq9h0` is Live; Core readiness returned 200 and a synthetic invalid-token gateway smoke returned 401 `FACEBOOK_TOKEN_INVALID`. Meta icon, publication and real account acceptance remain pending.
 
 ## 2026-10-01 - Final bulk-known footer deployed
 

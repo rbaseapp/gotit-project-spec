@@ -81,7 +81,7 @@ user disabled, provider/Core/network unavailable, Google popup canceled.
 
 קישורים: FR-AUTH-001–008; SCR-01; SEQ-01/02.
 
-Facebook SDK alternate flow (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d`): when the Meta popup never invokes its callback, Web ends the busy state after 60 seconds, displays a localized retry instruction and accepts a new attempt. A late callback from the old attempt is ignored. No credential is sent to Core for that expired attempt. Locally verified with `test/facebook.test.tsx`; live provider acceptance is pending.
+Facebook SDK alternate flow (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d`): when the Meta popup never invokes its callback, Web ends the busy state after 60 seconds, displays a localized retry instruction and accepts a new attempt. A late callback from the old attempt is ignored. No credential is sent to Core for that expired attempt. Locally verified with `test/facebook.test.tsx` and deployed with a passing public asset smoke; the production UI timeout and live provider acceptance are pending.
 
 ## UC-02 — לכידת מילה ושמירת משמעות
 
