@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-01 — English unit cards identify their level
+
+- `gotIt-front@66767de` displays Basic, Good, or Advanced on every English path unit card, including cards viewed after their section heading scrolls offscreen. Production data confirms `satellite` belongs to Advanced unit 5 (COCA rank 3117), not Basic unit 5. The regression renders Basic and Advanced cards together and checks both labels. Local `npm.cmd run check` passed: typecheck, lint, 157 Vitest tests, build, and 16 gateway tests. Deploy and live browser verification are pending.
+
 ## 2026-10-01 — English learning path activated in production
 
 - `gotIt-backend@74eb91d` migrations `1790800006000` and `1790800007000` ran through the existing dedicated `gotit_migrator` credential in an ignored local generated environment. Production readback found 10 topics, the named `en`/`he` path, 3 tracks, 60 packs of exactly 50, and 3,000 entries. Authenticated browser smoke displayed all levels and first/last pack previews; both `/ready` endpoints returned 200. A 50-entry installation on a separate test account remains untested.

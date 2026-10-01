@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-01 — SCR-16 unit identity
+
+`gotIt-front@66767de` maps the level-identification requirement on each English path card to `EnglishLearningPathPage.tsx`, `production.css`, and the Basic/Advanced combined-card regression in `test/live.test.tsx`. Production `satellite` data was checked separately and remains Advanced unit 5. Local Web check passed; live label smoke is pending. No API or data migration.
+
 ## 2026-10-01 — FR-PACK-004 production activation
 
 Backend `74eb91d` and Web `4da3411` are deployed. Migrations `6000` and `7000` ran with the dedicated role after local schema/full backups and read-only preflight. PACK-01/FR-PACK-004 and SCR-16 were verified in production by exact data counts (3 tracks, 60 packs, 3,000 entries, 50 each), both `/ready` endpoints, and authenticated first/last unit previews. The test-account 50-entry installation remains unverified in production. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

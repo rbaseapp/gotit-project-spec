@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-01 — English unit level label regression
+
+`gotIt-front@66767de`: `test/live.test.tsx` renders Basic unit 1 and Advanced unit 5 on the dedicated path, then asserts each card displays its own level while retaining the existing 50-entry installation request coverage. `npm.cmd run check` passed: typecheck, lint, 157/157 Vitest, production build, and 16/16 gateway tests. Production smoke for the new card label is pending.
+
 ## 2026-10-01 — English path production verification
 
 The dedicated migrator applied both catalog migrations after a local schema and full product backup. Read-only verification found 10 topics, 3 path tracks, 60 packs, 3,000 entries, and no pack outside 50 entries. Restricted runtime preflight passed. Backend and Web `/ready` returned 200; the authenticated browser displayed all 60 units and opened the first Basic and last Advanced unit previews with 50 English/Hebrew entries. A separate test-account 50-entry installation was not performed; the local Web regression covers that request path.

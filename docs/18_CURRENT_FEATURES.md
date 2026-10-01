@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-01 — English path card clarity (source)
+
+`gotIt-front@66767de` shows each unit's level name inside its card, so Basic unit 5 and Advanced unit 5 cannot be confused after scrolling. Production catalog inspection confirmed `satellite` in Advanced unit 5. Local Web checks passed; the new label is not yet production verified. See [SCR-16](17_SCREEN_CATALOG.md).
+
 ## 2026-10-01 — English path live state
 
 Backend `74eb91d` and Web `4da3411` are deployed on Render. Migrations `6000` and `7000` have run with the dedicated migrator. Production has 10 topics, including the named English learning path with 3 levels, 60 units, and 3,000 entries; each unit has 50. `/ready` returned 200 on both services, and an authenticated browser showed all levels and first/last unit previews. A separate test-account installation was not executed. Evidence: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).

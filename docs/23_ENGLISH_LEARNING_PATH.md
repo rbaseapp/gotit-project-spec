@@ -1,5 +1,9 @@
 # English learning path: initial catalog handoff
 
+## 2026-10-01 — Unit level label clarification
+
+Production read-only catalog inspection places `satellite` (COCA rank 3117) in Advanced unit 5, not Basic unit 5. `gotIt-front@66767de` adds the level name to every unit card to keep this distinction visible after scrolling. The local Web gate passed (157 Vitest, 16 gateway plus typecheck, lint and build); deployment and live label verification are pending. A separate scan of the committed catalog JSON found no weekday or month names as calendar terms (`may` is a modal verb and `march` means to walk), placed `table` in Basic unit 12 and `chair` in Good unit 5, and found no refrigerator, oven or washing machine. That editorial coverage gap is not changed by the card-label fix.
+
 ## 2026-10-01 — Production activation
 
 The initial Backend `74eb91d` and Web `4da3411` deployments exposed an empty path because production had only 9 topics. The dedicated `gotit_migrator` credential was then located in the ignored `.env.production.generated` provisioning artifact; it was never added to the Render runtime service or Git. Render Recovery reports that managed backups are unavailable on the Free database plan. Before changing production, a local schema dump (`gotit-schema-before-v1-2026-10-01T09-03-13-760Z.dump`, SHA-256 `b1f444b0078d5fa45ca7a9a783d62b91bd76066660f64e3633fbaa2e4cd84750`) and a full product plus migration-metadata dump (`gotit-product-full-before-english-path-2026-10-01T09-03-21-059Z.dump`, SHA-256 `b5972bedd426851f80ac854ce2dd66c86784b5dd8010777fcf99feea6aa9692c`) were created in ignored `.local-backups` and validated with `pg_restore --list`. Read-only normalization inspection had zero mismatches; restricted runtime preflight passed.
