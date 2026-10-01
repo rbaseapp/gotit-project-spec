@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — Persistent Web authentication
 
-`gotIt-front@9fb80b2` keeps the rotating Core refresh token across browser restarts and hydrates the live account at the next visit. Existing tab sessions migrate when used. Explicit logout and invalid refresh clear the saved token; transient Core/network failure leaves it available for retry. The access token remains memory-only. Core refresh sessions currently expire 30 days after issue by default, even if refreshed. Locally verified; production deployment and browser restart smoke pending.
+`gotIt-front@9fb80b2` keeps the rotating Core refresh token across browser restarts and hydrates the live account at the next visit. Existing tab sessions migrate when used. Explicit logout and invalid refresh clear the saved token; transient Core/network failure leaves it available for retry. The access token remains memory-only. Core refresh sessions currently expire 30 days after issue by default, even if refreshed. Locally verified and deployed on Render `dep-dav9obaj9qps73e5j320`; public readiness and served-bundle checks passed. Authenticated browser restart smoke pending.
 
 ## 2026-10-01 - Multiword English unit actions in production
 

@@ -2,7 +2,8 @@
 
 ## 2026-10-01 — Persistent Web sign-in, locally verified
 
-- `gotIt-front@9fb80b2` stores the rotating refresh token in browser local storage, migrates existing tab storage, and restores the account after a browser restart. Logout clears both stores; an invalid session still requires sign-in. Transient startup network failures retain the token for a later retry. Core's existing session expiry remains 30 days by default from login; no Core API or database change. Focused tests passed 23/23, typecheck, lint, build, gateway 16/16 and targeted formatting passed. The full Vitest run had one unrelated English unit test failure on concurrent uncommitted edits. Production deployment and authenticated restart smoke pending.
+- `gotIt-front@9fb80b2` stores the rotating refresh token in browser local storage, migrates existing tab storage, and restores the account after a browser restart. Logout clears both stores; an invalid session still requires sign-in. Transient startup network failures retain the token for a later retry. Core's existing session expiry remains 30 days by default from login; no Core API or database change. Focused tests passed 23/23, typecheck, lint, build, gateway 16/16 and targeted formatting passed. The full Vitest run had one unrelated English unit test failure on concurrent uncommitted edits. Authenticated restart smoke pending.
+- Render Web deployment `dep-dav9obaj9qps73e5j320` reports `Deploy succeeded | Live` at exact source `9fb80b2d02a3017511080eefbb3470e750968a4c`. Web and Backend `/ready` returned 200; the served Web bundle `/assets/index-D9vzuLtW.js` contains the persistent `gotit.refresh` path. Authenticated browser close/reopen smoke awaits completion of the Google account chooser by the account owner.
 
 ## 2026-10-01 - Multiword unit controls deployed
 

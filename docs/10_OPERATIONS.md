@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-01 — Web auth persistence deployment
+
+Render manual deployment `dep-dav9obaj9qps73e5j320` is Live for exact `gotIt-front@9fb80b2d02a3017511080eefbb3470e750968a4c`. Web and Backend `/ready` returned 200 and the production Web bundle includes the persistent refresh-token code. No Core, Backend, migration, or configuration rollout was needed. Authenticated browser restart smoke remains pending account-owner completion of the Google chooser.
+
 ## 2026-10-01 selected-word release
 
 No database migration or configuration change was needed. Manual Render deploys `dep-dav9ef1srm7s73eegcng` (Backend `d8d930a7dfbeb01f8f951359c67a3b837fcc99f7`) and `dep-dav9f0lg1s2s73couufg` (Web `623202a3e1f5c51b71baf12bd1c78c4a0967860b`) both reported `Deploy succeeded | Live`. Public Backend and Web `/ready` each returned HTTP 200; `/english-learning` returned HTTP 200. Authenticated smoke in one unit selected two words, confirmed both bulk actions enabled, cleared the selection, removed one previously linked word and added it back. The modal was closed with no selection left.

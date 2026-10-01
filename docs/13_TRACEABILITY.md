@@ -2,7 +2,7 @@
 
 ## 2026-10-01 — FR-AUTH-011 persistent Web session
 
-`gotIt-front@9fb80b2`: `src/lib/api.ts` and `src/context/AppContext.tsx` implement SCR-01/UC-01 restoration from browser local storage, with regressions in `test/api.test.ts` and `test/app.test.tsx`. Local focused tests and build passed; production deploy and authenticated browser restart are pending. Core's default absolute refresh expiry remains 30 days.
+`gotIt-front@9fb80b2`: `src/lib/api.ts` and `src/context/AppContext.tsx` implement SCR-01/UC-01 restoration from browser local storage, with regressions in `test/api.test.ts` and `test/app.test.tsx`. Local focused tests and build passed. Render `dep-dav9obaj9qps73e5j320` is Live at the exact SHA and public readiness passed; authenticated browser restart remains pending. Core's default absolute refresh expiry remains 30 days.
 
 ## 2026-10-01 - FR-PACK-006 production evidence
 
