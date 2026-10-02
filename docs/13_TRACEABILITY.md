@@ -259,4 +259,4 @@ Release 1.4.4 של `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`
 
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
-2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Production pending. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).

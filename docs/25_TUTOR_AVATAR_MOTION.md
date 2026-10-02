@@ -2,7 +2,7 @@
 
 ## Further lip calming — 2026-10-02
 
-Source: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942`. Locally verified; production pending.
+Source: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942`. Production verified: Render `dep-davp0egu01pc73fjqnig` is Live for this exact SHA (1m18s).
 Both tutors now use a 110 ms audio-envelope time constant for opening/closing
 and a 160 ms eased mouth crossfade. This further reduces fast syllable flicker
 following visual feedback. The 30 Hz update cadence and provider voice speed remain.
@@ -10,6 +10,12 @@ Regression: 60 ms onset stays below 0.45; alternating 32 ms amplitude pulses hav
 less than 0.21 range including startup; silence reaches closed pose within 420 ms
 and exact zero by 550 ms. Browser verifies 160 ms transitions and reduced motion.
 Web check passed: typecheck/lint, 173 Vitest, build, 16 gateway; avatar Playwright 2/2.
+
+Production smoke at 2026-10-02T11:08:29Z passed: Web/Backend readiness,
+private-lesson route, delivered 160 ms CSS, delivered 110 ms smoothing onset/pulse
+checks, component poses/silence for both tutors and exact generated PNG hashes.
+[Follow-up machine-readable evidence](evidence/avatar-motion-calmer-production-2026-10-02.json).
+Live voice conversation was not tested.
 
 ## Slower lip movement — 2026-10-02
 

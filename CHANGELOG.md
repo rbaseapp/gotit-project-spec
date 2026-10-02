@@ -2,7 +2,7 @@
 
 ## 2026-10-02 — Further calm tutor lip motion
 
-- `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` uses a 110 ms audio envelope and 160 ms mouth crossfade after further visual feedback. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Production pending. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
+- `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` uses a 110 ms audio envelope and 160 ms mouth crossfade after further visual feedback. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Render `dep-davp0egu01pc73fjqnig` is Live for this SHA; readiness, delivered 160 ms CSS and smoothing/component smoke passed. Live voice conversation was not tested. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
 
 ## 2026-10-02 - Repair and validate Facebook server credential
 
