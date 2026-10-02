@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-02 - Verify real Facebook login after credential repair
+
+- Production Core Facebook exchange returned 200 twice after credential repair; authenticated `/auth/me` and GotIt `/profile` returned 200, logout returned 204 and repeat Facebook login succeeded. The owner confirmed real login and the authenticated learning UI was observed. Invalid-token gateway smoke returned 401. Current Core environment deployment `dep-davots49v7es738kolqg` is Live at `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`. Public Meta publication/non-role acceptance remain blocked by incomplete business verification. No source changed or credential values were recorded. [Evidence and verification limits](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
+
 ## 2026-10-02 — Further calm tutor lip motion
 
 - `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` uses a 110 ms audio envelope and 160 ms mouth crossfade after further visual feedback. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Render `dep-davp0egu01pc73fjqnig` is Live for this SHA; readiness, delivered 160 ms CSS and smoothing/component smoke passed. Live voice conversation was not tested. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
