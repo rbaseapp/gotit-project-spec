@@ -139,7 +139,7 @@ deployment evidence, לא תאריך מסמך בלבד.
 
 Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK/domain settings and icon are saved, and Core's provider row points to App ID `2207127606520765`. The owner-reported replacement Core configuration deployment and negative verifier smoke passed. Web `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c` is Live, opens the production consent popup and exits an unanswered attempt with retry. Meta's portfolio remains Unverified; only business verification is exposed for this app and the owner has no registered business. Public publication and real-account acceptance remain pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
 
-Subsequent live diagnosis: Meta accepts the user's token for the correct app and email permission, but rejects Core's configured App Secret. Server credential correction is required before real-account acceptance; the negative smoke above did not establish a valid secret. No source/API/schema changed during diagnosis.
+2026-10-02 live configuration repair: the current Meta App Secret replaced Core's mismatched secret configuration. Environment deployment `dep-davots49v7es738kolqg` is Live at `core-platform@6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`; Meta app-credential validation from the new runtime and public readiness passed with HTTP 200. This supersedes the earlier rejected-secret diagnosis. Fresh real-account exchange and Meta public verification/publication remain pending. No source/API/schema changed. See [canonical evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
 
 ## 3. Profile ו־Preferences
 
