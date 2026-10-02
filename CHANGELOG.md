@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-02 — Further calm tutor lip motion
+
+- `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` uses a 110 ms audio envelope and 160 ms mouth crossfade after further visual feedback. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Production pending. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-02 - Verify owner Facebook secret update deployment
 
 - Core Render `dep-davojrmgekts73escndg` is Live at `core-platform@6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`; Core/Web readiness and login HTTP checks passed. Meta still rejects the active 8-character server credential: client-credential HTTP 400/code 1, debug-token app-signature HTTP 400/code 190. No credential values were recorded. Meta requires owner password re-entry before current-secret comparison; positive Facebook exchange remains blocked. No source/API/schema changed. See [rollout evidence](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).
