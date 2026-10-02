@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-02 — Slower tutor lip movement
+
+- `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` filters rapid lip flicker with gentler audio smoothing and a 110 ms eased crossfade. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Deployment pending. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-01 — Tutor avatar Web deployed
 
 - Render `dep-davbpls9v7es73f6nk7g` is Live for exact `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`. Web/Backend readiness, the private-lesson route, delivered CSS/JS and both generated frames returned 200. PNG bytes match source hashes; delivered component/helper pose, inactive, invalid-input and silence smoke passed. Live voice acceptance remains unverified because Google chooser input timed out. [Evidence and limits](docs/25_TUTOR_AVATAR_MOTION.md).

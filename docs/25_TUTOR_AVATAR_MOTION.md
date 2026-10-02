@@ -1,5 +1,16 @@
 # 25 — תנועת אווטאר המורה
 
+## Slower lip movement — 2026-10-02
+
+Source: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590`. Locally verified; deployment pending.
+Audio onset/release now use 75/85 ms time constants; mouth opacity uses a 110 ms
+ease-out crossfade. Approximately 30 Hz publication remains. Rapid alternating
+32 ms syllable amplitudes are attenuated; silence still closes the mouth.
+This changes visual response only, not the provider voice speed.
+Validation: Web check passed (173 Vitest, 16 gateway, typecheck/lint/build);
+targeted avatar Playwright passed 2/2. Regression covers gentle onset, alternating
+pulses, refresh-rate independence, silence recovery and CSS transition timing.
+
 ## מקור וסטטוס — 2026-10-01
 
 מקור: `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`.
@@ -19,7 +30,7 @@
 - הדיוקן המקורי נשאר בסיס קבוע; רק הפה משולב בזמן דיבור. מעבר בין שתי
   צורות סמוכות עם alpha לפי source-over מונע הצגת הפה הסגור מאחורי שתי
   תמונות פה פתוח. הפרמטרים הסמכותיים ב־`src/lib/avatarMotion.ts`.
-- מעטפת השמע הנכנס מתעדכנת בערך 30 פעמים בשנייה, עם פתיחה מהירה
+- מעטפת השמע הנכנס מתעדכנת בערך 30 פעמים בשנייה, עם פתיחה מתונה
   וסגירה קצרה בתלות בזמן ולא בקצב רענון המסך. שתיקה, inactive וערכים
   לא סופיים סוגרים את הפה. זהו חיווי עוצמה, לא זיהוי פונמות.
 - המצמוץ פועל גם בדיבור ומשפיע רק על העפעפיים. תנועת הנשימה עדינה

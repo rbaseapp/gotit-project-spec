@@ -320,3 +320,5 @@ provider/OAuth/Paddle acceptance, smoke after deploy ו־rollback readiness.
 הקוד כולל suites בכל ארבעת המאגרים. מסמך זה אינו קובע pass לפי שמות קבצים;
 תוצאת הרצה מתוארכת נרשמת ב־[13_TRACEABILITY](13_TRACEABILITY.md) וב־CHANGELOG.
 בדיקות live אינן מוחלפות ב־mock או jsdom.
+
+2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Production pending. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
