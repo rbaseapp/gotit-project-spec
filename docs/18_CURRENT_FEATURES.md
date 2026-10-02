@@ -322,4 +322,4 @@ Production finance/legal/reconciliation נשארים rollout work עד ראיה 
 פערים: monitoring/alerting, restore drill, generated API contract, Core migrator
 separation ו־cross-repo compatibility CI.
 
-2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Production pending. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
+2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).

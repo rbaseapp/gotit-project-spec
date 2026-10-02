@@ -1,0 +1,51 @@
+{
+  "sourceCommit": "3fa4da4f31023682c9308d686fb04dbb0676b590",
+  "renderDeploy": "dep-davom667bikc73ese7e0",
+  "checkedAtUTC": "2026-10-02T10:46:21.034Z",
+  "passed": true,
+  "scope": "production readiness, 110ms CSS mouth transitions, delivered smoothing suppresses rapid pulses, exact generated PNG bytes, delivered component and mouth helper pose/silence smoke; no live voice conversation",
+  "evidence": [
+    {
+      "url": "https://gotit.rbaseapp.com/ready",
+      "status": 200
+    },
+    {
+      "url": "https://gotit-backend.onrender.com/ready",
+      "status": 200
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/private-lesson?free=1",
+      "status": 200
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/assets/index-B3Gp7IVH.js",
+      "status": 200
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/assets/index-Cvsb8Q2r.css",
+      "status": 200
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/assets/TeacherAvatar-Cptt9gHI.js",
+      "status": 200
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/assets/tutor-speaking-rounded-BDo7Ukp6.png",
+      "status": 200
+    },
+    {
+      "asset": "/assets/tutor-speaking-rounded-BDo7Ukp6.png",
+      "sha256": "05a41bd60883e5cbefb95dd2e447a87edaac7ed8cb16a77d8fe78c11c8e0c24f",
+      "bytes": 1040402
+    },
+    {
+      "url": "https://gotit.rbaseapp.com/assets/tutor-female-speaking-rounded-DetLbkom.png",
+      "status": 200
+    },
+    {
+      "asset": "/assets/tutor-female-speaking-rounded-DetLbkom.png",
+      "sha256": "91686c0b53d32ff08e7adb14d108e7edd8bbca549aae36c02707bbc3ae9b2dfb",
+      "bytes": 1184191
+    }
+  ]
+}

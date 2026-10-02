@@ -2,7 +2,7 @@
 
 ## Slower lip movement — 2026-10-02
 
-Source: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590`. Locally verified; deployment pending.
+Source: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590`. Production verified: Render `dep-davom667bikc73ese7e0` is Live for this exact SHA (41.2s deploy).
 Audio onset/release now use 75/85 ms time constants; mouth opacity uses a 110 ms
 ease-out crossfade. Approximately 30 Hz publication remains. Rapid alternating
 32 ms syllable amplitudes are attenuated; silence still closes the mouth.
@@ -10,6 +10,12 @@ This changes visual response only, not the provider voice speed.
 Validation: Web check passed (173 Vitest, 16 gateway, typecheck/lint/build);
 targeted avatar Playwright passed 2/2. Regression covers gentle onset, alternating
 pulses, refresh-rate independence, silence recovery and CSS transition timing.
+
+Production smoke at 2026-10-02T10:46:21Z passed: Web/Backend readiness, route,
+delivered 110 ms CSS transition, delivered smoothing onset and alternating-pulse
+regression, both component variants and pose/silence behavior, exact PNG hashes.
+[Machine-readable evidence](evidence/avatar-motion-production-2026-10-02.json).
+Live voice conversation was not tested in this follow-up.
 
 ## מקור וסטטוס — 2026-10-01
 
@@ -54,7 +60,7 @@ FR-LESS-006: לומד רואה את המורה שנבחר עם תנועת פה �
 - `npm.cmd run test:responsive -- test/e2e/teacher-avatar.spec.ts test/e2e/private-lesson-flow.spec.ts`:
   ‏10/10 עברו, כולל עברית/אנגלית, 320px, טלפון, landscape, דסקטופ ו־reduced motion.
 - `test/avatar-motion.test.ts`: תרומות צורות סמוכות ללא דליפת פה סגור,
-  פתיחה מהירה, סגירה בהפסקה ועקביות בין 30Hz ו־144Hz.
+  פתיחה מתונה, סגירה בהפסקה ועקביות בין 30Hz ו־144Hz.
 - `test/private-lesson-connection.test.ts`: שלושה עדכוני מד בתוך 96ms,
   דעיכה לשתיקה וניקוי; קצב 70ms הקודם נכשל במקרה זה.
 - `test/teacher-avatar.test.tsx`: נכסי שתי הדמויות, invalid/inactive/silence;

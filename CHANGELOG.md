@@ -2,7 +2,7 @@
 
 ## 2026-10-02 — Slower tutor lip movement
 
-- `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` filters rapid lip flicker with gentler audio smoothing and a 110 ms eased crossfade. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Deployment pending. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
+- `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` filters rapid lip flicker with gentler audio smoothing and a 110 ms eased crossfade. Web check (173 Vitest, 16 gateway) and 2 avatar browser tests passed. Render `dep-davom667bikc73ese7e0` is Live on this exact SHA; production readiness and delivered CSS/smoothing/component smoke passed. Live voice conversation was not tested. [Behavior and evidence](docs/25_TUTOR_AVATAR_MOTION.md).
 
 ## 2026-10-01 — Tutor avatar Web deployed
 
