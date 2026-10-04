@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-04 - Dev migration verification
+
+Backend `10602736bdf5422116eb838e57e9d708318156be` migration inventory -> `gotit_dev` 32/32 recorded migrations -> repeat-up zero pending -> schema/privilege, normalization and unique catalog readback. Core `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6` -> 24/24 records. No code/regression test change was required for applying existing migrations. HTTP readiness is separate evidence and does not validate dev Backend isolation because its configured DB is production. See [operational evidence](10_OPERATIONS.md#2026-10-04---dev-database-migration-catch-up).
+
 ## 2026-10-01 — FR-LESS-006
 
 P12, UC-07/UC-11, SCR-10/SCR-PC-00A → `TeacherAvatar.tsx`, `avatarMotion.ts`,

@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-04 - Dev database catch-up
+
+- Applied 15 existing GotIt migrations to `gotit_dev` for Backend `10602736bdf5422116eb838e57e9d708318156be` after a validated full backup; Core was already current. Repeat-up, schema, runtime DML grants, normalization and 60-pack/3,000-unique-entry checks passed. Dev service readiness returned 200, but dev Backend currently points to production; configuration repair awaits owner decision. [Exact evidence and limitation](docs/10_OPERATIONS.md#2026-10-04---dev-database-migration-catch-up).
+
 ## 2026-10-02 - Verify real Facebook login after credential repair
 
 - Production Core Facebook exchange returned 200 twice after credential repair; authenticated `/auth/me` and GotIt `/profile` returned 200, logout returned 204 and repeat Facebook login succeeded. The owner confirmed real login and the authenticated learning UI was observed. Invalid-token gateway smoke returned 401. Current Core environment deployment `dep-davots49v7es738kolqg` is Live at `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`. Public Meta publication/non-role acceptance remain blocked by incomplete business verification. No source changed or credential values were recorded. [Evidence and verification limits](docs/24_FACEBOOK_LOGIN_ROLLOUT.md).

@@ -1,5 +1,15 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-04 - Dev database migration catch-up
+
+The owner requested migration catch-up after manually deploying dev Backend, Web and Core. The verified target was Render `gotit-postgres-dev` (`dpg-dar6fkp7lnhs73a7mspg-a`), database `gotit_dev`, separate from production. Backend source: `10602736bdf5422116eb838e57e9d708318156be`; Core source: `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`. No application source changed.
+
+A full database custom-format backup was created and validated with PostgreSQL 17 `pg_restore --list` (363 archive lines): local Backend `.local-backups/gotit-dev-full-before-migrations-2026-10-04T08-16-35-081Z.dump`, 12,006,890 bytes, SHA-256 `fb803ba84025b307986d10798793f32079828a53e4cf6bf2fac0fa09337e98b7`. Windows native certificate validation failed; backup succeeded using the documented Docker tooling with `verify-full` and system roots.
+
+Core already contained all 24 source migration records. GotIt had 17 of 32. The existing administrator/schema owner `gotit_dev_user` ran the explicit GotIt up runner over verified TLS, applying the 15 migrations from `1789488017000_private-lesson-proficiency-evidence` through `1790800011000_english-unique-catalog`. No runtime credential was used for DDL and no role/security permissions were expanded. Repeating up returned zero pending migrations. Read-only schema preflight passed with strict-role enforcement disabled for the administrator connection; direct privilege inspection confirmed existing `gotit_runtime` DML on all 50 product tables. A direct runtime login to dev was not available; SET ROLE was rejected and no membership was granted. Normalization checked 120 learning items and 160 translations with zero mismatches. Catalog readback: 60 version-4 packs, 3,000 entries and 3,000 distinct English forms.
+
+**Configuration discrepancy:** inspection of the dev Backend's existing `DATABASE_URL` identified production host `dpg-dagov2pt0dsc73a37me0-a` and database `rbase_core_db`, role `gotit_runtime`. No connection setting was changed. Readiness returned HTTP 200 for dev Backend, Core and Web, but Backend readiness therefore does not prove use of the newly upgraded dev database. Retargeting dev services requires the owner's pending decision and separate configuration validation; authenticated dev behavior remains unverified. Production database was not migrated by this task. Backend deploy `dep-db10kplg1s2s7380qu1g`, Core `dep-db10kq6gekts73bkv2p0` and Web `dep-db10kp0u01pc73c9ltj0` were observed Live for the owner's releases. Web source: `3ec2d2899e4cf6504e65aba01f19e425c9a87942`.
+
 ## 2026-10-01 — Tutor avatar Web rollout
 
 Render `dep-davbpls9v7es73f6nk7g` reports `Deploy succeeded | Live` for exact
