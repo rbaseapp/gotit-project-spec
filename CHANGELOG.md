@@ -1,6 +1,6 @@
 # יומן שינויים
 
-## 2026-10-05 ? Exclude mislabeled foreign-script practice words
+## 2026-10-05 - Exclude mislabeled foreign-script practice words
 
 - Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` adds source-script validation before queue limits and across new/legacy practice content. 209 fast and 62 PostgreSQL tests passed, including failure-first incident regression. No data rewrite or migration; production pending. [Canonical behavior and delivery](docs/26_PRACTICE_LANGUAGE_ISOLATION.md).
 

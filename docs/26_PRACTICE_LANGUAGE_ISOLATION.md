@@ -1,10 +1,10 @@
-# 26 ? Practice language isolation
+# 26 - Practice language isolation
 
-## 2026-10-05 ? Backend source checkpoint
+## 2026-10-05 - Backend source checkpoint
 
 Source: `gotIt-backend@e5f4817b8544b95da739ce4f462e95f50b99689c`. Status: implemented, locally verified and integration verified; production deployment pending.
 
-Incident: the authenticated production Learn screen selected English but showed Arabic expressions such as `????` and `??????`. Read-only inspection of those specific displayed items found `source_language_code=en`; this was mislabeled vocabulary, not evidence that the existing language query parameter was ignored. A separate Web loading race can overwrite a stored language selection with the profile default before languages arrive. Its repair is currently in the Web working tree and is not yet committed or deployed.
+Incident: the authenticated production Learn screen selected English but showed Arabic expressions such as `إليك` and `عناوين`. Read-only inspection of those specific displayed items found `source_language_code=en`; this was mislabeled vocabulary, not evidence that the existing language query parameter was ignored. A separate Web loading race can overwrite a stored language selection with the profile default before languages arrive. Its repair is currently in the Web working tree and is not yet committed or deployed.
 
 ### Authoritative behavior
 

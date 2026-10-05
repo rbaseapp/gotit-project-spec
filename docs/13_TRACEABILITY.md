@@ -1,8 +1,8 @@
 # 13 — מטריצת עקיבות ואחריות
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
-FR-PRAC-006 / UC-05 / P08 / SCR-03?04 -> Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` -> `practice.language.ts`, `practice.service.ts`, `test/integration/practice.integration.test.ts`. Failure-first incident, native script/marks and safe legacy content boundaries verified; [delivery evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
+FR-PRAC-006 / UC-05 / P08 / SCR-03/04 -> Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` -> `practice.language.ts`, `practice.service.ts`, `test/integration/practice.integration.test.ts`. Failure-first incident, native script/marks and safe legacy content boundaries verified; [delivery evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-05 - FR-CAP-008 free Google preview
 

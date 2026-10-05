@@ -1,6 +1,6 @@
 # 20 — קטלוג Use Cases
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 UC-05 / P08: learner selects a source language and starts smart practice. Backend filters declared language and compatible source script before queue limits. Alternate: bad legacy items are omitted from resumed cards/exercises, wholly invalid selections return no-eligible, and explicit incompatible item selection is rejected. [Source and verification](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

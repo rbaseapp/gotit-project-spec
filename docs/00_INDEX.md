@@ -1,6 +1,6 @@
 # 00 — תקציר ומפת מסמכים
 
-Practice language isolation: [26 ? incident, contracts, tests and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+Practice language isolation: [26 - incident, contracts, tests and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## תקציר מנהלים
 

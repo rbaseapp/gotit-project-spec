@@ -1,6 +1,6 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c`: 209 fast and 62 disposable PostgreSQL tests, typecheck/build and changed-file formatting passed. The new Arabic-labeled-English regression failed before the service fix; native scripts/marks, limited queues and legacy content boundaries pass afterward. [Exact scope and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

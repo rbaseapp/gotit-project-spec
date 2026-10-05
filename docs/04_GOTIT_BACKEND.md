@@ -1,6 +1,6 @@
 # 04 — מפרט GotIt Backend
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 Practice now validates source-script compatibility throughout queue selection and session content, including legacy snapshots and distractors. Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` passed 209 fast and 62 PostgreSQL tests; deployment pending. [Behavior, compatibility and evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

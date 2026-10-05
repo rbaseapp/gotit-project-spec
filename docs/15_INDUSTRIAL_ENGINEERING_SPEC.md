@@ -1,6 +1,6 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 P08 / FR-PRAC-006 adds a content-quality control before selection snapshots and issuance: declared source language plus compatible script. This prevents mislabeled legacy items from consuming the selected-language queue capacity. No new KPI threshold, evidence or XP is inferred. [Canonical behavior](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

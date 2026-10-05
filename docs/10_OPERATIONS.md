@@ -1,6 +1,6 @@
 # 10 — תשתיות, פריסה ותפעול
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` is pushed to main; deploy exact source on `srv-dak3h50jo6nc73bc43h0`, verify Live SHA/readiness and authenticated selected-language queue/study. No migration or environment change. Web companion source/deploy pending. [Canonical rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

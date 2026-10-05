@@ -1,6 +1,6 @@
 # 07 — חוזי API
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 Existing `sourceLanguageCode` exact filtering remains. Script-incompatible explicit selections return existing 400 `VALIDATION_ERROR`; no eligible words return 409 `NO_ELIGIBLE_ITEMS`. Legacy cards/exercises omit incompatible items; excluded images use 409 `ITEM_INCOMPLETE`. No payload change. [Source and full behavior](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

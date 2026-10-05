@@ -1,6 +1,6 @@
 # 16 — קטלוג UML Sequence Diagrams
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 SEQ-04 applies selected source language and compatible-script validation before session snapshots, study cards and exercise issuance. This is an eligibility control within the existing interaction, with no additional service call. [Contract and evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

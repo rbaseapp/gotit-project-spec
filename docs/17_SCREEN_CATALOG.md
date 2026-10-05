@@ -1,6 +1,6 @@
 # 17 — קטלוג מסכים ותיאור UX
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 SCR-03 / SCR-04: selected-language queues, study cards and exercises exclude incompatible legacy source scripts. Source-data language counts can still include these retained vocabulary records; the practice subset may be smaller. Existing empty/error states apply. [Source, regression and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
 

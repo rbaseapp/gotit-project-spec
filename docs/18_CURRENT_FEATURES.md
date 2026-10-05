@@ -1,6 +1,6 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
-## 2026-10-05 ? Selected-language practice
+## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` excludes words with incompatible source scripts from selected-language practice, including old sessions. Locally/integration verified; production pending. [Canonical evidence and limits](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
