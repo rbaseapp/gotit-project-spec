@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Fix free-account Google translation preview
 
-- `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf` removes the vocabulary-write gate only from authenticated explicit dictionary preview. Added failure-first HTTP regression; 209 fast and 60 PostgreSQL tests, typecheck/build and changed-file formatting passed. Save/AI remain gated. Production deployment is pending at this checkpoint. [Canonical rollout evidence](docs/10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+- `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf` removes the vocabulary-write gate only from authenticated explicit dictionary preview. Added failure-first HTTP regression; 209 fast and 60 PostgreSQL tests, typecheck/build and changed-file formatting passed. Save/AI remain gated. The exact SHA is Live on Render; public HTTP smoke and read-only production preflight/normalization passed. Free-account Store smoke awaits the user retry. [Canonical rollout evidence](docs/10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
 
 ## 2026-10-04 - Dev database catch-up
 

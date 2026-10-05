@@ -6,9 +6,15 @@ Source: `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`. Incident `bd49
 
 The fix permits authenticated explicit `dictionary` preview without `vocabulary.write`. `auto`/omitted-method routing, save and explicit AI checks remain unchanged. No schema, Core plan, environment or extension package change is required. Google calls can now incur ordinary provider usage for free accounts under the existing authenticated rate limits; no new provider, data category or retention is introduced.
 
-Local verification: typecheck, 209 fast tests, build, 60 disposable PostgreSQL tests, changed-file Prettier and diff check passed. Docker was initially stopped; after starting it all integration tests passed. Full format check reports 36 pre-existing unchanged files. `test/free-google-preview.test.ts` failed 402 before the fix and passes afterward, covering the actual capture/registry/Google adapter with fake transport, signed results, scoped lookup, invalid input, absent/invalid authentication, and denied AI/auto/profile/save requests.
+Local verification: typecheck, 209 fast tests, build, 60 disposable PostgreSQL tests, changed-file Prettier and diff check passed. Docker was initially stopped; after starting it all integration tests passed. Full format check reports 36 pre-existing unchanged files. Changed Markdown links and evidence JSON passed; the changed PlantUML annotations/control blocks passed a structural syntax check (no renderer installed). `test/free-google-preview.test.ts` failed 402 before the fix and passes afterward, covering the actual capture/registry/Google adapter with fake transport, signed results, scoped lookup, invalid input, absent/invalid authentication, and denied AI/auto/profile/save requests.
 
-Deployment status: pending. Deploy this exact source on Render service `srv-dak3h50jo6nc73bc43h0`, verify Live SHA and `/ready`, then repeat a Google preview as a non-admin free account. Do not count admin-only success as acceptance. Rollback uses the previous compatible Backend commit; no down migration is required.
+Deployment status: exact source SHA is Live on Render service `srv-dak3h50jo6nc73bc43h0`, deployment `dep-db1tqlrtqb8s73b970kg`, started 2026-10-05 20:24:39 Asia/Jerusalem and completed in 32.4 seconds. `/health`, `/ready` and `/api/v1` returned 200; unauthenticated `/api/v1/profile` returned 401. [Dashboard screenshot](evidence/free-google-preview-deploy-2026-10-05.png).
+
+The ordinary local preflight/audit commands initially reported database unavailable. Repeating the read-only checks with the existing ignored production external runtime configuration passed: schema/privileges OK, product-only role, normalization complete with 242 learning items and 302 translations checked and zero mismatches. No production data was modified by these checks.
+
+Live provider smoke in the existing admin Web session returned a visible `google_cloud_translation` candidate for `commandeered` (Hebrew translation); the preview was closed without saving. This checks provider health, not free-account entitlement acceptance.
+
+Free-account Store smoke remains pending user retry: the browser automation policy blocks `chrome-extension://` pages, and the available Web session is admin. The user was asked to repeat Google translation in the affected free account; do not count admin-only success as free-account acceptance. Rollback uses the previous compatible Backend commit; no down migration is required.
 
 ## 2026-10-04 - Dev database migration catch-up
 
