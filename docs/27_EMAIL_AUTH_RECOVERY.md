@@ -12,8 +12,8 @@ This record supersedes historical statements that email verification/reset are a
 
 The owner explicitly requested both flows and authorized creating the email provider.
 The owner approved Resend signup using `ori@rbaseapp.com` and its terms without a
-purchase. A Resend account was created; sending domain `auth.rbaseapp.com` is pending
-provider verification. Squarespace now contains the DKIM TXT plus CNAME
+purchase. A Resend account was created; sending domain `auth.rbaseapp.com` is verified by Resend (all three DNS records
+show verified). Squarespace now contains the DKIM TXT plus CNAME
 `rsend.auth -> rsend-apne1.forge.rmta.net` and `send.auth -> send.forge.rmta.net`.
 Public DNS resolves all three. Google reauthentication succeeded in a regular tab
 after the popup stalled; no owner intervention is needed for DNS. Existing root
@@ -24,8 +24,7 @@ Browser policy requires action-time approval for new persistent security access;
 the owner approval question covers creation and storage as `AUTH_RESEND_API_KEY`
 on Render rbase-core-api. The Render editor is prepared with
 `AUTH_EMAIL_FROM=GotIt <no-reply@auth.rbaseapp.com>` and an empty API-key field;
-nothing has been saved. Scope the key to the domain once provider verification
-makes it selectable. No key belongs in source/spec/logs.
+nothing has been saved. The prepared key is scoped to `auth.rbaseapp.com`, now selectable after verification. No key belongs in source/spec/logs.
 
 ## Behavior and API contract
 
@@ -174,7 +173,7 @@ Render currently reports Core `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6` Live an
 Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` Live. New source SHAs are pushed to
 remote main but have not been deployed. Do not deploy the incompatible new client
 or enable the server gate until provider configuration is ready. New-feature live
-smoke has not run. Deployment is awaiting API-key approval and domain verification.
+smoke has not run. Deployment is awaiting API-key creation/storage approval. Domain verification is complete.
 
 The Chrome Web Store package remains local. Browser access to the existing Store
 console was rejected with "The extensions gallery cannot be scripted"; no upload

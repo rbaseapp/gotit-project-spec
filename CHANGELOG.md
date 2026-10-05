@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Email rollout preparation
 
-All three source SHAs are pushed to main. Full production DB backup and read-only preflight passed; all Resend DNS records are published. Domain verification and action-time approval for the scoped sending key remain pending. Core/Web new releases are not deployed; Store automation is unavailable and 1.4.5 remains a local validated archive. [Exact checkpoint](docs/27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).
+All three source SHAs are pushed to main. Full production DB backup and read-only preflight passed; all Resend DNS records are published. Resend domain verification passed; action-time approval for the scoped sending key remains pending. Core/Web new releases are not deployed; Store automation is unavailable and 1.4.5 remains a local validated archive. [Exact checkpoint](docs/27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).
 
 ## 2026-10-05 - Chrome verified email entry points
 
