@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-05 ? Selected-language practice
+
+P08 / FR-PRAC-006 adds a content-quality control before selection snapshots and issuance: declared source language plus compatible script. This prevents mislabeled legacy items from consuming the selected-language queue capacity. No new KPI threshold, evidence or XP is inferred. [Canonical behavior](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - P04 free Google preview
 
 FR-CAP-008 / UC-02A separates translation preview from the P05 vocabulary save control: authenticated free learners may preview an explicit dictionary translation; saving and paid AI retain their existing gates. Identity, bounded inputs, provider validation, scoped traces and rate limits remain P04 controls. No learning progress or XP is inferred from preview. [Source and evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).

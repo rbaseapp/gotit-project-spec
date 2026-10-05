@@ -1,5 +1,7 @@
 # 00 — תקציר ומפת מסמכים
 
+Practice language isolation: [26 ? incident, contracts, tests and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## תקציר מנהלים
 
 GotIt הוא מוצר לימוד שפה מבוסס אוצר מילים בהקשר. המשתמש לוכד מילה או ביטוי

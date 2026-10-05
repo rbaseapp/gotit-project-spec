@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-05 ? Selected-language practice
+
+UC-05 / P08: learner selects a source language and starts smart practice. Backend filters declared language and compatible source script before queue limits. Alternate: bad legacy items are omitted from resumed cards/exercises, wholly invalid selections return no-eligible, and explicit incompatible item selection is rejected. [Source and verification](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## UC-02A - Translate with Google without a paid plan
 
 Actor: authenticated free learner, including an expired trial. Trigger: Google translation in SCR-X01 popup or SCR-X02 inline. Submit bounded text with explicit `dictionary` to P04; Backend validates identity/input, invokes configured non-AI translation, stores bounded trace and returns signed candidate meanings. Success ends at showing the translation. A separate save still requires `vocabulary.write`; AI and auto/profile requests retain their existing gates. Invalid auth/input and unavailable provider use existing error/preview states. Maps FR-CAP-008 and SEQ-03; [evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).

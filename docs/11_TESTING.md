@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 ? Selected-language practice
+
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c`: 209 fast and 62 disposable PostgreSQL tests, typecheck/build and changed-file formatting passed. The new Arabic-labeled-English regression failed before the service fix; native scripts/marks, limited queues and legacy content boundaries pass afterward. [Exact scope and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - Free Google preview regression
 
 FR-CAP-008 -> `test/free-google-preview.test.ts` in `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`: HTTP 402 before the fix, then successful Google preview with signed provenance using real service/registry/adapter and synthetic transport. The regression also covers scope, validation, authentication and unchanged paid-action denial. The full local run passed 209 fast tests and 60 PostgreSQL tests plus typecheck/build. [Operational evidence and live verification](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout) owns deployment status and the existing format-check limitation.

@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## 2026-10-05 ? Selected-language practice
+
+Existing `sourceLanguageCode` exact filtering remains. Script-incompatible explicit selections return existing 400 `VALIDATION_ERROR`; no eligible words return 409 `NO_ELIGIBLE_ITEMS`. Legacy cards/exercises omit incompatible items; excluded images use 409 `ITEM_INCOMPLETE`. No payload change. [Source and full behavior](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-01 — Unique English catalog, stable pack API
 
 Backend `10602736bdf5422116eb838e57e9d708318156be` changes catalog data, not routes, request fields or response shapes. The 60 `/api/v1/word-packs` pack IDs and slugs stay stable; titles and 50-entry contents update to the learner's unique list, all packs report version 4, and the topic title changes to the new Hebrew course name. Since an English term appears in only one new unit, `PUT /word-packs/:id/known` no longer creates apparent progress in other English units. The existing sense-aware rule and entitlement gate remain. Production verification is pending at this source checkpoint.

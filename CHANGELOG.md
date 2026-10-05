@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 ? Exclude mislabeled foreign-script practice words
+
+- Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` adds source-script validation before queue limits and across new/legacy practice content. 209 fast and 62 PostgreSQL tests passed, including failure-first incident regression. No data rewrite or migration; production pending. [Canonical behavior and delivery](docs/26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - Fix free-account Google translation preview
 
 - `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf` removes the vocabulary-write gate only from authenticated explicit dictionary preview. Added failure-first HTTP regression; 209 fast and 60 PostgreSQL tests, typecheck/build and changed-file formatting passed. Save/AI remain gated. The exact SHA is Live on Render; public HTTP smoke and read-only production preflight/normalization passed. Free-account Store smoke awaits the user retry. [Canonical rollout evidence](docs/10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).

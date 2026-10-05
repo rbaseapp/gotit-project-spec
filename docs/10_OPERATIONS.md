@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-05 ? Selected-language practice
+
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` is pushed to main; deploy exact source on `srv-dak3h50jo6nc73bc43h0`, verify Live SHA/readiness and authenticated selected-language queue/study. No migration or environment change. Web companion source/deploy pending. [Canonical rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - Free Google preview rollout
 
 Source: `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`. Incident `bd4923d9-de72-4b96-9dc6-a54343ebd52f` at 20:14:12 Asia/Jerusalem returned HTTP 402 `SUBSCRIPTION_REQUIRED` from `/api/v1/captures/preview` for the Store extension. The vocabulary write guard ran before Google.

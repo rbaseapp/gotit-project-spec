@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-05 ? Selected-language practice
+
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` excludes words with incompatible source scripts from selected-language practice, including old sessions. Locally/integration verified; production pending. [Canonical evidence and limits](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - Google translation for free accounts
 
 Explicit Google (`dictionary`) preview is implemented and locally verified for authenticated free accounts, including expired trials, in the existing Chrome popup and inline API. Saving still requires `vocabulary.write`; AI and auto/profile routing retain their existing gates. [Source SHA, tests and deployment status](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).

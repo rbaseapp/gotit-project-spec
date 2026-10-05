@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 ? Selected-language practice
+
+FR-PRAC-006 / UC-05 / P08 / SCR-03?04 -> Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` -> `practice.language.ts`, `practice.service.ts`, `test/integration/practice.integration.test.ts`. Failure-first incident, native script/marks and safe legacy content boundaries verified; [delivery evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - FR-CAP-008 free Google preview
 
 FR-CAP-008 / UC-02A / P04 / SCR-X01 and SCR-X02 -> `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`, `capture.routes.ts`, `test/free-google-preview.test.ts` -> authenticated explicit dictionary preview succeeds without vocabulary-write entitlement; save and AI gates remain. [Regression and deployment evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
