@@ -2,9 +2,9 @@
 
 ## 2026-10-05 - Backend source checkpoint
 
-Source: `gotIt-backend@e5f4817b8544b95da739ce4f462e95f50b99689c`. Status: implemented, locally verified and integration verified; production deployment pending.
+Source: `gotIt-backend@e5f4817b8544b95da739ce4f462e95f50b99689c`. Status: implemented, locally verified and integration verified; Backend production deployment observed; combined Web functional verification pending.
 
-Incident: the authenticated production Learn screen selected English but showed Arabic expressions such as `إليك` and `عناوين`. Read-only inspection of those specific displayed items found `source_language_code=en`; this was mislabeled vocabulary, not evidence that the existing language query parameter was ignored. A separate Web loading race can overwrite a stored language selection with the profile default before languages arrive. Its repair is currently in the Web working tree and is not yet committed or deployed.
+Incident: the authenticated production Learn screen selected English but showed Arabic expressions such as `إليك` and `عناوين`. Read-only inspection of those specific displayed items found `source_language_code=en`; this was mislabeled vocabulary, not evidence that the existing language query parameter was ignored. A separate Web loading race can overwrite a stored language selection with the profile default before languages arrive. Its repair is committed and locally verified as `gotIt-front@e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0`; Web deployment is pending.
 
 ### Authoritative behavior
 
@@ -24,3 +24,11 @@ No schema, migration, environment, API payload, authorization, provider, scoring
 ### Delivery
 
 Deploy the exact Backend source to production Render `srv-dak3h50jo6nc73bc43h0`, then the validated Web fix to `srv-dal8smbm8hqs73fabfng`. Observe both exact Live SHAs and readiness, then run authenticated English and Arabic queue/study smoke. Deployment, served-version and functional evidence must be recorded below after observation.
+
+## 2026-10-05 - Web source checkpoint
+
+Source: `gotIt-front@e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0`. Preserve the stored selection through loading, failure and remount. Persist a fallback only after a successful language response; unscoped practice cannot start until the language resolves, with retry on error. Existing explicit item/pack/reading launches retain their scope. Learn resume links include the selected source language; active-session study cards are fetched and validated before displaying words or issuing exercises. An incompatible resume shows localized `game.languageMismatch` in all eight UI languages.
+
+Verified on an isolated tree excluding concurrent email-auth changes: `npm.cmd run check` passed typecheck, lint, 179 Vitest tests, production build and 16 gateway tests. Fifteen practice-results, dashboard and vocabulary Playwright checks passed across desktop and mobile; changed-file Prettier and diff checks passed. Failure-first hook tests reproduced the old overwrite. Regressions include English selection with an Arabic profile default, pending/failed list, remount, removed selection, exactly one English session creation and Arabic resume rejection before memorization or exercises. Browser fixtures now provide the language list required by safe launch.
+
+Backend deployment `dep-db1u2fu7bikc73bmt580` on `srv-dak3h50jo6nc73bc43h0` was observed Live at the exact source SHA on 2026-10-05. Backend `/health` and `/ready`, and Web `/ready`, returned 200. Authenticated English queue contained ten English words and Arabic queue three Arabic words. Web rollout and combined smart-session smoke remain pending.

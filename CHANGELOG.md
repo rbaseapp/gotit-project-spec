@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Preserve selected practice language in Web
+
+- Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` prevents loading-time language replacement and cross-language resume. Isolated Web check (179 Vitest, 16 gateway) and 15 browser checks passed. Backend source is Live and both queues were observed scoped correctly; Web deployment and smart smoke pending. Concurrent email-auth changes preserved. [Canonical evidence](docs/26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-05 - Exclude mislabeled foreign-script practice words
 
 - Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` adds source-script validation before queue limits and across new/legacy practice content. 209 fast and 62 PostgreSQL tests passed, including failure-first incident regression. No data rewrite or migration; production pending. [Canonical behavior and delivery](docs/26_PRACTICE_LANGUAGE_ISOLATION.md).

@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-05 - Selected practice language
+
+`gotIt-front@e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection during language-list loading/failure, waits before an unscoped launch and validates resumed session language before cards/exercises. 179 Web, 16 gateway and 15 browser checks passed on an isolated tree; Web production pending. [Behavior, regressions and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+
 ## 2026-10-01 — תנועת מורה טבעית יותר
 
 `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` מוסיף צורת פה מעוגלת
