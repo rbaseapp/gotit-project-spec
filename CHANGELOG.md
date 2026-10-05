@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Chrome verified email entry points
+
+Record gotIt-chrome@46dff89bbc974d932abc7228f09ce23198954a34, Web registration/recovery entry points, legacy-registration guard, eight locales, 41 passing tests and validated keyless 1.4.5 package. No Store publication claimed. [27](docs/27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Web email proof and recovery
 
 Record gotIt-front@da913168f85baddc844978412058cf888117e85c, five authentication modes, eight locales, exact gateway allowlist and 183 Vitest/17 gateway/4 responsive passing tests. Production pending. [27](docs/27_EMAIL_AUTH_RECOVERY.md).

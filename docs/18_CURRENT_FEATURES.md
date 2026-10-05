@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Email verification and recovery
 
-Email verification and password reset are locally/integration verified in Core; Web is locally verified at `da913168f85baddc844978412058cf888117e85c`; Chrome commit and production activation remain pending. This supersedes historical missing-feature entries without claiming deployment. [Current source/evidence](27_EMAIL_AUTH_RECOVERY.md).
+Email verification and password reset are locally/integration verified in Core; Web is locally verified at `da913168f85baddc844978412058cf888117e85c`; Chrome 1.4.5 is locally verified at `46dff89bbc974d932abc7228f09ce23198954a34`; production activation and Store publication remain pending. This supersedes historical missing-feature entries without claiming deployment. [Current source/evidence](27_EMAIL_AUTH_RECOVERY.md).
 
 ## 2026-10-05 - Selected-language practice
 

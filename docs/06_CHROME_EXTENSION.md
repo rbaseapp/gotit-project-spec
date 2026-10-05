@@ -1,5 +1,9 @@
 # 06 — מפרט תוסף Chrome
 
+## 2026-10-05 - Chrome verified email entry points
+
+Source `gotIt-chrome@46dff89bbc974d932abc7228f09ce23198954a34` (1.4.5) routes popup Register/Forgot password to Web modes and rejects legacy direct registration before network access. Eight locales; no new permissions. Verify passed 41 tests and build/security checks; keyless archive packaged. Store upload/publication pending. [Canonical behavior and rollout](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 1. מטרת התוסף
 
 Manifest V3 client ללכידת מילה או ביטוי מתוך עמוד Web, preview של משמעות בהקשר,

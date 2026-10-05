@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 - Chrome verified email entry points
+
+Chrome `46dff89bbc974d932abc7228f09ce23198954a34`: FR-AUTH-001/009/010 -> popup Web entry points / background registration guard -> test/email-registration.test.ts. Packaged 1.4.5, Store pending. [Canonical](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Web email verification and recovery
 
 Web `da913168f85baddc844978412058cf888117e85c`: FR-AUTH-001/009/010 -> UC-01/SCR-01 -> EmailAuthForm, API contracts/gateway -> test/email-auth.test.tsx and test/e2e/email-auth.spec.ts. [Verification and rollout](27_EMAIL_AUTH_RECOVERY.md).

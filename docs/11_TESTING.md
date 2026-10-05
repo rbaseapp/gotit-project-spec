@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 - Chrome verified email entry points
+
+Chrome `46dff89bbc974d932abc7228f09ce23198954a34`: npm run verify passed typecheck, 41 tests, build and manifest/security checks; npm run package validated version 1.4.5 and absence of manifest.key. Regression covers no fetch on legacy registration and mode-only Web URLs. [Evidence](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Web email verification and recovery
 
 Web source `da913168f85baddc844978412058cf888117e85c`: typecheck/lint/build, 183 Vitest, 17 gateway and four targeted English/Hebrew 320px/1280px Playwright cases passed. Tests cover failure states and no session before proof. [Evidence and boundaries](27_EMAIL_AUTH_RECOVERY.md#verification-and-deployment-runbook).
