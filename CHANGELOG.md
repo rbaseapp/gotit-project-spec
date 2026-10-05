@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Web email proof and recovery
+
+Record gotIt-front@da913168f85baddc844978412058cf888117e85c, five authentication modes, eight locales, exact gateway allowlist and 183 Vitest/17 gateway/4 responsive passing tests. Production pending. [27](docs/27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Core email ownership and recovery
 
 Document core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3: OTP registration, recovery, revocation, additive tables, Resend setup and 31 fast/41 PostgreSQL passing tests. Production remains pending. See [27](docs/27_EMAIL_AUTH_RECOVERY.md).

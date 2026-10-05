@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Email verification and recovery
 
-SCR-01 gains verification, resend countdown, password confirmation and forgot/reset steps, error/retry states and explicit return to login; implementation is being verified before client commit at this checkpoint. [Flow and status](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).
+SCR-01 gains verification, resend countdown, password confirmation and forgot/reset steps, error/retry states and explicit return to login; implemented and locally verified at Web `da913168f85baddc844978412058cf888117e85c`; production pending. [Flow and status](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).
 
 ## 2026-10-05 - Selected-language practice
 

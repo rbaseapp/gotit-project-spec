@@ -3,8 +3,9 @@
 ## Source and release status
 
 Core source: `core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3`.
-Core is locally and PostgreSQL-integration verified. Web and Chrome changes are
-being verified in the same task and have not yet been committed at this checkpoint.
+Core is locally and PostgreSQL-integration verified.
+Web source: `gotIt-front@da913168f85baddc844978412058cf888117e85c`, locally verified.
+Chrome changes are locally verified but not yet committed at this checkpoint.
 Production migration, exact-SHA deployment and real mailbox acceptance are pending.
 This record supersedes historical statements that email verification/reset are absent.
 
@@ -120,6 +121,15 @@ legacy accounts, password replacement and old access/refresh rejection, delivery
 failure, absent configuration, strict schemas, OAuth preclaim defense and socket limits.
 Provider unit tests cover bounded HTTPS payload and sanitized rejection/timeout errors.
 Mocks are not mailbox delivery evidence.
+
+Web: `npm run check` passed typecheck, lint, 183 Vitest tests, production build and
+17 gateway tests. Four targeted Playwright cases passed in English/Hebrew at
+320px/1280px: registration, verification, forgot-password and reset, heading focus,
+no horizontal overflow and no pre-proof stored session. Component regressions cover
+challenge-only registration, confirmation mismatch, recovery and unverified login.
+Gateway tests accept only the four named new routes and reject nested admin paths.
+Changed-file formatting passed. Existing large-chunk/Zod build warnings remain.
+Browser checks mock delivery; real production mailbox acceptance remains pending.
 
 Before deployment: verified domain + scoped provider key → full Core/schema and migration
 metadata backup → rehearse migration → exact Core deployment (current Docker startup

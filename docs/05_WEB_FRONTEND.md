@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-05 - Web email verification and recovery
+
+Web source `da913168f85baddc844978412058cf888117e85c` adds EmailAuthForm login/register/verify/forgot/reset modes, eight-locale copy and exact gateway routes. The accepted registration response is a challenge, never a session. Verification/reset returns to login; ?auth=register and ?auth=reset carry only the mode. Locally verified; production pending. [Canonical behavior and evidence](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected practice language
 
 Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection during language-list loading/failure, waits before unscoped launch and validates resumed language before cards/exercises. 179 Web, 16 gateway and 15 browser checks passed on an isolated tree. Production verified with English/Arabic smart-session smoke on 2026-10-05. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

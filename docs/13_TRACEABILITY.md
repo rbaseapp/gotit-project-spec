@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 - Web email verification and recovery
+
+Web `da913168f85baddc844978412058cf888117e85c`: FR-AUTH-001/009/010 -> UC-01/SCR-01 -> EmailAuthForm, API contracts/gateway -> test/email-auth.test.tsx and test/e2e/email-auth.spec.ts. [Verification and rollout](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 FR-AUTH-001/009/010 ? UC-01 / SCR-01 / SEQ-01 ? Core auth/email services, challenge migration, email-delivery unit tests and email-auth PostgreSQL suite. Source `core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3`. [Behavior, test details and deployment status](27_EMAIL_AUTH_RECOVERY.md).

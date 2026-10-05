@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 - Web email verification and recovery
+
+Web source `da913168f85baddc844978412058cf888117e85c`: typecheck/lint/build, 183 Vitest, 17 gateway and four targeted English/Hebrew 320px/1280px Playwright cases passed. Tests cover failure states and no session before proof. [Evidence and boundaries](27_EMAIL_AUTH_RECOVERY.md#verification-and-deployment-runbook).
+
 ## 2026-10-05 - Email verification and recovery
 
 Core passed 31 fast tests, 41 disposable PostgreSQL tests, typecheck/build and migration down/up. Coverage includes the pre-proof session failure, code replay/expiry/limits/scope, recovery revocation and OAuth preclaim defense. [Evidence and live-test boundaries](27_EMAIL_AUTH_RECOVERY.md#verification-and-deployment-runbook).
