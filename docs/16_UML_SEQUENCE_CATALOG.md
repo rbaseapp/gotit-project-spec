@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-SEQ-04 applies selected source language and compatible-script validation before session snapshots, study cards and exercise issuance. This is an eligibility control within the existing interaction, with no additional service call. [Contract and evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
+SEQ-04: Web resolves/preserves selected language before unscoped creation and includes it in resume links. Active resume retrieves existing study-card endpoint and checks language before setting session UI or issuing exercises. Backend checks exact language and compatible script throughout snapshots/cards/issuance. This adds a validation request on previously started resumes, with no new API or service. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## תיקון רצף השיעור — 2026-09-30
 

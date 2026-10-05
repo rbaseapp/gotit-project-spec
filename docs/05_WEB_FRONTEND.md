@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected practice language
 
-`gotIt-front@e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection during language-list loading/failure, waits before an unscoped launch and validates resumed session language before cards/exercises. 179 Web, 16 gateway and 15 browser checks passed on an isolated tree; Web production pending. [Behavior, regressions and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection during language-list loading/failure, waits before unscoped launch and validates resumed language before cards/exercises. 179 Web, 16 gateway and 15 browser checks passed on an isolated tree. Production verified with English/Arabic smart-session smoke on 2026-10-05. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-01 — תנועת מורה טבעית יותר
 

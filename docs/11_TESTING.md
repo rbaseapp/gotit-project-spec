@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-Backend `e5f4817b8544b95da739ce4f462e95f50b99689c`: 209 fast and 62 disposable PostgreSQL tests, typecheck/build and changed-file formatting passed. The new Arabic-labeled-English regression failed before the service fix; native scripts/marks, limited queues and legacy content boundaries pass afterward. [Exact scope and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c`: 209 fast and 62 disposable PostgreSQL tests; Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0`: 179 Vitest, 16 gateway and 15 targeted desktop/mobile Playwright checks. Typecheck/lint/build and changed-file formatting passed as applicable. Failure-first regressions reproduce mislabeled Arabic content and the selection overwrite. Live English/Arabic smart smoke passed; legacy-resume rejection is covered locally. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-05 - Free Google preview regression
 

@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` is pushed to main; deploy exact source on `srv-dak3h50jo6nc73bc43h0`, verify Live SHA/readiness and authenticated selected-language queue/study. No migration or environment change. Web companion source/deploy pending. [Canonical rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` and Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` are pushed to main and observed Live at their exact SHAs in Render. Readiness and authenticated English/Arabic queue, study and first exercise smoke passed on 2026-10-05. No migration or environment change. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-05 - Free Google preview rollout
 

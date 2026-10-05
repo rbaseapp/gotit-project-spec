@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-SCR-03 / SCR-04: selected-language queues, study cards and exercises exclude incompatible legacy source scripts. Source-data language counts can still include these retained vocabulary records; the practice subset may be smaller. Existing empty/error states apply. [Source, regression and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
+SCR-03 / SCR-04: retain the chosen language while loading/failing; unscoped launch waits and offers retry. Resume links carry selected language; validate active cards before rendering/issuing and explain mismatches with localized `game.languageMismatch`. Queues/cards/exercises exclude incompatible source scripts. Retained library counts can exceed the eligible practice subset. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-05 - SCR-X01 / SCR-X02 free Google results
 

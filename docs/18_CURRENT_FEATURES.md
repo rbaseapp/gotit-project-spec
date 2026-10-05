@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` excludes words with incompatible source scripts from selected-language practice, including old sessions. Locally/integration verified; production pending. [Canonical evidence and limits](26_PRACTICE_LANGUAGE_ISOLATION.md).
+Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` excludes incompatible source-script items from selected-language practice, including old sessions. Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection through loading/failure and rejects incompatible resumes before cards/exercises. Locally, integration and production verified; live English/Arabic smart smoke passed on 2026-10-05. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## 2026-10-05 - Google translation for free accounts
 

@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-UC-05 / P08: learner selects a source language and starts smart practice. Backend filters declared language and compatible source script before queue limits. Alternate: bad legacy items are omitted from resumed cards/exercises, wholly invalid selections return no-eligible, and explicit incompatible item selection is rejected. [Source and verification](26_PRACTICE_LANGUAGE_ISOLATION.md).
+UC-05 / P08: learner selects a language; preserve it while languages load, then create practice scoped by exact code and compatible script. Alternatives: retry failed language loading before unscoped start; omit bad legacy items or return no-eligible when all invalid; reject explicit incompatible items and resumed sessions of another selected language before displaying content. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## UC-02A - Translate with Google without a paid plan
 

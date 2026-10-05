@@ -2,7 +2,7 @@
 
 ## 2026-10-05 - Selected-language practice
 
-FR-PRAC-006 (Must): P08 / SCR-03 / SCR-04 displays practice source expressions only within the selected source language; incompatible legacy source scripts cannot enter cards, prompts or distractors. Filtering precedes queue limits; empty language scope never borrows another language. Preserve existing evidence. [Acceptance, source and script-check limits](26_PRACTICE_LANGUAGE_ISOLATION.md).
+FR-PRAC-006 (Must): P08 / SCR-03 / SCR-04 presents practice source expressions in the selected language; incompatible scripts cannot enter cards/prompts/distractors. Filter before limits; empty scope never borrows another language. Preserve selection through loading/failure, wait for resolution before unscoped launch and reject cross-language active resumes before content. Retain learning evidence. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## FR-LESS-006 — תנועת אווטאר בזמן השמעה
 
