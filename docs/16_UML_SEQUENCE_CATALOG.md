@@ -1,5 +1,9 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## 2026-10-05 - Email verification and recovery
+
+SEQ-01 now includes mailbox-code verification, explicit login and password recovery with session revocation. [Contract and release evidence](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected-language practice
 
 SEQ-04: Web resolves/preserves selected language before unscoped creation and includes it in resume links. Active resume retrieves existing study-card endpoint and checks language before setting session UI or issuing exercises. Backend checks exact language and compatible script throughout snapshots/cards/issuance. This adds a validation request on previously started resumes, with no new API or service. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

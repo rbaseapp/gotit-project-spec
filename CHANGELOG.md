@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Core email ownership and recovery
+
+Document core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3: OTP registration, recovery, revocation, additive tables, Resend setup and 31 fast/41 PostgreSQL passing tests. Production remains pending. See [27](docs/27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Preserve selected practice language in Web
 
 - Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` prevents loading-time language replacement and cross-language resume. Isolated Web check (179 Vitest, 16 gateway) and 15 browser checks passed. Backend source is Live and both queues were observed scoped correctly; Web exact SHA is Live; English/Arabic study and first-exercise smoke passed with zero scored attempts. Concurrent email-auth changes preserved. [Canonical evidence](docs/26_PRACTICE_LANGUAGE_ISOLATION.md).

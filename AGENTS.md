@@ -196,7 +196,7 @@ The full matrix is `docs/18_CURRENT_FEATURES.md`. The stable baseline includes:
 - Short-lived HS256 access JWT and opaque rotating refresh session.
 - Application roles `user` and `admin` loaded from PostgreSQL.
 - Free/trial/paid tiers, plans, entitlements, Paddle checkout/webhook/portal.
-- Missing: email verification and password reset.
+- Email verification/password reset: Core implemented and integration verified; live rollout is tracked in [27](docs/27_EMAIL_AUTH_RECOVERY.md).
 
 ### Product domain
 
@@ -714,7 +714,7 @@ Never:
 
 P0 governance/release gaps:
 
-- email verification and password reset;
+- email verification/password reset production acceptance: see [27](docs/27_EMAIL_AUTH_RECOVERY.md);
 - generated/synchronized API catalog;
 - production provider acceptance for the exact configured models;
 - Paddle live reconciliation and finance/legal completion;

@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-05 - Email verification and recovery
+
+Email verification and password reset are locally/integration verified in Core; Web/Chrome work and production activation are pending at this checkpoint. This supersedes historical missing-feature entries without claiming deployment. [Current source/evidence](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` excludes incompatible source-script items from selected-language practice, including old sessions. Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` preserves selection through loading/failure and rejects incompatible resumes before cards/exercises. Locally, integration and production verified; live English/Arabic smart smoke passed on 2026-10-05. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

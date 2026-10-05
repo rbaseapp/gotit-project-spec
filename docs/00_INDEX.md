@@ -1,5 +1,9 @@
 # 00 — תקציר ומפת מסמכים
 
+## 2026-10-05 - Email verification and recovery
+
+Email verification/reset: Core is locally and integration verified; provider, clients and production acceptance are tracked in [27](27_EMAIL_AUTH_RECOVERY.md).
+
 Practice language isolation: [26 - incident, contracts, tests and rollout](26_PRACTICE_LANGUAGE_ISOLATION.md).
 
 ## תקציר מנהלים
@@ -35,7 +39,7 @@ Chrome Extension ──┤
 | קורס אישי, שני אישורים ושיעורי בית באפליקציה | ממומש מקומית; לא נפרס; [פרטים וגבולות](22_PERSONAL_COURSES_IMPLEMENTATION.md) |
 | Web application ו־production gateway | ממומש |
 | Chrome MV3 capture client | ממומש |
-| password reset ואימות דוא״ל | לא ממומש |
+| Email verification / password reset | Core integration verified; [activation status](27_EMAIL_AUTH_RECOVERY.md) |
 | מחיקה קבועה ו־retention policy מלא | החלטה פתוחה |
 
 ## מפת המסמכים

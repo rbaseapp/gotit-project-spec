@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 - Email verification and recovery
+
+Core passed 31 fast tests, 41 disposable PostgreSQL tests, typecheck/build and migration down/up. Coverage includes the pre-proof session failure, code replay/expiry/limits/scope, recovery revocation and OAuth preclaim defense. [Evidence and live-test boundaries](27_EMAIL_AUTH_RECOVERY.md#verification-and-deployment-runbook).
+
 ## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c`: 209 fast and 62 disposable PostgreSQL tests; Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0`: 179 Vitest, 16 gateway and 15 targeted desktop/mobile Playwright checks. Typecheck/lint/build and changed-file formatting passed as applicable. Failure-first regressions reproduce mislabeled Arabic content and the selection overwrite. Live English/Arabic smart smoke passed; legacy-resume rejection is covered locally. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

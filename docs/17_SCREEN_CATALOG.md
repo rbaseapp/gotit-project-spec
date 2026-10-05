@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-05 - Email verification and recovery
+
+SCR-01 gains verification, resend countdown, password confirmation and forgot/reset steps, error/retry states and explicit return to login; implementation is being verified before client commit at this checkpoint. [Flow and status](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).
+
 ## 2026-10-05 - Selected-language practice
 
 SCR-03 / SCR-04: retain the chosen language while loading/failing; unscoped launch waits and offers retry. Resume links carry selected language; validate active cards before rendering/issuing and explain mismatches with localized `game.languageMismatch`. Queues/cards/exercises exclude incompatible source scripts. Retained library counts can exceed the eligible practice subset. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
@@ -178,7 +182,7 @@ Route: כל route לא־משפטי כאשר `mode=signed-out`.
 | Validation | email תקין, password 12–128; provider token bounded |
 | הצלחה | tokens נשמרים, identity/profile נטענים, מעבר ל־Dashboard |
 | שגיאות | invalid credentials, existing user, disabled, provider config/token, network |
-| חסר נוכחי | forgot password, email verification |
+| Email verification / forgot password | Implemented in current task; [release status](27_EMAIL_AUTH_RECOVERY.md) |
 
 Facebook button failure state (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d`): after a user click, the button is busy while the Meta SDK login callback is pending. If no callback arrives within 60 seconds, it becomes available again and displays a localized message instructing the user to close the Facebook window and retry. A late callback from the expired attempt cannot create a Core session. This state is locally verified by `test/facebook.test.tsx` and deployed with a passing public asset smoke; the 60-second production UI state and real Meta login remain unverified.
 

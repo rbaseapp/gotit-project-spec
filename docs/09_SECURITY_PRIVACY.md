@@ -1,5 +1,9 @@
 # 09 — אבטחה ופרטיות
 
+## 2026-10-05 - Email verification and recovery
+
+Mailbox proof gates password identity; recovery revokes both token types, and verified OAuth removes pre-verification passwords. Resend receives only recipient/security-email content. Response-body anonymity is implemented; constant-time anonymity is not claimed. [Threat controls and provider boundary](27_EMAIL_AUTH_RECOVERY.md#data-and-security).
+
 ## 2026-10-05 - Free Google preview boundary
 
 Explicit `dictionary` preview no longer requires vocabulary-write billing access. Core authentication, user scope, input validation, rate limits and signed provenance remain; the registry rejects AI providers in dictionary routes. Auto/profile routing and paid AI remain gated, and a preview token never authorizes save. No new provider/data category/storage field is introduced. Free users may consume ordinary Google translation under existing rate limits. [Source and negative tests](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).

@@ -1,5 +1,9 @@
 # 12 — מצב, פערים ומפת דרך
 
+## 2026-10-05 - Email verification and recovery
+
+FR-AUTH-009/010 are implemented and locally/integration verified in Core; client rollout, verified sending domain and live acceptance remain release gates. [Current status](27_EMAIL_AUTH_RECOVERY.md).
+
 ## תיקון רצף השיעור — 2026-09-30
 
 תיקון שפה, רצף הוראה והמשך אחרי שתיקה ממומש מקומית. קבלה קולית חיה ואימות

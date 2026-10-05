@@ -1,53 +1,60 @@
 @startuml
-title SEQ-01 - Registration, Login and OAuth
+title SEQ-01 - Mailbox proof, password recovery and OAuth
 autonumber
 actor User
 boundary Client as "Web / Chrome"
 control Core
 database CoreDB as "PostgreSQL core"
+participant Mail as "Resend / mailbox"
 participant OAuth as "Google / Facebook"
-
-User -> Client: Choose email/password or OAuth
-alt Email registration
-  Client -> Core: POST /auth/register\nX-Application-Key: gotit\n{email,password}
-  Core -> CoreDB: Resolve active application
-  Core -> CoreDB: Find user by application + normalized email
-  break Existing identity cannot register
-    Core --> Client: 409 USER_ALREADY_EXISTS
+User -> Client: Choose registration, login or recovery
+alt Registration / resend
+  Client -> Core: POST /auth/register or /resend-verification
+  Core -> CoreDB: Validate application; reserve scoped HMAC challenge + limits
+  Core -> Mail: Deliver short-lived code to eligible mailbox
+  Core --> Client: 202 accepted; no identity or tokens
+  Mail --> User: Six-digit code
+  User -> Client: Code + chosen password + confirmation
+  Client -> Core: POST /auth/verify-email {email,code,password}
+  Core -> CoreDB: Lock; check scope, expiry, attempts and HMAC
+  alt Invalid proof
+    Core -> CoreDB: Commit failed-attempt counter
+    Core --> Client: EMAIL_CODE_INVALID
+  else Valid proof
+    Core -> CoreDB: Atomically create/verify user, set password, consume codes, revoke old sessions
+    Core --> Client: 204; return to login
   end
-  Core -> Core: Argon2id hash password
-  critical Atomic account creation
-    Core -> CoreDB: Insert application_user
-    Core -> CoreDB: Insert password_credential
-    Core -> CoreDB: Insert auth_session(refresh hash)
+else Forgot password
+  Client -> Core: POST /auth/forgot-password {email}
+  Core -> CoreDB: Reserve challenge for active password account; generic response
+  Core -> Mail: Send recovery code when eligible
+  Core --> Client: 202 accepted
+  User -> Client: Code + new password + confirmation
+  Client -> Core: POST /auth/reset-password
+  Core -> CoreDB: Atomically validate/consume code, update password, revoke all sessions
+  Core --> Client: 204; explicit login required
+else Password login
+  Client -> Core: POST /auth/login {email,password}
+  Core -> CoreDB: Lock scoped user and load credential
+  Core -> Core: Verify password; require active verified email
+  alt Unverified
+    Core --> Client: EMAIL_VERIFICATION_REQUIRED
+  else Verified
+    Core -> CoreDB: Create refresh session
+    Core --> Client: Safe user + access/refresh tokens
   end
-else Email login
-  Client -> Core: POST /auth/login\n{email,password}
-  Core -> CoreDB: Load scoped credential/user
-  Core -> Core: Verify Argon2id
-  break Missing/wrong/disabled
-    Core --> Client: 401 INVALID_CREDENTIALS or USER_DISABLED
-  end
-  Core -> CoreDB: Insert auth_session(refresh hash)
 else OAuth
   Client -> OAuth: Interactive provider flow
-  OAuth --> Client: ID token or user access token
-  Client -> Core: POST /auth/google|facebook
-  Core -> CoreDB: Load provider client for application
-  Core -> OAuth: Verify token, audience/app, expiry, email
-  OAuth --> Core: verified subject + verified email
-  critical Resolve identity
-    Core -> CoreDB: Reuse provider subject OR link verified email OR create user
-    Core -> CoreDB: Insert/update oauth_identity + session
-  end
+  OAuth --> Client: Provider token
+  Client -> Core: POST /auth/google or /facebook
+  Core -> OAuth: Verify audience, expiry, subject and email
+  Core -> CoreDB: Resolve scoped identity; remove unverified planted password on linking
+  Core -> CoreDB: Create session
+  Core --> Client: Safe user + access/refresh tokens
 end
-Core -> Core: Sign short-lived JWT\nformat rotating refresh token
-Core --> Client: user + accessToken + refreshToken + expiresIn
-Client -> Client: Access in memory/session\nRefresh in approved storage
-Client --> User: Authenticated application
 note over Core,CoreDB
-No global user. Email and provider identity are scoped by application.
-Role is loaded from DB, never accepted from registration input.
+Codes are application/email/purpose scoped, short-lived and single-use.
+Wrong attempts persist. Protected access checks stored session revocation.
+No identity, password, OTP or session is trusted from client metadata.
 end note
 @enduml
-

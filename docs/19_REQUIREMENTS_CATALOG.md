@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-05 - Email verification and recovery
+
+FR-AUTH-001 now requires no identity/session before proof; FR-AUTH-009/010 require scoped single-use expiring codes, bounded retries, matching passwords and recovery revocation. Core locally/integration verified; client and live acceptance pending. [Acceptance and source](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected-language practice
 
 FR-PRAC-006 (Must): P08 / SCR-03 / SCR-04 presents practice source expressions in the selected language; incompatible scripts cannot enter cards/prompts/distractors. Filter before limits; empty scope never borrows another language. Preserve selection through loading/failure, wait for resolution before unscoped launch and reject cross-language active resumes before content. Retain learning evidence. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
@@ -81,7 +85,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 
 | ID | דרישה | Priority | Acceptance | מצב |
 |---|---|---|---|---|
-| FR-AUTH-001 | הרשמה בדוא״ל/סיסמה בתוך application | Must | user+session אטומיים | Stable |
+| FR-AUTH-001 | Application-scoped email registration | Must | No user or session before mailbox proof | Core integration verified; [rollout](27_EMAIL_AUTH_RECOVERY.md) |
 | FR-AUTH-002 | כניסה עם שגיאה גנרית ל־credentials | Must | ללא account enumeration | Stable |
 | FR-AUTH-003 | Google Web login | Must | audience per web client | Stable |
 | FR-AUTH-004 | Google Chrome login | Must | extension client/access token | Stable |
@@ -89,8 +93,8 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-AUTH-006 | access token קצר ו־refresh rotation | Must | token ישן נדחה | Stable |
 | FR-AUTH-007 | logout/revocation | Must | idempotent revoked session | Stable |
 | FR-AUTH-008 | user/admin role מהמסד | Must | input/JWT אינו סמכות | Stable |
-| FR-AUTH-009 | אימות דוא״ל | Must before public password GA | expiry/single use/resend | Planned |
-| FR-AUTH-010 | password reset | Must before public password GA | secure token/revoke policy | Planned |
+| FR-AUTH-009 | Email verification | Must before public password GA | Scoped expiring single-use OTP; resend and attempt limits | Core integration verified; [rollout](27_EMAIL_AUTH_RECOVERY.md) |
+| FR-AUTH-010 | Password recovery | Must before public password GA | OTP proof, new password, all-session revocation | Core integration verified; [rollout](27_EMAIL_AUTH_RECOVERY.md) |
 | FR-AUTH-011 | Web sign-in survives browser restart | Must | A valid Core refresh session restores identity after tab close/reopen; rotation updates persistent storage, explicit logout and invalid refresh clear it; transient startup failure preserves it for retry | Locally verified in `gotIt-front@9fb80b2`; production pending |
 
 ## 4. Profile ו־Onboarding

@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 - Email verification and recovery
+
+FR-AUTH-001/009/010 ? UC-01 / SCR-01 / SEQ-01 ? Core auth/email services, challenge migration, email-delivery unit tests and email-auth PostgreSQL suite. Source `core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3`. [Behavior, test details and deployment status](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected-language practice
 
 FR-PRAC-006 / UC-05 / P08 / SCR-03/04 -> Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` (`practice.language.ts`, `practice.service.ts`, PostgreSQL integration regressions) and Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` (`useLearningLanguage`, Learn/session pages, `learning-language.test.tsx`, `live.test.tsx`, practice-results fixtures). Failure-first regressions and live English/Arabic smart smoke verified. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

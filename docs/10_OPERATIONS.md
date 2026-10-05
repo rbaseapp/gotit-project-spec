@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-05 - Email verification and recovery
+
+Email auth rollout is pending verified Resend DNS and Core secrets, production backup/migration, exact-SHA Core/Web deploy and owner-controlled mailbox smoke. [Current setup state and runbook](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 2026-10-05 - Selected-language practice
 
 Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` and Web `e3cab2ef89ed2424c71ae961b6a6cbd44399c1e0` are pushed to main and observed Live at their exact SHAs in Render. Readiness and authenticated English/Arabic queue, study and first exercise smoke passed on 2026-10-05. No migration or environment change. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

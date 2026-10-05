@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-05 - Email verification and recovery
+
+The identity process adds mailbox proof before account/session creation and a recovery path with all-session revocation. Invalid/expired/reused codes stop the process; no user/trial is created by merely requesting a code. [Controls, proposed KPIs and flows](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).
+
 ## 2026-10-05 - Selected-language practice
 
 P08 / FR-PRAC-006 controls selected-language resolution at launch and validates resumed session content before display/issuance. Backend declared-language/script filtering precedes queue ranking and snapshots. Prevent mislabeled items consuming queue capacity while retaining historical evidence. No policy/KPI/XP threshold change. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

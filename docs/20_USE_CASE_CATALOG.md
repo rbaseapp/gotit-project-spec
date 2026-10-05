@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-05 - Email verification and recovery
+
+UC-01 registration now requests a code before creating an account; verification chooses a password and returns to login. Recovery requests a code generically, replaces the password and revokes every session after proof. [Alternatives, error states and acceptance](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).
+
 ## 2026-10-05 - Selected-language practice
 
 UC-05 / P08: learner selects a language; preserve it while languages load, then create practice scoped by exact code and compatible script. Alternatives: retry failed language loading before unscoped start; omit bad legacy items or return no-eligible when all invalid; reject explicit incompatible items and resumed sessions of another selected language before displaying content. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).

@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-05 - Email verification and recovery
+
+Core migration `1790000010000_email-auth-challenges` adds `core.email_auth_challenges` and `core.auth_request_limits`; existing identity/product schemas are unchanged. [Keys, fields, retention and migration evidence](27_EMAIL_AUTH_RECOVERY.md#data-and-security).
+
 ## 2026-10-01 — English progress archive production readback
 
 Migration `1790800011000` for Backend `10602736bdf5422116eb838e57e9d708318156be` is applied in production once. The new archive contains 1,418 `known` and 51 `link` rows from the previous catalog. The active version-4 catalog has 3,000 globally distinct English entries and retains 710 exact-sense known rows and 51 same-pack learning links. A read-only join found no active known row without a matching archived source and meaning. The archive remains available for reviewed recovery; no automatic destructive production rollback was used.

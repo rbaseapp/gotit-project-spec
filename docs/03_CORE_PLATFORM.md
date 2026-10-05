@@ -1,5 +1,9 @@
 # 03 — מפרט rbase Core
 
+## 2026-10-05 - Email verification and recovery
+
+Password registration now returns an OTP challenge, creates no session before proof, and supports verification/resend/recovery. Protected access also checks stored session revocation. [Authoritative contracts, source and rollout](27_EMAIL_AUTH_RECOVERY.md).
+
 ## 1. תפקיד השירות
 
 Core הוא פלטפורמה משותפת למוצרי rbase. ב־GotIt הוא מקור האמת ל־application,
