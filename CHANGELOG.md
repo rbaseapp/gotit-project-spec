@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Email rollout preparation
+
+All three source SHAs are pushed to main. Full production DB backup and read-only preflight passed; all Resend DNS records are published. Domain verification and action-time approval for the scoped sending key remain pending. Core/Web new releases are not deployed; Store automation is unavailable and 1.4.5 remains a local validated archive. [Exact checkpoint](docs/27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).
+
 ## 2026-10-05 - Chrome verified email entry points
 
 Record gotIt-chrome@46dff89bbc974d932abc7228f09ce23198954a34, Web registration/recovery entry points, legacy-registration guard, eight locales, 41 passing tests and validated keyless 1.4.5 package. No Store publication claimed. [27](docs/27_EMAIL_AUTH_RECOVERY.md).

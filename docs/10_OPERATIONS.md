@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-05 - Email rollout preparation
+
+Email-auth rollout preparation: full backup with Core/migration metadata and verified TLS passed; public DNS for auth.rbaseapp.com is published. Provider verification and API-key creation approval remain pending; Core/Web are still on their previous Live SHAs. [Exact archive hash, preflight and pending actions](27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).
+
 ## 2026-10-05 - Email verification and recovery
 
 Email auth rollout is pending verified Resend DNS and Core secrets, production backup/migration, exact-SHA Core/Web deploy and owner-controlled mailbox smoke. [Current setup state and runbook](27_EMAIL_AUTH_RECOVERY.md).
