@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 - FR-CAP-008 free Google preview
+
+FR-CAP-008 / UC-02A / P04 / SCR-X01 and SCR-X02 -> `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`, `capture.routes.ts`, `test/free-google-preview.test.ts` -> authenticated explicit dictionary preview succeeds without vocabulary-write entitlement; save and AI gates remain. [Regression and deployment evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-04 - Dev migration verification
 
 Backend `10602736bdf5422116eb838e57e9d708318156be` migration inventory -> `gotit_dev` 32/32 recorded migrations -> repeat-up zero pending -> schema/privilege, normalization and unique catalog readback. Core `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6` -> 24/24 records. No code/regression test change was required for applying existing migrations. HTTP readiness is separate evidence and does not validate dev Backend isolation because its configured DB is production. See [operational evidence](10_OPERATIONS.md#2026-10-04---dev-database-migration-catch-up).

@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - Fix free-account Google translation preview
+
+- `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf` removes the vocabulary-write gate only from authenticated explicit dictionary preview. Added failure-first HTTP regression; 209 fast and 60 PostgreSQL tests, typecheck/build and changed-file formatting passed. Save/AI remain gated. Production deployment is pending at this checkpoint. [Canonical rollout evidence](docs/10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-04 - Dev database catch-up
 
 - Applied 15 existing GotIt migrations to `gotit_dev` for Backend `10602736bdf5422116eb838e57e9d708318156be` after a validated full backup; Core was already current. Repeat-up, schema, runtime DML grants, normalization and 60-pack/3,000-unique-entry checks passed. Dev service readiness returned 200, but dev Backend currently points to production; configuration repair awaits owner decision. [Exact evidence and limitation](docs/10_OPERATIONS.md#2026-10-04---dev-database-migration-catch-up).

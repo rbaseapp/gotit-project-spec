@@ -1,5 +1,9 @@
 # 09 — אבטחה ופרטיות
 
+## 2026-10-05 - Free Google preview boundary
+
+Explicit `dictionary` preview no longer requires vocabulary-write billing access. Core authentication, user scope, input validation, rate limits and signed provenance remain; the registry rejects AI providers in dictionary routes. Auto/profile routing and paid AI remain gated, and a preview token never authorizes save. No new provider/data category/storage field is introduced. Free users may consume ordinary Google translation under existing rate limits. [Source and negative tests](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-01 — Product-only migrator boundary for known state
 
 The first migration attempt failed because the dedicated GotIt migrator correctly lacks Core schema privileges. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` uses the existing scoped GotIt profile FK instead of widening the migrator's Core grants. A first known action inserts only standard profile defaults for its Core-authenticated owner; compound ownership and cascade deletion remain. A fresh-user PostgreSQL regression passed; production retry pending.

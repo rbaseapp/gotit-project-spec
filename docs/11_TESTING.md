@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 - Free Google preview regression
+
+FR-CAP-008 -> `test/free-google-preview.test.ts` in `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`: HTTP 402 before the fix, then successful Google preview with signed provenance using real service/registry/adapter and synthetic transport. The regression also covers scope, validation, authentication and unchanged paid-action denial. The full local run passed 209 fast tests and 60 PostgreSQL tests plus typecheck/build. [Operational evidence and live verification](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout) owns deployment status and the existing format-check limitation.
+
 ## 2026-10-01 — רגרסיית אווטאר מורה
 
 מקור `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd`: ‏172 Vitest,

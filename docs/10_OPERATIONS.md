@@ -1,5 +1,15 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-05 - Free Google preview rollout
+
+Source: `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`. Incident `bd4923d9-de72-4b96-9dc6-a54343ebd52f` at 20:14:12 Asia/Jerusalem returned HTTP 402 `SUBSCRIPTION_REQUIRED` from `/api/v1/captures/preview` for the Store extension. The vocabulary write guard ran before Google.
+
+The fix permits authenticated explicit `dictionary` preview without `vocabulary.write`. `auto`/omitted-method routing, save and explicit AI checks remain unchanged. No schema, Core plan, environment or extension package change is required. Google calls can now incur ordinary provider usage for free accounts under the existing authenticated rate limits; no new provider, data category or retention is introduced.
+
+Local verification: typecheck, 209 fast tests, build, 60 disposable PostgreSQL tests, changed-file Prettier and diff check passed. Docker was initially stopped; after starting it all integration tests passed. Full format check reports 36 pre-existing unchanged files. `test/free-google-preview.test.ts` failed 402 before the fix and passes afterward, covering the actual capture/registry/Google adapter with fake transport, signed results, scoped lookup, invalid input, absent/invalid authentication, and denied AI/auto/profile/save requests.
+
+Deployment status: pending. Deploy this exact source on Render service `srv-dak3h50jo6nc73bc43h0`, verify Live SHA and `/ready`, then repeat a Google preview as a non-admin free account. Do not count admin-only success as acceptance. Rollback uses the previous compatible Backend commit; no down migration is required.
+
 ## 2026-10-04 - Dev database migration catch-up
 
 The owner requested migration catch-up after manually deploying dev Backend, Web and Core. The verified target was Render `gotit-postgres-dev` (`dpg-dar6fkp7lnhs73a7mspg-a`), database `gotit_dev`, separate from production. Backend source: `10602736bdf5422116eb838e57e9d708318156be`; Core source: `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`. No application source changed.

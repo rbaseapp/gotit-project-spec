@@ -18,6 +18,10 @@ Worker -> Worker: Validate message shape and feature settings
 Worker -> Core: Refresh if access token is missing/expiring
 Worker -> GotIt: POST /captures/preview\nBearer + bounded context
 GotIt -> Core: /auth/me
+note over GotIt
+Explicit dictionary preview is available to authenticated free users.
+Other methods retain vocabulary.write; explicit AI retains paid/add-on checks.
+end note
 GotIt -> DB: Load profile and existing senses
 GotIt -> Provider: Translate/enrich untrusted bounded data
 Provider --> GotIt: Candidate meanings
@@ -31,6 +35,7 @@ User -> Content: Choose candidate + merge/new sense
 Content -> Worker: INLINE_SAVE(captureId,candidateIndex)
 Worker -> Worker: Reconstruct server-validated payload\nReuse stable event UUID
 Worker -> GotIt: POST /captures\nIdempotency-Key + payload
+GotIt -> Core: Check vocabulary.write entitlement before save
 critical Atomic save
   GotIt -> DB: Advisory lock by user+event
   alt Existing receipt, same hash

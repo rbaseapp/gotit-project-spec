@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-05 - SCR-X01 / SCR-X02 free Google results
+
+An authenticated free learner can use the existing Google action to reach preview results through explicit `dictionary`. No extension UI/package change is required. Saving remains subscription-gated and AI retains its paid gate. See UC-02A and [rollout evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-01 — SCR-10 / SCR-PC-00A אווטאר מורה
 
 לשני המורים ארבע צורות פה במעברים רציפים, מצמוץ בדיבור ונשימה עדינה שאינה

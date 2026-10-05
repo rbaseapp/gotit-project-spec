@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-05 - Google translation for free accounts
+
+Explicit Google (`dictionary`) preview is implemented and locally verified for authenticated free accounts, including expired trials, in the existing Chrome popup and inline API. Saving still requires `vocabulary.write`; AI and auto/profile routing retain their existing gates. [Source SHA, tests and deployment status](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-01 — אווטארים, נפרסו ונבדקו בנכסי Production
 
 `gotIt-front@67034504f698e0c928ea1b703f5c35a116e5d0dd` משפר תנועת פה ומצמוץ

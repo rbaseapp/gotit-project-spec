@@ -112,6 +112,7 @@ Status: Stable / Conditional / Partial / Planned / Open / WIP.
 | FR-CAP-005 | candidate provenance חתום | Must | token scope/expiry verified | Stable |
 | FR-CAP-006 | explicit sense merge/new | Must | auto blocked if senses exist | Stable |
 | FR-CAP-007 | idempotent save | Must | same UUID/payload same receipt | Stable |
+| FR-CAP-008 | Google preview for authenticated free accounts | Must | Explicit dictionary preview succeeds without vocabulary.write, including expired trials; no AI or save access granted; unauthenticated and malformed requests rejected | [Evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout) |
 | FR-LIB-001 | list/search/filter/sort/page | Must | bounded pagination | Stable |
 | FR-LIB-002 | semantic edit עם revision | Must | evidence reset/history preserve | Stable |
 | FR-LIB-003 | pause/resume/archive/delete/restore | Must | user and learning states separate | Stable |

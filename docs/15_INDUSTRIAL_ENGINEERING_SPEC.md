@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-05 - P04 free Google preview
+
+FR-CAP-008 / UC-02A separates translation preview from the P05 vocabulary save control: authenticated free learners may preview an explicit dictionary translation; saving and paid AI retain their existing gates. Identity, bounded inputs, provider validation, scoped traces and rate limits remain P04 controls. No learning progress or XP is inferred from preview. [Source and evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-01 — English path prior-knowledge control
 
 In the PACK-01 / UC-04A flow, the learner may declare one previewed word or a full unit already known before installation. Control points: validate that all IDs belong to the accessible pack, write application-scoped known state once, carry repeated source forms across this path, exclude known entries from pack practice, and count declared knowledge separately from evidence-backed mastery. This reduces repeated teaching while preserving learning evidence and XP integrity. Monitor the share of units skipped and reversals separately from actual mastery; no target KPI threshold is asserted. Backend `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` passed disposable PostgreSQL regression; Web/deployment pending.

@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## UC-02A - Translate with Google without a paid plan
+
+Actor: authenticated free learner, including an expired trial. Trigger: Google translation in SCR-X01 popup or SCR-X02 inline. Submit bounded text with explicit `dictionary` to P04; Backend validates identity/input, invokes configured non-AI translation, stores bounded trace and returns signed candidate meanings. Success ends at showing the translation. A separate save still requires `vocabulary.write`; AI and auto/profile requests retain their existing gates. Invalid auth/input and unavailable provider use existing error/preview states. Maps FR-CAP-008 and SEQ-03; [evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
+
 ## 2026-10-01 — חיווי המורה ב־UC-07 / UC-11
 
 בהשמעת המורה שנבחר, האווטאר מציג צורות פה לפי מעטפת העוצמה וממצמץ עצמאית;

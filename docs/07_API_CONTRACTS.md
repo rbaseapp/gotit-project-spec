@@ -136,8 +136,10 @@ Profile patch fields: `defaultSourceLanguage`, `defaultTranslationLanguage`,
 
 | Method | Path | Auth נוסף | Contract |
 |---|---|---|---|
-| POST | `/captures/preview` | `vocabulary.write`; paid ל־AI | preview |
+| POST | `/captures/preview` | authenticated dictionary: no write entitlement; other methods: vocabulary.write; explicit AI: paid/add-on checks | preview |
 | POST | `/captures` | `vocabulary.write` + idempotency | save/merge receipt |
+
+Free Google contract (FR-CAP-008, `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`): explicitly send `translationMethod: "dictionary"`. Authentication, scoped lookup, strict validation, rate limits and signed provenance remain required. This method cannot route to AI. `auto` and omitted methods retain the existing write gate because configured routes/profile preferences can select AI. Save remains separately gated. Response schemas do not change; existing Store clients are compatible. [Rollout evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
 
 Preview input:
 
