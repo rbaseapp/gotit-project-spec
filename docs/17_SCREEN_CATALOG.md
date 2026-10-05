@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+SCR-UX-01 `/courses` is the program selector; new intake remains `/courses?new=1`. SCR-UX-02 `/history` offers bounded history/report access and actual session resume. SCR-UX-03 `/achievements` is user-opened. Existing SCR-02/03/04/09/10 and SCR-PC screens receive shared responsive styles and flow refinements. No decorative task-stage or unsupported microphone-free teacher is enabled. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 SCR-01 gains verification, resend countdown, password confirmation and forgot/reset steps, error/retry states and explicit return to login; implemented and locally verified at Web `da913168f85baddc844978412058cf888117e85c`; production pending. [Flow and status](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).

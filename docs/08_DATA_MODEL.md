@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+No migration/table/column changed. Selected program/home language are scoped local presentation keys; preparation draft is validated sessionStorage with a 30-minute TTL and user/application/language/course context. Library return query contains bounded filter/page/selection context. None is authoritative learning evidence or a durable voice session. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 Core migration `1790000010000_email-auth-challenges` adds `core.email_auth_challenges` and `core.auth_request_limits`; existing identity/product schemas are unchanged. [Keys, fields, retention and migration evidence](27_EMAIL_AUTH_RECOVERY.md#data-and-security).

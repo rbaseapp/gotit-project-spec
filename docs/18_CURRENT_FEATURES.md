@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`: UX 2.1 navigation/screens, answer-language letter input, article retry and return contexts are implemented/local-only. No deployment, original-audio replay, durable voice resume, new badges/gifts/ranks, teacher-station readiness or text AI teacher is claimed. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 Email verification and password reset are locally/integration verified in Core; Web is locally verified at `da913168f85baddc844978412058cf888117e85c`; Chrome 1.4.5 is locally verified at `46dff89bbc974d932abc7228f09ce23198954a34`; production activation and Store publication remain pending. This supersedes historical missing-feature entries without claiming deployment. [Current source/evidence](27_EMAIL_AUTH_RECOVERY.md).

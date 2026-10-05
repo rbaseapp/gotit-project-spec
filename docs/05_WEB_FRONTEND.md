@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` adds four root destinations, compact mobile shell, Programs/History/Achievements, scoped next action, independent games, interactive spelling alphabets, preserved library/preparation context and readable-before-publication articles. Existing domain APIs/authority remain. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Web email verification and recovery
 
 Web source `da913168f85baddc844978412058cf888117e85c` adds EmailAuthForm login/register/verify/forgot/reset modes, eight-locale copy and exact gateway routes. The accepted registration response is a challenge, never a session. Verification/reset returns to login; ?auth=register and ?auth=reset carry only the mode. Locally verified; production pending. [Canonical behavior and evidence](27_EMAIL_AUTH_RECOVERY.md).

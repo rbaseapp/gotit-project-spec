@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+P06/P08/P09 now retain navigation context and offer full-alphabet answer input without changing mastery/XP/scheduling authority. P10/P11 separate readable preview from publication confirmation. P12/P13 retain the two approval gates, version-specific evidence and report/save semantics; preparation drafts are not active lessons. Optional achievements measure existing projections only; no new KPI thresholds or reward economy. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 The identity process adds mailbox proof before account/session creation and a recovery path with all-session revocation. Invalid/expired/reused codes stop the process; no user/trial is created by merely requesting a code. [Controls, proposed KPIs and flows](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).

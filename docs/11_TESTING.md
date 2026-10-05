@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` passed `npm.cmd run check`: typecheck/lint/build, 206 Vitest and 17 gateway cases. Full `npm.cmd run test:responsive -- --workers=4 --reporter=json`: 391/391. Regression covers alphabet metadata, click/IME/capacity, stable reading retry, cross-owner/expired drafts, contexts, explicit language program selection, touch/viewport/provider-event fixtures. Real provider/device/DEV mutations remain unverified. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Chrome verified email entry points
 
 Chrome `46dff89bbc974d932abc7228f09ce23198954a34`: npm run verify passed typecheck, 41 tests, build and manifest/security checks; npm run package validated version 1.4.5 and absence of manifest.key. Regression covers no fetch on legacy registration and mode-only Web URLs. [Evidence](27_EMAIL_AUTH_RECOVERY.md).

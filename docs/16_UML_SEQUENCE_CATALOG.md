@@ -1,5 +1,9 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+SEQ-13 / P06/P08/P10/P11 records independent word-game return context, language metadata, authoritative attempts and stable article-publication retry. [Source](../uml/13-ux-context-reading.puml). [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 SEQ-01 now includes mailbox-code verification, explicit login and password recovery with session revocation. [Contract and release evidence](27_EMAIL_AUTH_RECOVERY.md).

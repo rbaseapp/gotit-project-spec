@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+Record `gotIt-front@a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` on DEV feature branch: compact responsive redesign, independent game flow, clickable spelling letters, contexts, current-message lessons and immediate reader/stable publication retry. 206 unit, 17 gateway, 391 browser cases passed locally. No server release: Backend DEV targets production DB. [Coverage and evidence](docs/28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email rollout preparation
 
 All three source SHAs are pushed to main. Full production DB backup and read-only preflight passed; all Resend DNS records are published. Resend domain verification passed; action-time approval for the scoped sending key remains pending. Core/Web new releases are not deployed; Store automation is unavailable and 1.4.5 remains a local validated archive. [Exact checkpoint](docs/27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).

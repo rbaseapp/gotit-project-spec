@@ -1,5 +1,9 @@
 # 12 — מצב, פערים ומפת דרך
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+UX 2.1 existing-contract UI implementation/local gates are complete for the coverage in 28. Release remains blocked by DEV Backend DB isolation. Guided task/stage protocol, microphone-free text teacher, durable voice resume/billing pause, new reward economies and readiness-based teacher stations remain proposed; six-locale new helper copy uses English fallback. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 FR-AUTH-009/010 are implemented and locally/integration verified in Core; client rollout, verified sending domain and live acceptance remain release gates. [Current status](27_EMAIL_AUTH_RECOVERY.md).

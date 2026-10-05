@@ -1,5 +1,9 @@
 # 00 — תקציר ומפת מסמכים
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+UX 2.1 DEV redesign is locally implemented and verified; server release remains blocked by Backend DEV targeting the production DB. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 Email verification/reset: Core is locally and integration verified; provider, clients and production acceptance are tracked in [27](27_EMAIL_AUTH_RECOVERY.md).

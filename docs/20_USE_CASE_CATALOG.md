@@ -1,5 +1,16 @@
 # 20 — קטלוג Use Cases
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+| ID | Flow | Alternatives/control |
+| --- | --- | --- |
+| UC-UX-01 | Captured/library/pack words → smart/manual game → same origin | No program required; selected words and library context retained; server owns queue/scoring. |
+| UC-UX-02 | Program/free lesson preparation → independent warmup → preparation | Teacher/support/topic draft scoped to user/app/language/course; expiry/corruption ignored; no auto-start. |
+| UC-UX-03 | AI preview → immediate reader → automatic publication | Failure retains text and stable publication intent; quiz only after saved reading identity. |
+| UC-UX-04 | Explicit program selection → language-specific home next lesson | No first-course default; empty-language course stays available; existing active session has priority. |
+
+[Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 UC-01 registration now requests a code before creating an account; verification chooses a password and returns to login. Recovery requests a code generically, replaces the password and revokes every session after proof. [Alternatives, error states and acceptance](27_EMAIL_AUTH_RECOVERY.md#process-screens-and-compatibility).

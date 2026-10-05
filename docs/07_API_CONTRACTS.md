@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+No route/payload/schema/enum changed. Web now uses the existing GET `/practice/sessions/:id/study` to resolve writing answer-language metadata without entering a study screen. POST `/reading` follows preview automatically; failed retries preserve publicationToken and Idempotency-Key. API owners and Chrome parsers remain unchanged. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 The register response changes to 202 accepted without tokens. Four named OTP/recovery routes are added; password login can return EMAIL_VERIFICATION_REQUIRED. [Payloads, errors, scope, limits and client compatibility](27_EMAIL_AUTH_RECOVERY.md#behavior-and-api-contract).

@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+FR-UX-001–006 → UC-UX-01–04 → P06/P08/P09/P10/P11/P12/P13 → SCR-UX-01/02/03 plus existing learning screens → SEQ-13 → Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` → learning-navigation/library-context/lesson-draft/letter-keyboard/live/private-lesson/ux-navigation tests. API/DB/Chrome contracts unchanged. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Chrome verified email entry points
 
 Chrome `46dff89bbc974d932abc7228f09ce23198954a34`: FR-AUTH-001/009/010 -> popup Web entry points / background registration guard -> test/email-registration.test.ts. Packaged 1.4.5, Store pending. [Canonical](27_EMAIL_AUTH_RECOVERY.md).

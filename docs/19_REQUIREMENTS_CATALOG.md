@@ -1,5 +1,18 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+| ID | Requirement | Acceptance |
+| --- | --- | --- |
+| FR-UX-001 | Four roots; independent word games; preserve origin/search/filter/page/selection | library-context, learning-navigation, ux-navigation |
+| FR-UX-002 | Clickable full answer-language alphabet; repeats/delete/clear; native keyboard/IME retained; no hidden-answer bank | letter-keyboard, live writing cases, ux-navigation |
+| FR-UX-003 | Next action uses real resume or explicitly selected program per language, including a course with no saved words | ux-navigation program case; dashboard-home |
+| FR-UX-004 | Generated article immediately readable; same token/event/payload on failed publication retry | live publication failure regression |
+| FR-UX-005 | Actual teacher choice/support rules; scoped expiring preparation return; transcript replay labeled accurately | private-lesson, lesson-draft, private-lesson-flow |
+| FR-UX-006 | Optional authoritative achievements and reduced motion; no invented reward/evidence rules | live practice receipts, avatar-motion, responsive cases |
+
+NFR-UX-001 remains responsive reflow/touch coverage; NFR-UX-002 remains partial accessibility, not a WCAG certification. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 FR-AUTH-001 now requires no identity/session before proof; FR-AUTH-009/010 require scoped single-use expiring codes, bounded retries, matching passwords and recovery revocation. Core locally/integration verified; client and live acceptance pending. [Acceptance and source](27_EMAIL_AUTH_RECOVERY.md).

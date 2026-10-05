@@ -1,5 +1,9 @@
 # 09 — אבטחה ופרטיות
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+Return destinations use an internal allowlist; route context cannot authorize resource access. Drafts are owner-scoped/validated/expired; alphabet metadata never renders expected answers. Optional transcript replay uses browser/platform TTS (voice availability varies), not stored teacher audio; no new recording is persisted. Product writes against DEV are blocked operationally because its Backend still points at production; credential change requires owner handoff. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email verification and recovery
 
 Mailbox proof gates password identity; recovery revokes both token types, and verified OAuth removes pre-verification passwords. Resend receives only recipient/security-email content. Response-body anonymity is implemented; constant-time anonymity is not claimed. [Threat controls and provider boundary](27_EMAIL_AUTH_RECOVERY.md#data-and-security).

@@ -1,0 +1,44 @@
+@startuml
+title UX 2.1 DEV: word-game context and readable article publication
+actor Learner
+participant "Web" as Web
+participant "GotIt Backend" as Backend
+database "Product DB" as DB
+Learner -> Web: Choose words and game
+Web -> Web: Retain bounded internal return context
+Web -> Backend: POST practice/sessions (same creation intent on retry)
+Backend -> DB: Scope, select and snapshot items
+Backend --> Web: Session
+Web -> Backend: POST session/exercises
+Backend --> Web: Exercises with private answer omitted
+opt Typed exercise
+  Web -> Backend: GET session/study
+  Backend --> Web: Existing study cards
+  Web -> Web: Retain language pair only; show full alphabet
+end
+Learner -> Web: Click letters or type using keyboard/IME
+Web -> Backend: POST practice/attempts (stable intent)
+Backend -> DB: Atomic attempt and authoritative learning/XP updates
+Backend --> Web: Receipt
+Learner -> Web: Finish
+Web --> Learner: Summary and same originating context
+Learner -> Web: Generate reading
+Web -> Backend: POST reading/preview
+Backend --> Web: Generated text and publicationToken
+Web --> Learner: Readable text immediately
+Web -> Backend: POST reading (publicationToken, Idempotency-Key)
+alt Published
+  Backend -> DB: Idempotent publication
+  Backend --> Web: Saved reading
+  Web --> Learner: Saved reader and quiz entry
+else Technical failure
+  Backend --> Web: Error or ambiguous timeout
+  Web --> Learner: Keep the same text; offer retry
+  Learner -> Web: Retry publication
+  Web -> Backend: Same publicationToken, payload and Idempotency-Key
+end
+note over Web,DB
+Local fixture verification does not authorize DEV writes.
+Release waits for DEV Backend database isolation.
+end note
+@enduml

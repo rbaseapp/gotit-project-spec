@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-05 - UX 2.1 DEV checkpoint
+
+UX Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` stays on `feat/ux-2-1-dev`. No app-main push or Render release was performed. Core DEV DB and Web proxy origins are isolated; Backend DEV remains production-targeted. Retarget Backend with validated DEV runtime access before selecting/deploying this branch and authenticated DEV smoke. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
+
 ## 2026-10-05 - Email rollout preparation
 
 Email-auth rollout preparation: full backup with Core/migration metadata and verified TLS passed; public DNS for auth.rbaseapp.com is published. Resend domain verification passed; API-key creation/storage approval remains pending; Core/Web are still on their previous Live SHAs. [Exact archive hash, preflight and pending actions](27_EMAIL_AUTH_RECOVERY.md#production-preparation-checkpoint-2026-10-05-1809-utc-onward).
