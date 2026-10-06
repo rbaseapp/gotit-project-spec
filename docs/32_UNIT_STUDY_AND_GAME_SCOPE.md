@@ -2,6 +2,40 @@
 
 ## Current delivery update
 
+### All unit smart entries and legacy resumes — 2026-10-06
+
+The owner still observed unordered smart learning on the ori account. Read-only
+inspection reproduced will/there/give in two already-open unit-1 tabs. One URL
+lacked `batch=1`; the other also had a stale session created before the ordering
+release. The previous fix depended on that URL marker and did not replace legacy
+session pools.
+
+Backend `c6d8a56ab9b51ed4d96c82dfb2a065e9cf93af41` now applies curriculum batching
+by default to every smart-review pack session, including requests with no new
+flag. The session DTO/receipt exposes `curriculumOrder`. Existing unordered
+pack-smart sessions cannot issue further exercises; their stored attempts remain.
+Web `0af392da26ca20ac20a3c36fc7cecc021cd3fc4a` requests order on every pack-smart
+entry, skips the separate memorization deck there, and replaces an active legacy
+resumed pool with a fresh ordered batch. Dashboard resume links preserve pack
+scope. A legacy session is retained without deleting or rewriting its evidence.
+
+Validation passes: 33 real PostgreSQL unit/lifecycle cases, nine focused backend
+receipt/catalog contracts, 48 Web product/live cases including false/missing
+resume markers, and eight browser cases including marker-free URLs at 320px and
+1487px. Typechecks, Web lint/build, formatting and diff checks pass. The old
+lifecycle assertion expected all ten eligible pack words for count=5; it now
+expects the requested five-word batch. Both exact commits are confirmed Live in
+DEV Render (Backend 45.8s, Web 53.9s); both readiness endpoints return 200.
+Authenticated unit-button smoke loads the current unit context and daily-allowance
+message. This account cannot start its next new word today, so a live completed
+ordered round is not claimed. Direct smart-URL navigation/reload is blocked by
+Chrome with ERR_BLOCKED_BY_CLIENT; navigating from the unit screen works.
+The two stale empty game tabs were returned to the unit word page, preserving
+their existing session evidence. Before/after evidence:
+`C:/Users/Ori/AppData/Local/Temp/unit-order-legacy-before.png` and
+`C:/Users/Ori/AppData/Local/Temp/unit-order-all-entries-dev.png`.
+The user's daily new-word preference remains unchanged; production is excluded.
+
 ### Ordered unfinished unit batches and learned badges — 2026-10-06
 
 This supersedes the review-priority ordering in the previous delivery. Backend
