@@ -2,6 +2,36 @@
 
 ## Current delivery update
 
+### Restore unit image and example routes on active DEV ? 2026-10-07
+
+Backend `1a1268b65aff594069d739042ddc084ce0d98512` (including `2bac7bb`) restores the unit media
+contract missing from the current DEV baseline: authenticated read-only
+`GET /word-packs/:id/entries/:entryId/image`, and practice-gated
+`POST /word-packs/:id/entries/:entryId/image` and `/example` with strict `{}` bodies.
+The GET returns an owned current-revision image or `image: null`; the Web then
+uses the POST to retrieve/generate a cached catalog image. Example POST returns
+`exampleText` and `generated`. Existing provider configuration, quotas, bounded
+output, shared persistent image assets and pronoun sense briefs are reused.
+The read-only lookup returns `image:null` for English personal pronouns, forcing
+the client to request the sense-versioned catalog asset rather than display an
+old owned lexical image (e.g. a wax seal for I). Viewing media creates no learning
+items, sessions, completion or XP. The ordered
+batch and history fixes from `4c7f7bc` remain in this descendant commit.
+
+Verification: build passes, all 215 fast tests pass (including real authenticated
+app route/UUID/body/ownership forwarding checks and provider gating), and six
+disposable PostgreSQL tests pass covering media persistence, wrong-unit rejection,
+no learning writes and the complete ordered-batch regression. No migration or
+credential/configuration change. Initial `2bac7bb` deployed successfully to DEV
+in 48.2s, and live unit viewing confirmed the example sentence while exposing the
+stale owned pronoun asset. The descendant deployed successfully and is confirmed
+Live in DEV Render (37.0s); readiness returned HTTP 200. Reloading the owner
+account unit words screen shows the correct I illustration (a person pointing
+to themselves), a loaded image, and "I am here. (??? ???)" with sentence playback.
+The reported image GET and example POST no longer return route-not-found. No
+learning responses or known-word changes were submitted during live acceptance.
+
+
 ### Repair the active DEV API and preference-sized batches ? 2026-10-07
 
 The reported packId validation failures were reproduced against the contract of

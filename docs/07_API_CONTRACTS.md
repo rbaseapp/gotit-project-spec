@@ -215,6 +215,9 @@ mark/return mastery, priority normal/high, hard/clear.
 |---|---|---|
 | GET | `/word-packs` | catalog + installed/progress |
 | GET | `/word-packs/:id` | pack + entries |
+| GET | `/word-packs/:id/entries/:entryId/image` | owned current-revision cached image or `image:null`; read-only |
+| POST | `/word-packs/:id/entries/:entryId/image` | strict `{}`; practice gate; cached/generated catalog image |
+| POST | `/word-packs/:id/entries/:entryId/example` | strict `{}`; practice gate; `exampleText`, `generated` |
 | POST | `/word-packs/:id/add` | `{entryIds:[1..100]}` |
 | PUT | `/word-packs/:id/known` | `{entryIds:[1..100],known:boolean}`; returns known count |
 | DELETE | `/word-packs/:id?mode=` | `archive_exclusive | keep_words` |
