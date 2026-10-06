@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Canonical Web voice sample and smart entry repair
+
+Web `2ad61a31a33cdb52809c85a0b2abd78a6a6de983` repairs real DEV teacher playback with allowed Blob URLs and cleanup, and routes scoped library/unit/dashboard entry through the smart ready/pace screen. Security policy is unchanged. 224 unit/20 gateway, type/lint/build/format and targeted three family/eight idle/four drag cases pass; stable full browser gate and this follow-up deployment remain pending. [Source, failure diagnosis and trace](docs/30_FIGMA_FULL_DEV.md#web-playback-and-entry-follow-up--source-checkpoint).
+
 ## 2026-10-06 - Complete canonical Web learning/account source
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements desktop/mobile canonical screen families, server guided commands/review/replay, actual reports, scoped unit vocabulary/smart practice, independent games/reading, account/minutes and persisted UI preferences. 224 unit / 20 gateway / nine new browser cases, type/lint/build/format/audit pass; complete 406-case browser gate and CI running. Backend is Live in DEV; Web rollout/provider acceptance pending. Scope exclusions remain owner-approved. [Exact source and behavior](docs/30_FIGMA_FULL_DEV.md#web-checkpoint-pending).

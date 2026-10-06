@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-06 - Canonical guided Web acceptance follow-up
+
+Web `2ad61a31a33cdb52809c85a0b2abd78a6a6de983`: 224 unit / 20 gateway, type/lint/build/format pass. Voice regression validates allowed MP3 Blob playback/cleanup; three library-to-ready families preserve language, eight idle-resume and four clipped-board touch cases pass. Initial full gate was 399/406; stable full gate and corrected live provider smoke are pending. [Exact diagnosis and checkpoint](30_FIGMA_FULL_DEV.md#web-playback-and-entry-follow-up--source-checkpoint).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 PostgreSQL red/green regression verifies ten distinct matching words after review-date changes; 209 fast and 63 integration tests passed. Full authenticated DEV gameplay passed. Recurring boards and mobile drag regressions cover full ten-answer sessions, fresh state, completion, touch coordinates under a transformed ancestor, cancellation, outside release, RTL and four-row scrolling. [Canonical commands, counts and verification limits](29_MEANING_MATCHING_ROUNDS.md).

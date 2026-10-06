@@ -247,3 +247,36 @@ documented above; rollback retains additive schema and deploys compatible older 
 
 Web deployment, authenticated guided lesson/report/replay and real provider acceptance
 remain pending. Server readiness alone does not prove these user flows.
+
+## Web playback and entry follow-up — source checkpoint
+
+Web [`2ad61a31a33cdb52809c85a0b2abd78a6a6de983`](https://github.com/rbaseapp/gotIt-front/commit/2ad61a31a33cdb52809c85a0b2abd78a6a6de983)
+follows `2559d5b` on the same DEV-only branch. Authenticated DEV smoke reproduced a
+teacher sample failure: `media-src 'self' blob:` correctly rejects the previous
+`data:` URL. The fixed component decodes the bounded server MP3 into a Blob URL,
+pauses/revokes it on replacement/unmount and retains failure retry. CSP, ownership,
+fixed sample text, AI quota and microphone permissions are unchanged.
+
+FR-GUIDED-006 / UC-GUIDED-01 / SCR-10 -> TeacherVoicePreview ->
+`teacher-voice-preview.test.tsx`: assert MP3 Blob size/type, allowed source, failure
+retry, no lesson/preferences mutation and URL cleanup. FR-UX-007 / UC-UX-05 /
+SCR-UX-05 -> dashboard/library/detail/unit/pack links -> `/learn/smart` -> selected
+pace -> session, retaining language/IDs/pack/return. Legacy direct bookmarks and
+actual resume remain compatible; server scheduling remains authoritative.
+
+Typecheck/lint/build, 224 unit and 20 gateway tests, formatting/diff checks pass.
+Three 320/390/1487px account/course/library-to-ready families, eight HE/EN idle
+resume cases and four touch-board cases pass. Filter tests open the new outer
+disclosures. Compact touch tests hit-test a reachable card center and fully visible
+drop target within the scroll clip; they no longer synthesize a drop into clipped
+content. Idle simulation advances 76 seconds with screenshot work and allows a
+60-second CI timeout without relaxing response assertions.
+
+The initial complete browser gate was 399/406. Disclosure assumptions, clipped
+touch input, a source reload during geometry capture and overloaded idle timing
+were diagnosed; the stable final 406-case gate is running. Do not count targeted
+reruns as a completed full gate. `2559d5b` is already Live at
+`dep-db2fmdgm7kps73emm96g`; exact served CSS SHA256 matches the local build
+`e58178ac04b1c5f7182bab988c53bf05af891656b9e0067e71ba647896507309`.
+The `2ad61a3` rollout and real corrected sample/guided provider smoke are pending
+at this immediate source-to-spec checkpoint. Production and Core are untouched.
