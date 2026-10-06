@@ -1,5 +1,12 @@
 # יומן שינויים
 
+## 2026-10-06 — Preserve concurrent DEV Backend work
+
+Backend merge `207275d` combines pronoun repair `417a7be` with the independently
+advanced DEV reading-guide source `19ca338`. Clean merge; 243 fast tests and
+typecheck pass. Web `7b82902` is published to DEV; final live verification follows.
+[Delivery evidence](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Visible unit context during games
 
 Web `7b82902` keeps the unit title and exclusion explanation visible inside games

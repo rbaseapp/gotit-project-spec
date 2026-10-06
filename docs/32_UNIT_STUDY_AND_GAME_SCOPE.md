@@ -2,6 +2,12 @@
 
 ## Current delivery update
 
+Backend delivery merge `207275d83a2b16a10193270d6fc877f4852f93b8` preserves concurrent
+DEV reading-guide release `19ca338` and the pronoun repair `417a7be`. The merge is
+clean and passes typecheck and all 243 combined fast tests; the media/scope real
+PostgreSQL regression already passed on the repair. No added schema/config changes.
+Web follow-up `7b82902` is published to DEV; final exact deployments remain to verify.
+
 Web follow-up `7b829029f82e2fba64bfb1c6b3727c20ee2e7ef5` displays the server unit
 title and unit-only practice explanation during launch and active play, and routes
 image reads through the catalog study authority so pronoun cache policy applies.
