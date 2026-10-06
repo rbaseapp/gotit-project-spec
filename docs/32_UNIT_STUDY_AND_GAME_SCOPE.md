@@ -2,6 +2,14 @@
 
 ## Current delivery update
 
+Web follow-up `7b829029f82e2fba64bfb1c6b3727c20ee2e7ef5` displays the server unit
+title and unit-only practice explanation during launch and active play, and routes
+image reads through the catalog study authority so pronoun cache policy applies.
+The 320px regression failed before and passed after; all four unit-study browser
+cases plus press-to-talk, typecheck, lint and build pass. Follow-up deployment is
+pending. Backend push encountered an independently advanced DEV branch; integrate
+its changes without force-push before delivery.
+
 Backend follow-up `417a7be16cdf7c8e54c3e8ce909a2fc20011d66d`: real DEV acceptance
 showed an unrelated stock seal for the pronoun I. Seven English personal pronouns
 now use explicit grammatical-referent visual briefs, skip ambiguous stock searches

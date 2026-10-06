@@ -1,5 +1,12 @@
 # יומן שינויים
 
+## 2026-10-06 — Visible unit context during games
+
+Web `7b82902` keeps the unit title and exclusion explanation visible inside games
+and applies server catalog image policy. Red/green mobile regression, four focused
+unit browser cases, press-to-talk, type/lint/build pass. DEV follow-up pending while
+preserving concurrent branch work. [Details](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Pronoun image live acceptance correction
 
 Backend `417a7be` repairs the observed unrelated stock image for I with grammatical
