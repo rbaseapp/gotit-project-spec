@@ -4,7 +4,7 @@
 
 Owner request: center/enlarge game meanings; order recall ratings good/hard/again in green/orange/red; readable pronunciation controls, meaning and automatic audio with replay; larger phrase-aware letter tiles; immediately visible Basic/Good/Advanced level choices; distinct typed recall and letter assembly; side-by-side source/meaning with native-alphabet pronunciation beneath source.
 
-Work is based on the currently deployed DEV Figma branches. Release target clarification is pending because the standing main-delivery instruction differs from the existing DEV-only rollout baseline. No new source has been pushed or deployed. Do not merge the preceding DEV redesign into production implicitly.
+Work is based on the DEV Figma branches. The owner follow-up confirms that the changes must be visible in DEV; DEV rollout is now authorized. Historical checkpoints below retain their original verification state. See the latest rollout section for current source and deployment status.
 
 ## Backend source checkpoint
 
@@ -58,3 +58,8 @@ No provider was called by mocked browser tests, no physical microphone/audio acc
 Final Web source `0015e1feffeeb30126665d5d676bdace598268ad` follows `47d80b6`. A unit-filtered library may return 100 rows; missing guides now continue in sequential batches of at most 30 rather than stopping after the first batch. Completed guides remain visible if a later request fails; cancellation prevents further batches. Each generated batch remains subject to the existing server quota.
 
 Two new unit regressions pass: 65 missing items produce 30/30/5 requests and guides for all items; a later provider failure preserves the first result and stops further requests. Both library browser scenarios pass again at 320/1487px. Typecheck, lint, build, changed formatting and diff checks pass. The preceding 225-unit and broader browser evidence belongs to the preceding Web checkpoint; the changed batching behavior is covered by these focused follow-up checks. No source push or deployment has occurred; release-target clarification remains open.
+
+
+## DEV rollout resumed - Backend integration
+
+Owner requested visible DEV changes and faster completion. Backend `19ca3389c530beb4394cc2eeb49d7be2742195b7` merges the concurrently published unit-study source `48ec269` with native guides `fc9279c`; no changes are dropped and the combined API catalog regression expects 90 entries. Build/type validation, all 43 focused course/reading-guide/unit-study tests, merge-file formatting and whitespace checks pass. Source publication and exact live smoke are in progress; no migration or production deployment.

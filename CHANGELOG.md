@@ -434,3 +434,8 @@ Web `47d80b612e4280f199e8571e5426d6a73e709ce6` implements centered meanings, ord
 ## 2026-10-06 - Complete reading guides for large unit lists
 
 Web `0015e1feffeeb30126665d5d676bdace598268ad` continues bounded guide batches through every missing unit word and preserves earlier results if a later provider call fails. Two new unit/two repeated browser checks and type/lint/build/format pass. Publication/deployment remain pending. [Exact evidence](docs/32_PRACTICE_CLARITY.md#large-unit-list-follow-up).
+
+
+## 2026-10-06 - Resume practice clarity DEV release
+
+Backend `19ca338` preserves concurrent DEV unit study and integrates native guides; 43 focused tests and build pass. Owner confirms DEV target. [Rollout evidence](docs/32_PRACTICE_CLARITY.md#dev-rollout-resumed---backend-integration).
