@@ -2,6 +2,45 @@
 
 ## Current delivery update
 
+### Restore the separate Figma map and unit browser — 2026-10-07
+
+The owner reported that the learning map had disappeared and supplied canonical
+Figma screens 43:2557 (MAP) and 43:3083 (LEVELS). Live DEV was manually running
+Web e21950a, rather than the configured DEV branch head; it embedded a compact
+unit browser above the roadmap. The repair is based on that exact live release
+to retain its recent navigation and viewport improvements. Application main and
+the earlier DEV branch are untouched.
+
+Web 9eca3263a08d5fac9a54aeb85d054dae7383ee20 restores a dedicated map, level
+selector, all-levels button, current unit progress, next activity, upcoming route
+and future-unit link. All levels opens a separate screen with three level cards,
+search, a scrollable unit list and selected-unit details. Clicking a unit updates
+the preview; Continue opens that unit's roadmap, and Words opens its existing
+word browser. Selection and browsing do not create learning evidence. Current
+unit, completion, counts and teacher availability use actual server data.
+
+The two full Figma design contexts and screenshots were inspected. Thirty-one
+SVG exports are stored locally with their original dimensions; components
+compose the original icons and circles. The existing application shell is
+preserved. New copy is available in all eight UI languages. Verification:
+46 component/navigation/i18n cases, six practice-scope browser cases, nine map
+browser cases (320, 390, 768 and 1487px, populated unit preview, image geometry,
+level progression and no practice writes), typecheck, lint and build pass.
+One pre-existing test still targeted the former Choose Game text although the
+live baseline used Smart Practice; its label expectation now follows the actual
+button. Existing ordered/unlimited unit practice remains server-controlled.
+
+The fix is published only on fix/restore-figma-learning-map. Render DEV Web
+srv-dar6dng473hc73a0ns1g reports commit 9eca326 as Live (52.0-second deploy),
+with its configured branch and disabled auto-deploy setting preserved. The ready
+endpoint returns HTTP 200. Live verification in the owner's existing account
+shows the restored map with 3/50 completed words and a separate 20-unit level
+browser. Selecting unit 2 updates its preview without starting practice;
+Continue opens unit 2's roadmap. No answers or learning evidence were submitted.
+Live screenshots are saved locally as restored-learning-map-dev-detail.png and
+restored-learning-levels-dev-detail.png in the user's temporary directory.
+Deploy: https://dashboard.render.com/web/srv-dar6dng473hc73a0ns1g/deploys/dep-db2njebbc2fs73f4l2tg.
+
 ### Unlimited ordered unit batches — 2026-10-07
 
 The owner clarified that the daily new-word preference must size a unit batch,
