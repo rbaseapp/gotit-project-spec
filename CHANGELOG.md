@@ -334,3 +334,5 @@ Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` f
   56 handlers מוצריים; שבעת נתיבי ניהול השיעור הפרטי החדשים חסרים בקטלוג.
 
 2026-10-06 ? Backend `ae2ae7f358a9d0b01fa6dcdcb4141b25431a96f1`: prevent premature repeated words across matching boards; red/green regression, 209 fast and 63 PostgreSQL tests passed. Deployment pending. [Evidence](docs/29_MEANING_MATCHING_ROUNDS.md#backend-follow-up-unseen-words-across-standalone-rounds).
+
+2026-10-06 ? Matching repair deployed: production Web `ffcebc8`, DEV Web `ffd766e`, both Backend services `ae2ae7f`. Exact SHA/Live, readiness and delivered assets verified; DEV ten-word three-board smoke passed with distinct vocabulary after the server fix. Production full gameplay remains limited by an empty account. Main fix `600aafd` is retained; unrelated gated auth code was excluded from the production release. [Release evidence and limits](docs/29_MEANING_MATCHING_ROUNDS.md#deployment-and-acceptance-evidence--2026-10-06).

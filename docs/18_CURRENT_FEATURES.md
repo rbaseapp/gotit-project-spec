@@ -2,7 +2,7 @@
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
-Server-backed drag practice now has a named recognition objective, recurring boards, shared green styling and viewport-aligned touch dragging. [Behavior, source and rollout](29_MEANING_MATCHING_ROUNDS.md).
+Production and DEV Web/Backend releases are Live, with full authenticated DEV acceptance and an empty-account production gameplay limitation. Server-backed drag practice now has a named recognition objective, recurring boards, shared green styling and viewport-aligned touch dragging. [Behavior, source and rollout](29_MEANING_MATCHING_ROUNDS.md).
 
 ## 2026-10-06 - Fullscreen game entry follow-up
 

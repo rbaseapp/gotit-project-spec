@@ -2,7 +2,7 @@
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
-Web-only targeted release; no migration, provider or configuration change. Verify exact Render source, readiness, delivered assets and authenticated round continuation. Preserve the separate DEV redesign branch. [Canonical rollout status](29_MEANING_MATCHING_ROUNDS.md).
+Targeted Web/Backend release is Live in production and DEV; no migration, provider or configuration change. Exact Render sources, readiness and delivered assets passed; full authenticated gameplay passed in DEV. Production gameplay is limited by an empty signed-in account. Preserve the separate DEV redesign branch. [Canonical rollout status](29_MEANING_MATCHING_ROUNDS.md).
 
 ## 2026-10-06 - Fullscreen game entry follow-up
 

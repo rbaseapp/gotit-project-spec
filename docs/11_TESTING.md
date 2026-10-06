@@ -2,7 +2,7 @@
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
-Recurring boards and mobile drag regressions cover full ten-answer sessions, fresh state, completion, touch coordinates under a transformed ancestor, cancellation, outside release, RTL and four-row scrolling. [Canonical commands, counts and verification limits](29_MEANING_MATCHING_ROUNDS.md).
+PostgreSQL red/green regression verifies ten distinct matching words after review-date changes; 209 fast and 63 integration tests passed. Full authenticated DEV gameplay passed. Recurring boards and mobile drag regressions cover full ten-answer sessions, fresh state, completion, touch coordinates under a transformed ancestor, cancellation, outside release, RTL and four-row scrolling. [Canonical commands, counts and verification limits](29_MEANING_MATCHING_ROUNDS.md).
 
 ## 2026-10-06 - Fullscreen game entry follow-up
 

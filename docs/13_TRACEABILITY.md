@@ -2,7 +2,7 @@
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
-FR-PRAC-007 -> UC-05 / P08 / SCR-03-04 / SEQ-04 -> Web LiveGameSessionPage, LiveDragDropBoard, production styles and eight locale catalogs -> live, drag-drop unit and browser regressions. [Exact source and release evidence](29_MEANING_MATCHING_ROUNDS.md).
+FR-PRAC-007 -> UC-05 / P08 / SCR-03-04 / SEQ-04 -> Web LiveGameSessionPage, LiveDragDropBoard, production styles and eight locale catalogs -> Backend unseen-first matching selection -> live, drag-drop unit/browser and PostgreSQL distinct-round regressions. [Exact source and release evidence](29_MEANING_MATCHING_ROUNDS.md).
 
 ## 2026-10-06 - Fullscreen game entry follow-up
 
