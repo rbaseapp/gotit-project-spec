@@ -2,7 +2,7 @@
 
 ## Source and status
 
-- Source repository: `gotIt-front`, commit `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`.
+- Source repository: `gotIt-front`, current release commit `0e88da53f679a142bf040a51b4c428b6652e0a72` (redesign implementation `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
 - Branch: `feat/ux-2-1-dev`; DEV-only owner instruction overrides app-main/production delivery.
 - Status: implemented and locally verified; **not deployed**. Production source/services/data were not changed by this task.
 - Report/route coverage is below. Design-only proposed capabilities are explicitly excluded from active-server claims.
@@ -11,6 +11,11 @@
 
 `npm.cmd run check` passed typecheck, lint, **206 Vitest tests**, build and **17 gateway tests**.
 `npm.cmd run test:responsive -- --workers=4 --reporter=json` passed **391/391** cases with no failures/skips/flaky cases.
+These full-browser counts apply to redesign commit `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`.
+For dependency-only release `0e88da53f679a142bf040a51b4c428b6652e0a72`, check passed
+again with 206 unit tests and **20 gateway/security tests**; the audit returned
+zero findings. Browser re-verification is delegated to the existing CI workflow
+and is pending for that new commit at this checkpoint.
 Tests use API and Realtime event fixtures. No real provider, microphone, billing or DEV product mutation was tested.
 Build retains the existing large-main-chunk and Zod annotation warnings. Physical devices, screen readers and production acceptance were not run.
 
@@ -71,6 +76,28 @@ The audit step failed for `source-map-js@1.2.1`, advisory
 Local `npm audit --omit=dev --audit-level=high --json` reproduced one high-severity
 finding; a patched compatible transitive dependency update is pending. This
 checkpoint does not claim final remote CI success.
+
+## Dependency patch and corrected TLS handoff (2026-10-06)
+
+Web commit `0e88da53f679a142bf040a51b4c428b6652e0a72` updates only the transitive
+`source-map-js` lock entry from 1.2.1 to 1.2.2 and adds three dependency regressions
+to `test:gateway`. Oversized section offsets and excessive cumulative nested
+offsets failed with 1.2.1 and passed with 1.2.2; normal indexed source-map lookup
+passed with both. Typecheck, lint, 206 unit tests, build and 20 gateway/security
+tests passed; production dependency audit reported zero vulnerabilities.
+There is no UI, API, schema, provider or learning-policy change in this patch.
+
+The owner's next Backend deployment `dep-db2a1gmi0phs73dtjdc0` failed in 30.8
+seconds with `PREFLIGHT_DATABASE_UNAVAILABLE`. The initial prepared Render URL
+omitted TLS configuration; a direct connection without TLS reproduced database
+code `28000`, `SSL/TLS required`. This was a preparation error in this task.
+The same local connection file was corrected to the DEV external hostname with
+`sslmode=verify-full`. A direct connection using the same pg connection-string
+configuration as Backend (without custom SSL overrides or disabling certificate
+validation) passed strict schema/privilege preflight: `schema: ok`,
+`privileges: ok`, `role: product-only`, 17 operational tables. No second password
+rotation or privilege change was made. Owner-controlled entry/submission of that
+corrected connection and a successful running DEV deployment remain pending.
 
 ## Scope and source
 

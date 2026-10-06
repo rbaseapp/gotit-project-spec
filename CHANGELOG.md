@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - DEV UX dependency patch and corrected TLS handoff
+
+Document Web `0e88da53f679a142bf040a51b4c428b6652e0a72`: source-map-js 1.2.2, two failure-first security cases plus normal mapping compatibility, passing type/lint/206 unit/build/20 gateway-security gates and zero audit findings. Record the initial prepared URL's missing TLS, failed Backend deploy, corrected `verify-full` connection and successful direct strict preflight. Owner Render save, new-SHA CI and DEV release acceptance remain pending. [Current checkpoint](docs/28_UX_2_1_DEV.md#dependency-patch-and-corrected-tls-handoff-2026-10-06).
+
 ## 2026-10-06 - UX DEV connection verification
 
 Update the release gate for `gotIt-front@a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`: the owner saved Backend DEV Core/database targets, but Backend deployment `dep-db29rjgm7kps73e2lptg` failed because the connection uses administrator `gotit_dev_user`. At the owner's request prepare the existing DEV `gotit_runtime` password; direct verified-TLS login and strict runtime preflight passed with unchanged privileges. Owner-controlled Render credential save and a successful running DEV deployment remain pending. Frontend redesign remains locally verified and not deployed. CI retry passed all code/browser/gateway/build steps but failed the audit for `source-map-js@1.2.1`; the audit finding also reproduced locally. [Current evidence](docs/28_UX_2_1_DEV.md#dev-connection-follow-up-2026-10-06).

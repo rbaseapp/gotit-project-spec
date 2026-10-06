@@ -348,3 +348,16 @@ provider/OAuth/Paddle acceptance, smoke after deploy ו־rollback readiness.
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+## 2026-10-06 — DEV UX dependency audit regression
+
+Source `gotIt-front@0e88da53f679a142bf040a51b4c428b6652e0a72` patches source-map-js
+1.2.1 to 1.2.2. New `test/source-map-security.test.mjs` rejects excessive direct
+and cumulative nested offsets and preserves normal indexed mappings. The two
+security cases fail on 1.2.1 and all three pass on 1.2.2. `npm.cmd run check`
+passed typecheck/lint, 206 unit tests, build and 20 gateway/security tests;
+`npm.cmd audit --omit=dev --audit-level=high --json` returned zero findings.
+The 391 browser passes on the previous redesign SHA were also confirmed in CI;
+new-SHA CI/browser and DEV-server verification remain pending.
+Direct verified-TLS DEV runtime login and strict schema/privilege preflight passed;
+this does not prove a successful Render runtime deployment or product writes.
+[Canonical release gate](28_UX_2_1_DEV.md).

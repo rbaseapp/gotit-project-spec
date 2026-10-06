@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-06 - DEV UX dependency patch and TLS correction
+
+Current DEV Web release is `0e88da53f679a142bf040a51b4c428b6652e0a72`, including the compatible source-map security patch. Latest local check and production dependency audit pass; remote re-verification and deployment are pending. The first prepared runtime URL omitted TLS and the owner's next Backend deploy failed. The corrected DEV URL uses `sslmode=verify-full` and passed direct pg login plus strict preflight; its owner-controlled Render save is pending. [Canonical evidence and remaining gate](28_UX_2_1_DEV.md#dependency-patch-and-corrected-tls-handoff-2026-10-06).
+
 ## 2026-10-06 - UX DEV connection follow-up
 
 Owner-saved Backend configuration now targets DEV Core and `gotit_dev`; the saved database role is administrator `gotit_dev_user`. Backend deployment `dep-db29rjgm7kps73e2lptg` failed with `GOTIT_DEDICATED_RUNTIME_ROLE_REQUIRED`. At the owner's request a password was prepared for the existing DEV `gotit_runtime` role; direct verified-TLS login and strict runtime schema/privilege preflight passed without expanding privileges. The prepared connection is in a user-only local directory outside Git; its entry/submission in Render remains an owner credential handoff. Successful Backend deployment/readiness and running-target verification remain required before the UX Web release or product-write smoke. No frontend release, role-privilege change or production change was performed by this task. [Exact source, deployment evidence and credential handoff](28_UX_2_1_DEV.md#dev-connection-follow-up-2026-10-06).

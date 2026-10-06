@@ -173,3 +173,13 @@ deletion/export, lawful basis/consent, provider subprocessors, age policy ו־DP
 - backup/restore ו־migration rollback review;
 - privacy/legal review;
 - incident owner, rotation runbook ו־contact מוגדרים.
+## 2026-10-06 — DEV UX release security follow-up
+
+Web `0e88da53f679a142bf040a51b4c428b6652e0a72` locks the patched source-map-js
+1.2.2 after a reproduced high-severity dependency audit failure. Failure-first
+offset regressions and a zero-finding production dependency audit passed locally.
+The existing DEV product-only runtime role received a new password at the owner's
+request without expanded privileges; its corrected connection requires TLS with
+full certificate verification. Secret files remain outside Git in a user-only
+local directory, and Render credential submission is handed to the owner.
+No production credential or privilege was changed. [Evidence and limits](28_UX_2_1_DEV.md).
