@@ -1,5 +1,13 @@
 # יומן שינויים
 
+## 2026-10-06 — Pronoun image live acceptance correction
+
+Backend `417a7be` repairs the observed unrelated stock image for I with grammatical
+pronoun briefs and fresh cache policy. 236 fast tests, focused real PostgreSQL,
+type/build/format pass. Initial DEV release is Live and an actual unit game uses
+unit 1 words; companion visible game context and follow-up deploy are pending.
+[Canonical evidence](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Unit study DEV delivery authorized
 
 Owner confirmed the DEV target. Backend `48ec269` is published to the configured

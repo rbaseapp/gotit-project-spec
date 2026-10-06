@@ -2,6 +2,17 @@
 
 ## Current delivery update
 
+Backend follow-up `417a7be16cdf7c8e54c3e8ce909a2fc20011d66d`: real DEV acceptance
+showed an unrelated stock seal for the pronoun I. Seven English personal pronouns
+now use explicit grammatical-referent visual briefs, skip ambiguous stock searches
+and old owned image caches, and use a versioned shared asset key. Existing provider
+quota/privacy/no-learning-write rules remain. All 236 fast tests, the real PostgreSQL
+unit media/cache/six-mode-scope test, typecheck/build/format/diff pass. Follow-up
+deployment is pending; initial Backend 48ec269 / Web 935e17b are already Live.
+Actual unit game smoke returned here/without/do, all catalogued in unit 1; pack and
+language remained in the game URL. The game lacked a visible unit title, being
+corrected in the companion Web follow-up. No cross-unit selection was observed.
+
 2026-10-06: the owner clarified that the changes must appear in DEV and requested
 faster delivery. DEV-only deployment is now authorized; the earlier pending-target
 notes below are historical. Backend `48ec269` is fast-forwarded to the configured
