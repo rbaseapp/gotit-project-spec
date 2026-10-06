@@ -365,3 +365,8 @@ Backend `468357129d919b1dcacd15a409ec78d77e69bf68` and Web `7c68ca16a7b6ef2633bf
 ## 2026-10-06 — DEV learning-path correction
 
 Backend path eligibility and Web program/map/words/activities/levels are deployed and authenticated-smoke verified in DEV only. Final Web 51b92b3 also fixes live-discovered memorization compression and clipped replay; desktop/mobile deployed measurements pass. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Practice clarity / native reading guides
+
+[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented locally; final API catalog count regression and Web/release work remain pending. No new deployment verified.
+

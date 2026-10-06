@@ -292,3 +292,8 @@ Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements UC-GUIDED-01 and UC-UX
 ## 2026-10-06 — DEV learning-path correction
 
 UC-PATH-01 study then teacher; UC-PATH-02 inspect owned word illustration. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Practice clarity / native reading guides
+
+[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented locally; final API catalog count regression and Web/release work remain pending. No new deployment verified.
+

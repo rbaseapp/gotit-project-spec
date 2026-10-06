@@ -261,3 +261,8 @@ FR-GUIDED-001–006 and FR-UX-007–010 are Must for the owner-approved DEV lear
 ## 2026-10-06 — DEV learning-path correction
 
 FR-PATH-001 teacher sequencing and FR-PATH-002 owned cached images. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Practice clarity / native reading guides
+
+[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented locally; final API catalog count regression and Web/release work remain pending. No new deployment verified.
+
