@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - DEV Backend audit gate
+
+Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` patches only proxy-addr 2.0.8, adds two trust-subnet regressions and passes 230 fast tests/typecheck/build/zero audit findings. Record the verified DEV administrator target and local product-only pre-migration backup; migration/deploy pending. [Canonical checkpoint](docs/30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
+
 ## 2026-10-06 - Guided lessons and canonical Figma DEV contracts
 
 Record Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: owned guided activity/review/replay, approved course words, pack/language history, smart review-only choice, persistent UI preferences and bounded real teacher voice samples. Typecheck/build, 228 fast and 67 PostgreSQL tests pass. Additive migration and exact-SHA DEV deployment are pending. Production excluded; parent/child relationships, deletion and native Play purchases are explicitly deferred. [Requirements, API, data, privacy, sequence and release gate](docs/30_FIGMA_FULL_DEV.md).

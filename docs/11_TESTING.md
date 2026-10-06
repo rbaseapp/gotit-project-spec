@@ -383,3 +383,6 @@ this does not prove a successful Render runtime deployment or product writes.
 # Guided learning verification — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: typecheck/build, 228 fast tests and 67 real disposable-PostgreSQL tests passed. New cases cover owner/app boundaries, expired session races, concurrent revisions, stable/changed command replay, normalized ambiguous unit words, report cleanup, runtime DDL denial, legacy preference merge and provider/sample failure/size/timeout. Changed-file Prettier passed; repository-wide existing formatting/Windows checkout drift is not resolved by this task. [Detailed checkpoint and pending live gates](30_FIGMA_FULL_DEV.md#verification-checkpoint).
+# Backend release audit follow-up — 2026-10-06
+
+Source `43a429ceeed3a2cd4715724a4d78568f846ef4d0` adds two proxy-subnet regressions and patches the locked transitive dependency. Typecheck/build, 230 fast tests and zero-finding audit pass. The preceding source passed 67 PostgreSQL tests. [Exact source and backup/release status](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).

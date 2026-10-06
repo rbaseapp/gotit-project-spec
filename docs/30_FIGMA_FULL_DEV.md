@@ -166,6 +166,14 @@ provider test is not a real provider or physical-device acceptance result.
 
 ## Web checkpoint
 
+## Backend security release gate follow-up
+
+Backend release source is now [`43a429ceeed3a2cd4715724a4d78568f846ef4d0`](https://github.com/rbaseapp/gotIt-backend/commit/43a429ceeed3a2cd4715724a4d78568f846ef4d0), preserving the guided implementation above. Only locked `proxy-addr` 2.0.7 → 2.0.8 changes; existing numeric trusted-hop configuration remains unchanged. Two subnet regressions cover short mapped-IPv6 trust and normal/full mapped compatibility. Typecheck, **230 fast tests**, build and zero-finding npm audit pass. [Official advisory](https://github.com/advisories/GHSA-jqcg-44mw-7w3h). No production rollout is performed.
+
+DEV pre-migration product data backup: 50 tables / 9,709 rows, read-only repeatable-read snapshot with per-file SHA256 manifest, stored locally at `C:\Users\Ori\AppData\Local\Temp\gotit-guided-dev-backup-2026-10-06\manifest.json`. This is a product-data JSON backup with constraint metadata, **not a full Core/database restore drill**. Directory access is limited to the workstation owner/System. Core DEV's existing administrator connection has been verified against the approved DEV host/database; DEV has administrator/runtime roles, not the dedicated migrator role used by disposable integration fixtures. No runtime elevation is planned. Migration/deployment are still pending here.
+
+## Web checkpoint (pending)
+
 Pending Web final gates/source commit. Shared screen-state ledger maps 494 canonical
 desktop/mobile frames without claiming 494 individual screenshot tests. Parent,
 deletion and native Play states are deferred by the owner; concept reward states do

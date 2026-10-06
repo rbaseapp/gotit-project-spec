@@ -186,3 +186,6 @@ No production credential or privilege was changed. [Evidence and limits](28_UX_2
 # Guided activity privacy boundary — 2026-10-06
 
 Owner-scoped bounded temporary text supports active lesson retries/review and is purged with successful report completion or lesson deletion. Audio stays transient. Voice preview sends only fixed public English AI-teacher text, using server-side credentials, timeout/byte limits and existing quota; no learner text/identity is supplied. Client scope, expired status, mixed IDs and stale revisions fail closed. [Contracts and threat controls](30_FIGMA_FULL_DEV.md#data-model-and-privacy). Live provider acceptance remains pending.
+# DEV audit follow-up — 2026-10-06
+
+Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` patches proxy-addr to 2.0.8 and tests malformed mapped-IPv6 subnet isolation. Numeric trusted-hop policy is unchanged; no production release is implied. [Canonical security/backup evidence](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
