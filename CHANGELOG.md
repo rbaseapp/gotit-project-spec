@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - UX DEV connection verification
+
+Update the release gate for `gotIt-front@a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`: the owner saved Backend DEV Core/database targets, but Backend deployment `dep-db29rjgm7kps73e2lptg` failed because the connection uses administrator `gotit_dev_user`. At the owner's request prepare the existing DEV `gotit_runtime` password; direct verified-TLS login and strict runtime preflight passed with unchanged privileges. Owner-controlled Render credential save and a successful running DEV deployment remain pending. Frontend redesign remains locally verified and not deployed. CI retry passed all code/browser/gateway/build steps but failed the audit for `source-map-js@1.2.1`; the audit finding also reproduced locally. [Current evidence](docs/28_UX_2_1_DEV.md#dev-connection-follow-up-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 Record `gotIt-front@a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` on DEV feature branch: compact responsive redesign, independent game flow, clickable spelling letters, contexts, current-message lessons and immediate reader/stable publication retry. 206 unit, 17 gateway, 391 browser cases passed locally. No server release: Backend DEV targets production DB. [Coverage and evidence](docs/28_UX_2_1_DEV.md).

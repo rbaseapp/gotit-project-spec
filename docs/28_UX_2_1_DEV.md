@@ -16,6 +16,8 @@ Build retains the existing large-main-chunk and Zod annotation warnings. Physica
 
 ## Operational inspection (read-only, 2026-10-05)
 
+Historical checkpoint; the 2026-10-06 follow-up below supersedes the Backend connection state.
+
 | Surface | Evidence | Release consequence |
 | --- | --- | --- |
 | DEV Web `srv-dar6dng473hc73a0ns1g` | Source still `main`, live `da913168f85baddc844978412058cf888117e85c`; proxy targets are DEV Core/Backend, public origin `https://gotit-dev.rbaseapp.com` | Select only the DEV branch after backend isolation; no production-main push. |
@@ -24,6 +26,51 @@ Build retains the existing large-main-chunk and Zod annotation warnings. Physica
 | Separate DEV database | Prior migration catch-up and unverified direct runtime login are recorded in [operations](10_OPERATIONS.md#2026-10-04---dev-database-migration-catch-up) | Retarget with an appropriate DEV runtime credential; do not infer runtime login from SET ROLE/admin inspection. |
 
 The owner was asked to complete credential entry/submission in Render. Computer-use requires handoff before changing authentication credentials; no new DB secret was entered. Secret values and full connection strings are absent from this evidence. No Render setting or deployment was changed.
+
+## DEV connection follow-up (2026-10-06)
+
+Read-only inspection after the owner's configuration save confirms Backend
+`CORE_API_BASE_URL` targets `https://rbase-dev-core-platforms.onrender.com` and
+`DATABASE_URL` targets DEV host `dpg-dar6fkp7lnhs73a7mspg-a`, database `gotit_dev`.
+The saved database role is `gotit_dev_user`, the administrator, rather than the
+dedicated product runtime role. The owner's Backend deployment
+`dep-db29rjgm7kps73e2lptg`, source
+`e5f4817b8544b95da739ce4f462e95f50b99689c`, reports **Deploy failed** (48.4 seconds)
+with startup code `GOTIT_DEDICATED_RUNTIME_ROLE_REQUIRED`.
+
+The configured target is now DEV, but a successful running deployment using the
+new target is **not verified**. Do not infer isolation of an older live process
+from a saved environment value. Frontend UX source remains
+`a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`, not deployed by this task.
+
+The owner reported that a runtime connection was unavailable and requested its
+preparation. A verified-TLS read of the DEV database confirmed the existing
+`gotit_runtime` login role, no superuser/create-role/create-database/bypass-RLS
+flags, and zero active connections for that role. A fresh random password was
+set for that existing DEV role through the terminal; no grants or privileges
+were expanded. A direct login with the new credential confirmed database
+`gotit_dev`, user `gotit_runtime`; `verifyRuntimeSchema(...,{strictRole:true})`
+returned `schema: ok`, `privileges: ok`, `role: product-only`, 17 operational
+tables. The new connection was saved in a user-only local temporary directory
+outside Git. The temporary administrator connection file was removed after use.
+
+Next required input is the owner's entry/submission of the prepared connection
+in Backend Render Environment, followed by a successful deployment and readiness
+verification. Browser credential changes require owner handoff. Changing only
+the username while retaining the administrator password is invalid; use the
+prepared complete connection. Do not disable the startup privilege gate. No
+password or complete connection string is recorded here. The task changed no
+Backend source, role privileges, Render setting or production deployment during
+this follow-up; the DEV runtime password was changed as described above.
+
+Frontend CI run `37366721586`, attempt 1, could not acquire a GitHub hosted runner.
+Attempt 2 was triggered through the existing authorized GitHub UI. Install,
+typecheck, lint, all 206 unit/391 browser/17 gateway cases and build passed.
+The audit step failed for `source-map-js@1.2.1`, advisory
+[GHSA-68fv-2mgg-jv7q](https://github.com/advisories/GHSA-68fv-2mgg-jv7q).
+Local `npm audit --omit=dev --audit-level=high --json` reproduced one high-severity
+finding; a patched compatible transitive dependency update is pending. This
+checkpoint does not claim final remote CI success.
 
 ## Scope and source
 
@@ -96,17 +143,19 @@ Browser fixtures intercept API calls; they do not prove real provider, microphon
 database or billing acceptance. Physical-device/zoom/screen-reader acceptance remains
 separate from automated viewport coverage.
 
-**Server deployment is blocked at this checkpoint.** Read-only Render inspection
-confirmed that `gotIt-dev-backend` still uses the production database. The separate
-`gotit_dev` database exists and its prior migration catch-up is documented in the
-specification, but a direct DEV runtime credential was not verified. Do not perform
-product mutations through this DEV service until it is retargeted and isolation is
-verified. No production service/environment/database was changed for this release.
+**Server deployment remains blocked.** The owner saved the DEV database target,
+but the Backend startup rejected its administrator role. The dedicated DEV
+runtime credential is now directly verified; its owner-controlled Render save
+and successful deployment/readiness are still required. Do not
+perform product mutations through this service until its running isolation is
+verified. See the dated follow-up above. No production service/environment/database
+was changed by this task.
 
 Read-only inspection also confirmed that Core DEV uses `gotit_dev` and that DEV Web's
 Core/Backend proxy targets and public origin all point to their DEV services. Core's
-existing connection uses the DEV administrator role; this task changed no credential
-or database privilege. Backend isolation remains the deployment blocker.
+existing connection uses the DEV administrator role; no Core credential or database
+privilege was changed. Saving Backend's verified DEV runtime connection and
+verifying its running deployment remain the release blocker.
 
 After the owner completes the credential handoff, verify DEV Backend/Core runtime
 database targets and readiness, configure only DEV Web to this release branch,
