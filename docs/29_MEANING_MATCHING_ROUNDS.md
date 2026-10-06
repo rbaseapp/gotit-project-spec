@@ -67,3 +67,5 @@ only this targeted repair may be applied to its feature branch.
 
 Rollback uses the previous Web commit. Deployment and authenticated smoke evidence
 will be recorded here after observation; local fixtures are not server evidence.
+
+Production release source: `gotIt-front@ffcebc80edb6818f2f4e4f0baf3447b89c0893cb` on `fix/meaning-matching-production`, based on the observed live `e3cab2e` with the matching repair only. Its full check (typecheck/lint/Vitest/build/16 gateway) and 14 targeted touch/results/voice browser cases passed. Deployment remains pending.
