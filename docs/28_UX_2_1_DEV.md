@@ -1,5 +1,32 @@
 # 28 — GotIt UX 2.1 DEV implementation and release gate
 
+## 2026-10-06 - Game-entry regression follow-up
+
+Source `gotIt-front@9cff6a0f1de1c22da04e6d5ed285171d258457fb` follows
+the Figma correction `e1948281adabe34d2ff6c4e4dc4f949e90c33436`.
+Status: **locally verified; DEV deployment pending** on `feat/ux-2-1-dev`.
+
+The CI failure below exposed a real initial RTL overflow: a fullscreen demo
+game translated 14px horizontally during entry. A fast local browser could
+check the loading view before the game mounted, incorrectly passing the old
+test. Responsive cases now wait for the mounted game and freeze its entrance
+animation at 0, 140 and 280ms before measuring the document. The 320px smart
+case deterministically failed at 334px before the fix.
+
+Only the fullscreen game frame changes to the existing opacity entrance;
+normal pages retain the supplied 0.28s horizontal motion and letter-placement
+motion is unchanged. FR-UX-007 includes containment throughout animation,
+not only after it. Existing game actions, provider, scoring and persistence
+contracts are unchanged.
+
+Local verification: **84/84** game-route viewport cases (six routes across
+14 widths, 320–1920px) passed. `npm.cmd run check` passed typecheck, lint,
+**207 unit tests**, build and **20 gateway/security tests**. Changed-file
+Prettier and diff checks passed; dependency audit found zero vulnerabilities.
+The full 393-case local browser run is still running. No production change.
+Exact DEV Live source, readiness, delivered CSS and final CI results remain
+release gates and will be recorded here.
+
 ## 2026-10-06 - Figma fidelity correction (local checkpoint)
 
 Source: `gotIt-front@e1948281adabe34d2ff6c4e4dc4f949e90c33436`, branch `feat/ux-2-1-dev`.

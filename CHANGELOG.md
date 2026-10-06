@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Fullscreen game entry follow-up
+
+Web `9cff6a0f1de1c22da04e6d5ed285171d258457fb` follows the Figma correction. Fullscreen game entry stays contained in RTL; regression now samples the mounted game at animation start/middle/end. 84 viewport cases and local check (207 unit / 20 gateway-security), formatting and zero-finding audit passed. **DEV deployment and final full-browser validation are pending; production excluded.** [Canonical source, behavior and release gate](docs/28_UX_2_1_DEV.md#2026-10-06---game-entry-regression-follow-up).
+
 ## 2026-10-06 - Correct DEV Figma fidelity after owner review
 
 `gotIt-front@e1948281adabe34d2ff6c4e4dc4f949e90c33436` corrects home illustrations/hierarchy, localized program cards, compact teacher preparation and full-width avatar/message voice lessons. 207 unit / 20 gateway-security cases passed; failed visual/short-screen regressions were corrected and passed. Fixture screenshots are preserved. **DEV Live; authenticated UI smoke verified; production excluded.** **CI release gate remains open: 333 browser passes / 60 initial demo-game overflow failures; follow-up correction required.** [Canonical checkpoint](docs/28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
