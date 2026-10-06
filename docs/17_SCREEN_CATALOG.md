@@ -545,3 +545,6 @@ Route: `/english-learning` (live Web). Actor: authenticated learner with an Engl
 ## 2026-10-06 — DEV learning-path correction
 
 SCR path/map/words/activities/levels: Figma fidelity corrections in progress; Backend eligibility verified. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+
+FR-PATH-003/004/005: explicit map vs bulk dialog, real word/activity detail, levels and full new-program flow. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).

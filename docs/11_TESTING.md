@@ -417,3 +417,6 @@ DEV readiness endpoints return 200. [Final evidence and unverified boundaries](3
 ## 2026-10-06 — DEV learning-path correction
 
 232 fast / 68 PostgreSQL tests; changed-file formatting verified, repository-wide formatting baseline remains. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+
+Web full check and new focused regressions pass; final full responsive sweep/CI pending. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).

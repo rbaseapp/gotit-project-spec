@@ -345,3 +345,6 @@ provider configuration repaired only in DEV. [Current exact release and acceptan
 ## 2026-10-06 — DEV learning-path correction
 
 FR-PATH-001/002 → server journey/image contracts → unit and real PostgreSQL regressions. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+
+Web 914aa06 maps FR-PATH-003/004/005 to live and Playwright regressions; full responsive sweep pending. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).

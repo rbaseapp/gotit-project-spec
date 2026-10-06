@@ -64,3 +64,50 @@ smoke. No migrations. Roll back by redeploying the previous DEV source, preservi
 progress. Production is untouched. New source publication alone is not deployment
 evidence. The broader cross-unit adaptive checkpoint shown in meeting-detail Figma
 is not introduced by this three-station unit contract.
+
+## Web source checkpoint
+
+Web [914aa06b9e7220cda0cdc45140a49b7a395f701d](https://github.com/rbaseapp/gotIt-front/commit/914aa06b9e7220cda0cdc45140a49b7a395f701d)
+implements the requested program/map/words/activities/levels corrections. The map
+entry no longer opens a word-management dialog; management is an explicit action
+inside the words page. List/detail word selection, cached owned illustration,
+read-aloud, example and known checkbox follow 43:2725; bulk known/add operations
+remain. Map shows cumulative word/teacher thresholds and duration, with server
+availability and a word-study hero at zero progress. Unit activities and general
+history show real chronological records and selected details with preserved
+language/unit resume scope and saved course lesson links. Levels expose three
+levels, searchable units and selected unit details (43:3083/4033/4357).
+
+Personal course words also use a list/detail layout while preserving explicit
+sense selection/capture. New Program is a full page (43:2182), carries selected
+languages into personal intake, and enables prepared paths only for a published
+language pair. Spanish illustrative frames do not fabricate a published catalog.
+Memorization centers the contained image and both independently directed language
+blocks; landscape may shrink the frame to keep content within the available height.
+
+FR-PATH-003 / UC-PATH-03: Programs → map → words → map never opens stale dialogs.
+FR-PATH-004 / UC-PATH-04: select word/activity and inspect its actual detail; resume
+retains language/unit/return; no invented examples, images, lessons or progress.
+FR-PATH-005 / UC-PATH-05: new-program language selection persists into intake and
+unsupported prepared pairs remain disabled with an explanation.
+Trace: EnglishLearningPathPage / UnitWordBrowser / UnitActivities / UnitLevels /
+ProgramsPage / CourseUnitWordsPage / HistoryPage / path-review.css → learning-map,
+figma-families, memorization-image, ux-navigation browser regressions and live tests.
+
+Full Web check passed 224 existing unit tests, type/lint/build and 20 gateway/security
+cases. The new localized UNIT_WORDS_REQUIRED regression also passes (225 total).
+Latest targeted runs pass seven map/new-program/activity cases, three canonical
+page-family cases, 12 image aspect/viewport cases and updated multiple-course entry.
+A complete 413-case responsive sweep and exact-source CI are pending at this
+checkpoint. Early parallel local tests hit load-related timeouts; isolated full
+check passed. Old dialog/label assertions were corrected to the actual new flow.
+Changed-file formatting and diff checks pass. Final type/lint/build were repeated
+after the history language-scope preservation fix.
+
+## Backend DEV deployment verified
+
+Render service srv-dar6ei7f3r2c73balbp0 reports **Live** for exact source b3c1b73,
+deployment dep-db2gsjmgekts73a2idl0 (auto deploy, 36.8s).
+https://gotit-dev-backend.onrender.com/ready returns 200, database ok, request
+1bb1189e-ec3f-44c3-aa5e-002a4dc4a898. No migration was necessary.
+Web deployment and authenticated combined smoke remain pending.

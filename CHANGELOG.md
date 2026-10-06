@@ -373,3 +373,8 @@ Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` f
 ## 2026-10-06 — DEV unit sequencing source checkpoint
 
 Backend `b3c1b737ea1385644bc114366dc2e46b0dd51146` requires word evidence before teacher entry and exposes owned cached word images. 232 fast / 68 PostgreSQL tests pass. DEV deployment pending, production excluded. [Contract and evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).
+
+
+## 2026-10-06 — DEV program UI source checkpoint
+
+Web `914aa06b9e7220cda0cdc45140a49b7a395f701d` implements map navigation, word/activity detail, level browsing, new-program language selection and centered memorization. Full check and focused regressions pass; full browser sweep and Web deploy pending. Backend `b3c1b73` is exact-SHA Live/ready in DEV. [Evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).

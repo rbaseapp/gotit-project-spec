@@ -223,3 +223,6 @@ Billing public config: `PADDLE_CLIENT_TOKEN`, `PADDLE_ENVIRONMENT`,
 - mutation retry שומר idempotency key;
 - analytics/privacy event מוגדר אם נאסף;
 - תרגומים לכל locale או fallback מאושר.
+
+
+Program family correction and scoped history/list detail. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
