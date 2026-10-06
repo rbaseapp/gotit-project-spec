@@ -311,3 +311,5 @@ Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beg
 - enum חדש עלול להיות breaking ללקוח strict ולכן דורש תיאום.
 - שינוי scoring/learning policy אינו API version, אך מחייב `algorithmVersion` חדש.
 - API catalog, מסמך זה, parsers ובדיקות contract חייבים להתעדכן באותו change set.
+
+2026-10-06: standalone matching rounds now prefer unseen session items before recycling after review dates move. API payloads and scoring are unchanged. [Source, regression and rollout status](29_MEANING_MATCHING_ROUNDS.md#backend-follow-up-unseen-words-across-standalone-rounds).

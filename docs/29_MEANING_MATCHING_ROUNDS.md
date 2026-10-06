@@ -69,3 +69,24 @@ Rollback uses the previous Web commit. Deployment and authenticated smoke eviden
 will be recorded here after observation; local fixtures are not server evidence.
 
 Production release source: `gotIt-front@ffcebc80edb6818f2f4e4f0baf3447b89c0893cb` on `fix/meaning-matching-production`, based on the observed live `e3cab2e` with the matching repair only. Its full check (typecheck/lint/Vitest/build/16 gateway) and 14 targeted touch/results/voice browser cases passed. Deployment remains pending.
+
+## Backend follow-up: unseen words across standalone rounds
+
+Source: `gotIt-backend@ae2ae7f358a9d0b01fa6dcdcb4141b25431a96f1` (2026-10-06).
+Status: locally and PostgreSQL integration verified; deployment pending.
+Live DEV acceptance exposed premature repeated words because successful attempts
+change review-date ordering while standalone matching previously used an issued-count
+offset. Matching sessions now reuse smart review's unseen-first ranking, then failed
+and successful items, retaining review-date order within each group. Explicit item
+selection for repairs is unchanged. Pools may recycle only after unseen candidates
+are exhausted; identical meanings still obey the existing distinct-choice filter.
+No route/payload/schema/scoring changes.
+
+`test/integration/practice.integration.test.ts` reproduces the old failure and
+passes on the repair: ten distinct items in 3/3/4 matching boards, successful
+attempts moving review dates, ten persisted attempts and completed session.
+Typecheck, build, 209 fast tests, all 63 PostgreSQL integration tests, changed-file
+Prettier and diff check passed. Full formatting reports 36 unchanged baseline
+files. Local production preflight and normalization commands could not connect;
+this does not affect disposable PostgreSQL tests. Live startup/readiness remains
+a deployment gate, and no live normalization audit is claimed.

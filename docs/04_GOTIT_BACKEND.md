@@ -194,3 +194,5 @@ Providers: משתני OpenAI, Anthropic, Google, Azure ו־Pixabay המתועד�
 8. provider failure classes ו־timeouts מוגדרים.
 9. logs ללא תוכן רגיש.
 10. rollout ו־rollback מתועדים.
+
+2026-10-06: standalone matching rounds now prefer unseen session items before recycling after review dates move. API payloads and scoring are unchanged. [Source, regression and rollout status](29_MEANING_MATCHING_ROUNDS.md#backend-follow-up-unseen-words-across-standalone-rounds).
