@@ -231,3 +231,8 @@ Program family correction and scoped history/list detail. [Exact source, behavio
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## Unit study and game scope (2026-10-06)
+
+Web source 7c661486dae2d602fc6d4c549bd5ec65097f54a9 adds catalog media loading/retry, familiar-word explanation and a unit-scoped game chooser. See [canonical behavior, regression evidence and pending release](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+

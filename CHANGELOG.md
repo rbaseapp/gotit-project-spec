@@ -1,5 +1,15 @@
 # יומן שינויים
 
+## 2026-10-06 — Unit study Web source checkpoint
+
+Web `7c661486dae2d602fc6d4c549bd5ec65097f54a9` adds independent image/example loading
+and retry, explains and reverses familiar-word exclusion, and opens the game chooser
+with validated unit/language scope. Four new and seven existing map browser cases,
+32 isolated live component tests, type/lint/build, 20 gateway tests, formatting and
+zero-finding audit pass. Full unit rerun and release-target clarification remain
+pending; neither source main nor a deployed service is changed by this task.
+[Canonical source, acceptance and release boundary](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Unit study media and scoped games checkpoint
 
 Backend `48ec269adcec0c43fe73ddee62161b5f026128f5` supplies guarded catalog image/example

@@ -9,7 +9,9 @@ been changed by this task at this checkpoint.
 
 Backend source: [48ec269adcec0c43fe73ddee62161b5f026128f5](https://github.com/rbaseapp/gotIt-backend/commit/48ec269adcec0c43fe73ddee62161b5f026128f5).
 Status: **implemented and locally/integration verified; deployment pending**.
-Web source is in progress and has not been committed at this checkpoint.
+Web source: [7c661486dae2d602fc6d4c549bd5ec65097f54a9](https://github.com/rbaseapp/gotIt-front/commit/7c661486dae2d602fc6d4c549bd5ec65097f54a9).
+Status: **implemented and focused locally/browser verified; full unit rerun and
+deployment pending**. Both source changes remain isolated from main.
 
 ## Problem and behavior
 
@@ -76,9 +78,14 @@ learning. No user text collection, audio storage or new recipients are introduce
   rejection even when other-unit vocabulary exists.
 - 235 fast tests and all 69 PostgreSQL integration tests pass. Typecheck, build,
   changed-file Prettier, diff check and dependency audit pass; zero audit findings.
-- Web browser tests currently pass four new cases at 320/1487 pixels, known-state
+- Web browser tests pass four new cases at 320/1487 pixels, known-state
   explanation/exclusion, scoped game requests, all-known lock and provider retry.
-  Full Web verification and commit remain pending.
+  Seven existing learning-map browser cases also pass. The 32 live component
+  tests pass in isolation; typecheck, lint, production build, all 20 gateway
+  tests, changed-file formatting and zero-finding dependency audit pass.
+- The full 225-test Web unit run encountered timing failures under concurrent
+  browser/build load; an isolated fork-pool rerun is pending. The broad responsive
+  sweep was stopped to remove competing load; no full responsive pass is claimed.
 - No live provider acceptance or exact-source deployment is claimed yet.
 
 ## Release and rollback
