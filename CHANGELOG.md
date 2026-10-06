@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Canonical learning/account DEV release verified
+
+Web `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` Live with exact served CSS hash and successful Linux 224 unit/406 browser/20 gateway/type/lint/build/audit gates. Backend `4683571` remains Live after DEV-only reading model correction from leftover Anthropic to available repository-default `gpt-6-luna`. Actual lesson/report/cleanup/history, account settings/minutes, reading creation/meaning/save/quiz and clickable-letter/deletion/capacity/server correct/+8 XP smoke pass. All DEV readiness endpoints return 200; actual screenshots saved. Production untouched; agreed exclusions and physical mic/live-review limits remain. [Final evidence](docs/30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
+
 ## 2026-10-06 - Real guided DEV acceptance and summary readability
 
 Backend `4683571` Live: actual generated lesson/Realtime/typed stages/slow/support replay/report and scoped history pass; DB confirms report and 313-second duration with zero temporary rows. Web `2ad61a3` passes 406 local and Linux CI. Source `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` repairs low-contrast homework helper copy; three real-response browser fixtures fail before/pass after, check 224 unit/20 gateway/type/lint/build passes. New Web rollout pending. [Canonical source/deployment/provider boundaries](docs/30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).

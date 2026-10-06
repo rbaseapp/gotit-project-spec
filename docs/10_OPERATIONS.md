@@ -351,3 +351,14 @@ Follow [the Facebook rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md) for the Meta 
 # Guided learning DEV release gate — 2026-10-06
 
 Source `0404c8cc72bbb4f32a125f4c9e255318beff9a60` is pushed to Backend `feat/figma-complete-dev`. Explicit DEV-only authorization overrides the normal source-main release, because main auto-deploys production. Only the named DEV Web/Backend services may be retargeted. Apply the additive migration with existing migrator privileges in `gotit_dev`, then verify runtime preflight, normalization, exact source SHA and authenticated smoke. [Targets, ordered steps and pending evidence](30_FIGMA_FULL_DEV.md#dev-delivery-gate). Do not run live down migrations or change runtime permissions.
+
+Final DEV release: Web `7c68ca1` / `dep-db2gb0flk1mc738ubv40`, Backend `4683571` /
+`dep-db2gfcvlot8c73f44cs0` Live. The latter is an environment deployment: only
+`AI_READING_MODEL` changed from leftover `claude-sonnet-5` to the repository default
+`gpt-6-luna`, after actual OpenAI model-access failure and bounded metadata-only
+availability confirmation. No keys, grants, DB connection, Core or production change.
+Runtime preflight/normalization, served CSS hash, all DEV readiness checks and actual
+learning/reading/account smoke pass. Old open tabs across a bundle rollout may need
+the existing reload action after an obsolete lazy chunk fails; reload recovered the
+current account UI. Preserve additive schema during rollback, and retain the DEV
+model's compatibility with the OpenAI generator. [Authoritative source/deploy/test evidence](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).

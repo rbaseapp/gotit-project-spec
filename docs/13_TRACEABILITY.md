@@ -320,8 +320,8 @@ credential/deployment evidence are tracked in [the canonical checkpoint](28_UX_2
 
 | Requirements | Implementation / tests | Status |
 |---|---|---|
-| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14; Web LessonWorkspace/Summary and guided E2E | Backend 43a429c Live in DEV; Web 2559d5b locally verified, Web DEV/provider acceptance pending |
-| FR-GUIDED-006 | voiceSample + private-lesson-voice-sample tests | Fake provider verified; real TTS acceptance pending |
+| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14; Web LessonWorkspace/Summary and guided E2E | Backend 4683571 / Web 7c68ca1 Live in DEV; actual guided start/stages/replay/report/cleanup pass; live review regrading/physical mic not verified |
+| FR-GUIDED-006 | voiceSample + private-lesson-voice-sample / Blob preview tests | Unit provider bounds/cleanup and actual TTS sample/playback accepted in DEV |
 | FR-UX-007 / FR-UX-010 | practice validation/service, lesson repository, reading queue; practice integration language/pack cases | Backend locally/integration verified |
 | FR-UX-008 | course.words + course-words unit/PostgreSQL cases | Owner/normalized multiple-meaning boundaries verified |
 | FR-UX-009 | profile validation/repository/types + profile integration legacy merge/isolation | Owner persistence verified |
@@ -335,3 +335,8 @@ fails before/passes after at three widths. FR-UX-007 keeps selected report-word 
 through pace/session; FR-UX-009 existing choices survive save. Full Web 406/406 and
 Linux CI pass at `2ad61a3`; contrast follow-up deployment pending.
 [Canonical exact evidence and unverified boundaries](30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).
+
+Final `7c68ca1` Live/CI success supersedes the pending rollout above. FR-UX-007
+independent article quiz -> saved reading -> letter/delete/capacity input -> actual
+server correct/+8 XP grading; FR-UX-009 retained preferences/save success; reading
+provider configuration repaired only in DEV. [Current exact release and acceptance](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).

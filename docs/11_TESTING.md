@@ -405,3 +405,10 @@ cleanup pass. Web `7c68ca1` adds the real homework response to the guided fixtur
 and fixes the 1.02:1 helper-copy contrast: three browser cases fail before/pass
 after; check passes 224 unit/20 gateway/type/lint/build. Its rollout remains pending
 at source sync. [Exact acceptance and limits](30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).
+
+Final Web `7c68ca1` Linux CI passes 224 unit/406 browser/20 gateway, type/lint/build
+and audit; the three enhanced local guided cases/check pass. Exact DEV source and
+CSS hash are verified. Live reading failed on leftover Anthropic model configuration,
+then succeeded after DEV-only `gpt-6-luna` environment deployment: actual preview,
+meaning/save/quiz and letter/delete/capacity/correct server grading passed. All three
+DEV readiness endpoints return 200. [Final evidence and unverified boundaries](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).

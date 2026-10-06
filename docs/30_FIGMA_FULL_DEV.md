@@ -1,5 +1,19 @@
 # Canonical Figma implementation and guided learning — DEV
 
+## Current verified DEV release
+
+The historical pending checkpoints below are superseded by this release table and
+the final acceptance section. **No production deployment or source-main merge.**
+
+| Component | Exact source | Current Render deployment | Status |
+|---|---|---|---|
+| Web | `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` | `dep-db2gb0flk1mc738ubv40` | Live; actual served CSS matches local build; authenticated smoke |
+| Backend | `468357129d919b1dcacd15a409ec78d77e69bf68` | `dep-db2gfcvlot8c73f44cs0` | Live; same source plus corrected DEV reading model; ready/database ok |
+| Core | unchanged | unchanged | DEV readiness 200; no Core code/configuration changes |
+
+Source feature branches remain `feat/figma-complete-dev`. Final evidence is below;
+494 frames are a design inventory, **not 494 individually accepted screenshots**.
+
 ## Scope and release status
 
 The owner requested a full implementation of the learning/account screens and their
@@ -354,3 +368,66 @@ changed formatting/diff checks pass. No API, migration, provider, preference or
 practice policy changed. `7c68ca1` exact DEV deployment is pending at this immediate
 source-to-spec checkpoint; the preceding full 406-case/local Linux CI results belong
 to `2ad61a3`. Production remains untouched and the three agreed exclusions remain.
+
+## Final deployment and authenticated smoke — 2026-10-06
+
+Web `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` is Live on the named DEV service at
+`dep-db2gb0flk1mc738ubv40`. Served entry assets are `index-DRDY4mqY.js` and
+`index-DY6q73wu.css`. CSS SHA256 exactly matches the local build:
+`5c18bd47f51d33f3b775be4f4b305c014ae25cad9065267e48c14d5785dd996c`.
+[Exact-source Linux CI](https://github.com/rbaseapp/gotIt-front/actions/runs/37479233790)
+finished successfully at 14:36:27 UTC; type/lint, 224 unit, all 406 browser,
+build, 20 gateway/security and zero-finding audit gates pass. Local full 406-case
+evidence remains from `2ad61a3`; the final `7c68ca1` local check and three enhanced
+guided browser cases also pass. No optional duplicate full local run is implied.
+
+During rollout an old open tab could not import the removed old AccountPage chunk;
+its existing reload action recovered the current release. Fresh account, settings
+and minutes pages then loaded real Core/profile data. Existing Hebrew/large-text/
+motion/sound choices were retained when saving and showed success; no purchase was
+performed. Both normal and large text remain account choices. Saved lesson history
+reopened the actual completed report and homework link.
+
+Live reading initially failed with `READING_PROVIDER_MODEL_ACCESS`, request
+`bd8a2a8a-5626-47a9-a26e-1796cbe77823`. The DEV runtime had leftover
+`AI_READING_MODEL=claude-sonnet-5` while the source uses OpenAI. A strictly
+DEV-service-guarded metadata-only model availability check returned 200 and confirmed
+the repository's configured default `gpt-6-luna` available in the same account.
+Only this non-secret DEV environment value changed to `gpt-6-luna`; keys, grants,
+DB connection, Core and production remained unchanged. Environment deployment
+`dep-db2gfcvlot8c73f44cs0` is Live at the same Backend source `4683571`. The existing
+reading provider error handling was correct; no additional application patch was
+needed for this configuration repair.
+
+After deployment the same UI request succeeded: **A Simple Day at School**, English,
+10 personal vocabulary targets highlighted, actual meaning popup, explicit save
+and reading-quiz link. Saved reading `98db9852-d10b-404b-8d23-52666946c76b` was
+created once; the UI monthly balance changed 4 -> 3 after saving. Opening the quiz
+produced its real server exercise. Clicking letters formed `prioritize`, including
+repeated letters and deletion of an extra `x`; full capacity disabled extra letters.
+Server grading returned correct, 100%, +8 XP and the current 98% mastery. The quiz
+was stopped normally, preserving the graded answer. Reading itself did not award XP.
+The earlier guided completed-row/cleanup evidence remains valid at unchanged Backend
+source; actual review regrading and physical microphone quality are still unverified.
+
+Final Web/Backend/Core DEV `/ready` checks all return 200. These are DEV acceptance
+results, not production or physical Android/iOS acceptance. Parent/child account
+relationships, account deletion and native Play purchases remain explicitly deferred;
+conceptual reward designs do not activate an unapproved reward economy.
+
+### Actual screenshots
+
+The following are authenticated DEV captures at the released source, retaining the
+account's existing large-text preference. Mobile DOM was 390×844; desktop DOM was
+1487×1057 after accommodating existing browser zoom, with no saved zoom change.
+Temporary viewport overrides were reset. The desktop crop only removes blank native
+capture canvas outside the observed app viewport; no app content is changed.
+
+- [Desktop dashboard](evidence/2026-10-06-complete-figma/dev-dashboard-desktop-viewport.jpg)
+- [Mobile dashboard raw capture](evidence/2026-10-06-complete-figma/dev-dashboard-mobile-raw.jpg)
+- [Real reading](evidence/2026-10-06-complete-figma/dev-reading-mobile.jpg)
+- [Actual quiz grading](evidence/2026-10-06-complete-figma/dev-game-result-mobile.jpg)
+
+The earlier report screenshot above is explicitly before the helper-copy contrast
+repair. Native captures may include external blank canvas; they are not fixture
+images or a claim of independent visual approval of every Figma state.
