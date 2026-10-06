@@ -305,3 +305,7 @@ Private-lesson learning now has owner-resolved course/unit context, revision/ide
 ## 2026-10-06 — DEV learning-path correction
 
 P-learning control: study evidence precedes teacher entry; known declarations are not mastery. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Unit study source checkpoint
+
+P07-P09: unit study media is preparation only; known marking remains a declaration, and scoped game selection retains server-authoritative learning evidence. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

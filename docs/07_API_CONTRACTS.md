@@ -326,3 +326,7 @@ Additive station policy, midpoint input, 409 UNIT_WORDS_REQUIRED, owned cached-i
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+Two additive practice-gated unit study POSTs and the 89-route catalog are locally/integration verified. Existing GET stays read-only. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

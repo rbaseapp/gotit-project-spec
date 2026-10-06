@@ -266,3 +266,7 @@ FR-PATH-001 teacher sequencing and FR-PATH-002 owned cached images. See [canonic
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+FR-UNIT-001: study image/example without installation/progress. FR-UNIT-002: unit-scoped game choice, explicit known exclusion and all-known launch lock. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

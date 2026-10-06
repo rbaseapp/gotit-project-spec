@@ -353,3 +353,7 @@ Web 914aa06 maps FR-PATH-003/004/005 to live smoke and 413 passing CI browser re
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+FR-UNIT-001/002 → WordPackStudyService / UnitWordBrowser / EnglishLearningPathPage / LiveLearnPage → word-pack-study, unit-study.integration and unit-study browser regressions. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

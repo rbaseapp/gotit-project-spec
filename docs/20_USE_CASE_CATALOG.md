@@ -297,3 +297,7 @@ UC-PATH-01 study then teacher; UC-PATH-02 inspect owned word illustration. See [
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+UC-UNIT-01: select a unit word, load/retry image/example. UC-UNIT-02: choose a game, practise only the unit's unknown words, return to unit words. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

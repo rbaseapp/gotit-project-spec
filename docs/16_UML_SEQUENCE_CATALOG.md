@@ -83,3 +83,7 @@ path וגם מסלולי כשל ובקרה. הם אינם מחליפים את ח
 ## 2026-10-06 — DEV learning-path correction
 
 Sequence: map GET → learn/known evidence → session POST → authoritative eligibility → reject 409 or allocate provider/minutes. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Unit study source checkpoint
+
+Unit flow: visible pack detail → independent image/example requests → guarded cache/provider → unit game chooser → pack-scoped session. Viewing creates no progress. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

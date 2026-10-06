@@ -553,3 +553,7 @@ FR-PATH-003/004/005: explicit map vs bulk dialog, real word/activity detail, lev
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+SCR-16 adds independent image/example loading/error states, known-state explanation and unit game chooser. Web verification/release pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

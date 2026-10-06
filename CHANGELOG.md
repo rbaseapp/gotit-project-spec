@@ -1,5 +1,12 @@
 # יומן שינויים
 
+## 2026-10-06 — Unit study media and scoped games checkpoint
+
+Backend `48ec269adcec0c43fe73ddee62161b5f026128f5` supplies guarded catalog image/example
+POSTs before installation, without learning writes. All 235 fast/69 PostgreSQL tests,
+type/build/format/diff and zero-finding audit pass. Web isolated work and four new
+browser tests exist; full gate/commit and release are pending. [Canonical record](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 - DEV path rollout verified and live memorization follow-up
 
 Backend `b3c1b73` and Web `914aa06` are exact-SHA Live in DEV. Authenticated map/word/activity/level/teacher-lock smoke and mobile overflow checks pass; exact Web CI passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Live smoke additionally exposed full-session image compression/replay clipping. Follow-up `51b92b3f4c053b9f20e1859c138618fef8dc166b` fixes it with red/green 12 full-shell image tests and full check passing; its exact DEV deployment, matching served CSS hash and real 260/180px image/replay smoke are verified. Final-source Linux CI also passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Production unchanged. [Canonical evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).

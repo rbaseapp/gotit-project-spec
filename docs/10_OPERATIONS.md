@@ -375,3 +375,7 @@ Backend b3c1b73 and final Web 51b92b3 exact DEV Live/readiness, served CSS hash 
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+Unit-study source checkpoint requires Backend-before-Web release, exact-SHA/readiness/provider/scoped-game smoke. No migration or environment changes; release scope pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).

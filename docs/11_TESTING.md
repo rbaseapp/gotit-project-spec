@@ -425,3 +425,7 @@ Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/b
 
 [Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 
+
+## 2026-10-06 — Unit study source checkpoint
+
+Unit study Backend passes 235 fast and all 69 PostgreSQL tests, type/build/format/diff/audit; four new Web browser cases pass; full Web gate pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
