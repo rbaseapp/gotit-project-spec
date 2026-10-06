@@ -1,5 +1,17 @@
 # Unit study media and game selection — 2026-10-06
 
+## Current delivery update
+
+2026-10-06: the owner clarified that the changes must appear in DEV and requested
+faster delivery. DEV-only deployment is now authorized; the earlier pending-target
+notes below are historical. Backend `48ec269` is fast-forwarded to the configured
+DEV branch. Web merge `935e17b4e82be37df4162bd59c86d4d1607ba2fd` combines the tested
+`7c66148` correction with current remote DEV `810406f`; it changes no application
+code relative to the tested fix and preserves four existing press-to-talk test
+lines. Its tree equals remote fix merge `42a723d`. Deploy and live smoke are running.
+Production main has been changed independently since the earlier checkpoint;
+this delivery neither modifies nor deploys production.
+
 ## Scope and source
 
 The reported screen belongs to the Figma DEV branch, not production main. Work is

@@ -1,5 +1,13 @@
 # יומן שינויים
 
+## 2026-10-06 — Unit study DEV delivery authorized
+
+Owner confirmed the DEV target. Backend `48ec269` is published to the configured
+DEV branch; Web `935e17b` merges the tested fix with current DEV without changing
+application code from `7c66148`. Existing complete regression evidence is reused;
+deployment and actual media/game smoke are in progress. Production is untouched
+by this delivery. [Canonical record](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Unit study regression gates verified
 
 Exact Web source `7c661486dae2d602fc6d4c549bd5ec65097f54a9` passes all 225 unit,
