@@ -2,6 +2,32 @@
 
 ## Current delivery update
 
+### Unlimited ordered unit batches — 2026-10-07
+
+The owner clarified that the daily new-word preference must size a unit batch,
+not prevent further unit practice that day. This supersedes the daily-allowance
+behavior described in the earlier delivery updates below.
+
+Backend `57bc5f9` removes the daily allowance query and gate from ordered
+smart-review pack sessions. A requested 10/20-word batch still follows catalog
+order and reopens its unfinished words; the next batch starts after completion.
+Repeated starts and same-day subsequent batches remain available even when the
+profile's new-word allowance is zero. Known/excluded words and learned badges
+retain their existing behavior. Explicit review-only requests still do not
+introduce new words. General library queue limits remain unchanged.
+
+Validation: 33 real PostgreSQL unit/lifecycle tests and 15 queue/catalog tests
+pass, with the unit fixture keeping a zero allowance through repeated starts,
+10/20-word ordering checks, actual completion and the next same-day batch.
+Backend typecheck, formatting and diff checks pass. No migration, profile
+preference change or Web release is required.
+
+Backend `57bc5f93810330c12d6720bf5332bb926cafbebf` is confirmed Live in DEV
+Render (33.4s deploy); `/ready` returns 200. In the owner's authenticated DEV
+browser, the unit-1 button opens a ten-word session directly into a matching game
+with I, you, he in catalog order and no daily-allowance error. No answers or
+fabricated progress were submitted. Production is excluded.
+
 ### All unit smart entries and legacy resumes — 2026-10-06
 
 The owner still observed unordered smart learning on the ori account. Read-only
