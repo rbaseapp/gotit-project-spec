@@ -51,7 +51,7 @@ remain reachable by scrolling on small and landscape screens.
 - Focused Vitest: 45/45 passed. Focused touch browser suite: 4/4 passed.
 - Main `npm.cmd run check`: typecheck, lint, 189 Vitest, production build and 17 gateway tests passed. The final additional tap-replacement test passed with all five touch unit cases.
 - Full main browser run: 384/385 passed. The unrelated press-to-talk fixture omitted the required language response; after repairing the fixture, all five affected touch/voice browser cases passed.
-- DEV candidate: check passed 214 Vitest, typecheck/lint/build and 20 gateway tests; 29 practice browser cases passed. Source: `ffd766e7b5211acc35f572694837374e00a4f0aa` on `feat/ux-2-1-dev`. DEV formatting uses a different configuration and needs normalization before push; deployment remains pending.
+- DEV candidate: check passed 214 Vitest, typecheck/lint/build and 20 gateway tests; 29 practice browser cases passed. Source: `ffd766e7b5211acc35f572694837374e00a4f0aa` on `feat/ux-2-1-dev`. DEV line-ending normalization produced no tracked changes; final formatting and typecheck passed. Source is pushed; deployment remains pending.
 
 Browser touch emulation is not physical iOS/Android device verification.
 The separate demo-session scheduler is unchanged; these round changes apply to
