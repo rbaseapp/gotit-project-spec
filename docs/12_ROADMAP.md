@@ -140,3 +140,8 @@ Backend contracts are implemented/integration verified at `0404c8cc72bbb4f32a125
 ## 2026-10-06 — DEV learning-path correction
 
 Unit gating implemented; cross-unit adaptive checkpoint remains outside this contract. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+
+## 2026-10-06 - Practice clarity Web source checkpoint
+
+Requested practice clarity and native reading guides are locally implemented. Publication, target selection, exact-SHA deployment and authenticated provider/audio smoke remain open. [Canonical source and evidence](32_PRACTICE_CLARITY.md).

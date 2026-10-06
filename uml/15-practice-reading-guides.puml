@@ -1,0 +1,31 @@
+@startuml
+actor Learner
+participant Web
+participant "GotIt Backend" as Backend
+database PostgreSQL as DB
+participant "Reading-guide provider" as Provider
+Learner -> Web: Open vocabulary
+Web -> Backend: GET learning items
+Backend --> Web: Owned source, meaning, cached phonetic fields
+Web -> Backend: POST reading-guides {ids[1..30]}
+Backend -> Backend: Authenticate; vocabulary.write; strict input
+Backend -> DB: Resolve all owned non-deleted items and native preference
+alt foreign or missing item
+  Backend --> Web: 404; no provider call
+else owned batch
+  Backend -> Backend: Reuse matching cache; coalesce identical pending batch
+  opt missing guides
+    Backend -> Backend: Enforce AI quota
+    Backend -> Provider: Bounded source/native-language request
+    Provider --> Backend: Structured pronunciation guides
+    Backend -> Backend: Validate IDs, length, script and output bounds
+    Backend -> DB: Conditional write: owner/revision/source/native unchanged
+  end
+  Backend --> Web: Valid current guides only, or safe unavailable error
+  Web --> Learner: Native guide below source; meaning beside source
+end
+note over Web,DB
+No learning score or XP is generated.
+Provider failure leaves optional guides absent.
+end note
+@enduml

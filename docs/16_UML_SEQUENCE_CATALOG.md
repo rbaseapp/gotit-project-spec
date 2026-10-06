@@ -87,3 +87,8 @@ Sequence: map GET → learn/known evidence → session POST → authoritative el
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit flow: visible pack detail → independent image/example requests → guarded cache/provider → unit game chooser → pack-scoped session. Viewing creates no progress. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-06 - Practice clarity Web source checkpoint
+
+[Native reading-guide sequence](../uml/15-practice-reading-guides.puml) covers scoped batch selection, cache reuse, bounded provider work and conditional persistence. Pronunciation study metadata and automatic playback remain separate from recording/attempt grading. [Exact contract and verification](32_PRACTICE_CLARITY.md).

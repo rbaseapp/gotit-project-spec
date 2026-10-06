@@ -423,7 +423,7 @@ Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/b
 
 ## 2026-10-06 — Practice clarity / native reading guides
 
-[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
+[Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
 
 ## 2026-10-06 — Unit study source checkpoint

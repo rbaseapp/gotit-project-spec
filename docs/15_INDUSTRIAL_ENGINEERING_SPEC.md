@@ -309,3 +309,8 @@ P-learning control: study evidence precedes teacher entry; known declarations ar
 ## 2026-10-06 — Unit study source checkpoint
 
 P07-P09: unit study media is preparation only; known marking remains a declaration, and scoped game selection retains server-authoritative learning evidence. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-06 - Practice clarity Web source checkpoint
+
+Practice clarity changes presentation and input modality, not authoritative learning scoring. Reading-guide generation is optional enrichment and awards no progress/XP. [Source, acceptance and release boundary](32_PRACTICE_CLARITY.md).
