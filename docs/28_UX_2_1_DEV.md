@@ -4,7 +4,7 @@
 
 Source `gotIt-front@9cff6a0f1de1c22da04e6d5ed285171d258457fb` follows
 the Figma correction `e1948281adabe34d2ff6c4e4dc4f949e90c33436`.
-Status: **locally verified; DEV deployment pending** on `feat/ux-2-1-dev`.
+Status: **locally verified; DEV deployed and authenticated UI smoke verified; Linux CI passed** on `feat/ux-2-1-dev`.
 
 The CI failure below exposed a real initial RTL overflow: a fullscreen demo
 game translated 14px horizontally during entry. A fast local browser could
@@ -23,9 +23,35 @@ Local verification: **84/84** game-route viewport cases (six routes across
 14 widths, 320–1920px) passed. `npm.cmd run check` passed typecheck, lint,
 **207 unit tests**, build and **20 gateway/security tests**. Changed-file
 Prettier and diff checks passed; dependency audit found zero vulnerabilities.
-The full 393-case local browser run is still running. No production change.
-Exact DEV Live source, readiness, delivered CSS and final CI results remain
-release gates and will be recorded here.
+The full local browser run passed **393/393**, with zero skipped, unexpected
+or flaky cases (319.6 seconds). No production change.
+
+Render auto-deployment `dep-db2blhrncjis73cf2ta0` is **Live** at exact source
+`9cff6a0f1de1c22da04e6d5ed285171d258457fb`, duration **47.4 seconds**.
+DEV Web `/ready`, HTML and delivered assets return HTTP 200.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `/assets/index-DGKCKPeE.js` | `79c7046252b07a991373e661eb7df43d6db711ef7cfa2f7d5c9220a19d21b6c9` |
+| `/assets/index-qEJ4g152.css` | `00189694da73da78db94172dbbadf022e259678a2ed6eacbe4a57ac9c6ff9006` |
+
+The delivered CSS matches local build bytes and includes
+`.session-page.page-enter{animation-name:ux-fade}`.
+The signed-in dashboard and programs were reloaded and inspected with the new
+`index-DGKCKPeE.js` / `index-qEJ4g152.css` links in their DOM. Preparation was
+opened again from the updated app; its real recommendation, teacher preference,
+start/warmup and history remained available. The original dashboard tab is left
+open on the updated release. [Preparation from the final DEV source](evidence/2026-10-06-figma-fidelity/dev-preparation-final.jpg).
+CI run [`37441023433`](https://github.com/rbaseapp/gotIt-front/actions/runs/37441023433),
+job `112194521368`, completed successfully on this exact source at
+09:16:53 UTC (12:16:53 Asia/Jerusalem): **207 unit / 393 browser /
+20 gateway-security cases**, typecheck, lint, build and zero dependency audit
+findings. Browser validation took 6.0 minutes and had no failures. The earlier
+failed CI is retained below as historical failure evidence; this follow-up
+closes that gate. Scope remains four reported screen families/shared shell,
+not visual certification of every Figma state. Voice appearance is
+fixture-verified; no real provider call, physical device or screen-reader
+acceptance was performed.
 
 ## 2026-10-06 - Figma fidelity correction (local checkpoint)
 
@@ -150,14 +176,15 @@ Typecheck, lint and 207 unit tests passed; CI build/gateway/audit were skipped
 after the failed browser gate, while their local results remain as stated above.
 The new horizontal entry animation translates a full-viewport RTL game frame
 during its first 0.28 seconds. A deterministic animation-start regression and
-a follow-up fix are required before delivery. The real-account UI smoke remains
+a follow-up fix were required before delivery; source `9cff6a0` above resolves
+and verifies that gate. The real-account UI smoke remains
 valid for the reported home/program/preparation families, but it does not close
 this release gate. Active lesson appearance is verified with deterministic
 Realtime fixtures, rather than represented as a real provider acceptance.
 
 ## Source and status
 
-- Source repository: `gotIt-front`, current release commit `e1948281adabe34d2ff6c4e4dc4f949e90c33436` (prior rollout `0e88da53f679a142bf040a51b4c428b6652e0a72`, initial redesign `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
+- Source repository: `gotIt-front`, current release commit `9cff6a0f1de1c22da04e6d5ed285171d258457fb` (Figma correction `e1948281adabe34d2ff6c4e4dc4f949e90c33436`) (prior rollout `0e88da53f679a142bf040a51b4c428b6652e0a72`, initial redesign `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
 - Branch: `feat/ux-2-1-dev`; DEV-only owner instruction overrides app-main/production delivery.
 - Status: **DEV deployed and authenticated UI smoke verified** on 2026-10-06; current fidelity-correction evidence is above. The sections below retain earlier rollout history. Production source/services/data were not changed by this task.
 - Report/route coverage is below. Design-only proposed capabilities are explicitly excluded from active-server claims.
