@@ -253,3 +253,6 @@ process/screen mapping, data/API owner, security/cost impact והחלטות מו
 ## FR-PACK-004 — Dedicated English learning path
 
 Should: an authenticated English-to-Hebrew learner can open a named language-learning path distinct from generic word packs. It presents Basic, Good and Advanced in sequence, each with 20 ordered units of 50 words/expressions, server-reported progress and the next unfinished unit. The learner previews a unit and installs only that unit before pack-scoped practice. Empty, loading, error, and billing-restricted states are explicit. Data comes from existing protected pack APIs. Implemented locally in `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`; production catalog and route smoke unverified. Maps to UC-04 and SCR-16.
+# Guided lesson requirements — 2026-10-06
+
+FR-GUIDED-001–006 and FR-UX-007–010 are Must for the owner-approved DEV learning/account scope. They cover owner-resolved preparation, durable guided commands, text/voice assistance, replay/review, report cleanup, bounded teacher samples, scoped smart practice, explicit word-sense capture, persisted UI preferences and history filtering. [Canonical owners and measurable acceptance criteria](30_FIGMA_FULL_DEV.md#requirements-and-acceptance). Parent/child relationships, deletion and native Play purchases remain deferred by the owner.

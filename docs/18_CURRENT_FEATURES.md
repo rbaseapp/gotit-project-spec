@@ -357,3 +357,6 @@ separation ו־cross-repo compatibility CI.
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+# Guided learning/account DEV checkpoint — 2026-10-06
+
+Backend activity/review/replay, owned approved unit words, smart review-only selection, per-account interface preferences and pre-limit language/pack lesson history are implemented and integration verified at `0404c8cc72bbb4f32a125f4c9e255318beff9a60`. Teacher sample availability is conditional on the existing OpenAI key/quota. DEV migration/deploy and Web final acceptance are pending. [Exact behavior and exclusions](30_FIGMA_FULL_DEV.md).

@@ -348,3 +348,6 @@ Follow [the Facebook rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md) for the Meta 
 2026-10-02: Web `3fa4da4f31023682c9308d686fb04dbb0676b590` manually deployed on Render service `srv-dal8smbm8hqs73fabfng`, deploy `dep-davom667bikc73ese7e0`, Live in 41.2s. Readiness and delivered slower-lip code smoke passed. [Evidence and limits](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: Web `3ec2d2899e4cf6504e65aba01f19e425c9a87942` deployed manually on service `srv-dal8smbm8hqs73fabfng`, deploy `dep-davp0egu01pc73fjqnig`, Live in 1m18s. Production readiness and delivered visual timing smoke passed. [Evidence and scope](25_TUTOR_AVATAR_MOTION.md).
+# Guided learning DEV release gate — 2026-10-06
+
+Source `0404c8cc72bbb4f32a125f4c9e255318beff9a60` is pushed to Backend `feat/figma-complete-dev`. Explicit DEV-only authorization overrides the normal source-main release, because main auto-deploys production. Only the named DEV Web/Backend services may be retargeted. Apply the additive migration with existing migrator privileges in `gotit_dev`, then verify runtime preflight, normalization, exact source SHA and authenticated smoke. [Targets, ordered steps and pending evidence](30_FIGMA_FULL_DEV.md#dev-delivery-gate). Do not run live down migrations or change runtime permissions.

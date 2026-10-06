@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Guided lessons and canonical Figma DEV contracts
+
+Record Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: owned guided activity/review/replay, approved course words, pack/language history, smart review-only choice, persistent UI preferences and bounded real teacher voice samples. Typecheck/build, 228 fast and 67 PostgreSQL tests pass. Additive migration and exact-SHA DEV deployment are pending. Production excluded; parent/child relationships, deletion and native Play purchases are explicitly deferred. [Requirements, API, data, privacy, sequence and release gate](docs/30_FIGMA_FULL_DEV.md).
+
 ## 2026-10-06 - Recurring meaning matching
 
 Document the targeted Web repair for recurring recognition boards, shared styling and finger-aligned mobile drag. Source and local/deployed evidence are tracked in [29](docs/29_MEANING_MATCHING_ROUNDS.md).

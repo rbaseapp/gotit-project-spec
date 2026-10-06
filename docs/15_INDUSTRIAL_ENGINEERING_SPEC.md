@@ -297,3 +297,6 @@ Change Request חייב לציין:
 5. operational ownership, monitoring ו־rollback.
 6. training/support/legal artifacts כאשר רלוונטי.
 7. KPI או success signal שניתן למדוד.
+# Guided learning control points — 2026-10-06
+
+Private-lesson learning now has owner-resolved course/unit context, revision/idempotency checks before state transitions and an atomic report/temporary-text purge boundary. Assistance, correction and word study remain distinct from independent recall evidence; pausing the local interface does not pause minute billing. Scope selection is checked before SRS scheduling, and language/pack history filtering precedes pagination. [UC-GUIDED-01, UC-UX-05/06 and KPI constraints](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence).

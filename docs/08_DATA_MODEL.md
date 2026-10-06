@@ -220,3 +220,6 @@ DDL; בהקשחת Production רצוי pre-deploy job נפרד כדי שה־runti
 - down migration רק על DB חד־פעמי; אינו rollback production אוטומטי.
 - rollback אפליקטיבי חייב לתמוך ב־schema החדש או להתבצע אחרי restore מתוכנן.
 - RPO/RTO ותרגיל restore רבעוני הם החלטה תפעולית פתוחה.
+# Guided lesson data — 2026-10-06
+
+Migration `1791280000000_guided-lesson-activities.js` adds nullable `private_lesson_sessions.word_pack_context` and the composite owner/lesson tables `private_lesson_activities` and `private_lesson_activity_commands`. Revision/fingerprint constraints and scoped FKs preserve isolation; successful report completion purges temporary snapshots/receipts atomically. No audio archive or second billing model is introduced. [Constraints, lifecycle, role separation and rollback](30_FIGMA_FULL_DEV.md#data-model-and-privacy). DEV migration pending at this checkpoint.

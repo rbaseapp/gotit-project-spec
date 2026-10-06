@@ -75,3 +75,6 @@ path וגם מסלולי כשל ובקרה. הם אינם מחליפים את ח
 
 ניתן לרנדר עם PlantUML CLI/IDE extension. אין לבצע שינוי בתרשים בלי לעדכן את
 החוזה או התהליך שהוא מייצג. CI עתידי צריך לבצע syntax/render check לכל `.puml`.
+# SEQ-14 — Guided lesson activity and report
+
+[14-guided-lesson-dev.puml](../uml/14-guided-lesson-dev.puml) covers owned context, minute allocation, activity creation, revision/receipt checks, bounded AI evaluation and atomic report cleanup with retry on failure. [Source and acceptance status](30_FIGMA_FULL_DEV.md).

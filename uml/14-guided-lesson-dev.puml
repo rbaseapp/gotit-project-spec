@@ -1,0 +1,37 @@
+@startuml
+title SEQ-14 - Owner-scoped guided lesson (DEV)
+actor Learner
+participant Web
+participant "GotIt Backend" as Backend
+participant "rbase Core" as Core
+database "product_gotit" as DB
+participant "AI / Realtime provider" as AI
+Learner -> Web : Choose actual unit / personal course and mode
+Web -> Backend : Create lesson with context
+Backend -> Core : Verify identity / access / actual minute balance
+Backend -> DB : Resolve owned context and reserve lesson
+Backend -> DB : Create bounded activity and revision
+Backend -> AI : Issue bounded Realtime session (guided VAD does not auto-answer)
+Backend --> Web : Server activity + one-use connection ticket
+loop Answer / hint / continue / review
+ Web -> Backend : UUID + expected revision + strict command
+ Backend -> DB : Owner / active / deadline / replay check
+ alt Duplicate UUID, same fingerprint
+  DB --> Backend : Original snapshot receipt
+ else New command
+  Backend -> AI : Bounded untrusted answer evaluation
+  Backend -> DB : Transactional active-deadline CAS + receipt
+ end
+ Backend --> Web : Server snapshot and selected tutor event
+end
+Web -> Backend : Complete lesson
+Backend -> AI : Structured report from bounded server turns
+alt Valid report
+ Backend -> DB : Atomic report persistence + temporary activity/receipt purge
+ Backend --> Web : Actual report / follow-up homework
+else Report generation failure
+ Backend --> Web : Retryable failure, no fabricated saved evidence
+end
+note over Web,Backend : Text requires no microphone. Pause does not stop billing.
+note over DB,AI : No learner audio file stored; fixed public teacher samples are separate.
+@enduml

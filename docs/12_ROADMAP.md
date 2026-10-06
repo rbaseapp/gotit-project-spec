@@ -132,3 +132,6 @@ V1 נחשב מוכן רק כאשר משתמש אמיתי יכול:
 
 ובמקביל: migration/backup/rollback, monitoring, security, accessibility, legal,
 support ו־live acceptance הושלמו עם ראיות.
+# Guided learning DEV milestone — 2026-10-06
+
+Backend contracts are implemented/integration verified at `0404c8cc72bbb4f32a125f4c9e255318beff9a60`; remaining gates are DEV schema rollout, Web final quality/fidelity acceptance, exact-SHA deployment and authenticated provider smoke. Parent/child account relationships, account deletion and native Google Play purchases are explicitly a separate owner-selected phase. Reward-economy concepts and new published language catalogs are not inferred from design examples. [Scope and current status](30_FIGMA_FULL_DEV.md).

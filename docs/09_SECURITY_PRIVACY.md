@@ -183,3 +183,6 @@ request without expanded privileges; its corrected connection requires TLS with
 full certificate verification. Secret files remain outside Git in a user-only
 local directory, and Render credential submission is handed to the owner.
 No production credential or privilege was changed. [Evidence and limits](28_UX_2_1_DEV.md).
+# Guided activity privacy boundary — 2026-10-06
+
+Owner-scoped bounded temporary text supports active lesson retries/review and is purged with successful report completion or lesson deletion. Audio stays transient. Voice preview sends only fixed public English AI-teacher text, using server-side credentials, timeout/byte limits and existing quota; no learner text/identity is supplied. Client scope, expired status, mixed IDs and stale revisions fail closed. [Contracts and threat controls](30_FIGMA_FULL_DEV.md#data-model-and-privacy). Live provider acceptance remains pending.

@@ -310,3 +310,14 @@ Web `0e88da53f679a142bf040a51b4c428b6652e0a72` adds source-map offset security
 regressions to the existing release quality gate and patches the locked dependency.
 FR-UX-001–006 behavior and APIs are unchanged. Tests and owner-controlled DEV TLS
 credential/deployment evidence are tracked in [the canonical checkpoint](28_UX_2_1_DEV.md).
+# Guided learning traceability — 2026-10-06
+
+| Requirements | Implementation / tests | Status |
+|---|---|---|
+| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14 | Backend 0404c8c locally/integration verified; DEV pending |
+| FR-GUIDED-006 | voiceSample + private-lesson-voice-sample tests | Fake provider verified; real TTS acceptance pending |
+| FR-UX-007 / FR-UX-010 | practice validation/service, lesson repository, reading queue; practice integration language/pack cases | Backend locally/integration verified |
+| FR-UX-008 | course.words + course-words unit/PostgreSQL cases | Owner/normalized multiple-meaning boundaries verified |
+| FR-UX-009 | profile validation/repository/types + profile integration legacy merge/isolation | Owner persistence verified |
+
+[Canonical requirement criteria, exact source SHA and release evidence](30_FIGMA_FULL_DEV.md). Web final gate remains pending and fixture counts do not imply individual acceptance of every design frame.

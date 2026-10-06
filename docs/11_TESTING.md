@@ -380,3 +380,6 @@ error and fresh workstation network checks failing before HTTP responses.
 Direct verified-TLS DEV runtime login and strict schema/privilege preflight passed;
 this does not prove a successful Render runtime deployment or product writes.
 [Canonical release gate](28_UX_2_1_DEV.md).
+# Guided learning verification — 2026-10-06
+
+Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: typecheck/build, 228 fast tests and 67 real disposable-PostgreSQL tests passed. New cases cover owner/app boundaries, expired session races, concurrent revisions, stable/changed command replay, normalized ambiguous unit words, report cleanup, runtime DDL denial, legacy preference merge and provider/sample failure/size/timeout. Changed-file Prettier passed; repository-wide existing formatting/Windows checkout drift is not resolved by this task. [Detailed checkpoint and pending live gates](30_FIGMA_FULL_DEV.md#verification-checkpoint).

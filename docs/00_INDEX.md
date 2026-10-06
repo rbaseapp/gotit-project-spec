@@ -85,3 +85,6 @@ Chrome Extension ──┤
 7. הקלטת קול של המשתמש חולפת ואינה נשמרת במסלול ההגייה.
 8. עריכה סמנטית מאפסת הוכחות עדכניות בלי למחוק היסטוריית ניסיונות ו־XP.
 9. קוד קיים גובר על מסמך היסטורי; שינוי חוזה מחייב עדכון מסמכים ובדיקות.
+# Canonical Figma learning/account implementation
+
+[30 — Figma full DEV](30_FIGMA_FULL_DEV.md) owns the 2026-10-06 guided-lesson, unit-word, interface-preference and scoped-history contracts and their exact source/deployment status. [SEQ-14](../uml/14-guided-lesson-dev.puml) describes activity and report transactions.
