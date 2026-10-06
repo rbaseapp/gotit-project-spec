@@ -340,3 +340,8 @@ Final `7c68ca1` Live/CI success supersedes the pending rollout above. FR-UX-007
 independent article quiz -> saved reading -> letter/delete/capacity input -> actual
 server correct/+8 XP grading; FR-UX-009 retained preferences/save success; reading
 provider configuration repaired only in DEV. [Current exact release and acceptance](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+FR-PATH-001/002 → server journey/image contracts → unit and real PostgreSQL regressions. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

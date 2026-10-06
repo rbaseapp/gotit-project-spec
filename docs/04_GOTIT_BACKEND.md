@@ -199,3 +199,8 @@ Providers: משתני OpenAI, Anthropic, Google, Azure ו־Pixabay המתועד�
 # Guided learning checkpoint — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60` adds owner-scoped guided activity, command receipts, original-turn replay, transcript correction review, course-unit word resolution and fixed teacher voice samples. Profile UI fields and history/smart selection extend existing contracts compatibly. Locally/integration verified; deployment pending. [Canonical contracts and release status](30_FIGMA_FULL_DEV.md).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+Authoritative introduced-entry count and teacher meeting eligibility. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

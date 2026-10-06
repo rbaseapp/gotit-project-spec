@@ -362,3 +362,8 @@ learning/reading/account smoke pass. Old open tabs across a bundle rollout may n
 the existing reload action after an obsolete lazy chunk fails; reload recovered the
 current account UI. Preserve additive schema during rollback, and retain the DEV
 model's compatibility with the OpenAI generator. [Authoritative source/deploy/test evidence](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+DEV-only staged rollout; no migrations; production excluded. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

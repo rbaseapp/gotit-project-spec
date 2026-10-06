@@ -360,3 +360,8 @@ separation ו־cross-repo compatibility CI.
 # Guided learning/account DEV checkpoint — 2026-10-06
 
 Backend `468357129d919b1dcacd15a409ec78d77e69bf68` and Web `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` are Live in DEV. Canonical learning/account families, owned guided activities/replay/report/words/history, scoped independent smart/manual games, reading and saved UI preferences are implemented. Actual provider lesson stages/replay/report/cleanup, teacher sample, reading generation/save/quiz and clickable-letter server grading were accepted. Final Web CI passes 224 unit/406 browser/20 gateway/type/lint/build/audit. DEV reading now uses the available repository default `gpt-6-luna`, replacing leftover Anthropic model configuration. This is not production/physical-device/all-494-frame acceptance; parent/child accounts, deletion and native Play remain deferred. [Exact releases, tests, limits and screenshots](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+Backend path eligibility locally/integration verified; DEV deploy pending. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

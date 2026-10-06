@@ -223,3 +223,8 @@ DDL; בהקשחת Production רצוי pre-deploy job נפרד כדי שה־runti
 # Guided lesson data — 2026-10-06
 
 Migration `1791280000000_guided-lesson-activities.js` adds nullable `private_lesson_sessions.word_pack_context` and the composite owner/lesson tables `private_lesson_activities` and `private_lesson_activity_commands`. Revision/fingerprint constraints and scoped FKs preserve isolation; successful report completion purges temporary snapshots/receipts atomically. No audio archive or second billing model is introduced. [Constraints, lifecycle, role separation and rollback](30_FIGMA_FULL_DEV.md#data-model-and-privacy). DEV migration pending at this checkpoint.
+
+
+## 2026-10-06 — DEV learning-path correction
+
+No schema change; journey is derived from owned pack links, known declarations and existing learning status. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

@@ -189,3 +189,8 @@ Owner-scoped bounded temporary text supports active lesson retries/review and is
 # DEV audit follow-up — 2026-10-06
 
 Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` patches proxy-addr to 2.0.8 and tests malformed mapped-IPv6 subnet isolation. Numeric trusted-hop policy is unchanged; no production release is implied. [Canonical security/backup evidence](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+Cached images remain owner-scoped/current-revision; locked meetings reject before provider/wallet work. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

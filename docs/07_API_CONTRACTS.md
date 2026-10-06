@@ -316,3 +316,8 @@ Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beg
 # Guided learning API additions — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60` catalogs 86 endpoints. Six additions expose owned unit context, GET/POST lesson activity, original/support replay, fixed voice samples and approved course-unit meanings. Existing lesson history accepts language/pack filters; smart-review accepts optional includeNewItems; profile learningPreferences accepts UI fields. [Strict payloads, access, bounds, errors, replay and compatibility](30_FIGMA_FULL_DEV.md#api-contract-additions). These are locally/integration verified contracts, pending DEV deployment.
+
+
+## 2026-10-06 — DEV learning-path correction
+
+Additive station policy, midpoint input, 409 UNIT_WORDS_REQUIRED, owned cached-image read; API inventory now 87. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

@@ -287,3 +287,8 @@ UC-GUIDED-01 joins owned unit preparation to learn/try/chat, replay, corrected t
 ## 2026-10-06 - Complete learning/account Web
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements UC-GUIDED-01 and UC-UX-05/06 from the [canonical sequence and state contract](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence), including text start without microphone, scope-preserving warmup, stable command retry, review, automatic report after guided closure, and per-account interface save/retry. Independent extension-word games, explicit missing/sense capture and Core minutes remain supported. Full browser/live provider acceptance pending.
+
+
+## 2026-10-06 — DEV learning-path correction
+
+UC-PATH-01 study then teacher; UC-PATH-02 inspect owned word illustration. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

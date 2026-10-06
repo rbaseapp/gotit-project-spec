@@ -300,3 +300,8 @@ Change Request חייב לציין:
 # Guided learning control points — 2026-10-06
 
 Private-lesson learning now has owner-resolved course/unit context, revision/idempotency checks before state transitions and an atomic report/temporary-text purge boundary. Assistance, correction and word study remain distinct from independent recall evidence; pausing the local interface does not pause minute billing. Scope selection is checked before SRS scheduling, and language/pack history filtering precedes pagination. [UC-GUIDED-01, UC-UX-05/06 and KPI constraints](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+P-learning control: study evidence precedes teacher entry; known declarations are not mastery. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

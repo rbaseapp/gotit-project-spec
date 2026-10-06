@@ -412,3 +412,8 @@ CSS hash are verified. Live reading failed on leftover Anthropic model configura
 then succeeded after DEV-only `gpt-6-luna` environment deployment: actual preview,
 meaning/save/quiz and letter/delete/capacity/correct server grading passed. All three
 DEV readiness endpoints return 200. [Final evidence and unverified boundaries](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+232 fast / 68 PostgreSQL tests; changed-file formatting verified, repository-wide formatting baseline remains. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

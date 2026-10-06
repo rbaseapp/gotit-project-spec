@@ -540,3 +540,8 @@ Route: `/english-learning` (live Web). Actor: authenticated learner with an Engl
 # Canonical Figma learning/account scope — 2026-10-06
 
 `kgMHTv0q4TJdwxCHYzUnSM` pages 4:3–4:9 replace the historical design reference. Preparation, guided activity, replay, review, summary, unit words, smart launch, scoped history and account interface states consume the contracts in [30](30_FIGMA_FULL_DEV.md). Web final verification is pending; 494 source frames are an inventory, not 494 verified browser screens. Owner-deferred parent/child relationships, deletion and native Play states are not active application features.
+
+
+## 2026-10-06 — DEV learning-path correction
+
+SCR path/map/words/activities/levels: Figma fidelity corrections in progress; Backend eligibility verified. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

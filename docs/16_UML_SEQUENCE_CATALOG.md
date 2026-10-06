@@ -78,3 +78,8 @@ path וגם מסלולי כשל ובקרה. הם אינם מחליפים את ח
 # SEQ-14 — Guided lesson activity and report
 
 [14-guided-lesson-dev.puml](../uml/14-guided-lesson-dev.puml) covers owned context, minute allocation, activity creation, revision/receipt checks, bounded AI evaluation and atomic report cleanup with retry on failure. [Source and acceptance status](30_FIGMA_FULL_DEV.md).
+
+
+## 2026-10-06 — DEV learning-path correction
+
+Sequence: map GET → learn/known evidence → session POST → authoritative eligibility → reject 409 or allocate provider/minutes. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

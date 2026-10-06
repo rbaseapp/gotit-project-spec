@@ -256,3 +256,8 @@ Should: an authenticated English-to-Hebrew learner can open a named language-lea
 # Guided lesson requirements — 2026-10-06
 
 FR-GUIDED-001–006 and FR-UX-007–010 are Must for the owner-approved DEV learning/account scope. They cover owner-resolved preparation, durable guided commands, text/voice assistance, replay/review, report cleanup, bounded teacher samples, scoped smart practice, explicit word-sense capture, persisted UI preferences and history filtering. [Canonical owners and measurable acceptance criteria](30_FIGMA_FULL_DEV.md#requirements-and-acceptance). Parent/child relationships, deletion and native Play purchases remain deferred by the owner.
+
+
+## 2026-10-06 — DEV learning-path correction
+
+FR-PATH-001 teacher sequencing and FR-PATH-002 owned cached images. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
