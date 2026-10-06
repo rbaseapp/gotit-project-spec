@@ -164,8 +164,6 @@ provider test is not a real provider or physical-device acceptance result.
    learning/account/word scope smoke; record any provider/capability limits explicitly.
 6. Record deployment evidence in this document and push the spec update to main.
 
-## Web checkpoint
-
 ## Backend security release gate follow-up
 
 Backend release source is now [`43a429ceeed3a2cd4715724a4d78568f846ef4d0`](https://github.com/rbaseapp/gotIt-backend/commit/43a429ceeed3a2cd4715724a4d78568f846ef4d0), preserving the guided implementation above. Only locked `proxy-addr` 2.0.7 → 2.0.8 changes; existing numeric trusted-hop configuration remains unchanged. Two subnet regressions cover short mapped-IPv6 trust and normal/full mapped compatibility. Typecheck, **230 fast tests**, build and zero-finding npm audit pass. [Official advisory](https://github.com/advisories/GHSA-jqcg-44mw-7w3h). No production rollout is performed.
@@ -178,3 +176,28 @@ Pending Web final gates/source commit. Shared screen-state ledger maps 494 canon
 desktop/mobile frames without claiming 494 individual screenshot tests. Parent,
 deletion and native Play states are deferred by the owner; concept reward states do
 not activate an unapproved economy. Catalog languages require actual published data.
+
+## Backend DEV deployment and migration — 2026-10-06
+
+Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` is **Live** in Render deployment
+`dep-db2fgvu7bikc73djr8rg`, service `srv-dar6ei7f3r2c73balbp0`, from
+`feat/figma-complete-dev`. The service branch alone was changed. `/health` and
+`/ready` return 200/ok and ready/database ok. The previous pending statements above
+describe earlier checkpoints, superseded by this deployment.
+
+Forward migration `1791280000000_guided-lesson-activities` was applied to verified
+DEV `gotit_dev` on `dpg-dar6fkp7lnhs73a7mspg-a`. The ordinary repository runner
+validated its immutable baseline, ordering and migration lock. Core DEV's existing
+administrator connection was used because this DEV database has no separate migrator;
+no credential, role or grant was changed. The downloaded exact-source archive was
+verified with SHA256 `e8d73ce13aecf5ed04c046abf7214199c43c44a98599a3a992e14a4daad5f4c1`.
+
+After migration, the actual `gotit_runtime` connection passed strict schema/privilege
+preflight (`product-only`, 39 operational tables); the product schema contains 52
+tables. The read-only normalization audit completed with zero mismatches. Existing
+administrator default privileges already gave runtime DML on the new tables. Runtime
+remains unable to perform DDL or general Core reads. Backup is the product snapshot
+documented above; rollback retains additive schema and deploys compatible older code.
+
+Web deployment, authenticated guided lesson/report/replay and real provider acceptance
+remain pending. Server readiness alone does not prove these user flows.

@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Canonical guided Backend Live in DEV
+
+Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` is Live at `dep-db2fgvu7bikc73djr8rg`. Apply the additive guided migration only to the verified DEV database using its existing administrator; actual runtime strict preflight and read-only normalization audit pass with unchanged grants. Health/readiness pass. Web and authenticated provider acceptance remain pending. [Deployment evidence](docs/30_FIGMA_FULL_DEV.md#backend-dev-deployment-and-migration--2026-10-06).
+
 ## 2026-10-06 - DEV Backend audit gate
 
 Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` patches only proxy-addr 2.0.8, adds two trust-subnet regressions and passes 230 fast tests/typecheck/build/zero audit findings. Record the verified DEV administrator target and local product-only pre-migration backup; migration/deploy pending. [Canonical checkpoint](docs/30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
