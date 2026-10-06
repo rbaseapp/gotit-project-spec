@@ -35,6 +35,9 @@ message with `UNIT_DAILY_NEW_LIMIT`, explaining tomorrow/settings. The real
 PostgreSQL unit regression and 11 Web product tests pass again with this guidance,
 as do typechecks. Both exact follow-up commits are confirmed Live in Render
 (Backend 43.8s, Web 46.3s deployment duration).
+Both readiness endpoints return 200; a fresh authenticated unit-button launch
+visibly shows the localized allowance explanation. Screenshot:
+`C:/Users/Ori/AppData/Local/Temp/unit-order-daily-limit-dev.png`.
 The account preferences were not changed. Production remains excluded.
 
 ### Direct daily unit batches — 2026-10-06, Live in DEV
