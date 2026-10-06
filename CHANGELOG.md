@@ -412,3 +412,8 @@ Backend fc9279c resolves the catalog regression: final 239/239 unit tests pass; 
 ## 2026-10-06 - Practice clarity Web source checkpoint
 
 Web `47d80b612e4280f199e8571e5426d6a73e709ce6` implements centered meanings, ordered colored ratings, readable pronunciation/autoplay/replay, phrase-aware large tiles, visible level choices, distinct typed recall, and native vocabulary guides. Final 225 unit/20 gateway/type/lint/build/format gates and 39 focused browser scenarios pass (two retries); broad-run limitations and pending source publication/deployment are explicit. [Exact evidence](docs/32_PRACTICE_CLARITY.md#web-source-and-final-local-gates).
+
+
+## 2026-10-06 - Complete reading guides for large unit lists
+
+Web `0015e1feffeeb30126665d5d676bdace598268ad` continues bounded guide batches through every missing unit word and preserves earlier results if a later provider call fails. Two new unit/two repeated browser checks and type/lint/build/format pass. Publication/deployment remain pending. [Exact evidence](docs/32_PRACTICE_CLARITY.md#large-unit-list-follow-up).

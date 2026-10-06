@@ -51,3 +51,10 @@ Final local validation:
 - Desktop/mobile screenshots were inspected. Final artifacts are under `%TEMP%/gotit-clarity-final` and `%TEMP%/gotit-clarity-map-final`; unit/build/gateway logs use `%TEMP%/gotit-clarity-*`.
 
 No provider was called by mocked browser tests, no physical microphone/audio acceptance is claimed, and no source branch was pushed. Main is unchanged in the app repositories. The pending decision is DEV-only deployment versus promotion to main/production, since the deployed DEV base includes preceding unrelated redesign commits. Deploy Backend before Web after that decision; verify readiness, exact SHAs and authenticated live acceptance before changing this status.
+
+
+## Large unit list follow-up
+
+Final Web source `0015e1feffeeb30126665d5d676bdace598268ad` follows `47d80b6`. A unit-filtered library may return 100 rows; missing guides now continue in sequential batches of at most 30 rather than stopping after the first batch. Completed guides remain visible if a later request fails; cancellation prevents further batches. Each generated batch remains subject to the existing server quota.
+
+Two new unit regressions pass: 65 missing items produce 30/30/5 requests and guides for all items; a later provider failure preserves the first result and stops further requests. Both library browser scenarios pass again at 320/1487px. Typecheck, lint, build, changed formatting and diff checks pass. The preceding 225-unit and broader browser evidence belongs to the preceding Web checkpoint; the changed batching behavior is covered by these focused follow-up checks. No source push or deployment has occurred; release-target clarification remains open.
