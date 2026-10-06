@@ -2,6 +2,41 @@
 
 ## Current delivery update
 
+### Ordered unfinished unit batches and learned badges — 2026-10-06
+
+This supersedes the review-priority ordering in the previous delivery. Backend
+`47bbc2718810b179588bb995c6f0e2b01548b83d` and Web
+`644efb7369a74c1b290367ac2bab752276d47a59` are confirmed Live in DEV. The unit
+entry requests `curriculumOrder=true`. Both selection and actual game rounds keep
+catalog order, regardless of review dates. A partially finished 10/20-word batch
+reopens with its unfinished words; later batches start only when the current
+batch is complete. Known/excluded entries remain excluded.
+
+Unit detail now returns `learned` for a correct, scored unit-scoped game attempt
+at the current learning revision (score >=85, excluding flashcard self-ratings).
+The word list displays a learned badge and selected-word explanation, refreshed
+on return/focus. General-library attempts do not complete a unit word. This
+completion marker is separate from long-term mastery; no XP or mastery rewrite
+and no migration is involved.
+
+Verification: 34 relevant real PostgreSQL lifecycle/unit cases, 19 focused backend
+contract/queue/study cases, 52 Web live/navigation tests, six browser cases across
+320px and 1487px, and applicable typecheck/lint/build checks passed. The actual
+game regression reverses review dates and still requires the first catalog words.
+Real authenticated DEV confirms existing successful unit words have learned
+badges, including have and need; no answers or fabricated progress were submitted.
+Screenshot: `C:/Users/Ori/AppData/Local/Temp/unit-order-dev-verified.png`.
+
+The live launch also exposed this account's exhausted daily new-word allowance.
+The next curriculum word is still new; the game correctly does not skip ahead
+to later review words. Follow-up Backend `da7ad8b03083aef60d6b83574c2397d112ce1383`
+and Web `e5292a3fa9425b40c894ad98ab37ffd6b165c3e2` replace the generic empty-selection
+message with `UNIT_DAILY_NEW_LIMIT`, explaining tomorrow/settings. The real
+PostgreSQL unit regression and 11 Web product tests pass again with this guidance,
+as do typechecks. Both exact follow-up commits are confirmed Live in Render
+(Backend 43.8s, Web 46.3s deployment duration).
+The account preferences were not changed. Production remains excluded.
+
 ### Direct daily unit batches — 2026-10-06, Live in DEV
 
 This supersedes the chooser flow below. The unit button now reads "Practice unit
