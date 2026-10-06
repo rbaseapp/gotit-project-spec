@@ -2,6 +2,36 @@
 
 ## Current delivery update
 
+### Direct daily unit batches — 2026-10-06, Live in DEV
+
+This supersedes the chooser flow below. The unit button now reads "Practice unit
+words" and navigates straight to smart games with pack, language, count, batch=1,
+ready=1, and the originating unit return URL. There is no game chooser, ready
+confirmation, or separate memorization deck on this entry path. Installation is
+skipped when the unknown unit entries are already linked, and navigation no longer
+waits for a redundant catalog reload. Other smart-practice entry paths retain their
+existing preparation and memorization flow.
+
+The saved user/language short or long pace selects a 10- or 20-word batch; without
+a saved pace, the profile's daily new-word preference supplies a 10–20 batch limit.
+The saved review-only preference excludes new words. Server daily allowances still
+apply: fewer eligible words produce a smaller batch, never unrelated vocabulary.
+Scoped smart queues continue in-progress unit words before introducing the next
+new words in catalog order, rather than random learning-item UUID order. Targets
+and answer options stay within the selected unit batch; known entries are omitted.
+
+Backend `a12fe0e3998f9556d89e09c7935b18dd998661fb` and Web
+`1a2e6de85b0aabecccb97c01d454aaa08cc93673` are confirmed Live in their DEV Render
+services. Both readiness endpoints return 200. Validation: 33 disposable PostgreSQL
+lifecycle/unit tests, 52 live/navigation component tests, and four browser tests
+pass, including one-click launch at 320px and 1487px. Applicable typecheck, lint,
+build and diff checks pass. Real authenticated DEV smoke: the renamed button
+opened the game automatically with count=10 and unit 1 scope. The server selected
+seven eligible words for this existing account; its profile new-word preference is
+10. No answers were submitted during the smoke. Screenshot:
+`C:/Users/Ori/AppData/Local/Temp/unit-batch-direct-dev.png`.
+No schema/configuration change or production rollout is part of this delivery.
+
 ### Final DEV scope repair — verified
 
 Backend `5111096e4320676f0feaa975da721bf9f1aeb410` is Live at
