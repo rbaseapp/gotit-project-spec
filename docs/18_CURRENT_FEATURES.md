@@ -368,5 +368,5 @@ Backend path eligibility and Web program/map/words/activities/levels are deploye
 
 ## 2026-10-06 — Practice clarity / native reading guides
 
-[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented locally; final API catalog count regression and Web/release work remain pending. No new deployment verified.
+[Canonical requested behavior, Backend source, API/provider/data bounds and exact verification state](32_PRACTICE_CLARITY.md). Backend implemented and locally verified (239 unit / 32 PostgreSQL tests); Web/release work remains pending. No new deployment verified.
 

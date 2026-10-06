@@ -25,3 +25,8 @@ Backend trace: library routes/repository + reading-guide.ts + server wiring + AP
 ## Deployment and rollback
 
 Deploy Backend before Web on the confirmed target. No migration, new secret or permission grant. Verify exact source SHAs, `/ready`, native guides in an authenticated library, pronunciation playback/replay and all three level choices, plus desktop/mobile geometry. An older backend leaves optional guides unavailable without replacing the library. Rollback may redeploy previous code while preserving generated metadata and learning history. No deployed/provider-success claim at this checkpoint.
+
+## Backend final local gate
+
+Source `gotIt-backend@fc9279c241a14ae81bd85a5d640aec981ac09283` corrects the stale API catalog assertion and explicitly covers the new POST route (88 cataloged entries). All **239/239** unit tests now pass. The unchanged implementation passed all **32/32** disposable PostgreSQL lifecycle tests, typecheck/build and changed-file formatting. The preceding failed gate is resolved. Source publication and deployment remain pending target clarification.
+

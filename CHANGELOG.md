@@ -387,3 +387,6 @@ Web `914aa06b9e7220cda0cdc45140a49b7a395f701d` implements map navigation, word/a
 
 Backend 061b1b6 adds owner-scoped, cached native-alphabet guides without a migration. PostgreSQL/targeted provider verification passes; final catalog-count unit assertion and deployment are pending. [Exact evidence](docs/32_PRACTICE_CLARITY.md).
 
+
+Backend fc9279c resolves the catalog regression: final 239/239 unit tests pass; 32/32 PostgreSQL evidence remains valid for unchanged runtime code. [Evidence](docs/32_PRACTICE_CLARITY.md#backend-final-local-gate).
+
