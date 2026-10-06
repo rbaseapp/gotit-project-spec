@@ -327,3 +327,11 @@ credential/deployment evidence are tracked in [the canonical checkpoint](28_UX_2
 | FR-UX-009 | profile validation/repository/types + profile integration legacy merge/isolation | Owner persistence verified |
 
 [Canonical requirement criteria, exact source SHA and release evidence](30_FIGMA_FULL_DEV.md). Web 2559d5b adds CourseJourney, approved unit words, scoped SmartPracticeReadyPage, account/minutes and persisted InterfacePreferences; 224 unit/20 gateway/nine new browser cases pass. Complete browser/CI/deployment gate remains pending; fixture counts do not imply individual acceptance of every design frame.
+
+Latest checkpoint: Backend `4683571` and Web `2ad61a3` Live in DEV; real guided
+start/stages/replay/report/history/temporary-row cleanup and teacher sample pass.
+FR-GUIDED-005 -> summary homework -> `7c68ca1` -> guided browser contrast regression
+fails before/passes after at three widths. FR-UX-007 keeps selected report-word scope
+through pace/session; FR-UX-009 existing choices survive save. Full Web 406/406 and
+Linux CI pass at `2ad61a3`; contrast follow-up deployment pending.
+[Canonical exact evidence and unverified boundaries](30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).

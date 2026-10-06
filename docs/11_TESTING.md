@@ -395,3 +395,13 @@ Source `43a429ceeed3a2cd4715724a4d78568f846ef4d0` adds two proxy-subnet regressi
 ## 2026-10-06 - Complete Figma Web checkpoint
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd`: typecheck/lint, 224 unit, production build, 20 gateway/security, formatting/diff and zero-finding audit pass. Nine new family/guided/focused-game browser cases pass at 320/390/1487, covering geometry, exact vocabulary scope, stable failure retry, microphone-free text, automatic summary and clickable letters. Complete 406-case browser run and Linux CI pending. Backend 230 fast/67 PostgreSQL functional cases pass; DEV migration/preflight/normalization/readiness verified, real provider acceptance pending. [Evidence and limits](30_FIGMA_FULL_DEV.md).
+
+## 2026-10-06 - Full browser gate and real guided acceptance
+
+Web `2ad61a3` passes 406/406 locally and exact Linux CI. Backend `4683571` passes
+230 fast/two relevant PostgreSQL cases/type/build and is Live in DEV. Actual
+brief/Realtime/typed stages/replay/report/history and completed-row temporary
+cleanup pass. Web `7c68ca1` adds the real homework response to the guided fixture
+and fixes the 1.02:1 helper-copy contrast: three browser cases fail before/pass
+after; check passes 224 unit/20 gateway/type/lint/build. Its rollout remains pending
+at source sync. [Exact acceptance and limits](30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).

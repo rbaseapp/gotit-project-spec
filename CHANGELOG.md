@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Real guided DEV acceptance and summary readability
+
+Backend `4683571` Live: actual generated lesson/Realtime/typed stages/slow/support replay/report and scoped history pass; DB confirms report and 313-second duration with zero temporary rows. Web `2ad61a3` passes 406 local and Linux CI. Source `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` repairs low-contrast homework helper copy; three real-response browser fixtures fail before/pass after, check 224 unit/20 gateway/type/lint/build passes. New Web rollout pending. [Canonical source/deployment/provider boundaries](docs/30_FIGMA_FULL_DEV.md#real-guided-acceptance-and-contrast-follow-up--2026-10-06).
+
 ## 2026-10-06 - Strict generated lesson title repair
 
 Backend `468357129d919b1dcacd15a409ec78d77e69bf68` fixes actual DEV provider schema rejection by requiring the new title for generation while retaining optional legacy stored titles. Provider boundary regression fails before/passes after; 230 fast, two relevant PostgreSQL cases, type/build/format pass. Backend rollout/provider lesson acceptance pending. Web `2ad61a3` is deployed, its sample playback works, 406/406 local browser cases and exact Linux CI pass. [Diagnosis, source and deployment boundary](docs/30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).

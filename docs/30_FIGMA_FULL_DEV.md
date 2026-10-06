@@ -312,3 +312,45 @@ and no browser error/alert remained. Initial direct parameterized navigation was
 blocked by the browser; root -> dashboard -> map -> preparation succeeded.
 The stable local browser gate now passes **406/406**, and [Linux CI](https://github.com/rbaseapp/gotIt-front/actions/runs/37475470037)
 is successful for exact `2ad61a3`, including type/lint/unit/browser/build/gateway/audit.
+
+## Real guided acceptance and contrast follow-up — 2026-10-06
+
+Backend `468357129d919b1dcacd15a409ec78d77e69bf68` is **Live**, Render
+`dep-db2g48vavr4c73am4nf0` on the named DEV Backend service, observed at
+17:13:55 Asia/Jerusalem. Readiness returns 200 with database ready. Actual runtime
+strict preflight and read-only normalization pass; latest counts are 170 learning
+items and 210 translations, both with zero normalization mismatches. These counts
+reflect normal owner activity, not a data reset.
+
+Authenticated Web `2ad61a3` / Backend `4683571` acceptance completed a real
+unit-scoped lesson: generated brief, connected Realtime, typed answers, learn ->
+try -> chat transitions, incorrect-answer feedback, slow replay and Hebrew support
+replay. The review dialog retained the original question and original incorrect
+answer. A review request coincided with the actual lesson deadline and wrap-up;
+successful live review regrading is **not** claimed. The automatic report completed,
+its unit activity entry linked to the saved report, and a homework link plus scoped
+smart-practice links were displayed. Read-only DEV DB readback confirmed completed
+status, persisted report/unit context, actual duration **313 seconds**, and **zero**
+temporary activity/command rows. The summary correctly shows six rounded-up minutes.
+No microphone permission was requested and physical microphone/audio quality remains
+unverified. The [actual mobile report before the contrast repair](evidence/2026-10-06-complete-figma/dev-guided-report-mobile.jpg)
+is real DEV evidence, not a fixture or Figma screenshot.
+
+The report -> smart ready -> pace -> session preserved the three selected item IDs,
+English and unit return URL. The server selected one current new-word activity,
+followed by its real recall exercise; the session was stopped normally without
+voice permission or a fabricated graded answer. The unit activity tab showed the
+new actual lesson summary in its pack/language scope. Account settings displayed
+existing saved locale/text/motion/sound choices; saving retained those choices.
+
+Web source [`7c68ca16a7b6ef2633bfe0424207fea301ff6dea`](https://github.com/rbaseapp/gotIt-front/commit/7c68ca16a7b6ef2633bfe0424207fea301ff6dea)
+follows `2ad61a3`: a real report exposed muted helper text on the canonical green
+homework card. The scoped foreground inheritance fixes only this summary card.
+FR-GUIDED-005 / UC-GUIDED-01 / SCR-10 -> LessonSummary/figma-review.css -> guided
+browser fixture now includes parsed homework and requires helper-text contrast
+at least 4.5:1. All three 320/390/1487px cases fail before (1.02:1) and pass after.
+Typecheck/lint, 224 unit tests, production build, 20 gateway/security tests and
+changed formatting/diff checks pass. No API, migration, provider, preference or
+practice policy changed. `7c68ca1` exact DEV deployment is pending at this immediate
+source-to-spec checkpoint; the preceding full 406-case/local Linux CI results belong
+to `2ad61a3`. Production remains untouched and the three agreed exclusions remain.
