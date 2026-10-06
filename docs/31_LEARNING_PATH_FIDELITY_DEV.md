@@ -8,8 +8,8 @@ are excluded. Documentation is synchronized on main.
 
 Backend source: [gotIt-backend@b3c1b737ea1385644bc114366dc2e46b0dd51146](https://github.com/rbaseapp/gotIt-backend/commit/b3c1b737ea1385644bc114366dc2e46b0dd51146).
 Status: **Backend and Web exact source Live in DEV; authenticated desktop/mobile smoke verified**.
-Web deployed source: `914aa06b9e7220cda0cdc45140a49b7a395f701d`; follow-up
-`51b92b3f4c053b9f20e1859c138618fef8dc166b` is locally verified, deployment pending.
+Web deployed source: `51b92b3f4c053b9f20e1859c138618fef8dc166b`, including the
+main correction `914aa06b9e7220cda0cdc45140a49b7a395f701d` and full-session follow-up.
 Final release evidence below
 supersedes the intermediate source checkpoints. Production is unchanged.
 Figma references: file kgMHTv0q4TJdwxCHYzUnSM, page 4:3, map 43:2557,
@@ -86,7 +86,7 @@ sense selection/capture. New Program is a full page (43:2182), carries selected
 languages into personal intake, and enables prepared paths only for a published
 language pair. Spanish illustrative frames do not fabricate a published catalog.
 Memorization centers the contained image and both independently directed language
-blocks; landscape may shrink the frame to keep content within the available height.
+blocks; the final follow-up preserves image size and allows vertical scrolling.
 
 FR-PATH-003 / UC-PATH-03: Programs → map → words → map never opens stale dialogs.
 FR-PATH-004 / UC-PATH-04: select word/activity and inspect its actual detail; resume
@@ -134,6 +134,8 @@ Authenticated DEV smoke on the deployed sources:
 - Word selection changes actual detail (you on desktop; where on mobile), and
   returning to the map does not open management. Missing stored examples are
   reported rather than fabricated. Bulk management stays an explicit action.
+  Expanding the real unit list and selecting here also retrieves its owned cached
+  Pixabay image and source credit through the new read-only image route.
 - Activities display real completed teacher/practice records and selected teacher
   summary, correction and next plan. Historical pre-gating lessons remain readable.
 - All three levels expose 20 real units; advanced Science search finds its unit
@@ -176,4 +178,29 @@ failed before this fix and all 12 pass after. Assertions cover image size,
 alignment, loading geometry, replay clipping and readable attribution. Full
 `npm run check` passes 225 unit, 20 gateway, type/lint/build; changed-file format
 and diff checks pass. Parent-source 413-case CI is separate evidence, not a claim
-that this follow-up has already completed CI. Exact DEV deployment is pending.
+that this follow-up has already completed CI.
+
+### Final memorization deployment and live measurements
+
+Render dep-db2hc9favr4c73ao8ja0 is **Deploy succeeded / Live** at exact
+51b92b3f4c053b9f20e1859c138618fef8dc166b. Web /ready returns 200 (request
+e17312aa-7c69-4f8b-8342-5bb04b28dddd); Backend /ready returns 200 with database ok.
+Served index-t3fLctbG.css has SHA-256
+`83342d736991139cf62d2434e0bae3d72e6efa672103ea29ab024c1d39cc8d45`, identical to
+the local final-source build. Served JS is index-QdjfeG2E.js.
+
+Authenticated map -> words -> smart ready -> study shows the actual cached
+`here / כאן` image at 260px high on a 1487px desktop viewport and 180px on a
+390px mobile viewport. Hebrew alignment is center; replay is fully within its
+copy container at both sizes. Attribution is rgb(80,99,139), not white. Mobile
+scroll width is 390px, with no horizontal overflow. Both smoke sessions were
+explicitly exited without submitting answers; existing introduced progress
+remained 1/50. Browser viewport override was reset.
+
+[Final desktop memorization](evidence/2026-10-06-learning-path/dev-memorization-desktop.jpg)
+and [final mobile memorization](evidence/2026-10-06-learning-path/dev-memorization-mobile.jpg)
+show the deployed result. These replace the defective pre-follow-up captures.
+Final-source [CI 37489328053](https://github.com/rbaseapp/gotIt-front/actions/runs/37489328053)
+completed successfully on exact source 51b92b3: 413 browser, 225 unit and 20
+gateway/security tests, typecheck, lint, build and dependency audit all pass (zero
+vulnerabilities). Local final-source check and all 12 image-shell tests also pass.

@@ -2,7 +2,7 @@
 
 ## 2026-10-06 - DEV path rollout verified and live memorization follow-up
 
-Backend `b3c1b73` and Web `914aa06` are exact-SHA Live in DEV. Authenticated map/word/activity/level/teacher-lock smoke and mobile overflow checks pass; exact Web CI passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Live smoke additionally exposed full-session image compression/replay clipping. Follow-up `51b92b3f4c053b9f20e1859c138618fef8dc166b` fixes it with red/green 12 full-shell image tests and full check passing; its deploy is pending. Production unchanged. [Canonical evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).
+Backend `b3c1b73` and Web `914aa06` are exact-SHA Live in DEV. Authenticated map/word/activity/level/teacher-lock smoke and mobile overflow checks pass; exact Web CI passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Live smoke additionally exposed full-session image compression/replay clipping. Follow-up `51b92b3f4c053b9f20e1859c138618fef8dc166b` fixes it with red/green 12 full-shell image tests and full check passing; its exact DEV deployment, matching served CSS hash and real 260/180px image/replay smoke are verified. Final-source Linux CI also passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Production unchanged. [Canonical evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).
 
 ## 2026-10-06 - Canonical learning/account DEV release verified
 

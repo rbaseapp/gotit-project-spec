@@ -419,4 +419,4 @@ DEV readiness endpoints return 200. [Final evidence and unverified boundaries](3
 232 fast / 68 PostgreSQL tests; changed-file formatting verified, repository-wide formatting baseline remains. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
 
 
-Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/build/audit. Live image-shell follow-up adds a red/green full-shell regression; see its separate final source evidence. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
+Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/build/audit. Final image-shell follow-up passes 12 red/green full-shell cases, full check and live 260/180px desktop/mobile image measurements; exact-source Linux CI also passes all 413 browser, 225 unit and 20 gateway cases plus type/lint/build/audit. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).

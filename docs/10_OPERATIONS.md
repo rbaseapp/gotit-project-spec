@@ -369,4 +369,4 @@ model's compatibility with the OpenAI generator. [Authoritative source/deploy/te
 DEV-only staged rollout; no migrations; production excluded. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
 
 
-Backend b3c1b73 and Web 914aa06 exact DEV Live/readiness and authenticated smoke verified. Memorization shell follow-up is tracked in the same canonical evidence. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
+Backend b3c1b73 and final Web 51b92b3 exact DEV Live/readiness, served CSS hash and authenticated desktop/mobile smoke verified. Production is unchanged. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
