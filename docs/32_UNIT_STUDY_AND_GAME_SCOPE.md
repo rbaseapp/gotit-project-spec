@@ -2,6 +2,51 @@
 
 ## Current delivery update
 
+### Repair the active DEV API and preference-sized batches ? 2026-10-07
+
+The reported packId validation failures were reproduced against the contract of
+live Backend 09aad69. That manual deployment had replaced the earlier ordered
+unit implementation; Web's restored map still sent the unit filter. The repair
+is based on 09aad69 and preserves its general-vocabulary exclusion and navigation
+policy. Application main is untouched.
+
+Backend 4c7f7bcb8627cb5865815cd8247941ca97324029 accepts optional UUID packId on
+GET /private-lessons and GET /practice/sessions. Strict rejection of unknown keys,
+authentication and application/user scope remain. Session items and total counts
+use the same unit filter. Private-lesson queries read existing stored unit context
+through to_jsonb, compatible with both the earlier schema and DEV's guided context.
+No migration, provider or credential change is required.
+
+All smart pack sessions default to catalog ordering and honor requested count.
+The daily preference sizes a batch and does not prevent another same-day batch.
+A partially learned batch returns only unfinished words and does not top up with
+later words. Successful current-revision unit practice exposes learned markers;
+exercise targets and distractors stay within the batch. Legacy unordered unit
+sessions are replaced at Web resume and cannot issue new exercises.
+
+Web 81fa74714f087e5350bdfcf7b5c6309e4874dfca sends the profile's positive daily
+word count (bounded by the existing 100-word API limit, zero falls back to 10),
+or the user's saved short/long practice pace (10/20), with pack/language/return.
+The unit word button opens games directly. Known, linked and learned state is
+preserved; learned badges refresh when returning to the words screen. The map's
+level select has sufficient line height and vertical padding for complete text.
+
+Verification: 209 existing fast Backend tests plus the new authenticated history
+route regression; five disposable PostgreSQL cases covering 5/10/20 order,
+zero daily quota, distractor scope, partial batch, successful completion, next
+same-day batch, scoped history and ownership. Backend build/typecheck pass.
+Web typecheck/lint/build, 50 focused component/navigation/locale tests and all
+15 map/scope browser cases pass (14 on the initial run; the repeat-practice URL
+expectation was updated for direct session entry and its case then passed).
+Both exact commits are confirmed Live in DEV Render (Web 51.0 seconds), with
+specific-commit deployments and auto-deploy settings unchanged. Both readiness
+endpoints return HTTP 200. The owner's real unit activity page now displays
+practice and stored teacher history, without the reported validation failure.
+The word list displays learned markers from existing evidence. Its smart button
+opens /learn/session/smart with pack, language, count=10 and batch=1 in this
+account. No game answers or learning evidence were submitted during acceptance.
+
+
 ### Restore the separate Figma map and unit browser — 2026-10-07
 
 The owner reported that the learning map had disappeared and supplied canonical

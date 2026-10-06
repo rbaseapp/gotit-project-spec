@@ -1,5 +1,15 @@
 # 07 — חוזי API
 
+## 2026-10-07 - Unit-filtered history and bounded curriculum practice
+
+GET `/api/v1/practice/sessions` and GET `/api/v1/private-lessons` accept optional
+UUID `packId`, retain strict input validation and filter by trusted application/user
+ownership. Practice history filters both items and totalCount. Private history also
+accepts `targetLanguageCode`. Smart pack creation honors `count`, selects curriculum
+order, returns additive `curriculumOrder`, and replaces legacy unordered pools.
+Word-pack entries expose additive `learned`. Existing clients remain accepted.
+[Exact active-baseline repair, evidence and DEV delivery](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 No route/payload/schema/enum changed. Web now uses the existing GET `/practice/sessions/:id/study` to resolve writing answer-language metadata without entering a study screen. POST `/reading` follows preview automatically; failed retries preserve publicationToken and Idempotency-Key. API owners and Chrome parsers remain unchanged. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
