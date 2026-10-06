@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-06 - Meaning recognition rounds and touch repair
+
+P08 keeps learners in a bounded multi-round practice session and labels recognition separately from recall. Continue only after authoritative board receipts; summarize after the scoped rounds and existing repair. No KPI, mastery or XP threshold change. [Control and evidence](29_MEANING_MATCHING_ROUNDS.md).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 P06/P08/P09 now retain navigation context and offer full-alphabet answer input without changing mastery/XP/scheduling authority. P10/P11 separate readable preview from publication confirmation. P12/P13 retain the two approval gates, version-specific evidence and report/save semantics; preparation drafts are not active lessons. Optional achievements measure existing projections only; no new KPI thresholds or reward economy. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

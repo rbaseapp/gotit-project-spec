@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-06 - Meaning recognition rounds and touch repair
+
+FR-PRAC-007 -> UC-05 / P08 / SCR-03-04 / SEQ-04 -> Web LiveGameSessionPage, LiveDragDropBoard, production styles and eight locale catalogs -> live, drag-drop unit and browser regressions. [Exact source and release evidence](29_MEANING_MATCHING_ROUNDS.md).
+
 ## 2026-10-06 - Fullscreen game entry follow-up
 
 Web `9cff6a0f1de1c22da04e6d5ed285171d258457fb` follows the Figma correction. Fullscreen game entry stays contained in RTL; regression now samples the mounted game at animation start/middle/end. 84 viewport cases and local check (207 unit / 20 gateway-security), formatting and zero-finding audit passed. **DEV Live at exact source; delivered CSS and readiness verified; 393/393 local browser cases passed. Linux CI passed 207 unit / 393 browser / 20 gateway-security cases, build/type/lint and zero-finding audit; production excluded.** [Canonical source, behavior and release gate](28_UX_2_1_DEV.md#2026-10-06---game-entry-regression-follow-up).

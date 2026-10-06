@@ -1,5 +1,9 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## 2026-10-06 - Meaning recognition rounds and touch repair
+
+SEQ-04 now records repeated matching/ordinary rounds and explicit completion after the existing mistake repair. [Behavior and source](29_MEANING_MATCHING_ROUNDS.md).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 SEQ-13 / P06/P08/P10/P11 records independent word-game return context, language metadata, authoritative attempts and stable article-publication retry. [Source](../uml/13-ux-context-reading.puml). [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
