@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. DEV-only candidate is on feat/ux-2-1-dev; deploy only srv-dar6dng473hc73a0ns1g. App main/production and Core/Backend/database are excluded. Verify exact Live SHA, /ready and served assets; rollback uses a prior DEV Web commit. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - UX Frontend DEV Live
 
 Only DEV Web `srv-dar6dng473hc73a0ns1g` changed from `main` to `feat/ux-2-1-dev`; deployment `dep-db2al4m0tbcc738i0g6g` is Live at `0e88da53f679a142bf040a51b4c428b6652e0a72`. Fresh DEV origins/database-role/TLS targets and three readiness endpoints were verified before an authenticated writing attempt. No production change or source-main merge. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

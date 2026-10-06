@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. SCR-02/03/09 and SCR-UX-01: approved home variants/program cards, focus preparation and avatar/message lesson layout. Course maps retain navigation. New labels are localized; actual plans/progress/provider events remain authoritative. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - DEV screen acceptance
 
 The UX release is Live in DEV at Web `0e88da53f679a142bf040a51b4c428b6652e0a72`. Actual dashboard, SCR-UX-01 Programs/chooser, map/unit words, library, independent games, lesson preparation and SCR-UX-02 History were inspected; writing letter insertion and server feedback passed. No blanket pixel-exact or live-provider acceptance is claimed. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

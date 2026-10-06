@@ -1,5 +1,65 @@
 # 28 — GotIt UX 2.1 DEV implementation and release gate
 
+## 2026-10-06 - Figma fidelity correction (local checkpoint)
+
+Source: `gotIt-front@e1948281adabe34d2ff6c4e4dc4f949e90c33436`, branch `feat/ux-2-1-dev`.
+Status: **locally verified; DEV deployment pending**. The earlier deployed UX
+was rejected by the owner as visually different from the approved design.
+Its functional smoke was not design acceptance. This checkpoint corrects the
+four reported screen families and their shared shell, rather than certifying
+all 247 design states.
+
+| Screen | Approved Figma nodes | Correction |
+| --- | --- | --- |
+| Program home / vocabulary-only home | `8:2`, `24:7265`, mobile `15:4274` | Correct illustration placement, large program hero, primary word illustration, two secondary cards, title/action hierarchy and compact mobile type. Actual resumable activity retains priority over a selected plan. |
+| Programs | `15:647`, mobile `15:5502` | Language-localized groups, larger centered cards, corner selection badge, next actual unit, secondary-language compact row and responsive actions. Only available catalog/plans are shown. |
+| Lesson preparation | `15:2010` | Sidebar-free focus header; mint lesson/start/warmup card before white preferences; current teacher opens a picker, advanced mode/topic settings remain in the adjustment dialog. |
+| Active lesson | `15:2100`, master `43:6258` | Full viewport, unobscured 204px teacher beside a white current-message bubble; real conversation history and targets; centered continuous-microphone toggle, normal/slow transcript replay, existing translation/end actions. Sticky mobile responses remain reachable on narrow/short screens. |
+
+The three existing local illustration PNGs were downloaded from the returned
+Figma asset URLs and compared byte-for-byte: all match. `src/figma-review.css`
+owns the corrected geometry while older feature styles remain in the repository.
+Course maps retain their sidebar, matching the inspected personal-map frame
+`13:348`. New copy is translated in all eight existing UI locales. Entry uses
+0.28s horizontal motion; letter placement uses the supplied 0.6 -> 1.12 -> 1
+scale. Existing audio-driven face animation, effects-off and reduced-motion
+controls remain; the decorative audio badge no longer covers the teacher.
+
+**Design/contract drift remains explicit:** the current lesson Figma frame still
+contains a decorative three-stage bar and a text-teacher action, although the
+approved 2.1 handoff excludes unsupported guided-stage claims and the existing
+provider contract requires microphone access. Those are not fabricated in Web.
+Independent written word practice remains available from preparation. Actual
+names, counts, plans, transcript length and lesson readiness differ from example
+content in Figma. No API, database, provider, billing or learning-rule change.
+
+### Local evidence
+
+- Failure-first browser cases reproduced the missing home illustration and the
+  old sidebar-restricted lesson width at source `0e88da5`.
+- `npm run check`: typecheck/lint, **207/207 Vitest**, build and **20/20 gateway/security** passed. Final typecheck/lint/build also passed after the layout refinements.
+- The initial full **393-case** browser run passed 392; the remaining case expected
+  English group names in Hebrew UI. Its locator now expects localized names and
+  the multilingual grouping case passed. Subsequent targeted home/program cases
+  passed (3/3); final HE/EN lesson viewport cases passed (8/8), including 320px,
+  390px, 844px landscape and 1440px desktop. Mobile controls were corrected after
+  a regression exposed their loss of visibility on short screens.
+- Browser fixtures intercept APIs and provider events; they do not prove a real
+  microphone/teacher call or billing. Existing chunk-size/Zod warnings remain.
+
+Rendered local fixtures (synthetic account/provider events):
+
+- [Program home desktop](evidence/2026-10-06-figma-fidelity/figma-program-home-1487.png)
+- [Program home mobile](evidence/2026-10-06-figma-fidelity/figma-program-home-390.png)
+- [Vocabulary home desktop](evidence/2026-10-06-figma-fidelity/figma-words-desktop.png)
+- [Preparation desktop](evidence/2026-10-06-figma-fidelity/lesson-prep-he-1440.png)
+- [Preparation mobile](evidence/2026-10-06-figma-fidelity/lesson-prep-he-390.png)
+- [Active lesson desktop](evidence/2026-10-06-figma-fidelity/lesson-resume-he-1440.png)
+- [Active lesson mobile](evidence/2026-10-06-figma-fidelity/lesson-resume-he-390.png)
+
+DEV deployment, delivered asset verification, real-account UI smoke and CI results
+will be recorded separately after release. App main/production are excluded.
+
 ## Source and status
 
 - Source repository: `gotIt-front`, current release commit `0e88da53f679a142bf040a51b4c428b6652e0a72` (redesign implementation `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).

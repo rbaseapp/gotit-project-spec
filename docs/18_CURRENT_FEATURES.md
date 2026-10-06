@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. Figma fidelity correction is locally implemented and verified for home, programs, lesson preparation and active lesson. This supersedes the previous visual-acceptance assumption, not the existing learning/provider contracts. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - UX 2.1 active in DEV
 
 UX release `gotIt-front@0e88da53f679a142bf040a51b4c428b6652e0a72` is Live in DEV with authenticated responsive navigation/screen and writing acceptance. Earlier local-only checkpoints below are historical. This is not a production rollout or acceptance of proposed voice/reward protocols. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

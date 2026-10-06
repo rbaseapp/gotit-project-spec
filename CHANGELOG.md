@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Correct DEV Figma fidelity after owner review
+
+`gotIt-front@e1948281adabe34d2ff6c4e4dc4f949e90c33436` corrects home illustrations/hierarchy, localized program cards, compact teacher preparation and full-width avatar/message voice lessons. 207 unit / 20 gateway-security cases passed; failed visual/short-screen regressions were corrected and passed. Fixture screenshots are preserved. **Locally verified; DEV deployment pending; production excluded.** [Canonical checkpoint](docs/28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - UX redesign deployed to DEV
 
 Switch only DEV Web to `feat/ux-2-1-dev`; `0e88da53f679a142bf040a51b4c428b6652e0a72` is Live in deployment `dep-db2al4m0tbcc738i0g6g`. Verify current DEV targets, three readiness endpoints, new served assets and authenticated dashboard/program/library/map/teacher-prep/history screens. Writing smoke checks repeat/delete/clear/capacity and receives real correct/100%/+10 XP; stopped session appears in history. Preserve production/main and existing sessions. [Exact evidence and remaining acceptance limits](docs/28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

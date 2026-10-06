@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. Home/programs use approved Figma hierarchy and assets. Private-lesson preparation and active conversation use a focus shell; teacher preferences stay editable through a picker, and short-screen voice controls remain reachable. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - UX release active in DEV
 
 Web UX `0e88da53f679a142bf040a51b4c428b6652e0a72` is deployed only to DEV, on `feat/ux-2-1-dev`, with served assets and authenticated letter-input acceptance. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. FR-UX-003/005/006 and new FR-UX-007 map to failure-first home/lesson geometry, teacher-picker request regression, localized program grouping and HE/EN short-screen response tests. No domain/API authority changed. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-06 - UX DEV deployment evidence
 
 FR-UX-001?006 / SCR-UX-01?03 and existing learning screens ? Web `0e88da53f679a142bf040a51b4c428b6652e0a72` ? passing CI run `37429705998` ? DEV deploy `dep-db2al4m0tbcc738i0g6g` ? authenticated dashboard/programs/library/letter-input/history smoke. All intended variants and live provider operations are not individually certified. API/schema/learning policy unchanged. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).

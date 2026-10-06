@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-06 - Figma fidelity correction, locally verified
+
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. FR-UX-007: match approved Figma geometry, hierarchy and exact illustration assets for home/programs/lesson preparation/active lesson, with mobile reflow and editable preferences. Acceptance includes unobscured portrait, full lesson viewport, centered microphone, reachable short-screen responses, and actual server content without decorative guided-stage claims. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 | ID | Requirement | Acceptance |
