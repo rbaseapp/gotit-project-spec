@@ -364,4 +364,4 @@ Backend `468357129d919b1dcacd15a409ec78d77e69bf68` and Web `7c68ca16a7b6ef2633bf
 
 ## 2026-10-06 — DEV learning-path correction
 
-Backend path eligibility locally/integration verified; DEV deploy pending. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+Backend path eligibility and Web program/map/words/activities/levels are deployed and authenticated-smoke verified in DEV only. The live-discovered memorization-shell correction has separate source/deploy evidence below. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).

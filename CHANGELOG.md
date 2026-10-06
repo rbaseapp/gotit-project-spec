@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - DEV path rollout verified and live memorization follow-up
+
+Backend `b3c1b73` and Web `914aa06` are exact-SHA Live in DEV. Authenticated map/word/activity/level/teacher-lock smoke and mobile overflow checks pass; exact Web CI passes 225 unit/413 browser/20 gateway/type/lint/build/audit. Live smoke additionally exposed full-session image compression/replay clipping. Follow-up `51b92b3f4c053b9f20e1859c138618fef8dc166b` fixes it with red/green 12 full-shell image tests and full check passing; its deploy is pending. Production unchanged. [Canonical evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).
+
 ## 2026-10-06 - Canonical learning/account DEV release verified
 
 Web `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` Live with exact served CSS hash and successful Linux 224 unit/406 browser/20 gateway/type/lint/build/audit gates. Backend `4683571` remains Live after DEV-only reading model correction from leftover Anthropic to available repository-default `gpt-6-luna`. Actual lesson/report/cleanup/history, account settings/minutes, reading creation/meaning/save/quiz and clickable-letter/deletion/capacity/server correct/+8 XP smoke pass. All DEV readiness endpoints return 200; actual screenshots saved. Production untouched; agreed exclusions and physical mic/live-review limits remain. [Final evidence](docs/30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
