@@ -357,7 +357,10 @@ security cases fail on 1.2.1 and all three pass on 1.2.2. `npm.cmd run check`
 passed typecheck/lint, 206 unit tests, build and 20 gateway/security tests;
 `npm.cmd audit --omit=dev --audit-level=high --json` returned zero findings.
 The 391 browser passes on the previous redesign SHA were also confirmed in CI;
-new-SHA CI/browser and DEV-server verification remain pending.
+new-SHA CI run `37429705998` subsequently passed all gates, including 391 browser
+cases and audit. DEV-server verification remains pending; Backend's owner release
+is observed Live, while Core/login acceptance is blocked by the reported upstream
+error and fresh workstation network checks failing before HTTP responses.
 Direct verified-TLS DEV runtime login and strict schema/privilege preflight passed;
 this does not prove a successful Render runtime deployment or product writes.
 [Canonical release gate](28_UX_2_1_DEV.md).

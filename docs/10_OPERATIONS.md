@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-06 - Backend DEV Live; Core login diagnosis pending
+
+Owner deployment `dep-db2a6ajtqb8s73cluji0` is observed Live for Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` after the corrected runtime credential save. Web release `0e88da53f679a142bf040a51b4c428b6652e0a72` CI passed all gates, including 391 browser cases and audit. The owner's Google login returns gateway `UPSTREAM_UNAVAILABLE`; Core readiness/current proxies and authenticated DEV acceptance are not verified. Workstation TLS/connection closures also prevent fresh Render/HTTP checks, without proving the server error's cause. No frontend deployment or production change was performed. [Current evidence and requested diagnosis inputs](28_UX_2_1_DEV.md#backend-live-and-google-login-diagnosis-2026-10-06).
+
 ## 2026-10-06 - DEV UX dependency patch and TLS correction
 
 Current DEV Web release is `0e88da53f679a142bf040a51b4c428b6652e0a72`, including the compatible source-map security patch. Latest local check and production dependency audit pass; remote re-verification and deployment are pending. The first prepared runtime URL omitted TLS and the owner's next Backend deploy failed. The corrected DEV URL uses `sslmode=verify-full` and passed direct pg login plus strict preflight; its owner-controlled Render save is pending. [Canonical evidence and remaining gate](28_UX_2_1_DEV.md#dependency-patch-and-corrected-tls-handoff-2026-10-06).

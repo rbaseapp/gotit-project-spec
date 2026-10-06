@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - DEV Backend Live and UX CI acceptance
+
+Record owner Backend deployment `dep-db2a6ajtqb8s73cluji0` Live at `e5f4817b8544b95da739ce4f462e95f50b99689c`. Web `0e88da53f679a142bf040a51b4c428b6652e0a72` CI passed 206 unit, 391 browser and 20 gateway/security cases plus type/lint/build/audit. Frontend release remains pending: diagnose the owner's Core upstream login error and distinguish it from workstation connection/TLS failures that block fresh HTTP/Render checks. No production rollout or new application code. [Current checkpoint](docs/28_UX_2_1_DEV.md#backend-live-and-google-login-diagnosis-2026-10-06).
+
 ## 2026-10-06 - DEV UX dependency patch and corrected TLS handoff
 
 Document Web `0e88da53f679a142bf040a51b4c428b6652e0a72`: source-map-js 1.2.2, two failure-first security cases plus normal mapping compatibility, passing type/lint/206 unit/build/20 gateway-security gates and zero audit findings. Record the initial prepared URL's missing TLS, failed Backend deploy, corrected `verify-full` connection and successful direct strict preflight. Owner Render save, new-SHA CI and DEV release acceptance remain pending. [Current checkpoint](docs/28_UX_2_1_DEV.md#dependency-patch-and-corrected-tls-handoff-2026-10-06).

@@ -14,8 +14,9 @@
 These full-browser counts apply to redesign commit `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`.
 For dependency-only release `0e88da53f679a142bf040a51b4c428b6652e0a72`, check passed
 again with 206 unit tests and **20 gateway/security tests**; the audit returned
-zero findings. Browser re-verification is delegated to the existing CI workflow
-and is pending for that new commit at this checkpoint.
+zero findings. CI run `37429705998`, job `112157439937`, completed successfully on
+2026-10-06 with **206 unit / 391 browser / 20 gateway-security cases**, build,
+typecheck, lint and zero dependency audit findings.
 Tests use API and Realtime event fixtures. No real provider, microphone, billing or DEV product mutation was tested.
 Build retains the existing large-main-chunk and Zod annotation warnings. Physical devices, screen readers and production acceptance were not run.
 
@@ -99,6 +100,31 @@ validation) passed strict schema/privilege preflight: `schema: ok`,
 rotation or privilege change was made. Owner-controlled entry/submission of that
 corrected connection and a successful running DEV deployment remain pending.
 
+## Backend Live and Google-login diagnosis (2026-10-06)
+
+The owner completed the corrected credential save. Render Backend deployment
+`dep-db2a6ajtqb8s73cluji0`, source
+`e5f4817b8544b95da739ce4f462e95f50b99689c`, is observed **Deploy succeeded | Live**,
+duration 39.4 seconds, started 10:28:42 Asia/Jerusalem. Logs show the Backend
+listening at 10:29:14 and service live at 10:29:22. Startup reached listening after
+its strict schema/role preflight; no Backend source was changed by this task.
+
+The owner's DEV Web Google request returned `UPSTREAM_UNAVAILABLE`, response
+request ID `b62ba7b1-37c6-4c5d-8a31-ce8665528729`. Source inspection confirms
+this gateway code represents failed Core readiness or a Render infrastructure
+response; it is not evidence that Google rejected the token. The token was not
+replayed or stored in the specification. Core runtime readiness, fresh proxy
+configuration and authenticated DEV acceptance remain unverified.
+
+Independent checks from the workstation failed before receiving HTTP responses:
+Node returned `ECONNRESET`, curl reported TLS handshake failure, and a fresh Chrome
+Render dashboard tab reported `ERR_CONNECTION_CLOSED`. Existing Backend deploy
+UI remained readable, but the service switcher could not load. These local network
+failures do not establish the cause of the owner's server-side login error. Core
+DEV `/ready` response and latest error logs were requested to continue diagnosis.
+Frontend UX branch selection/deployment and product mutations remain pending;
+successful CI does not prove DEV-server acceptance or production release.
+
 ## Scope and source
 
 - Source of decisions: `GotIt-Consolidated-Review-and-Development-Spec-HE-v1.1.md`
@@ -170,19 +196,18 @@ Browser fixtures intercept API calls; they do not prove real provider, microphon
 database or billing acceptance. Physical-device/zoom/screen-reader acceptance remains
 separate from automated viewport coverage.
 
-**Server deployment remains blocked.** The owner saved the DEV database target,
-but the Backend startup rejected its administrator role. The dedicated DEV
-runtime credential is now directly verified; its owner-controlled Render save
-and successful deployment/readiness are still required. Do not
-perform product mutations through this service until its running isolation is
-verified. See the dated follow-up above. No production service/environment/database
-was changed by this task.
+**Frontend release remains pending.** The owner saved the corrected DEV runtime
+connection and Backend is observed Live. Core readiness, fresh running targets
+and authenticated DEV integration still require verification; workstation network
+failures currently block those checks. Do not perform product mutations until
+running isolation is verified. See the latest dated checkpoint above. No production
+service/environment/database was changed by this task.
 
 Read-only inspection also confirmed that Core DEV uses `gotit_dev` and that DEV Web's
 Core/Backend proxy targets and public origin all point to their DEV services. Core's
 existing connection uses the DEV administrator role; no Core credential or database
-privilege was changed. Saving Backend's verified DEV runtime connection and
-verifying its running deployment remain the release blocker.
+privilege was changed by this task. Backend's corrected connection is saved and
+its release is Live; Core/network and fresh integration verification remain pending.
 
 After the owner completes the credential handoff, verify DEV Backend/Core runtime
 database targets and readiness, configure only DEV Web to this release branch,
