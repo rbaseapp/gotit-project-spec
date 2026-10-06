@@ -1,8 +1,8 @@
 # 20 — קטלוג Use Cases
 
-## 2026-10-06 - Figma fidelity correction, locally verified
+## 2026-10-06 - Figma fidelity correction, DEV Live
 
-Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. UC-UX-02: learner sees the actual recommended lesson and start/warmup first, opens the current-teacher picker or advanced adjustment dialog, then enters a sidebar-free voice conversation with replay/translation/end and expandable real history. UC-UX-04 retains real resumable-activity priority. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. UC-UX-02: learner sees the actual recommended lesson and start/warmup first, opens the current-teacher picker or advanced adjustment dialog, then enters a sidebar-free voice conversation with replay/translation/end and expandable real history. UC-UX-04 retains real resumable-activity priority. **DEV Web is Live at this source; authenticated home/program/preparation UI smoke and three DEV readiness endpoints passed. Active voice appearance is fixture-verified; no real provider call was started.** **CI release gate remains open: 333 browser passes / 60 initial demo-game overflow failures; follow-up correction required.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
 
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 

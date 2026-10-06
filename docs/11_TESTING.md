@@ -1,8 +1,8 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
-## 2026-10-06 - Figma fidelity correction, locally verified
+## 2026-10-06 - Figma fidelity correction, DEV Live
 
-Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. 207 unit and 20 gateway/security tests passed. Full initial browser run passed 392/393; the localized-language locator was corrected and passed. Final targeted home/program (3) and lesson viewport (8) cases passed. Named fixture screenshots and failure-first cases are in the canonical checkpoint. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. 207 unit and 20 gateway/security tests passed. Full initial browser run passed 392/393; the localized-language locator was corrected and passed. Final targeted home/program (3) and lesson viewport (8) cases passed. Named fixture screenshots and failure-first cases are in the canonical checkpoint. **DEV Web is Live at this source; authenticated home/program/preparation UI smoke and three DEV readiness endpoints passed. Active voice appearance is fixture-verified; no real provider call was started.** **CI release gate remains open: 333 browser passes / 60 initial demo-game overflow failures; follow-up correction required.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
 
 ## 2026-10-06 - UX DEV release smoke
 

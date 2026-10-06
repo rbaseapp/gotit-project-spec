@@ -1,8 +1,8 @@
 # 17 — קטלוג מסכים ותיאור UX
 
-## 2026-10-06 - Figma fidelity correction, locally verified
+## 2026-10-06 - Figma fidelity correction, DEV Live
 
-Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. SCR-02/03/09 and SCR-UX-01: approved home variants/program cards, focus preparation and avatar/message lesson layout. Course maps retain navigation. New labels are localized; actual plans/progress/provider events remain authoritative. **DEV release verification is pending.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
+Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. SCR-02/03/09 and SCR-UX-01: approved home variants/program cards, focus preparation and avatar/message lesson layout. Course maps retain navigation. New labels are localized; actual plans/progress/provider events remain authoritative. **DEV Web is Live at this source; authenticated home/program/preparation UI smoke and three DEV readiness endpoints passed. Active voice appearance is fixture-verified; no real provider call was started.** **CI release gate remains open: 333 browser passes / 60 initial demo-game overflow failures; follow-up correction required.** [Canonical changes and evidence](28_UX_2_1_DEV.md#2026-10-06---figma-fidelity-correction-local-checkpoint).
 
 ## 2026-10-06 - DEV screen acceptance
 

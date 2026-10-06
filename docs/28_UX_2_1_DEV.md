@@ -3,7 +3,7 @@
 ## 2026-10-06 - Figma fidelity correction (local checkpoint)
 
 Source: `gotIt-front@e1948281adabe34d2ff6c4e4dc4f949e90c33436`, branch `feat/ux-2-1-dev`.
-Status: **locally verified; DEV deployment pending**. The earlier deployed UX
+Status: **locally verified; DEV deployed and authenticated UI smoke verified**. The earlier deployed UX
 was rejected by the owner as visually different from the approved design.
 Its functional smoke was not design acceptance. This checkpoint corrects the
 four reported screen families and their shared shell, rather than certifying
@@ -57,14 +57,82 @@ Rendered local fixtures (synthetic account/provider events):
 - [Active lesson desktop](evidence/2026-10-06-figma-fidelity/lesson-resume-he-1440.png)
 - [Active lesson mobile](evidence/2026-10-06-figma-fidelity/lesson-resume-he-390.png)
 
-DEV deployment, delivered asset verification, real-account UI smoke and CI results
-will be recorded separately after release. App main/production are excluded.
+### DEV delivery and authenticated UI smoke
+
+Render auto-deployed exact source `e1948281adabe34d2ff6c4e4dc4f949e90c33436`
+to DEV Web `srv-dar6dng473hc73a0ns1g`, deployment
+`dep-db2bc0vf3r2c73feepb0`: **Live**, duration **53.5 seconds**.
+The feature branch has the same SHA; app main remains
+`da913168f85baddc844978412058cf888117e85c`. No app-main merge, production
+deployment, Core/Backend change or schema migration was performed.
+
+All three DEV readiness endpoints returned HTTP 200 on 2026-10-06:
+Web `ok`, Backend `ready` with database `ok`, Core `ready`.
+Public HTML and its delivered assets returned HTTP 200:
+
+| Asset | SHA-256 |
+| --- | --- |
+| `/assets/index-yRAmCjT7.js` | `5b02612baaa8310bfa318bb038a6491cf4b8c52ff315f5a054f39e6cf3958899` |
+| `/assets/index-B87vZkWE.css` | `3ecca927b98e5693a439666943ab901da418f3032a5c78cce6f904b729c0eb82` |
+
+The delivered CSS contains the new lesson-dialogue rules and its name matches
+the local source build. The delivered JS filename matches the build output in this exact source's
+Render deploy log. It differs from the local default build's filename; no
+byte-equivalence claim is made for the JS. Render reports service live at
+11:50:00 Asia/Jerusalem. The exact Live source and authenticated rendered UI
+are the release authority.
+
+The signed-in owner's DEV tab was reloaded. Actual home data remained 80 words,
+71 due, 11/20 unique words today and its existing resumable practice session.
+That session correctly takes priority over the selected English course; it was
+not consumed, stopped or replaced to stage a different dashboard variant.
+The word illustration loaded successfully. The desktop account menu opens
+from the sidebar and Escape closes it. Programs displays the selected English
+zero-start course and the owner's existing personal course; the four-way new
+program chooser opens and closes without creating data.
+
+Preparation displays the focus header, lesson/start/warmup before editable
+preferences, the real recommendation and an empty real lesson-history state.
+The current-teacher picker opened; Mike selection updated the displayed teacher,
+then Rachel was restored. The advanced adjustment dialog exposes beginner mode,
+support language, duration, topic, grammar, focus skills and personal goal;
+it was canceled without starting a conversation. Both English and Hebrew
+support options were present. No live microphone/provider session, article
+generation or billing action was initiated.
+
+Responsive DOM smoke checked programs at effective CSS width 390px, dashboard
+at 445px and preparation at 367px: document scroll width equaled viewport width.
+The four root learning destinations remained available; focus preparation
+omitted the sidebar/root tabs. Browser zoom changed the effective width produced
+by viewport overrides, so these are measured widths, not claims that every live
+screen was checked at exactly 390px. The override was reset. CDP screenshots
+under the narrow override had timeout/tiled-capture artifacts; those captures
+are excluded. The clean 390px fixture screenshots above remain the mobile
+visual evidence. Physical devices and screen readers were not tested.
+
+Authenticated DEV screenshots, with actual account data:
+
+- [Dashboard desktop](evidence/2026-10-06-figma-fidelity/dev-dashboard-desktop.jpg)
+- [Preparation desktop](evidence/2026-10-06-figma-fidelity/dev-preparation-desktop.jpg)
+- [Preparation review crop](evidence/2026-10-06-figma-fidelity/dev-preparation-review.jpg)
+
+CI run `37438662578`, job `112186683559` completed with **333 browser passes
+and 60 failures**. All failures are initial document overflow on demo game routes
+at widths 320?820px (e.g. 332px in a 320px viewport); retries reproduce the issue.
+Typecheck, lint and 207 unit tests passed; CI build/gateway/audit were skipped
+after the failed browser gate, while their local results remain as stated above.
+The new horizontal entry animation translates a full-viewport RTL game frame
+during its first 0.28 seconds. A deterministic animation-start regression and
+a follow-up fix are required before delivery. The real-account UI smoke remains
+valid for the reported home/program/preparation families, but it does not close
+this release gate. Active lesson appearance is verified with deterministic
+Realtime fixtures, rather than represented as a real provider acceptance.
 
 ## Source and status
 
-- Source repository: `gotIt-front`, current release commit `0e88da53f679a142bf040a51b4c428b6652e0a72` (redesign implementation `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
+- Source repository: `gotIt-front`, current release commit `e1948281adabe34d2ff6c4e4dc4f949e90c33436` (prior rollout `0e88da53f679a142bf040a51b4c428b6652e0a72`, initial redesign `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
 - Branch: `feat/ux-2-1-dev`; DEV-only owner instruction overrides app-main/production delivery.
-- Status: **DEV deployed and authenticated smoke verified** on 2026-10-06; see the current release evidence below. Production source/services/data were not changed by this task.
+- Status: **DEV deployed and authenticated UI smoke verified** on 2026-10-06; current fidelity-correction evidence is above. The sections below retain earlier rollout history. Production source/services/data were not changed by this task.
 - Report/route coverage is below. Design-only proposed capabilities are explicitly excluded from active-server claims.
 
 ## Local verification
