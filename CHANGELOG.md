@@ -1,5 +1,15 @@
 # יומן שינויים
 
+## 2026-10-06 — Unit game scope repair Live in DEV
+
+Backend `5111096` restricts smart-game answer choices as well as targets to the
+scoped session pool; the original distractor query fails the new regression.
+Web `54275f4` rejects general/other-unit resumed sessions and displays the unit
+context. Exact-source Render deployments are Live; both readiness checks return
+200. 33 PostgreSQL and 34 live Web component tests, applicable type/lint/build
+gates pass. Fresh authenticated unit button/chooser/game navigation and real
+pronoun image/example are verified. [Evidence](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Preserve concurrent DEV Backend work
 
 Backend merge `207275d` combines pronoun repair `417a7be` with the independently

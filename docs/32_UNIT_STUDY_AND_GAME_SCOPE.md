@@ -2,6 +2,30 @@
 
 ## Current delivery update
 
+### Final DEV scope repair — verified
+
+Backend `5111096e4320676f0feaa975da721bf9f1aeb410` is Live at
+`dep-db2irac9v7es738jj3q0`. A second investigation found that smart-game target
+selection was scoped, but the multiple-choice distractor query still expanded
+from the general library. It now restricts choices to the scoped session pool;
+unscoped library practice keeps its existing behavior. The corrected regression
+fails against the original query and passes with the fix. All 33 real PostgreSQL
+lifecycle/unit-study tests, typecheck and build pass. Earlier target-only scope
+evidence did not cover this distractor path.
+
+Web `54275f440c55d48bdd2396174edad6c313a49c25` is Live at
+`dep-db2iroqjnfac73f12k70`. It includes the visible unit title and guards both
+resumed and newly created sessions against a mismatching/general scope before
+loading cards or exercises. All 34 live component tests, typecheck, lint and
+production build pass on the merged source, preserving concurrent DEV work.
+Both DEV readiness endpoints return 200. A fresh authenticated browser follows
+the actual unit button to the chooser and game, with unit 1 title and pack/language
+parameters retained. The corrected I illustration depicts a person pointing to
+their chest, with a real example sentence. Old tabs can encounter a retired lazy
+chunk during deployment; open a fresh tab or reload to load current assets.
+Production is not changed by this delivery. The remaining entries below are
+historical checkpoints, superseded by this verification.
+
 Backend delivery merge `207275d83a2b16a10193270d6fc877f4852f93b8` preserves concurrent
 DEV reading-guide release `19ca338` and the pronoun repair `417a7be`. The merge is
 clean and passes typecheck and all 243 combined fast tests; the media/scope real
