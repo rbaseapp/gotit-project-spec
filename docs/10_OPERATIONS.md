@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-06 - UX Frontend DEV Live
+
+Only DEV Web `srv-dar6dng473hc73a0ns1g` changed from `main` to `feat/ux-2-1-dev`; deployment `dep-db2al4m0tbcc738i0g6g` is Live at `0e88da53f679a142bf040a51b4c428b6652e0a72`. Fresh DEV origins/database-role/TLS targets and three readiness endpoints were verified before an authenticated writing attempt. No production change or source-main merge. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-06 - Backend DEV Live; Core login diagnosis pending
 
 Owner deployment `dep-db2a6ajtqb8s73cluji0` is observed Live for Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` after the corrected runtime credential save. Web release `0e88da53f679a142bf040a51b4c428b6652e0a72` CI passed all gates, including 391 browser cases and audit. The owner's Google login returns gateway `UPSTREAM_UNAVAILABLE`; Core readiness/current proxies and authenticated DEV acceptance are not verified. Workstation TLS/connection closures also prevent fresh Render/HTTP checks, without proving the server error's cause. No frontend deployment or production change was performed. [Current evidence and requested diagnosis inputs](28_UX_2_1_DEV.md#backend-live-and-google-login-diagnosis-2026-10-06).

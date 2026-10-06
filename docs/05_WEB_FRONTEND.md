@@ -1,5 +1,9 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-06 - UX release active in DEV
+
+Web UX `0e88da53f679a142bf040a51b4c428b6652e0a72` is deployed only to DEV, on `feat/ux-2-1-dev`, with served assets and authenticated letter-input acceptance. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` adds four root destinations, compact mobile shell, Programs/History/Achievements, scoped next action, independent games, interactive spelling alphabets, preserved library/preparation context and readable-before-publication articles. Existing domain APIs/authority remain. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

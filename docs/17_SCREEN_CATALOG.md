@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-06 - DEV screen acceptance
+
+The UX release is Live in DEV at Web `0e88da53f679a142bf040a51b4c428b6652e0a72`. Actual dashboard, SCR-UX-01 Programs/chooser, map/unit words, library, independent games, lesson preparation and SCR-UX-02 History were inspected; writing letter insertion and server feedback passed. No blanket pixel-exact or live-provider acceptance is claimed. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 SCR-UX-01 `/courses` is the program selector; new intake remains `/courses?new=1`. SCR-UX-02 `/history` offers bounded history/report access and actual session resume. SCR-UX-03 `/achievements` is user-opened. Existing SCR-02/03/04/09/10 and SCR-PC screens receive shared responsive styles and flow refinements. No decorative task-stage or unsupported microphone-free teacher is enabled. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

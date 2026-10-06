@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-06 - UX 2.1 active in DEV
+
+UX release `gotIt-front@0e88da53f679a142bf040a51b4c428b6652e0a72` is Live in DEV with authenticated responsive navigation/screen and writing acceptance. Earlier local-only checkpoints below are historical. This is not a production rollout or acceptance of proposed voice/reward protocols. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`: UX 2.1 navigation/screens, answer-language letter input, article retry and return contexts are implemented/local-only. No deployment, original-audio replay, durable voice resume, new badges/gifts/ranks, teacher-station readiness or text AI teacher is claimed. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

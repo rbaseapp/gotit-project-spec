@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - UX redesign deployed to DEV
+
+Switch only DEV Web to `feat/ux-2-1-dev`; `0e88da53f679a142bf040a51b4c428b6652e0a72` is Live in deployment `dep-db2al4m0tbcc738i0g6g`. Verify current DEV targets, three readiness endpoints, new served assets and authenticated dashboard/program/library/map/teacher-prep/history screens. Writing smoke checks repeat/delete/clear/capacity and receives real correct/100%/+10 XP; stopped session appears in history. Preserve production/main and existing sessions. [Exact evidence and remaining acceptance limits](docs/28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-06 - DEV Backend Live and UX CI acceptance
 
 Record owner Backend deployment `dep-db2a6ajtqb8s73cluji0` Live at `e5f4817b8544b95da739ce4f462e95f50b99689c`. Web `0e88da53f679a142bf040a51b4c428b6652e0a72` CI passed 206 unit, 391 browser and 20 gateway/security cases plus type/lint/build/audit. Frontend release remains pending: diagnose the owner's Core upstream login error and distinguish it from workstation connection/TLS failures that block fresh HTTP/Render checks. No production rollout or new application code. [Current checkpoint](docs/28_UX_2_1_DEV.md#backend-live-and-google-login-diagnosis-2026-10-06).

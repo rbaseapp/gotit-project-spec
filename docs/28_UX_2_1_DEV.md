@@ -4,7 +4,7 @@
 
 - Source repository: `gotIt-front`, current release commit `0e88da53f679a142bf040a51b4c428b6652e0a72` (redesign implementation `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70`).
 - Branch: `feat/ux-2-1-dev`; DEV-only owner instruction overrides app-main/production delivery.
-- Status: implemented and locally verified; **not deployed**. Production source/services/data were not changed by this task.
+- Status: **DEV deployed and authenticated smoke verified** on 2026-10-06; see the current release evidence below. Production source/services/data were not changed by this task.
 - Report/route coverage is below. Design-only proposed capabilities are explicitly excluded from active-server claims.
 
 ## Local verification
@@ -17,8 +17,71 @@ again with 206 unit tests and **20 gateway/security tests**; the audit returned
 zero findings. CI run `37429705998`, job `112157439937`, completed successfully on
 2026-10-06 with **206 unit / 391 browser / 20 gateway-security cases**, build,
 typecheck, lint and zero dependency audit findings.
-Tests use API and Realtime event fixtures. No real provider, microphone, billing or DEV product mutation was tested.
+Automated tests use API and Realtime event fixtures. The live DEV practice mutation is recorded separately below; real teacher, microphone, article generation and billing acceptance were not exercised.
 Build retains the existing large-main-chunk and Zod annotation warnings. Physical devices, screen readers and production acceptance were not run.
+
+## DEV Web release and authenticated smoke (2026-10-06)
+
+This checkpoint supersedes the historical network/login and release blockers below.
+After the owner restarted the workstation, all three DEV `/ready` endpoints returned
+HTTP 200: Web `ok`, Core and Backend `ready`. The owner reported successful DEV
+sign-in. Its earlier `UPSTREAM_UNAVAILABLE` root cause was not established; no user
+Google token was replayed or retained.
+
+Fresh Render inspection confirmed DEV Web was still Live at `da913168f85baddc844978412058cf888117e85c`
+on `main`, explaining why the owner saw the old interface. Only service
+`srv-dar6dng473hc73a0ns1g` was switched to `feat/ux-2-1-dev`. This triggered deployment
+`dep-db2al4m0tbcc738i0g6g`, exact source `0e88da53f679a142bf040a51b4c428b6652e0a72`.
+Render reports **Deploy succeeded | Live**, duration 1m19s, started 11:00:18
+Asia/Jerusalem; logs report service live at 11:01:38. The remote branch has the same SHA.
+No app-main merge/push, production setting or production deployment was performed.
+
+Before live product writes, current saved targets were inspected without recording
+credentials: Backend uses DEV external host `dpg-dar6fkp7lnhs73a7mspg-a.frankfurt-postgres.render.com`,
+`gotit_dev`, `gotit_runtime`, `sslmode=verify-full`; its Core origin is
+`https://rbase-dev-core-platforms.onrender.com`. Core uses the same DEV database host
+and `gotit_dev`, existing administrator role `gotit_dev_user`; no Core privileges
+were changed. DEV Web Core/Backend proxy origins and public origin all point to
+DEV. Backend/Core Live sources remain `e5f4817b8544b95da739ce4f462e95f50b99689c` /
+`b2e46bd5bfc95f2da994675492f59571d6fa81b3`.
+
+Public DEV HTML and assets returned HTTP 200 after deployment:
+
+| Asset | SHA-256 |
+| --- | --- |
+| `/assets/index-G-ZLoewX.js` | `21e36a9022dd906a2b89d05cdc6a60df88628c14a636f22f12d594bde356629e` |
+| `/assets/index-CmDwgK0o.css` | `df2a9e26df290ec7963e1ac6ae989f52cf109d3bdbea2b8c6b4dce556acf6afb` |
+
+The JS asset name matches this exact source's Render build output. The authenticated
+owner's DEV tab was reloaded and displayed the new navigation and dashboard with
+real library/progress data. Programs and its chooser, English map/unit words,
+library, independent seven-game hub, teacher preparation and activity history
+loaded. The four mobile root destinations and no horizontal overflow were checked;
+the dashboard/library had an effective CSS viewport width of 390px. Browser zoom
+made the capability's requested width differ from effective CSS width; the actual
+DOM width was inspected. The temporary viewport override was reset.
+
+A new independent spelling/recall session was created in DEV. Two clicks on `a`
+produced `aa` in the real input and two filled answer boxes. Delete returned `a`,
+clear returned empty. The visible Hebrew prompt was answered with `crippling`
+through the letter buttons; at nine-character capacity letter buttons disabled.
+Submission returned real server feedback **correct, 100%, +10 XP**. Explicit exit
+marked the test session stopped; `/history` displayed that entry. This smoke wrote
+one DEV attempt/progress/XP receipt; it did not alter production or complete a course.
+Existing prior sessions were retained.
+
+Screenshots of the actual authenticated DEV release (not fixtures):
+
+- [Desktop dashboard](evidence/2026-10-06-ux-dev/dashboard-desktop.jpg)
+- [390px dashboard](evidence/2026-10-06-ux-dev/dashboard-mobile.jpg)
+- [Letter-button writing](evidence/2026-10-06-ux-dev/letters-mobile.jpg)
+
+CI run `37429705998` verifies this source with 206 unit, 391 browser and 20
+gateway/security cases, typecheck/lint/build and zero audit findings. No application
+code changed during this deployment turn, so those gates were not unnecessarily
+repeated. This smoke is not a pixel-by-pixel certification of 247 design variants,
+physical-device acceptance, a complete ten-word round, fresh Google OAuth exchange,
+live teacher/microphone, AI article generation/publication or billing verification.
 
 ## Operational inspection (read-only, 2026-10-05)
 
@@ -196,23 +259,14 @@ Browser fixtures intercept API calls; they do not prove real provider, microphon
 database or billing acceptance. Physical-device/zoom/screen-reader acceptance remains
 separate from automated viewport coverage.
 
-**Frontend release remains pending.** The owner saved the corrected DEV runtime
-connection and Backend is observed Live. Core readiness, fresh running targets
-and authenticated DEV integration still require verification; workstation network
-failures currently block those checks. Do not perform product mutations until
-running isolation is verified. See the latest dated checkpoint above. No production
-service/environment/database was changed by this task.
+**Frontend release is Live in DEV at `0e88da53f679a142bf040a51b4c428b6652e0a72`.**
+Current readiness, target-isolation inspection, served-asset evidence and authenticated
+practice smoke are recorded above. Earlier dated blockers are retained as history.
+No production service/environment/database was changed by this task.
 
-Read-only inspection also confirmed that Core DEV uses `gotit_dev` and that DEV Web's
-Core/Backend proxy targets and public origin all point to their DEV services. Core's
-existing connection uses the DEV administrator role; no Core credential or database
-privilege was changed by this task. Backend's corrected connection is saved and
-its release is Live; Core/network and fresh integration verification remain pending.
-
-After the owner completes the credential handoff, verify DEV Backend/Core runtime
-database targets and readiness, configure only DEV Web to this release branch,
-check `CORE_API_PROXY_TARGET`, `GOTIT_API_PROXY_TARGET` and `PUBLIC_APP_ORIGIN`, deploy
-the exact commit and smoke authenticated learning against isolated DEV data.
+For the next DEV release, retain the DEV branch and verify Core/Backend database
+and proxy targets before product-write acceptance. Use the existing strict role and
+verified-TLS connection; never weaken its startup gates.
 The Vite fallback proxies point at production: for local manual work set explicit
 safe targets; the automated tests use intercepted APIs.
 

@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-06 - UX DEV release smoke
+
+Exact Web release `0e88da53f679a142bf040a51b4c428b6652e0a72` has passing CI: 206 unit, 391 browser, 20 gateway/security; type/lint/build/audit pass. Actual DEV smoke verified dashboard/program chooser/map/unit words/library/game hub/teacher preparation/history, mobile navigation and clickable repeated letters/delete/clear/capacity. One server-scored answer returned correct/100%/+10 XP; test session was explicitly stopped and visible in history. Physical devices, live AI/microphone/article generation/billing and a complete round were not exercised. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` passed `npm.cmd run check`: typecheck/lint/build, 206 Vitest and 17 gateway cases. Full `npm.cmd run test:responsive -- --workers=4 --reporter=json`: 391/391. Regression covers alphabet metadata, click/IME/capacity, stable reading retry, cross-owner/expired drafts, contexts, explicit language program selection, touch/viewport/provider-event fixtures. Real provider/device/DEV mutations remain unverified. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

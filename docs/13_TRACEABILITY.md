@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-06 - UX DEV deployment evidence
+
+FR-UX-001?006 / SCR-UX-01?03 and existing learning screens ? Web `0e88da53f679a142bf040a51b4c428b6652e0a72` ? passing CI run `37429705998` ? DEV deploy `dep-db2al4m0tbcc738i0g6g` ? authenticated dashboard/programs/library/letter-input/history smoke. All intended variants and live provider operations are not individually certified. API/schema/learning policy unchanged. [Canonical DEV release and acceptance](28_UX_2_1_DEV.md#dev-web-release-and-authenticated-smoke-2026-10-06).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 FR-UX-001–006 → UC-UX-01–04 → P06/P08/P09/P10/P11/P12/P13 → SCR-UX-01/02/03 plus existing learning screens → SEQ-13 → Web `a535a880c3ee8746ebb49d65ce714ed0fcfd8a70` → learning-navigation/library-context/lesson-draft/letter-keyboard/live/private-lesson/ux-navigation tests. API/DB/Chrome contracts unchanged. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
