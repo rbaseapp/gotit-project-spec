@@ -172,10 +172,56 @@ DEV pre-migration product data backup: 50 tables / 9,709 rows, read-only repeata
 
 ## Web checkpoint (pending)
 
-Pending Web final gates/source commit. Shared screen-state ledger maps 494 canonical
-desktop/mobile frames without claiming 494 individual screenshot tests. Parent,
-deletion and native Play states are deferred by the owner; concept reward states do
-not activate an unapproved economy. Catalog languages require actual published data.
+Web source is [`2559d5bb22a928add4a56e53e74e9d514d0167fd`](https://github.com/rbaseapp/gotIt-front/commit/2559d5bb22a928add4a56e53e74e9d514d0167fd)
+on `feat/figma-complete-dev`, preserving matching/touch repairs from `ffd766e7`.
+Typecheck/lint, **224 unit tests**, production build, **20 gateway/security tests**,
+changed-file formatting/diff checks and npm audit (zero findings) pass. The main
+bundle retains its documented size warning. Nine added browser cases pass at
+320/390/1487px; the complete 406-case browser gate and Linux CI are running.
+Live Web deployment and authenticated provider smoke are pending at this checkpoint.
+
+The committed [`design/screen-ledger.json`](https://github.com/rbaseapp/gotIt-front/blob/2559d5bb22a928add4a56e53e74e9d514d0167fd/design/screen-ledger.json)
+maps 494 canonical desktop/mobile frames to routes, components and state conditions:
+472 shared runtime states, 14 owner-deferred states and eight conceptual reward states.
+This inventory is not individual visual acceptance of all 494 frames. Parent,
+deletion and native Play remain deferred; concept rewards do not activate a new
+economy. Catalog language options require actual published data.
+
+### Web screens and navigation
+
+| Screen/process | Entry and result | Authoritative data |
+|---|---|---|
+| SCR-02 / SCR-UX-01 | Home → program selector `/courses` → unit/personal map; independently choose word-only practice | Selected language/program per account, owned catalog and approved active plan |
+| SCR-PC-00A/B/01/02 | Intake, preference review, draft approval and current-unit journey; full syllabus remains available | Existing owner/version/revision course contracts; readiness distinguishes independent evidence from help |
+| SCR-10 | Pack/course preparation → teacher/support/answer mode → focused learn/try/chat or free conversation → report → homework/word practice | Server unit/activity, Core minutes, actual report/evidence; no fabricated progress or audio assessment |
+| SCR-UX-04 | `/courses/:id/units/:unitKey/words` → select owned meanings → smart/manual game | Approved pair/version and explicit sense capture for missing/ambiguous meanings |
+| SCR-UX-05 | `/learn/smart` → short/long/review-only pace → original scoped session; library and independent extension-word entry preserved | Server due/new algorithm, selected IDs/pack/language and daily cap |
+| SCR-09 | Reading generation → word preview → reader → explicit save/quiz | Existing AI preview/publication quota, stable save UUID and actual selected language |
+| SCR-UX-02 | `/history` → language/program filter → saved report or actual session resume | Pre-limit server filtering; course-only languages remain selectable |
+| SCR-UX-06 / SCR-11 / SCR-13 | `/account` → settings/achievements/minutes; `/billing/minutes` → existing Core billing | Core tier/balance/expiry; account profile/UI preference persistence |
+| SCR-01 / SCR-04 | Compact auth/recovery; focused study/recall/matching with clickable spelling keys | Existing auth and exercise grading; independent games do not require a plan |
+
+Desktop/mobile use canonical Rubik, mint/white cards, sizes and reduced information
+hierarchy. Native Figma lesson portraits/icons are source assets; responsive Hebrew
+and other scripts retain their own direction. Advanced choices, full reports and
+syllabus use explicit disclosures instead of removing features. Loading/empty,
+owner scope failure, entitlement/quota lock, unavailable microphone/provider,
+offline/retry and revision conflict remain state-specific and preserve drafts.
+
+Teacher sample uses the real server endpoint. The personal-map read-aloud control
+uses the device's available speech synthesis for the actual objective and target
+language; it is not represented as a sample of the AI teacher. Unsupported device
+speech hides this control. Typed lesson start captures no microphone; voice remains
+an explicitly chosen channel. Guided closing automatically requests the report,
+including disconnected closure; legacy sessions without activities retain their
+previous explicit report button. Report generation failure remains retryable.
+
+Regressions include failed command retry with unchanged UUID/body, corrected-review
+retry/original preservation, translation/pause behavior, truthful actual summary
+duration and deduplicated independent/assisted evidence, unit-word warmup return,
+voice sample failure/retry/cleanup, unsupported/device-language playback, UI preference
+failure/retry and exact scope. Browser fixtures pass the real response parser; fake
+WebRTC/provider behavior does not certify real audio quality or physical devices.
 
 ## Backend DEV deployment and migration — 2026-10-06
 

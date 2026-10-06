@@ -284,3 +284,6 @@ Actor: authenticated English-source/Hebrew-translation learner. Preconditions: t
 # Guided learning use cases — 2026-10-06
 
 UC-GUIDED-01 joins owned unit preparation to learn/try/chat, replay, corrected transcript review and atomic report completion. UC-UX-05 connects explicit owned unit meanings to scoped smart/manual practice. UC-UX-06 saves and reapplies account interface preferences. [Main/alternative flows, failures and billing-pause limitation](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence).
+## 2026-10-06 - Complete learning/account Web
+
+Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements UC-GUIDED-01 and UC-UX-05/06 from the [canonical sequence and state contract](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence), including text start without microphone, scope-preserving warmup, stable command retry, review, automatic report after guided closure, and per-account interface save/retry. Independent extension-word games, explicit missing/sense capture and Core minutes remain supported. Full browser/live provider acceptance pending.

@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-06 - Canonical complete Figma learning/account source
+
+Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements the canonical learning/account desktop/mobile families and shared states. Add SCR-UX-04 approved course-unit words, SCR-UX-05 scoped smart preparation, SCR-UX-06 account/minutes; preserve SCR-PC, SCR-01/04/09/10/11/13 and independent word games. Exact routes, entry/exit, state controls and source ledger are in [30](30_FIGMA_FULL_DEV.md#web-screens-and-navigation). Local 224 unit / 20 gateway / nine new browser cases pass; complete browser gate, CI and Web DEV acceptance pending. Backend is Live in DEV.
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 SCR-03/04: localized meaning-recognition title and shared green styling; session-wide progress, fresh repeated boards, finger-centered touch portal, tap alternative and scrollable four-row layout. [States, constraints and evidence](29_MEANING_MATCHING_ROUNDS.md).

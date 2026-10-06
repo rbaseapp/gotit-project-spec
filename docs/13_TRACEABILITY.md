@@ -314,10 +314,10 @@ credential/deployment evidence are tracked in [the canonical checkpoint](28_UX_2
 
 | Requirements | Implementation / tests | Status |
 |---|---|---|
-| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14 | Backend 0404c8c locally/integration verified; DEV pending |
+| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14; Web LessonWorkspace/Summary and guided E2E | Backend 43a429c Live in DEV; Web 2559d5b locally verified, Web DEV/provider acceptance pending |
 | FR-GUIDED-006 | voiceSample + private-lesson-voice-sample tests | Fake provider verified; real TTS acceptance pending |
 | FR-UX-007 / FR-UX-010 | practice validation/service, lesson repository, reading queue; practice integration language/pack cases | Backend locally/integration verified |
 | FR-UX-008 | course.words + course-words unit/PostgreSQL cases | Owner/normalized multiple-meaning boundaries verified |
 | FR-UX-009 | profile validation/repository/types + profile integration legacy merge/isolation | Owner persistence verified |
 
-[Canonical requirement criteria, exact source SHA and release evidence](30_FIGMA_FULL_DEV.md). Web final gate remains pending and fixture counts do not imply individual acceptance of every design frame.
+[Canonical requirement criteria, exact source SHA and release evidence](30_FIGMA_FULL_DEV.md). Web 2559d5b adds CourseJourney, approved unit words, scoped SmartPracticeReadyPage, account/minutes and persisted InterfacePreferences; 224 unit/20 gateway/nine new browser cases pass. Complete browser/CI/deployment gate remains pending; fixture counts do not imply individual acceptance of every design frame.

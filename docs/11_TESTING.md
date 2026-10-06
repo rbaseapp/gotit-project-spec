@@ -386,3 +386,6 @@ Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: typecheck/build, 228 fast te
 # Backend release audit follow-up — 2026-10-06
 
 Source `43a429ceeed3a2cd4715724a4d78568f846ef4d0` adds two proxy-subnet regressions and patches the locked transitive dependency. Typecheck/build, 230 fast tests and zero-finding audit pass. The preceding source passed 67 PostgreSQL tests. [Exact source and backup/release status](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
+## 2026-10-06 - Complete Figma Web checkpoint
+
+Web `2559d5bb22a928add4a56e53e74e9d514d0167fd`: typecheck/lint, 224 unit, production build, 20 gateway/security, formatting/diff and zero-finding audit pass. Nine new family/guided/focused-game browser cases pass at 320/390/1487, covering geometry, exact vocabulary scope, stable failure retry, microphone-free text, automatic summary and clickable letters. Complete 406-case browser run and Linux CI pending. Backend 230 fast/67 PostgreSQL functional cases pass; DEV migration/preflight/normalization/readiness verified, real provider acceptance pending. [Evidence and limits](30_FIGMA_FULL_DEV.md).

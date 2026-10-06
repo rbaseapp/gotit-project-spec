@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Complete canonical Web learning/account source
+
+Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements desktop/mobile canonical screen families, server guided commands/review/replay, actual reports, scoped unit vocabulary/smart practice, independent games/reading, account/minutes and persisted UI preferences. 224 unit / 20 gateway / nine new browser cases, type/lint/build/format/audit pass; complete 406-case browser gate and CI running. Backend is Live in DEV; Web rollout/provider acceptance pending. Scope exclusions remain owner-approved. [Exact source and behavior](docs/30_FIGMA_FULL_DEV.md#web-checkpoint-pending).
+
 ## 2026-10-06 - Canonical guided Backend Live in DEV
 
 Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` is Live at `dep-db2fgvu7bikc73djr8rg`. Apply the additive guided migration only to the verified DEV database using its existing administrator; actual runtime strict preflight and read-only normalization audit pass with unchanged grants. Health/readiness pass. Web and authenticated provider acceptance remain pending. [Deployment evidence](docs/30_FIGMA_FULL_DEV.md#backend-dev-deployment-and-migration--2026-10-06).
