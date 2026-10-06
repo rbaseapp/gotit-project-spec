@@ -280,3 +280,35 @@ reruns as a completed full gate. `2559d5b` is already Live at
 `e58178ac04b1c5f7182bab988c53bf05af891656b9e0067e71ba647896507309`.
 The `2ad61a3` rollout and real corrected sample/guided provider smoke are pending
 at this immediate source-to-spec checkpoint. Production and Core are untouched.
+
+## Required generation title — Backend source checkpoint
+
+Backend [`468357129d919b1dcacd15a409ec78d77e69bf68`](https://github.com/rbaseapp/gotIt-backend/commit/468357129d919b1dcacd15a409ec78d77e69bf68)
+follows `43a429c` on `feat/figma-complete-dev`. Authenticated lesson creation at
+request `36c02d88-c5d1-42e6-b211-bd240776ab55` returned `COURSE_AI_UNAVAILABLE`
+before Realtime. A DEV-service-guarded public schema-only probe with the configured
+provider returned HTTP 400 `invalid_json_schema`, `text.format.schema`, explicitly
+identifying missing required `shortTitle`. No provider key or learner data was
+printed/sent in the diagnostic. This matches the [official strict-output contract](https://developers.openai.com/api/docs/guides/structured-outputs).
+
+Generation now uses the required form of the existing brief schema; stored legacy
+briefs can still omit the title. FR-GUIDED-001/003 -> UC-GUIDED-01 / SCR-10 /
+SEQ-14 -> PrivateLessonService -> the strengthened provider boundary regression
+rejects a declared non-required property like the actual API. It fails before the
+repair with `COURSE_AI_UNAVAILABLE`, then passes. Existing new-content fixtures
+include the title; stored legacy fixtures remain unchanged. There is no migration,
+quota, credential, privacy, API ownership or Core change.
+
+Typecheck/build, 230 fast tests, two relevant disposable PostgreSQL guided/language
+integration cases and changed-file formatting/diff checks pass. The preceding full
+67-case PostgreSQL gate remains recorded for `43a429c`. This title repair is pushed;
+exact DEV deployment and successful real lesson/report acceptance are pending.
+
+Web `2ad61a3` is deployed at `dep-db2fua8473hc739it9ig`, with the exact commit visible
+in Render. Served CSS matches the recorded SHA256. The delivered
+`PrivateLessonPage-BM8rwOGj.js` contains Blob creation/revocation; authenticated
+sample request `e0761f18-1c18-484b-897f-89635c84dfe6` returned 200, playback resolved
+and no browser error/alert remained. Initial direct parameterized navigation was
+blocked by the browser; root -> dashboard -> map -> preparation succeeded.
+The stable local browser gate now passes **406/406**, and [Linux CI](https://github.com/rbaseapp/gotIt-front/actions/runs/37475470037)
+is successful for exact `2ad61a3`, including type/lint/unit/browser/build/gateway/audit.

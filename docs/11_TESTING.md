@@ -2,6 +2,8 @@
 
 ## 2026-10-06 - Canonical guided Web acceptance follow-up
 
+Follow-up Backend `468357129d919b1dcacd15a409ec78d77e69bf68` reproduces the real `shortTitle` strict-schema rejection and passes after the required generation-schema repair. 230 fast/type/build/format and two relevant disposable PostgreSQL cases pass; prior full PostgreSQL 67 passes are recorded separately. Web `2ad61a3` final 406/406 local browser and exact Linux CI pass; live sample playback passes. Real guided lesson/report acceptance awaits the Backend follow-up rollout. [Evidence](30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).
+
 Web `2ad61a31a33cdb52809c85a0b2abd78a6a6de983`: 224 unit / 20 gateway, type/lint/build/format pass. Voice regression validates allowed MP3 Blob playback/cleanup; three library-to-ready families preserve language, eight idle-resume and four clipped-board touch cases pass. Initial full gate was 399/406; stable full gate and corrected live provider smoke are pending. [Exact diagnosis and checkpoint](30_FIGMA_FULL_DEV.md#web-playback-and-entry-follow-up--source-checkpoint).
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair

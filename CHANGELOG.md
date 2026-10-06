@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-06 - Strict generated lesson title repair
+
+Backend `468357129d919b1dcacd15a409ec78d77e69bf68` fixes actual DEV provider schema rejection by requiring the new title for generation while retaining optional legacy stored titles. Provider boundary regression fails before/passes after; 230 fast, two relevant PostgreSQL cases, type/build/format pass. Backend rollout/provider lesson acceptance pending. Web `2ad61a3` is deployed, its sample playback works, 406/406 local browser cases and exact Linux CI pass. [Diagnosis, source and deployment boundary](docs/30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).
+
 ## 2026-10-06 - Canonical Web voice sample and smart entry repair
 
 Web `2ad61a31a33cdb52809c85a0b2abd78a6a6de983` repairs real DEV teacher playback with allowed Blob URLs and cleanup, and routes scoped library/unit/dashboard entry through the smart ready/pace screen. Security policy is unchanged. 224 unit/20 gateway, type/lint/build/format and targeted three family/eight idle/four drag cases pass; stable full browser gate and this follow-up deployment remain pending. [Source, failure diagnosis and trace](docs/30_FIGMA_FULL_DEV.md#web-playback-and-entry-follow-up--source-checkpoint).

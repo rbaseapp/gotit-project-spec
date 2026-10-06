@@ -2,6 +2,8 @@
 
 ## 2026-10-06 - Canonical teacher playback and smart entry
 
+FR-GUIDED-001/003 -> UC-GUIDED-01 / SCR-10 / SEQ-14 -> Backend `468357129d919b1dcacd15a409ec78d77e69bf68` required generated title, optional legacy stored title -> failure-first strict provider boundary regression plus preserved legacy guided/language PostgreSQL cases. [Actual provider diagnosis and pending rollout](30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).
+
 FR-GUIDED-006 -> UC-GUIDED-01 / SCR-10 -> TeacherVoicePreview -> allowed Blob sample failure/retry/cleanup regression. FR-UX-007 -> UC-UX-05 / SCR-UX-05 -> scoped dashboard/library/unit/pack ready entry -> 320/390/1487px language-preservation cases. Source `gotIt-front@2ad61a31a33cdb52809c85a0b2abd78a6a6de983`; [local gates and live-pending boundary](30_FIGMA_FULL_DEV.md#web-playback-and-entry-follow-up--source-checkpoint).
 
 ## 2026-10-06 - Meaning recognition rounds and touch repair
