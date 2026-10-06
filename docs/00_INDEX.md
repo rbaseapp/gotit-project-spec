@@ -93,3 +93,9 @@ Chrome Extension ──┤
 ## 2026-10-06 — DEV learning-path correction
 
 DEV learning-path fidelity and sequencing. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+## 2026-10-06 — Unit study media and scoped games
+
+[Unit study contract and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md) records
+catalog images/examples, familiar-word exclusion, scoped game selection, source
+commits, regression results and the pending release destination.

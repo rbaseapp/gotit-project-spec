@@ -10,8 +10,9 @@ been changed by this task at this checkpoint.
 Backend source: [48ec269adcec0c43fe73ddee62161b5f026128f5](https://github.com/rbaseapp/gotIt-backend/commit/48ec269adcec0c43fe73ddee62161b5f026128f5).
 Status: **implemented and locally/integration verified; deployment pending**.
 Web source: [7c661486dae2d602fc6d4c549bd5ec65097f54a9](https://github.com/rbaseapp/gotIt-front/commit/7c661486dae2d602fc6d4c549bd5ec65097f54a9).
-Status: **implemented and focused locally/browser verified; full unit rerun and
-deployment pending**. Both source changes remain isolated from main.
+Status: **implemented and locally/browser/CI verified; deployment pending**.
+Both source changes remain isolated from main and are pushed
+to `origin/fix/unit-study-context` in their respective repositories.
 
 ## Problem and behavior
 
@@ -84,8 +85,14 @@ learning. No user text collection, audio storage or new recipients are introduce
   tests pass in isolation; typecheck, lint, production build, all 20 gateway
   tests, changed-file formatting and zero-finding dependency audit pass.
 - The full 225-test Web unit run encountered timing failures under concurrent
-  browser/build load; an isolated fork-pool rerun is pending. The broad responsive
-  sweep was stopped to remove competing load; no full responsive pass is claimed.
+  browser/build load. The isolated rerun passed all 225 tests with
+  `vitest run --pool=forks --testTimeout=15000 --retry=1`. Exact-source Linux CI
+  also passed the ordinary `npm test`, typecheck, lint, full browser suite,
+  production build, gateway tests and dependency audit.
+  [CI run](https://github.com/rbaseapp/gotIt-front/actions/runs/37495492209).
+  The initial broad responsive sweep was stopped to remove competing load;
+  the subsequent complete local run passed **417/417 browser cases** using
+  `E2E_PORT=4186 npm run test:responsive -- --workers=2` (10.9 minutes).
 - No live provider acceptance or exact-source deployment is claimed yet.
 
 ## Release and rollback
@@ -95,3 +102,9 @@ The existing DEV targets are Backend `srv-dar6ei7f3r2c73balbp0` and Web
 Web; verify exact SHAs, both `/ready` endpoints, actual new-word image/example and
 game launch with unit scope. Roll back by redeploying previous compatible sources;
 no down migration or progress reset is needed. Record final deployment evidence here.
+
+The requested screen is absent from production main. At this checkpoint the full
+source branch differs from main by 11 Web commits / 115 files and 5 Backend commits
+/ 47 files. Merging the whole branch into main would release unrelated DEV design
+and API work. The pending owner question is DEV-only delivery versus approval for
+that broader production release; no silent whole-branch promotion is authorized.

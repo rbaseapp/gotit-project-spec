@@ -1,5 +1,14 @@
 # יומן שינויים
 
+## 2026-10-06 — Unit study regression gates verified
+
+Exact Web source `7c661486dae2d602fc6d4c549bd5ec65097f54a9` passes all 225 unit,
+417 browser and 20 gateway tests locally, plus type/lint/build/format and zero-finding
+audit. Its full Linux GitHub validation also succeeds. Backend `48ec269` retains
+235 fast / 69 real PostgreSQL passes. Both source branches are published; production
+main and services are untouched pending DEV-only versus broader-release direction.
+[Evidence and scope](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
 ## 2026-10-06 — Unit study Web source checkpoint
 
 Web `7c661486dae2d602fc6d4c549bd5ec65097f54a9` adds independent image/example loading
