@@ -403,6 +403,14 @@ Route: `/private-lesson`; המסך כולל כמה subviews.
 
 ### 13.1 Setup
 
+- Teacher selection uses the existing Rachel/Mike portraits at 80px inside the
+  portal dialog, with the teacher name beside each portrait and the selected
+  border retained. The audio-level badge is hidden here so it cannot cover the
+  face; voice samples remain separate buttons. Local Web source `660dd21`
+  verified HE/EN at 320/390/1280px, loaded portraits, no horizontal overflow,
+  teacher selection and Escape/focus restoration. `npm.cmd run check` passes
+  (236 unit tests, 20 gateway/security tests, typecheck, lint, build). This is
+  local fixture evidence; deployment and physical-device checks were not run.
 - target/support language ו־absolute beginner rule.
 - level, duration, teacher voice/speed.
 - focus areas/custom focus.

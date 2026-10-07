@@ -1,5 +1,16 @@
 # יומן שינויים
 
+## 2026-10-07 — Teacher picker portraits
+
+Web source `660dd21` gives the portal teacher picker its own styles:
+80px Rachel/Mike portraits, readable names and full-width cards, with the audio
+badge hidden so it does not cover the portrait. Existing selection and separate
+voice-sample controls are retained. `npm.cmd run check` passes (236 unit tests,
+20 gateway/security tests, typecheck, lint, build). Playwright CLI verifies HE/EN
+at 320/390/1280px, image loading, no overflow, selection and focus restoration.
+No deployment or physical-device check performed.
+[Screen contract](docs/17_SCREEN_CATALOG.md#131-setup).
+
 ## 2026-10-07 — Desktop home viewport layout
 
 Local Web working tree based on `c1f3c4b` reduces desktop home card height,
