@@ -212,6 +212,21 @@ Facebook button failure state (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2
 
 ## 5. SCR-02 — Dashboard
 
+### 2026-10-07 — Desktop home fits the viewport
+
+Local Web working tree based on `c1f3c4b`: the live `/dashboard` keeps its
+illustrated continuation card, with height-aware typography, padding and artwork.
+The greeting/language selector, two secondary cards, free conversation, reading,
+achievements and collapsed progress entry fit the resting desktop view. Below
+700px viewport height, the secondary cards sit beside the primary card and the
+sidebar uses two navigation columns. Mobile keeps its existing vertical layout.
+Content remains in normal document flow: expanded progress, expanded errors,
+unusually long content and accessibility text/zoom can grow and scroll; content
+is never cropped or hidden to force a viewport fit. API/data/learning rules are
+unchanged. Local browser coverage includes vocabulary, selected and resumed
+programs, a language selector, sidebar overflow, Hebrew/English/Arabic and
+600–1080px desktop viewport heights. Release has not been deployed.
+
 Route: `/dashboard`; רכיבים נפרדים ל־demo ול־live.
 
 ```text

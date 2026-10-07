@@ -1,5 +1,15 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-07 — Desktop home viewport layout
+
+SCR-02 / FR-UX-001 -> Web `LiveDashboardPage.tsx` and `figma-review.css` ->
+`test/e2e/dashboard-home.spec.ts` and `test/e2e/ux-navigation.spec.ts`.
+Viewport fit covers the resting home, continuation artwork, secondary cards,
+footer actions and compact sidebar. [Canonical screen behavior and limits](17_SCREEN_CATALOG.md#2026-10-07--desktop-home-fits-the-viewport).
+Local working tree based on `c1f3c4b`; no API, schema or provider changes and no
+deployment. Local quality gate passed: 236 Vitest / 20 gateway-security cases,
+typecheck, lint and build. Browser evidence is recorded in the changelog.
+
 ## 2026-10-06 - Canonical teacher playback and smart entry
 
 FR-GUIDED-001/003 -> UC-GUIDED-01 / SCR-10 / SEQ-14 -> Backend `468357129d919b1dcacd15a409ec78d77e69bf68` required generated title, optional legacy stored title -> failure-first strict provider boundary regression plus preserved legacy guided/language PostgreSQL cases. [Actual provider diagnosis and pending rollout](30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).

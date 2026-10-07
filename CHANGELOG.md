@@ -1,5 +1,19 @@
 # יומן שינויים
 
+## 2026-10-07 — Desktop home viewport layout
+
+Local Web working tree based on `c1f3c4b` reduces desktop home card height,
+typography and whitespace according to viewport height, combines secondary
+actions in a footer and compacts short-window sidebar navigation. The original
+continuation artwork is retained. Selected/resumed programs and vocabulary homes
+share the responsive layout; mobile and expandable content remain accessible.
+`npm.cmd run check` passed (236 Vitest, 20 gateway-security, typecheck, lint, build).
+Focused browser verification passed 26/26 cases with
+`npm.cmd run test:responsive -- test/e2e/dashboard-home.spec.ts test/e2e/ux-navigation.spec.ts --workers=3`.
+Coverage includes Hebrew/English/Arabic, program loading,
+continuation, language selection and 1024×600 through 1920×1080 desktop sizes.
+No deployment performed. [Screen behavior and limits](docs/17_SCREEN_CATALOG.md#2026-10-07--desktop-home-fits-the-viewport).
+
 ## 2026-10-07 - Private lesson conversation DEV
 
 Approved responsive conversation room with inline text/voice input, real teacher state, acknowledged written-turn retry and explicit finish-to-report continuity. Compatible with deployed legacy setup/session and existing guided activities. Exact source, tests and release acceptance: [canonical evidence](docs/33_PRIVATE_LESSON_CONVERSATION_DEV.md).
