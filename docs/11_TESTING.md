@@ -429,3 +429,8 @@ Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/b
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study Backend passes 235 fast and all 69 PostgreSQL tests, type/build/format/diff/audit; four new Web browser cases pass; full Web gate pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Room, typed acknowledgment/retry, real track mute/resume, IME/draft and responsive evidence are recorded centrally. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

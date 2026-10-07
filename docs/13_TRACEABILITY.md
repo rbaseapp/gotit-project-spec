@@ -357,3 +357,8 @@ Web 914aa06 maps FR-PATH-003/004/005 to live smoke and 413 passing CI browser re
 ## 2026-10-06 — Unit study source checkpoint
 
 FR-UNIT-001/002 → WordPackStudyService / UnitWordBrowser / EnglishLearningPathPage / LiveLearnPage → word-pack-study, unit-study.integration and unit-study browser regressions. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+FR-LESS-007/008/009 -> UC-07 -> P12/P13 -> SCR-10 -> SEQ-16 -> LessonWorkspace, PrivateLessonPage, privateLessonText -> lesson-workspace/private-lesson-text/private-lesson/guided-lesson/private-lesson-flow tests. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

@@ -397,14 +397,17 @@ Route: `/private-lesson`; המסך כולל כמה subviews.
 ### 13.2 Live lesson
 
 ```text
-┌ Topic / connection / timer / mute / finish ─┐
-│                 Tutor avatar                 │
-│          listening / speaking / thinking     │
-│                                             │
-│ latest transcript / vocabulary               │
-│ [Translate latest] [Finish lesson]           │
-└─────────────────────────────────────────────┘
+┌ Timer / finish / pause ───── Topic / context ┐
+│ Full chronological chat    │ Selected tutor │
+│ Hint / translate / replay  │ Actual state   │
+│ Scrollable transcript     │ Lesson goal    │
+│ Voice / text + composer   │ Target words   │
+└────────────────────────────────────────────┘
 ```
+
+Mobile uses a compact teacher above the chat and a persistent composer. Text
+start works with both guided and legacy sessions without microphone permission;
+the full state/acceptance owner is [33](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
 
 ### 13.3 Completion report
 
@@ -557,3 +560,8 @@ FR-PATH-003/004/005: explicit map vs bulk dialog, real word/activity detail, lev
 ## 2026-10-06 — Unit study source checkpoint
 
 SCR-16 adds independent image/example loading/error states, known-state explanation and unit game chooser. Web verification/release pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+SCR-10 uses chronological chat, a persistent text/voice composer, desktop teacher panel and compact mobile teacher. Actual guided stages are conditional on server activity. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

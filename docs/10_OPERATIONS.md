@@ -379,3 +379,8 @@ Backend b3c1b73 and final Web 51b92b3 exact DEV Live/readiness, served CSS hash 
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit-study source checkpoint requires Backend-before-Web release, exact-SHA/readiness/provider/scoped-game smoke. No migration or environment changes; release scope pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+DEV frontend follows feat/lesson-conversation-v3-dev. Exact source, compatibility, acceptance and rollback: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

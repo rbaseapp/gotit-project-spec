@@ -374,3 +374,8 @@ Backend path eligibility and Web program/map/words/activities/levels are deploye
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study media before installation is Backend locally/integration verified; scoped Web game selection is in progress; release pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Approved conversation room, inline writing and legacy text entry are implemented in an isolated DEV Web feature branch. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

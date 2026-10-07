@@ -218,12 +218,12 @@ invalid response, quota release on failure, expired/tampered publication token.
 
 ## UC-07 — שיעור פרטי והערכת רמה
 
-Actor: משתמש עם practice access ומיקרופון נתמך.  
+Actor: משתמש עם practice access ודפדפן WebRTC נתמך; מיקרופון נדרש רק למענה בקול.
 Preconditions: Realtime provider configured; absolute beginner כולל support language.  
 Trigger: Start lesson.
 
 Main flow: load setup → preferences/roadmap → create short-lived Realtime session →
-WebRTC audio/data → timer/mute/translate → wrap-up/goodbye → complete with bounded turns
+WebRTC audio/data → voice or typed answer → timer/mute/translate → wrap-up/goodbye → complete with bounded turns
 → structured report → save continuity/evidence/skill profiles/roadmap → report/level display.
 
 Alternate: permission denied, WebRTC/codec/provider failure, disconnect, user stop, report
@@ -301,3 +301,8 @@ UC-PATH-01 study then teacher; UC-PATH-02 inspect owned word illustration. See [
 ## 2026-10-06 — Unit study source checkpoint
 
 UC-UNIT-01: select a unit word, load/retry image/example. UC-UNIT-02: choose a game, practise only the unit's unknown words, return to unit words. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+UC-07 supports text start without microphone. Voice permission denial preserves the draft and returns to writing; explicit finish-and-save completes the actual report. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

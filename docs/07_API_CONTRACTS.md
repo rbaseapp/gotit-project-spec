@@ -343,3 +343,8 @@ Additive station policy, midpoint input, 409 UNIT_WORDS_REQUIRED, owned cached-i
 ## 2026-10-06 — Unit study source checkpoint
 
 Two additive practice-gated unit study POSTs and the 89-route catalog are locally/integration verified. Existing GET stays read-only. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Product routes and payload schemas are unchanged; legacy typed turns use acknowledged Realtime items and the existing bounded complete turns payload. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

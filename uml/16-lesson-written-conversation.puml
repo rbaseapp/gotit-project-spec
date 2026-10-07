@@ -1,0 +1,35 @@
+@startuml
+title SEQ-16 — Written answer in legacy conversation room
+actor Learner
+participant "LessonWorkspace" as Room
+participant "PrivateLessonText" as Controller
+participant "Realtime data channel" as Realtime
+participant "GotIt Backend" as Backend
+
+Learner -> Room: Choose text and start lesson
+Room -> Backend: Existing owned session request (text mode)
+Backend --> Room: Short-lived session credential
+note over Room, Realtime: Existing WebRTC connection; no microphone capture in text mode
+Learner -> Room: Submit bounded draft
+Room -> Controller: submit(text)
+Controller -> Realtime: conversation.item.create (stable item ID)
+Realtime --> Controller: item.added / item.created (matching ID)
+Controller --> Room: Record learner turn once
+Controller -> Realtime: response.create (event ID)
+alt Tutor response acknowledged
+  Realtime --> Controller: response.created
+  Controller --> Room: Accepted: clear draft
+  Realtime --> Room: Tutor transcript / actual playback events
+else Error or acknowledgment timeout
+  Controller --> Room: Keep draft; allow retry
+  Learner -> Room: Retry same draft
+  Room -> Controller: submit(same text)
+  note over Controller, Realtime: Reuse accepted item; retry response request only
+end
+Learner -> Room: Finish and save (confirm)
+Room -> Realtime: Existing wrap-up request after current generation
+Realtime --> Room: Wrap-up and playback completion
+Room -> Backend: Existing complete (actual learner/tutor turns)
+Backend --> Room: Actual structured report
+Room --> Learner: Summary or report failure/retry
+@enduml

@@ -145,3 +145,8 @@ Unit gating implemented; cross-unit adaptive checkpoint remains outside this con
 ## 2026-10-06 - Practice clarity Web source checkpoint
 
 Requested practice clarity and native reading guides are locally implemented. Publication, target selection, exact-SHA deployment and authenticated provider/audio smoke remain open. [Canonical source and evidence](32_PRACTICE_CLARITY.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Approved private-lesson room implementation and remaining physical-device acceptance: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

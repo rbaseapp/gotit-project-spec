@@ -236,3 +236,8 @@ Program family correction and scoped history/list detail. [Exact source, behavio
 
 Web source 7c661486dae2d602fc6d4c549bd5ec65097f54a9 adds catalog media loading/retry, familiar-word explanation and a unit-scoped game chooser. See [canonical behavior, regression evidence and pending release](32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
+
+
+## 2026-10-07 - Private lesson conversation room
+
+LessonWorkspace now supports the same chat/composer UI for guided and legacy sessions; legacy typed turns use the existing Realtime data channel. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

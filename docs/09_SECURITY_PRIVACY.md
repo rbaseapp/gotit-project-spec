@@ -203,3 +203,8 @@ Cached images remain owner-scoped/current-revision; locked meetings reject befor
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study verifies visible pack/entry before provider or cache access, sends public catalog text only, and retains existing quotas and auth/entitlements. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Text start does not request a microphone; text mode mutes the real track. Drafts remain in memory, provider credentials/identity and temporary retention remain unchanged. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

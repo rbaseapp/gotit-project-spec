@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-07 - Private lesson conversation DEV
+
+Approved responsive conversation room with inline text/voice input, real teacher state, acknowledged written-turn retry and explicit finish-to-report continuity. Compatible with deployed legacy setup/session and existing guided activities. Exact source, tests and release acceptance: [canonical evidence](docs/33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
 ## 2026-10-06 — Unit game scope repair Live in DEV
 
 Backend `5111096` restricts smart-game answer choices as well as targets to the

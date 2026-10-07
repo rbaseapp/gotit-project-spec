@@ -92,3 +92,8 @@ Unit flow: visible pack detail → independent image/example requests → guarde
 ## 2026-10-06 - Practice clarity Web source checkpoint
 
 [Native reading-guide sequence](../uml/15-practice-reading-guides.puml) covers scoped batch selection, cache reuse, bounded provider work and conditional persistence. Pronunciation study metadata and automatic playback remain separate from recording/attempt grading. [Exact contract and verification](32_PRACTICE_CLARITY.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+[SEQ-16: acknowledged written conversation and completion](../uml/16-lesson-written-conversation.puml) supplements SEQ-07; guided transactions retain SEQ-14. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

@@ -270,3 +270,8 @@ FR-PATH-001 teacher sequencing and FR-PATH-002 owned cached images. See [canonic
 ## 2026-10-06 — Unit study source checkpoint
 
 FR-UNIT-001: study image/example without installation/progress. FR-UNIT-002: unit-scoped game choice, explicit known exclusion and all-known launch lock. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+FR-LESS-007 responsive actual conversation; FR-LESS-008 text entry/acknowledged retry/draft/IME/microphone fallback; FR-LESS-009 assistance and finish-to-report continuity. Acceptance is defined once in the canonical contract. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

@@ -237,3 +237,8 @@ No schema change; journey is derived from owned pack links, known declarations a
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study reuses shared `study_image_assets`; examples use a bounded process cache. No schema migration or learning-state writes. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
+
+
+## 2026-10-07 - Private lesson conversation room
+
+No migration, table or column change; typed turns follow existing temporary-transcript/report retention. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).

@@ -99,3 +99,8 @@ DEV learning-path fidelity and sequencing. See [canonical contract and exact sou
 [Unit study contract and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md) records
 catalog images/examples, familiar-word exclusion, scoped game selection, source
 commits, regression results and the pending release destination.
+
+
+## 2026-10-07 - Private lesson conversation room
+
+Canonical conversation-room contract, exact source and release evidence for SCR-10: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
