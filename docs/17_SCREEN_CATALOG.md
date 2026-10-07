@@ -214,18 +214,27 @@ Facebook button failure state (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2
 
 ### 2026-10-07 — Desktop home fits the viewport
 
-Local Web working tree based on `c1f3c4b`: the live `/dashboard` keeps its
-illustrated continuation card, with height-aware typography, padding and artwork.
-The greeting/language selector, two secondary cards, free conversation, reading,
-achievements and collapsed progress entry fit the resting desktop view. Below
-700px viewport height, the secondary cards sit beside the primary card and the
-sidebar uses two navigation columns. Mobile keeps its existing vertical layout.
+Follow-up Web source `57c8160` (based on `660dd21`): the live `/dashboard` keeps
+the same full-width illustrated continuation card above two side-by-side
+secondary cards across desktop viewport heights. The previous below-700px
+side layout is removed. The home fills the viewport minus its outer padding,
+and the primary card grows into the height remaining after actual content is
+laid out, instead of using a fixed maximum height or fixed height subtraction.
+Content width, typography, illustrations and controls also scale up on larger
+desktops to retain balanced proportions rather than stretching only the hero.
+Short windows use compact typography, spacing and inline word actions; the
+sidebar retains its compact navigation. The greeting/language selector, two
+secondary cards, free conversation, reading, achievements and collapsed
+progress entry fit the resting desktop view with no oversized bottom gap.
+Mobile keeps its existing vertical layout.
 Content remains in normal document flow: expanded progress, expanded errors,
 unusually long content and accessibility text/zoom can grow and scroll; content
 is never cropped or hidden to force a viewport fit. API/data/learning rules are
 unchanged. Local browser coverage includes vocabulary, selected and resumed
 programs, a language selector, sidebar overflow, Hebrew/English/Arabic and
-600–1080px desktop viewport heights. Release has not been deployed.
+600–1440px desktop viewport heights, full-width primary artwork above the
+secondary cards and footer placement within the outer padding of the viewport
+bottom. No live deployment acceptance performed for this follow-up.
 
 Route: `/dashboard`; רכיבים נפרדים ל־demo ול־live.
 

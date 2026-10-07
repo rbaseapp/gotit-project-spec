@@ -1,5 +1,19 @@
 # יומן שינויים
 
+## 2026-10-07 — Consistent desktop home proportions
+
+Web source `57c8160` (based on `660dd21`) removes the short-window side layout. The
+continuation card remains above both secondary cards on desktops and grows
+into the remaining viewport height, keeping footer actions close to the bottom
+without clipping content. Short windows use smaller spacing and inline word
+actions. Browser regressions verify 30 cases: 1024×600 through 2560×1440,
+selected/resumed programs, language selection, loading and HE/EN/AR navigation.
+Typography, controls, imagery and content width scale together on large displays.
+`npm.cmd run check` passed (236 unit / 20 gateway-security cases, typecheck,
+lint and build); the final stylesheet also passed a fresh production build.
+Mobile keeps its existing flow. API/schema/provider contracts are unchanged;
+no live deployment acceptance performed. [Screen contract](docs/17_SCREEN_CATALOG.md#2026-10-07--desktop-home-fits-the-viewport).
+
 ## 2026-10-07 — Teacher picker portraits
 
 Web source `660dd21` gives the portal teacher picker its own styles:

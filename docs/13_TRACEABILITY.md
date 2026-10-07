@@ -1,5 +1,16 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-07 — Consistent desktop home height follow-up
+
+SCR-02 / FR-UX-001 -> Web `figma-review.css` ->
+`test/e2e/dashboard-home.spec.ts` and `test/e2e/ux-navigation.spec.ts`.
+Full-width continuation card stays above two secondary cards at every desktop
+height; remaining viewport space grows the primary card, eliminating the large
+bottom gap and the short-window side layout. Regression checks assert both
+viewport fit and footer proximity to the viewport bottom, including selected
+and resumed programs and 2560×1440 displays. [Canonical behavior and accessibility limits](17_SCREEN_CATALOG.md#2026-10-07--desktop-home-fits-the-viewport).
+Follow-up Web source `57c8160` (based on `660dd21`); no API/schema/provider changes.
+
 ## 2026-10-07 — Desktop home viewport layout
 
 SCR-02 / FR-UX-001 -> Web `LiveDashboardPage.tsx` and `figma-review.css` ->
