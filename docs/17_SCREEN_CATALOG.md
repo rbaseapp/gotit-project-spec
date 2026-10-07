@@ -1,5 +1,13 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-07 — Signed-out login appearance
+
+Keep the production login appearance until the owner approves its replacement:
+compact inline form, visible social sign-in options, desktop green showcase and
+mobile logo. Verification/recovery states remain supported. This restoration
+must be included in the shared release source, rather than only one manually
+deployed feature commit. [Canonical behavior and release evidence](05_WEB_FRONTEND.md#2026-10-07--production-login-retained-across-dev-releases).
+
 ## 2026-10-06 - Canonical complete Figma learning/account source
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements the canonical learning/account desktop/mobile families and shared states. Add SCR-UX-04 approved course-unit words, SCR-UX-05 scoped smart preparation, SCR-UX-06 account/minutes; preserve SCR-PC, SCR-01/04/09/10/11/13 and independent word games. Exact routes, entry/exit, state controls and source ledger are in [30](30_FIGMA_FULL_DEV.md#web-screens-and-navigation). Local 224 unit / 20 gateway / nine new browser cases pass; complete browser gate, CI and Web DEV acceptance pending. Backend is Live in DEV.

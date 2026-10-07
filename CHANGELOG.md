@@ -1,5 +1,12 @@
 # יומן שינויים
 
+## 2026-10-07 — Preserve production login across DEV commits
+
+Restore the production login to the shared Web release source after a later
+main deployment dropped the feature-branch-only fix. Add failure-first HE/EN
+browser layout coverage alongside existing email recovery checks. Checkpoint
+`8025168`; [canonical behavior and release evidence](docs/05_WEB_FRONTEND.md#2026-10-07--production-login-retained-across-dev-releases).
+
 ## 2026-10-07 — Consistent desktop home proportions
 
 Web source `57c8160` (based on `660dd21`) removes the short-window side layout. The

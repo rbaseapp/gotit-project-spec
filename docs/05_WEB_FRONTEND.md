@@ -1,5 +1,40 @@
 # 05 — מפרט Web Frontend
 
+## 2026-10-07 — Production login retained across DEV releases
+
+The owner requires the existing production login until a replacement is approved.
+The first restore (`16c13a4`) was deployed to DEV and later incorporated into
+`feat/lesson-conversation-v3-dev`, but remained absent from `main`. A subsequent
+manual DEV deployment of `660dd21` therefore restored the unwanted `auth-review`
+layout. This was release-source drift, not browser cache or an authentication failure.
+
+Web checkpoint `8025168` combines the original restore history with the latest
+desktop home update (`57c8160`) and the live practice hub restore (`006482d`).
+Both `main` and the configured DEV release branch must contain the restoration.
+Signed-out users receive the compact form, desktop green showcase, mobile logo,
+visible Google/Facebook options and password visibility control. Email verification
+and recovery continue through the existing EmailAuthForm/API flows.
+
+`test/e2e/auth-layout.spec.ts` guards provider visibility, the 430px form limit,
+an inline submit button, password visibility and no overflow in HE/EN at
+320/390/1280px. It fails on the uncorrected main tree and passes on the restored tree.
+The 13 targeted browser cases (layout, email recovery and focused learning) pass.
+The full Web quality gate passed (236 unit and 20 gateway/security cases,
+typecheck, lint and build). Broader home/navigation coverage passed 40 cases;
+three 30s navigation timeouts passed when rerun sequentially with a 60s limit.
+The final combined release passed a fresh build, lint, 29 live-page unit tests
+and all 19 targeted browser cases (login, email recovery, focused learning and
+smart-practice scope). Both remote release branches point at `8025168`.
+DEV Render deployment is **Live at the exact `8025168` source**. Signed-out
+browser smoke on the service hostname confirms the restored showcase, inline
+form and visible providers. The custom DEV domain returns HTTP 200 for `/ready`
+and `/login`, and serves `index-B-cOhvfm.css` containing `.auth-production`.
+Screenshot evidence: Web worktree `test-results/login-release/dev-login-desktop.jpg`.
+No Core, Backend, Chrome, API or database change is required.
+
+Future DEV releases must descend from the shared source containing this restore;
+do not use a stale feature branch or a pre-restore SHA as the release baseline.
+
 ## 2026-10-06 - Fullscreen game entry follow-up
 
 Web `9cff6a0f1de1c22da04e6d5ed285171d258457fb` follows the Figma correction. Fullscreen game entry stays contained in RTL; regression now samples the mounted game at animation start/middle/end. 84 viewport cases and local check (207 unit / 20 gateway-security), formatting and zero-finding audit passed. **DEV Live at exact source; delivered CSS and readiness verified; 393/393 local browser cases passed. Linux CI passed 207 unit / 393 browser / 20 gateway-security cases, build/type/lint and zero-finding audit; production excluded.** [Canonical source, behavior and release gate](28_UX_2_1_DEV.md#2026-10-06---game-entry-regression-follow-up).

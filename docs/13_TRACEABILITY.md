@@ -1,5 +1,13 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-07 — Persistent production login restoration
+
+Signed-out login requirement -> Web AuthPage, EmailAuthForm and scoped
+auth-production.css -> `test/e2e/auth-layout.spec.ts` (HE/EN, 320/390/1280px)
+plus email recovery and focused-learning browser coverage. Shared release source
+contains the original restore so subsequent main/DEV branch releases retain it.
+[Canonical behavior, incident cause and evidence](05_WEB_FRONTEND.md#2026-10-07--production-login-retained-across-dev-releases).
+
 ## 2026-10-07 — Consistent desktop home height follow-up
 
 SCR-02 / FR-UX-001 -> Web `figma-review.css` ->
