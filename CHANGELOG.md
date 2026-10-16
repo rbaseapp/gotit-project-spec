@@ -679,3 +679,7 @@ staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
 flows passed. Published review branches/PRs; operational production rollout is
 pending Render account connection and ordered migrations. Backend CI currently
 stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+
+## 2026-10-16 - Admin program editor
+
+[Program/lesson authoring and deployment evidence](docs/45_ADMIN_PROGRAM_EDITOR.md).

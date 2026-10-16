@@ -386,3 +386,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 - Admin program and lesson content
+
+[Canonical requirements, contracts, migration, verification and release evidence](45_ADMIN_PROGRAM_EDITOR.md) cover shared and learner-specific program/unit editing, authored lesson material, Realtime previews/snapshots and measured statistics. FR-ADMIN-PROGRAM-CONTENT / P-ADMIN-CURRICULUM / SCR-ADMIN-PROGRAMS.

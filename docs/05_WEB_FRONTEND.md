@@ -476,3 +476,8 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+
+## 2026-10-16 - Admin program and lesson content
+
+[Canonical requirements, contracts, migration, verification and release evidence](45_ADMIN_PROGRAM_EDITOR.md) cover shared and learner-specific program/unit editing, authored lesson material, Realtime previews/snapshots and measured statistics. FR-ADMIN-PROGRAM-CONTENT / P-ADMIN-CURRICULUM / SCR-ADMIN-PROGRAMS.

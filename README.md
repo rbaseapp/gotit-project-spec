@@ -49,3 +49,8 @@ checklists, פקודות אימות וכללי handoff.
 
 אין להסיק שמימוש קיים פרוס ל־Production ללא סימון מפורש. אין להעתיק סודות,
 מפתחות API, אסימונים או כתובות מסד נתונים למסמכים.
+
+
+## 2026-10-16 - Admin program editor
+
+[Program/lesson authoring and deployment evidence](docs/45_ADMIN_PROGRAM_EDITOR.md).

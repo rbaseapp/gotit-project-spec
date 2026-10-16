@@ -211,3 +211,8 @@ Authoritative introduced-entry count and teacher meeting eligibility. See [canon
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+
+## 2026-10-16 - Admin program and lesson content
+
+[Canonical requirements, contracts, migration, verification and release evidence](45_ADMIN_PROGRAM_EDITOR.md) cover shared and learner-specific program/unit editing, authored lesson material, Realtime previews/snapshots and measured statistics. FR-ADMIN-PROGRAM-CONTENT / P-ADMIN-CURRICULUM / SCR-ADMIN-PROGRAMS.
