@@ -1,5 +1,19 @@
 # 08 — מודל נתונים ומיגרציות
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+A forward Core migration adds scoped plan overrides and staff.write permission support. No new Product schema or automatic permission grant is introduced. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 No migration/table/column changed. Selected program/home language are scoped local presentation keys; preparation draft is validated sessionStorage with a 30-minute TTL and user/application/language/course context. Library return query contains bounded filter/page/selection context. None is authoritative learning evidence or a durable voice session. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
@@ -242,3 +256,18 @@ Unit study reuses shared `study_image_assets`; examples use a bounded process ca
 ## 2026-10-07 - Private lesson conversation room
 
 No migration, table or column change; typed turns follow existing temporary-transcript/report retention. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

@@ -1,5 +1,158 @@
 # 05 — מפרט Web Frontend
 
+## Shared application header — 2026-10-12
+
+### Persistent metrics during navigation
+
+The owner observed goal/streak chips disappearing when navigating from practice
+to My Words. `a3a3065` fixed the design and position but its page-owned portals
+still unmounted the visible status bar on route changes; each new `useResource`
+started without data. A React render alone does not require removing DOM nodes.
+
+Web `03aa2ab2f89c9b082d5150f86fb3191f9cc2f8fa` replaces that portal lifecycle
+with one shell-owned `PersistentLearningStatusBar`. `LearningStatusSource`
+controllers publish existing data/actions through a stable context. A provider
+retains the last successful server goal/streak while the next same-language
+controller loads or fails. Resolved zero values replace the previous values.
+Language changes discard old metrics; the provider resets by auth mode,
+application and user. During controller gaps the language select is disabled;
+page scope callbacks and entitlement rules stay with their owners. My Words tags
+responses by language to prevent stale data being published under a new selection.
+The selected language remains an option during language-list loading. No new
+API, persistent metric cache, duplicated request or backend/schema change.
+
+317 unit tests in 53 files, 20 gateway checks, lint and typecheck/build passed.
+22 focused checks passed after the selected-option safeguard. Tests navigate
+between distinct route controllers and assert bar/progress/streak DOM identity;
+mutation records confirm no removal during pending refresh or controller gaps.
+Additional tests cover zero, language isolation and authenticated-owner reset.
+A browser fixture delays dashboard responses by 2000ms: all four route handoffs
+retain the metrics, including observed dashboard/practice loading states.
+[Pending navigation observations](evidence/2026-10-12-persistent-header/local-pending-navigation.json).
+
+Exact commit `03aa2ab` is serving DEV after Render deployment
+[`dep-db6jf10n74is73aa107g`](https://dashboard.render.com/web/srv-dar6dng473hc73a0ns1g/deploys/dep-db6jf10n74is73aa107g)
+reported `Deploy succeeded` (50.8s). Authenticated navigation across practice,
+My Words, programs and Today retained one bar, 17/20 words and a 2-day streak.
+Practice and My Words were explicitly observed while their page content was
+loading with both header metrics still present. No console errors/warnings were
+captured. `/ready`, the four routes and new `/assets/index-BD9WvqyD.js` return 200.
+No scored answers/provider actions were submitted. Production/`main` are unchanged;
+auto-deploy remains disabled. Previous live source/rollback is `a3a3065`.
+[Release evidence](evidence/2026-10-12-persistent-header/release.json),
+[live navigation observations](evidence/2026-10-12-persistent-header/live-navigation.json) and
+[DEV screenshot](evidence/2026-10-12-persistent-header/dev-vocabulary.png).
+
+### Owner correction: one fixed Today design
+
+The initial `bf55d86` extraction reused code but kept different visuals, labels,
+navigation orders and page CSS. The owner rejected that result and selected
+the Today screen as the fixed design for every DEV shell screen.
+
+Web `a3a3065f59302fc9021cc8c8dfc5ef0c40c51909` removes page variants from the
+status bar and navigation, deletes the three page stylesheets' header overrides,
+and gives `Topbar.css` sole ownership of the DEV header. `AppShell` hosts the
+green bar immediately below the topbar, outside page padding/styles, through a
+`LearningStatusTarget` portal. The three existing pages retain their data and
+language callbacks; other shell routes get `DefaultLearningStatusBar` using
+existing read projections. Selection changes synchronize mounted language
+consumers. The common account menu retains Add word and its entitlement check;
+safe return links appear in page content. Full-screen sessions keep their own
+controls. No API, schema, Core or Chrome change.
+
+314 unit tests in 52 files, 20 gateway checks, typecheck, lint and build passed;
+19 focused checks passed after the last CSS adjustment. Local browser fixtures
+cover dashboard/practice/vocabulary/programs at 1440px Hebrew, 320px Hebrew and
+390px English. All 12 cases have identical topbar/status/language/account
+rectangles and computed styles per viewport/locale, exactly one status bar,
+no horizontal overflow and no negative header offset. The common stable
+scrollbar gutter prevents page height from shifting the header horizontally.
+Source reuse and verification contract: Web `docs/shared-app-header.md`.
+Published to `dev` and deployed as exact Web `a3a3065` on 2026-10-12.
+Render [`dep-db6hg2om7kps73dulqjg`](https://dashboard.render.com/web/srv-dar6dng473hc73a0ns1g/deploys/dep-db6hg2om7kps73dulqjg)
+reported `Deploy succeeded | Live` (65s). Authenticated DEV dashboard, practice,
+vocabulary and programs have identical header/status/language/account rectangles
+and computed styles, one status bar and no horizontal overflow. Live values are
+17/20 unique words and a 2-day streak; no answers were submitted. No console
+errors/warnings were captured. `/ready` and all four routes return 200. Served
+CSS matches the local build by SHA256. Production and `main` are unchanged;
+automatic deploy remains disabled. Rollback source is `bf55d86`.
+[Release evidence](evidence/2026-10-12-uniform-header/release.json),
+[live layout comparison](evidence/2026-10-12-uniform-header/live-layout.json),
+[Today screenshot](evidence/2026-10-12-uniform-header/dev-dashboard.png) and
+[My Words screenshot](evidence/2026-10-12-uniform-header/dev-vocabulary.png).
+
+### Initial extraction and deployment (superseded visual variants)
+
+Web refactor on `gotIt-front-mywords-dev`, integrated above DEV `85351ec`, extracts
+`Topbar`, `TopbarAccountMenu`, `useTopbarAssessment` and `appNavigation` from
+`AppShell`. Desktop/mobile brand markup and route definitions have one owner.
+`DevDashboardPage`, `DevPracticePage` and `DevMyWordsPage` now render one controlled
+`LearningStatusBar` and its shared CSS, with visual variants. Pages retain server
+requests, selected-language persistence, URL scope, pagination and selection resets.
+Header rollout gates, entitlement actions, safe return destinations, live/demo
+separation and dedicated full-screen game controls remain as before. No API,
+schema, Core or Chrome change.
+
+The component contract and reuse example are in Web `docs/shared-app-header.md`.
+Local typecheck, lint, production build, 311 unit tests using fork workers and
+20 gateway tests passed. Browser fixtures compare old/new dashboard, practice and
+word-page headers at 1440px Hebrew, 320px Hebrew and 390px English: no document
+horizontal overflow and matching header/strip heights.
+
+Published to `dev` and deployed on 2026-10-12 as Web
+`bf55d8609da19007cd3e2064bbd5a092235b8e32`. Render deployment
+[`dep-db6h5r0473hc73de2v5g`](https://dashboard.render.com/web/srv-dar6dng473hc73a0ns1g/deploys/dep-db6h5r0473hc73de2v5g)
+reported `Deploy succeeded | Live` (49.2s). Authenticated DEV `/dashboard`, `/learn`
+and `/vocabulary` each render one Topbar and one shared status bar with the correct
+variant, live goal/streak/language data and no document horizontal overflow.
+No console errors/warnings were captured. `/ready` and all three routes return 200;
+served shared status-bar CSS matches the local build. No scored answers were submitted.
+Production and `main` are unchanged; automatic deploy remains disabled. Rollback
+source is the previous live Web `85351ec78823e34afef69a8e8bf3df7c1aa88917`.
+[Release evidence](evidence/2026-10-12-shared-header/release.json) and
+[DEV screenshot](evidence/2026-10-12-shared-header/dev-shared-header.png).
+
+## 2026-10-07 — New-program pair correction
+
+ProgramsPage requests the selected catalog pair, renders loading/error/retry
+separately from unsupported pairs, and awaits saving that pair before opening
+the prepared path. New-account and different-default regressions are included.
+[Canonical contract and verification](31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
+## 2026-10-07 — Multilingual home illustration
+
+Local Web working tree adds `LearningHero` to SCR-02 `/dashboard`. The original
+English illustration is retained. Every four seconds, its book greeting, mug
+caption and note caption rotate through English, Arabic, French, Spanish,
+Chinese, Japanese, Portuguese, Russian, Hebrew and German. The original scene
+is fixed; a shared textless asset is applied only within lettering masks and
+self-hosted handwritten glyph subsets render the translations. Both hearts
+remain in the original image. The English frame uses the exact original asset.
+
+Before the patch asset loads, the original remains visible; a failed load leaves
+that frame intact. Hidden documents pause the timer. Reduced motion selects a
+static caption in the interface language (English fallback) and removes the
+fade. The illustration remains decorative and the existing mobile visibility
+and dashboard layout are retained. These illustration languages do not expand
+the supported interface locales. No API, data, provider runtime or deployment
+configuration changes.
+
+Local evidence: 239/239 Vitest cases with `--maxWorkers=2 --testTimeout=15000`,
+including three new timer/loading/reduced-motion regressions; 10/10 existing
+dashboard viewport browser cases; 20/20 gateway/security cases. Typecheck,
+lint and production build passed. The first default-concurrency run timed out
+in an unrelated smart-practice case; a separate retry encountered a transient
+English-path loading failure. The reduced-concurrency full run passed. All ten
+illustration variants were rendered and visually inspected in Chrome. Physical
+devices and deployed acceptance were not performed; this is local evidence.
+
+Source: `gotIt-front/src/components/LearningHero.tsx`, its stylesheet, the
+original/textless hero assets, bundled font subsets/licenses and
+`test/learning-hero.test.tsx`. Image-generation prompt is preserved in
+`src/assets/ux/learning-hero.prompt.txt`. No publication or deployment performed
+by this illustration task.
+
 ## 2026-10-07 — Production login retained across DEV releases
 
 The owner requires the existing production login until a replacement is approved.
@@ -276,3 +429,50 @@ Web source 7c661486dae2d602fc6d4c549bd5ec65097f54a9 adds catalog media loading/r
 ## 2026-10-07 - Private lesson conversation room
 
 LessonWorkspace now supports the same chat/composer UI for guided and legacy sessions; legacy typed turns use the existing Realtime data channel. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 — DEV dashboard design
+
+SCR-01 / UC-05 / UC-06 / FR-DASH-DEV-001–005: the approved program and personal-word dashboards reuse existing server mechanisms, with an exact DEV hostname boundary. [Canonical behavior, tests and release status](35_DASHBOARD_DESIGN_DEV.md).
+
+
+## 2026-10-11 ? DEV practice design
+
+SCR-03 `/learn` uses `DevPracticePage` under the exact DEV hostname gate; production/demo keep the existing page. [Canonical source, integration and evidence](36_PRACTICE_DESIGN_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+The exact DEV hostname gate routes new focus sessions to DevFocusGamePage/useFocusSession. Production, demo and legacy active sessions retain existing behavior. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-12 — Approved My Words screen
+
+SCR-05/06 uses the exact-host DEV-only page with supplied assets, real card metadata/counts, grid/list, filters and accessible drawer. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - My Programs / My Words navigation latency
+
+Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-13 - Prepared program map design (DEV)
+
+The supplied screenshot is implemented as a dynamic, modular prepared-unit map
+under the existing DEV gate. Server progression/locks and the canonical shared
+header are retained. Behavior, acceptance, source and exact release evidence are
+owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).

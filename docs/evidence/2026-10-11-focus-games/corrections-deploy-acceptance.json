@@ -1,0 +1,46 @@
+﻿{
+    "commit":  "b942ff40c0c4c1dfd5e64cfbb063f4c0a159e3f6",
+    "readyStatus":  200,
+    "htmlStatus":  200,
+    "entry":  "/assets/index-C4P_EhpH.js",
+    "entryStatus":  200,
+    "focusChunks":  [
+                        {
+                            "path":  "assets/DevFocusGamePage--oDySGfm.js",
+                            "status":  200,
+                            "sha256":  "febe2b03dd4d4a082cfc5d471bc6be66fcf758b6215861e47ba4493fe7575e20",
+                            "hasExitModal":  true,
+                            "hasCompletionModal":  true,
+                            "hasMatchingPreview":  true
+                        },
+                        {
+                            "path":  "assets/DevFocusGamePage-CjpIt1dg.css",
+                            "status":  200,
+                            "sha256":  "901b26b9c5cca0ce75ad184ab485dbcd47c6a6e4dec6bf577a3b37d6f6161f3c",
+                            "matchesLocalBuild":  true
+                        }
+                    ],
+    "deployId":  "dep-db5s9vnlk1mc73b2mkdg",
+    "status":  "Deploy succeeded | Live",
+    "liveAt":  "2026-10-11T20:20:02+03:00",
+    "verifiedAt":  "2026-10-11T20:23:25.3680491+03:00",
+    "checks":  {
+                   "build":  "passed",
+                   "typecheck":  "passed",
+                   "testFiles":  50,
+                   "gatewaySecurityTests":  20,
+                   "lint":  "passed",
+                   "unitTests":  289
+               },
+    "browserAcceptance":  {
+                              "consoleWarnings":  0,
+                              "matching":  "Published code verified; pointer/result acceptance from local fixture only",
+                              "session":  "One isolated DEV ten-card flashcard session, revealed and rated with actual server receipts, closed successfully",
+                              "exit":  "New compact localized dialog opened and continued",
+                              "providers":  "No microphone or paid assessment",
+                              "completion":  "Gift and summary shown in modal above inert retained game, closed to hub",
+                              "consoleErrors":  0
+                          },
+    "rollbackSource":  "ccfd2aa909357ddb63b274eb2b1cc5a52c752dfa",
+    "productionMain":  "778b3be97cd40b13283bcd446ff0697901945120"
+}

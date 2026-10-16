@@ -1,5 +1,19 @@
 # 09 — אבטחה ופרטיות
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Staff promotion requires a separate permission, MFA and verified scoped target; self changes are blocked, target sessions revoked and audit/replay retained. Plan overrides do not mutate provider charges. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 Return destinations use an internal allowlist; route context cannot authorize resource access. Drafts are owner-scoped/validated/expired; alphabet metadata never renders expected answers. Optional transcript replay uses browser/platform TTS (voice availability varies), not stored teacher audio; no new recording is persisted. Product writes against DEV are blocked operationally because its Backend still points at production; credential change requires owner handoff. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
@@ -208,3 +222,22 @@ Unit study verifies visible pack/entry before provider or cache access, sends pu
 ## 2026-10-07 - Private lesson conversation room
 
 Text start does not request a microphone; text mode mutes the real track. Drafts remain in memory, provider credentials/identity and temporary retention remain unchanged. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+### DEV practice alignment — 2026-10-12
+
+Microphone consent precedes capture; raw audio remains transient and outside tab checkpoints. Optional translations use the existing signed-preview pipeline without capture creation. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

@@ -1,0 +1,40 @@
+{
+    "date":  "2026-10-13",
+    "frontendCommit":  "81798c0c8ce5bea0844d9f700d82e490fa85fe1b",
+    "frontendDeploy":  "dep-db6l9q8473hc73do96t0",
+    "service":  "srv-dar6dng473hc73a0ns1g",
+    "status":  "Live",
+    "url":  "https://gotit-dev.rbaseapp.com",
+    "beforeProgramsMs":  [
+                             2772,
+                             1231
+                         ],
+    "beforeWordsMs":  [
+                          2642,
+                          1735
+                      ],
+    "afterProgramsMs":  [
+                            249,
+                            245,
+                            247
+                        ],
+    "afterWordsMs":  [
+                         224,
+                         216,
+                         219
+                     ],
+    "staleWordsMs":  1146,
+    "timingMethod":  "Same authenticated Chrome session, wall time from click to active program heading or first real word card, including automation overhead",
+    "artworkImagesLoaded":  5,
+    "wordCards":  9,
+    "consoleErrors":  0,
+    "vitestTests":  334,
+    "vitestFiles":  56,
+    "gatewayTests":  21,
+    "typecheck":  "pass",
+    "lint":  "pass, zero warnings",
+    "build":  "pass",
+    "productionDependencyAudit":  "zero vulnerabilities",
+    "backendChanged":  false,
+    "productionDeployed":  false
+}

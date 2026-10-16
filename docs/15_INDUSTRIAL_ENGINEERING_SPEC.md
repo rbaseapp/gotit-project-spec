@@ -1,5 +1,19 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+P-ADM-02 makes explicit role/permission and effective-plan changes auditable, while separating payment processing, learning evidence and access control. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 P08 keeps learners in a bounded multi-round practice session and labels recognition separately from recall. Continue only after authoritative board receipts; summarize after the scoped rounds and existing repair. No KPI, mastery or XP threshold change. [Control and evidence](29_MEANING_MATCHING_ROUNDS.md).
@@ -319,3 +333,32 @@ Practice clarity changes presentation and input modality, not authoritative lear
 ## 2026-10-07 - Private lesson conversation room
 
 P12 accepts spoken or typed input; P13 includes actual typed evidence in the report. Minute, assessment and KPI authority is unchanged; no usability KPI improvement is claimed. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+P08 retains one scoped session, issues visible exercises and advances on receipts. Self-rating/assisted recognition remain distinct from recall/provider evidence. No KPI or XP threshold change. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+### DEV practice alignment — 2026-10-12
+
+P08: first-attempt stage accuracy, assistance-marked learning and actual session totals stay distinct; client celebrations do not assert retention or create rewards. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+## 2026-10-12 — P06 library card view
+
+Read projection and category counts preserve user/language/status scope; selected practice returns context, and display/selection never awards learning evidence or XP. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

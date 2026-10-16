@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-12",
+  "environment": "DEV",
+  "commit": "03aa2ab2f89c9b082d5150f86fb3191f9cc2f8fa",
+  "serviceId": "srv-dar6dng473hc73a0ns1g",
+  "deployment": "dep-db6jf10n74is73aa107g",
+  "renderStatus": "Deploy succeeded",
+  "servingNewBuild": true,
+  "durationSeconds": 50.8,
+  "previousLiveCommit": "a3a3065f59302fc9021cc8c8dfc5ef0c40c51909",
+  "tests": {
+    "unit": 317,
+    "files": 53,
+    "focusedAfterLastSafeguard": 22,
+    "gateway": 20,
+    "lint": "passed",
+    "typecheckBuild": "passed",
+    "domIdentityAndMutationRemovalChecks": "passed"
+  },
+  "browser": {
+    "localDashboardDelayMs": 2000,
+    "localRouteHandoffs": 4,
+    "liveObservations": 6,
+    "livePendingPracticeAndVocabularyMetricsRetained": true,
+    "consoleErrorsAndWarnings": 0,
+    "screenshot": "dev-vocabulary.png"
+  },
+  "httpEvidence": "http-smoke.json",
+  "productionChanged": false,
+  "automaticDeploy": "disabled",
+  "scoredAnswersSubmitted": false,
+  "providerCallsInvoked": false,
+  "mainCommitUnchanged": "778b3be97cd40b13283bcd446ff0697901945120"
+}

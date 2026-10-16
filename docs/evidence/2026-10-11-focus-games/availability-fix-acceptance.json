@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-10-11T15:33:37.811507+00:00",
+  "commit": "5d9d3fe5fe183f459b58400d7f36856a9ee70f81",
+  "deployId": "dep-db5qn1jl550s73b31fo0",
+  "status": "Deploy succeeded | Live",
+  "entry": "/assets/index--jZfoCqV.js",
+  "publishedFocusChunks": [
+    "assets/DevFocusGamePage-f9Wf9E8f.js",
+    "assets/DevFocusGamePage-jK8vLZFa.css"
+  ],
+  "devDatabase": {
+    "database": "gotit_dev",
+    "role": "gotit_runtime",
+    "isolatedTargetVerified": true
+  },
+  "proxyTargets": {
+    "product": "https://gotit-dev-backend.onrender.com",
+    "core": "https://rbase-dev-core-platforms.onrender.com"
+  },
+  "backendLiveCommit": "76cee7df1a336362fd5a638eec936550c09f1192",
+  "readyStatus": 200,
+  "backendFix": {
+    "commit": "22ac2cbba694d7dd3da6bd4bdb6c69f071023426",
+    "deployId": "dep-db5qtc67bikc73doig5g",
+    "status": "Deploy succeeded | Live",
+    "liveAt": "2026-10-11 18:44:27 Asia/Jerusalem",
+    "unitTests": 257,
+    "postgresPracticeIntegrationTests": 33,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "liveGameAcceptance": {
+    "flashcards": "created real session, issued card and revealed translation",
+    "matching": "issued real board, two graded pairs, transition and session close into gift flow",
+    "listening": "created real session and issued listening-spelling exercise with text input",
+    "pronunciation": "created real session and issued pronunciation exercise; playback invoked without visible error; microphone not invoked",
+    "drag": "Real two-word manual session: assisted first receipt, unassisted correct second receipt, next-question issuance, stage transition and close request accepted; no browser error/warning logs."
+  },
+  "liveLearningWrites": "Bounded DEV acceptance sessions, issued exercises, matching attempts/close and drag attempts; real isolated DEV database verified before writes.",
+  "providerLimit": "No microphone recording or live pronunciation assessment; playback invocation with no visible error is not an acoustic verification.",
+  "productionMainUnchanged": {
+    "web": "778b3be97cd40b13283bcd446ff0697901945120",
+    "backend": "8c094409affbdfda5f825268ae6261b75e90e2cc"
+  }
+}

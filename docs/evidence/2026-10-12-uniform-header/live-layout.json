@@ -1,0 +1,254 @@
+[
+  {
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 152.27084350585938,
+      "x": 24,
+      "y": 20.52083396911621
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.39583587646484,
+      "padding": "12px 24px",
+      "width": 2540,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "16.8px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44.66666793823242,
+      "padding": "0px 12px",
+      "width": 197.1875,
+      "x": 24,
+      "y": 100.39583587646484
+    },
+    "nav": [
+      {
+        "href": "/dashboard",
+        "text": "היום שלי"
+      },
+      {
+        "href": "/courses",
+        "text": "התוכניות שלי"
+      },
+      {
+        "href": "/private-lesson?practice=free",
+        "text": "שיחה עם מורה"
+      },
+      {
+        "href": "/learn",
+        "text": "תרגול"
+      },
+      {
+        "href": "/vocabulary",
+        "text": "המילים שלי"
+      }
+    ],
+    "overflow": false,
+    "path": "/dashboard",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68.66667175292969,
+      "padding": "0px",
+      "width": 2540,
+      "x": 0,
+      "y": 88.39583587646484
+    }
+  },
+  {
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 152.27084350585938,
+      "x": 24,
+      "y": 20.52083396911621
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.39583587646484,
+      "padding": "12px 24px",
+      "width": 2540,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "16.8px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44.66666793823242,
+      "padding": "0px 12px",
+      "width": 197.1875,
+      "x": 24,
+      "y": 100.39583587646484
+    },
+    "nav": [
+      {
+        "href": "/dashboard",
+        "text": "היום שלי"
+      },
+      {
+        "href": "/courses",
+        "text": "התוכניות שלי"
+      },
+      {
+        "href": "/private-lesson?practice=free",
+        "text": "שיחה עם מורה"
+      },
+      {
+        "href": "/learn",
+        "text": "תרגול"
+      },
+      {
+        "href": "/vocabulary",
+        "text": "המילים שלי"
+      }
+    ],
+    "overflow": false,
+    "path": "/learn",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68.66667175292969,
+      "padding": "0px",
+      "width": 2540,
+      "x": 0,
+      "y": 88.39583587646484
+    }
+  },
+  {
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 152.27084350585938,
+      "x": 24,
+      "y": 20.52083396911621
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.39583587646484,
+      "padding": "12px 24px",
+      "width": 2540,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "16.8px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44.66666793823242,
+      "padding": "0px 12px",
+      "width": 197.1875,
+      "x": 24,
+      "y": 100.39583587646484
+    },
+    "nav": [
+      {
+        "href": "/dashboard",
+        "text": "היום שלי"
+      },
+      {
+        "href": "/courses",
+        "text": "התוכניות שלי"
+      },
+      {
+        "href": "/private-lesson?practice=free",
+        "text": "שיחה עם מורה"
+      },
+      {
+        "href": "/learn",
+        "text": "תרגול"
+      },
+      {
+        "href": "/vocabulary",
+        "text": "המילים שלי"
+      }
+    ],
+    "overflow": false,
+    "path": "/vocabulary",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68.66667175292969,
+      "padding": "0px",
+      "width": 2540,
+      "x": 0,
+      "y": 88.39583587646484
+    }
+  },
+  {
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 152.27084350585938,
+      "x": 24,
+      "y": 20.52083396911621
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.39583587646484,
+      "padding": "12px 24px",
+      "width": 2540,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "16.8px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44.66666793823242,
+      "padding": "0px 12px",
+      "width": 197.1875,
+      "x": 24,
+      "y": 100.39583587646484
+    },
+    "nav": [
+      {
+        "href": "/dashboard",
+        "text": "היום שלי"
+      },
+      {
+        "href": "/courses",
+        "text": "התוכניות שלי"
+      },
+      {
+        "href": "/private-lesson?practice=free",
+        "text": "שיחה עם מורה"
+      },
+      {
+        "href": "/learn",
+        "text": "תרגול"
+      },
+      {
+        "href": "/vocabulary",
+        "text": "המילים שלי"
+      }
+    ],
+    "overflow": false,
+    "path": "/courses",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68.66667175292969,
+      "padding": "0px",
+      "width": 2540,
+      "x": 0,
+      "y": 88.39583587646484
+    }
+  }
+]

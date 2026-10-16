@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-12",
+  "environment": "DEV",
+  "url": "https://gotit-dev.rbaseapp.com/courses",
+  "backend": {"commit": "941f59e9ece2a51e7d85eec2c2e83a8a6961c03f", "deploy": "dep-db6k98o473hc739vru10", "status": "Live", "readiness": "ready/database ok"},
+  "web": {"commit": "9020e936cf9454da51233fbb140fbad2d2675438", "deploy": "dep-db6k780m7kps73b8t8g0", "status": "Live", "sourceBranch": "dev"},
+  "checks": {"backendFast": 262, "backendPostgres": 1, "webUnit": 324, "webGateway": 21, "typecheck": "passed", "build": "passed", "webLint": "passed", "dependencyAudit": "zero vulnerabilities", "backendChangedFormatting": "passed", "backendRepositoryFormatting": "218 pre-existing unchanged files"},
+  "acceptance": {"realProgramCovers": "passed", "englishMohiUnionJackGreetings": "passed", "arabicMohiPalestinianFlagGreetings": "passed", "selectionReloadAndCache": "passed", "filterEmpty": "passed", "newChooser": "passed", "overviewNavigation": "passed", "liveMobileCssWidth": 320, "liveMobileScrollWidth": 320, "liveBrowserErrorsWarnings": 0, "localRtlLtr": "passed"},
+  "schemaMigration": false,
+  "productionChanged": false
+}

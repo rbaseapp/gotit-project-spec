@@ -1,0 +1,25 @@
+@startuml
+title Daily task completion rewards (DEV, 2026-10-11)
+actor Learner
+participant Web
+participant Backend
+database "product_gotit" as DB
+Learner -> Web: Complete lesson/conversation or article quiz
+Web -> Backend: Existing completion request
+Backend -> DB: Begin transaction; scoped practice-user lock
+Backend -> Backend: Verify completion evidence/category
+alt Qualifying completion
+  Backend -> DB: Insert unique daily-task ledger key
+  alt First task completion today
+    Backend -> DB: Add fixed XP to total/level and daily projection
+  else Already earned
+    DB --> Backend: No additional reward
+  end
+end
+Backend -> DB: Persist completion; commit
+Backend --> Web: Existing completion response
+Web -> Backend: Reload dashboard
+Backend -> DB: Read task amounts and daily keys
+Backend --> Web: dailyTaskRewards {xp, completed}
+Web --> Learner: Numeric XP badge; check when earned
+@enduml

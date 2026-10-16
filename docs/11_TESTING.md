@@ -1,5 +1,25 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Disposable PostgreSQL and local-browser coverage includes promotion/demotion, plan override/reset/expiry, actual catalog units, prompt base/active/draft separation and Hebrew guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — Dashboard acceptance corrections
+
+Web `e5760cc`: full `npm.cmd run check` passes, 286 unit tests and 20 gateway tests.
+Browser fixtures cover automatic answer progression/completion, compact feedback,
+task XP badges and 320px RTL/LTR layouts. [Canonical checks and environment evidence](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
 ## 2026-10-06 - Canonical guided Web acceptance follow-up
 
 Follow-up Backend `468357129d919b1dcacd15a409ec78d77e69bf68` reproduces the real `shortTitle` strict-schema rejection and passes after the required generation-schema repair. 230 fast/type/build/format and two relevant disposable PostgreSQL cases pass; prior full PostgreSQL 67 passes are recorded separately. Web `2ad61a3` final 406/406 local browser and exact Linux CI pass; live sample playback passes. Real guided lesson/report acceptance awaits the Backend follow-up rollout. [Evidence](30_FIGMA_FULL_DEV.md#required-generation-title--backend-source-checkpoint).
@@ -434,3 +454,48 @@ Unit study Backend passes 235 fast and all 69 PostgreSQL tests, type/build/forma
 ## 2026-10-07 - Private lesson conversation room
 
 Room, typed acknowledgment/retry, real track mute/resume, IME/draft and responsive evidence are recorded centrally. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+Focus verification covers isolated fixtures, complete sequence, ambiguous retry/close, expiry, duplicate meanings, keyboard, owner cache isolation and rendered responsive comparisons. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+2026-10-11 DEV practice entry correction: library languages absent from profile capabilities now use real profile preferences; five direct game cards replace unfinished placeholders. Twelve regressions and the full 284-unit / 20-gateway suite passed. Real DEV acceptance is tracked in [37](37_FOCUS_GAMES_DEV.md#dev-entry-regression-and-correction-2026-10-11).
+
+### DEV practice alignment — 2026-10-12
+
+Full Web check passed 292 tests / 50 files and 20 gateway/security tests. Focus regressions cover fresh matching IDs, assistance/requeue, speech pause and stable retry. Local browser fixtures are distinct from live/provider acceptance. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+Session-end/cloze regression: full check 295 unit tests / 50 files plus 20 gateway/security; final 27 focused regressions, typecheck/lint/build; Chrome fixture geometry in LTR/RTL. Live acceptance recorded separately. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - My Programs / My Words navigation latency
+
+Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

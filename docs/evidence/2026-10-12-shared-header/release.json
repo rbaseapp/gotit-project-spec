@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-12",
+  "environment": "DEV",
+  "url": "https://gotit-dev.rbaseapp.com",
+  "repository": "rbaseapp/gotIt-front",
+  "branch": "dev",
+  "commit": "bf55d8609da19007cd3e2064bbd5a092235b8e32",
+  "service": "srv-dar6dng473hc73a0ns1g",
+  "deployment": "dep-db6h5r0473hc73de2v5g",
+  "status": "Deploy succeeded | Live",
+  "durationSeconds": 49.2,
+  "rollbackCommit": "85351ec78823e34afef69a8e8bf3df7c1aa88917",
+  "checks": {
+    "unitTests": 311,
+    "unitFiles": 52,
+    "gatewayTests": 20,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "readyHttp": 200,
+    "routeHttp": 200,
+    "sharedStatusCss": "/assets/dashboard-design-CbN50vEP.css",
+    "sharedStatusCssMatchesLocal": true,
+    "consoleErrorsOrWarnings": 0
+  },
+  "authenticatedAcceptance": [
+    {
+      "hasOverflow": false,
+      "path": "/dashboard",
+      "statusBars": 1,
+      "styles": [
+        "/assets/index-c4VvvGnj.css",
+        "/assets/dashboard-design-CbN50vEP.css"
+      ],
+      "topbars": 1,
+      "variant": "dashboard"
+    },
+    {
+      "hasOverflow": false,
+      "path": "/learn",
+      "statusBars": 1,
+      "topbars": 1,
+      "variant": "practice"
+    },
+    {
+      "hasOverflow": false,
+      "path": "/vocabulary",
+      "statusBars": 1,
+      "topbars": 1,
+      "variant": "mywords"
+    }
+  ],
+  "scoredAnswersSubmitted": false,
+  "productionChanged": false,
+  "mainCommitUnchanged": "778b3be97cd40b13283bcd446ff0697901945120",
+  "automaticDeployment": "remains disabled",
+  "screenshot": "dev-shared-header.png"
+}

@@ -175,3 +175,8 @@ North Star: מספר learning items שהגיעו ל־learned באופן אמין
 - שיעור completion ו־repeat של private lessons;
 - conversion מ־trial ל־paid ו־churn.
 
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).

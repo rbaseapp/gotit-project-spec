@@ -204,3 +204,10 @@ Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60` adds owner-scoped guided acti
 ## 2026-10-06 — DEV learning-path correction
 
 Authoritative introduced-entry count and teacher meeting eligibility. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
+
+2026-10-11 DEV focused manual recall: `/practice/sessions/:id/exercises` retains `learningItemIds` as question targets while resolving distractors from the selected session pool for `recall / multiple_choice`. Owner, active-item, source/translation pair and selection boundaries remain enforced. No request/response schema change. See [37](37_FOCUS_GAMES_DEV.md#manual-drag-distractor-correction).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).

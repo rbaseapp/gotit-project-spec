@@ -1,5 +1,54 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Users gains role/permission and Free/Pro access actions; Programs gains prepared catalog and visible creation; prompt previews, policy helpers and Hebrew Guide explain field effects. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Fixed DEV application header
+
+Goal/streak remain mounted and visible through same-language route handoffs, including pending/failed reads. [Lifecycle behavior and verification](05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+All DEV live shell screens use the Today topbar and green status panel, with one
+navigation order, labels, logo, account control, typography and responsive layout.
+Only active-route indication and live data/control state vary. Page CSS cannot
+restyle the chrome. Full-screen sessions retain session controls; page-specific
+safe-return links remain below the header. [Acceptance and release](05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+2026-10-11: SCR-04 Continue / Finish session primary labels retain white text. [Correction and evidence](37_FOCUS_GAMES_DEV.md#primary-button-text-correction--2026-10-11).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — SCR-01 dashboard acceptance corrections
+
+Header/green-strip controls align to viewport edges; the gift sits left of XP in
+Hebrew and each daily-step action has an XP badge without a fixed reward promise.
+Quick-review receipts retain highlighted answer choices and concise word-card
+feedback for 900ms before automatic continuation/completion. Close failures offer
+explicit retry. [Canonical behavior and evidence](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
+## 2026-10-07 — New Program availability states
+
+New Program (FR-PATH-005 / UC-PATH-05) uses its selected languages for discovery.
+Pending catalog: status and disabled open; failed catalog: error/retry; successful
+unsupported pair: explanation; supported pair: open enabled. Opening awaits pair
+save and remains on the form if saving fails.
+[Canonical contract and evidence](31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
+## 2026-10-07 — SCR-02 multilingual illustration
+
+The home illustration cycles only its three captions across ten languages;
+reduced motion uses a static interface-language caption, and hidden documents
+pause rotation. Existing layout/mobile visibility and learning-language
+selection remain unchanged. [Canonical behavior and local evidence](05_WEB_FRONTEND.md#2026-10-07--multilingual-home-illustration).
+
 ## 2026-10-07 — Signed-out login appearance
 
 Keep the production login appearance until the owner approves its replacement:
@@ -605,3 +654,79 @@ SCR-16 adds independent image/example loading/error states, known-state explanat
 ## 2026-10-07 - Private lesson conversation room
 
 SCR-10 uses chronological chat, a persistent text/voice composer, desktop teacher panel and compact mobile teacher. Actual guided stages are conditional on server activity. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-07 ? Temporary DEV practice hub restoration
+
+SCR-03 `/learn` restores the production smart-session panel, six game cards, next-word queue and paginated history while retaining DEV language/unit/word scope and its existing shell. [Behavior and verification](34_PRACTICE_HUB_RESTORATION_DEV.md).
+
+
+## 2026-10-11 ? SCR-03 replacement design in DEV
+
+The owner approved the Claude ??? ????? 3? practice layout for DEV only. Original illustrations, live session/goal data and explicit unavailable modes are implemented. [Source, behavior and release evidence](36_PRACTICE_DESIGN_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+SCR-04: DEV flashcards, matching, drag, listening, pronunciation, inter-game transitions and animated completion; keyboard, RTL/LTR and reduced-motion states. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-11 - Owner game-design corrections (local)
+
+SCR-04 exit matches the original compact mascot dialog; flashcards restore rating/deck motion; matching adds live dashed preview; completion opens over the retained game in a scrollable modal. [Canonical behavior and verification](37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+### DEV practice alignment — 2026-10-12
+
+SCR-04: retryable incorrect answers, per-letter listening, over-game transitions and fullscreen five-phase completion. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+SCR-04: corrected five-phase completion geometry/timing and original accessories; cloze audio stays disabled until the active exercise has a successful receipt. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 — SCR-05/06 My Words design
+
+The selected MyWordsV2 artboard is implemented in DEV, including card waves, bilingual alignment, status/source/POS/memory/review metadata, drawer and bulk actions. Category membership/counts are actual server data. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - My Programs / My Words navigation latency
+
+Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-13 - DEV program chooser
+
+The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](40_PROGRAM_CHOOSER_DEV.md).
+
+
+## 2026-10-13 - Prepared program map design (DEV)
+
+The supplied screenshot is implemented as a dynamic, modular prepared-unit map
+under the existing DEV gate. Server progression/locks and the canonical shared
+header are retained. Behavior, acceptance, source and exact release evidence are
+owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

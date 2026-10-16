@@ -1,5 +1,92 @@
 # Learning path fidelity and sequencing — DEV only
 
+## 2026-10-08 — Prepared-path fix deployed to DEV
+
+This delivery supersedes the local-only checkpoints below. Main fixes were
+already pushed, but DEV services still served older manually selected commits.
+The Web deployment uses main `4847cab73879123e499e2f14bb09c650edb910b6`.
+Backend DEV had capabilities absent from main, so its catalog-only fix `8c09440`
+was cherry-picked onto the live `43e4d76` baseline, preserving those capabilities,
+as `76cee7df1a336362fd5a638eec936550c09f1192` on `fix/program-catalog-dev`.
+The five-file Backend diff adds only the catalog query, validation and tests.
+
+Render reports both specific-commit deployments as **Deploy succeeded | Live**:
+
+- [Backend deployment](https://dashboard.render.com/web/srv-dar6ei7f3r2c73balbp0/deploys/dep-db3brgflk1mc73a3su70), started 00:46:41 GMT+3.
+- [Web deployment](https://dashboard.render.com/web/srv-dar6dng473hc73a0ns1g/deploys/dep-db3brn2d0e5s73fphbg0), started 00:47:08 GMT+3.
+
+The DEV Backend worktree passed typecheck, build, 257 fast tests, changed-file
+formatting and the disposable PostgreSQL catalog regression. The main Web checks
+listed below passed before delivery. Both public DEV `/ready` endpoints returned
+HTTP 200 after delivery; Backend reported its database dependency healthy.
+Reloading the signed-in DEV New Program page showed English/Hebrew selected,
+an enabled Open From Zero button and no unsupported-pair message.
+[Live UI evidence](evidence/2026-10-08-program-pair/dev-new-program.jpg).
+The actual Open action was not submitted because it saves account defaults;
+save-before-open remains covered by regression tests. No production deployment,
+schema/migration change, service-setting change or live provider call was made.
+Configured DEV release branches and manual-deploy mode were retained; later
+deployments must include these fixes. Existing specification edits were preserved.
+
+## 2026-10-08 — Prepared-path fix on main
+
+Web fix `0eeec1899ff968a07a89486a62e3879e1b0c2254` was committed on
+`feature/new-design`. It was cherry-picked without conflicts onto local main as
+`4847cab`, carrying only ProgramsPage and its two regression files. Other design
+branch changes were not merged. Backend fix `8c09440` is already on main. Web main
+is one commit ahead of origin/main; no push or remote deployment was performed.
+
+## 2026-10-07 — New-program language-pair discovery
+
+Local correction on Backend main based on `6d211fa` and Web main based on
+`6863966`; these working-tree changes have not been published or deployed.
+FR-PATH-005 / UC-PATH-05: the New Program selectors and catalog request must use
+the same language pair. Previously the selectors defaulted to English/UI locale,
+while the API filtered by saved profile defaults; a pending or failed
+catalog also incorrectly displayed the unsupported-pair message.
+
+GET `/api/v1/word-packs` accepts optional `sourceLanguageCode` and
+`translationLanguageCode` query fields. Each is validated/canonicalized as BCP-47
+and overrides only that dimension of the saved-default filter for this read.
+Regional tags match the base catalog language. Omitting the query preserves
+existing filtering and response shape. Catalog activity and application/user
+progress isolation are unchanged; detail/install/known routes retain their
+profile-pair checks. No schema, migration, credential or provider change.
+
+ProgramsPage derives initial choices from the profile, falling back to English
+and the UI language when absent, and requests the selected pair explicitly.
+It displays loading/error/retry and only reports unavailable after a successful
+empty matching-path response. Changing selectors makes no profile write. Clicking
+Open From Zero awaits saving the selected pair through the existing profile API
+before navigating to the map; save failure stays on the form with feedback.
+This ensures subsequent unit reads/actions use the selected profile pair.
+
+Local runtime observation: `localhost:4173` serves the main Web checkout and no
+GotIt Backend listens locally. Its signed-in profile defaults to Arabic/Hebrew;
+the older remote API ignores the new discovery query. Web therefore also allows
+an explicit switch to the already-published English/Hebrew pair when saved defaults
+hide it. After saving, it re-reads the catalog through the existing no-query API
+and enters the map only if real path units are present. Empty/failed verification
+stays on the form with feedback; unsupported other pairs remain disabled. The
+local fix works with the existing remote contract before the Backend enhancement
+is deployed. Browser inspection made no profile or learning-progress writes.
+
+Regression: `test/programs.test.tsx` covers a new account, differing saved defaults,
+pending load, failed-load retry and failed profile save. Backend
+`test/word-packs.test.ts` validates query compatibility and invalid inputs;
+`test/integration/program-catalog.integration.test.ts` checks all 60 English/Hebrew
+units, missing/different profiles, regional tags, unsupported pairs and preserved
+detail restrictions in disposable PostgreSQL. Release order: Backend then Web.
+Verified on the final local working trees: Backend typecheck/build and 227/227 fast
+tests; one disposable PostgreSQL regression; Web `npm.cmd run check` with 245/245
+unit and 20/20 gateway/security tests, typecheck/lint/build; the existing new-program
+Playwright regression; changed-file formatting and diff checks. The signed-in local
+tab visibly enables Open From Zero for English/Hebrew and removes the false pair
+message. Opening the actual user's map was not submitted because it saves profile
+defaults; save-before-open and catalog verification are covered by the regression
+tests. No remote deployment, live provider call or full PostgreSQL/browser suite
+was performed. Existing unrelated specification working-tree edits were preserved.
+
 ## Scope and source checkpoint — 2026-10-06
 
 Owner explicitly requests DEV only, matching the existing Figma design branch. Code

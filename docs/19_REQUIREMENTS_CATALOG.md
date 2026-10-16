@@ -1,5 +1,37 @@
 # 19 — קטלוג דרישות ממוספר
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+FR-ADM-09–13 cover scoped staff management, Free/Basic↔Pro access, base/active prompt visibility, prepared catalog/creation and field guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Fixed shared application chrome
+
+FR-WEB-HEADER-02: same-language navigation must retain the visible goal/streak DOM and last server values while the next page loads or fails. Update fresh values in place, preserve zero and clear metrics on language/user change. [Lifecycle contract](05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+FR-WEB-HEADER-01: all DEV live shell routes must use the owner's selected Today
+topbar/status design without screen variants or page header overrides. Navigation
+labels/order and layout stay invariant; active link and live values may change.
+Acceptance compares computed styles and rectangles across routes in RTL/LTR and
+320px layouts, while preserving scoped callbacks, access checks and session
+controls. [Implementation and evidence](05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — FR-DASH-DEV-004 acceptance refinement
+
+Accepted quick-review receipts show compact feedback and highlighted locked choices
+for 900ms, then advance/complete automatically. Failed completion retries explicitly.
+The owner chose existing activity-based XP badges without fixed task rewards.
+[Canonical requirements and evidence](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 FR-PRAC-007 (Must): name the recognition objective; continue standalone practice beyond one board; return to a matching board during longer smart practice; preserve authoritative scoring, session progress and correction rounds; keep the dragged card under the finger and cancel without placement. [Acceptance and evidence](29_MEANING_MATCHING_ROUNDS.md).
@@ -275,3 +307,56 @@ FR-UNIT-001: study image/example without installation/progress. FR-UNIT-002: uni
 ## 2026-10-07 - Private lesson conversation room
 
 FR-LESS-007 responsive actual conversation; FR-LESS-008 text entry/acknowledged retry/draft/IME/microphone fallback; FR-LESS-009 assistance and finish-to-report continuity. Acceptance is defined once in the canonical contract. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+FR-FOCUS-DEV-001 through 005 define real interaction, server grading, scoped sequencing, retry/resume and completion acceptance. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-11 - Owner game-design corrections (local)
+
+FR-FOCUS-DEV-006: original exit composition/copy, receipt-gated flashcard motion, immediate dashed matching selection/pending feedback and modal session completion; keep real server grading and reduced-motion/RTL support. [Canonical behavior and verification](37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+### DEV practice alignment — 2026-10-12
+
+FR-FOCUS-DEV-007: align the approved DEV design interactions while retaining real item counts, XP, goals and evidence; receipt-only scores, retry/requeue and truthful completion are acceptance requirements. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+FR-FOCUS-DEV-008: match the owner session-end video (words into mouth, coins into actual XP icon, cumulative gift fractures, timed original accessories) and prevent cloze audio revealing an unanswered/retry question. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## FR-LIB-DEV-001 — Approved My Words design
+
+Must: implement the selected artboard in DEV with faithful card/detail states and server-authoritative ownership, counts/evidence, selected practice and return context. Cover source/translation/context search, multi-filters, paging, safe links, confirmations and RTL/LTR narrow layouts. Maps to SCR-05/06, UC-03 and P06. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - My Programs / My Words navigation latency
+
+Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

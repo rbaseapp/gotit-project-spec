@@ -1,0 +1,43 @@
+{
+  "delta": [
+    "-421.203125px",
+    "-368.125px"
+  ],
+  "origin": [
+    "952.5px",
+    "405.125px"
+  ],
+  "phase": "open",
+  "root": {
+    "bottom": 855,
+    "height": 855,
+    "left": 0,
+    "right": 1905,
+    "top": 0,
+    "width": 1905,
+    "x": 0,
+    "y": 0
+  },
+  "target": {
+    "bottom": 52,
+    "height": 30,
+    "left": 516.296875,
+    "right": 546.296875,
+    "top": 22,
+    "width": 30,
+    "x": 516.296875,
+    "y": 22
+  },
+  "destination": [
+    531.296875,
+    37
+  ],
+  "targetCenter": [
+    531.296875,
+    37
+  ],
+  "error": [
+    0,
+    0
+  ]
+}

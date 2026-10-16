@@ -1,5 +1,28 @@
 # 07 — חוזי API
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Core adds explicit staff/plan commands with independent permissions and effective billing projection; Product adds prepared-catalog reads and source-derived prompt references. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-07 — Selected pair for new-program catalog discovery
+
+GET `/api/v1/word-packs` accepts optional BCP-47 `sourceLanguageCode` and
+`translationLanguageCode`; supplied fields override saved profile filters for
+this read only. The response and requests with no query retain their contract.
+Invalid/duplicate/unknown fields return the existing validation error. Details,
+installation and known-entry restrictions remain profile-scoped.
+[Canonical behavior, verification and rollout](31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
 ## 2026-10-07 - Unit-filtered history and bounded curriculum practice
 
 GET `/api/v1/practice/sessions` and GET `/api/v1/private-lessons` accept optional
@@ -348,3 +371,34 @@ Two additive practice-gated unit study POSTs and the 89-route catalog are locall
 ## 2026-10-07 - Private lesson conversation room
 
 Product routes and payload schemas are unchanged; legacy typed turns use acknowledged Realtime items and the existing bounded complete turns payload. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+No route/payload change. Drag maps to recall/multiple_choice/translation_to_source; speech uses existing assessments. Scores/close bonus stay server authoritative. Exercise issuance remains non-idempotent. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+2026-10-11 DEV focused manual recall: `/practice/sessions/:id/exercises` retains `learningItemIds` as question targets while resolving distractors from the selected session pool for `recall / multiple_choice`. Owner, active-item, source/translation pair and selection boundaries remain enforced. No request/response schema change. See [37](37_FOCUS_GAMES_DEV.md#manual-drag-distractor-correction).
+
+### DEV practice alignment — 2026-10-12
+
+No API-shape change. Existing study/detail/audio/preview, exercise, attempt, assessment and close routes serve the aligned DEV client; choices remain real server IDs and retries preserve operation identity. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+## 2026-10-12 — Library card projection
+
+Optional GET /learning-items?view=cards adds owned context/POS/tags/program/current-revision answers and language/status summary counts; bounded multi-origin/POS/status filters are additive. Legacy responses remain unchanged. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

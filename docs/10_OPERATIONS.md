@@ -1,5 +1,19 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Upgrade Core schema/service, Backend and Admin before bootstrapping the new owner staff permission. Product migration and existing Google/origin settings remain unchanged for this follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 Targeted Web/Backend release is Live in production and DEV; no migration, provider or configuration change. Exact Render sources, readiness and delivered assets passed; full authenticated gameplay passed in DEV. Production gameplay is limited by an empty signed-in account. Preserve the separate DEV redesign branch. [Canonical rollout status](29_MEANING_MATCHING_ROUNDS.md).
@@ -384,3 +398,27 @@ Unit-study source checkpoint requires Backend-before-Web release, exact-SHA/read
 ## 2026-10-07 - Private lesson conversation room
 
 DEV frontend follows feat/lesson-conversation-v3-dev. Exact source, compatibility, acceptance and rollback: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+Only gotIt--dev-front (srv-dar6dng473hc73a0ns1g) is the release target. Deploy exact source manually with Auto-Deploy disabled; rollback source 6740e16. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+### DEV practice alignment — 2026-10-12
+
+DEV alignment is Web-only, with exact-commit deployment and disabled auto-deploy preserved; rollback source 8f1cbd3. Live release evidence is maintained in document 37. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

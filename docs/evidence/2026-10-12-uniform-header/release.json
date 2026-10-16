@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "environment": "DEV",
+  "commit": "a3a3065f59302fc9021cc8c8dfc5ef0c40c51909",
+  "service": "gotIt--dev-front",
+  "serviceId": "srv-dar6dng473hc73a0ns1g",
+  "deployment": "dep-db6hg2om7kps73dulqjg",
+  "status": "Live",
+  "durationSeconds": 65,
+  "rollbackSource": "bf55d8609da19007cd3e2064bbd5a092235b8e32",
+  "tests": {
+    "unit": 314,
+    "unitFiles": 52,
+    "gateway": 20,
+    "focusedAfterLastAdjustment": 19,
+    "localBrowserCases": 12,
+    "liveRoutes": 4,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed"
+  },
+  "http": {
+    "ready": 200,
+    "routes": {
+      "/dashboard": 200,
+      "/learn": 200,
+      "/vocabulary": 200,
+      "/courses": 200
+    },
+    "css": "/assets/index-BwpENX16.css",
+    "cssSha256MatchesLocalBuild": true,
+    "mainJs": "/assets/index-DvbgBupj.js"
+  },
+  "liveHeaderStylesAndRectanglesIdentical": true,
+  "consoleErrorsAndWarnings": 0,
+  "productionChanged": false,
+  "mainCommitUnchanged": "778b3be97cd40b13283bcd446ff0697901945120",
+  "automaticDeploy": "disabled",
+  "scoredAnswersSubmitted": false,
+  "screenshots": [
+    "dev-dashboard.png",
+    "dev-learn.png",
+    "dev-vocabulary.png",
+    "dev-courses.png"
+  ]
+}

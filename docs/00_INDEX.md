@@ -87,6 +87,10 @@ Chrome Extension ──┤
 9. קוד קיים גובר על מסמך היסטורי; שינוי חוזה מחייב עדכון מסמכים ובדיקות.
 # Canonical Figma learning/account implementation
 
+[35 — Dashboard design in DEV](35_DASHBOARD_DESIGN_DEV.md) owns the two approved
+dashboard variants, existing-mechanism decision, hostname rollout boundary and
+verification/deployment evidence.
+
 [30 — Figma full DEV](30_FIGMA_FULL_DEV.md) owns the 2026-10-06 guided-lesson, unit-word, interface-preference and scoped-history contracts and their exact source/deployment status. [SEQ-14](../uml/14-guided-lesson-dev.puml) describes activity and report transactions.
 
 
@@ -104,3 +108,50 @@ commits, regression results and the pending release destination.
 ## 2026-10-07 - Private lesson conversation room
 
 Canonical conversation-room contract, exact source and release evidence for SCR-10: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 ? Approved DEV practice design
+
+[36 ? Practice design in DEV](36_PRACTICE_DESIGN_DEV.md) owns the selected Claude practice artboard, original assets, DEV-only gate, live-data behavior and release evidence.
+
+
+## 2026-10-11 - Focus games in DEV
+
+Canonical focus-game design, behavior, DEV boundary and evidence. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-12 — My Words design in DEV
+
+[Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - DEV program chooser
+
+The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](40_PROGRAM_CHOOSER_DEV.md).
+
+
+## 2026-10-13 - Prepared program map design (DEV)
+
+The supplied screenshot is implemented as a dynamic, modular prepared-unit map
+under the existing DEV gate. Server progression/locks and the canonical shared
+header are retained. Behavior, acceptance, source and exact release evidence are
+owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Independent Admin Console foundation
+
+Created a separate React-admin/Node administration foundation with Core-authenticated access, eight explicit module connection states, read-only gateway, CI and a Render Web Service Blueprint. Owner-service management APIs and writes remain deferred. Local checks include 23 tests, build, clean dependency audit, official Blueprint schema validation and isolated desktop/mobile browser QA. [Canonical scope and evidence](43_ADMIN_CONSOLE_FOUNDATION.md).

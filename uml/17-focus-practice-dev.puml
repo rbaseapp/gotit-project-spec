@@ -1,0 +1,41 @@
+@startuml
+actor Learner
+participant "DEV Web" as Web
+participant "GotIt Backend" as API
+participant "Speech Provider" as Speech
+Learner -> Web: Launch scoped practice
+Web -> API: Create/resume session (stable creation key)
+API --> Web: Session and authorized study cards
+loop Applicable game stages
+  Web -> API: Issue visible question or bounded matching board
+  API --> Web: Opaque exercise and choice ids
+  Learner -> Web: Answer, self-rate, skip or record
+  alt Typed, selected, self-rated or skipped
+    Web -> API: Submit attempt (stable key and frozen payload)
+  else Pronunciation
+    Web -> API: Assessment (stable key and bounded WAV)
+    API -> Speech: Assess recording
+    Speech --> API: Pronunciation result
+  end
+  API --> Web: Authoritative receipt, expected answer and XP
+  opt Ambiguous response
+    Web -> API: Retry identical intent or reconcile session history
+    API --> Web: Original receipt and current aggregate totals
+  end
+  alt Incorrect matching or cloze
+    Web --> Learner: Brief local feedback; retain board or sentence
+    Web -> API: Issue fresh question for same item
+    API --> Web: New opaque exercise and choices
+  else Third listening letter error
+    Web -> Web: Reveal authorized study word; queue once at end
+    Web -> API: Submit actual assisted answer (stable key)
+    API --> Web: Authoritative receipt and XP
+  end
+  Web -> Web: Owner-scoped checkpoint; discard raw audio
+  Web --> Learner: Feedback and stage transition
+end
+Learner -> Web: Finish session
+Web -> API: Complete session (idempotent close)
+API --> Web: Authoritative aggregate totals and bonus
+Web --> Learner: Original animation and actual summary
+@enduml

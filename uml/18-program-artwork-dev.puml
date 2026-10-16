@@ -1,0 +1,29 @@
+@startuml
+title DEV programs artwork lookup and generation
+actor Learner
+participant "Web /courses" as Web
+participant "GotIt Backend" as API
+database "Existing raster cache" as Cache
+participant "OpenAI Images" as AI
+Learner -> Web: View or activate program
+Web -> API: Authenticated artwork lookup (kind + ID/language)
+API -> API: Entitlement, owner, bounded subject, fingerprint
+API -> Cache: Read hashed scoped key
+alt cache hit
+  Cache --> API: WebP
+  API --> Web: image + fingerprint
+else cache miss
+  API --> Web: image null
+  Web -> API: Generate (serialized paid miss)
+  API -> API: Quota + coalesce + concurrency bound
+  API -> AI: Bounded course subject OR canonical Mohi + language
+  AI --> API: Raster
+  API -> API: Validate/resize; recheck owner/current content
+  API -> Cache: Persist isolated policy namespace
+  API --> Web: WebP + fingerprint
+else unavailable
+  API --> Web: Explicit error
+  Web --> Learner: Localized retry; program controls remain usable
+end
+note over Web,Cache: No lesson, evidence, mastery, XP or wallet writes
+@enduml

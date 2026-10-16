@@ -1,0 +1,518 @@
+[
+  {
+    "width": 1440,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 151.59375,
+      "x": 24,
+      "y": 20.515625
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.046875,
+      "padding": "12px 24px",
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 24,
+      "y": 100.046875
+    },
+    "overflow": false,
+    "path": "/dashboard",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68,
+      "padding": "0px",
+      "width": 1425,
+      "x": 0,
+      "y": 88.046875
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 151.59375,
+      "x": 24,
+      "y": 20.515625
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.046875,
+      "padding": "12px 24px",
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 24,
+      "y": 100.046875
+    },
+    "overflow": false,
+    "path": "/learn",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68,
+      "padding": "0px",
+      "width": 1425,
+      "x": 0,
+      "y": 88.046875
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 151.59375,
+      "x": 24,
+      "y": 20.515625
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.046875,
+      "padding": "12px 24px",
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 24,
+      "y": 100.046875
+    },
+    "overflow": false,
+    "path": "/vocabulary",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68,
+      "padding": "0px",
+      "width": 1425,
+      "x": 0,
+      "y": 88.046875
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 151.59375,
+      "x": 24,
+      "y": 20.515625
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 88.046875,
+      "padding": "12px 24px",
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 24,
+      "y": 100.046875
+    },
+    "overflow": false,
+    "path": "/courses",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 68,
+      "padding": "0px",
+      "width": 1425,
+      "x": 0,
+      "y": 88.046875
+    }
+  },
+  {
+    "width": 320,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 16,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 114.0625,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/dashboard",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 305,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 320,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 16,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 114.0625,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/learn",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 305,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 320,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 16,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 114.0625,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/vocabulary",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 305,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 320,
+    "locale": "he",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 16,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 174.9375,
+      "x": 114.0625,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/courses",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 305,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 390,
+    "locale": "en",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 281,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 192.125,
+      "x": 16,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/dashboard",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 375,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 390,
+    "locale": "en",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 281,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 192.125,
+      "x": 16,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/learn",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 375,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 390,
+    "locale": "en",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 281,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 192.125,
+      "x": 16,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/vocabulary",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 375,
+      "x": 0,
+      "y": 71.390625
+    }
+  },
+  {
+    "width": 390,
+    "locale": "en",
+    "account": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 46,
+      "padding": "4px 8px",
+      "width": 78,
+      "x": 281,
+      "y": 12.1875
+    },
+    "count": 1,
+    "header": {
+      "background": "rgb(255, 255, 255)",
+      "font": "16px / 22.4px Assistant, Rubik, system-ui, sans-serif",
+      "height": 71.390625,
+      "padding": "12px 16px",
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "language": {
+      "background": "rgba(0, 0, 0, 0)",
+      "font": "14px Assistant, Rubik, system-ui, sans-serif",
+      "height": 44,
+      "padding": "0px 12px",
+      "width": 192.125,
+      "x": 16,
+      "y": 125.390625
+    },
+    "overflow": false,
+    "path": "/courses",
+    "status": {
+      "background": "rgb(40, 111, 92)",
+      "font": "16px Assistant, Rubik, system-ui, sans-serif",
+      "height": 110,
+      "padding": "0px",
+      "width": 375,
+      "x": 0,
+      "y": 71.390625
+    }
+  }
+]

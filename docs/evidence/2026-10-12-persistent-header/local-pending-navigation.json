@@ -1,0 +1,33 @@
+{
+  "dashboardDelayMs": 2000,
+  "observations": [
+    {
+      "barCount": 1,
+      "goal": "6",
+      "pageLoading": false,
+      "path": "/vocabulary",
+      "streak": "4 ימים ברצף"
+    },
+    {
+      "barCount": 1,
+      "goal": "6",
+      "pageLoading": false,
+      "path": "/courses",
+      "streak": "4 ימים ברצף"
+    },
+    {
+      "barCount": 1,
+      "goal": "6",
+      "pageLoading": true,
+      "path": "/dashboard",
+      "streak": "4 ימים ברצף"
+    },
+    {
+      "barCount": 1,
+      "goal": "6",
+      "pageLoading": true,
+      "path": "/learn",
+      "streak": "4 ימים ברצף"
+    }
+  ]
+}

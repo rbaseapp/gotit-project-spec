@@ -1,0 +1,50 @@
+[
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": false,
+    "path": "/vocabulary",
+    "streak": "2 ימים ברצף"
+  },
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": false,
+    "path": "/vocabulary",
+    "streak": "2 ימים ברצף"
+  },
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": true,
+    "path": "/courses",
+    "streak": "2 ימים ברצף"
+  },
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": false,
+    "path": "/dashboard",
+    "streak": "2 ימים ברצף"
+  },
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": true,
+    "path": "/learn",
+    "streak": "2 ימים ברצף"
+  },
+  {
+    "barCount": 1,
+    "goal": "17",
+    "language": "en",
+    "pageLoading": true,
+    "path": "/vocabulary",
+    "streak": "2 ימים ברצף"
+  }
+]

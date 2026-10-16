@@ -1,5 +1,37 @@
 # 20 — קטלוג Use Cases
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Staff can inspect a learner, unlock, select role/permissions or plan, provide a reason and review the persisted result; guide/catalog flows require reading access only. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Navigate with fixed application chrome
+
+When the next same-language page is loading, the existing goal/streak remain visible. Fresh server data updates them in place; an unknown new language does not inherit old metrics. [Lifecycle correction](05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+An authenticated DEV learner moves between Today, practice, My Words, programs
+and other shell pages. The same topbar and status panel remain in the same shell
+position with unchanged labels/order/design; active-route highlighting and live
+data update. A language change invokes the owning page's scoped behavior and
+synchronizes mounted consumers. Add word remains available in the common account
+menu through the existing entitlement check. [Canonical behavior and evidence](05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — UC-05 dashboard quick-review continuation
+
+Choose an answer -> server receipt -> brief inline feedback and highlighted choices
+-> automatic next question or session completion. A failed attempt preserves its
+intent; a failed close retries closure without rescoring.
+[Canonical flow and verification](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 UC-05: arrange meanings, check the board, inspect feedback and continue to the next round. Smart sessions alternate with ordinary server-selected practice and can return to recognition before summary. Touch cancellation leaves placements unchanged. [Detailed flow](29_MEANING_MATCHING_ROUNDS.md).
@@ -306,3 +338,51 @@ UC-UNIT-01: select a unit word, load/retry image/example. UC-UNIT-02: choose a g
 ## 2026-10-07 - Private lesson conversation room
 
 UC-07 supports text start without microphone. Voice permission denial preserves the draft and returns to writing; explicit finish-and-save completes the actual report. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+UC-05: scoped launch, answer/assess, acknowledge receipt, continue/replay/repair, close and view totals. Alternatives: skip, unavailable speech, save/resume and expired/failed attempt recovery. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-11 - Owner game-design corrections (local)
+
+UC-05: selecting or dragging a matching pair previews its connection before assessment; acknowledgement shows its result. On completion the final game remains beneath the mascot/gift/summary modal; exit/cancel restores the active game. [Canonical behavior and verification](37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+### DEV practice alignment — 2026-10-12
+
+UC-05: wrong pairs/cloze answers retry the same item; listening reveal queues one repeat; microphone refusal pauses speech stages; only acknowledged operations advance. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+UC-05: wrong cloze choices retry without revealing answer audio; successful completion follows the owner video with cumulative gift taps and measured XP arrival. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 — UC-03 My Words detail and selected practice
+
+Find/filter words, inspect actual source/evidence in the side drawer, change tags/status through existing guarded endpoints, practice exact selected IDs, and return to the library context. Failed writes retain actionable feedback. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

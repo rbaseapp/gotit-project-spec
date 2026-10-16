@@ -1,5 +1,43 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+Owner accepted operational 0.2. Follow-up 0.3 adds role/access management, real base prompt visibility, prepared English curriculum and Hebrew help; its production rollout is tracked separately. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Shared header components (DEV)
+
+Web `03aa2ab` replaces page portals with a persistent shell-owned status display and retains same-language server metrics during loading. Local 317 unit, 20 gateway and delayed browser acceptance passed. DEV `dep-db6jf10n74is73aa107g` is serving this correction; live pending practice/My Words retain metrics. [Canonical lifecycle correction](05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+Owner correction `a3a3065`: one fixed Today design for all DEV shell screens;
+page-specific header variants/CSS removed. Local 314 unit / 20 gateway checks and
+12 browser comparisons passed. [Canonical correction and release](05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+Web `a3a3065` is Live in DEV (`dep-db6hg2om7kps73dulqjg`). Authenticated
+acceptance passed on dashboard, practice, My Words and programs with identical
+header geometry and styles. This supersedes the initial `bf55d86` visual variants.
+Production is unchanged. [Release evidence](evidence/2026-10-12-uniform-header/release.json).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — Dashboard acceptance corrections
+
+Web `e5760cc` implements viewport-edge headers, automatic inline review progression
+and activity-based task XP badges. [Canonical behavior and verification](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
+## 2026-10-07 — New-program pair discovery
+
+Backend/Web working trees implement explicit catalog-pair discovery and distinct
+loading/error/unavailable states for new accounts. Release remains pending.
+[Canonical scope and evidence](31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 Production and DEV Web/Backend releases are Live, with full authenticated DEV acceptance and an empty-account production gameplay limitation. Server-backed drag practice now has a named recognition objective, recurring boards, shared green styling and viewport-aligned touch dragging. [Behavior, source and rollout](29_MEANING_MATCHING_ROUNDS.md).
@@ -379,3 +417,74 @@ Unit study media before installation is Backend locally/integration verified; sc
 ## 2026-10-07 - Private lesson conversation room
 
 Approved conversation room, inline writing and legacy text entry are implemented in an isolated DEV Web feature branch. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-07 ? Production practice hub restored in DEV
+
+SCR-03 `/learn` restores the production page at Web `006482d`; local check and responsive scope regressions passed, and exact DEV release/read-only authenticated acceptance are verified. [Canonical behavior and evidence](34_PRACTICE_HUB_RESTORATION_DEV.md).
+
+
+## 2026-10-11 ? DEV practice design
+
+The selected practice screen is implemented, locally verified and deployed/accepted read-only in DEV at Web `6740e16`; exact release evidence is in the [canonical feature document](36_PRACTICE_DESIGN_DEV.md). Existing practice contracts remain authoritative.
+
+
+## 2026-10-11 - Focus games in DEV
+
+SCR-04 implements five approved focus games, all transitions and authoritative completion in DEV only. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+
+## 2026-10-11 - Owner game-design corrections (local)
+
+DEV game visual corrections are implemented and locally verified in the games working tree; deployed acceptance for these corrections is pending. [Canonical behavior and verification](37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+### DEV practice alignment — 2026-10-12
+
+DEV focus practice implements the owner alignment checklist with server authority retained. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+DEV-only focus games: session-end video and cloze audio correction locally verified; exact release evidence belongs to document 37. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 — My Words DEV implementation
+
+Approved vocabulary design connects search, compound filters, paging, tags, capture, selected practice and reversible library actions to existing APIs. Production is outside release scope. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## 2026-10-13 - My Programs / My Words navigation latency
+
+Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-13 - Prepared program map design (DEV)
+
+The supplied screenshot is implemented as a dynamic, modular prepared-unit map
+under the existing DEV gate. Server progression/locks and the canonical shared
+header are retained. Behavior, acceptance, source and exact release evidence are
+owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

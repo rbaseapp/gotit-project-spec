@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-10-11T15:04:59.200880+00:00",
+  "commit": "67b6ea209bbcb38cf810f99c60821a51f6d4bc33",
+  "deployId": "dep-db5qa5qvcj2c738ti0vg",
+  "renderStatus": "Deploy succeeded | Live",
+  "readyStatus": 200,
+  "entry": "/assets/index-_IVw0fPU.js",
+  "assets": [
+    {
+      "path": "assets/DevFocusGamePage-SBY4kKD1.js",
+      "status": 200,
+      "bytes": 44769,
+      "sha256": "a3a658ceba348ea34265395515cc5362641f827c0981dc9aa201c347972bee71"
+    },
+    {
+      "path": "assets/DevFocusGamePage-jK8vLZFa.css",
+      "status": 200,
+      "bytes": 178427,
+      "sha256": "0a5bb720e21c7bc7cc5493bbf3e2158d108227d5bb6bc532574e44c6e06d6bdc",
+      "matchesLocalBuild": true
+    }
+  ],
+  "note": "Render environment-dependent JS imports differ from the local build hash. Deployed commit verified in Render; both actual published chunks fetched with 200; focus CSS byte-identical to the local build. Authenticated DEV hub and more-games dialog inspected read-only, with no new learning session or provider call."
+}

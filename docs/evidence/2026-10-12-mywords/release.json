@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-12",
+  "environment": "DEV",
+  "url": "https://gotit-dev.rbaseapp.com/vocabulary",
+  "web": {
+    "commit": "8163860f7ebe9d293377a43f2358e15243b4d503",
+    "service": "srv-dar6dng473hc73a0ns1g",
+    "deployment": "dep-db61el0473hc73cp1180",
+    "status": "Live",
+    "rollbackCommit": "7c874748408cac8254e8771b378bf45f6f57fc39",
+    "validation": ["typecheck", "lint", "build", "300 unit tests on combined source", "20 gateway/security tests", "36 focused tests after catalog scope correction", "source/implementation visual comparison", "320px RTL and 390px LTR responsive checks", "authenticated DEV acceptance", "published CSS matches local build", "HTTP 200"]
+  },
+  "backend": {
+    "commit": "c66eb8d04a5e93594cf607c647b02e5c3afa768d",
+    "service": "srv-dar6ei7f3r2c73balbp0",
+    "deployment": "dep-db616c7lot8c738gd5c0",
+    "status": "Live",
+    "rollbackCommit": "cc7019fd5313da88ee9066bd37a98e33977546b4",
+    "validation": ["typecheck", "build", "257 fast tests", "34 disposable PostgreSQL practice integration tests", "daily-task reward integration", "HTTP 200 readiness with database ok"]
+  },
+  "acceptance": ["real card metadata and 5/6 answer ratio", "source and Hebrew translation search", "exact selected-word practice link", "real topic counts and category filtering", "grid/list switching", "pagination 9 to 18", "add-word dialog opens/closes", "no captured console warnings/errors"],
+  "productionDeployment": false,
+  "databaseMigration": false,
+  "realVocabularyMutatedDuringAcceptance": false,
+  "paidProvidersInvokedDuringAcceptance": false
+}

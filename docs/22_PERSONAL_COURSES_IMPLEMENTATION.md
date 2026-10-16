@@ -250,3 +250,8 @@ FK מורכב לפרופיל ו־FK מורכב מקבלה למסמך מגיני�
 לא בוצעה פריסה בסבב התיקון. התמיכה האוטומטית בהמשך מתייחסת ל־Web, לא לדף
 הדמו הפנימי של Backend. חיבור שאינו מחזיר עוד אירועים אינו מתוקן באמצעות
 יצירת תגובות מקבילות; סגירת החיבור מטופלת במסלול הניתוק הקיים.
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).

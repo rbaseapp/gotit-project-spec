@@ -1,5 +1,19 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+The owner interaction sequence now includes independent Core staff/plan authorization, scoped commands, revocation and effective-access refresh. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
 ## 2026-10-06 - Meaning recognition rounds and touch repair
 
 SEQ-04 now records repeated matching/ordinary rounds and explicit completion after the existing mistake repair. [Behavior and source](29_MEANING_MATCHING_ROUNDS.md).
@@ -97,3 +111,34 @@ Unit flow: visible pack detail → independent image/example requests → guarde
 ## 2026-10-07 - Private lesson conversation room
 
 [SEQ-16: acknowledged written conversation and completion](../uml/16-lesson-written-conversation.puml) supplements SEQ-07; guided transactions retain SEQ-14. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+SEQ-17: [Focus practice in DEV](../uml/17-focus-practice-dev.puml) describes issuance, typed/voice receipt retry, checkpoints and close reconciliation. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+### DEV practice alignment — 2026-10-12
+
+The DEV sequence now includes fresh exercises after consumed wrong answers and one listening end-queue repeat, with receipt-only XP. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+SEQ-17 alignment includes fresh-question retries and once-only listening requeue: [sequence source](../uml/17-focus-practice-dev.puml).
+
+
+## 2026-10-12 — SEQ-13 library return context
+
+My Words passes exact selected IDs, language and safe library return state into existing practice entry. Drawer mutations retain existing semantic-edit/tag/bulk transactions; optional card projection is read-only. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

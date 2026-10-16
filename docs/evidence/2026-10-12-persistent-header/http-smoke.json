@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/ready": 200,
+    "/dashboard": 200,
+    "/learn": 200,
+    "/vocabulary": 200,
+    "/courses": 200
+  },
+  "mainJs": "/assets/index-BD9WvqyD.js",
+  "mainJsHttp": 200,
+  "renderCommit": "03aa2ab2f89c9b082d5150f86fb3191f9cc2f8fa"
+}

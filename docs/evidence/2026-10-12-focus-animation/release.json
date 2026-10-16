@@ -1,0 +1,35 @@
+{
+  "commit": "7c874748408cac8254e8771b378bf45f6f57fc39",
+  "deployment": "dep-db60s6p42hec73agf4f0",
+  "environment": "DEV",
+  "renderStatus": "Deploy succeeded | Live",
+  "durationSeconds": 56.1,
+  "startedAt": "2026-10-12T01:30:51+03:00",
+  "unitTests": 295,
+  "testFiles": 50,
+  "gatewayTests": 20,
+  "finalFocusTests": 27,
+  "typecheck": "passed",
+  "lint": "passed, zero warnings",
+  "build": "passed",
+  "productionMain": "778b3be97cd40b13283bcd446ff0697901945120",
+  "publishedFocusCssIdentical": true,
+  "cssSha256": "988197703837b4c4fe37d4fdc155a5f61587a4cdb2ed6bf6027db7a7dee348a0",
+  "liveAcceptance": {
+    "sessionId": "39b1c4b9-86f1-4168-b234-01c4da947173",
+    "dragRetryAudioDisabled": true,
+    "wordsMouthAnchored": true,
+    "giftCracks": [
+      1,
+      2
+    ],
+    "coinEndpointErrorCssPixels": [
+      0,
+      0
+    ],
+    "xpEarned": 1,
+    "serverAccuracy": "1/3",
+    "consoleErrorsWarnings": 0,
+    "accessoryLive": "no close bonus; verified locally with isolated fixture"
+  }
+}

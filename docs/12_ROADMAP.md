@@ -1,5 +1,10 @@
 # 12 — מצב, פערים ומפת דרך
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+The reported usability and operational gaps are implemented and locally verified for 0.3; ordered deployment and owner production acceptance remain the release follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 UX 2.1 existing-contract UI implementation/local gates are complete for the coverage in 28. Release remains blocked by DEV Backend DB isolation. Guided task/stage protocol, microphone-free text teacher, durable voice resume/billing pause, new reward economies and readiness-based teacher stations remain proposed; six-locale new helper copy uses English fallback. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
@@ -150,3 +155,22 @@ Requested practice clarity and native reading guides are locally implemented. Pu
 ## 2026-10-07 - Private lesson conversation room
 
 Approved private-lesson room implementation and remaining physical-device acceptance: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+### DEV practice alignment — 2026-10-12
+
+Owner alignment implementation is local-complete; real device microphone/audio and provider latency remain acceptance boundaries, independently of the exact DEV deployment status. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.

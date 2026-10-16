@@ -1,0 +1,77 @@
+@startuml
+title GotIt operational administration - owner authorization and audited command
+actor Staff
+participant "Admin browser" as UI
+participant "Admin gateway" as Gateway
+participant "Core API" as Core
+participant "GotIt API (product command)" as Product
+database "Core schema" as CoreDB
+database "Product schema" as ProductDB
+
+Staff -> UI: Sign in with Google/password
+UI -> Gateway: Allowlisted authentication exchange
+Gateway -> Core: Authenticate, then GET /auth/me
+Core --> Gateway: Active verified application admin
+Gateway --> UI: Validated session
+
+Staff -> UI: Unlock editing with authenticator code
+UI -> Gateway: POST /admin-api/security/verify
+Gateway -> Core: POST /api/v1/admin/mfa/verify
+Core -> CoreDB: Check encrypted credential, lockout and unused TOTP step
+Core --> UI: Session-bound five-minute step-up (via gateway)
+
+Staff -> UI: Save explicit target, revision and audit reason
+UI -> Gateway: Command + operation UUID + bearer + step-up
+Gateway -> Core: Validate trusted identity
+Gateway -> Product: GET /admin/access
+Product -> Core: Verify application/actor, permission and step-up
+Core -> CoreDB: Load current role, permissions, MFA revision
+Core --> Product: Trusted capabilities
+Product --> Gateway: Curated capabilities
+Gateway -> Product: Allowlisted command
+Product -> Core: Independently reauthorize command
+Core --> Product: Authorization result
+alt authorized
+  Product -> ProductDB: BEGIN, operation lock, compare receipt fingerprint
+  alt matching receipt exists
+    ProductDB --> Product: Replay original persisted result
+  else new command and expected revision matches
+    Product -> ProductDB: Scoped domain write + audit event + receipt, COMMIT
+    ProductDB --> Product: Persisted result
+  else stale revision or changed payload
+    Product -> ProductDB: ROLLBACK
+    Product --> Gateway: 409 conflict
+  end
+  Product --> Gateway: Bounded result
+  Gateway --> UI: Persisted/replayed result or safe conflict
+else unauthorized or MFA expired
+  Product --> Gateway: 403, no domain write
+  Gateway --> UI: Safe rejection; retain form
+end
+note over Core,CoreDB
+Core-owned identity/access commands use their own
+transaction, audit and receipt in Core's schema.
+No distributed cross-service transaction is claimed.
+end note
+
+Staff -> UI: Change another user's role/permissions or Free/Pro access
+UI -> Gateway: Explicit staff/plan action + revision + reason + UUID
+Gateway -> Core: Check current identity and action-specific capability
+Core -> CoreDB: staff.write or billing.write + session-bound MFA
+Gateway -> Core: POST /admin/users/:id/staff or /plan
+Core -> CoreDB: BEGIN; serialize staff action before actor locks
+Core -> CoreDB: Reauthorize actor; compare receipt and user revision
+alt staff action
+  Core -> CoreDB: Reject self changes and unverified promotion
+  Core -> CoreDB: Replace role/permissions; revoke sessions; bump MFA revision
+else access action
+  Core -> CoreDB: Set/clear scoped plan override with optional expiry
+  note right of CoreDB
+  Paddle subscriptions, charges and prepaid
+  minute sources remain unchanged.
+  end note
+end
+Core -> CoreDB: Audit + receipt + user revision; COMMIT
+Core --> Gateway: Persisted/replayed result
+Gateway --> UI: Refresh effective role/plan from Core billing resolver
+@enduml

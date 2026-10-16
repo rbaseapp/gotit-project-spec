@@ -1,5 +1,71 @@
 # יומן שינויים
 
+## 2026-10-16 — Admin owner feedback 0.3
+
+Implemented explicit staff roles/permissions, effective Free/Basic↔Pro access, source-derived base prompt previews, prepared English-from-zero catalog, visible program creation and Hebrew field guidance. Core adds an additive scoped override migration; payment state and learning evidence are preserved. [Requirements, verification and pending ordered rollout](docs/43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Shared application header (DEV)
+
+Web `03aa2ab`: keep one status display mounted during navigation and preserve known same-language goal/streak while requests load. Scoped language and authenticated-owner resets prevent cross-scope display. 317 unit / 20 gateway / 22 focused checks and delayed browser navigation passed. DEV `dep-db6jf10n74is73aa107g` deployed successfully; authenticated pending-page acceptance passed. [Lifecycle correction](docs/05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+Owner rejected shared code with visual variants and selected Today as the fixed
+design. Web `a3a3065` removes all screen variants/header CSS overrides, fixes the
+status host in the shell and covers remaining shell screens. Local 314 unit,
+20 gateway and 12 browser cases pass. DEV deployment `dep-db6hg2om7kps73dulqjg` is Live; four authenticated screens match. Production unchanged. [Correction and release](docs/05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+Extract Topbar/account/assessment/navigation modules and replace three duplicated
+goal/streak/language strips with one controlled LearningStatusBar and shared CSS.
+Existing routes, visual variants and page-owned scope/actions are preserved.
+311 unit / 20 gateway tests, typecheck/lint/build and local RTL/LTR layout checks
+passed again after integrating latest DEV fixes. Web `bf55d86` deployed to DEV:
+Render `dep-db6h5r0473hc73de2v5g` Live; authenticated acceptance passed on all three
+screens, readiness/routes return 200, no console errors/warnings. Production
+unchanged. [Canonical details](docs/05_WEB_FRONTEND.md#shared-application-header--2026-10-12).
+
+2026-10-11: SCR-04 Continue / Finish session primary labels retain white text. [Correction and evidence](docs/37_FOCUS_GAMES_DEV.md#primary-button-text-correction--2026-10-11).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](docs/35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — Dashboard edges, automatic quick review and task XP
+
+Web `e5760cc` published to `dev`: align header/strip controls to viewport edges,
+retain highlighted choices with concise receipt feedback and automatic 900ms
+continuation/completion, reverse gift/XP order and restore activity-based XP badges.
+Owner selected no fixed task rewards. Full Web check passes (286 unit tests,
+20 gateway tests); local Hebrew/English 320px and desktop fixtures verified.
+[Canonical behavior, source and deployment evidence](docs/35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
+## 2026-10-08 — Prepared-path availability delivered to DEV
+
+Deploy Web main `4847cab` and Backend `76cee7d` (catalog fix on the existing live
+DEV baseline) without dropping DEV-only capabilities. Both Render deployments
+are Live; readiness returns HTTP 200 and the signed-in English/Hebrew New Program
+page enables Open From Zero without the false unavailable message.
+[Deployment and verification evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-08--prepared-path-fix-deployed-to-dev).
+
+## 2026-10-07 — New-account prepared-path availability
+
+Correct Backend/Web mismatch between selected New Program languages and saved
+profile catalog filtering. Distinguish loading/error from unsupported pairs and
+await pair save before entering the map. Local source only; deployment pending.
+[Contract and verification](docs/31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
+## 2026-10-07 — Multilingual home illustration
+
+Web home retains its original illustration and cycles the book/mug/note text
+in ten languages every four seconds, with static reduced-motion behavior.
+Shared lettering patches and self-hosted fonts retain the scene and hearts.
+Locally verified: 239 unit, 10 dashboard browser and 20 gateway/security cases;
+typecheck, lint and build. [Behavior and verification limits](docs/05_WEB_FRONTEND.md#2026-10-07--multilingual-home-illustration).
+
 ## 2026-10-07 — Preserve production login across DEV commits
 
 Restore the production login to the shared Web release source after a later
@@ -521,3 +587,95 @@ Web `0015e1feffeeb30126665d5d676bdace598268ad` continues bounded guide batches t
 ## 2026-10-06 - Resume practice clarity DEV release
 
 Backend `19ca338` preserves concurrent DEV unit study and integrates native guides; 43 focused tests and build pass. Owner confirms DEV target. [Rollout evidence](docs/32_PRACTICE_CLARITY.md#dev-rollout-resumed---backend-integration).
+
+
+## 2026-10-07 ? Temporary DEV practice hub restoration
+
+Restore `/learn` to the current production layout pending new specification; preserve DEV scoped navigation and the existing learning/lesson implementations. [Scope and verification](docs/34_PRACTICE_HUB_RESTORATION_DEV.md).
+
+
+## 2026-10-11 — Dashboard design for DEV
+
+Implement both approved dashboard variants with the existing learning, XP and article APIs. Gifts and future onboarding remain deferred. Follow-up Web `778b3be` was pushed to main and deployed to DEV with an immediate four-choice quiz, an RTL account control, separated gift/XP and the animated reference mascot. Render reports Live and authenticated desktop/mobile/readiness checks passed. [Canonical behavior, verification limits and deployment evidence](docs/35_DASHBOARD_DESIGN_DEV.md).
+
+
+## 2026-10-11 ? Approved practice artboard in DEV
+
+Web `6740e16` reproduces the selected Claude practice screen with ten original illustrations, real progress/history, eight locales and an exact DEV-only rollout gate. Local checks passed. [Canonical behavior and deployment acceptance](docs/36_PRACTICE_DESIGN_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+Implemented approved DEV focus games, generalized transitions and original animated completion using unchanged authoritative practice/speech contracts. [Contract and evidence](docs/37_FOCUS_GAMES_DEV.md).
+
+2026-10-11: Corrected DEV focus-game entry for library languages omitted from profile capabilities, preserved disabled skills, and exposed the five approved games directly. Web source `5d9d3fe`; acceptance and deployment evidence in [37](docs/37_FOCUS_GAMES_DEV.md#dev-entry-regression-and-correction-2026-10-11).
+
+## 2026-10-11 — Local game-design corrections
+
+Restored the original compact exit dialog/copy and flashcard rating/deck motion; matching now previews a dashed pointer/selection/pending connection; final mascot/gift/summary opens as a modal over the retained inert game. Local Web check passed 287 unit and 20 gateway/security tests, typecheck/lint/build, with RTL/LTR and 320/390px Chrome fixture inspection. No publication/deployment or live learning/provider write. [Canonical evidence and release boundary](docs/37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+2026-10-11: Published game-design corrections to DEV at Web `b942ff4`, preserving latest dashboard fixes. Render `dep-db5s9vnlk1mc73b2mkdg` Live; full combined check passed 289 unit and 20 gateway/security tests. Real DEV flashcard/exit/completion-dialog acceptance passed without console errors/warnings; published focus CSS matches the local build. [Deployment evidence](docs/37_FOCUS_GAMES_DEV.md#owner-corrections-dev-deployment--2026-10-11).
+
+### DEV practice alignment — 2026-10-12
+
+Implemented the owner plan-versus-DEV alignment in the DEV-only Web design; preserved server metrics/scoring and existing unrelated work. See [canonical scope and evidence](docs/37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+2026-10-12: DEV session-end video correction and removal of cloze audio answer leak; server authority and production untouched. [Canonical behavior, scope and evidence](docs/37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 — My Words design in DEV
+
+Approved vocabulary screen with complete card/drawer metadata, real category counts, compound server filtering and retained practice return state. Additive read projection; no migration/Core/production rollout. [Canonical contract and release evidence](docs/38_MY_WORDS_DESIGN_DEV.md).
+
+
+## 2026-10-12 - My Programs design and dynamic AI artwork (DEV)
+
+Implemented the owner-supplied illustrated programs design, actual course/path progress, localized mascot/flags/greetings, durable owner-scoped cover cache, explicit failure/retry, eight locales and mobile RTL/LTR. [Contracts, verification and exact DEV release](docs/39_PROGRAMS_DESIGN_DEV.md).
+
+
+2026-10-13: Correct repeated loading of My Programs and My Words through scoped memory snapshots, request coalescing, read-only data/artwork warmup and route module preload. [Canonical implementation and release evidence](docs/39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-13 - DEV program chooser
+
+The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](docs/40_PROGRAM_CHOOSER_DEV.md).
+
+
+## 2026-10-13 - Dynamic program map in DEV
+
+Screenshot-based prepared-unit map with real server steps/progress/locks, static
+compressed mascot artwork, localized accessible timeline/sidebar and existing
+navigation/review scope. Local Web checks and visual QA passed.
+[Canonical scope, source and release evidence](docs/41_PROGRAM_MAP_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](docs/42_SETTINGS_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Independent Admin Console foundation
+
+Created a separate React-admin/Node administration foundation with Core-authenticated access, eight explicit module connection states, read-only gateway, CI and a Render Web Service Blueprint. Owner-service management APIs and writes remain deferred. Local checks include 23 tests, build, clean dependency audit, official Blueprint schema validation and isolated desktop/mobile browser QA. [Canonical scope and evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md).
+
+## 2026-10-16 - Admin Google sign-in, locally verified
+
+Added Google Identity Services login through the existing Core contract with independent active/verified administrator authorization. TypeScript, 31 tests, build, Blueprint validation and mocked local browser login/rejection/retry passed. Published final commit `5aa468c`; CI passed and Render served the new build/configuration/referrer policy. After the owner registered the origin, real Google button loading and opening the official sign-in page passed. No Core/account/role changes; full account login/Core admin-role acceptance remains owner acceptance. [Canonical publication evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#google-publication-and-live-check-2026-10-16).
+
+## 2026-10-16 - Operational Admin implementation prepared
+
+Completed the owner-requested Core/Product/Admin implementation for user edits,
+subscriptions/access grants, token/reading usage, prompt/policy activation, real
+program creation/assignment/learner draft editing, support and audit. Added explicit
+staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
+85 disposable PostgreSQL tests; Admin 39 tests, build, Blueprint and local browser
+flows passed. Published review branches/PRs; operational production rollout is
+pending Render account connection and ordered migrations. Backend CI currently
+stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).

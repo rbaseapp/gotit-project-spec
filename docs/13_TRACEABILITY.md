@@ -1,5 +1,63 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## Admin owner feedback 0.3 — 2026-10-16
+
+FR-ADM-09–13 map to Core staff/plan services, Product catalog/prompt references, Admin guides/forms and focused gateway/real-DB/browser evidence. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
+
+
+## 2026-10-12 — Shared application header
+
+Owner reports disappearing goal/streak -> Web `03aa2ab` persistent shell snapshot/source contexts -> route-controller DOM identity and mutation tests, zero/language/user cases, 2000ms delayed browser observations -> DEV `dep-db6jf10n74is73aa107g`, live pending-route metric continuity. [Canonical evidence](05_WEB_FRONTEND.md#persistent-metrics-during-navigation).
+
+Owner requires identical Today chrome across screens -> Web `a3a3065`
+`Topbar.css`/single navigation/status design and shell portal -> invariant
+navigation/portal/selection tests and 12 desktop/mobile RTL/LTR geometry/style
+comparisons -> DEV `dep-db6hg2om7kps73dulqjg` Live with four authenticated route comparisons. [Canonical correction](05_WEB_FRONTEND.md#owner-correction-one-fixed-today-design).
+
+Owner reuse/modularity request -> Web `AppShell`/`Topbar`/`TopbarAccountMenu`,
+`appNavigation` and three `LearningStatusBar` consumers ->
+`test/app-shell.test.tsx`, `test/learning-status-bar.test.tsx`, existing dashboard,
+practice and word-screen regressions plus local old/new RTL/LTR browser fixtures.
+No backend contract or screen journey change. Web `bf55d86` -> Render DEV
+`dep-db6h5r0473hc73de2v5g` Live -> authenticated dashboard/practice/word-screen
+acceptance. Production unchanged.
+[Canonical ownership and release evidence](05_WEB_FRONTEND.md#shared-application-header--2026-10-12).
+
+2026-10-11: SCR-04 Continue / Finish session primary labels retain white text. [Correction and evidence](37_FOCUS_GAMES_DEV.md#primary-button-text-correction--2026-10-11).
+
+## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
+
+Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
+per scoped profile day; Web displays server amounts/claimed state and persistent
+green/red quick-review Toasts with success confetti. Additive dashboard contract;
+existing XP tables, no migration, Core/billing or privacy expansion. Completion
+criteria, cap separation, sequence, checks and rollout are owned by the
+[canonical dashboard follow-up](35_DASHBOARD_DESIGN_DEV.md#fixed-task-rewards-and-answer-toasts--2026-10-11).
+
+## 2026-10-11 — Dashboard owner acceptance corrections
+
+SCR-01 / FR-DASH-DEV-004 / UC-05 -> Web `e5760cc` ->
+`DashboardQuickReview`, `DevDashboardPage`, `dashboard-design.css` ->
+`test/dashboard-design.test.tsx` (receipt feedback, automatic continuation/close,
+stable answer retry, failed close retry, activity-based XP badges) and RTL/LTR
+browser fixtures. [Canonical source and release evidence](35_DASHBOARD_DESIGN_DEV.md#owner-acceptance-corrections--2026-10-11).
+
+## 2026-10-07 — New-program language-pair regression
+
+FR-PATH-005 / UC-PATH-05 -> ProgramsPage -> GET word-packs explicit pair query ->
+`test/programs.test.tsx`, `test/word-packs.test.ts` and
+`test/integration/program-catalog.integration.test.ts`. New-account availability,
+profile mismatch, loading/retry/save errors and preserved owner/profile checks.
+[Canonical scope, evidence and rollout](31_LEARNING_PATH_FIDELITY_DEV.md#2026-10-07--new-program-language-pair-discovery).
+
+## 2026-10-07 — Multilingual home illustration
+
+SCR-02 illustration request -> Web `LearningHero`, original/textless hero and
+self-hosted fonts -> `test/learning-hero.test.tsx` (asset readiness, ten-language
+cycle, RTL/reduced motion, document visibility and cleanup) plus existing
+`test/e2e/dashboard-home.spec.ts` (10 viewports). Local implementation only.
+[Canonical behavior and evidence](05_WEB_FRONTEND.md#2026-10-07--multilingual-home-illustration).
+
 ## 2026-10-07 — Persistent production login restoration
 
 Signed-out login requirement -> Web AuthPage, EmailAuthForm and scoped
@@ -391,3 +449,97 @@ FR-UNIT-001/002 → WordPackStudyService / UnitWordBrowser / EnglishLearningPath
 ## 2026-10-07 - Private lesson conversation room
 
 FR-LESS-007/008/009 -> UC-07 -> P12/P13 -> SCR-10 -> SEQ-16 -> LessonWorkspace, PrivateLessonPage, privateLessonText -> lesson-workspace/private-lesson-text/private-lesson/guided-lesson/private-lesson-flow tests. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
+
+
+## 2026-10-07 ? DEV practice hub restoration
+
+SCR-03 / UC-05 / P08 / FR-PRAC-006 ? Web `LiveLearnPage`, isolated `learn-restored.css` ? existing live language, Figma family, navigation and unit-scope regressions. No API/schema/learning-policy change. [Canonical behavior and release evidence](34_PRACTICE_HUB_RESTORATION_DEV.md).
+
+
+## 2026-10-11 — DEV dashboard design
+
+SCR-01 / UC-05 / UC-06 / FR-DASH-DEV-001–005: the approved program and personal-word dashboards reuse existing server mechanisms, with an exact DEV hostname boundary. [Canonical behavior, tests and release status](35_DASHBOARD_DESIGN_DEV.md).
+
+
+## 2026-10-11 ? Approved DEV practice design
+
+SCR-03 / UC-05 / P08 / FR-PRAC-006 -> Web `DevPracticePage`, `practiceDesignEnabled`, scoped shell/styles, eight catalogs and original illustrations -> unchanged practice/dashboard APIs -> host-boundary, selected-word/return, server-goal, resume/status and stale-language regressions. [Canonical behavior and release evidence](36_PRACTICE_DESIGN_DEV.md).
+
+
+## 2026-10-11 - Focus games in DEV
+
+FR-FOCUS-DEV-001 through 005 -> UC-05 -> P08 -> SCR-04 -> SEQ-17 -> DevFocusGamePage/useFocusSession/focusPractice -> focus-games.test.tsx and design-qa.md. External provider acceptance is unverified. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
+
+2026-10-11 DEV practice entry correction: library languages absent from profile capabilities now use real profile preferences; five direct game cards replace unfinished placeholders. Twelve regressions and the full 284-unit / 20-gateway suite passed. Real DEV acceptance is tracked in [37](37_FOCUS_GAMES_DEV.md#dev-entry-regression-and-correction-2026-10-11).
+
+
+## 2026-10-11 - Owner game-design corrections (local)
+
+FR-FOCUS-DEV-006 / SCR-04 / UC-05 / P08 -> DevFocusGamePage, useFocusSession, Modal and scoped CSS -> test/focus-games.test.tsx regressions for exit/focus, pending dashed matching, animated next card and completion over retained board; full check 287 unit / 20 gateway and local Chrome fixtures. DEV release pending. [Canonical behavior and verification](37_FOCUS_GAMES_DEV.md#owner-game-design-corrections--2026-10-11-local-unreleased).
+
+### DEV practice alignment — 2026-10-12
+
+FR-FOCUS-DEV-007 → SCR-04 / UC-05 / P08 → useFocusSession, FocusListeningGame, DevFocusGamePage, focus-alignment.css → focus-games and letter-input regressions plus viewport/live DEV evidence. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
+
+
+### Session-end video correction ? 2026-10-12
+
+FR-FOCUS-DEV-008 ? SCR-04 / UC-05 / P08 ? DevFocusGamePage, useFocusSession, focus-alignment.css ? focus-games.test.tsx Audio.play/speech and animated gift regressions plus Chrome geometry/visual checks. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
+
+
+## 2026-10-12 — My Words DEV
+
+FR-LIB-DEV-001 → SCR-05/06 / UC-03 / P06 / SEQ-13 → DevMyWordsPage, myWords, library repository/validation → five UI regressions, 34 PostgreSQL practice tests and same-viewport source/implementation visual QA. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
+
+
+2026-10-12 FR-FOCUS-DEV-008 clarification: annotated green target is the central `.xpbig img`, superseding the header target. [Canonical clarification and evidence](37_FOCUS_GAMES_DEV.md#central-reward-coin-destination-clarification---2026-10-12).
+
+
+## 2026-10-12 - Illustrated My Programs (DEV)
+
+DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+2026-10-13 NFR-NAV-DEV-001 -> SCR-05/06 and My Programs / UC-03 / P06 -> resourceCache, useCachedResource, navigationResources, AppShell -> resource-cache.test.tsx, program-artwork-cache.test.ts and authenticated DEV repeated-navigation timings. [Canonical evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
+
+
+## 2026-10-13 - DEV program chooser
+
+The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](40_PROGRAM_CHOOSER_DEV.md).
+
+
+## 2026-10-13 - Program map DEV
+
+FR-MAP-DEV-001/002, UC-MAP-DEV-001, NFR-MAP-DEV-001 -> Web
+EnglishLearningPathPage / ProgramUnitMap / ProgramMapSidebar / programMapModel ->
+nine program-map component/model tests, 350-case suite, 21 gateway checks and
+desktop/mobile browser evidence. [Canonical scope and status](41_PROGRAM_MAP_DESIGN_DEV.md).
+No API/schema/learning-policy change.
+
+
+## 2026-10-14 - Settings reference design in DEV
+
+SCR-11 now has the approved category navigation and profile layout in Web DEV,
+with existing supported settings, isolated category saves, eight locales and
+320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
+owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
+exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+
+## 2026-10-14 - Independent Admin Console foundation
+
+Created a separate React-admin/Node administration foundation with Core-authenticated access, eight explicit module connection states, read-only gateway, CI and a Render Web Service Blueprint. Owner-service management APIs and writes remain deferred. Local checks include 23 tests, build, clean dependency audit, official Blueprint schema validation and isolated desktop/mobile browser QA. [Canonical scope and evidence](43_ADMIN_CONSOLE_FOUNDATION.md).
+
+## 2026-10-16 - Admin Google sign-in, locally verified
+
+Admin UI Google credential callback -> same-origin `/admin-api/auth/google` -> existing Core `/api/v1/auth/google` -> independent trusted `/auth/me` admin check. Public client configuration, scoped GIS CSP and rejection/retry states are implemented in `gotit-admin`; no Core/account/role changes. TypeScript, 31 tests, build, Blueprint validation and mocked local browser flow passed. Published to main; final CI passed and Render served the new Google configuration/build/referrer policy. After the owner registered the origin, real Google button loading and opening the official sign-in page passed without origin denial. Full account login/Core admin-role acceptance remains owner acceptance. [Canonical publication evidence](43_ADMIN_CONSOLE_FOUNDATION.md#google-publication-and-live-check-2026-10-16).
+
+## Operational administration, 2026-10-16
+
+The owner requested completing all eight Admin capabilities, including editing and
+program creation. The cross-service implementation, requirements, API/data/security
+boundaries, browser states and rollout evidence are maintained in
+[the canonical Admin release](43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+This records local implementation and verification; production deployment is a
+separate explicitly recorded release step. Existing learner Web/Chrome contracts
+remain compatible.
