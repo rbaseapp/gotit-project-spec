@@ -280,3 +280,5 @@ Migration 1792191000000 adds lexical_concepts, concept_expressions and concept_i
 ## Quick word-card images and automatic backfill - follow-up 2026-10-16
 
 FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+2026-10-16 FR-CON-09: migration 1792193000000 adds the shared `resolve_image_concept` SQL function, enabling a new language to reuse one eligible reviewed translation meaning without modifying stored aliases, words or media. [Priority, isolation and rollback rules](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).

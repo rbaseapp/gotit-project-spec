@@ -374,3 +374,5 @@ FR-CON-04: browse every scoped learner word. FR-CON-05: inspect details and pagi
 ## Quick word-card images and automatic backfill - follow-up 2026-10-16
 
 FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+FR-CON-09: new languages sharing one exact recorded expression with one eligible reviewed meaning reuse its image automatically; conflicting/ambiguous meanings remain separate. [Acceptance and Southern incident correction](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).

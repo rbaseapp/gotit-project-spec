@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-16 — New-language shared image linking
+
+Fix Southern / جنوبي sharing through one reviewed Hebrew translation anchor. One SQL resolver now serves word cards, cached images and image replacement; ambiguous or conflicting meanings stay separate. Additive function migration preserves all stored learning/media. Backend 6db6db6: 242 fast and 121 PostgreSQL cases, typecheck/build/format/Docker passed. [Contract and rollout evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
 ## 2026-10-16 — Admin owner feedback 0.3
 
 Implemented explicit staff roles/permissions, effective Free/Basic↔Pro access, source-derived base prompt previews, prepared English-from-zero catalog, visible program creation and Hebrew field guidance. Core adds an additive scoped override migration; payment state and learning evidence are preserved. [Requirements, verification and pending ordered rollout](docs/43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
