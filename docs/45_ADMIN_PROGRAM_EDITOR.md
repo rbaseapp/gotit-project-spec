@@ -1,6 +1,6 @@
 # Admin programs, lesson content and measured statistics
 
-Date: 2026-10-16. Status: implemented and locally/integration verified in isolated release worktrees. Production migration, Backend and Admin deployment are verified below; learner Web release verification is recorded separately. Pre-existing overlapping work is preserved.
+Date: 2026-10-16. Status: implemented and locally/integration verified in isolated release worktrees. Production migration and exact Backend, Admin and learner Web deployments are verified below. Pre-existing overlapping work is preserved.
 
 ## Requirements, process and screens
 
@@ -109,8 +109,7 @@ retention remain unknown. See [security boundaries](09_SECURITY_PRIVACY.md).
 
 The dedicated product migrator applied the migration; existing default privileges grant runtime DML, and runtime preflight passed before application deployment.
 Keep additive schema on code rollback; migration down refuses to erase authored
-content/snapshots. Actual teacher behavior, microphone and authenticated deployed
-acceptance remain unverified. The capability list governs availability on older
+content/snapshots. Actual teacher behavior, microphone, Production save/activation and learner template-import acceptance remain unverified. Authenticated Admin read acceptance is recorded below. The capability list governs availability on older
 servers; no successful writes or statistics are simulated in production.
 
 User guide: [Admin program editor](../../gotit-admin/docs/PROGRAM_EDITOR.md).
@@ -122,8 +121,9 @@ User guide: [Admin program editor](../../gotit-admin/docs/PROGRAM_EDITOR.md).
 - Migration `1792190000000_admin-program-content` applied at 09:53:41 UTC. Product table count 59 -> 60; runtime preflight schema/privileges/product-only role passed; normalization mismatches and duplicate attempt-sequence groups remain zero. The migrator has no Core schema access; the new nullable user FK targets scoped product user_profiles.
 - Backend [c3d90d8](https://github.com/rbaseapp/gotIt-backend/commit/c3d90d89e3fee1b08fcbe9081c7fad6f496e4bfd), [Render Live deployment](https://dashboard.render.com/web/srv-dak3h50jo6nc73bc43h0/deploys/dep-db8v8m49v7es73e0hi80). `/health` and `/ready` returned 200; database dependency is healthy.
 - Admin [ff6e654](https://github.com/rbaseapp/gotit-admin/commit/ff6e654c9a94f329a9c86380366d9ca3ef331550), [Render Live deployment](https://dashboard.render.com/web/srv-db8jhsdfii8s739jaji0/deploys/dep-db8v9cdg1s2s738pndcg). `/ready` returned 200.
-- Main/DEV learner patch [bcd2cd0](https://github.com/rbaseapp/gotIt-front/commit/bcd2cd024d83b39b0149a2a6e2706508cc961e9f) is pushed and locally verified (255 Vitest + 20 gateway cases), not deployed to Production: that would also release unrelated pending features. A separate backport onto observed live baseline ffcebc8 retains the current Production application and gateway.
-- Production Web backport [ea487b8](https://github.com/rbaseapp/gotIt-front/commit/ea487b81668338f1acedaa910ec0605a9f107ad0) is committed and pushed on `release/program-editor-prod-20261016`. `npm run check` passed TypeScript, lint, 188 Vitest tests, build and 16 gateway cases. Added UI regressions verify using published programs when AI generation is unavailable and reusing the operation UUID after an ambiguous failure. Deployment is pending: the connected Chrome session disappeared before starting this service's deployment. Render service `srv-dal8smbm8hqs73fabfng` still reported ffcebc8 Live at the last observation. Resume with Manual Deploy -> Deploy a specific commit -> ea487b81668338f1acedaa910ec0605a9f107ad0; verify Live, `/health`, `/ready` and course bundle.
+- Main-based chooser patch [bcd2cd0](https://github.com/rbaseapp/gotIt-front/commit/bcd2cd024d83b39b0149a2a6e2706508cc961e9f) is pushed and locally verified (255 Vitest + 20 gateway cases), not deployed to Production: that would also release unrelated pending features. A separate backport onto observed live baseline ffcebc8 retains the current Production application and gateway.
+- Production Web backport [ea487b8](https://github.com/rbaseapp/gotIt-front/commit/ea487b81668338f1acedaa910ec0605a9f107ad0) is committed and pushed on `release/program-editor-prod-20261016`. `npm run check` passed TypeScript, lint, 188 Vitest tests, build and 16 gateway cases. Added UI regressions verify using published programs when AI generation is unavailable and reusing the operation UUID after an ambiguous failure. Production deployment completed after the browser connection recovered: [Render Live deployment](https://dashboard.render.com/web/srv-dal8smbm8hqs73fabfng/deploys/dep-db8vejvf3r2c73fimf90), 48.2 seconds. `https://gotit.rbaseapp.com/health` and `/ready` returned 200; served `CoursePage-vkPOXemy.js` contains the new shared-program UI. The rollout preserves the observed Production baseline without including pending main/DEV changes.
+
 - Authenticated live Admin read acceptance: all six program tabs appeared, and the shared-unit API returned 90 actual catalog units. No content was changed for this check. Live save/activation, learner template import and a paid Realtime call were not exercised in Production.
 - `seq_admin_program_content.puml` passed PlantUML 1.2026.8 `-checkonly`.
 - Code rollback retains additive schema and original content/evidence; no production down or restore was run. No provider/microphone acceptance call was made.
