@@ -411,3 +411,8 @@ Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:sect
 ## All-user vocabulary and quick image replacement - 2026-10-16
 
 Adds admin words/detail/image/section reads and concepts/:id/regenerate; old ensure-image action remains compatible. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).

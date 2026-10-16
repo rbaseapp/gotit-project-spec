@@ -699,3 +699,8 @@ grant and audit record; no code/deploy change. [Evidence and acceptance limits](
 ## 2026-10-16 - All-user vocabulary and shared stock/AI image replacement
 
 Add the complete application-scoped learner word browser and reviewed multilingual concepts, with atomic provider replacement, persistent retries, MFA and audit. [Canonical contract and release evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
