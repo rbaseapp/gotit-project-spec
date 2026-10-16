@@ -360,3 +360,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+FR-ADM-14–18: dedicated user card, complete paginated scoped histories, course roadmap/evidence/next lesson, audited settings edits and truthful measurement coverage. [Acceptance criteria](44_ADMIN_USER_DETAILS.md#user-behavior-and-acceptance).

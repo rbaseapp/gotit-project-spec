@@ -543,3 +543,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+FR-ADM-14–18 / SCR-ADM-USR -> Core admin.learner/account resolver, Product admin.learner/profile repository, Admin UserShow/UserSettings/gateway -> admin-operations PostgreSQL integration, gateway boundaries and isolated browser QA. [Canonical mapping](44_ADMIN_USER_DETAILS.md).

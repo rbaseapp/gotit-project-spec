@@ -402,3 +402,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:section`, Product `PATCH /admin/learners/:id/profile|settings`, fixed gateway routing, strict pagination and revision/replay semantics are defined in [44](44_ADMIN_USER_DETAILS.md#owner-contracts).

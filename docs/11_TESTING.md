@@ -499,3 +499,12 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user-detail coverage adds scoped real-PostgreSQL histories/time accounting/concurrent preference writes, gateway owner routing and loopback browser checks with fake accounts and seeded learning data. [Tests and verification boundaries](44_ADMIN_USER_DETAILS.md#verification).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](44_ADMIN_USER_DETAILS.md).

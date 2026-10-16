@@ -362,3 +362,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Administration process extension: inspect a scoped learner from Users, distinguish provider payment from effective access, drill into recorded learning and edit preferences through authorized audited commands. Metrics show their actual measurement coverage. [Acceptance and controls](44_ADMIN_USER_DETAILS.md).

@@ -386,3 +386,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user inspection: a verified administrator selects a user, inspects independent account/product histories and current access, unlocks editing when permitted, and saves an explicit target/revision/reason. Missing data, owner outage, absent permission, expired MFA and stale state remain visible. [Full contract](44_ADMIN_USER_DETAILS.md).

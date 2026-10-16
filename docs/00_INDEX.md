@@ -155,3 +155,8 @@ exact deployment status are owned by the [canonical settings contract](42_SETTIN
 ## 2026-10-14 - Independent Admin Console foundation
 
 Created a separate React-admin/Node administration foundation with Core-authenticated access, eight explicit module connection states, read-only gateway, CI and a Render Web Service Blueprint. Owner-service management APIs and writes remain deferred. Local checks include 23 tests, build, clean dependency audit, official Blueprint schema validation and isolated desktop/mobile browser QA. [Canonical scope and evidence](43_ADMIN_CONSOLE_FOUNDATION.md).
+
+
+## Admin user details — 2026-10-16
+
+[44 — Admin user details](44_ADMIN_USER_DETAILS.md): complete recorded user history, course roadmaps, billing/access distinction and audited preference editing.

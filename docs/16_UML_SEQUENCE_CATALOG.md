@@ -142,3 +142,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+The [administration sequence](../uml/seq_admin_operations.puml) now includes user-card reads routed independently to Core or Product, scoped projections and per-owner failures. [User-detail contract](44_ADMIN_USER_DETAILS.md).

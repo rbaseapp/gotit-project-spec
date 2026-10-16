@@ -422,3 +422,12 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user-card rollout: matching Core and Product owner APIs precede the Admin gateway/frontend. No new migration/configuration is introduced by this feature; existing Admin prerequisites remain. No production deployment is claimed. [Contract](44_ADMIN_USER_DETAILS.md).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](44_ADMIN_USER_DETAILS.md).

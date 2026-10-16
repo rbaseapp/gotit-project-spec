@@ -679,3 +679,12 @@ staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
 flows passed. Published review branches/PRs; operational production rollout is
 pending Render account connection and ordered migrations. Backend CI currently
 stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+
+## Admin user details — 2026-10-16
+
+2026-10-16 — Added the Admin user card across Core/Product/Admin: scoped histories, recorded learning statistics, course roadmaps and audited profile/notification/lesson preference editing. Local implementation; no production rollout. [Canonical contract](docs/44_ADMIN_USER_DETAILS.md).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](docs/44_ADMIN_USER_DETAILS.md).

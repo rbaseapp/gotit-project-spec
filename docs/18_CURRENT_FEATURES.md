@@ -488,3 +488,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user details are locally implemented: account/emails/billing/auth histories, recorded daily learning/game/XP/lesson/program/token data and audited preference editing. Historical unmeasured time/tokens and payment amounts remain explicitly unknown. Production rollout is not included. [Contract and evidence](44_ADMIN_USER_DETAILS.md).

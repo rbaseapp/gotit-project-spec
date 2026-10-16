@@ -730,3 +730,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+SCR-ADM-USR: Users row -> `/users/:id/show`; Hebrew card, effective access summary, 15 paginated history tabs, course roadmaps and separate account/product-preference editors. Loading/empty/owner-error/retry/locked/conflict states and narrow tables are required. [Behavior](44_ADMIN_USER_DETAILS.md).

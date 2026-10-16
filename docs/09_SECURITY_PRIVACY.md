@@ -241,3 +241,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin user details — 2026-10-16
+
+Admin user inspection exposes existing scoped data through explicit projections without passwords, hashes, OAuth subjects, audio or expected practice answers. Settings writes retain users.write, MFA, reason, revision, audit and receipt; notification opt-in requires the target verified address. No new collection/retention is introduced. [Contract](44_ADMIN_USER_DETAILS.md).
