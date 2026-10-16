@@ -174,3 +174,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and quick replacement are released to main and deployed; paid-provider acceptance and private Core CI checkout access remain follow-up items. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

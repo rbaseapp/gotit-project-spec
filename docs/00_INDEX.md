@@ -160,3 +160,8 @@ Created a separate React-admin/Node administration foundation with Core-authenti
 ## Admin user details — 2026-10-16
 
 [44 — Admin user details](44_ADMIN_USER_DETAILS.md): complete recorded user history, course roadmaps, billing/access distinction and audited preference editing.
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and quick stock/AI image replacement. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

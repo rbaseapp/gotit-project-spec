@@ -366,3 +366,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 Administration process extension: inspect a scoped learner from Users, distinguish provider payment from effective access, drill into recorded learning and edit preferences through authorized audited commands. Metrics show their actual measurement coverage. [Acceptance and controls](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+P-ADM-CON: find word, review unique meaning, select image source, reserve, generate outside transaction, atomically publish. Track completed publications separately from requests and provider failures. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

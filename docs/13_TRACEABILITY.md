@@ -547,3 +547,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 FR-ADM-14–18 / SCR-ADM-USR -> Core admin.learner/account resolver, Product admin.learner/profile repository, Admin UserShow/UserSettings/gateway -> admin-operations PostgreSQL integration, gateway boundaries and isolated browser QA. [Canonical mapping](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+FR-CON-04/05/06 -> WordAdmin, regenerateConcept, Admin Words/ConceptImage and fixed gateway routes -> focused PostgreSQL, gateway, Pixabay and browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

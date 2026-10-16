@@ -364,3 +364,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 FR-ADM-14–18: dedicated user card, complete paginated scoped histories, course roadmap/evidence/next lesson, audited settings edits and truthful measurement coverage. [Acceptance criteria](44_ADMIN_USER_DETAILS.md#user-behavior-and-acceptance).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+FR-CON-04: browse every scoped learner word. FR-CON-05: inspect details and paginated history. FR-CON-06: quick explicit-source image replacement preserves old media until success. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

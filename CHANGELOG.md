@@ -694,3 +694,8 @@ acceptance limits and evidence are in [Admin user details](docs/44_ADMIN_USER_DE
 Added the missing `staff.write` to the existing verified GotIt owner through Core's
 scoped audited operator bootstrap. Independent production readback confirmed the
 grant and audit record; no code/deploy change. [Evidence and acceptance limits](docs/43_ADMIN_CONSOLE_FOUNDATION.md#production-staff-permission-repair--2026-10-16).
+
+
+## 2026-10-16 - All-user vocabulary and shared stock/AI image replacement
+
+Add the complete application-scoped learner word browser and reviewed multilingual concepts, with atomic provider replacement, persistent retries, MFA and audit. [Canonical contract and release evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

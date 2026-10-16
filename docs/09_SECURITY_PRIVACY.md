@@ -245,3 +245,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 Admin user inspection exposes existing scoped data through explicit projections without passwords, hashes, OAuth subjects, audio or expected practice answers. Settings writes retain users.write, MFA, reason, revision, audit and receipt; notification opt-in requires the target verified address. No new collection/retention is introduced. [Contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user reads stay within trusted application scope. Replacement independently requires content.write and MFA; private capture context never enters shared image prompts. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

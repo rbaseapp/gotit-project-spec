@@ -146,3 +146,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 The [administration sequence](../uml/seq_admin_operations.puml) now includes user-card reads routed independently to Core or Product, scoped projections and per-owner failures. [User-detail contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+The all-user word browsing and image-replacement interaction is in [seq_admin_words](../uml/seq_admin_words.puml). [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

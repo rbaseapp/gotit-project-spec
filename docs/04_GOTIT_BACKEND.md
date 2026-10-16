@@ -211,3 +211,8 @@ Authoritative introduced-entry count and teacher meeting eligibility. See [canon
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+WordAdmin exposes scoped vocabulary/history reads; concept regeneration publishes an unused asset revision atomically. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

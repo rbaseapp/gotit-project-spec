@@ -406,3 +406,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:section`, Product `PATCH /admin/learners/:id/profile|settings`, fixed gateway routing, strict pagination and revision/replay semantics are defined in [44](44_ADMIN_USER_DETAILS.md#owner-contracts).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Adds admin words/detail/image/section reads and concepts/:id/regenerate; old ensure-image action remains compatible. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

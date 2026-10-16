@@ -492,3 +492,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 Admin user details are locally implemented: account/emails/billing/auth histories, recorded daily learning/game/XP/lesson/program/token data and audited preference editing. Historical unmeasured time/tokens and payment amounts remain explicitly unknown. Production rollout is not included. [Contract and evidence](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and explicit Pixabay/AI shared-image replacement are released to main and deployed. Paid-provider quality verification remains separate; see the exact production evidence. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

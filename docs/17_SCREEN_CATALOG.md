@@ -734,3 +734,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 SCR-ADM-USR: Users row -> `/users/:id/show`; Hebrew card, effective access summary, 15 paginated history tabs, course roadmaps and separate account/product-preference editors. Loading/empty/owner-error/retry/locked/conflict states and narrow tables are required. [Behavior](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+SCR-ADM-WORD: responsive word cards, language/user/deletion filters, image-first detail, paginated histories and quick shared replacement; unavailable/pending/error/conflict states remain explicit. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

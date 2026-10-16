@@ -390,3 +390,8 @@ remain compatible.
 ## Admin user details — 2026-10-16
 
 Admin user inspection: a verified administrator selects a user, inspects independent account/product histories and current access, unlocks editing when permitted, and saves an explicit target/revision/reason. Missing data, owner outage, absent permission, expired MFA and stale state remain visible. [Full contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+UC-ADM-CON: find/filter a learner word, inspect its reviewed meaning or prefill concept creation, then replace the shared image through stock or an edited AI prompt. On ambiguous matching, review mappings; on failure, retain old image and retry the same operation. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

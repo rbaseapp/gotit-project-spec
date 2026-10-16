@@ -271,3 +271,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Migration 1792191000000 adds lexical_concepts, concept_expressions and concept_image_assets. Replacement stages unused revisions with existing admin receipts/audit; semantic resets skip reserved revisions. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

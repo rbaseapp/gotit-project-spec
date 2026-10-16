@@ -508,3 +508,8 @@ Release follow-up: Core, Backend and Admin learner-details sources are pushed to
 main and observed Live. Full local integration passed; Backend remote integration
 requires the existing missing Core read credential. Exact SHAs, deployment IDs,
 acceptance limits and evidence are in [Admin user details](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Added all-user search/history and atomic replacement PostgreSQL cases, gateway boundaries, stock exclusion and isolated desktop/mobile browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
