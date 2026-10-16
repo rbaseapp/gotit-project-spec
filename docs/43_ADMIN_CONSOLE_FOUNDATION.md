@@ -389,3 +389,24 @@ Final follow-up evidence: [CI run 38809131776](https://github.com/rbaseapp/gotit
 ## Admin user details — 2026-10-16
 
 User-detail extension (2026-10-16): selecting a user opens the dedicated card with scoped account/product histories and audited settings editing. [Canonical requirements, coverage, owner APIs and verification](44_ADMIN_USER_DETAILS.md).
+
+## Production Staff permission repair ? 2026-10-16
+
+The owner reported that Change role & permissions was disabled with missing
+`staff.write`. A scoped read-only production inspection confirmed the documented
+owner account `ori@rbaseapp.com` was active, verified and already admin, with the
+five earlier write permissions but no Staff permission. GotIt had no active,
+verified administrator with `staff.write`.
+
+Ran the existing reviewed Core `configure-admin` operator command for application
+`gotit`, this existing owner account and **only** `staff.write`, using the verified
+production owner connection with TLS `verify-full`. The script committed the
+permission and `staff.permissions.bootstrap` audit record atomically. Independent
+read-only verification confirmed all six permissions and the matching audit event
+at `2026-10-16T10:18:49.758Z`, whose metadata contains only the added permission.
+No account promotion, other grant, session/MFA reset or provider change was made.
+
+Reload Admin so capabilities are fetched again; normal MFA unlock is still required
+for writes. Self role/permission changes remain forbidden. No application code,
+migration or runtime deployment was needed. Actual promotion/demotion of another
+production account was not exercised merely to validate this repair.

@@ -688,3 +688,9 @@ Release follow-up: Core, Backend and Admin learner-details sources are pushed to
 main and observed Live. Full local integration passed; Backend remote integration
 requires the existing missing Core read credential. Exact SHAs, deployment IDs,
 acceptance limits and evidence are in [Admin user details](docs/44_ADMIN_USER_DETAILS.md).
+
+## Staff permission provisioning repair ? 2026-10-16
+
+Added the missing `staff.write` to the existing verified GotIt owner through Core's
+scoped audited operator bootstrap. Independent production readback confirmed the
+grant and audit record; no code/deploy change. [Evidence and acceptance limits](docs/43_ADMIN_CONSOLE_FOUNDATION.md#production-staff-permission-repair--2026-10-16).
