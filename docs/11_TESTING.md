@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## Admin recent activity ? 2026-10-16
+
+Release checks passed: 50 Admin tests/build, 32 Core tests/build, 242 Product tests/build, 122 disposable PostgreSQL integration tests and Docker build. Authenticated live activity loading/paging/navigation passed after ordered deployment. Product CI remains blocked at the existing private-Core checkout authorization. [Exact evidence and live acceptance](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Disposable PostgreSQL and local-browser coverage includes promotion/demotion, plan override/reset/expiry, actual catalog units, prompt base/active/draft separation and Hebrew guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

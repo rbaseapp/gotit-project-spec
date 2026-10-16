@@ -1,5 +1,10 @@
 # 20 — קטלוג Use Cases
 
+## Admin recent activity ? 2026-10-16
+
+UC-ADM-ACT-01: a verified administrator reviews, pages, refreshes and opens recent activity; failed feeds can retry independently and writes retain existing permission/MFA checks. [Canonical use case](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Staff can inspect a learner, unlock, select role/permissions or plan, provide a reason and review the persisted result; guide/catalog flows require reading access only. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

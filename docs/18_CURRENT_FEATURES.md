@@ -1,5 +1,10 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## Admin recent activity ? 2026-10-16
+
+Admin homepage activity feeds and owner-side cancellation/failure filters are published, deployed and verified in the authenticated live Admin. [Scope, boundaries and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Owner accepted operational 0.2. Follow-up 0.3 adds role/access management, real base prompt visibility, prepared English curriculum and Hebrew help; its production rollout is tracked separately. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

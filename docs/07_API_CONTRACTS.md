@@ -1,5 +1,10 @@
 # 07 — חוזי API
 
+## Admin recent activity reads ? 2026-10-16
+
+Core subscription lists add optional activity=cancelled and nullable sortable activityAt; Product usage lists add optional activity=failed. Filtering precedes count/pagination and preserves trusted application scope. Gateway status also exposes assignments. [Exact additive contracts and compatibility](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Core adds explicit staff/plan commands with independent permissions and effective billing projection; Product adds prepared-catalog reads and source-derived prompt references. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

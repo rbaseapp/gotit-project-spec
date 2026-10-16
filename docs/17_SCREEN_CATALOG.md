@@ -1,5 +1,10 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## Admin recent activity ? 2026-10-16
+
+SCR-ADM-HOME replaces introductory module tiles/counters with seven independent recent-activity lists, pagination, detail/full-list links and loading/empty/error/unavailable states. [Canonical screen contract](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Users gains role/permission and Free/Pro access actions; Programs gains prepared catalog and visible creation; prompt previews, policy helpers and Hebrew Guide explain field effects. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

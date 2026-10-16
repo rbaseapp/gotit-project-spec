@@ -1,5 +1,10 @@
 # 00 — תקציר ומפת מסמכים
 
+## Admin recent activity ? 2026-10-16
+
+[46 ? Admin activity dashboard](46_ADMIN_ACTIVITY_DASHBOARD.md) owns the replacement homepage, scoped optional activity filters, local verification and completed live rollout.
+
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 UX 2.1 DEV redesign is locally implemented and verified; server release remains blocked by Backend DEV targeting the production DB. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).

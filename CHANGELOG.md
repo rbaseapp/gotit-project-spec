@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-16 ? Admin activity homepage
+
+Replaced the Admin introduction/module tiles with recent users, subscriptions, cancellations, personal programs, templates, words and measured AI failures. Added scoped server-side activity filters, independent paging and navigation. Published and deployed to Core, Product and Admin; authenticated live acceptance passed. [Canonical release evidence](docs/46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## 2026-10-16 — New-language shared image linking
 
 Fix Southern / جنوبي sharing through one reviewed Hebrew translation anchor. One SQL resolver now serves word cards, cached images and image replacement; ambiguous or conflicting meanings stay separate. Additive function migration preserves all stored learning/media. Backend 6db6db6: 242 fast and 121 PostgreSQL cases, typecheck/build/format/Docker passed. [Contract and rollout evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).

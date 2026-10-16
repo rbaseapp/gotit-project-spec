@@ -1,5 +1,10 @@
 # 19 — קטלוג דרישות ממוספר
 
+## Admin recent activity ? 2026-10-16
+
+FR-ADM-ACT-01 recent account/billing/program/word/AI-failure feeds; FR-ADM-ACT-02 independent chronological pagination and navigation; FR-ADM-ACT-03 truthful partial availability with Hebrew/RTL and 320px support. [Canonical requirements and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 FR-ADM-09–13 cover scoped staff management, Free/Basic↔Pro access, base/active prompt visibility, prepared catalog/creation and field guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

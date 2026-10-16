@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## Admin recent activity ? 2026-10-16
+
+FR-ADM-ACT-01?03 / SCR-ADM-HOME / UC-ADM-ACT-01 ? Admin ActivityDashboard/dataProvider/gateway ? Core subscription and Product usage list filters ? gateway tests, disposable PostgreSQL admin-activity integration and isolated Chrome desktop/mobile checks. [Canonical contract and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 FR-ADM-09–13 map to Core staff/plan services, Product catalog/prompt references, Admin guides/forms and focused gateway/real-DB/browser evidence. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
