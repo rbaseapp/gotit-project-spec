@@ -679,3 +679,7 @@ staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
 flows passed. Published review branches/PRs; operational production rollout is
 pending Render account connection and ordered migrations. Backend CI currently
 stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+
+## 2026-10-16 - Modular prompt release
+
+Versioned modular prompts and Realtime configuration, isolated release source and validation evidence: [canonical contract](docs/44_AI_PROMPT_MANAGEMENT.md).

@@ -271,3 +271,7 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 - Modular AI prompt management
+
+FR-ADMIN-PROMPT-001-004: instruction modules, editable live-lesson sections/stages, supported session parameters, synthetic browser/provider preview and explicit revision activation/rollback. Canonical behavior, validation and exact release evidence: [44 - AI prompt management](44_AI_PROMPT_MANAGEMENT.md).

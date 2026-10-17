@@ -1,0 +1,74 @@
+# ניהול פרומפטים ו־Realtime באדמין — 2026-10-16
+
+בעל החוזה: GotIt Backend; לקוח: gotit-admin. ממומש ומאומת מקומית, ללא פריסה.
+
+FR-ADMIN-PROMPT-001: מנהל מורשה יכול לערוך הוראות ראשיות, להוסיף/להחליף בסיס
+ולהרכיב מודולים מסודרים וניתנים לכיבוי לכל שמונת סוגי פרומפט היישום הקיימים.
+
+FR-ADMIN-PROMPT-002: ב־lesson-live אפשר לדרוס סעיפי בסיס ושלבי פתיחה, המשך,
+סיום ותרגום, ולערוך את פרמטרי session הנתמכים: מודל, טוקנים, קול, מהירות,
+הפחתת רעש, תמלול ו־server/semantic VAD. הסבר, ירושה וטווח לכל שדה מופיעים בטופס.
+חוזה WebRTC והפעלת תשובות אוטומטית נשארים קבועים ומוסברים.
+
+FR-ADMIN-PROMPT-003: תצוגת דוגמה משתמשת באותו מרכיב הרכבה של השיחה החיה
+ומציגה דפדפן → שרת, ברירות שנפתרו, שרת → OpenAI, הוראות לכל שלב והשדות/אירועים
+הצפויים. תצוגה זו אינה צורכת ספק או משתמשת בנתוני לומד אמיתיים.
+
+FR-ADMIN-PROMPT-004: טיוטה אינה פעילה. הפעלה אטומית וחזרה לגרסה קודמת שומרות
+את התוכן ההיסטורי; בקשה/שיעור שכבר נפתחו ממשיכים בגרסה שנפתרה עבורם.
+ההרחבה מתקנת פער שבו הנחיות האדמין נוספו רק לבקשת פתיחת session ולא להוראות
+response.create שמחליפות אותן במהלך השיעור.
+
+## API ומידע
+
+`POST /api/v1/admin/prompts/preview` מקבל `{content, sample}`. נדרש מנהל פעיל
+ומאומת עם בדיקת בעלות Core עצמאית; לא נדרש step-up לקריאה. ה־gateway חושף רק
+`POST /admin-api/prompts/preview`, עם בדיקת Origin ומגבלות גוף/זמן/תוצאה קיימות.
+הפלט כולל `kind=synthetic-preview`, בקשות, סעיפים, אירועים וחוזי תשובה.
+שגיאות הגדרה מוחזרות כ־`PROMPT_CONFIG_INVALID`, ללא סודות או מידע לומד.
+
+תוכן גרסה: `{instructions, mode?, modules?, realtime?}`. realtime מכיל
+`lessonDefaults`, `session`, `sections`, `stages`. זיהוי משתמש, הרשאות, מפתחות,
+כתובות שירות, ציונים ופרמטרי API לא נתמכים אינם שדות ניהול.
+טבלאות גרסאות, הפעלות, audit וקבלות הפעולה קיימות; תוספת זו אינה דורשת טבלה חדשה.
+
+הנחיות עוברות החלפת משתנים מוגבלת, ללא eval וללא הרחבה חוזרת. סכמות פלט
+וכללי לימוד מסמכותיים ממשיכים להיאכף בשרת. קורס/תחנה קובעים תוכן וסדר; השרת
+אחראי לדקות ולהתקדמות. השינוי אינו מוסיף שמירת תמלולים/קול או קריאות ספק לאדמין.
+
+## עקיבות וראיות
+
+הוראות שימוש וחוזה שדות מלא: `gotit-admin/docs/PROMPT_MANAGEMENT.md`.
+קוד מרכזי: `admin.prompt-config.ts`, `admin.prompt-preview.ts`,
+`private-lesson.realtime.ts`, `private-lesson.directives.ts`, `PromptEditor.tsx`.
+
+בדיקות: `test/admin-prompt-config.test.ts` (סכמות, החלפה, מודולים, סעיפים,
+הזרקת משתנים כתוכן, בקשת שיעור אמיתית עם ספק מדומה ובידוד בקשות),
+`test/integration/admin-operations.integration.test.ts` (פרסום, rollback, preview
+ובידוד יישום), ו־`gotit-admin/test/gateway.test.mjs` (read-only preview עם Origin והרשאה).
+
+הרצת בדיקות מקומית: Backend typecheck/build ו־237 בדיקות מהירות עברו; אדמין
+check עבר. בדיקות אינטגרציה של ניהול עברו במסד PostgreSQL זמני, ללא שני תרחישי
+rollback של מיגרציות היסטוריות, עקב מיגרציות חדשות מעבודה מקבילה. בהרצה המלאה
+הראשונה תרחיש rollback ההיסטורי נכשל משום שפנה למיגרציה האחרונה החדשה.
+בדפדפן: נשמרה והופעלה גרסה דרך הממשק, כולל דריסת speed=0.8 וטוקנים=700;
+התצוגה המקדימה והגרסה הפעילה הראו את הערכים, ונבדק 320px ללא גלילה אופקית.
+
+לא בוצעו שינוי מסד חי, שיחת ספק חיה או פריסה. נדרשת פריסת Backend ואדמין
+תואמים לפני הפעלת תוכן מורחב. עריכות מקבילות בתוכניות/משתמשים/מושגים נשמרו
+ואינן מתוארות כאן כעבודת ניהול הפרומפטים.
+
+
+## Isolated release preparation ? 2026-10-16
+
+The user explicitly authorized commit, push and exact-commit deployment. Release
+branches: `release/modular-prompts-20261016` in Backend and Admin. Shared-workspace
+learner/program/concept changes were excluded; no new database migration or Core
+release is required for this isolated prompt feature.
+
+- Backend: `1bb1017920e77fc30041607442af0e87a9626d16`, based on the previously deployed `a615611984682dbaa8b7419cf3a6fe78dda6a0eb`.
+- Admin: `c89526ed21eba9921eacd9cc66c51df643e7cc42`, based on the reviewed editing-visibility branch `5873a72`.
+- Isolated Backend build and all 236 fast tests passed. Full administration PostgreSQL integration: 22/22, including both migration rollback checks without exclusions.
+- Isolated Admin check: typecheck, 43/43 gateway/config tests and production build passed.
+- Changed Backend source passes formatting. Three pre-existing legacy files fail the repository-wide formatting gate and were preserved; no applied migration was reformatted.
+- Runtime deployment evidence is recorded below after Render completion.
