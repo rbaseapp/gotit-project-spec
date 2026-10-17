@@ -1,5 +1,18 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## Admin recent activity ? 2026-10-16
+
+FR-ADM-ACT-01?03 / SCR-ADM-HOME / UC-ADM-ACT-01 ? Admin ActivityDashboard/dataProvider/gateway ? Core subscription and Product usage list filters ? gateway tests, disposable PostgreSQL admin-activity integration and isolated Chrome desktop/mobile checks. [Canonical contract and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+FR-CON-01?03 ? Backend concepts and image consumers ? Admin editor/gateway ? fast/PostgreSQL/browser checks. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+## Admin editing visibility 0.3.1 — 2026-10-16
+
+FR-ADM-13 maps visible-action requirements to ResourceEditor, existing owner/gateway authorization tests and the focused real-MFA browser check. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 FR-ADM-09–13 map to Core staff/plan services, Product catalog/prompt references, Admin guides/forms and focused gateway/real-DB/browser evidence. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -543,3 +556,32 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+FR-ADM-14–18 / SCR-ADM-USR -> Core admin.learner/account resolver, Product admin.learner/profile repository, Admin UserShow/UserSettings/gateway -> admin-operations PostgreSQL integration, gateway boundaries and isolated browser QA. [Canonical mapping](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+FR-CON-04/05/06 -> WordAdmin, regenerateConcept, Admin Words/ConceptImage and fixed gateway routes -> focused PostgreSQL, gateway, Pixabay and browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+FR-CON-07-09 map automatic assignment/backfill to queue triggers, semantic provider/worker, effective image bindings and Admin pending/retry status, with fast/PostgreSQL/browser evidence. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

@@ -1,5 +1,13 @@
 # 00 — תקציר ומפת מסמכים
 
+## Admin recent activity ? 2026-10-16
+
+[46 ? Admin activity dashboard](46_ADMIN_ACTIVITY_DASHBOARD.md) owns the replacement homepage, scoped optional activity filters, local verification and completed live rollout.
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Backend/Admin now implement reviewed cross-language concepts and one persistent image per concept. Local implementation; rollout pending. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 UX 2.1 DEV redesign is locally implemented and verified; server release remains blocked by Backend DEV targeting the production DB. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
@@ -155,3 +163,24 @@ exact deployment status are owned by the [canonical settings contract](42_SETTIN
 ## 2026-10-14 - Independent Admin Console foundation
 
 Created a separate React-admin/Node administration foundation with Core-authenticated access, eight explicit module connection states, read-only gateway, CI and a Render Web Service Blueprint. Owner-service management APIs and writes remain deferred. Local checks include 23 tests, build, clean dependency audit, official Blueprint schema validation and isolated desktop/mobile browser QA. [Canonical scope and evidence](43_ADMIN_CONSOLE_FOUNDATION.md).
+
+## 2026-10-16 — Modular AI prompt management
+
+Admin editing, Realtime sections/stages/parameters, browser and provider request previews, version activation and verification are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md).
+
+- [45 - Admin programs, lesson content and statistics](45_ADMIN_PROGRAM_EDITOR.md)
+
+
+## Admin user details — 2026-10-16
+
+[44 — Admin user details](44_ADMIN_USER_DETAILS.md): complete recorded user history, course roadmaps, billing/access distinction and audited preference editing.
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and quick stock/AI image replacement. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Automatic AI meaning assignment, durable jobs and historical-word backfill are implemented locally; see the canonical concepts contract. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

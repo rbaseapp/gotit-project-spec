@@ -1,5 +1,9 @@
 # 04 — מפרט GotIt Backend
 
+## 2026-10-16 ? Multilingual concepts and shared images
+
+ConceptImagesService resolves exact source/translation expression pairs before both practice and catalog image caches. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## 2026-10-05 - Selected-language practice
 
 Practice validates declared language and compatible source script before queue limits and across legacy cards, images, prompts and distractors. Backend `e5f4817b8544b95da739ce4f462e95f50b99689c` is production verified on 2026-10-05; 209 fast and 62 PostgreSQL regressions passed. [Canonical behavior and production evidence](26_PRACTICE_LANGUAGE_ISOLATION.md).
@@ -211,3 +215,13 @@ Authoritative introduced-entry count and teacher meeting eligibility. See [canon
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+WordAdmin exposes scoped vocabulary/history reads; concept regeneration publishes an unused asset revision atomically. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Every learner-word creation/edit path enqueues automatic meaning work transactionally. The bounded worker uses AI, records scoped revision-aware bindings and retries durable failures. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

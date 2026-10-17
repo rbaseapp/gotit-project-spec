@@ -1,5 +1,9 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Image sequence: authenticated learner ? exact-pair concept resolution ? current shared asset ? persistent claim if missing ? configured provider outside transaction ? revision-checked publication ? localized alt text. Admin writes use existing Core/MFA/receipt/audit sequence. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 The owner interaction sequence now includes independent Core staff/plan authorization, scoped commands, revocation and effective-access refresh. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -142,3 +146,26 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+The [administration sequence](../uml/seq_admin_operations.puml) now includes user-card reads routed independently to Core or Product, scoped projections and per-owner failures. [User-detail contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+The all-user word browsing and image-replacement interaction is in [seq_admin_words](../uml/seq_admin_words.puml). [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Automatic sequence: capture transaction commits word+job -> worker claims -> AI descriptor -> indexed candidates -> AI decision -> short revision-checked publication transaction -> Admin refresh and image reuse. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

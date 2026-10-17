@@ -1,0 +1,26 @@
+@startuml
+actor Staff
+actor Learner
+participant Admin
+participant Core
+participant Backend
+database Product
+Staff -> Admin: Select shared or personal content
+Admin -> Core: Verify trusted admin and capabilities
+Admin -> Backend: Read scoped unit/course and statistics
+Backend -> Product: Read content and original measured evidence
+Staff -> Admin: Edit words, reading, practice and guidance
+Admin -> Backend: Preview edited lesson (read authorization)
+Backend --> Admin: Realtime contract, no provider call
+Admin -> Backend: Save with reason, revision and operation UUID
+Backend -> Core: Check content.write and authenticator verification
+Backend -> Product: Atomic scoped revision, semantic edit, audit and receipt
+Staff -> Admin: Explicitly activate course draft
+Learner -> Backend: Start course or teacher-station lesson
+Backend -> Product: Read active material and retain session contract snapshot
+Learner -> Backend: Complete actual lesson
+Backend -> Product: Report/evidence and authored homework snapshot
+Staff -> Admin: Inspect lesson report, practice attempts and actual prompt
+Admin -> Backend: Read scoped lesson
+Backend --> Admin: Original measurements and snapshot, or explicit absence
+@enduml

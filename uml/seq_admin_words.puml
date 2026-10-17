@@ -1,0 +1,33 @@
+@startuml
+actor Administrator
+participant "Admin UI" as UI
+participant "Admin gateway" as Gateway
+participant "Core" as Core
+participant "GotIt Backend" as Backend
+database "product_gotit" as DB
+participant "Pixabay or OpenAI" as Provider
+Administrator -> UI: Search/filter every user's words
+UI -> Gateway: GET words / detail / image / section
+Gateway -> Core: Authenticate verified administrator
+Gateway -> Backend: Fixed allowlisted read
+Backend -> Core: Verify application-scoped administrator
+Backend -> DB: Scoped projections and cached image only
+Backend --> UI: Metadata, image, paginated histories
+Administrator -> UI: Stock replacement or AI prompt + create
+UI -> Gateway: regenerate (operationId, expectedRevision, source)
+Gateway -> Core: Require content.write and MFA
+Gateway -> Backend: Fixed concept regenerate route
+Backend -> Core: Independently require permission and MFA
+Backend -> DB: Short transaction: receipt + reserved image revision
+Backend -> DB: Claim unused revision, keep current image
+Backend -> Provider: Reviewed meaning; exclude current photo or use AI prompt
+alt Valid provider result and unchanged active meaning
+  Backend -> DB: Transaction: validate revision/claim, store asset,
+  note right: Advance image pointer and revision; publish audit
+  Backend --> UI: Stable success receipt
+  UI -> Gateway: Refresh word/concept and image reads
+else Provider unavailable or stale meaning
+  Backend -> DB: Release claim; retain current image
+  Backend --> UI: Unavailable or conflict; preserve retry UUID/payload
+end
+@enduml

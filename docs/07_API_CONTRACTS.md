@@ -1,5 +1,13 @@
 # 07 — חוזי API
 
+## Admin recent activity reads ? 2026-10-16
+
+Core subscription lists add optional activity=cancelled and nullable sortable activityAt; Product usage lists add optional activity=failed. Filtering precedes count/pagination and preserves trusted application scope. Gateway status also exposes assignments. [Exact additive contracts and compatibility](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Adds GET list/detail, POST create, PATCH edit and POST ensure-image under `/api/v1/admin/concepts`. Existing learner image payloads stay compatible. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Core adds explicit staff/plan commands with independent permissions and effective billing projection; Product adds prepared-catalog reads and source-derived prompt references. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -402,3 +410,32 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:section`, Product `PATCH /admin/learners/:id/profile|settings`, fixed gateway routing, strict pagination and revision/replay semantics are defined in [44](44_ADMIN_USER_DETAILS.md#owner-contracts).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Adds admin words/detail/image/section reads and concepts/:id/regenerate; old ensure-image action remains compatible. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Capture/media contracts remain unchanged. Admin word reads add conceptAssignmentStatus and sanitized conceptAssignmentError; per-item bindings take precedence over lexical fallback. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

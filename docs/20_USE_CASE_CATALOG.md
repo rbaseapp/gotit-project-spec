@@ -1,5 +1,13 @@
 # 20 — קטלוג Use Cases
 
+## Admin recent activity ? 2026-10-16
+
+UC-ADM-ACT-01: a verified administrator reviews, pages, refreshes and opens recent activity; failed feeds can retry independently and writes retain existing permission/MFA checks. [Canonical use case](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+UC-CON-01: staff create a reviewed meaning and language forms; UC-CON-02: learners reuse that meaning?s image across languages; UC-CON-03: staff reset an image without changing learning evidence. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Staff can inspect a learner, unlock, select role/permissions or plan, provide a reason and review the persisted result; guide/catalog flows require reading access only. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -386,3 +394,26 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Admin user inspection: a verified administrator selects a user, inspects independent account/product histories and current access, unlocks editing when permitted, and saves an explicit target/revision/reason. Missing data, owner outage, absent permission, expired MFA and stale state remain visible. [Full contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+UC-ADM-CON: find/filter a learner word, inspect its reviewed meaning or prefill concept creation, then replace the shared image through stock or an edited AI prompt. On ambiguous matching, review mappings; on failure, retain old image and retry the same operation. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+UC-CON-04: new-language word resolves to an existing meaning or a new one; UC-CON-05: provider failure resumes from a durable job; UC-CON-06: old saved words are classified by bounded backfill. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

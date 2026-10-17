@@ -1,5 +1,18 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## Admin recent activity ? 2026-10-16
+
+Release checks passed: 50 Admin tests/build, 32 Core tests/build, 242 Product tests/build, 122 disposable PostgreSQL integration tests and Docker build. Authenticated live activity loading/paging/navigation passed after ordered deployment. Product CI remains blocked at the existing private-Core checkout authorization. [Exact evidence and live acceptance](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Added normalization, strict gateway and PostgreSQL regressions for multilingual reuse, isolation, claims, resets and safe rollback; local browser edit/save/mobile QA. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+## Admin editing visibility 0.3.1 — 2026-10-16
+
+Real local TOTP unlock and browser-clock expiry cover visible disabled actions and open-dialog confirmation; a read-only capability fixture checks missing staff permission separately from billing. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Disposable PostgreSQL and local-browser coverage includes promotion/demotion, plan override/reset/expiry, actual catalog units, prompt base/active/draft separation and Hebrew guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -499,3 +512,32 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Admin user-detail coverage adds scoped real-PostgreSQL histories/time accounting/concurrent preference writes, gateway owner routing and loopback browser checks with fake accounts and seeded learning data. [Tests and verification boundaries](44_ADMIN_USER_DETAILS.md#verification).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Added all-user search/history and atomic replacement PostgreSQL cases, gateway boundaries, stock exclusion and isolated desktop/mobile browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Automatic-concept tests exercise the Arabic owner example, concurrent reuse, provider failure/replay, stale revisions, scope, queue priority and migration/backfill on disposable PostgreSQL. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

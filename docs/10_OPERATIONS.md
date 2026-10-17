@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Apply migration `1792191000000` before Backend/Admin rollout; validate runtime grants. Authored concepts/images block destructive down migration. No live rollout performed. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Upgrade Core schema/service, Backend and Admin before bootstrapping the new owner staff permission. Product migration and existing Google/origin settings remain unchanged for this follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -422,3 +426,26 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Admin user-card rollout: matching Core and Product owner APIs precede the Admin gateway/frontend. No new migration/configuration is introduced by this feature; existing Admin prerequisites remain. No production deployment is claimed. [Contract](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Deploy matching Backend before Admin after existing concepts migration; configure existing stock/AI provider credentials. This follow-up is local, with no live migration or rollout. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Apply migration 1792192000000 before Backend/Admin. Existing OPENAI_API_KEY enables processing; OPENAI_CONCEPT_MODEL optionally overrides translation/private-lesson model selection. Rehearse generated-column/index locks and bounded historical backfill costs. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

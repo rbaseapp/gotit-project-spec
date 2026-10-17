@@ -14,6 +14,21 @@ Gateway -> Core: Authenticate, then GET /auth/me
 Core --> Gateway: Active verified application admin
 Gateway --> UI: Validated session
 
+Staff -> UI: Open user card / selected history tab
+UI -> Gateway: GET /admin-api/learners/:id/:section?page=...
+Gateway -> Core: Validate current verified administrator
+alt account, email, subscription, payment or authentication history
+  Gateway -> Core: Allowlisted scoped learner history
+  Core -> CoreDB: Authorize actor and target; bounded explicit projection
+  Core --> Gateway: Paginated account history
+else learning overview or history
+  Gateway -> Product: Allowlisted learner overview/history
+  Product -> Core: Independently authorize actor and validate target user
+  Product -> ProductDB: Read-only scoped snapshot / paginated history
+  Product --> Gateway: Recorded statistics and explicit coverage
+end
+Gateway --> UI: Bounded data or independent owner error
+
 Staff -> UI: Unlock editing with authenticator code
 UI -> Gateway: POST /admin-api/security/verify
 Gateway -> Core: POST /api/v1/admin/mfa/verify

@@ -1,5 +1,18 @@
 # 19 — קטלוג דרישות ממוספר
 
+## Admin recent activity ? 2026-10-16
+
+FR-ADM-ACT-01 recent account/billing/program/word/AI-failure feeds; FR-ADM-ACT-02 independent chronological pagination and navigation; FR-ADM-ACT-03 truthful partial availability with Hebrew/RTL and 320px support. [Canonical requirements and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+FR-CON-01 reviewed multilingual sense identity; FR-CON-02 one persisted image across mapped languages; FR-CON-03 audited Admin management. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+## Admin editing visibility 0.3.1 — 2026-10-16
+
+FR-ADM-13 now explicitly requires discoverable editing actions and an explanation for each unlock or permission condition. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 FR-ADM-09–13 cover scoped staff management, Free/Basic↔Pro access, base/active prompt visibility, prepared catalog/creation and field guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -360,3 +373,32 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+FR-ADM-14–18: dedicated user card, complete paginated scoped histories, course roadmap/evidence/next lesson, audited settings edits and truthful measurement coverage. [Acceptance criteria](44_ADMIN_USER_DETAILS.md#user-behavior-and-acceptance).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+FR-CON-04: browse every scoped learner word. FR-CON-05: inspect details and paginated history. FR-CON-06: quick explicit-source image replacement preserves old media until success. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+FR-CON-07 automatic durable assignment; FR-CON-08 AI disambiguation and existing/new meaning selection; FR-CON-09 historical-word backfill. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

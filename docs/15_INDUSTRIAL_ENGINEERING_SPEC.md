@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Process: staff review one meaning ? add equivalent language expressions ? save ? create/reuse one image ? learning requests resolve that meaning. Control: ambiguous pairs never auto-share. KPI: image generations per concept revision and cache reuse across language pairs. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 P-ADM-02 makes explicit role/permission and effective-plan changes auditable, while separating payment processing, learning evidence and access control. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -362,3 +366,26 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Administration process extension: inspect a scoped learner from Users, distinguish provider payment from effective access, drill into recorded learning and edit preferences through authorized audited commands. Metrics show their actual measurement coverage. [Acceptance and controls](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+P-ADM-CON: find word, review unique meaning, select image source, reserve, generate outside transaction, atomically publish. Track completed publications separately from requests and provider failures. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Process: confirm/save word -> durable queue -> AI meaning resolution -> existing/new concept -> scoped binding -> shared image. Control points: claim, owner/revision checks, candidate allowlist, quotas and retry. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

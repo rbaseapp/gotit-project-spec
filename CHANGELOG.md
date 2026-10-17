@@ -1,5 +1,18 @@
 # יומן שינויים
 
+## 2026-10-16 ? Admin activity homepage
+
+Replaced the Admin introduction/module tiles with recent users, subscriptions, cancellations, personal programs, templates, words and measured AI failures. Added scoped server-side activity filters, independent paging and navigation. Published and deployed to Core, Product and Admin; authenticated live acceptance passed. [Canonical release evidence](docs/46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts
+
+Implemented local Backend/Admin concept management and language-independent persistent image reuse. Includes forward migration, concurrency/revision safeguards and local verification. [Canonical contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md). Not deployed.
+
+## 2026-10-16 — Admin editing visibility 0.3.1
+
+Applicable editing actions remain visible and disabled with Hebrew unlock/permission reasons. Open dialogs disable confirmation on MFA expiry. Owner authorization and grants remain unchanged. Typecheck/build, 42 gateway/config tests, focused real-MFA browser checks and published Admin CI pass; UI follow-up deployment is pending. [Canonical correction](docs/43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
+
+
 ## 2026-10-16 — Admin owner feedback 0.3
 
 Implemented explicit staff roles/permissions, effective Free/Basic↔Pro access, source-derived base prompt previews, prepared English-from-zero catalog, visible program creation and Hebrew field guidance. Core adds an additive scoped override migration; payment state and learning evidence are preserved. [Requirements, verification and pending ordered rollout](docs/43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -679,3 +692,28 @@ staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
 flows passed. Published review branches/PRs; operational production rollout is
 pending Render account connection and ordered migrations. Backend CI currently
 stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+## 2026-10-16 — AI prompt management
+
+Implemented modular prompt revisions and Realtime configuration in Backend/Admin, with a synthetic preview using the actual live-call composer. Canonical scope, checks and rollout boundary: [44](docs/44_AI_PROMPT_MANAGEMENT.md). No deployment or live provider call.
+
+## 2026-10-16 - Program content administration
+
+Added scoped shared/personal unit editing, authored reading/practice/teacher guidance,
+course revision with retained historical evidence, published template discovery,
+Realtime previews and credential-free snapshots, and measured lesson statistics.
+[Canonical contracts, verification and rollout](docs/45_ADMIN_PROGRAM_EDITOR.md).
+
+
+## Admin user details — 2026-10-16
+
+2026-10-16 — Added the Admin user card across Core/Product/Admin: scoped histories, recorded learning statistics, course roadmaps and audited profile/notification/lesson preference editing. Local implementation; no production rollout. [Canonical contract](docs/44_ADMIN_USER_DETAILS.md).
+
+
+## 2026-10-16 - All-user vocabulary and quick image replacement
+
+Backend/Admin add all-user word cards and histories plus explicit stock/AI shared-image replacement with retained old images, staged publication, revision/replay/MFA/audit controls. [Contract and local evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16). No live rollout.
+
+
+## 2026-10-16 - Automatic lexical meaning assignment
+
+Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792192000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

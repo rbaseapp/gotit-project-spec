@@ -1,5 +1,18 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## Admin recent activity ? 2026-10-16
+
+Admin homepage activity feeds and owner-side cancellation/failure filters are published, deployed and verified in the authenticated live Admin. [Scope, boundaries and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
+
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Cross-language concepts and shared images are implemented and verified locally; only curated mappings share images. Production unchanged. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+## Admin editing visibility 0.3.1 — 2026-10-16
+
+Admin 0.3.1 explains locked editing actions instead of hiding them. Existing deployed 0.3 enables granted edits after Unlock editing; only the UI follow-up requires deployment. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
+
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Owner accepted operational 0.2. Follow-up 0.3 adds role/access management, real base prompt visibility, prepared English curriculum and Hebrew help; its production rollout is tracked separately. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -488,3 +501,32 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## Admin user details — 2026-10-16
+
+Admin user details are locally implemented: account/emails/billing/auth histories, recorded daily learning/game/XP/lesson/program/token data and audited preference editing. Historical unmeasured time/tokens and payment amounts remain explicitly unknown. Production rollout is not included. [Contract and evidence](44_ADMIN_USER_DETAILS.md).
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and explicit Pixabay/AI shared-image replacement are implemented and locally verified. No deployment or paid-provider verification is claimed. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Automatic AI meaning assignment and historical-word backfill are locally implemented and verified; rollout remains pending. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

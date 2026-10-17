@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## 2026-10-16 ? Multilingual concepts and shared images
+
+Adds `lexical_concepts`, `concept_expressions`, `concept_image_assets` through forward migration `1792191000000`; application-scoped meanings and versioned language-independent media. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 A forward Core migration adds scoped plan overrides and staff.write permission support. No new Product schema or automatic permission grant is introduced. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
@@ -271,3 +275,27 @@ boundaries, browser states and rollout evidence are maintained in
 This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
+
+## 2026-10-16 — Modular prompt and Realtime management
+
+FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
+
+
+
+## Admin program and lesson editor - 2026-10-16
+
+Application-scoped shared and personal unit content, full course revision,
+published learner templates, Realtime previews/snapshots and measured lesson
+statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
+This is local/integration implementation evidence; shared-environment migration
+and deployment remain separate.
+
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+No new schema: staged revisions reuse concept_image_assets and admin receipts/audit; semantic resets skip reserved revisions. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+
+## Automatic concept assignment - 2026-10-16
+
+Forward migration 1792192000000 adds concept_assignment_jobs and learning_item_concepts, concept meaning/origin metadata, candidate-search indexes and transactional enqueue triggers. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

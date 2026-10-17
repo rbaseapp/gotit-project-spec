@@ -141,6 +141,14 @@ verify its explanation stays separate from billing access after MFA; it did not
 change server grants. Prompt activation stays discoverable after expiry. Browser
 console has zero errors/warnings. No production account mutation was performed.
 
+Published Admin follow-up `5873a72ad9c23a1c59d05223b10b62e57a7b8176` on the existing
+operations branch and draft PR #1. Guarded original-workspace sync preserves the
+independent local history. Owner's live MFA unlock remains their interaction;
+production 0.3.1 deployment is pending and no new permission was granted here.
+
+[Admin CI 38875157382](https://github.com/rbaseapp/gotit-admin/actions/runs/38875157382)
+passed on published `5873a72ad9c23a1c59d05223b10b62e57a7b8176`.
+
 ## Operational administration 0.2, 2026-10-16
 
 After authenticating, the owner reported all areas still showed Awaiting API and
@@ -384,3 +392,8 @@ Render subsequently served the new `index-BRl1cSal.js`, with `/health`, `/ready`
 Follow-up commit `5aa468c8dc990567c4888b831f9efbe8c5091d9e` sets the documented `strict-origin-when-cross-origin` policy when Google is enabled, retaining `no-referrer` when disabled; both header modes are covered in the existing gateway tests. TypeScript, 31/31 tests and production build passed again; the follow-up was pushed to main. End-to-end Google login and Core account-role acceptance remain unverified until the provider accepts the origin and the owner signs in.
 
 Final follow-up evidence: [CI run 38809131776](https://github.com/rbaseapp/gotit-admin/actions/runs/38809131776) passed for `5aa468c8dc990567c4888b831f9efbe8c5091d9e`. Render returned 200 for public Google configuration with `Referrer-Policy: strict-origin-when-cross-origin`, confirming the server follow-up is live. The owner then added the Admin origin in Google. A fresh unmodified browser reload rendered Google's actual iframe button without console errors; clicking it opened the official Google account sign-in page, and the earlier origin-denial error was gone. The isolated QA browser has no Google account, so no credentials were submitted or user session created; full account login and Core admin-role acceptance remain owner acceptance. The empty-account FedCM message during that isolated click does not establish an origin or account-role failure. Screenshot: `../gotit-admin/output/playwright/google-live-login-authorized.png` (local ignored QA artifact).
+
+
+## Admin user details — 2026-10-16
+
+User-detail extension (2026-10-16): selecting a user opens the dedicated card with scoped account/product histories and audited settings editing. [Canonical requirements, coverage, owner APIs and verification](44_ADMIN_USER_DETAILS.md).
