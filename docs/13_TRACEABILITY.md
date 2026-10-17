@@ -4,6 +4,7 @@
 
 FR-ADM-ACT-01?03 / SCR-ADM-HOME / UC-ADM-ACT-01 ? Admin ActivityDashboard/dataProvider/gateway ? Core subscription and Product usage list filters ? gateway tests, disposable PostgreSQL admin-activity integration and isolated Chrome desktop/mobile checks. [Canonical contract and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 FR-CON-01?03 ? Backend concepts and image consumers ? Admin editor/gateway ? fast/PostgreSQL/browser checks. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -12,11 +13,9 @@ FR-CON-01?03 ? Backend concepts and image consumers ? Admin editor/gateway ? fas
 
 FR-ADM-13 maps visible-action requirements to ResourceEditor, existing owner/gateway authorization tests and the focused real-MFA browser check. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
 
-
 ## Admin owner feedback 0.3 — 2026-10-16
 
 FR-ADM-09–13 map to Core staff/plan services, Product catalog/prompt references, Admin guides/forms and focused gateway/real-DB/browser evidence. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-12 — Shared application header
 
@@ -195,11 +194,9 @@ Backend `gotIt-backend@d8d930a7dfbeb01f8f951359c67a3b837fcc99f7` is Live on Rend
 
 The Hebrew path name and preview alignment `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` are deployed as Render `dep-dav8pnk9v7es73fjv47g` (Live, exact source SHA). Public route and `/ready` passed; served CSS and JS contain the changed rules and text. Authenticated visual unit smoke remains unverified because the production browser presented Login.
 
-
 ## 2026-10-01 — SCR-16 path name and preview controls
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` maps the requested Hebrew path name and SCR-16 unit preview alignment to `src/locales/he/translation.json`, `src/production.css`, `test/live.test.tsx` and `test/e2e/responsive.spec.ts`. The local gate passed 160 Vitest, 16 gateway and two targeted Playwright tests across 320px, 525px and desktop. Exact-SHA production deployment and visual smoke remain pending.
-
 
 ## 2026-10-01 — SCR-16 Web release evidence
 
@@ -217,16 +214,13 @@ The FR-PACK-005/SCR-16 one-click layout fix `gotIt-front@383482331ca895c14911236
 
 `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` maps the protected first-known-word flow to the product-profile FK and standard profile initialization. `test/integration/practice.integration.test.ts` covers no prior profile, scoped state, cross-unit propagation and reversal; local 206 fast/59 PostgreSQL tests passed. The initial production migration failed on a Core schema permission denial before replacing catalog content; corrected migration retry and deploy remain pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
 
-
 ## 2026-10-01 — FR-PACK-005 Web trace
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` maps FR-PACK-005 / UC-04B / SCR-16 to `/english-learning`, `EnglishLearningPathPage.tsx`, the additive word-pack parser, eight locale catalogs and `test/live.test.tsx`. The test covers unit names, full-unit and per-entry known actions, reversal and the unknown-only install payload. Local Web check (160 Vitest, 16 gateway) and 374 responsive checks passed. Backend source is `gotIt-backend@14012a0`; production verification is pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
 
-
 ## 2026-10-01 — FR-PACK-005 backend trace
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` maps FR-PACK-005 / UC-04B / SCR-16 to migrations `1790800008000` and `1790800009000`, the 60-unit catalog asset, `PUT /api/v1/word-packs/:id/known`, additive `GET` progress/entry fields, and known filtering in pack practice. Regression: `test/word-packs.test.ts` and `test/integration/practice.integration.test.ts`, plus migration down/up in the disposable PostgreSQL suite. Backend gates passed (206 fast, 59 integration); Web commit and production verification are pending. Canonical detail: [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
-
 
 ## 2026-10-01 - SCR-00 shell assessment placement
 
@@ -308,45 +302,45 @@ FR-PC-001–005 ממפות את PC-01–28 למודול `courses`, למסכי Co
 
 ## 1. דרישה → מימוש
 
-| ID | דרישה | רכיב | API | נתונים | בדיקה עיקרית | מצב |
-|---|---|---|---|---|---|---|
-| AUTH-01 | register/login מבודד application | Core | `/auth/register`,`/login` | users, credentials, sessions | core auth integration | ממומש |
-| AUTH-02 | Google Web + Extension | Core/Web/Chrome | `/auth/google*` | provider clients, identities | google auth suites + live | ממומש; live config נדרש |
-| AUTH-03 | Facebook | Core/Web | `/auth/facebook` | identities | `gotIt-front/test/facebook.test.tsx` (blank App ID override, full-SDK readiness, explicit popup over FedCM, load/login timeout, late callback, retry), Core Facebook suites + live | Web popup/timeout/retry verified at `7c956aa2e517aed331d98ce9228860bb1afb8f3c`. Core secret repair Live in `dep-davots49v7es738kolqg` at `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`: Meta app credential, real owner-account Facebook exchange twice, session/profile and readiness returned 200; logout 204, repeat login and invalid-token 401 passed. Public Meta verification/publication and non-role acceptance remain pending ([evidence](24_FACEBOOK_LOGIN_ROLLOUT.md)) |
-| AUTH-04 | email verification/reset | Core/Web | TBD | TBD | TBD | מתוכנן P0 |
-| BILL-01 | plans/status/trial | Core/clients | `/billing/plans`,`/status` | billing tables | billing/access tests | ממומש |
-| BILL-02 | checkout/webhook/portal | Core/Web | billing mutations | checkout/subscription/events | webhook + live Paddle | ממומש; rollout נדרש |
-| BILL-03 / FR-BILL-006 | Free status-only in billing UI | Web | Core plans + status | none | `gotIt-front/test/billing-page.test.tsx` (Free and paid states), `npm run check`; Render `dep-dav2137pn0mc739o6l30`, `/ready`, billing asset smoke | local pass at `gotIt-front@196cf9593cda52360160d620d02091071b421ce5`; deployed asset verified; authenticated UI smoke pending |
-| CAP-01 | contextual preview | Backend/Web/Chrome | `/captures/preview` | enrichment_runs | enrichment/capture tests | ממומש |
-| CAP-02 | sense-safe save | Backend/clients | `/captures` | items/translations/occurrences | integration + replay | ממומש |
-| LIB-01 | browse/filter/edit/bulk | Backend/Web | `/learning-items*` | vocabulary tables | library/client tests | ממומש |
-| PACK-01 | leveled word packs | Backend/Web | `/word-packs*` | pack tables | word-pack tests | ממומש |
-| PRAC-01 | server-authoritative exercises | Backend/Web | `/practice/*` | sessions/exercises/attempts | practice integration | ממומש |
-| PRAC-02 | cross-day smart matching rotation | Backend/Web | `/learning/queue`, `/practice/sessions` | current-revision matching attempts | practice integration: next-day queue after correct board; production-data read-only smoke | Deployed; authenticated HTTP smoke pending |
-| LEARN-01 | five-skill evidence + mastery | Backend/Web | `/learning/*` | progress/effects/events | learning tests | ממומש |
-| GAME-01 | XP/level/streak | Backend/Web | dashboard/gamification | XP/daily/gamification | learning/dashboard tests | ממומש |
-| READ-01 | AI reading + quiz | Backend/Web | `/reading*` | generated content | reading/client tests | ממומש; provider acceptance נדרש |
-| SPEECH-01 | TTS/pronunciation | Backend/Web | audio/assessments | attempt receipts | speech tests + device | ממומש; live/device נדרש |
-| IMG-01 | relevant study image | Backend/Web | study image | item/image assets | provider relevance tests | ממומש; live eval נדרש |
-| LESSON-01 | Realtime private lesson | Backend/Web | `/private-lessons*` | lesson tables | lesson suites + live | ממומש; live/device נדרש |
-| TRANS-01 | export/import | Backend/Web | `/export`,`/import` | items/receipts | transfer/client tests | ממומש |
-| EXT-01 | capture from page | Chrome | capture APIs | browser storage | extension verify + manual | ממומש |
-| PRIV-01 | export/delete/retention | all | export + TBD delete | all user data | legal/delete acceptance | חלקי |
-| OPS-01 | health/readiness/shutdown | services | `/health`,`/ready` | — | health/gateway tests | ממומש |
-| OPS-02 | monitored restoreable production | Ops | — | backups/logs/metrics | restore/incident drill | פתוח P0 |
+| ID                    | דרישה                             | רכיב               | API                                     | נתונים                             | בדיקה עיקרית                                                                                                                                                                       | מצב                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------------- | --------------------------------- | ------------------ | --------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AUTH-01               | register/login מבודד application  | Core               | `/auth/register`,`/login`               | users, credentials, sessions       | core auth integration                                                                                                                                                              | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| AUTH-02               | Google Web + Extension            | Core/Web/Chrome    | `/auth/google*`                         | provider clients, identities       | google auth suites + live                                                                                                                                                          | ממומש; live config נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| AUTH-03               | Facebook                          | Core/Web           | `/auth/facebook`                        | identities                         | `gotIt-front/test/facebook.test.tsx` (blank App ID override, full-SDK readiness, explicit popup over FedCM, load/login timeout, late callback, retry), Core Facebook suites + live | Web popup/timeout/retry verified at `7c956aa2e517aed331d98ce9228860bb1afb8f3c`. Core secret repair Live in `dep-davots49v7es738kolqg` at `6f4098dcbeb868441a4ed0b9787af1fa84dd5bd6`: Meta app credential, real owner-account Facebook exchange twice, session/profile and readiness returned 200; logout 204, repeat login and invalid-token 401 passed. Public Meta verification/publication and non-role acceptance remain pending ([evidence](24_FACEBOOK_LOGIN_ROLLOUT.md)) |
+| AUTH-04               | email verification/reset          | Core/Web           | TBD                                     | TBD                                | TBD                                                                                                                                                                                | מתוכנן P0                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| BILL-01               | plans/status/trial                | Core/clients       | `/billing/plans`,`/status`              | billing tables                     | billing/access tests                                                                                                                                                               | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| BILL-02               | checkout/webhook/portal           | Core/Web           | billing mutations                       | checkout/subscription/events       | webhook + live Paddle                                                                                                                                                              | ממומש; rollout נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| BILL-03 / FR-BILL-006 | Free status-only in billing UI    | Web                | Core plans + status                     | none                               | `gotIt-front/test/billing-page.test.tsx` (Free and paid states), `npm run check`; Render `dep-dav2137pn0mc739o6l30`, `/ready`, billing asset smoke                                 | local pass at `gotIt-front@196cf9593cda52360160d620d02091071b421ce5`; deployed asset verified; authenticated UI smoke pending                                                                                                                                                                                                                                                                                                                                                   |
+| CAP-01                | contextual preview                | Backend/Web/Chrome | `/captures/preview`                     | enrichment_runs                    | enrichment/capture tests                                                                                                                                                           | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| CAP-02                | sense-safe save                   | Backend/clients    | `/captures`                             | items/translations/occurrences     | integration + replay                                                                                                                                                               | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| LIB-01                | browse/filter/edit/bulk           | Backend/Web        | `/learning-items*`                      | vocabulary tables                  | library/client tests                                                                                                                                                               | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| PACK-01               | leveled word packs                | Backend/Web        | `/word-packs*`                          | pack tables                        | word-pack tests                                                                                                                                                                    | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| PRAC-01               | server-authoritative exercises    | Backend/Web        | `/practice/*`                           | sessions/exercises/attempts        | practice integration                                                                                                                                                               | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| PRAC-02               | cross-day smart matching rotation | Backend/Web        | `/learning/queue`, `/practice/sessions` | current-revision matching attempts | practice integration: next-day queue after correct board; production-data read-only smoke                                                                                          | Deployed; authenticated HTTP smoke pending                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| LEARN-01              | five-skill evidence + mastery     | Backend/Web        | `/learning/*`                           | progress/effects/events            | learning tests                                                                                                                                                                     | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| GAME-01               | XP/level/streak                   | Backend/Web        | dashboard/gamification                  | XP/daily/gamification              | learning/dashboard tests                                                                                                                                                           | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| READ-01               | AI reading + quiz                 | Backend/Web        | `/reading*`                             | generated content                  | reading/client tests                                                                                                                                                               | ממומש; provider acceptance נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| SPEECH-01             | TTS/pronunciation                 | Backend/Web        | audio/assessments                       | attempt receipts                   | speech tests + device                                                                                                                                                              | ממומש; live/device נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| IMG-01                | relevant study image              | Backend/Web        | study image                             | item/image assets                  | provider relevance tests                                                                                                                                                           | ממומש; live eval נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| LESSON-01             | Realtime private lesson           | Backend/Web        | `/private-lessons*`                     | lesson tables                      | lesson suites + live                                                                                                                                                               | ממומש; live/device נדרש                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| TRANS-01              | export/import                     | Backend/Web        | `/export`,`/import`                     | items/receipts                     | transfer/client tests                                                                                                                                                              | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| EXT-01                | capture from page                 | Chrome             | capture APIs                            | browser storage                    | extension verify + manual                                                                                                                                                          | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| PRIV-01               | export/delete/retention           | all                | export + TBD delete                     | all user data                      | legal/delete acceptance                                                                                                                                                            | חלקי                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| OPS-01                | health/readiness/shutdown         | services           | `/health`,`/ready`                      | —                                  | health/gateway tests                                                                                                                                                               | ממומש                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| OPS-02                | monitored restoreable production  | Ops                | —                                       | backups/logs/metrics               | restore/incident drill                                                                                                                                                             | פתוח P0                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ## 1.1 עקיבות תהליך ומסך
 
-| Requirement group | Process IDs | Screen IDs | Sequence IDs |
-|---|---|---|---|
-| Identity/session | P01–P03 | SCR-01, SCR-00, SCR-11 | SEQ-01, SEQ-02 |
-| Capture/library | P04–P06 | SCR-05–SCR-07, SCR-X01–X03 | SEQ-03, SEQ-05 |
-| Packs/practice/learning | P07–P09 | SCR-02–SCR-04, SCR-08 | SEQ-04, SEQ-09 |
-| Reading | P10–P11 | SCR-09, SCR-04 | SEQ-06 |
-| Private lesson | P12–P13 | SCR-10, SCR-00 | SEQ-07 |
-| Billing | P14 | SCR-13, SCR-14, SCR-00 | SEQ-08 |
-| Transfer | P15 | SCR-12 | SEQ-10 |
-| Release/operations | P16 | n/a | SEQ-11 |
+| Requirement group       | Process IDs | Screen IDs                 | Sequence IDs   |
+| ----------------------- | ----------- | -------------------------- | -------------- |
+| Identity/session        | P01–P03     | SCR-01, SCR-00, SCR-11     | SEQ-01, SEQ-02 |
+| Capture/library         | P04–P06     | SCR-05–SCR-07, SCR-X01–X03 | SEQ-03, SEQ-05 |
+| Packs/practice/learning | P07–P09     | SCR-02–SCR-04, SCR-08      | SEQ-04, SEQ-09 |
+| Reading                 | P10–P11     | SCR-09, SCR-04             | SEQ-06         |
+| Private lesson          | P12–P13     | SCR-10, SCR-00             | SEQ-07         |
+| Billing                 | P14         | SCR-13, SCR-14, SCR-00     | SEQ-08         |
+| Transfer                | P15         | SCR-12                     | SEQ-10         |
+| Release/operations      | P16         | n/a                        | SEQ-11         |
 
 ## 2. בעלות RACI מוצעת
 
@@ -356,27 +350,27 @@ SCR-PC-01–04 ול־SCR-10. הם כוללים סשן היכרות בכתב וב
 ואישור תוכנית או בקשת שינויים לפני הפעלה. ראיות הבדיקה וגבולות המימוש נוספו ב־
 [22](22_PERSONAL_COURSES_IMPLEMENTATION.md), בנפרד מטבלאות ה־baseline ההיסטוריות.
 
-| תחום | Responsible | Accountable | Consulted |
-|---|---|---|---|
-| Core identity/billing | Core engineer | Platform owner | Security, Finance |
-| Learning domain/API | Backend engineer | Product tech lead | Learning expert |
-| Web UX/gateway | Frontend engineer | Product tech lead | Design, Security |
-| Extension/Store | Extension engineer | Product tech lead | Privacy, Support |
-| Data/migrations | Backend/Core owners | Platform owner | DBA/Ops |
-| Providers/AI quality | Backend engineer | Product owner | Privacy, Finance |
-| Security/privacy | Security owner | Business owner | Legal, all engineering |
-| Release/observability | Ops owner | Platform owner | all engineering |
+| תחום                  | Responsible         | Accountable       | Consulted              |
+| --------------------- | ------------------- | ----------------- | ---------------------- |
+| Core identity/billing | Core engineer       | Platform owner    | Security, Finance      |
+| Learning domain/API   | Backend engineer    | Product tech lead | Learning expert        |
+| Web UX/gateway        | Frontend engineer   | Product tech lead | Design, Security       |
+| Extension/Store       | Extension engineer  | Product tech lead | Privacy, Support       |
+| Data/migrations       | Backend/Core owners | Platform owner    | DBA/Ops                |
+| Providers/AI quality  | Backend engineer    | Product owner     | Privacy, Finance       |
+| Security/privacy      | Security owner      | Business owner    | Legal, all engineering |
+| Release/observability | Ops owner           | Platform owner    | all engineering        |
 
 שמות אנשים ותאריכים יתווספו בתכנון release; הטבלה אינה מקצה סמכות בפועל.
 
 ## 3. Baseline Verification — 2026-09-29
 
-| Repo | Commit | Worktree בעת המיפוי | Gate בהרצה זו |
-|---|---|---|---|
-| gotIt-backend | `9f57e7e` | clean | typecheck, 140/140 tests, build — עבר |
-| gotIt-front | `c410a90` | clean | typecheck, lint, 97/97 tests, build, 13/13 gateway — עבר |
-| core-platform | `1e9d259` | clean | typecheck, 26/26 tests, build — עבר |
-| gotIt-chrome | `d6659b1` | clean | typecheck, 28/28 tests, build, package verify — עבר |
+| Repo          | Commit    | Worktree בעת המיפוי | Gate בהרצה זו                                            |
+| ------------- | --------- | ------------------- | -------------------------------------------------------- |
+| gotIt-backend | `9f57e7e` | clean               | typecheck, 140/140 tests, build — עבר                    |
+| gotIt-front   | `c410a90` | clean               | typecheck, lint, 97/97 tests, build, 13/13 gateway — עבר |
+| core-platform | `1e9d259` | clean               | typecheck, 26/26 tests, build — עבר                      |
+| gotIt-chrome  | `d6659b1` | clean               | typecheck, 28/28 tests, build, package verify — עבר      |
 
 Release 1.4.4 של `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`
 מעדכן את ראיית EXT-01 לאריזת החנות: `npm run verify` עבר עם 39/39 בדיקות,
@@ -390,12 +384,12 @@ Release 1.4.4 של `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`
 
 ## 4. Contract Drift Register
 
-| ID | פער | השפעה | תיקון מוצע |
-|---|---|---|---|
+| ID       | פער                                                          | השפעה                             | תיקון מוצע                             |
+| -------- | ------------------------------------------------------------ | --------------------------------- | -------------------------------------- |
 | DRIFT-01 | תוקן בסבב קורסים: קטלוג 68 נתיבים, כולל 7 lesson ו־12 course | בדיקת ספירה/ייחודיות ו־HTTP נוספה | יצירה אוטומטית מתוך mounts עדיין הרחבה |
-| DRIFT-02 | תוקן Backend README ל־39 טבלאות לאחר מיגרציית קורסים | ספירה מאומתת ב־PostgreSQL | baseline הישן היה 37 |
-| DRIFT-03 | Extension README מזכיר current 41-route release | נתון היסטורי | להפנות ל־API catalog generated |
-| DRIFT-04 | מסמכים היסטוריים כוללים סטטוסים ישנים | החלטות עלולות להתבסס על snapshot | הפרויקט הזה הוא entrypoint חדש |
+| DRIFT-02 | תוקן Backend README ל־39 טבלאות לאחר מיגרציית קורסים         | ספירה מאומתת ב־PostgreSQL         | baseline הישן היה 37                   |
+| DRIFT-03 | Extension README מזכיר current 41-route release              | נתון היסטורי                      | להפנות ל־API catalog generated         |
+| DRIFT-04 | מסמכים היסטוריים כוללים סטטוסים ישנים                        | החלטות עלולות להתבסס על snapshot  | הפרויקט הזה הוא entrypoint חדש         |
 
 ## 5. עדכון המטריצה
 
@@ -410,21 +404,23 @@ Release 1.4.4 של `gotIt-chrome@e8d70a45246d7a191e66e784bb0a47774d8076f6`
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-06 — DEV UX dependency release gate
 
 Web `0e88da53f679a142bf040a51b4c428b6652e0a72` adds source-map offset security
 regressions to the existing release quality gate and patches the locked dependency.
 FR-UX-001–006 behavior and APIs are unchanged. Tests and owner-controlled DEV TLS
 credential/deployment evidence are tracked in [the canonical checkpoint](28_UX_2_1_DEV.md).
+
 # Guided learning traceability — 2026-10-06
 
-| Requirements | Implementation / tests | Status |
-|---|---|---|
-| FR-GUIDED-001–005 | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14; Web LessonWorkspace/Summary and guided E2E | Backend 4683571 / Web 7c68ca1 Live in DEV; actual guided start/stages/replay/report/cleanup pass; live review regrading/physical mic not verified |
-| FR-GUIDED-006 | voiceSample + private-lesson-voice-sample / Blob preview tests | Unit provider bounds/cleanup and actual TTS sample/playback accepted in DEV |
-| FR-UX-007 / FR-UX-010 | practice validation/service, lesson repository, reading queue; practice integration language/pack cases | Backend locally/integration verified |
-| FR-UX-008 | course.words + course-words unit/PostgreSQL cases | Owner/normalized multiple-meaning boundaries verified |
-| FR-UX-009 | profile validation/repository/types + profile integration legacy merge/isolation | Owner persistence verified |
+| Requirements          | Implementation / tests                                                                                                                                                     | Status                                                                                                                                            |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FR-GUIDED-001–005     | private-lesson activity/service/repository/routes; private-lesson-activity/unit tests; guided-lessons PostgreSQL tests; SEQ-14; Web LessonWorkspace/Summary and guided E2E | Backend 4683571 / Web 7c68ca1 Live in DEV; actual guided start/stages/replay/report/cleanup pass; live review regrading/physical mic not verified |
+| FR-GUIDED-006         | voiceSample + private-lesson-voice-sample / Blob preview tests                                                                                                             | Unit provider bounds/cleanup and actual TTS sample/playback accepted in DEV                                                                       |
+| FR-UX-007 / FR-UX-010 | practice validation/service, lesson repository, reading queue; practice integration language/pack cases                                                                    | Backend locally/integration verified                                                                                                              |
+| FR-UX-008             | course.words + course-words unit/PostgreSQL cases                                                                                                                          | Owner/normalized multiple-meaning boundaries verified                                                                                             |
+| FR-UX-009             | profile validation/repository/types + profile integration legacy merge/isolation                                                                                           | Owner persistence verified                                                                                                                        |
 
 [Canonical requirement criteria, exact source SHA and release evidence](30_FIGMA_FULL_DEV.md). Web 2559d5b adds CourseJourney, approved unit words, scoped SmartPracticeReadyPage, account/minutes and persisted InterfacePreferences; 224 unit/20 gateway/nine new browser cases pass. Complete browser/CI/deployment gate remains pending; fixture counts do not imply individual acceptance of every design frame.
 
@@ -441,11 +437,9 @@ independent article quiz -> saved reading -> letter/delete/capacity input -> act
 server correct/+8 XP grading; FR-UX-009 retained preferences/save success; reading
 provider configuration repaired only in DEV. [Current exact release and acceptance](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
 
-
 ## 2026-10-06 — DEV learning-path correction
 
 FR-PATH-001/002 → server journey/image contracts → unit and real PostgreSQL regressions. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
-
 
 Web 914aa06 maps FR-PATH-003/004/005 to live smoke and 413 passing CI browser regressions. Memorization full-shell image/control regression covers the subsequently observed flex compression. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
 
@@ -453,38 +447,31 @@ Web 914aa06 maps FR-PATH-003/004/005 to live smoke and 413 passing CI browser re
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 FR-UNIT-001/002 → WordPackStudyService / UnitWordBrowser / EnglishLearningPathPage / LiveLearnPage → word-pack-study, unit-study.integration and unit-study browser regressions. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
 FR-LESS-007/008/009 -> UC-07 -> P12/P13 -> SCR-10 -> SEQ-16 -> LessonWorkspace, PrivateLessonPage, privateLessonText -> lesson-workspace/private-lesson-text/private-lesson/guided-lesson/private-lesson-flow tests. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
 
-
 ## 2026-10-07 ? DEV practice hub restoration
 
 SCR-03 / UC-05 / P08 / FR-PRAC-006 ? Web `LiveLearnPage`, isolated `learn-restored.css` ? existing live language, Figma family, navigation and unit-scope regressions. No API/schema/learning-policy change. [Canonical behavior and release evidence](34_PRACTICE_HUB_RESTORATION_DEV.md).
-
 
 ## 2026-10-11 — DEV dashboard design
 
 SCR-01 / UC-05 / UC-06 / FR-DASH-DEV-001–005: the approved program and personal-word dashboards reuse existing server mechanisms, with an exact DEV hostname boundary. [Canonical behavior, tests and release status](35_DASHBOARD_DESIGN_DEV.md).
 
-
 ## 2026-10-11 ? Approved DEV practice design
 
 SCR-03 / UC-05 / P08 / FR-PRAC-006 -> Web `DevPracticePage`, `practiceDesignEnabled`, scoped shell/styles, eight catalogs and original illustrations -> unchanged practice/dashboard APIs -> host-boundary, selected-word/return, server-goal, resume/status and stale-language regressions. [Canonical behavior and release evidence](36_PRACTICE_DESIGN_DEV.md).
-
 
 ## 2026-10-11 - Focus games in DEV
 
 FR-FOCUS-DEV-001 through 005 -> UC-05 -> P08 -> SCR-04 -> SEQ-17 -> DevFocusGamePage/useFocusSession/focusPractice -> focus-games.test.tsx and design-qa.md. External provider acceptance is unverified. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
 
 2026-10-11 DEV practice entry correction: library languages absent from profile capabilities now use real profile preferences; five direct game cards replace unfinished placeholders. Twelve regressions and the full 284-unit / 20-gateway suite passed. Real DEV acceptance is tracked in [37](37_FOCUS_GAMES_DEV.md#dev-entry-regression-and-correction-2026-10-11).
-
 
 ## 2026-10-11 - Owner game-design corrections (local)
 
@@ -494,32 +481,25 @@ FR-FOCUS-DEV-006 / SCR-04 / UC-05 / P08 -> DevFocusGamePage, useFocusSession, Mo
 
 FR-FOCUS-DEV-007 → SCR-04 / UC-05 / P08 → useFocusSession, FocusListeningGame, DevFocusGamePage, focus-alignment.css → focus-games and letter-input regressions plus viewport/live DEV evidence. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 FR-FOCUS-DEV-008 ? SCR-04 / UC-05 / P08 ? DevFocusGamePage, useFocusSession, focus-alignment.css ? focus-games.test.tsx Audio.play/speech and animated gift regressions plus Chrome geometry/visual checks. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 — My Words DEV
 
 FR-LIB-DEV-001 → SCR-05/06 / UC-03 / P06 / SEQ-13 → DevMyWordsPage, myWords, library repository/validation → five UI regressions, 34 PostgreSQL practice tests and same-viewport source/implementation visual QA. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
 
-
 2026-10-12 FR-FOCUS-DEV-008 clarification: annotated green target is the central `.xpbig img`, superseding the header target. [Canonical clarification and evidence](37_FOCUS_GAMES_DEV.md#central-reward-coin-destination-clarification---2026-10-12).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
 
-
 2026-10-13 NFR-NAV-DEV-001 -> SCR-05/06 and My Programs / UC-03 / P06 -> resourceCache, useCachedResource, navigationResources, AppShell -> resource-cache.test.tsx, program-artwork-cache.test.ts and authenticated DEV repeated-navigation timings. [Canonical evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
-
 
 ## 2026-10-13 - DEV program chooser
 
 The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](40_PROGRAM_CHOOSER_DEV.md).
-
 
 ## 2026-10-13 - Program map DEV
 
@@ -529,7 +509,6 @@ nine program-map component/model tests, 350-case suite, 21 gateway checks and
 desktop/mobile browser evidence. [Canonical scope and status](41_PROGRAM_MAP_DESIGN_DEV.md).
 No API/schema/learning-policy change.
 
-
 ## 2026-10-14 - Settings reference design in DEV
 
 SCR-11 now has the approved category navigation and profile layout in Web DEV,
@@ -537,7 +516,6 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
-
 
 ## 2026-10-14 - Independent Admin Console foundation
 
@@ -557,11 +535,23 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+FR-ADM-14–18 / SCR-ADM-USR -> Core admin.learner/account resolver, Product admin.learner/profile repository, Admin UserShow/UserSettings/gateway -> admin-operations PostgreSQL integration, gateway boundaries and isolated browser QA. [Canonical mapping](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+FR-CON-04/05/06 -> WordAdmin, regenerateConcept, Admin Words/ConceptImage and fixed gateway routes -> focused PostgreSQL, gateway, Pixabay and browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+FR-CON-09 → shared SQL resolver, ConceptImagesService, WordAdmin, ensureWordImageConcept → `translation-concept-links.integration.test.ts` and existing concept/admin/practice/catalog PostgreSQL suites. [Southern / جنوبي incident and release evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -570,17 +560,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-FR-ADM-14–18 / SCR-ADM-USR -> Core admin.learner/account resolver, Product admin.learner/profile repository, Admin UserShow/UserSettings/gateway -> admin-operations PostgreSQL integration, gateway boundaries and isolated browser QA. [Canonical mapping](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-FR-CON-04/05/06 -> WordAdmin, regenerateConcept, Admin Words/ConceptImage and fixed gateway routes -> focused PostgreSQL, gateway, Pixabay and browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

@@ -4,6 +4,7 @@
 
 Release checks passed: 50 Admin tests/build, 32 Core tests/build, 242 Product tests/build, 122 disposable PostgreSQL integration tests and Docker build. Authenticated live activity loading/paging/navigation passed after ordered deployment. Product CI remains blocked at the existing private-Core checkout authorization. [Exact evidence and live acceptance](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Added normalization, strict gateway and PostgreSQL regressions for multilingual reuse, isolation, claims, resets and safe rollback; local browser edit/save/mobile QA. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -12,11 +13,9 @@ Added normalization, strict gateway and PostgreSQL regressions for multilingual 
 
 Real local TOTP unlock and browser-clock expiry cover visible disabled actions and open-dialog confirmation; a read-only capability fixture checks missing staff permission separately from billing. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
 
-
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Disposable PostgreSQL and local-browser coverage includes promotion/demotion, plan override/reset/expiry, actual catalog units, prompt base/active/draft separation and Hebrew guidance. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
 
@@ -135,11 +134,9 @@ Render Backend `dep-dav9ef1srm7s73eegcng` reports Live at `d8d930a7dfbeb01f8f951
 
 Render `dep-dav8pnk9v7es73fjv47g` is Live for exact Web SHA `5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, served CSS and JavaScript returned 200. CSS includes the new modal footer and fixed action-column rules; JavaScript includes "לימוד שפה מאפס". The production browser opened at Login, so a signed-in visual preview check was not performed. Local 50-word Playwright geometry remains the functional layout regression.
 
-
 ## 2026-10-01 — Hebrew path label and preview alignment
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`: `npm.cmd run check` passed TypeScript, ESLint, 160/160 Vitest tests, production build and 16/16 gateway tests. Targeted `npm.cmd run test:responsive -- --grep "English unit"` passed 2/2 Playwright tests. The regression checks the new Hebrew heading and a 50-word modal at 320px/568px, 525px/709px and 1920px/900px: known buttons stay aligned and on one line, the list scrolls, and both footer actions remain inside the modal. Production deploy and authenticated visual smoke are pending.
-
 
 ## 2026-10-01 — Final Web deployment verification
 
@@ -157,16 +154,13 @@ Render Web `dep-dav4nrgjo6nc73fgnt9g` is Live at exact `383482331ca895c149112364
 
 `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` passed typecheck, build, 206/206 fast tests, 59/59 PostgreSQL integration tests, and targeted Prettier. The new integration branch starts with a Core-authenticated user who has no GotIt profile, marks a repeated English word known, verifies profile creation and cross-unit known state, then reverses the state. The production migration's first attempt failed on the original direct Core FK (SQLSTATE 42501) before catalog replacement; no production success is claimed for that attempt. Retry with the corrected source is pending.
 
-
 ## 2026-10-01 — Named-unit Web regression
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` passed `npm.cmd run check`: typecheck, lint, 160/160 Vitest tests, production build and 16/16 gateway tests. `npm.cmd run test:responsive` passed 374/374 Playwright checks. `test/live.test.tsx` covers the named unit, a 50-ID initial install, whole-unit known mark/unmark, single-word known mark, and a 49-ID install that excludes the known word. Exact-SHA production deployment and authenticated smoke remain pending. Backend counterpart and its 59 PostgreSQL checks are recorded above.
 
-
 ## 2026-10-01 — Named English units and known-word backend
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`: `npm.cmd run typecheck`, `npm.cmd test` (206/206), `npm.cmd run build`, `npm.cmd run test:integration` (59/59 on disposable PostgreSQL), and targeted Prettier passed. `test/word-packs.test.ts` validates all supplied unit names/words, 50 translated entries per unit, calendar/home coverage and no Basic `satellite`. `test/integration/practice.integration.test.ts` validates the migrated catalog, one-action 50-word known marking, cross-unit repeated-word state, isolation, reversal, and omission from pack practice. Migration down/up also ran on disposable PostgreSQL. Repository-wide `format:check` still reports 36 pre-existing unrelated files. Production migration, deployment, and authenticated known-word smoke are pending.
-
 
 ## 2026-10-01 - Shell duplicate regression
 
@@ -281,14 +275,14 @@ generation for future captures.
 
 Smart review rotation regression: `test/integration/practice.integration.test.ts` backdates successful matching attempts by two days and verifies that the next queue still selects untouched words first. The test passed against disposable PostgreSQL. On the source commit, 203 fast tests passed; the full integration suite had five unrelated catalog/migration expectation failures, and typecheck/build/format checks were blocked by unrelated current files. Render deployment `dep-daup51s9v7es73aeastg` is Live for the source SHA; read-only production-data queue evaluation selected three words outside the reported repeated board. Authenticated HTTP queue and browser submission were not exercised.
 
-| שכבה | מטרה | דוגמאות |
-|---|---|---|
-| Unit | חוקים טהורים וקצוות | scoring, policy, normalization, state machine |
-| Contract/HTTP | route, validation, status/errors | Supertest, gateway tests |
-| Integration DB | constraints/transactions/isolation | PostgreSQL אמיתי |
-| Component | UX/state/accessibility | Testing Library |
-| Browser/E2E | routing/layout/browser APIs | Playwright/manual Chrome |
-| Live acceptance | providers, OAuth, billing, deploy | staging/production checklist |
+| שכבה            | מטרה                               | דוגמאות                                       |
+| --------------- | ---------------------------------- | --------------------------------------------- |
+| Unit            | חוקים טהורים וקצוות                | scoring, policy, normalization, state machine |
+| Contract/HTTP   | route, validation, status/errors   | Supertest, gateway tests                      |
+| Integration DB  | constraints/transactions/isolation | PostgreSQL אמיתי                              |
+| Component       | UX/state/accessibility             | Testing Library                               |
+| Browser/E2E     | routing/layout/browser APIs        | Playwright/manual Chrome                      |
+| Live acceptance | providers, OAuth, billing, deploy  | staging/production checklist                  |
 
 Web billing regression in `gotIt-front/test/billing-page.test.tsx`: with Free in the catalog and status, it appears only in the current-plan summary; with a paid status, Free is absent. `gotIt-front@196cf9593cda52360160d620d02091071b421ce5` passed `npm run check` (typecheck, lint, 157 Vitest tests, build, 16 gateway tests). Render `dep-dav2137pn0mc739o6l30` is Live for that SHA; `/ready` and the new billing asset returned 200. The served asset has the current-plan marker and lacks the Free-offer marker. Authenticated UI smoke remains unverified because the test tab was not signed in.
 
@@ -403,6 +397,7 @@ provider/OAuth/Paddle acceptance, smoke after deploy ו־rollback readiness.
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+
 ## 2026-10-06 — DEV UX dependency audit regression
 
 Source `gotIt-front@0e88da53f679a142bf040a51b4c428b6652e0a72` patches source-map-js
@@ -419,12 +414,15 @@ error and fresh workstation network checks failing before HTTP responses.
 Direct verified-TLS DEV runtime login and strict schema/privilege preflight passed;
 this does not prove a successful Render runtime deployment or product writes.
 [Canonical release gate](28_UX_2_1_DEV.md).
+
 # Guided learning verification — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60`: typecheck/build, 228 fast tests and 67 real disposable-PostgreSQL tests passed. New cases cover owner/app boundaries, expired session races, concurrent revisions, stable/changed command replay, normalized ambiguous unit words, report cleanup, runtime DDL denial, legacy preference merge and provider/sample failure/size/timeout. Changed-file Prettier passed; repository-wide existing formatting/Windows checkout drift is not resolved by this task. [Detailed checkpoint and pending live gates](30_FIGMA_FULL_DEV.md#verification-checkpoint).
+
 # Backend release audit follow-up — 2026-10-06
 
 Source `43a429ceeed3a2cd4715724a4d78568f846ef4d0` adds two proxy-subnet regressions and patches the locked transitive dependency. Typecheck/build, 230 fast tests and zero-finding audit pass. The preceding source passed 67 PostgreSQL tests. [Exact source and backup/release status](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
+
 ## 2026-10-06 - Complete Figma Web checkpoint
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd`: typecheck/lint, 224 unit, production build, 20 gateway/security, formatting/diff and zero-finding audit pass. Nine new family/guided/focused-game browser cases pass at 320/390/1487, covering geometry, exact vocabulary scope, stable failure retry, microphone-free text, automatic summary and clickable letters. Complete 406-case browser run and Linux CI pending. Backend 230 fast/67 PostgreSQL functional cases pass; DEV migration/preflight/normalization/readiness verified, real provider acceptance pending. [Evidence and limits](30_FIGMA_FULL_DEV.md).
@@ -446,11 +444,9 @@ then succeeded after DEV-only `gpt-6-luna` environment deployment: actual previe
 meaning/save/quiz and letter/delete/capacity/correct server grading passed. All three
 DEV readiness endpoints return 200. [Final evidence and unverified boundaries](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
 
-
 ## 2026-10-06 — DEV learning-path correction
 
 232 fast / 68 PostgreSQL tests; changed-file formatting verified, repository-wide formatting baseline remains. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
-
 
 Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/build/audit. Final image-shell follow-up passes 12 red/green full-shell cases, full check and live 260/180px desktop/mobile image measurements; exact-source Linux CI also passes all 413 browser, 225 unit and 20 gateway cases plus type/lint/build/audit. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
 
@@ -458,16 +454,13 @@ Web 914aa06 exact Linux CI passes 225 unit, 413 browser, 20 gateway, type/lint/b
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study Backend passes 235 fast and all 69 PostgreSQL tests, type/build/format/diff/audit; four new Web browser cases pass; full Web gate pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
-
 ## 2026-10-07 - Private lesson conversation room
 
 Room, typed acknowledgment/retry, real track mute/resume, IME/draft and responsive evidence are recorded centrally. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
-
 
 ## 2026-10-11 - Focus games in DEV
 
@@ -479,21 +472,17 @@ Focus verification covers isolated fixtures, complete sequence, ambiguous retry/
 
 Full Web check passed 292 tests / 50 files and 20 gateway/security tests. Focus regressions cover fresh matching IDs, assistance/requeue, speech pause and stable retry. Local browser fixtures are distinct from live/provider acceptance. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 Session-end/cloze regression: full check 295 unit tests / 50 files plus 20 gateway/security; final 27 focused regressions, typecheck/lint/build; Chrome fixture geometry in LTR/RTL. Live acceptance recorded separately. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
 
-
 ## 2026-10-13 - My Programs / My Words navigation latency
 
 Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
-
 
 ## 2026-10-14 - Settings reference design in DEV
 
@@ -513,11 +502,26 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user-detail coverage adds scoped real-PostgreSQL histories/time accounting/concurrent preference writes, gateway owner routing and loopback browser checks with fake accounts and seeded learning data. [Tests and verification boundaries](44_ADMIN_USER_DETAILS.md#verification).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Added all-user search/history and atomic replacement PostgreSQL cases, gateway boundaries, stock exclusion and isolated desktop/mobile browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -526,17 +530,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user-detail coverage adds scoped real-PostgreSQL histories/time accounting/concurrent preference writes, gateway owner routing and loopback browser checks with fake accounts and seeded learning data. [Tests and verification boundaries](44_ADMIN_USER_DETAILS.md#verification).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-Added all-user search/history and atomic replacement PostgreSQL cases, gateway boundaries, stock exclusion and isolated desktop/mobile browser checks. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

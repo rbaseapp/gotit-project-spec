@@ -4,6 +4,7 @@
 
 Admin homepage activity feeds and owner-side cancellation/failure filters are published, deployed and verified in the authenticated live Admin. [Scope, boundaries and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Cross-language concepts and shared images are implemented and verified locally; only curated mappings share images. Production unchanged. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -12,11 +13,9 @@ Cross-language concepts and shared images are implemented and verified locally; 
 
 Admin 0.3.1 explains locked editing actions instead of hiding them. Existing deployed 0.3 enables granted edits after Unlock editing; only the UI follow-up requires deployment. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
 
-
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Owner accepted operational 0.2. Follow-up 0.3 adds role/access management, real base prompt visibility, prepared English curriculum and Hebrew help; its production rollout is tracked separately. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-12 — Shared header components (DEV)
 
@@ -135,11 +134,9 @@ Backend source `gotIt-backend@10bf19712bc9831a77dd9672c5f78701577a2966` corrects
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` locally verifies named unit cards, a one-click whole-unit known action, per-word known actions in the preview, reversal, and skipping known entries during installation. It consumes the backend known/completed fields from `gotIt-backend@14012a0`. `npm.cmd run check` passed (160 Vitest, 16 gateway), and 374 Playwright responsive checks passed. Production deployment and authenticated smoke pending. See [SCR-16](17_SCREEN_CATALOG.md).
 
-
 ## 2026-10-01 — Named English units and known-word backend source
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally verifies 60 supplied themed English/Hebrew units and a learner-declared known state. A protected single request can mark an entry or all 50 entries; repeated English words across units share that state. Pack practice skips known entries; completion counts known ∪ mastered without granting mastery/XP. Disposable PostgreSQL tests passed. Production still serves the previous version until the guarded migration and deployment are verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
-
 
 ## 2026-10-01 - Shell assessment and notice placement
 
@@ -208,17 +205,17 @@ deployment evidence, לא תאריך מסמך בלבד.
 
 ## 2. Identity ו־Account
 
-| Feature | Core | Web | Chrome | מצב | הערות |
-|---|---:|---:|---:|---|---|
-| Email registration/login | ✓ | ✓ | ✓ | Stable | password 12–128 |
-| Google login Web ID token | ✓ | ✓ | — | Stable | client per application |
-| Google login Chrome access token | ✓ | — | ✓ | Stable | `chrome.identity` |
-| Facebook login | ✓ | ✓ | — | Stable | email scope נדרש |
-| Access JWT + rotating refresh | ✓ | ✓ | ✓ | Stable | storage שונה לכל client |
-| Logout/revocation | ✓ | ✓ | ✓ | Stable | idempotent |
-| Application role user/admin | ✓ | ✓ | חלקי | Stable | admin loaded from DB |
-| Email verification | — | — | — | Planned P0 | UI אינו מבטיח |
-| Password reset | — | — | — | Planned P0 | ספק email חסר |
+| Feature                          | Core | Web | Chrome | מצב        | הערות                   |
+| -------------------------------- | ---: | --: | -----: | ---------- | ----------------------- |
+| Email registration/login         |    ✓ |   ✓ |      ✓ | Stable     | password 12–128         |
+| Google login Web ID token        |    ✓ |   ✓ |      — | Stable     | client per application  |
+| Google login Chrome access token |    ✓ |   — |      ✓ | Stable     | `chrome.identity`       |
+| Facebook login                   |    ✓ |   ✓ |      — | Stable     | email scope נדרש        |
+| Access JWT + rotating refresh    |    ✓ |   ✓ |      ✓ | Stable     | storage שונה לכל client |
+| Logout/revocation                |    ✓ |   ✓ |      ✓ | Stable     | idempotent              |
+| Application role user/admin      |    ✓ |   ✓ |   חלקי | Stable     | admin loaded from DB    |
+| Email verification               |    — |   — |      — | Planned P0 | UI אינו מבטיח           |
+| Password reset                   |    — |   — |      — | Planned P0 | ספק email חסר           |
 
 Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK/domain settings and icon are saved, and Core's provider row points to App ID `2207127606520765`. The owner-reported replacement Core configuration deployment and negative verifier smoke passed. Web `gotIt-front@7c956aa2e517aed331d98ce9228860bb1afb8f3c` is Live, opens the production consent popup and exits an unanswered attempt with retry. Meta's portfolio remains Unverified; only business verification is exposed for this app and the owner has no registered business. Public publication and real-account acceptance remain pending. See [rollout evidence](24_FACEBOOK_LOGIN_ROLLOUT.md).
 
@@ -226,39 +223,39 @@ Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK
 
 ## 3. Profile ו־Preferences
 
-| Feature | מצב | פרטים |
-|---|---|---|
-| source/translation default | Stable | nullable source enables provider detection |
-| timezone | Stable | IANA; משפיע calendar day/streak |
-| daily goal | Stable | items/minutes/attempts |
-| new items/day | Stable | configurable |
-| translation method | Stable | auto/dictionary/ai |
-| enabled skills | Stable | 1–5 skills |
-| language CEFR self-assessment | Stable | A1–C2 |
-| system level/range/confidence | Stable | updated from lesson evidence |
-| interests | Stable | reading personalization |
-| UI locale | Stable | 8 locales ב־Web/Extension |
+| Feature                       | מצב    | פרטים                                      |
+| ----------------------------- | ------ | ------------------------------------------ |
+| source/translation default    | Stable | nullable source enables provider detection |
+| timezone                      | Stable | IANA; משפיע calendar day/streak            |
+| daily goal                    | Stable | items/minutes/attempts                     |
+| new items/day                 | Stable | configurable                               |
+| translation method            | Stable | auto/dictionary/ai                         |
+| enabled skills                | Stable | 1–5 skills                                 |
+| language CEFR self-assessment | Stable | A1–C2                                      |
+| system level/range/confidence | Stable | updated from lesson evidence               |
+| interests                     | Stable | reading personalization                    |
+| UI locale                     | Stable | 8 locales ב־Web/Extension                  |
 
 ## 4. Capture ו־Vocabulary
 
-| Feature | Web | Chrome | Backend | מצב |
-|---|---:|---:|---:|---|
-| Manual capture | ✓ | ✓ | ✓ | Stable |
-| selection/context menu | — | ✓ | ✓ | Stable |
-| double-click inline translation | — | ✓ | ✓ | Stable |
-| floating selection action | — | ✓ | ✓ | Stable |
-| contextual preview | ✓ | ✓ | ✓ | Stable |
-| auto/dictionary/AI choice | ✓ | ✓ | ✓ | Stable; availability by config/tier |
-| candidate provenance/signature | parsed | parsed | ✓ | Stable |
-| existing-sense detection | ✓ | ✓ | ✓ | Stable |
-| merge/new sense | ✓ | ✓ | ✓ | Stable |
-| save idempotency | ✓ | ✓ | ✓ | Stable |
-| edit semantic fields | ✓ | ✓ limited | ✓ | Stable |
-| search/filter/sort/page | ✓ | — | ✓ | Stable |
-| bulk actions | ✓ | — | ✓ | Stable |
-| tags/examples/occurrences | ✓ | — | ✓ | Stable |
-| soft delete/restore | ✓ | delete only | ✓ | Stable |
-| permanent deletion | — | — | — | Open |
+| Feature                         |    Web |      Chrome | Backend | מצב                                 |
+| ------------------------------- | -----: | ----------: | ------: | ----------------------------------- |
+| Manual capture                  |      ✓ |           ✓ |       ✓ | Stable                              |
+| selection/context menu          |      — |           ✓ |       ✓ | Stable                              |
+| double-click inline translation |      — |           ✓ |       ✓ | Stable                              |
+| floating selection action       |      — |           ✓ |       ✓ | Stable                              |
+| contextual preview              |      ✓ |           ✓ |       ✓ | Stable                              |
+| auto/dictionary/AI choice       |      ✓ |           ✓ |       ✓ | Stable; availability by config/tier |
+| candidate provenance/signature  | parsed |      parsed |       ✓ | Stable                              |
+| existing-sense detection        |      ✓ |           ✓ |       ✓ | Stable                              |
+| merge/new sense                 |      ✓ |           ✓ |       ✓ | Stable                              |
+| save idempotency                |      ✓ |           ✓ |       ✓ | Stable                              |
+| edit semantic fields            |      ✓ |   ✓ limited |       ✓ | Stable                              |
+| search/filter/sort/page         |      ✓ |           — |       ✓ | Stable                              |
+| bulk actions                    |      ✓ |           — |       ✓ | Stable                              |
+| tags/examples/occurrences       |      ✓ |           — |       ✓ | Stable                              |
+| soft delete/restore             |      ✓ | delete only |       ✓ | Stable                              |
+| permanent deletion              |      — |           — |       — | Open                                |
 
 ## 5. Word Packs
 
@@ -274,24 +271,24 @@ Production activation status for Facebook Login on 2026-10-01: Meta `email`, SDK
 
 ## 6. Practice ו־Learning
 
-| Capability | מצב | מקור סמכות |
-|---|---|---|
-| smart review | Stable | Backend queue/policy |
-| manual session | Stable | Backend |
-| flashcards | Stable | self-rating scored server-side |
-| typed recall | Stable | accepted forms/server scoring |
-| multiple choice | Stable | opaque choice IDs |
-| listening + spelling | Stable | server exercise + TTS |
-| matching | Stable | server answer mapping |
-| pronunciation | Stable conditional | configured speech provider |
-| article quiz | Stable | reading-bound exercises |
-| study cards before scoring | Stable | no evidence/XP |
-| study images | Stable conditional | Pixabay/OpenAI provider |
-| five-skill projections | Stable | attempts/effects |
-| learned/established stages | Stable | policy v1.3 |
-| manual mastery override | Stable | source=user, no fake evidence |
-| demotion after failures | Stable | active recall policy |
-| XP, daily cap, level, streak | Stable | Backend ledger/projections |
+| Capability                   | מצב                | מקור סמכות                     |
+| ---------------------------- | ------------------ | ------------------------------ |
+| smart review                 | Stable             | Backend queue/policy           |
+| manual session               | Stable             | Backend                        |
+| flashcards                   | Stable             | self-rating scored server-side |
+| typed recall                 | Stable             | accepted forms/server scoring  |
+| multiple choice              | Stable             | opaque choice IDs              |
+| listening + spelling         | Stable             | server exercise + TTS          |
+| matching                     | Stable             | server answer mapping          |
+| pronunciation                | Stable conditional | configured speech provider     |
+| article quiz                 | Stable             | reading-bound exercises        |
+| study cards before scoring   | Stable             | no evidence/XP                 |
+| study images                 | Stable conditional | Pixabay/OpenAI provider        |
+| five-skill projections       | Stable             | attempts/effects               |
+| learned/established stages   | Stable             | policy v1.3                    |
+| manual mastery override      | Stable             | source=user, no fake evidence  |
+| demotion after failures      | Stable             | active recall policy           |
+| XP, daily cap, level, streak | Stable             | Backend ledger/projections     |
 
 Smart review queue rotation (`gotIt-backend@d659b274397421685ff840c9013437a366ab1718`): among eligible words, a current-revision word with no successful matching attempt precedes one already solved in matching. Previously solved words rotate from oldest to newest matching success across calendar days. Due status, mastery gaps and active-recall requirements remain in the server policy. Render deployment `dep-daup51s9v7es73aeastg` is Live; production-data queue evaluation selected three different English words from the reported board.
 
@@ -408,10 +405,10 @@ separation ו־cross-repo compatibility CI.
 2026-10-02: `gotIt-front@3fa4da4f31023682c9308d686fb04dbb0676b590` slows avatar lip response for FR-LESS-006; locally verified (173 Vitest, 16 gateway, 2 avatar Playwright). Exact SHA is Live on Render; production delivered-code/readiness smoke passed. See [canonical behavior and regression evidence](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: `gotIt-front@3ec2d2899e4cf6504e65aba01f19e425c9a87942` further slows FR-LESS-006 avatar lips; 173 Vitest, 16 gateway and 2 avatar browser tests passed. Exact SHA is Live; production readiness and delivered-code smoke passed. [Current thresholds and evidence](25_TUTOR_AVATAR_MOTION.md).
+
 # Guided learning/account DEV checkpoint — 2026-10-06
 
 Backend `468357129d919b1dcacd15a409ec78d77e69bf68` and Web `7c68ca16a7b6ef2633bfe0424207fea301ff6dea` are Live in DEV. Canonical learning/account families, owned guided activities/replay/report/words/history, scoped independent smart/manual games, reading and saved UI preferences are implemented. Actual provider lesson stages/replay/report/cleanup, teacher sample, reading generation/save/quiz and clickable-letter server grading were accepted. Final Web CI passes 224 unit/406 browser/20 gateway/type/lint/build/audit. DEV reading now uses the available repository default `gpt-6-luna`, replacing leftover Anthropic model configuration. This is not production/physical-device/all-494-frame acceptance; parent/child accounts, deletion and native Play remain deferred. [Exact releases, tests, limits and screenshots](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -421,31 +418,25 @@ Backend path eligibility and Web program/map/words/activities/levels are deploye
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study media before installation is Backend locally/integration verified; scoped Web game selection is in progress; release pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
 Approved conversation room, inline writing and legacy text entry are implemented in an isolated DEV Web feature branch. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
 
-
 ## 2026-10-07 ? Production practice hub restored in DEV
 
 SCR-03 `/learn` restores the production page at Web `006482d`; local check and responsive scope regressions passed, and exact DEV release/read-only authenticated acceptance are verified. [Canonical behavior and evidence](34_PRACTICE_HUB_RESTORATION_DEV.md).
-
 
 ## 2026-10-11 ? DEV practice design
 
 The selected practice screen is implemented, locally verified and deployed/accepted read-only in DEV at Web `6740e16`; exact release evidence is in the [canonical feature document](36_PRACTICE_DESIGN_DEV.md). Existing practice contracts remain authoritative.
 
-
 ## 2026-10-11 - Focus games in DEV
 
 SCR-04 implements five approved focus games, all transitions and authoritative completion in DEV only. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
-
 
 ## 2026-10-11 - Owner game-design corrections (local)
 
@@ -455,26 +446,21 @@ DEV game visual corrections are implemented and locally verified in the games wo
 
 DEV focus practice implements the owner alignment checklist with server authority retained. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 DEV-only focus games: session-end video and cloze audio correction locally verified; exact release evidence belongs to document 37. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 — My Words DEV implementation
 
 Approved vocabulary design connects search, compound filters, paging, tags, capture, selected practice and reversible library actions to existing APIs. Production is outside release scope. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
 
-
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
 
-
 ## 2026-10-13 - My Programs / My Words navigation latency
 
 Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
-
 
 ## 2026-10-13 - Prepared program map design (DEV)
 
@@ -482,7 +468,6 @@ The supplied screenshot is implemented as a dynamic, modular prepared-unit map
 under the existing DEV gate. Server progression/locks and the canonical shared
 header are retained. Behavior, acceptance, source and exact release evidence are
 owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
-
 
 ## 2026-10-14 - Settings reference design in DEV
 
@@ -502,11 +487,23 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user details are locally implemented: account/emails/billing/auth histories, recorded daily learning/game/XP/lesson/program/token data and audited preference editing. Historical unmeasured time/tokens and payment amounts remain explicitly unknown. Production rollout is not included. [Contract and evidence](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and explicit Pixabay/AI shared-image replacement are released to main and deployed. Paid-provider quality verification remains separate; see the exact production evidence. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+2026-10-16: new-language shared image linking is production verified for Southern / Arabic through the common recorded Hebrew translation. Backend 6db6db6; [priority rules, tests and live evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -515,17 +512,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user details are locally implemented: account/emails/billing/auth histories, recorded daily learning/game/XP/lesson/program/token data and audited preference editing. Historical unmeasured time/tokens and payment amounts remain explicitly unknown. Production rollout is not included. [Contract and evidence](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-All-user vocabulary and explicit Pixabay/AI shared-image replacement are implemented and locally verified. No deployment or paid-provider verification is claimed. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

@@ -4,6 +4,7 @@
 
 SCR-ADM-HOME replaces introductory module tiles/counters with seven independent recent-activity lists, pagination, detail/full-list links and loading/empty/error/unavailable states. [Canonical screen contract](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 SCR-ADM-CON adds concept search, multilingual editing, shared image preview/generation/reset and locked/error states. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -12,11 +13,9 @@ SCR-ADM-CON adds concept search, multilingual editing, shared image preview/gene
 
 Applicable admin actions remain visible but disabled, with Hebrew explanations for permissions, MFA unlock, service availability and protected targets. [Canonical behavior, verification and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
 
-
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Users gains role/permission and Free/Pro access actions; Programs gains prepared catalog and visible creation; prompt previews, policy helpers and Hebrew Guide explain field effects. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-12 — Fixed DEV application header
 
@@ -132,11 +131,9 @@ The English unit preview now offers a labeled checkbox per word, select all, cle
 
 Render Web `dep-dav8pnk9v7es73fjv47g` is Live at `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Web `/ready`, `/english-learning` and changed CSS/JS assets returned 200. The browser opened at Login, so the 50-word preview was not visually inspected after deployment; local 320px/525px/desktop layout regression passed.
 
-
 ## 2026-10-01 — SCR-16 Hebrew path name and unit preview alignment
 
 `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` labels the Hebrew navigation item and path heading "לימוד שפה מאפס". The unit preview aligns English, Hebrew and the per-word known control in stable columns; at phone widths up to 420px the word pair and control stack. Fifty entries scroll inside the modal while its close and add/practice actions remain padded and visible at short viewport heights. The row control has a visible border. A component heading regression and 320px/525px/desktop Playwright layout checks passed locally. Production deployment and visual smoke are pending at this source checkpoint.
-
 
 ## 2026-10-01 — SCR-16 preview control readability
 
@@ -145,7 +142,6 @@ Render Web `dep-dav8pnk9v7es73fjv47g` is Live at `gotIt-front@5dd490426768c983c8
 ## 2026-10-01 — SCR-16 named units and prior knowledge
 
 `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` shows the server-supplied theme name alongside each unit number and level. Each card has a one-click mark/unmark-whole-unit control and a known count; the preview offers per-entry mark/unmark. Known or truly mastered entries count toward path completion, but only mastery comes from scored evidence. Starting a unit sends only unknown entry IDs; a fully known unit is treated as complete. Existing loading, unavailable, error/retry, billing, modal and pack-practice states remain. Hebrew copy was authored and six other non-English locale catalogs have English fallback text. A live-flow regression and 374 responsive Playwright checks passed locally; production smoke pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
-
 
 ## 2026-10-01 - SCR-00 shell level placement
 
@@ -184,14 +180,14 @@ Locally verified by `test/live.test.tsx`; live browser verification is pending.
 
 ## מסכי קורס חדשים — 2026-09-30
 
-| מסך | נתיב | תוכן/פעולה מרכזית |
-|---|---|---|
-| SCR-PC-00A | `/courses`, `/courses/:courseId` | בחירת זוג שפות, שאלה אחת, תשובה בכתב/קול ותמלול לעריכה |
-| SCR-PC-00B | `/courses/:courseId` | העדפות שמורות, הבחנה בין דיווח להמלצה, תיקון ואישור לבנייה |
-| SCR-PC-01 | `/courses/:courseId` | תוכנית מלאה כטיוטה, אישור נפרד, בקשת שינויים ומיקום נוכחי |
-| SCR-PC-02 | בתוך SCR-PC-01 | יחידה נפתחת עם שיעורים, דקדוק, מילים, תלות, יעד ודוגמת בית |
-| SCR-PC-03 | `/homework/:homeworkId` | משימה אחת, בדיקה, משוב, רמז, דילוג ושמירה להמשך |
-| SCR-PC-04 | בסיום SCR-PC-03 | תוצאה קצרה, מוקד חזרה ופתיחת פירוט |
+| מסך        | נתיב                             | תוכן/פעולה מרכזית                                          |
+| ---------- | -------------------------------- | ---------------------------------------------------------- |
+| SCR-PC-00A | `/courses`, `/courses/:courseId` | בחירת זוג שפות, שאלה אחת, תשובה בכתב/קול ותמלול לעריכה     |
+| SCR-PC-00B | `/courses/:courseId`             | העדפות שמורות, הבחנה בין דיווח להמלצה, תיקון ואישור לבנייה |
+| SCR-PC-01  | `/courses/:courseId`             | תוכנית מלאה כטיוטה, אישור נפרד, בקשת שינויים ומיקום נוכחי  |
+| SCR-PC-02  | בתוך SCR-PC-01                   | יחידה נפתחת עם שיעורים, דקדוק, מילים, תלות, יעד ודוגמת בית |
+| SCR-PC-03  | `/homework/:homeworkId`          | משימה אחת, בדיקה, משוב, רמז, דילוג ושמירה להמשך            |
+| SCR-PC-04  | בסיום SCR-PC-03                  | תוצאה קצרה, מוקד חזרה ופתיחת פירוט                         |
 
 SCR-10 מציג הכנה קצרה לשיעור קורס וסיכום תמציתי עם כפתור בית; שיחה חופשית נשמרת.
 מצבי loading/error/empty, הקלטה/תמלול, כשל ספק, שינוי בגרסה, טיוטה ותוכנית פעילה
@@ -240,14 +236,14 @@ flowchart TD
 └─────────────────────────────────┴──────────────────────────────────┘
 ```
 
-| מאפיין | תיאור |
-|---|---|
-| Actor | משתמש demo/live; admin/user |
-| מטרות | ניווט עקבי, סטטוס חשבון, פעולת capture גלובלית |
-| נתונים | profile, subscription, latest lesson assessment |
-| וריאנטים | desktop sidebar; mobile drawer+scrim; RTL/LTR |
-| בקרות | liveOnly routes, entitlement write, profile load error |
-| מצבים | demo/live/free/trial/paid/admin; sidebar open/closed |
+| מאפיין     | תיאור                                                      |
+| ---------- | ---------------------------------------------------------- |
+| Actor      | משתמש demo/live; admin/user                                |
+| מטרות      | ניווט עקבי, סטטוס חשבון, פעולת capture גלובלית             |
+| נתונים     | profile, subscription, latest lesson assessment            |
+| וריאנטים   | desktop sidebar; mobile drawer+scrim; RTL/LTR              |
+| בקרות      | liveOnly routes, entitlement write, profile load error     |
+| מצבים      | demo/live/free/trial/paid/admin; sidebar open/closed       |
 | Acceptance | controls 44×44 במובייל, no horizontal overflow, focus תקין |
 
 ## 4. SCR-01 — Auth
@@ -269,14 +265,14 @@ Route: כל route לא־משפטי כאשר `mode=signed-out`.
 └──────────────────────────────┘
 ```
 
-| נושא | אפיון |
-|---|---|
-| מטרה | יצירת/חידוש זהות וגישה למוצר |
-| פעולות | login/register, Google, Facebook, demo |
-| Validation | email תקין, password 12–128; provider token bounded |
-| הצלחה | tokens נשמרים, identity/profile נטענים, מעבר ל־Dashboard |
-| שגיאות | invalid credentials, existing user, disabled, provider config/token, network |
-| Email verification / forgot password | Implemented in current task; [release status](27_EMAIL_AUTH_RECOVERY.md) |
+| נושא                                 | אפיון                                                                        |
+| ------------------------------------ | ---------------------------------------------------------------------------- |
+| מטרה                                 | יצירת/חידוש זהות וגישה למוצר                                                 |
+| פעולות                               | login/register, Google, Facebook, demo                                       |
+| Validation                           | email תקין, password 12–128; provider token bounded                          |
+| הצלחה                                | tokens נשמרים, identity/profile נטענים, מעבר ל־Dashboard                     |
+| שגיאות                               | invalid credentials, existing user, disabled, provider config/token, network |
+| Email verification / forgot password | Implemented in current task; [release status](27_EMAIL_AUTH_RECOVERY.md)     |
 
 Facebook button failure state (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d2469d`): after a user click, the button is busy while the Meta SDK login callback is pending. If no callback arrives within 60 seconds, it becomes available again and displays a localized message instructing the user to close the Facebook window and retry. A late callback from the expired attempt cannot create a Core session. This state is locally verified by `test/facebook.test.tsx` and deployed with a passing public asset smoke; the 60-second production UI state and real Meta login remain unverified.
 
@@ -317,14 +313,14 @@ Route: `/dashboard`; רכיבים נפרדים ל־demo ול־live.
 └ Recent practice sessions ──────────────────────┘
 ```
 
-| נושא | אפיון |
-|---|---|
-| מטרה | לתת תמונת מצב ו־next best action |
-| Data | `/dashboard`, `/dashboard/activity`, `/gamification`, packs |
-| פעולות | start smart review, open pack/item/session history |
-| States | loading/error/empty/new user/active learner/read-only |
-| Rules | live metrics מהשרת בלבד; demo projections מקומיים מסומנים |
-| KPI UI | daily goal, due count, skill weakness, weekly time/XP |
+| נושא   | אפיון                                                       |
+| ------ | ----------------------------------------------------------- |
+| מטרה   | לתת תמונת מצב ו־next best action                            |
+| Data   | `/dashboard`, `/dashboard/activity`, `/gamification`, packs |
+| פעולות | start smart review, open pack/item/session history          |
+| States | loading/error/empty/new user/active learner/read-only       |
+| Rules  | live metrics מהשרת בלבד; demo projections מקומיים מסומנים   |
+| KPI UI | daily goal, due count, skill weakness, weekly time/XP       |
 
 ## 6. SCR-03 — Learn Hub
 
@@ -340,14 +336,14 @@ Route: `/learn`.
 └ Session history ────────────────────────────┘
 ```
 
-| נושא | אפיון |
-|---|---|
-| Data | capabilities, learning queue, sessions |
-| פעולות | smart session, manual game, selected items/scope |
-| Gating | `practice.play`; speech modes לפי capability |
-| Empty | אין active words → capture/packs CTA |
-| Locked | subscription required → Billing CTA |
-| Acceptance | אין התחלת exercise אם session creation נכשל |
+| נושא       | אפיון                                            |
+| ---------- | ------------------------------------------------ |
+| Data       | capabilities, learning queue, sessions           |
+| פעולות     | smart session, manual game, selected items/scope |
+| Gating     | `practice.play`; speech modes לפי capability     |
+| Empty      | אין active words → capture/packs CTA             |
+| Locked     | subscription required → Billing CTA              |
+| Acceptance | אין התחלת exercise אם session creation נכשל      |
 
 ## 7. SCR-04 — Practice Session
 
@@ -380,14 +376,14 @@ audio+dictation, flashcard self-rating או microphone recording.
 מציג result, server score, expected/corrected form לפי receipt, XP, mastery change,
 next review ו־session totals.
 
-| בקרה | דרישה |
-|---|---|
-| Answer authority | הלקוח אינו מחשב score ב־live |
-| Retry | submit retry משתמש באותו UUID |
-| Exit | session active מקבל confirm/abandon semantics |
-| Audio | tracks נעצרים ביציאה/כשל |
-| Accessibility | keyboard לכל controls; matching alternative |
-| Errors | exercise expired/consumed → recover/new exercise, לא local success |
+| בקרה             | דרישה                                                              |
+| ---------------- | ------------------------------------------------------------------ |
+| Answer authority | הלקוח אינו מחשב score ב־live                                       |
+| Retry            | submit retry משתמש באותו UUID                                      |
+| Exit             | session active מקבל confirm/abandon semantics                      |
+| Audio            | tracks נעצרים ביציאה/כשל                                           |
+| Accessibility    | keyboard לכל controls; matching alternative                        |
+| Errors           | exercise expired/consumed → recover/new exercise, לא local success |
 
 ## 8. SCR-05 — Vocabulary Library
 
@@ -403,14 +399,14 @@ Route: `/vocabulary`.
 └ Pagination / load more ──────────────────────┘
 ```
 
-| נושא | אפיון |
-|---|---|
-| Filters | search, source/target, user/learning status, hard, priority, due, practiced, tag, pack |
-| Sort | alphabetic, recent, status, weakest/strongest, due, most practiced |
-| Actions | edit, practice, pause/resume, archive/delete/restore, mastery, priority, hard, tags |
-| Gating | reads ב־free; writes require `vocabulary.write` |
-| Empty | מותאם למסנן לעומת ספרייה ריקה |
-| Pagination | bounded; cursor/page לא יחד |
+| נושא       | אפיון                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Filters    | search, source/target, user/learning status, hard, priority, due, practiced, tag, pack |
+| Sort       | alphabetic, recent, status, weakest/strongest, due, most practiced                     |
+| Actions    | edit, practice, pause/resume, archive/delete/restore, mastery, priority, hard, tags    |
+| Gating     | reads ב־free; writes require `vocabulary.write`                                        |
+| Empty      | מותאם למסנן לעומת ספרייה ריקה                                                          |
+| Pagination | bounded; cursor/page לא יחד                                                            |
 
 ## 9. SCR-06 — Learning Item Detail/Edit
 
@@ -446,13 +442,13 @@ Preview מציג candidate meanings, variants, POS, explanation, phonetics, exam
 
 Route: `/word-packs`.
 
-| אזור | תוכן |
-|---|---|
-| Explorer | topics, tracks, levels, language pair |
-| Pack card | title, description, word count, installed/progress |
-| Detail | entries עם source/translation/example ו־selection |
-| Actions | add selected, practice scope, remove/archive/keep |
-| States | no matching profile language, no results, locked write, loading/error |
+| אזור      | תוכן                                                                  |
+| --------- | --------------------------------------------------------------------- |
+| Explorer  | topics, tracks, levels, language pair                                 |
+| Pack card | title, description, word count, installed/progress                    |
+| Detail    | entries עם source/translation/example ו־selection                     |
+| Actions   | add selected, practice scope, remove/archive/keep                     |
+| States    | no matching profile language, no results, locked write, loading/error |
 
 Acceptance: בחירה אינה מעל 100; entries שלא נבחרו מסומנים excluded; remove מציג
 בבירור אם מילים יישמרו או יאורכבו.
@@ -544,10 +540,10 @@ delivery כפעיל ללא backend/email/browser implementation מאומת.
 
 Route: `/transfer`.
 
-| אזור | פעולה |
-|---|---|
-| Export | איסוף כל העמודים והורדת JSON versioned |
-| Import | בחירת file ≤ client limit, parse/validate preview |
+| אזור    | פעולה                                                      |
+| ------- | ---------------------------------------------------------- |
+| Export  | איסוף כל העמודים והורדת JSON versioned                     |
+| Import  | בחירת file ≤ client limit, parse/validate preview          |
 | Results | success/failed per event, partial 207, retry failures only |
 
 המסך אינו מייבא attempts/XP. file error ממופה ל־validation/format/size ולא נשלח
@@ -614,18 +610,18 @@ auto-close after save, theme ושפות default. שינוי feature שדורש b
 
 כל מסך נתונים חייב לתכנן לפחות:
 
-| מצב | התנהגות |
-|---|---|
-| Initial loading | skeleton/status ללא layout jump חמור |
-| Empty | הסבר + CTA אפשרי, לא טבלה ריקה |
-| Validation | שדה מסומן + summary נגיש לפי צורך |
-| Network | retry בטוח; mutation שומר UUID |
-| Unauthorized | refresh אחד ואז sign-in |
-| Forbidden/locked | הסבר tier/capability + Billing CTA |
+| מצב                  | התנהגות                                    |
+| -------------------- | ------------------------------------------ |
+| Initial loading      | skeleton/status ללא layout jump חמור       |
+| Empty                | הסבר + CTA אפשרי, לא טבלה ריקה             |
+| Validation           | שדה מסומן + summary נגיש לפי צורך          |
+| Network              | retry בטוח; mutation שומר UUID             |
+| Unauthorized         | refresh אחד ואז sign-in                    |
+| Forbidden/locked     | הסבר tier/capability + Billing CTA         |
 | Provider unavailable | feature-specific; core library נשארת פעילה |
-| Partial success | פירוט per item; לא “הכול נכשל” |
-| Stale/conflict | reload/preview מחדש; אין overwrite שקט |
-| Offline | state נשמר ככל שניתן, בלי success מזויף |
+| Partial success      | פירוט per item; לא “הכול נכשל”             |
+| Stale/conflict       | reload/preview מחדש; אין overwrite שקט     |
+| Offline              | state נשמר ככל שניתן, בלי success מזויף    |
 
 ## 23. Definition of Done למסך חדש
 
@@ -642,15 +638,14 @@ auto-close after save, theme ושפות default. שינוי feature שדורש b
 ## SCR-16 — English learning path
 
 Route: `/english-learning` (live Web). Actor: authenticated learner with an English-source/Hebrew-translation profile. Entry: primary navigation or a link from SCR-08. Goal: work through Basic, Good and Advanced in ordered 50-entry units. The screen shows server-reported mastery, next unfinished unit, a preview of all entries, and actions to install/start or resume pack-scoped smart practice. Exit: smart practice or another navigation destination. Data owner: existing GotIt word-pack APIs; entitlement: `vocabulary.write` to install, practice entitlement checked by the session route. States: loading, error/retry, no compatible catalog, preview, installing, billing restriction, installed, partial, mastered. Modal focus follows the shared modal component. Layout uses responsive unit grids and supports RTL/LTR and 320px. Acceptance: no 1,000-entry bulk installation; 50 IDs are submitted for one unit; existing SCR-08 excludes course units and links here. Source: `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`. Production smoke pending.
+
 # Canonical Figma learning/account scope — 2026-10-06
 
 `kgMHTv0q4TJdwxCHYzUnSM` pages 4:3–4:9 replace the historical design reference. Preparation, guided activity, replay, review, summary, unit words, smart launch, scoped history and account interface states consume the contracts in [30](30_FIGMA_FULL_DEV.md). Web final verification is pending; 494 source frames are an inventory, not 494 verified browser screens. Owner-deferred parent/child relationships, deletion and native Play states are not active application features.
 
-
 ## 2026-10-06 — DEV learning-path correction
 
 SCR path/map/words/activities/levels: Figma fidelity corrections in progress; Backend eligibility verified. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
-
 
 FR-PATH-003/004/005: explicit map vs bulk dialog, real word/activity detail, levels and full new-program flow. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
 
@@ -658,31 +653,25 @@ FR-PATH-003/004/005: explicit map vs bulk dialog, real word/activity detail, lev
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 SCR-16 adds independent image/example loading/error states, known-state explanation and unit game chooser. Web verification/release pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
 SCR-10 uses chronological chat, a persistent text/voice composer, desktop teacher panel and compact mobile teacher. Actual guided stages are conditional on server activity. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
 
-
 ## 2026-10-07 ? Temporary DEV practice hub restoration
 
 SCR-03 `/learn` restores the production smart-session panel, six game cards, next-word queue and paginated history while retaining DEV language/unit/word scope and its existing shell. [Behavior and verification](34_PRACTICE_HUB_RESTORATION_DEV.md).
-
 
 ## 2026-10-11 ? SCR-03 replacement design in DEV
 
 The owner approved the Claude ??? ????? 3? practice layout for DEV only. Original illustrations, live session/goal data and explicit unavailable modes are implemented. [Source, behavior and release evidence](36_PRACTICE_DESIGN_DEV.md).
 
-
 ## 2026-10-11 - Focus games in DEV
 
 SCR-04: DEV flashcards, matching, drag, listening, pronunciation, inter-game transitions and animated completion; keyboard, RTL/LTR and reduced-motion states. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
-
 
 ## 2026-10-11 - Owner game-design corrections (local)
 
@@ -692,31 +681,25 @@ SCR-04 exit matches the original compact mascot dialog; flashcards restore ratin
 
 SCR-04: retryable incorrect answers, per-letter listening, over-game transitions and fullscreen five-phase completion. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 SCR-04: corrected five-phase completion geometry/timing and original accessories; cloze audio stays disabled until the active exercise has a successful receipt. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 — SCR-05/06 My Words design
 
 The selected MyWordsV2 artboard is implemented in DEV, including card waves, bilingual alignment, status/source/POS/memory/review metadata, drawer and bulk actions. Category membership/counts are actual server data. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
 
-
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
-
 
 ## 2026-10-13 - My Programs / My Words navigation latency
 
 Authenticated DEV navigation now preloads both route modules and read-only data. Owner/query-scoped memory snapshots coalesce requests, stay fresh for 30 seconds, and retain visible content during background refresh. Successful mutations/profile changes invalidate reads; logout/session expiry removes private snapshots and discards late responses. Artwork warmup performs lookup only, with generation remaining on screen demand. No API, database or learning-authority change. [Implementation and measured release evidence](39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
 
-
 ## 2026-10-13 - DEV program chooser
 
 The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](40_PROGRAM_CHOOSER_DEV.md).
-
 
 ## 2026-10-13 - Prepared program map design (DEV)
 
@@ -724,7 +707,6 @@ The supplied screenshot is implemented as a dynamic, modular prepared-unit map
 under the existing DEV gate. Server progression/locks and the canonical shared
 header are retained. Behavior, acceptance, source and exact release evidence are
 owned by [41 - Program map DEV](41_PROGRAM_MAP_DESIGN_DEV.md).
-
 
 ## 2026-10-14 - Settings reference design in DEV
 
@@ -744,11 +726,21 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+SCR-ADM-USR: Users row -> `/users/:id/show`; Hebrew card, effective access summary, 15 paginated history tabs, course roadmaps and separate account/product-preference editors. Loading/empty/owner-error/retry/locked/conflict states and narrow tables are required. [Behavior](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+SCR-ADM-WORD: responsive word cards, language/user/deletion filters, image-first detail, paginated histories and quick shared replacement; unavailable/pending/error/conflict states remain explicit. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -757,17 +749,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-SCR-ADM-USR: Users row -> `/users/:id/show`; Hebrew card, effective access summary, 15 paginated history tabs, course roadmaps and separate account/product-preference editors. Loading/empty/owner-error/retry/locked/conflict states and narrow tables are required. [Behavior](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-SCR-ADM-WORD: responsive word cards, language/user/deletion filters, image-first detail, paginated histories and quick shared replacement; unavailable/pending/error/conflict states remain explicit. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

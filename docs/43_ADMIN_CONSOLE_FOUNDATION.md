@@ -12,13 +12,13 @@ The owner clarified that **Basic is another name for Free**. These follow-ups ar
 within the approved full operational scope. The 0.2 acceptance is owner-reported;
 0.3 is locally verified and requires its own ordered deployment.
 
-| Requirement | Implemented behavior and acceptance |
-| --- | --- |
-| FR-ADM-09 | Users has Change role & permissions. Core independently requires `staff.write`, MFA, revision and reason; targets must be active/verified for promotion. Permissions are explicit. Self changes are rejected. Role/permission changes revoke target sessions and invalidate MFA verification; audit and replay are atomic. |
-| FR-ADM-10 | Users shows the actual effective plan/source and provider subscription status. Change Free / Pro access selects an existing active plan, until changed or optional expiry within 90 days. Restore normal access clears it. Billing status and Admin use the same Core resolver. Charges and prepaid minutes are unchanged. |
-| FR-ADM-11 | Prompt detail shows build-derived base templates, dynamic placeholders, current active additional guidance and the editable draft separately. Empty additional guidance is valid. Source freshness is checked; no learner input or provider call is used to build previews. |
-| FR-ADM-12 | Programs has Prepared catalog, including English from zero and its actual units, alongside Templates and Learner programs. Catalog is shared read-only curriculum, with no learner progress exposed. Create program remains visible while locked; saving requires the existing content permission/MFA. |
-| FR-ADM-13 | Hebrew sidebar guide, expandable section help and policy labels/helpers describe field units, bounds, consumers, draft/activation flow, permissions and billing effects. Existing learning algorithms and historical evidence remain unchanged. |
+| Requirement | Implemented behavior and acceptance                                                                                                                                                                                                                                                                                        |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FR-ADM-09   | Users has Change role & permissions. Core independently requires `staff.write`, MFA, revision and reason; targets must be active/verified for promotion. Permissions are explicit. Self changes are rejected. Role/permission changes revoke target sessions and invalidate MFA verification; audit and replay are atomic. |
+| FR-ADM-10   | Users shows the actual effective plan/source and provider subscription status. Change Free / Pro access selects an existing active plan, until changed or optional expiry within 90 days. Restore normal access clears it. Billing status and Admin use the same Core resolver. Charges and prepaid minutes are unchanged. |
+| FR-ADM-11   | Prompt detail shows build-derived base templates, dynamic placeholders, current active additional guidance and the editable draft separately. Empty additional guidance is valid. Source freshness is checked; no learner input or provider call is used to build previews.                                                |
+| FR-ADM-12   | Programs has Prepared catalog, including English from zero and its actual units, alongside Templates and Learner programs. Catalog is shared read-only curriculum, with no learner progress exposed. Create program remains visible while locked; saving requires the existing content permission/MFA.                     |
+| FR-ADM-13   | Hebrew sidebar guide, expandable section help and policy labels/helpers describe field units, bounds, consumers, draft/activation flow, permissions and billing effects. Existing learning algorithms and historical evidence remain unchanged.                                                                            |
 
 ### Contracts, ownership and controls
 
@@ -168,18 +168,18 @@ Conflicts require review/reload; uncertain retries retain UUID/payload. KPIs are
 successful authorized commands, rejected stale/unauthorized commands and owner
 availability. Learning effectiveness remains measured by product evidence.
 
-| Requirement | Screen/behavior | Owner and acceptance evidence |
-| --- | --- | --- |
-| FR-ADM-01 | ADM-USERS search/detail; edit learner email/name/status | Core; application isolation, protected staff/self identities, revision conflicts, session/old-login revocation |
-| FR-ADM-02 | ADM-BILLING subscriptions; temporary grants/revocation and provider portal | Core; replay once, max 90-day expiry, no fabricated provider subscription/charge |
-| FR-ADM-03 | ADM-USAGE provider token events, monthly reading usage and credits | Product; provider-only measurements, deduplication, trial unchanged, concurrent quota enforcement |
-| FR-ADM-04 | ADM-PROMPTS saved guidance drafts and explicit activation/rollback | Product; immutable published bodies, exact active revision, bounded provider instrumentation |
-| FR-ADM-05 | ADM-PROGRAMS template creation/manual lesson editor/AI generation/activation/assignment | Product; actual personal-course snapshots, durable generation replay, no repeat paid request after uncertainty |
-| FR-ADM-06 | ADM-ASSIGNMENTS learner-specific program edit/draft activation | Product; composite learner/course IDs, scoped equal course IDs, completed-unit and evidence preservation |
-| FR-ADM-07 | ADM-SUPPORT tickets, private notes, learner-visible replies and resolution | Product; optimistic/replay-safe commands; own-ticket learner API filters private notes and staff IDs |
-| FR-ADM-08 | ADM-POLICIES validated learning parameters/activation/rollback | Product; request-scoped policy across consumers; incompatible pending practice sessions/exercises rejected |
-| FR-ADM-09 | ADM-AUDIT separate Product/Core histories | Each owner; actor/target/action/reason/time and bounded metadata; no provider/session secrets |
-| NFR-ADM-01 | ADM-SECURITY Google/password login, authenticator setup/unlock and five-minute editing | Core; explicit staff permissions, encrypted TOTP, one-use codes, session/app/user/revision binding |
+| Requirement | Screen/behavior                                                                         | Owner and acceptance evidence                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| FR-ADM-01   | ADM-USERS search/detail; edit learner email/name/status                                 | Core; application isolation, protected staff/self identities, revision conflicts, session/old-login revocation |
+| FR-ADM-02   | ADM-BILLING subscriptions; temporary grants/revocation and provider portal              | Core; replay once, max 90-day expiry, no fabricated provider subscription/charge                               |
+| FR-ADM-03   | ADM-USAGE provider token events, monthly reading usage and credits                      | Product; provider-only measurements, deduplication, trial unchanged, concurrent quota enforcement              |
+| FR-ADM-04   | ADM-PROMPTS saved guidance drafts and explicit activation/rollback                      | Product; immutable published bodies, exact active revision, bounded provider instrumentation                   |
+| FR-ADM-05   | ADM-PROGRAMS template creation/manual lesson editor/AI generation/activation/assignment | Product; actual personal-course snapshots, durable generation replay, no repeat paid request after uncertainty |
+| FR-ADM-06   | ADM-ASSIGNMENTS learner-specific program edit/draft activation                          | Product; composite learner/course IDs, scoped equal course IDs, completed-unit and evidence preservation       |
+| FR-ADM-07   | ADM-SUPPORT tickets, private notes, learner-visible replies and resolution              | Product; optimistic/replay-safe commands; own-ticket learner API filters private notes and staff IDs           |
+| FR-ADM-08   | ADM-POLICIES validated learning parameters/activation/rollback                          | Product; request-scoped policy across consumers; incompatible pending practice sessions/exercises rejected     |
+| FR-ADM-09   | ADM-AUDIT separate Product/Core histories                                               | Each owner; actor/target/action/reason/time and bounded metadata; no provider/session secrets                  |
+| NFR-ADM-01  | ADM-SECURITY Google/password login, authenticator setup/unlock and five-minute editing  | Core; explicit staff permissions, encrypted TOTP, one-use codes, session/app/user/revision binding             |
 
 All areas have pending/empty/error states, permission-gated buttons, server-owned
 saves and explicit conflict/retry messages. Reading/edit forms remain available
@@ -393,7 +393,27 @@ Follow-up commit `5aa468c8dc990567c4888b831f9efbe8c5091d9e` sets the documented 
 
 Final follow-up evidence: [CI run 38809131776](https://github.com/rbaseapp/gotit-admin/actions/runs/38809131776) passed for `5aa468c8dc990567c4888b831f9efbe8c5091d9e`. Render returned 200 for public Google configuration with `Referrer-Policy: strict-origin-when-cross-origin`, confirming the server follow-up is live. The owner then added the Admin origin in Google. A fresh unmodified browser reload rendered Google's actual iframe button without console errors; clicking it opened the official Google account sign-in page, and the earlier origin-denial error was gone. The isolated QA browser has no Google account, so no credentials were submitted or user session created; full account login and Core admin-role acceptance remain owner acceptance. The empty-account FedCM message during that isolated click does not establish an origin or account-role failure. Screenshot: `../gotit-admin/output/playwright/google-live-login-authorized.png` (local ignored QA artifact).
 
-
 ## Admin user details — 2026-10-16
 
 User-detail extension (2026-10-16): selecting a user opens the dedicated card with scoped account/product histories and audited settings editing. [Canonical requirements, coverage, owner APIs and verification](44_ADMIN_USER_DETAILS.md).
+
+## Production Staff permission repair ? 2026-10-16
+
+The owner reported that Change role & permissions was disabled with missing
+`staff.write`. A scoped read-only production inspection confirmed the documented
+owner account `ori@rbaseapp.com` was active, verified and already admin, with the
+five earlier write permissions but no Staff permission. GotIt had no active,
+verified administrator with `staff.write`.
+
+Ran the existing reviewed Core `configure-admin` operator command for application
+`gotit`, this existing owner account and **only** `staff.write`, using the verified
+production owner connection with TLS `verify-full`. The script committed the
+permission and `staff.permissions.bootstrap` audit record atomically. Independent
+read-only verification confirmed all six permissions and the matching audit event
+at `2026-10-16T10:18:49.758Z`, whose metadata contains only the added permission.
+No account promotion, other grant, session/MFA reset or provider change was made.
+
+Reload Admin so capabilities are fetched again; normal MFA unlock is still required
+for writes. Self role/permission changes remain forbidden. No application code,
+migration or runtime deployment was needed. Actual promotion/demotion of another
+production account was not exercised merely to validate this repair.

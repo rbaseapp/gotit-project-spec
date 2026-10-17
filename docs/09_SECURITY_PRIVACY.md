@@ -8,7 +8,6 @@ Concept management requires independently verified admin identity, content.write
 
 Staff promotion requires a separate permission, MFA and verified scoped target; self changes are blocked, target sessions revoked and audit/replay retained. Plan overrides do not mutate provider charges. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
 
-
 ## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
 
 Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
@@ -34,11 +33,9 @@ Explicit `dictionary` preview no longer requires vocabulary-write billing access
 
 The first migration attempt failed because the dedicated GotIt migrator correctly lacks Core schema privileges. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` uses the existing scoped GotIt profile FK instead of widening the migrator's Core grants. A first known action inserts only standard profile defaults for its Core-authenticated owner; compound ownership and cascade deletion remain. A fresh-user PostgreSQL regression passed; production retry pending.
 
-
 ## 2026-10-01 — Declared known-word ownership
 
 The new known-entry write is authorized with the existing Core-authenticated application/user scope and `vocabulary.write`; clients cannot submit owner IDs. Requested entry IDs must belong to the selected accessible pack before any insert/delete. Repeated English words propagate only within the same learning-path topic and owner scope. Known rows store catalog IDs and a timestamp, not a new source of user text or inferred mastery. The integration suite checked a second user's known count stays zero and rejects unrelated entry IDs. Source: `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`; production rollout pending.
-
 
 ## תיקון רצף השיעור — 2026-09-30
 
@@ -150,36 +147,36 @@ React escaping. מעבר עתידי ל־HttpOnly cookie דורש CSRF design ו�
 
 ## 10. פרטיות ו־Retention
 
-| מידע | ברירת מחדל |
-|---|---|
-| selected text + sentence | נשמר ב־occurrence אחרי save |
-| paragraph | נתמך bounded; יש לבחון אם נדרש ברירת מחדל |
-| page URL/title | נשמרים כי המשתמש יזם capture |
-| full HTML/page | לא נאסף |
-| user pronunciation audio | transient, לא נשמר |
-| lesson raw audio | לא נשמר על ידי GotIt |
-| lesson turns/report | נשמרים בעת complete לפי journal contract |
-| unseen reading preview | לא נשמר כתוכן פתוח |
-| provider traces | metadata bounded; לא secret/token |
-| soft-deleted item | נשמר עד מדיניות מחיקה קבועה |
+| מידע                     | ברירת מחדל                                |
+| ------------------------ | ----------------------------------------- |
+| selected text + sentence | נשמר ב־occurrence אחרי save               |
+| paragraph                | נתמך bounded; יש לבחון אם נדרש ברירת מחדל |
+| page URL/title           | נשמרים כי המשתמש יזם capture              |
+| full HTML/page           | לא נאסף                                   |
+| user pronunciation audio | transient, לא נשמר                        |
+| lesson raw audio         | לא נשמר על ידי GotIt                      |
+| lesson turns/report      | נשמרים בעת complete לפי journal contract  |
+| unseen reading preview   | לא נשמר כתוכן פתוח                        |
+| provider traces          | metadata bounded; לא secret/token         |
+| soft-deleted item        | נשמר עד מדיניות מחיקה קבועה               |
 
 לפני launch יש להגדיר: retention לפי סוג נתון, permanent deletion SLA, account
 deletion/export, lawful basis/consent, provider subprocessors, age policy ו־DPA.
 
 ## 11. Threat Checklist
 
-| איום | הגנה נוכחית | פעולה נוספת |
-|---|---|---|
-| IDOR | compound scope + ownership | integration tests לכל route חדש |
-| token theft | short access, rotation, CSP | incident revocation tooling |
-| brute force | rate limit + generic login error | account/email throttling מלא |
-| replay mutation | UUID + hash + receipt | metrics על conflicts |
-| XP tampering | server scoring | anomaly detection עתידי |
-| prompt injection | bounded data + prompt separation | adversarial provider evals |
-| malicious page → extension | message validation/trusted storage | permission review בכל release |
-| webhook forgery | raw signature verification | alert על failures |
-| migration credential abuse | role separation | secret rotation ו־job isolation |
-| sensitive logs | redaction/no body | centralized scanning/retention |
+| איום                       | הגנה נוכחית                        | פעולה נוספת                     |
+| -------------------------- | ---------------------------------- | ------------------------------- |
+| IDOR                       | compound scope + ownership         | integration tests לכל route חדש |
+| token theft                | short access, rotation, CSP        | incident revocation tooling     |
+| brute force                | rate limit + generic login error   | account/email throttling מלא    |
+| replay mutation            | UUID + hash + receipt              | metrics על conflicts            |
+| XP tampering               | server scoring                     | anomaly detection עתידי         |
+| prompt injection           | bounded data + prompt separation   | adversarial provider evals      |
+| malicious page → extension | message validation/trusted storage | permission review בכל release   |
+| webhook forgery            | raw signature verification         | alert על failures               |
+| migration credential abuse | role separation                    | secret rotation ו־job isolation |
+| sensitive logs             | redaction/no body                  | centralized scanning/retention  |
 
 ## 12. Security Release Gate
 
@@ -191,6 +188,7 @@ deletion/export, lawful basis/consent, provider subprocessors, age policy ו־DP
 - backup/restore ו־migration rollback review;
 - privacy/legal review;
 - incident owner, rotation runbook ו־contact מוגדרים.
+
 ## 2026-10-06 — DEV UX release security follow-up
 
 Web `0e88da53f679a142bf040a51b4c428b6652e0a72` locks the patched source-map-js
@@ -201,13 +199,14 @@ request without expanded privileges; its corrected connection requires TLS with
 full certificate verification. Secret files remain outside Git in a user-only
 local directory, and Render credential submission is handed to the owner.
 No production credential or privilege was changed. [Evidence and limits](28_UX_2_1_DEV.md).
+
 # Guided activity privacy boundary — 2026-10-06
 
 Owner-scoped bounded temporary text supports active lesson retries/review and is purged with successful report completion or lesson deletion. Audio stays transient. Voice preview sends only fixed public English AI-teacher text, using server-side credentials, timeout/byte limits and existing quota; no learner text/identity is supplied. Client scope, expired status, mixed IDs and stale revisions fail closed. [Contracts and threat controls](30_FIGMA_FULL_DEV.md#data-model-and-privacy). Live provider acceptance remains pending.
+
 # DEV audit follow-up — 2026-10-06
 
 Backend `43a429ceeed3a2cd4715724a4d78568f846ef4d0` patches proxy-addr to 2.0.8 and tests malformed mapped-IPv6 subnet isolation. Numeric trusted-hop policy is unchanged; no production release is implied. [Canonical security/backup evidence](30_FIGMA_FULL_DEV.md#backend-security-release-gate-follow-up).
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -217,11 +216,9 @@ Cached images remain owner-scoped/current-revision; locked meetings reject befor
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study verifies visible pack/entry before provider or cache access, sends public catalog text only, and retains existing quotas and auth/entitlements. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
@@ -230,7 +227,6 @@ Text start does not request a microphone; text mode mutes the real track. Drafts
 ### DEV practice alignment — 2026-10-12
 
 Microphone consent precedes capture; raw audio remains transient and outside tab checkpoints. Optional translations use the existing signed-preview pipeline without capture creation. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
@@ -246,11 +242,21 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user inspection exposes existing scoped data through explicit projections without passwords, hashes, OAuth subjects, audio or expected practice answers. Settings writes retain users.write, MFA, reason, revision, audit and receipt; notification opt-in requires the target verified address. No new collection/retention is introduced. [Contract](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user reads stay within trusted application scope. Replacement independently requires content.write and MFA; private capture context never enters shared image prompts. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -259,17 +265,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user inspection exposes existing scoped data through explicit projections without passwords, hashes, OAuth subjects, audio or expected practice answers. Settings writes retain users.write, MFA, reason, revision, audit and receipt; notification opt-in requires the target verified address. No new collection/retention is introduced. [Contract](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-All-user reads stay within trusted application scope. Replacement independently requires content.write and MFA; private capture context never enters shared image prompts. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

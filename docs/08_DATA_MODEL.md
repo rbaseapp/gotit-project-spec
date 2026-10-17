@@ -8,7 +8,6 @@ Adds `lexical_concepts`, `concept_expressions`, `concept_image_assets` through f
 
 A forward Core migration adds scoped plan overrides and staff.write permission support. No new Product schema or automatic permission grant is introduced. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
 
-
 ## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
 
 Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
@@ -42,11 +41,9 @@ Migration `1790800011000` for Backend `10602736bdf5422116eb838e57e9d708318156be`
 
 `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` corrects migration `1790800008000` before it has applied in production: `user_word_pack_known_entries` references the existing GotIt `user_profiles(application_id, application_user_id)` scoped key with cascade rather than directly referencing Core. GotIt profiles themselves retain their validated Core user FK. This keeps the dedicated product migrator out of the Core schema. First known-word mutation inserts standard profile defaults with `ON CONFLICT DO NOTHING`; the PostgreSQL suite verifies that first-use path. Production retry pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
 
-
 ## 2026-10-01 — Known entry state and named-unit replacement
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds `product_gotit.user_word_pack_known_entries` with primary key `(application_id, application_user_id, pack_id, entry_id)`, compound GotIt profile FK, `(pack_id, entry_id)` catalog FK with cascade, `known_at`, and a scoped lookup index. One known row represents a learner-declared word, not learning evidence. English path repeated source forms are propagated to matching pack entries in the same topic. Migration `1790800009000` changes 3,000 catalog rows and 60 pack titles/versions in place; it refuses changes when path installations, links or known rows exist. The reverse migration has the same guard. The prior migrations are immutable. Local PostgreSQL up/down and isolation tests passed; production migration pending. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
-
 
 ## 2026-10-01 — Versioned English catalog correction
 
@@ -91,96 +88,96 @@ expression or source-language edit still clears both phonetic columns.
 
 ## 2. Core — 13 טבלאות
 
-| קבוצה | טבלה | תפקיד |
-|---|---|---|
-| tenancy | `core.applications` | products/applications |
-| identity | `core.application_users` | user per application, status, role |
-| auth config | `core.application_auth_providers` | provider config per app |
-| auth config | `core.application_auth_provider_clients` | web/extension OAuth clients |
-| credentials | `core.password_credentials` | Argon2 password hash |
-| credentials | `core.oauth_identities` | Google/Facebook subject link |
-| sessions | `core.auth_sessions` | refresh hash, expiry, revocation |
-| billing | `core.billing_plans` | catalog, trial, grace, entitlements |
-| billing | `core.billing_checkout_attempts` | idempotent checkout |
-| billing | `core.billing_subscriptions` | provider subscription projection |
-| billing | `core.billing_webhook_events` | webhook idempotency/audit |
-| billing | `core.billing_customers` | provider customer mapping |
-| billing | `core.billing_transactions` | transaction projection |
+| קבוצה       | טבלה                                     | תפקיד                               |
+| ----------- | ---------------------------------------- | ----------------------------------- |
+| tenancy     | `core.applications`                      | products/applications               |
+| identity    | `core.application_users`                 | user per application, status, role  |
+| auth config | `core.application_auth_providers`        | provider config per app             |
+| auth config | `core.application_auth_provider_clients` | web/extension OAuth clients         |
+| credentials | `core.password_credentials`              | Argon2 password hash                |
+| credentials | `core.oauth_identities`                  | Google/Facebook subject link        |
+| sessions    | `core.auth_sessions`                     | refresh hash, expiry, revocation    |
+| billing     | `core.billing_plans`                     | catalog, trial, grace, entitlements |
+| billing     | `core.billing_checkout_attempts`         | idempotent checkout                 |
+| billing     | `core.billing_subscriptions`             | provider subscription projection    |
+| billing     | `core.billing_webhook_events`            | webhook idempotency/audit           |
+| billing     | `core.billing_customers`                 | provider customer mapping           |
+| billing     | `core.billing_transactions`              | transaction projection              |
 
 ## 3. GotIt — 37 טבלאות
 
 ### Profile
 
-| טבלה | תפקיד |
-|---|---|
-| `user_profiles` | defaults, timezone, daily goal, learning preferences |
-| `user_language_proficiencies` | self/system/effective CEFR, ranges, confidence |
-| `user_interests` | personalization interests |
+| טבלה                          | תפקיד                                                |
+| ----------------------------- | ---------------------------------------------------- |
+| `user_profiles`               | defaults, timezone, daily goal, learning preferences |
+| `user_language_proficiencies` | self/system/effective CEFR, ranges, confidence       |
+| `user_interests`              | personalization interests                            |
 
 ### Vocabulary ו־Capture
 
-| טבלה | תפקיד |
-|---|---|
-| `learning_items` | source/sense/status/revision/mastery/review/image |
-| `item_translations` | accepted forms, primary/history/provenance |
-| `item_occurrences` | capture context + idempotent receipt |
-| `item_examples` | examples per semantic revision |
-| `enrichment_runs` | provider trace, model, status, latency |
-| `tags` | user tag catalog |
-| `learning_item_tags` | item↔tag many-to-many |
+| טבלה                 | תפקיד                                             |
+| -------------------- | ------------------------------------------------- |
+| `learning_items`     | source/sense/status/revision/mastery/review/image |
+| `item_translations`  | accepted forms, primary/history/provenance        |
+| `item_occurrences`   | capture context + idempotent receipt              |
+| `item_examples`      | examples per semantic revision                    |
+| `enrichment_runs`    | provider trace, model, status, latency            |
+| `tags`               | user tag catalog                                  |
+| `learning_item_tags` | item↔tag many-to-many                            |
 
 ### Practice ו־Learning
 
-| טבלה | תפקיד |
-|---|---|
-| `item_skill_progress` | five-skill projections |
-| `practice_sessions` | session scope/selection/receipt/summary |
-| `practice_exercises` | private answers, expiry, consumption, revision |
-| `practice_attempts` | immutable scored attempt + receipt |
-| `attempt_skill_effects` | multi-skill effect per attempt |
-| `learning_algorithm_events` | versioned transition audit |
-| `api_rate_limits` | DB-backed buckets |
+| טבלה                        | תפקיד                                          |
+| --------------------------- | ---------------------------------------------- |
+| `item_skill_progress`       | five-skill projections                         |
+| `practice_sessions`         | session scope/selection/receipt/summary        |
+| `practice_exercises`        | private answers, expiry, consumption, revision |
+| `practice_attempts`         | immutable scored attempt + receipt             |
+| `attempt_skill_effects`     | multi-skill effect per attempt                 |
+| `learning_algorithm_events` | versioned transition audit                     |
+| `api_rate_limits`           | DB-backed buckets                              |
 
 ### Content, Images ו־Quota
 
-| טבלה | תפקיד |
-|---|---|
-| `generated_contents` | opened reading + publication receipt |
-| `generated_content_items` | reading target bindings/ranges |
-| `study_image_assets` | shared binary asset by content hash |
-| `ai_monthly_usage` | trial/month quota counters |
+| טבלה                      | תפקיד                                |
+| ------------------------- | ------------------------------------ |
+| `generated_contents`      | opened reading + publication receipt |
+| `generated_content_items` | reading target bindings/ranges       |
+| `study_image_assets`      | shared binary asset by content hash  |
+| `ai_monthly_usage`        | trial/month quota counters           |
 
 ### Gamification
 
-| טבלה | תפקיד |
-|---|---|
-| `user_gamification` | total XP, level, streak projection |
-| `xp_events` | unique reward ledger |
-| `user_daily_activity` | profile-calendar daily aggregates |
+| טבלה                  | תפקיד                              |
+| --------------------- | ---------------------------------- |
+| `user_gamification`   | total XP, level, streak projection |
+| `xp_events`           | unique reward ledger               |
+| `user_daily_activity` | profile-calendar daily aggregates  |
 
 ### Word Packs
 
-| טבלה | תפקיד |
-|---|---|
-| `word_topics` | catalog topic |
-| `word_tracks` | language pair + CEFR track |
-| `word_packs` | versioned module |
-| `word_pack_entries` | curated words/translations/examples |
-| `user_word_packs` | installation/removal state |
-| `learning_item_pack_entries` | link, exclusion, keep-by-user |
+| טבלה                           | תפקיד                                                     |
+| ------------------------------ | --------------------------------------------------------- |
+| `word_topics`                  | catalog topic                                             |
+| `word_tracks`                  | language pair + CEFR track                                |
+| `word_packs`                   | versioned module                                          |
+| `word_pack_entries`            | curated words/translations/examples                       |
+| `user_word_packs`              | installation/removal state                                |
+| `learning_item_pack_entries`   | link, exclusion, keep-by-user                             |
 | `user_word_pack_known_entries` | application-scoped learner-declared known catalog entries |
 
 ### Private Lessons
 
-| טבלה | תפקיד |
-|---|---|
-| `private_lesson_sessions` | settings, transcript summary, continuity, report |
-| `private_lesson_preferences` | per-language defaults |
-| `private_lesson_roadmaps` | active goal plan |
-| `private_lesson_milestones` | ordered plan milestones |
-| `private_lesson_milestone_evidence` | lesson evidence/task completion |
-| `private_lesson_skill_profiles` | skill estimate projection |
-| `private_lesson_skill_evidence` | evidence history |
+| טבלה                                | תפקיד                                            |
+| ----------------------------------- | ------------------------------------------------ |
+| `private_lesson_sessions`           | settings, transcript summary, continuity, report |
+| `private_lesson_preferences`        | per-language defaults                            |
+| `private_lesson_roadmaps`           | active goal plan                                 |
+| `private_lesson_milestones`         | ordered plan milestones                          |
+| `private_lesson_milestone_evidence` | lesson evidence/task completion                  |
+| `private_lesson_skill_profiles`     | skill estimate projection                        |
+| `private_lesson_skill_evidence`     | evidence history                                 |
 
 ## 4. יחסים מרכזיים
 
@@ -238,10 +235,10 @@ DDL; בהקשחת Production רצוי pre-deploy job נפרד כדי שה־runti
 - down migration רק על DB חד־פעמי; אינו rollback production אוטומטי.
 - rollback אפליקטיבי חייב לתמוך ב־schema החדש או להתבצע אחרי restore מתוכנן.
 - RPO/RTO ותרגיל restore רבעוני הם החלטה תפעולית פתוחה.
+
 # Guided lesson data — 2026-10-06
 
 Migration `1791280000000_guided-lesson-activities.js` adds nullable `private_lesson_sessions.word_pack_context` and the composite owner/lesson tables `private_lesson_activities` and `private_lesson_activity_commands`. Revision/fingerprint constraints and scoped FKs preserve isolation; successful report completion purges temporary snapshots/receipts atomically. No audio archive or second billing model is introduced. [Constraints, lifecycle, role separation and rollback](30_FIGMA_FULL_DEV.md#data-model-and-privacy). DEV migration pending at this checkpoint.
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -251,16 +248,13 @@ No schema change; journey is derived from owned pack links, known declarations a
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit study reuses shared `study_image_assets`; examples use a bounded process cache. No schema migration or learning-state writes. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
-
 ## 2026-10-07 - Private lesson conversation room
 
 No migration, table or column change; typed turns follow existing temporary-transcript/report retention. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
@@ -276,11 +270,19 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Migration 1792191000000 adds lexical_concepts, concept_expressions and concept_image_assets. Replacement stages unused revisions with existing admin receipts/audit; semantic resets skip reserved revisions. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+2026-10-16 FR-CON-09: migration 1792193000000 adds the shared `resolve_image_concept` SQL function, enabling a new language to reuse one eligible reviewed translation meaning without modifying stored aliases, words or media. [Priority, isolation and rollback rules](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -290,12 +292,6 @@ statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
 
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-No new schema: staged revisions reuse concept_image_assets and admin receipts/audit; semantic resets skip reserved revisions. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
-
 ## Automatic concept assignment - 2026-10-16
 
-Forward migration 1792192000000 adds concept_assignment_jobs and learning_item_concepts, concept meaning/origin metadata, candidate-search indexes and transactional enqueue triggers. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+Forward migration 1792194000000 adds concept_assignment_jobs and learning_item_concepts, concept meaning/origin metadata, candidate-search indexes and transactional enqueue triggers. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).

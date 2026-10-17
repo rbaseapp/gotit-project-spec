@@ -8,7 +8,6 @@ Apply migration `1792191000000` before Backend/Admin rollout; validate runtime g
 
 Upgrade Core schema/service, Backend and Admin before bootstrapping the new owner staff permission. Product migration and existing Google/origin settings remain unchanged for this follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
 
-
 ## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
 
 Owner now selected fixed 100/75/50 XP completion bonuses. Server ledger awards once
@@ -120,7 +119,6 @@ No database migration or configuration change was needed. Manual Render deploys 
 
 Render Web deployment `dep-dav8pnk9v7es73fjv47g` reports `Deploy succeeded | Live` for exact source `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` after manual "Deploy latest commit". Public Web `/ready` and `/english-learning` returned HTTP 200. The served CSS `index-R3SsXn_J.css` and JavaScript `index-BqsjPd1-.js` returned HTTP 200; CSS contains the aligned preview/footer rules and JavaScript contains the new Hebrew title. A new production browser tab presented Login, so an authenticated visual unit-preview smoke was unavailable. No Backend deployment or migration was required.
 
-
 ## 2026-10-01 — Web release result
 
 Render Web deployment `dep-dav4nrgjo6nc73fgnt9g` is Live for exact SHA `383482331ca895c1491123643138bd0973fd7395`. The public route and both service `/ready` endpoints returned 200; the served HTML, CSS and English path JavaScript expose the committed layout change. Database readback after smoke retained 213 corrections and zero known rows. The signed-in tab disappeared before a visual check of the new Web layout, so that check remains unverified; no additional production migration or backend deployment is needed.
@@ -137,11 +135,9 @@ After the already applied version-2 course migration, apply `1790800010000_engli
 
 The initial `node scripts/migrate-provisioned.js gotit-v1-up` stopped with SQLSTATE 42501 (`permission denied for schema core`) in the known-entry table migration. No catalog version change was observed afterward. `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` moves the new FK to `product_gotit.user_profiles` so the existing dedicated migrator can apply it without Core schema access. Fresh local schema and full product/migration-metadata backups were created and `pg_restore --list` validated the full archive: `gotit-schema-before-v1-2026-10-01T11-32-28-745Z.dump` (SHA-256 `2c4623432c9d0a168c6e564c230f68deb38c776c5204eb4781919d9b8def826d`) and `gotit-product-full-before-named-english-2026-10-01T11-32-28-741Z.dump` (SHA-256 `c0c508b726a1055f6c0f2b247d296698fc367525a5b629c1f3ba94555d1f2375`). Recheck path installations/links, retry the dedicated migration, then verify schema/catalog and deploy Backend/Web. Do not grant the migrator Core access or use runtime credentials for migration.
 
-
 ## 2026-10-01 — Named English catalog rollout pending
 
 For `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b`, run the additive known-state migration and guarded version-2 catalog migration with the dedicated migrator after a fresh product/migration-metadata backup. The Backend runtime role cannot run DDL, and startup does not migrate. Read-only precheck found 60 version-1 English packs and zero installed/linked entries; recheck immediately before migration because the content replacement aborts if a learner has begun a pack. Deploy Backend only after both migrations, then deploy the matching Web source. Verify exact source SHAs, both `/ready` endpoints, 60 titled packs with 50 entries, representative early words, an authenticated `PUT .../known` and a pack practice session on a test user. Do not run production down automatically. Production migration/deploy not yet verified. See [23_ENGLISH_LEARNING_PATH](23_ENGLISH_LEARNING_PATH.md).
-
 
 ## תיקון רצף השיעור — 2026-09-30
 
@@ -159,22 +155,22 @@ preflight כולל את הטבלאות והשדה החדשים. משתמשים �
 
 ## 1. סביבות
 
-| סביבה | מטרה | נתונים/ספקים |
-|---|---|---|
-| local | פיתוח מהיר | Docker PostgreSQL, providers אופציונליים |
-| test | unit/integration | DB חד־פעמי, fakes ללא רשת |
-| staging | migration ו־acceptance | credentials/catalog נפרדים |
-| production | משתמשים אמיתיים | Render + managed PostgreSQL |
+| סביבה      | מטרה                   | נתונים/ספקים                             |
+| ---------- | ---------------------- | ---------------------------------------- |
+| local      | פיתוח מהיר             | Docker PostgreSQL, providers אופציונליים |
+| test       | unit/integration       | DB חד־פעמי, fakes ללא רשת                |
+| staging    | migration ו־acceptance | credentials/catalog נפרדים               |
+| production | משתמשים אמיתיים        | Render + managed PostgreSQL              |
 
 אין להשתמש ב־Production DB לבדיקות. staging צריך application/OAuth/Paddle
 catalog נפרדים כדי למנוע זליגה.
 
 ## 2. Services ו־Ports
 
-| Service | Local | Health | Ready |
-|---|---|---|---|
-| Core | `localhost:8080` | `/health` | `/ready` |
-| GotIt Backend | `localhost:3001` | `/health` | `/ready` |
+| Service       | Local                | Health    | Ready    |
+| ------------- | -------------------- | --------- | -------- |
+| Core          | `localhost:8080`     | `/health` | `/ready` |
+| GotIt Backend | `localhost:3001`     | `/health` | `/ready` |
 | Front/Gateway | Vite dev או `:10000` | `/health` | `/ready` |
 
 Extension development נבנה עם endpoints local דרך `npm run build:dev`.
@@ -366,6 +362,7 @@ Follow [the Facebook rollout record](24_FACEBOOK_LOGIN_ROLLOUT.md) for the Meta 
 2026-10-02: Web `3fa4da4f31023682c9308d686fb04dbb0676b590` manually deployed on Render service `srv-dal8smbm8hqs73fabfng`, deploy `dep-davom667bikc73ese7e0`, Live in 41.2s. Readiness and delivered slower-lip code smoke passed. [Evidence and limits](25_TUTOR_AVATAR_MOTION.md).
 
 2026-10-02 follow-up: Web `3ec2d2899e4cf6504e65aba01f19e425c9a87942` deployed manually on service `srv-dal8smbm8hqs73fabfng`, deploy `dep-davp0egu01pc73fjqnig`, Live in 1m18s. Production readiness and delivered visual timing smoke passed. [Evidence and scope](25_TUTOR_AVATAR_MOTION.md).
+
 # Guided learning DEV release gate — 2026-10-06
 
 Source `0404c8cc72bbb4f32a125f4c9e255318beff9a60` is pushed to Backend `feat/figma-complete-dev`. Explicit DEV-only authorization overrides the normal source-main release, because main auto-deploys production. Only the named DEV Web/Backend services may be retargeted. Apply the additive migration with existing migrator privileges in `gotit_dev`, then verify runtime preflight, normalization, exact source SHA and authenticated smoke. [Targets, ordered steps and pending evidence](30_FIGMA_FULL_DEV.md#dev-delivery-gate). Do not run live down migrations or change runtime permissions.
@@ -381,11 +378,9 @@ the existing reload action after an obsolete lazy chunk fails; reload recovered 
 current account UI. Preserve additive schema during rollback, and retain the DEV
 model's compatibility with the OpenAI generator. [Authoritative source/deploy/test evidence](30_FIGMA_FULL_DEV.md#final-deployment-and-authenticated-smoke--2026-10-06).
 
-
 ## 2026-10-06 — DEV learning-path correction
 
 DEV-only staged rollout; no migrations; production excluded. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
-
 
 Backend b3c1b73 and final Web 51b92b3 exact DEV Live/readiness, served CSS hash and authenticated desktop/mobile smoke verified. Production is unchanged. [Exact source, behavior and release evidence](31_LEARNING_PATH_FIDELITY_DEV.md).
 
@@ -393,16 +388,13 @@ Backend b3c1b73 and final Web 51b92b3 exact DEV Live/readiness, served CSS hash 
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Unit-study source checkpoint requires Backend-before-Web release, exact-SHA/readiness/provider/scoped-game smoke. No migration or environment changes; release scope pending. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
-
 ## 2026-10-07 - Private lesson conversation room
 
 DEV frontend follows feat/lesson-conversation-v3-dev. Exact source, compatibility, acceptance and rollback: [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
-
 
 ## 2026-10-11 - Focus games in DEV
 
@@ -411,7 +403,6 @@ Only gotIt--dev-front (srv-dar6dng473hc73a0ns1g) is the release target. Deploy e
 ### DEV practice alignment — 2026-10-12
 
 DEV alignment is Web-only, with exact-commit deployment and disabled auto-deploy preserved; rollback source 8f1cbd3. Live release evidence is maintained in document 37. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
@@ -427,6 +418,25 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user-card rollout: matching Core and Product owner APIs precede the Admin gateway/frontend. No new migration/configuration is introduced by this feature; existing Admin prerequisites remain. No production deployment is claimed. [Contract](44_ADMIN_USER_DETAILS.md).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Deploy matching Backend before Admin after existing concepts migration; configure existing stock/AI provider credentials. This follow-up is local, with no live migration or rollout. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
+2026-10-16 FR-CON-09: apply additive migration 1792193000000 before deploying Backend 6db6db6. Existing code ignores the new function; application rollback can retain it and all images. [New-language linking correction, backup and release evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
 ## Admin program and lesson editor - 2026-10-16
 
 Application-scoped shared and personal unit content, full course revision,
@@ -434,17 +444,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user-card rollout: matching Core and Product owner APIs precede the Admin gateway/frontend. No new migration/configuration is introduced by this feature; existing Admin prerequisites remain. No production deployment is claimed. [Contract](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-Deploy matching Backend before Admin after existing concepts migration; configure existing stock/AI provider credentials. This follow-up is local, with no live migration or rollout. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

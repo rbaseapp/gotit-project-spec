@@ -143,29 +143,29 @@ Import אינו מקבל XP, attempts או mastery מהלקוח.
 
 ## 4. מדיניות Idempotency
 
-| פעולה | key | receipt |
-|---|---|---|
-| capture save | UUID header/body | occurrence `capture_receipt` |
-| create practice session | UUID header | session `response_receipt` |
-| submit attempt | UUID header | attempt `response_receipt` |
-| pronunciation assessment | UUID header | attempt receipt |
-| publish reading | UUID header | generated content receipt |
-| import row | `eventId` | capture receipt |
+| פעולה                    | key              | receipt                      |
+| ------------------------ | ---------------- | ---------------------------- |
+| capture save             | UUID header/body | occurrence `capture_receipt` |
+| create practice session  | UUID header      | session `response_receipt`   |
+| submit attempt           | UUID header      | attempt `response_receipt`   |
+| pronunciation assessment | UUID header      | attempt receipt              |
+| publish reading          | UUID header      | generated content receipt    |
+| import row               | `eventId`        | capture receipt              |
 
 אותו key עם payload שונה מחזיר conflict. receipt נשמר עם request hash ומאומת
 לפני replay. legacy event ללא receipt אינו משוחזר באופן ספקולטיבי.
 
 ## 5. Provider Matrix
 
-| יכולת | ספק/Adapter | תצורה מרכזית | fallback |
-|---|---|---|---|
-| ordinary translation | Google Basic v2 | `GOOGLE_TRANSLATION_API`, key | manual |
-| contextual AI translation | OpenAI Responses | key + model + signing secret | profile-defined |
-| reading | Anthropic | key, workspace, model | unavailable |
-| study photo | Pixabay | API key | OpenAI image או null |
-| generated study image | OpenAI Image | API key + model | null |
-| private lesson | OpenAI Realtime | key/model/voice/transcription | unavailable |
-| speech | Google or Azure | provider credentials/mappings | unavailable |
+| יכולת                     | ספק/Adapter      | תצורה מרכזית                  | fallback             |
+| ------------------------- | ---------------- | ----------------------------- | -------------------- |
+| ordinary translation      | Google Basic v2  | `GOOGLE_TRANSLATION_API`, key | manual               |
+| contextual AI translation | OpenAI Responses | key + model + signing secret  | profile-defined      |
+| reading                   | Anthropic        | key, workspace, model         | unavailable          |
+| study photo               | Pixabay          | API key                       | OpenAI image או null |
+| generated study image     | OpenAI Image     | API key + model               | null                 |
+| private lesson            | OpenAI Realtime  | key/model/voice/transcription | unavailable          |
+| speech                    | Google or Azure  | provider credentials/mappings | unavailable          |
 
 ## 6. תצורה
 
@@ -200,10 +200,10 @@ Providers: משתני OpenAI, Anthropic, Google, Azure ו־Pixabay המתועד�
 10. rollout ו־rollback מתועדים.
 
 2026-10-06: standalone matching rounds now prefer unseen session items before recycling after review dates move. API payloads and scoring are unchanged. [Source, regression and rollout status](29_MEANING_MATCHING_ROUNDS.md#backend-follow-up-unseen-words-across-standalone-rounds).
+
 # Guided learning checkpoint — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60` adds owner-scoped guided activity, command receipts, original-turn replay, transcript correction review, course-unit word resolution and fixed teacher voice samples. Profile UI fields and history/smart selection extend existing contracts compatibly. Locally/integration verified; deployment pending. [Canonical contracts and release status](30_FIGMA_FULL_DEV.md).
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -211,16 +211,17 @@ Authoritative introduced-entry count and teacher meeting eligibility. See [canon
 
 2026-10-11 DEV focused manual recall: `/practice/sessions/:id/exercises` retains `learningItemIds` as question targets while resolving distractors from the selected session pool for `recall / multiple_choice`. Owner, active-item, source/translation pair and selection boundaries remain enforced. No request/response schema change. See [37](37_FOCUS_GAMES_DEV.md#manual-drag-distractor-correction).
 
-
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 Owner-requested program artwork and language mascot use existing quota/cache controls; learning and billing truth are unchanged. Screen/API/storage/privacy/process/validation and rollout are canonical in [39](39_PROGRAMS_DESIGN_DEV.md); interaction sequence: [program artwork](../uml/18-program-artwork-dev.puml).
-
 
 ## All-user vocabulary and quick image replacement - 2026-10-16
 
 WordAdmin exposes scoped vocabulary/history reads; concept regeneration publishes an unused asset revision atomically. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
 
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
 
 ## Automatic concept assignment - 2026-10-16
 

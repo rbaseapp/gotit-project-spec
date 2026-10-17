@@ -53,13 +53,13 @@ provider secrets, audio and private expected practice answers are never projecte
 
 All paths below use `/api/v1/admin` at the owner and trusted application context.
 
-| Owner | Route | Contract |
-| --- | --- | --- |
-| Core | `GET /learners/:id/:section` | `emails`, `sessions`, `subscriptions`, `payments`; validates target in the actor's application, including disabled users |
-| Product | `GET /learners/:id/:section` | `overview`, `activity`, `games`, `sessions`, `attempts`, `xp`, `lessons`, `courses`, `homework`, `roadmaps`, `packs`, `usage`; reauthorizes admin and validates target through Core |
-| Product | `GET /learners/:id/courses/:courseId` | Full active/draft plan and evidence for one scoped course; list pages carry summaries instead of full plans |
-| Product | `PATCH /learners/:id/profile` | `{operationId, reason, expectedRevision, changes}`; existing strict profile schema and timestamp revision |
-| Product | `PATCH /learners/:id/settings` | `{operationId, reason, expectedRevision, kind, changes}`; kind `notifications` or `lesson`, existing strict domain schemas; null revision means create if absent |
+| Owner   | Route                                 | Contract                                                                                                                                                                            |
+| ------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Core    | `GET /learners/:id/:section`          | `emails`, `sessions`, `subscriptions`, `payments`; validates target in the actor's application, including disabled users                                                            |
+| Product | `GET /learners/:id/:section`          | `overview`, `activity`, `games`, `sessions`, `attempts`, `xp`, `lessons`, `courses`, `homework`, `roadmaps`, `packs`, `usage`; reauthorizes admin and validates target through Core |
+| Product | `GET /learners/:id/courses/:courseId` | Full active/draft plan and evidence for one scoped course; list pages carry summaries instead of full plans                                                                         |
+| Product | `PATCH /learners/:id/profile`         | `{operationId, reason, expectedRevision, changes}`; existing strict profile schema and timestamp revision                                                                           |
+| Product | `PATCH /learners/:id/settings`        | `{operationId, reason, expectedRevision, kind, changes}`; kind `notifications` or `lesson`, existing strict domain schemas; null revision means create if absent                    |
 
 History pagination is strict `{page, perPage}`, default 1/25, maximum page size 50.
 Responses are `{data, total}`; overview and writes return `{data:{id,...}}`.

@@ -4,6 +4,7 @@
 
 Core subscription lists add optional activity=cancelled and nullable sortable activityAt; Product usage lists add optional activity=failed. Filtering precedes count/pagination and preserves trusted application scope. Gateway status also exposes assignments. [Exact additive contracts and compatibility](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Adds GET list/detail, POST create, PATCH edit and POST ensure-image under `/api/v1/admin/concepts`. Existing learner image payloads stay compatible. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -11,7 +12,6 @@ Adds GET list/detail, POST create, PATCH edit and POST ensure-image under `/api/
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Core adds explicit staff/plan commands with independent permissions and effective billing projection; Product adds prepared-catalog reads and source-derived prompt references. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-11 — Fixed daily task rewards and answer Toasts (DEV)
 
@@ -68,7 +68,6 @@ Backend `10602736bdf5422116eb838e57e9d708318156be` changes catalog data, not rou
 ## 2026-10-01 — Known English-unit entries
 
 `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` adds protected `PUT /api/v1/word-packs/:id/known` (`vocabulary.write`). Strict body: `{"entryIds": [1..100 distinct UUIDs from this pack], "known": boolean}`; success 200 `{"packId": UUID, "knownCount": integer, "requestId": string}`. A foreign or missing pack returns 404; IDs outside that pack return 400; entitlement failure uses the existing write gate. Repeating the same request is state-idempotent. Within the English learning topic, the selected normalized source words are marked or unmarked in every unit containing them; other topics remain pack-local. `GET /word-packs` and `GET /word-packs/:id` add `progress.known` and `progress.completed` (known ∪ mastered), and detail entries add `known`. Existing progress fields remain. Pack-scoped practice omits known entries without changing mastery, evidence or XP. PostgreSQL regression covers isolation and full-unit marking. Production rollout pending.
-
 
 ## 2026-10-01 — Library list pronunciation fields
 
@@ -142,21 +141,21 @@ provider response, stack או secret.
 
 כל auth/billing route למעט webhook דורש `X-Application-Key: gotit`.
 
-| Method | Path | Body/Query | Response עיקרי |
-|---|---|---|---|
-| POST | `/auth/register` | `{email,password}` | user + tokens |
-| POST | `/auth/login` | `{email,password}` | user + tokens |
-| POST | `/auth/google` | `{idToken}` | user + tokens |
-| POST | `/auth/google/access-token` | `{accessToken}` | user + tokens |
-| POST | `/auth/facebook` | `{accessToken}` | user + tokens |
-| POST | `/auth/refresh` | `{refreshToken}` | rotated tokens |
-| POST | `/auth/logout` | `{refreshToken}` | success |
-| GET | `/auth/me` | Bearer | `{user}` עם role |
-| GET | `/billing/plans` | Bearer | `{plans}` ללא provider secret IDs |
-| GET | `/billing/status` | Bearer | tier/access/plan/entitlements/subscription/trial |
-| POST | `/billing/checkout` | `{planKey}` + UUID | `{url}` |
-| POST | `/billing/portal` | — | `{url}` |
-| POST | `/billing/webhooks/paddle` | raw Paddle event | processed/ignored/duplicate |
+| Method | Path                        | Body/Query         | Response עיקרי                                   |
+| ------ | --------------------------- | ------------------ | ------------------------------------------------ |
+| POST   | `/auth/register`            | `{email,password}` | user + tokens                                    |
+| POST   | `/auth/login`               | `{email,password}` | user + tokens                                    |
+| POST   | `/auth/google`              | `{idToken}`        | user + tokens                                    |
+| POST   | `/auth/google/access-token` | `{accessToken}`    | user + tokens                                    |
+| POST   | `/auth/facebook`            | `{accessToken}`    | user + tokens                                    |
+| POST   | `/auth/refresh`             | `{refreshToken}`   | rotated tokens                                   |
+| POST   | `/auth/logout`              | `{refreshToken}`   | success                                          |
+| GET    | `/auth/me`                  | Bearer             | `{user}` עם role                                 |
+| GET    | `/billing/plans`            | Bearer             | `{plans}` ללא provider secret IDs                |
+| GET    | `/billing/status`           | Bearer             | tier/access/plan/entitlements/subscription/trial |
+| POST   | `/billing/checkout`         | `{planKey}` + UUID | `{url}`                                          |
+| POST   | `/billing/portal`           | —                  | `{url}`                                          |
+| POST   | `/billing/webhooks/paddle`  | raw Paddle event   | processed/ignored/duplicate                      |
 
 Auth result:
 
@@ -175,11 +174,11 @@ Auth result:
 
 ### Profile ו־Capabilities
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/profile` | יוצר/מחזיר profile |
-| PATCH | `/profile` | לפחות שדה אחד; עדכון transactional |
-| GET | `/capabilities` | role, configured modules, enabled skills per language |
+| Method | Path            | Contract                                              |
+| ------ | --------------- | ----------------------------------------------------- |
+| GET    | `/profile`      | יוצר/מחזיר profile                                    |
+| PATCH  | `/profile`      | לפחות שדה אחד; עדכון transactional                    |
+| GET    | `/capabilities` | role, configured modules, enabled skills per language |
 
 Profile patch fields: `defaultSourceLanguage`, `defaultTranslationLanguage`,
 `timezone`, `dailyGoal`, `defaultNewItemsPerDay`, `translationMethodPreference`,
@@ -187,10 +186,10 @@ Profile patch fields: `defaultSourceLanguage`, `defaultTranslationLanguage`,
 
 ### Capture
 
-| Method | Path | Auth נוסף | Contract |
-|---|---|---|---|
-| POST | `/captures/preview` | authenticated dictionary: no write entitlement; other methods: vocabulary.write; explicit AI: paid/add-on checks | preview |
-| POST | `/captures` | `vocabulary.write` + idempotency | save/merge receipt |
+| Method | Path                | Auth נוסף                                                                                                        | Contract           |
+| ------ | ------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------ |
+| POST   | `/captures/preview` | authenticated dictionary: no write entitlement; other methods: vocabulary.write; explicit AI: paid/add-on checks | preview            |
+| POST   | `/captures`         | `vocabulary.write` + idempotency                                                                                 | save/merge receipt |
 
 Free Google contract (FR-CAP-008, `gotIt-backend@98136a06cc3aaee14263011e3307ca1f920a21bf`): explicitly send `translationMethod: "dictionary"`. Authentication, scoped lookup, strict validation, rate limits and signed provenance remain required. This method cannot route to AI. `auto` and omitted methods retain the existing write gate because configured routes/profile preferences can select AI. Save remains separately gated. Response schemas do not change; existing Store clients are compatible. [Rollout evidence](10_OPERATIONS.md#2026-10-05---free-google-preview-rollout).
 
@@ -220,21 +219,21 @@ sentence 4000, paragraph 12000, title 500, URL 2048.
 
 ### Library ו־Tags
 
-| Method | Path | קלט מרכזי |
-|---|---|---|
-| GET | `/learning-items` | pagination, search, status, flags, tag/pack, sort |
-| GET | `/learning-items/:id` | full detail |
-| PATCH | `/learning-items/:id` | semantic/status/priority edit |
-| DELETE | `/learning-items/:id` | soft delete |
-| POST | `/learning-items/:id/restore` | restore |
-| POST | `/learning-items/:id/mastery` | `{mastered:boolean}` |
-| POST | `/learning-items/bulk` | עד 100 IDs + action |
-| PUT | `/learning-items/:id/tags` | עד 50 tag IDs |
-| GET | `/learning-items/:id/occurrences` | cursor, limit ≤100 |
-| GET | `/learning-items/:id/translations` | cursor, historical flag |
-| GET/PUT | `/learning-items/:id/examples` | עד 20 examples |
-| GET | `/learning-items/:id/audio` | binary audio; entitlement |
-| GET/POST/PATCH/DELETE | `/tags[/:id]` | paginated CRUD |
+| Method                | Path                               | קלט מרכזי                                         |
+| --------------------- | ---------------------------------- | ------------------------------------------------- |
+| GET                   | `/learning-items`                  | pagination, search, status, flags, tag/pack, sort |
+| GET                   | `/learning-items/:id`              | full detail                                       |
+| PATCH                 | `/learning-items/:id`              | semantic/status/priority edit                     |
+| DELETE                | `/learning-items/:id`              | soft delete                                       |
+| POST                  | `/learning-items/:id/restore`      | restore                                           |
+| POST                  | `/learning-items/:id/mastery`      | `{mastered:boolean}`                              |
+| POST                  | `/learning-items/bulk`             | עד 100 IDs + action                               |
+| PUT                   | `/learning-items/:id/tags`         | עד 50 tag IDs                                     |
+| GET                   | `/learning-items/:id/occurrences`  | cursor, limit ≤100                                |
+| GET                   | `/learning-items/:id/translations` | cursor, historical flag                           |
+| GET/PUT               | `/learning-items/:id/examples`     | עד 20 examples                                    |
+| GET                   | `/learning-items/:id/audio`        | binary audio; entitlement                         |
+| GET/POST/PATCH/DELETE | `/tags[/:id]`                      | paginated CRUD                                    |
 
 Sort: `recent | alphabetical | learning_status | weakest | strongest |
 due_next | most_practiced`. Bulk actions: pause, resume, archive, delete, restore,
@@ -242,30 +241,30 @@ mark/return mastery, priority normal/high, hard/clear.
 
 ### Word Packs
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/word-packs` | catalog + installed/progress |
-| GET | `/word-packs/:id` | pack + entries |
-| GET | `/word-packs/:id/entries/:entryId/image` | owned current-revision cached image or `image:null`; read-only |
-| POST | `/word-packs/:id/entries/:entryId/image` | strict `{}`; practice gate; cached/generated catalog image |
-| POST | `/word-packs/:id/entries/:entryId/example` | strict `{}`; practice gate; `exampleText`, `generated` |
-| POST | `/word-packs/:id/add` | `{entryIds:[1..100]}` |
-| PUT | `/word-packs/:id/known` | `{entryIds:[1..100],known:boolean}`; returns known count |
-| DELETE | `/word-packs/:id?mode=` | `archive_exclusive | keep_words` |
+| Method | Path                                       | Contract                                                       |
+| ------ | ------------------------------------------ | -------------------------------------------------------------- | ----------- |
+| GET    | `/word-packs`                              | catalog + installed/progress                                   |
+| GET    | `/word-packs/:id`                          | pack + entries                                                 |
+| GET    | `/word-packs/:id/entries/:entryId/image`   | owned current-revision cached image or `image:null`; read-only |
+| POST   | `/word-packs/:id/entries/:entryId/image`   | strict `{}`; practice gate; cached/generated catalog image     |
+| POST   | `/word-packs/:id/entries/:entryId/example` | strict `{}`; practice gate; `exampleText`, `generated`         |
+| POST   | `/word-packs/:id/add`                      | `{entryIds:[1..100]}`                                          |
+| PUT    | `/word-packs/:id/known`                    | `{entryIds:[1..100],known:boolean}`; returns known count       |
+| DELETE | `/word-packs/:id?mode=`                    | `archive_exclusive                                             | keep_words` |
 
 ### Practice ו־Learning
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/practice/sessions` | history |
-| POST | `/practice/sessions` | idempotent create |
-| GET | `/practice/sessions/:id` | detail |
-| GET | `/practice/sessions/:id/study` | cards ללא evidence |
-| GET | `/practice/sessions/:id/study/:itemId/image` | cached/generated image descriptor |
-| PATCH | `/practice/sessions/:id` | completed/abandoned |
-| POST | `/practice/sessions/:id/exercises` | issue 1–100 private exercises |
-| POST | `/practice/attempts` | idempotent authoritative scoring |
-| GET | `/learning/queue` | limit ≤100 |
+| Method | Path                                         | Contract                          |
+| ------ | -------------------------------------------- | --------------------------------- |
+| GET    | `/practice/sessions`                         | history                           |
+| POST   | `/practice/sessions`                         | idempotent create                 |
+| GET    | `/practice/sessions/:id`                     | detail                            |
+| GET    | `/practice/sessions/:id/study`               | cards ללא evidence                |
+| GET    | `/practice/sessions/:id/study/:itemId/image` | cached/generated image descriptor |
+| PATCH  | `/practice/sessions/:id`                     | completed/abandoned               |
+| POST   | `/practice/sessions/:id/exercises`           | issue 1–100 private exercises     |
+| POST   | `/practice/attempts`                         | idempotent authoritative scoring  |
+| GET    | `/learning/queue`                            | limit ≤100                        |
 
 `GET /learning/queue` keeps its response shape. Algorithm `gotit-v1.3` orders eligible words by the last successful current-revision matching attempt: no success first, then oldest success. Queue score breaks ties. A newly created smart review session snapshots this order; explicit item selections retain their supplied scope.
 | GET | `/learning/config` | policy + algorithmVersion |
@@ -279,22 +278,22 @@ Attempt input מחייב בדיוק אחד: `answerText`, `choiceId`, `selfRatin
 
 ### Dashboard ו־Gamification
 
-| Method | Path | Query |
-|---|---|---|
-| GET | `/dashboard` | `recentPage`, `recentLimit≤20` |
-| GET | `/dashboard/activity` | `days≤366` |
-| GET | `/gamification` | — |
+| Method | Path                  | Query                          |
+| ------ | --------------------- | ------------------------------ |
+| GET    | `/dashboard`          | `recentPage`, `recentLimit≤20` |
+| GET    | `/dashboard/activity` | `days≤366`                     |
+| GET    | `/gamification`       | —                              |
 
 ### Reading
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/reading/quota` | current quota |
-| POST | `/reading/preview` | generation preview + publication token |
-| POST | `/reading` | idempotent open/persist |
-| GET | `/reading` | history |
-| GET | `/reading/:id` | detail |
-| DELETE | `/reading/:id` | delete owned reading |
+| Method | Path               | Contract                               |
+| ------ | ------------------ | -------------------------------------- |
+| GET    | `/reading/quota`   | current quota                          |
+| POST   | `/reading/preview` | generation preview + publication token |
+| POST   | `/reading`         | idempotent open/persist                |
+| GET    | `/reading`         | history                                |
+| GET    | `/reading/:id`     | detail                                 |
+| DELETE | `/reading/:id`     | delete owned reading                   |
 
 Preview input: target language, optional topic/CEFR, content type
 `article|essay|news_style|story|other`, length `short|medium|long`, ועד 20 items.
@@ -308,16 +307,16 @@ audio אינו נשמר.
 
 ### Private Lessons
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/private-lessons/setup` | `targetLanguageCode` |
-| POST | `/private-lessons/roadmaps` | language + goal kind/key |
-| PUT | `/private-lessons/preferences` | full preferences |
-| POST | `/private-lessons/realtime-sessions` | create secret/session |
-| GET | `/private-lessons` | list, limit ≤50 |
-| GET | `/private-lessons/:id` | journal/report |
-| POST | `/private-lessons/:id/complete` | duration, reason, turns |
-| DELETE | `/private-lessons/:id` | remove owned journal |
+| Method | Path                                 | Contract                 |
+| ------ | ------------------------------------ | ------------------------ |
+| GET    | `/private-lessons/setup`             | `targetLanguageCode`     |
+| POST   | `/private-lessons/roadmaps`          | language + goal kind/key |
+| PUT    | `/private-lessons/preferences`       | full preferences         |
+| POST   | `/private-lessons/realtime-sessions` | create secret/session    |
+| GET    | `/private-lessons`                   | list, limit ≤50          |
+| GET    | `/private-lessons/:id`               | journal/report           |
+| POST   | `/private-lessons/:id/complete`      | duration, reason, turns  |
+| DELETE | `/private-lessons/:id`               | remove owned journal     |
 
 Duration: 1/5/10/15. Voice: male/female. Rate: very_slow/slow/normal/fast/very_fast.
 Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beginner
@@ -325,28 +324,28 @@ Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beg
 
 ### Transfer
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | `/export` | paginated `learning_library_v1` |
-| POST | `/import` | עד 100 `capture_requests_v1`; 200/207 |
+| Method | Path      | Contract                              |
+| ------ | --------- | ------------------------------------- |
+| GET    | `/export` | paginated `learning_library_v1`       |
+| POST   | `/import` | עד 100 `capture_requests_v1`; 200/207 |
 
 ## 4. שגיאות דומיין מרכזיות
 
-| Code | משמעות/פעולת לקוח |
-|---|---|
-| `VALIDATION_ERROR` | תקן שדות; אין retry זהה |
-| `INVALID_ACCESS_TOKEN` / `UNAUTHORIZED` | refresh פעם אחת או כניסה מחדש |
-| `CORE_AUTH_UNAVAILABLE` | retry מאוחר; אין bypass |
-| `SUBSCRIPTION_REQUIRED` | הצג billing/read-only |
-| `IDEMPOTENCY_CONFLICT` | אל תחליף payload לאותו UUID |
-| `SENSE_SELECTION_REQUIRED` | הצג merge/new sense |
-| `MERGE_ITEM_CHANGED` | preview חדש |
-| `ENRICHMENT_SELECTION_INVALID` | preview חדש; token פג/לא מתאים |
-| `EXERCISE_EXPIRED/CONSUMED` | הנפק exercise חדש; לא score מקומי |
-| `AI_MONTHLY_LIMIT_REACHED` | הצג quota/reset |
-| `SPEECH_NOT_CONFIGURED/UNAVAILABLE` | השבת feature זמנית |
-| provider auth/billing/permission | אין retry אוטומטי; תפעול נדרש |
-| provider timeout/rate/upstream | retry bounded לפי מדיניות שרת |
+| Code                                    | משמעות/פעולת לקוח                 |
+| --------------------------------------- | --------------------------------- |
+| `VALIDATION_ERROR`                      | תקן שדות; אין retry זהה           |
+| `INVALID_ACCESS_TOKEN` / `UNAUTHORIZED` | refresh פעם אחת או כניסה מחדש     |
+| `CORE_AUTH_UNAVAILABLE`                 | retry מאוחר; אין bypass           |
+| `SUBSCRIPTION_REQUIRED`                 | הצג billing/read-only             |
+| `IDEMPOTENCY_CONFLICT`                  | אל תחליף payload לאותו UUID       |
+| `SENSE_SELECTION_REQUIRED`              | הצג merge/new sense               |
+| `MERGE_ITEM_CHANGED`                    | preview חדש                       |
+| `ENRICHMENT_SELECTION_INVALID`          | preview חדש; token פג/לא מתאים    |
+| `EXERCISE_EXPIRED/CONSUMED`             | הנפק exercise חדש; לא score מקומי |
+| `AI_MONTHLY_LIMIT_REACHED`              | הצג quota/reset                   |
+| `SPEECH_NOT_CONFIGURED/UNAVAILABLE`     | השבת feature זמנית                |
+| provider auth/billing/permission        | אין retry אוטומטי; תפעול נדרש     |
+| provider timeout/rate/upstream          | retry bounded לפי מדיניות שרת     |
 
 ## 5. Versioning ושינוי חוזה
 
@@ -357,10 +356,10 @@ Focus: speaking/vocabulary/grammar/fluency/pronunciation/listening. absolute beg
 - API catalog, מסמך זה, parsers ובדיקות contract חייבים להתעדכן באותו change set.
 
 2026-10-06: standalone matching rounds now prefer unseen session items before recycling after review dates move. API payloads and scoring are unchanged. [Source, regression and rollout status](29_MEANING_MATCHING_ROUNDS.md#backend-follow-up-unseen-words-across-standalone-rounds).
+
 # Guided learning API additions — 2026-10-06
 
 Backend `0404c8cc72bbb4f32a125f4c9e255318beff9a60` catalogs 86 endpoints. Six additions expose owned unit context, GET/POST lesson activity, original/support replay, fixed voice samples and approved course-unit meanings. Existing lesson history accepts language/pack filters; smart-review accepts optional includeNewItems; profile learningPreferences accepts UI fields. [Strict payloads, access, bounds, errors, replay and compatibility](30_FIGMA_FULL_DEV.md#api-contract-additions). These are locally/integration verified contracts, pending DEV deployment.
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -370,16 +369,13 @@ Additive station policy, midpoint input, 409 UNIT_WORDS_REQUIRED, owned cached-i
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 Two additive practice-gated unit study POSTs and the 89-route catalog are locally/integration verified. Existing GET stays read-only. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
-
 ## 2026-10-07 - Private lesson conversation room
 
 Product routes and payload schemas are unchanged; legacy typed turns use acknowledged Realtime items and the existing bounded complete turns payload. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
-
 
 ## 2026-10-11 - Focus games in DEV
 
@@ -391,11 +387,9 @@ No route/payload change. Drag maps to recall/multiple_choice/translation_to_sour
 
 No API-shape change. Existing study/detail/audio/preview, exercise, attempt, assessment and close routes serve the aligned DEV client; choices remain real server IDs and retries preserve operation identity. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ## 2026-10-12 — Library card projection
 
 Optional GET /learning-items?view=cards adds owned context/POS/tags/program/current-revision answers and language/status summary counts; bounded multi-origin/POS/status filters are additive. Legacy responses remain unchanged. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
@@ -411,11 +405,21 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:section`, Product `PATCH /admin/learners/:id/profile|settings`, fixed gateway routing, strict pagination and revision/replay semantics are defined in [44](44_ADMIN_USER_DETAILS.md#owner-contracts).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+Adds admin words/detail/image/section reads and concepts/:id/regenerate; old ensure-image action remains compatible. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## 2026-10-16 — Modular prompt and Realtime management
 
 FR-ADMIN-PROMPT-001–004: editable instructions/modules, live-lesson sections/stages, supported session parameters and synthetic browser → Backend → OpenAI previews. Existing version/audit/permission boundaries remain authoritative. API, data, privacy, acceptance and exact validation evidence are owned by [44 — AI prompt management](44_AI_PROMPT_MANAGEMENT.md). No live rollout is claimed.
-
-
 
 ## Admin program and lesson editor - 2026-10-16
 
@@ -424,17 +428,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user-detail APIs (2026-10-16): Core/Product `GET /admin/learners/:id/:section`, Product `PATCH /admin/learners/:id/profile|settings`, fixed gateway routing, strict pagination and revision/replay semantics are defined in [44](44_ADMIN_USER_DETAILS.md#owner-contracts).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-Adds admin words/detail/image/section reads and concepts/:id/regenerate; old ensure-image action remains compatible. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

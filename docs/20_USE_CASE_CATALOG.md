@@ -4,6 +4,7 @@
 
 UC-ADM-ACT-01: a verified administrator reviews, pages, refreshes and opens recent activity; failed feeds can retry independently and writes retain existing permission/MFA checks. [Canonical use case](46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 UC-CON-01: staff create a reviewed meaning and language forms; UC-CON-02: learners reuse that meaning?s image across languages; UC-CON-03: staff reset an image without changing learning evidence. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
@@ -11,7 +12,6 @@ UC-CON-01: staff create a reviewed meaning and language forms; UC-CON-02: learne
 ## Admin owner feedback 0.3 — 2026-10-16
 
 Staff can inspect a learner, unlock, select role/permissions or plan, provide a reason and review the persisted result; guide/catalog flows require reading access only. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-12 — Navigate with fixed application chrome
 
@@ -54,12 +54,12 @@ Web `e1948281adabe34d2ff6c4e4dc4f949e90c33436`. UC-UX-02: learner sees the actua
 
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
-| ID | Flow | Alternatives/control |
-| --- | --- | --- |
-| UC-UX-01 | Captured/library/pack words → smart/manual game → same origin | No program required; selected words and library context retained; server owns queue/scoring. |
+| ID       | Flow                                                               | Alternatives/control                                                                                      |
+| -------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| UC-UX-01 | Captured/library/pack words → smart/manual game → same origin      | No program required; selected words and library context retained; server owns queue/scoring.              |
 | UC-UX-02 | Program/free lesson preparation → independent warmup → preparation | Teacher/support/topic draft scoped to user/app/language/course; expiry/corruption ignored; no auto-start. |
-| UC-UX-03 | AI preview → immediate reader → automatic publication | Failure retains text and stable publication intent; quiz only after saved reading identity. |
-| UC-UX-04 | Explicit program selection → language-specific home next lesson | No first-course default; empty-language course stays available; existing active session has priority. |
+| UC-UX-03 | AI preview → immediate reader → automatic publication              | Failure retains text and stable publication intent; quiz only after saved reading identity.               |
+| UC-UX-04 | Explicit program selection → language-specific home next lesson    | No first-course default; empty-language course stays available; existing active session has priority.     |
 
 [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
 
@@ -102,11 +102,9 @@ When a learner marks a known word in a named English unit, the server marks matc
 
 On `/english-learning`, the learner may mark a named unit known directly from its card or inspect its preview and mark one English/Hebrew entry. The card/preview reload server state after each action; an entire known unit is complete, and the next unfinished unit advances. If the learner opens an incomplete unit, the install request contains only unknown IDs. Billing restrictions follow the existing `vocabulary.write` route; API errors use existing feedback. Local source `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` passed flow and responsive regression; production smoke pending.
 
-
 ## UC-04B — Skip a known English word or unit
 
 Actor: authenticated learner in the English/Hebrew path. Trigger: declare one preview entry or a whole 50-entry unit already known. The client sends the selected pack entry IDs to `PUT /word-packs/:id/known`; the server validates pack ownership and write entitlement, records the learner's declaration, propagates repeated English forms within the path, and reports known/completed counts. Subsequent pack practice excludes those words. Alternative: unmark reverses the declaration; wrong-pack IDs fail without partial writes; a billing restriction blocks the write; a pack with pre-existing learning evidence retains that evidence without awarding more. Backend source `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` locally and integration verified; Web/deploy pending. Links FR-PACK-005 and SCR-16.
-
 
 ## UC-13 — Read a source expression with a familiar script (pilot)
 
@@ -149,14 +147,14 @@ SCR-PC-03–04; SEQ-07/12. [פרטי המימוש והחריגים ב־22](22_PE
 
 Web continuation (`gotIt-front@9fb80b2`): on reopening the browser, the client reads its saved rotating refresh token, exchanges it with Core, and hydrates the live account. A legacy tab token is migrated when read. An expired/revoked token leads to signed-out state and local credential cleanup; explicit logout clears both browser stores. A transient Core/network error leaves the saved token for a later retry. Core's default 30-day absolute expiry still bounds this flow. Locally verified and deployed; production restart smoke pending. Maps FR-AUTH-011 / SCR-01.
 
-| שדה | ערך |
-|---|---|
-| Actor ראשי | משתמש לא מזוהה |
-| מערכות | Web/Chrome, Core, OAuth provider |
-| Preconditions | application `gotit` פעילה; provider configured לפי המסלול |
-| Trigger | בחירת Register/Login/Google/Facebook |
-| Postcondition הצלחה | user פעיל + auth session + tokens בלקוח |
-| Postcondition כשל | אין session חדש; אין מידע עודף על החשבון |
+| שדה                 | ערך                                                       |
+| ------------------- | --------------------------------------------------------- |
+| Actor ראשי          | משתמש לא מזוהה                                            |
+| מערכות              | Web/Chrome, Core, OAuth provider                          |
+| Preconditions       | application `gotit` פעילה; provider configured לפי המסלול |
+| Trigger             | בחירת Register/Login/Google/Facebook                      |
+| Postcondition הצלחה | user פעיל + auth session + tokens בלקוח                   |
+| Postcondition כשל   | אין session חדש; אין מידע עודף על החשבון                  |
 
 Main flow: המשתמש מספק credential → Core מאמת application/input → מאמת credential
 או provider identity → יוצר/מחדש user identity → יוצר refresh session → חותם JWT
@@ -171,12 +169,12 @@ Facebook SDK alternate flow (`gotIt-front@af299153dde90879aafa0aa3a42e1ae8a8d246
 
 ## UC-02 — לכידת מילה ושמירת משמעות
 
-| שדה | ערך |
-|---|---|
-| Actor ראשי | משתמש מזוהה עם `vocabulary.write` |
-| Trigger | selection/double-click/context menu/manual input |
+| שדה           | ערך                                                   |
+| ------------- | ----------------------------------------------------- |
+| Actor ראשי    | משתמש מזוהה עם `vocabulary.write`                     |
+| Trigger       | selection/double-click/context menu/manual input      |
 | Preconditions | session תקף; טקסט 1–500; target language ניתנת לפתרון |
-| הצלחה | item חדש/סנס חדש/occurrence ממוזג + receipt |
+| הצלחה         | item חדש/סנס חדש/occurrence ממוזג + receipt           |
 
 Main flow:
 
@@ -321,13 +319,14 @@ provider config mismatch, smoke regression; stop/rollback compatible images/forw
 ## UC-04A — Follow the English learning path
 
 Actor: authenticated English-source/Hebrew-translation learner. Preconditions: the two English catalog migrations have run and compatible packs are returned by the existing API. Trigger: open `/english-learning` from navigation or SCR-08. Main flow: view three ordered levels and server progress, open the next 50-entry unit, inspect English/Hebrew pairs, install those 50 IDs through the existing add operation, then enter pack-scoped smart practice; revisit the path to see authoritative mastery. Alternatives: catalog unavailable, different profile language pair, API failure/retry, missing vocabulary write entitlement, existing installed unit, or incomplete practice. No progress is inferred from viewing or installing. Source `gotIt-front@4da34116f8b5c6242d5e7ace61f63493ebf185af`; local Web gates passed, production smoke pending. Links FR-PACK-004 and SCR-16.
+
 # Guided learning use cases — 2026-10-06
 
 UC-GUIDED-01 joins owned unit preparation to learn/try/chat, replay, corrected transcript review and atomic report completion. UC-UX-05 connects explicit owned unit meanings to scoped smart/manual practice. UC-UX-06 saves and reapplies account interface preferences. [Main/alternative flows, failures and billing-pause limitation](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence).
+
 ## 2026-10-06 - Complete learning/account Web
 
 Web `2559d5bb22a928add4a56e53e74e9d514d0167fd` implements UC-GUIDED-01 and UC-UX-05/06 from the [canonical sequence and state contract](30_FIGMA_FULL_DEV.md#processuse-cases-and-sequence), including text start without microphone, scope-preserving warmup, stable command retry, review, automatic report after guided closure, and per-account interface save/retry. Independent extension-word games, explicit missing/sense capture and Core minutes remain supported. Full browser/live provider acceptance pending.
-
 
 ## 2026-10-06 — DEV learning-path correction
 
@@ -337,21 +336,17 @@ UC-PATH-01 study then teacher; UC-PATH-02 inspect owned word illustration. See [
 
 [Canonical behavior, exact source commits, API/provider/data bounds and verification evidence](32_PRACTICE_CLARITY.md). Backend and Web are implemented and locally verified; source publication and deployment remain pending release-target clarification. No new deployment verified.
 
-
 ## 2026-10-06 — Unit study source checkpoint
 
 UC-UNIT-01: select a unit word, load/retry image/example. UC-UNIT-02: choose a game, practise only the unit's unknown words, return to unit words. [Contract, source and verification](32_UNIT_STUDY_AND_GAME_SCOPE.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
 UC-07 supports text start without microphone. Voice permission denial preserves the draft and returns to writing; explicit finish-and-save completes the actual report. [Contract and evidence](33_PRIVATE_LESSON_CONVERSATION_DEV.md).
 
-
 ## 2026-10-11 - Focus games in DEV
 
 UC-05: scoped launch, answer/assess, acknowledge receipt, continue/replay/repair, close and view totals. Alternatives: skip, unavailable speech, save/resume and expired/failed attempt recovery. [Canonical contract and evidence](37_FOCUS_GAMES_DEV.md).
-
 
 ## 2026-10-11 - Owner game-design corrections (local)
 
@@ -361,21 +356,17 @@ UC-05: selecting or dragging a matching pair previews its connection before asse
 
 UC-05: wrong pairs/cloze answers retry the same item; listening reveal queues one repeat; microphone refusal pauses speech stages; only acknowledged operations advance. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 UC-05: wrong cloze choices retry without revealing answer audio; successful completion follows the owner video with cumulative gift taps and measured XP arrival. [Canonical behavior, scope and evidence](37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 — UC-03 My Words detail and selected practice
 
 Find/filter words, inspect actual source/evidence in the side drawer, change tags/status through existing guarded endpoints, practice exact selected IDs, and return to the library context. Failed writes retain actionable feedback. [Canonical behavior, API, validation and DEV release evidence](38_MY_WORDS_DESIGN_DEV.md).
 
-
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
-
 
 ## 2026-10-14 - Settings reference design in DEV
 
@@ -395,6 +386,18 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## Admin user details — 2026-10-16
+
+Admin user inspection: a verified administrator selects a user, inspects independent account/product histories and current access, unlocks editing when permitted, and saves an explicit target/revision/reason. Missing data, owner outage, absent permission, expired MFA and stale state remain visible. [Full contract](44_ADMIN_USER_DETAILS.md).
+
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+UC-ADM-CON: find/filter a learner word, inspect its reviewed meaning or prefill concept creation, then replace the shared image through stock or an edited AI prompt. On ambiguous matching, review mappings; on failure, retain old image and retry the same operation. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## Admin program and lesson editor - 2026-10-16
 
 Application-scoped shared and personal unit content, full course revision,
@@ -402,17 +405,6 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## Admin user details — 2026-10-16
-
-Admin user inspection: a verified administrator selects a user, inspects independent account/product histories and current access, unlocks editing when permitted, and saves an explicit target/revision/reason. Missing data, owner outage, absent permission, expired MFA and stale state remain visible. [Full contract](44_ADMIN_USER_DETAILS.md).
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-UC-ADM-CON: find/filter a learner word, inspect its reviewed meaning or prefill concept creation, then replace the shared image through stock or an edited AI prompt. On ambiguous matching, review mappings; on failure, retain old image and retry the same operation. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
-
 
 ## Automatic concept assignment - 2026-10-16
 

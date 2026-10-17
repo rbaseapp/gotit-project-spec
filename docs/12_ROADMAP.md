@@ -4,7 +4,6 @@
 
 The reported usability and operational gaps are implemented and locally verified for 0.3; ordered deployment and owner production acceptance remain the release follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
 
-
 ## 2026-10-05 - UX 2.1 DEV checkpoint
 
 UX 2.1 existing-contract UI implementation/local gates are complete for the coverage in 28. Release remains blocked by DEV Backend DB isolation. Guided task/stage protocol, microphone-free text teacher, durable voice resume/billing pause, new reward economies and readiness-based teacher stations remain proposed; six-locale new helper copy uses English fallback. [Canonical coverage, local verification and deployment blocker](28_UX_2_1_DEV.md).
@@ -35,16 +34,16 @@ capture מלא. סטטוס Production משתנה לפי רכיב ו־integration
 
 ## 2. פערים בעדיפות P0 — לפני הרחבה ציבורית
 
-| פער | סיכון | תוצר סיום |
-|---|---|---|
-| password email verification/reset | השתלטות/שירות לקוי | flows, provider, throttling, tests |
-| API catalog חסר 7 lesson routes | contract drift | catalog/generated contract test |
-| migration role separation עקבי | runtime עם DDL/rollback קשה | pre-deploy migrator בכל services |
-| Production provider acceptance | feature מציג זמין אך נכשל | matrix מתועדת לכל ספק/model |
-| Paddle live reconciliation | גישה/חיוב שגויים | webhook, renewal, failure, cancel, refund |
-| retention/account deletion | פרטיות/ציות | policy, API/process, SLA, legal approval |
-| monitoring/alerts/on-call | incident ללא גילוי | dashboards, SLOs, paging, runbooks |
-| backup restore drill | אובדן נתונים | RPO/RTO מאושרים ותרגיל מוצלח |
+| פער                               | סיכון                       | תוצר סיום                                 |
+| --------------------------------- | --------------------------- | ----------------------------------------- |
+| password email verification/reset | השתלטות/שירות לקוי          | flows, provider, throttling, tests        |
+| API catalog חסר 7 lesson routes   | contract drift              | catalog/generated contract test           |
+| migration role separation עקבי    | runtime עם DDL/rollback קשה | pre-deploy migrator בכל services          |
+| Production provider acceptance    | feature מציג זמין אך נכשל   | matrix מתועדת לכל ספק/model               |
+| Paddle live reconciliation        | גישה/חיוב שגויים            | webhook, renewal, failure, cancel, refund |
+| retention/account deletion        | פרטיות/ציות                 | policy, API/process, SLA, legal approval  |
+| monitoring/alerts/on-call         | incident ללא גילוי          | dashboards, SLOs, paging, runbooks        |
+| backup restore drill              | אובדן נתונים                | RPO/RTO מאושרים ותרגיל מוצלח              |
 
 ## 3. P1 — איכות מוצר והפחתת סיכון
 
@@ -72,16 +71,16 @@ capture מלא. סטטוס Production משתנה לפי רכיב ו־integration
 
 ## 5. החלטות פתוחות
 
-| החלטה | Owner מוצע | Deadline/Trigger |
-|---|---|---|
-| מכסת AI reading לפי plan | Product + Finance | לפני pricing launch |
-| ערכי XP ו־review intervals סופיים | Learning + Data | אחרי cohort data |
-| ספק pronunciation עיקרי | Product + Eng | לפני marketing claim |
-| retention ומחיקה קבועה | Legal + Security | לפני public launch |
-| paragraph capture default | Product + Privacy | לפני Store review |
-| SLO/RPO/RTO | Eng + Ops | לפני paid GA |
-| supported browsers/devices | Product + QA | release policy |
-| CEFR claim wording | Learning + Legal | לפני public claim |
+| החלטה                             | Owner מוצע        | Deadline/Trigger     |
+| --------------------------------- | ----------------- | -------------------- |
+| מכסת AI reading לפי plan          | Product + Finance | לפני pricing launch  |
+| ערכי XP ו־review intervals סופיים | Learning + Data   | אחרי cohort data     |
+| ספק pronunciation עיקרי           | Product + Eng     | לפני marketing claim |
+| retention ומחיקה קבועה            | Legal + Security  | לפני public launch   |
+| paragraph capture default         | Product + Privacy | לפני Store review    |
+| SLO/RPO/RTO                       | Eng + Ops         | לפני paid GA         |
+| supported browsers/devices        | Product + QA      | release policy       |
+| CEFR claim wording                | Learning + Legal  | לפני public claim    |
 
 ## 6. Milestones
 
@@ -137,20 +136,18 @@ V1 נחשב מוכן רק כאשר משתמש אמיתי יכול:
 
 ובמקביל: migration/backup/rollback, monitoring, security, accessibility, legal,
 support ו־live acceptance הושלמו עם ראיות.
+
 # Guided learning DEV milestone — 2026-10-06
 
 Backend contracts are implemented/integration verified at `0404c8cc72bbb4f32a125f4c9e255318beff9a60`; remaining gates are DEV schema rollout, Web final quality/fidelity acceptance, exact-SHA deployment and authenticated provider smoke. Parent/child account relationships, account deletion and native Google Play purchases are explicitly a separate owner-selected phase. Reward-economy concepts and new published language catalogs are not inferred from design examples. [Scope and current status](30_FIGMA_FULL_DEV.md).
-
 
 ## 2026-10-06 — DEV learning-path correction
 
 Unit gating implemented; cross-unit adaptive checkpoint remains outside this contract. See [canonical contract and exact source](31_LEARNING_PATH_FIDELITY_DEV.md).
 
-
 ## 2026-10-06 - Practice clarity Web source checkpoint
 
 Requested practice clarity and native reading guides are locally implemented. Publication, target selection, exact-SHA deployment and authenticated provider/audio smoke remain open. [Canonical source and evidence](32_PRACTICE_CLARITY.md).
-
 
 ## 2026-10-07 - Private lesson conversation room
 
@@ -159,7 +156,6 @@ Approved private-lesson room implementation and remaining physical-device accept
 ### DEV practice alignment — 2026-10-12
 
 Owner alignment implementation is local-complete; real device microphone/audio and provider latency remain acceptance boundaries, independently of the exact DEV deployment status. See [canonical scope and evidence](37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
-
 
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
@@ -175,6 +171,14 @@ This records local implementation and verification; production deployment is a
 separate explicitly recorded release step. Existing learner Web/Chrome contracts
 remain compatible.
 
+## All-user vocabulary and quick image replacement - 2026-10-16
+
+All-user vocabulary and quick replacement are released to main and deployed; paid-provider acceptance and private Core CI checkout access remain follow-up items. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## Admin program and lesson editor - 2026-10-16
 
 Application-scoped shared and personal unit content, full course revision,
@@ -182,8 +186,3 @@ published learner templates, Realtime previews/snapshots and measured lesson
 statistics are owned by [45 - Admin program editor](45_ADMIN_PROGRAM_EDITOR.md).
 This is local/integration implementation evidence; shared-environment migration
 and deployment remain separate.
-
-
-## All-user vocabulary and quick image replacement - 2026-10-16
-
-All-user vocabulary and quick replacement are locally implemented; paid-provider and deployed acceptance remain pending. [Canonical contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16).

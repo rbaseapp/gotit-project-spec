@@ -4,6 +4,11 @@
 
 Replaced the Admin introduction/module tiles with recent users, subscriptions, cancellations, personal programs, templates, words and measured AI failures. Added scoped server-side activity filters, independent paging and navigation. Published and deployed to Core, Product and Admin; authenticated live acceptance passed. [Canonical release evidence](docs/46_ADMIN_ACTIVITY_DASHBOARD.md).
 
+## 2026-10-16 — New-language shared image linking
+
+Fix Southern / جنوبي sharing through one reviewed Hebrew translation anchor. One SQL resolver now serves word cards, cached images and image replacement; ambiguous or conflicting meanings stay separate. Additive function migration preserves all stored learning/media. Backend 6db6db6: 242 fast and 121 PostgreSQL cases, typecheck/build/format/Docker passed. [Contract and rollout evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#new-language-translation-linking-correction-2026-10-16).
+
+
 ## 2026-10-16 ? Multilingual concepts
 
 Implemented local Backend/Admin concept management and language-independent persistent image reuse. Includes forward migration, concurrency/revision safeguards and local verification. [Canonical contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md). Not deployed.
@@ -12,11 +17,9 @@ Implemented local Backend/Admin concept management and language-independent pers
 
 Applicable editing actions remain visible and disabled with Hebrew unlock/permission reasons. Open dialogs disable confirmation on MFA expiry. Owner authorization and grants remain unchanged. Typecheck/build, 42 gateway/config tests, focused real-MFA browser checks and published Admin CI pass; UI follow-up deployment is pending. [Canonical correction](docs/43_ADMIN_CONSOLE_FOUNDATION.md#editing-visibility-correction-031-2026-10-16).
 
-
 ## 2026-10-16 — Admin owner feedback 0.3
 
 Implemented explicit staff roles/permissions, effective Free/Basic↔Pro access, source-derived base prompt previews, prepared English-from-zero catalog, visible program creation and Hebrew field guidance. Core adds an additive scoped override migration; payment state and learning evidence are preserved. [Requirements, verification and pending ordered rollout](docs/43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).
-
 
 ## 2026-10-12 — Shared application header (DEV)
 
@@ -134,8 +137,7 @@ Approved responsive conversation room with inline text/voice input, real teacher
 Backend `5111096` restricts smart-game answer choices as well as targets to the
 scoped session pool; the original distractor query fails the new regression.
 Web `54275f4` rejects general/other-unit resumed sessions and displays the unit
-context. Exact-source Render deployments are Live; both readiness checks return
-200. 33 PostgreSQL and 34 live Web component tests, applicable type/lint/build
+context. Exact-source Render deployments are Live; both readiness checks return 200. 33 PostgreSQL and 34 live Web component tests, applicable type/lint/build
 gates pass. Fresh authenticated unit button/chooser/game navigation and real
 pronoun image/example are verified. [Evidence](docs/32_UNIT_STUDY_AND_GAME_SCOPE.md).
 
@@ -398,11 +400,9 @@ Document core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3: OTP registratio
 
 - Render Web `dep-dav8pnk9v7es73fjv47g` is Live for exact `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c`. Public `/ready`, `/english-learning`, CSS and JS returned 200; the served assets contain the new preview layout and Hebrew title. A fresh browser tab showed Login, so authenticated visual unit smoke remains unverified.
 
-
 ## 2026-10-01 — Hebrew path name and unit preview alignment
 
 - `gotIt-front@5dd490426768c983c8eef368e2f512ea2b9a780c` changes the Hebrew path label to "לימוד שפה מאפס" in navigation and the heading. The 50-word preview aligns word, meaning and known buttons and keeps the footer controls padded within the modal on short screens. Local `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); two targeted Playwright checks passed at 320px, 525px and desktop. Production deploy and visual smoke are pending at this checkpoint.
-
 
 ## 2026-10-01 — English preview Web deployment
 
@@ -423,18 +423,15 @@ Document core-platform@b2e46bd5bfc95f2da994675492f59571d6fa81b3: OTP registratio
 - `gotIt-backend@8db500a5594fbc99c1d3e104701b31bd37c372b0` changes the new known-entry FK to the GotIt profile and initializes that profile on first known-word action. The first production migration attempt had stopped at a Core schema permission denial before catalog replacement; no extra Core grant is required.
 - Local typecheck, build, 206 fast tests, 59 PostgreSQL integration tests and targeted formatting passed. Production migration retry and deployment pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
 
-
 ## 2026-10-01 — English named-unit and known-word Web controls
 
 - `gotIt-front@cbc5bac2a374e150c3d1ef31e77041cba27f387e` adds named unit cards, one-click whole-unit and per-word known toggles, completed/known progress and unknown-only unit installation on `/english-learning`. Hebrew and English copy plus six English fallback locale catalogs are included.
 - Local `npm.cmd run check` passed (160 Vitest, 16 gateway, typecheck, lint, build); 374 Playwright responsive checks passed. Production deployment and authenticated smoke remain pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
 
-
 ## 2026-10-01 — Supplied English units and known-word backend
 
 - `gotIt-backend@14012a0c6683dde3659bf9e239a7c016adef9a0b` replaces the English path catalog with 60 named thematic units (50 entries each) and adds a protected one-action known-word API, cross-unit propagation for repeated English forms, completed counts and pack-practice omission. It preserves evidence/XP and guards the content migration against existing learner progress.
 - Local gates passed: typecheck, build, 206 fast tests, 59 disposable PostgreSQL integration tests and targeted formatting. Repository-wide formatting reports 36 pre-existing files. Production migration, deployment and authenticated smoke remain pending. See [English path](docs/23_ENGLISH_LEARNING_PATH.md).
-
 
 ## 2026-10-01 - Remove duplicate shell level card and live notice
 
@@ -568,11 +565,9 @@ Render deployment `dep-dav3tlnpn0mc73a0fp90` reports `Deploy succeeded | Live` f
 
 2026-10-06 ? Matching repair deployed: production Web `ffcebc8`, DEV Web `ffd766e`, both Backend services `ae2ae7f`. Exact SHA/Live, readiness and delivered assets verified; DEV ten-word three-board smoke passed with distinct vocabulary after the server fix. Production full gameplay remains limited by an empty account. Main fix `600aafd` is retained; unrelated gated auth code was excluded from the production release. [Release evidence and limits](docs/29_MEANING_MATCHING_ROUNDS.md#deployment-and-acceptance-evidence--2026-10-06).
 
-
 ## 2026-10-06 — DEV unit sequencing source checkpoint
 
 Backend `b3c1b737ea1385644bc114366dc2e46b0dd51146` requires word evidence before teacher entry and exposes owned cached word images. 232 fast / 68 PostgreSQL tests pass. DEV deployment pending, production excluded. [Contract and evidence](docs/31_LEARNING_PATH_FIDELITY_DEV.md).
-
 
 ## 2026-10-06 — DEV program UI source checkpoint
 
@@ -582,40 +577,31 @@ Web `914aa06b9e7220cda0cdc45140a49b7a395f701d` implements map navigation, word/a
 
 Backend 061b1b6 adds owner-scoped, cached native-alphabet guides without a migration. PostgreSQL/targeted provider verification passes; final catalog-count unit assertion and deployment are pending. [Exact evidence](docs/32_PRACTICE_CLARITY.md).
 
-
 Backend fc9279c resolves the catalog regression: final 239/239 unit tests pass; 32/32 PostgreSQL evidence remains valid for unchanged runtime code. [Evidence](docs/32_PRACTICE_CLARITY.md#backend-final-local-gate).
-
-
 
 ## 2026-10-06 - Practice clarity Web source checkpoint
 
 Web `47d80b612e4280f199e8571e5426d6a73e709ce6` implements centered meanings, ordered colored ratings, readable pronunciation/autoplay/replay, phrase-aware large tiles, visible level choices, distinct typed recall, and native vocabulary guides. Final 225 unit/20 gateway/type/lint/build/format gates and 39 focused browser scenarios pass (two retries); broad-run limitations and pending source publication/deployment are explicit. [Exact evidence](docs/32_PRACTICE_CLARITY.md#web-source-and-final-local-gates).
 
-
 ## 2026-10-06 - Complete reading guides for large unit lists
 
 Web `0015e1feffeeb30126665d5d676bdace598268ad` continues bounded guide batches through every missing unit word and preserves earlier results if a later provider call fails. Two new unit/two repeated browser checks and type/lint/build/format pass. Publication/deployment remain pending. [Exact evidence](docs/32_PRACTICE_CLARITY.md#large-unit-list-follow-up).
-
 
 ## 2026-10-06 - Resume practice clarity DEV release
 
 Backend `19ca338` preserves concurrent DEV unit study and integrates native guides; 43 focused tests and build pass. Owner confirms DEV target. [Rollout evidence](docs/32_PRACTICE_CLARITY.md#dev-rollout-resumed---backend-integration).
 
-
 ## 2026-10-07 ? Temporary DEV practice hub restoration
 
 Restore `/learn` to the current production layout pending new specification; preserve DEV scoped navigation and the existing learning/lesson implementations. [Scope and verification](docs/34_PRACTICE_HUB_RESTORATION_DEV.md).
-
 
 ## 2026-10-11 — Dashboard design for DEV
 
 Implement both approved dashboard variants with the existing learning, XP and article APIs. Gifts and future onboarding remain deferred. Follow-up Web `778b3be` was pushed to main and deployed to DEV with an immediate four-choice quiz, an RTL account control, separated gift/XP and the animated reference mascot. Render reports Live and authenticated desktop/mobile/readiness checks passed. [Canonical behavior, verification limits and deployment evidence](docs/35_DASHBOARD_DESIGN_DEV.md).
 
-
 ## 2026-10-11 ? Approved practice artboard in DEV
 
 Web `6740e16` reproduces the selected Claude practice screen with ten original illustrations, real progress/history, eight locales and an exact DEV-only rollout gate. Local checks passed. [Canonical behavior and deployment acceptance](docs/36_PRACTICE_DESIGN_DEV.md).
-
 
 ## 2026-10-11 - Focus games in DEV
 
@@ -633,29 +619,23 @@ Restored the original compact exit dialog/copy and flashcard rating/deck motion;
 
 Implemented the owner plan-versus-DEV alignment in the DEV-only Web design; preserved server metrics/scoring and existing unrelated work. See [canonical scope and evidence](docs/37_FOCUS_GAMES_DEV.md#owner-plan-versus-dev-alignment--2026-10-12).
 
-
 ### Session-end video correction ? 2026-10-12
 
 2026-10-12: DEV session-end video correction and removal of cloze audio answer leak; server authority and production untouched. [Canonical behavior, scope and evidence](docs/37_FOCUS_GAMES_DEV.md#session-end-reference-video-and-cloze-audio--2026-10-12).
-
 
 ## 2026-10-12 — My Words design in DEV
 
 Approved vocabulary screen with complete card/drawer metadata, real category counts, compound server filtering and retained practice return state. Additive read projection; no migration/Core/production rollout. [Canonical contract and release evidence](docs/38_MY_WORDS_DESIGN_DEV.md).
 
-
 ## 2026-10-12 - My Programs design and dynamic AI artwork (DEV)
 
 Implemented the owner-supplied illustrated programs design, actual course/path progress, localized mascot/flags/greetings, durable owner-scoped cover cache, explicit failure/retry, eight locales and mobile RTL/LTR. [Contracts, verification and exact DEV release](docs/39_PROGRAMS_DESIGN_DEV.md).
 
-
 2026-10-13: Correct repeated loading of My Programs and My Words through scoped memory snapshots, request coalescing, read-only data/artwork warmup and route module preload. [Canonical implementation and release evidence](docs/39_PROGRAMS_DESIGN_DEV.md#navigation-loading-correction---2026-10-13).
-
 
 ## 2026-10-13 - DEV program chooser
 
 The screenshot-based, dynamic new-program chooser is implemented and locally verified in Web. Final desktop/mobile/browser QA passed after reconnection; the new chooser is now deployed and authenticated navigation is verified in DEV. See [canonical behavior and evidence](docs/40_PROGRAM_CHOOSER_DEV.md).
-
 
 ## 2026-10-13 - Dynamic program map in DEV
 
@@ -664,7 +644,6 @@ compressed mascot artwork, localized accessible timeline/sidebar and existing
 navigation/review scope. Local Web checks and visual QA passed.
 [Canonical scope, source and release evidence](docs/41_PROGRAM_MAP_DESIGN_DEV.md).
 
-
 ## 2026-10-14 - Settings reference design in DEV
 
 SCR-11 now has the approved category navigation and profile layout in Web DEV,
@@ -672,7 +651,6 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](docs/42_SETTINGS_DESIGN_DEV.md).
-
 
 ## 2026-10-14 - Independent Admin Console foundation
 
@@ -692,6 +670,30 @@ staff permissions and authenticator step-up. Core 32 tests; Backend 227 fast and
 flows passed. Published review branches/PRs; operational production rollout is
 pending Render account connection and ordered migrations. Backend CI currently
 stops on pre-existing unrelated formatting. [Canonical evidence](docs/43_ADMIN_CONSOLE_FOUNDATION.md#operational-administration-02-2026-10-16).
+
+## Admin user details — 2026-10-16
+
+2026-10-16 — Added the Admin user card across Core/Product/Admin: scoped histories, recorded learning statistics, course roadmaps and audited profile/notification/lesson preference editing. Local implementation; no production rollout. [Canonical contract](docs/44_ADMIN_USER_DETAILS.md).
+
+Release follow-up: Core, Backend and Admin learner-details sources are pushed to
+main and observed Live. Full local integration passed; Backend remote integration
+requires the existing missing Core read credential. Exact SHAs, deployment IDs,
+acceptance limits and evidence are in [Admin user details](docs/44_ADMIN_USER_DETAILS.md).
+
+## Staff permission provisioning repair ? 2026-10-16
+
+Added the missing `staff.write` to the existing verified GotIt owner through Core's
+scoped audited operator bootstrap. Independent production readback confirmed the
+grant and audit record; no code/deploy change. [Evidence and acceptance limits](docs/43_ADMIN_CONSOLE_FOUNDATION.md#production-staff-permission-repair--2026-10-16).
+
+## 2026-10-16 - All-user vocabulary and shared stock/AI image replacement
+
+Add the complete application-scoped learner word browser and reviewed multilingual concepts, with atomic provider replacement, persistent retries, MFA and audit. [Canonical contract and release evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).
+
+## Quick word-card images and automatic backfill - follow-up 2026-10-16
+
+FR-CON-07/08 removes manual setup from image replacement: cards offer an inline Pixabay gallery and one-click GPT with editable prompt. Migration 1792192000000 derives exact bilingual image identities and reuses existing pictures; learning state is preserved. New unlinked words are prepared within the authorized action. [Current contract, process and production evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#quick-card-actions-and-automatic-historical-linking-follow-up-2026-10-16).
+
 ## 2026-10-16 — AI prompt management
 
 Implemented modular prompt revisions and Realtime configuration in Backend/Admin, with a synthetic preview using the actual live-call composer. Canonical scope, checks and rollout boundary: [44](docs/44_AI_PROMPT_MANAGEMENT.md). No deployment or live provider call.
@@ -703,17 +705,6 @@ course revision with retained historical evidence, published template discovery,
 Realtime previews and credential-free snapshots, and measured lesson statistics.
 [Canonical contracts, verification and rollout](docs/45_ADMIN_PROGRAM_EDITOR.md).
 
-
-## Admin user details — 2026-10-16
-
-2026-10-16 — Added the Admin user card across Core/Product/Admin: scoped histories, recorded learning statistics, course roadmaps and audited profile/notification/lesson preference editing. Local implementation; no production rollout. [Canonical contract](docs/44_ADMIN_USER_DETAILS.md).
-
-
-## 2026-10-16 - All-user vocabulary and quick image replacement
-
-Backend/Admin add all-user word cards and histories plus explicit stock/AI shared-image replacement with retained old images, staged publication, revision/replay/MFA/audit controls. [Contract and local evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#all-user-vocabulary-and-quick-image-replacement--2026-10-16). No live rollout.
-
-
 ## 2026-10-16 - Automatic lexical meaning assignment
 
-Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792192000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792194000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
