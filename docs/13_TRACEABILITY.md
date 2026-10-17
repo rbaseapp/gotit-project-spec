@@ -1,5 +1,10 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-17 - Homework preparation source IDs
+
+PC-05-07 / PC-18 -> CourseService.prepareHomework source-ID mapping and OpenAiCourseGenerator diagnostics -> multiline/control-character daily/unit cases, unknown-ID no-write/replay cases, report grounding, privacy-safe HTTP/refusal/incomplete diagnostics, disposable PostgreSQL course persistence. [Canonical incident and evidence](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
+
+
 ## 2026-10-17 — Automatic multilingual reconciliation
 
 FR-CON-07/08/09/10 → ConceptAssignmentService/provider, durable jobs, workload quotas and migration 1792281000000 → multilingual automatic-name regression, pending/retry/owner isolation, migration rehearsal, original alias and learning-state preservation. SCR-ADM-WORD → Words visible-image refresh on assignment changes. [Contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

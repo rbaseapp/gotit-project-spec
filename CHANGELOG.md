@@ -1,5 +1,10 @@
 # יומן שינויים
 
+## 2026-10-17 - Homework source-schema correction
+
+Reproduce DEV strict-schema rejection caused by newline-bearing saved quotes. Replace raw quote enums with server-owned source IDs, preserve exact evidence, add safe provider diagnostics and regression coverage. Main local gates and read-only provider acceptance pass. The isolated DEV patch f0233a3 is now published and Live; authenticated preparation and saved homework resume pass. [Canonical incident and evidence](docs/22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
+
+
 ## 2026-10-17 — Automatic multilingual assignment completion
 
 Verify semantic extension of automatic name meanings across languages/scripts and regional tags. Isolate historical reconciliation from live-word quotas, defer exhausted workloads durably, and refresh Admin images after assignment. Add a non-destructive retry migration, legacy-wait recovery during rolling deployment and stable named migration baselines in disposable tests. Backend 246 fast/138 PostgreSQL and Admin 50 tests passed. Released to main and deployed; all 263 active words have completed valid meaning bindings, including the name incident. [Canonical behavior and release evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

@@ -1,5 +1,10 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-17 - Homework source-schema correction
+
+Homework generation now keeps free-form saved quotes in request data and uses safe source IDs in strict provider schemas. Implemented, locally verified and deployed to DEV at f0233a3. Live preparation returns 200 and authenticated saved homework resume passes. [Contract and evidence](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
+
+
 ## 2026-10-17 — Automatic multilingual word meanings
 
 Automatic meaning assignment supports new and historical words across accepted languages, scripts and regional tags, including existing automatic image meanings. Live and backfill quotas are isolated and retries resume automatically. Backend/Admin are released and Live; historical reconciliation and the name incident are verified in production. Release evidence is maintained in the [canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

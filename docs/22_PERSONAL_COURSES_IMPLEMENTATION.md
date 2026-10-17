@@ -255,3 +255,104 @@ FK מורכב לפרופיל ו־FK מורכב מקבלה למסמך מגיני�
 ## 2026-10-12 - Illustrated My Programs (DEV)
 
 DEV programs now derive card content/progress from existing resources, generate scoped AI covers and language-specific Mohi, and preserve the fixed shared header. API, cache/privacy invariants, responsive QA, checks and rollout are owned by [39 - Programs design DEV](39_PROGRAMS_DESIGN_DEV.md).
+
+
+## Homework source identifiers and safe provider diagnostics - 2026-10-17
+
+The DEV homework prepare incident was reproduced against the actual saved lesson and
+configured OpenAI model. The original request `86317539-c251-4f77-9743-c16e19de77cd`
+returned 503 after 424 ms. A read-only scoped diagnostic reproduced HTTP 400
+`invalid_json_schema`, parameter `text.format.schema`: a newline in a saved excerpt
+was rejected as a strict-schema string literal in `tasks.items.sourceQuote`.
+This is a schema-construction defect, not evidence of an unavailable AI service.
+
+`CourseService.prepareHomework` now sends only server-generated `source_1`, etc.
+identifiers in the provider task schema (`sourceId`). The request data contains the
+identifier-to-exact-excerpt mapping in `source.quotes`, alongside the existing saved
+turns, taught grammar examples and corrected forms. The service validates membership,
+resolves identifiers locally, preserves Unicode/control characters and surrounding
+whitespace exactly, and supplies the original quotes to the existing independent
+quality review. Repair drafts use the same identifier mapping throughout the request.
+Unknown identifiers fail before saving content, progress, revision or command receipts.
+The rule covers both 3-6-task unit follow-up and 12-18-task daily homework.
+
+Public request/response/error contracts, persisted `sourceQuote`, meeting guards,
+revision/replay behavior, answer privacy, quotas, models and quality review remain
+compatible. Existing prepared/attempted homework does not require rewriting. There is
+no migration, new environment variable, frontend or Core change.
+
+The provider accepts an injected diagnostic logger and optional request-ID resolver.
+Failures record bounded model/operation, stage, elapsed time, provider HTTP status and
+request ID, and a safe category (authentication, invalid request, upstream, timeout,
+incomplete, refusal or invalid response). It never logs the error object, provider
+body, schema literals, prompts, learner data or credentials. Public failures retain
+`COURSE_AI_UNAVAILABLE`; deterministic HTTP rejection is not automatically retried.
+Main resolves the existing request context; the older DEV baseline records provider
+request IDs without importing newer Admin modules.
+
+### Evidence and release boundary
+
+- Local Backend main baseline: `8a09d8b`; typecheck, 256 fast cases, build and
+  repository-wide formatting pass. The focused personal-course PostgreSQL suite also
+  passes against its disposable Docker database.
+- Live diagnostic: DEV Backend `srv-dar6ei7f3r2c73balbp0`, deployed commit
+  `941f59e9ece2a51e7d85eec2c2e83a8a6961c03f`, verified `gotit_dev` database,
+  dedicated `gotit_runtime`, DEV Core, configured model `gpt-6-sol`.
+- A temporary in-memory diagnostic adapter applied the same identifier protocol to
+  the deployed service and actual saved lesson. Two generation/review rounds returned
+  four HTTP 200 responses; the final four-task, three-minute practice passed existing
+  structural and independent quality checks in 29,145 ms. SQL used
+  `default_transaction_read_only=on`; save was replaced with an in-memory result.
+  No account progress, database content, running service source or configuration was
+  changed. This proves live provider acceptance of the protocol, not deployment of
+  the local patch or authenticated browser acceptance after release.
+- Regression cases cover multiline Hebrew/English, CR/LF/tab/NUL, quote/backslash and
+  surrounding whitespace, both practice sizes, report-derived evidence, invalid
+  source IDs, receipt replay and privacy-safe failure diagnostics.
+- A separate worktree/branch `fix/homework-source-ids-dev-20261017` is based on the
+  exact deployed DEV commit and contains only this fix and its tests. Main includes
+  unrelated newer Admin/database work, so it is not the proposed DEV release source.
+  Prepared local release commit: `f0233a3`. DEV branch typecheck, all 272 fast cases,
+  build, changed-file formatting and focused disposable PostgreSQL course integration
+  pass. Its repository-wide format check flags 228 files in the older checkout
+  (including pre-existing CRLF formatting); unrelated files were left unchanged.
+  Source was published and deployed to DEV after the owner explicitly requested
+  releasing all prepared changes; completed release evidence follows. Production is
+  outside this incident release. Retain saved work on rollback.
+
+
+### Completed DEV deployment and authenticated acceptance
+
+The owner authorized DEV deployment in the follow-up. Branch
+`fix/homework-source-ids-dev-20261017` was pushed normally to GitHub, and exact commit
+`f0233a37263ef7dcab28c4fb0304e38ef3231a2b` was manually deployed to the existing
+DEV Backend service. [Render deployment dep-db9s60bncjis73afnc40](https://dashboard.render.com/web/srv-dar6ei7f3r2c73balbp0/deploys/dep-db9s60bncjis73afnc40)
+reported **Deploy succeeded | Live**, duration 48.7 seconds. It started on
+2026-10-17 at 21:48:33 and became Live at 21:49:22, Jerusalem time. The existing
+manual deployment policy and configured branch were preserved. No schema migration,
+new environment variable, credential/grant change, Web/Core deployment or production
+release was required or performed.
+
+After deployment, Backend `/health` and `/ready` and Web `/ready` returned HTTP 200;
+Backend readiness explicitly reported the database as healthy. The live affected
+homework prepare request `f64ad344-110f-47f1-b7e3-42b782338a90` returned HTTP 200 in
+15,662 ms and created four tasks. A concurrent older preparation returned the
+expected 409 `COURSE_CHANGED` after learner actions had advanced its revision;
+it did not overwrite progress. A fresh authenticated browser read resumed task 3
+of 4, with two completed tasks and the saved-answer notice. No answers, hints or
+skips were submitted by the deployment verification; observed task advancement came
+from concurrent learner activity.
+
+The browser acceptance used the query-free homework URL. The previously open
+URL with an encoded `return` query displayed the existing gateway `INVALID_PATH`
+response; this separate deep-link behavior was not changed by the provider fix.
+Normal in-app preparation and saved homework resume were verified after release.
+
+[Successful DEV deployment screenshot](evidence/2026-10-17-homework-source-ids/dev-deployment.jpg).
+[Authenticated homework resume screenshot](evidence/2026-10-17-homework-source-ids/dev-homework-resume.jpg).
+
+Backend main retains the equivalent uncommitted source fix in the user workspace;
+only the isolated DEV release branch was published/deployed. Main's newer Admin
+request-context adapter is preserved locally. The prepared DEV patch contains all
+source-ID, exact-evidence, safe-diagnostic and regression changes supported by its
+actual deployed baseline. Production main was not pushed by this task.

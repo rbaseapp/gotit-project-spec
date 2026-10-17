@@ -1,5 +1,10 @@
 # 07 — חוזי API
 
+## 2026-10-17 - Homework provider evidence protocol
+
+POST /api/v1/courses/homework/:id/prepare retains its public command, response and error contracts. Only the internal provider task schema changes to sourceId; the server resolves it to the exact saved sourceQuote before review/persistence. Unknown IDs cannot mutate saved work. [Canonical contract](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
+
+
 ## Admin recent activity reads ? 2026-10-16
 
 Core subscription lists add optional activity=cancelled and nullable sortable activityAt; Product usage lists add optional activity=failed. Filtering precedes count/pagination and preserves trusted application scope. Gateway status also exposes assignments. [Exact additive contracts and compatibility](46_ADMIN_ACTIVITY_DASHBOARD.md).

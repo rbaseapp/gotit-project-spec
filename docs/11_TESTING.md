@@ -1,5 +1,10 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-17 - Homework source-schema regression
+
+Backend main: typecheck, 256 fast tests, build, full formatting and focused disposable PostgreSQL personal-course integration pass. A read-only live DEV diagnostic reproduced HTTP 400 on the old schema and accepted the corrected source-ID protocol with generation plus independent review. After owner-authorized deployment of f0233a3, real preparation returned 200 in 15,662 ms and authenticated browser resume opened task 3 of 4. The isolated DEV branch passed 272 fast cases, typecheck/build, changed-file formatting and the focused disposable course integration. [Exact scope and release boundary](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
+
+
 ## 2026-10-17 — Multilingual assignment completion
 
 Backend typecheck/build/format, 246 fast tests, 138 disposable PostgreSQL cases and Admin check with 50 tests passed. Production acceptance confirms all 263 active items have completed valid bindings and the name incident shares one meaning without altering learning/translation rows. [Exact checks, limits, backup and release evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
