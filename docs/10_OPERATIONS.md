@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## 2026-10-17 — Automatic concept workloads
+
+Deploy the workload-aware Backend before dedicated-migrator correction 1792281000000; retain schema/data on application rollback. Legacy quota waits recover even when written by a retiring worker. Current workload limits keep automatic retry windows. All 263 active production words completed assignment. [Canonical quotas, backup, migration and rollout evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Apply migration `1792191000000` before Backend/Admin rollout; validate runtime grants. Authored concepts/images block destructive down migration. No live rollout performed. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

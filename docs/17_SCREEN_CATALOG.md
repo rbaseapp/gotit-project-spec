@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## 2026-10-17 — SCR-ADM-WORD automatic completion
+
+Words status and visible images refresh as automatic assignment completes. Concept editor help explains automatic multilingual grouping and optional staff review; it no longer describes only exact bilingual matching. [Behavior and authenticated live evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## Admin recent activity ? 2026-10-16
 
 SCR-ADM-HOME replaces introductory module tiles/counters with seven independent recent-activity lists, pagination, detail/full-list links and loading/empty/error/unavailable states. [Canonical screen contract](46_ADMIN_ACTIVITY_DASHBOARD.md).

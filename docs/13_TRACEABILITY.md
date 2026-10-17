@@ -1,5 +1,9 @@
 # 13 — מטריצת עקיבות ואחריות
 
+## 2026-10-17 — Automatic multilingual reconciliation
+
+FR-CON-07/08/09/10 → ConceptAssignmentService/provider, durable jobs, workload quotas and migration 1792281000000 → multilingual automatic-name regression, pending/retry/owner isolation, migration rehearsal, original alias and learning-state preservation. SCR-ADM-WORD → Words visible-image refresh on assignment changes. [Contract and verification](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## Admin recent activity ? 2026-10-16
 
 FR-ADM-ACT-01?03 / SCR-ADM-HOME / UC-ADM-ACT-01 ? Admin ActivityDashboard/dataProvider/gateway ? Core subscription and Product usage list filters ? gateway tests, disposable PostgreSQL admin-activity integration and isolated Chrome desktop/mobile checks. [Canonical contract and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).

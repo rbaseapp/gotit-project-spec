@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## 2026-10-17 — Multilingual assignment completion
+
+Backend typecheck/build/format, 246 fast tests, 138 disposable PostgreSQL cases and Admin check with 50 tests passed. Production acceptance confirms all 263 active items have completed valid bindings and the name incident shares one meaning without altering learning/translation rows. [Exact checks, limits, backup and release evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## Admin recent activity ? 2026-10-16
 
 Release checks passed: 50 Admin tests/build, 32 Core tests/build, 242 Product tests/build, 122 disposable PostgreSQL integration tests and Docker build. Authenticated live activity loading/paging/navigation passed after ordered deployment. Product CI remains blocked at the existing private-Core checkout authorization. [Exact evidence and live acceptance](46_ADMIN_ACTIVITY_DASHBOARD.md).

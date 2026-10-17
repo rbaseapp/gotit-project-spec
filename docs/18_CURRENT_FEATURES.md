@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## 2026-10-17 — Automatic multilingual word meanings
+
+Automatic meaning assignment supports new and historical words across accepted languages, scripts and regional tags, including existing automatic image meanings. Live and backfill quotas are isolated and retries resume automatically. Backend/Admin are released and Live; historical reconciliation and the name incident are verified in production. Release evidence is maintained in the [canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## Admin recent activity ? 2026-10-16
 
 Admin homepage activity feeds and owner-side cancellation/failure filters are published, deployed and verified in the authenticated live Admin. [Scope, boundaries and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).

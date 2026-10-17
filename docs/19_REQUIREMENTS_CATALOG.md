@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## 2026-10-17 — Automatic multilingual reconciliation
+
+FR-CON-10: historical assignment cannot spend the live-word allowance. Independent bounded quotas, owner/workload retry windows and recovery from legacy shared-quota waits operate automatically. FR-CON-07/08/09 acceptance includes extending an existing automatic `name / שם` meaning with Arabic `إسم / שֵׁם`, other scripts and regional language tags, while preserving learning evidence and original spelling. [Canonical requirements and acceptance](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## Admin recent activity ? 2026-10-16
 
 FR-ADM-ACT-01 recent account/billing/program/word/AI-failure feeds; FR-ADM-ACT-02 independent chronological pagination and navigation; FR-ADM-ACT-03 truthful partial availability with Hebrew/RTL and 320px support. [Canonical requirements and evidence](46_ADMIN_ACTIVITY_DASHBOARD.md).

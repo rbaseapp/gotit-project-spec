@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-17 — Automatic multilingual assignment completion
+
+Verify semantic extension of automatic name meanings across languages/scripts and regional tags. Isolate historical reconciliation from live-word quotas, defer exhausted workloads durably, and refresh Admin images after assignment. Add a non-destructive retry migration, legacy-wait recovery during rolling deployment and stable named migration baselines in disposable tests. Backend 246 fast/138 PostgreSQL and Admin 50 tests passed. Released to main and deployed; all 263 active words have completed valid meaning bindings, including the name incident. [Canonical behavior and release evidence](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).
+
 ## 2026-10-16 ? Admin activity homepage
 
 Replaced the Admin introduction/module tiles with recent users, subscriptions, cancellations, personal programs, templates, words and measured AI failures. Added scoped server-side activity filters, independent paging and navigation. Published and deployed to Core, Product and Admin; authenticated live acceptance passed. [Canonical release evidence](docs/46_ADMIN_ACTIVITY_DASHBOARD.md).
