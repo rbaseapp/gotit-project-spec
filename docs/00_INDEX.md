@@ -1,5 +1,9 @@
 # 00 — תקציר ומפת מסמכים
 
+## Workspace release — 2026-10-17
+
+[47 — Combined main synchronization and production release](47_WORKSPACE_SYNC_RELEASE.md) records the six repository pushes, preserved histories, assignment migration, local checks, four Live Render deployments and remaining hosted CI/Store-publication limits.
+
 ## Admin recent activity ? 2026-10-16
 
 [46 ? Admin activity dashboard](46_ADMIN_ACTIVITY_DASHBOARD.md) owns the replacement homepage, scoped optional activity filters, local verification and completed live rollout.

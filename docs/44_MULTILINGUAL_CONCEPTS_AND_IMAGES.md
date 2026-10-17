@@ -1,8 +1,8 @@
 # 44 — Multilingual concepts and shared study images
 
-Date: 2026-10-16. Status: implemented locally in the Backend and Admin working trees; not deployed. This document owns the feature contract.
+Date: 2026-10-16; release update 2026-10-17. Concepts, shared images and automatic assignment are on main and deployed. Exact combined-release checks, migration ordering and acceptance limits are recorded in [workspace release 47](47_WORKSPACE_SYNC_RELEASE.md). This document owns the feature contract.
 
-Current addition: automatic AI assignment and historical-word backfill are implemented locally. The **Automatic assignment** section below supersedes the earlier manual-only baseline.
+Current addition: automatic AI assignment and historical-word backfill were deployed in the 2026-10-17 combined release. The **Automatic assignment** section below supersedes the earlier manual-only baseline; older local verification statements below retain their original implementation context.
 
 ## Outcome and scope
 
