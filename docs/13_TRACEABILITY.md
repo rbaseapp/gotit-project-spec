@@ -573,3 +573,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 FR-CON-07-09 map automatic assignment/backfill to queue triggers, semantic provider/worker, effective image bindings and Admin pending/retry status, with fast/PostgreSQL/browser evidence. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## Structured English zero-to-C1 - 2026-10-21
+
+FR-C1-01 curriculum/version/catalog preservation → Backend `curriculum` module/assets and additive migration; FR-C1-02 word evidence and scheduling → curriculum policy/store; FR-C1-03 reading/phonics/transfer → private question attempts, bounded audio and fresh assessment generation; FR-C1-04 authored AI teacher and postlesson practice → curriculum teacher plus Realtime lesson context; FR-C1-05 adaptive entry/daily budget/exit → enrollment, next-action scheduler, placement and four exit activities; FR-C1-06 learner experience → Web `StructuredEnglishPage`, program selection and typed contracts. Fast/PostgreSQL/Web regressions and the distinction between source, provider and DEV evidence are maintained in the [canonical runtime/release contract](48_ENGLISH_ZERO_C1_RUNTIME.md).

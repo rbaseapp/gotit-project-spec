@@ -1,5 +1,9 @@
 # 10 — תשתיות, פריסה ותפעול
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+The independent English program is released only to the existing isolated DEV services/database. Its canonical runtime contract owns backup/rehearsal evidence, exact release commits, visibility activation and rollback without progress deletion. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 — Automatic concept workloads
 
 Deploy the workload-aware Backend before dedicated-migrator correction 1792281000000; retain schema/data on application rollback. Legacy quota waits recover even when written by a retiring worker. Current workload limits keep automatic retry windows. All 263 active production words completed assignment. [Canonical quotas, backup, migration and rollout evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

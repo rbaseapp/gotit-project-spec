@@ -1,5 +1,9 @@
 # 17 — קטלוג מסכים ותיאור UX
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+SCR-C1 is `/english-zero-c1`: enrollment, six-band unit map, vocabulary/phonics, resumable teacher/postlesson work, personal readings, unseen and separate skill diagnostics. Program discovery and the DEV dashboard link here. Loading, locked, retry, draft and RTL states are covered in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 — SCR-ADM-WORD automatic completion
 
 Words status and visible images refresh as automatic assignment completes. Concept editor help explains automatic multilingual grouping and optional staff review; it no longer describes only exact bilingual matching. [Behavior and authenticated live evidence](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

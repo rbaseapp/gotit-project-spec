@@ -1,5 +1,9 @@
 # 19 — קטלוג דרישות ממוספר
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+FR-C1-01?06 cover independent content/versioning and legacy preservation, word evidence/reviews, phonics/reading/transfer, authored AI lessons/postlesson work, placement/budgets/exit and resumable learner UI. Acceptance and evidence are owned by the canonical runtime contract and linked from traceability. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 — Automatic multilingual reconciliation
 
 FR-CON-10: historical assignment cannot spend the live-word allowance. Independent bounded quotas, owner/workload retry windows and recovery from legacy shared-quota waits operate automatically. FR-CON-07/08/09 acceptance includes extending an existing automatic `name / שם` meaning with Arabic `إسم / שֵׁם`, other scripts and regional language tags, while preserving learning evidence and original spelling. [Canonical requirements and acceptance](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-multilingual-reconciliation-and-workload-isolation--2026-10-17).

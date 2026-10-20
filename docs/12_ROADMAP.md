@@ -1,5 +1,9 @@
 # 12 — מצב, פערים ומפת דרך
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+The zero-to-C1 runtime implementation and DEV release are tracked in the canonical runtime contract. External CEFR calibration, expert phoneme review and a longitudinal learner study remain distinct validation work; no native-equivalence claim is made. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## Admin owner feedback 0.3 — 2026-10-16
 
 The reported usability and operational gaps are implemented and locally verified for 0.3; ordered deployment and owner production acceptance remain the release follow-up. [Canonical requirements, contracts, checks and rollout](43_ADMIN_CONSOLE_FOUNDATION.md#owner-feedback-completion-03-2026-10-16).

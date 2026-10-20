@@ -1,5 +1,9 @@
 # 18 — קטלוג יכולות נוכחי (As-Built)
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+The independent versioned English path includes 84 units, 168 authored AI lessons, phonics, target games/reviews, 2,016 postlesson tasks, contextual readings and four-skill exit. Exact source/provider/DEV evidence and validation limits are maintained in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 - Homework source-schema correction
 
 Homework generation now keeps free-form saved quotes in request data and uses safe source IDs in strict provider schemas. Implemented, locally verified and deployed to DEV at f0233a3. Live preparation returns 200 and authenticated saved homework resume passes. [Contract and evidence](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).

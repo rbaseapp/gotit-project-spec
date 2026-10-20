@@ -1,5 +1,9 @@
 # 16 — קטלוג UML Sequence Diagrams
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+Sequence C1: Web selects a content-version activity ? Backend authenticates through Core and resolves owner/revision ? product transaction claims the exact operation/activity ? any required AI call runs outside the transaction ? Backend validates the private result and commits evidence plus receipt ? Web resumes the acknowledged cursor. Hints, audio and transcription retain assistance/provenance; failed or lost responses reuse the original UUID. [Canonical process, API and release evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Image sequence: authenticated learner ? exact-pair concept resolution ? current shared asset ? persistent claim if missing ? configured provider outside transaction ? revision-checked publication ? localized alt text. Admin writes use existing Core/MFA/receipt/audit sequence. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

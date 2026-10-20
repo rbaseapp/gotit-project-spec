@@ -1,5 +1,9 @@
 # 09 — אבטחה ופרטיות
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+Structured English retains Core-scoped identity and entitlements. Answer keys and provider secrets remain server-side; transient audio, owner-bound transcription provenance, exact request receipts and generation leases are defined in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Concept management requires independently verified admin identity, content.write, MFA, reasons, receipts and audit. Shared media uses reviewed descriptions and drops private captured context. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

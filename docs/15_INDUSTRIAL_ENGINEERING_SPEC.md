@@ -1,5 +1,9 @@
 # 15 — אפיון תעשייה וניהול: מודל הפעלה, תהליכים ובקרות
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+Process P-C1 is placement/budget selection ? bounded target introduction and spaced retrieval ? authored AI lesson ? postlesson practice ? dose-gated reading ? unit/unseen gates ? separate four-skill exit. Server evidence and assisted/independent observations control progression; the canonical runtime contract owns thresholds. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Process: staff review one meaning ? add equivalent language expressions ? save ? create/reuse one image ? learning requests resolve that meaning. Control: ambiguous pairs never auto-share. KPI: image generations per concept revision and cache reuse across language pairs. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

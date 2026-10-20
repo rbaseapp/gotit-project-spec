@@ -181,3 +181,5 @@ Admin editing, Realtime sections/stages/parameters, browser and provider request
 ## Automatic concept assignment - 2026-10-16
 
 Automatic AI meaning assignment, durable jobs and historical-word backfill are implemented locally; see the canonical concepts contract. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+- [48 - Structured English zero-to-C1 runtime and DEV release](48_ENGLISH_ZERO_C1_RUNTIME.md)

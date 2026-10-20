@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Structured English zero-to-C1
+
+Implement an independent versioned 84-unit English/Hebrew path with phonics, per-target game progression, spaced retrieval, authored AI teacher phases and Realtime context, 2,016 postlesson tasks, dose-gated personal readings, new-text checkpoints and four-skill exit assessment. Preserve and hide legacy catalog programs without migrating their evidence. Add owner-scoped receipts/leases and resumable work. [Canonical behavior and DEV evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 - Homework source-schema correction
 
 Reproduce DEV strict-schema rejection caused by newline-bearing saved quotes. Replace raw quote enums with server-owned source IDs, preserve exact evidence, add safe provider diagnostics and regression coverage. Main local gates and read-only provider acceptance pass. The isolated DEV patch f0233a3 is now published and Live; authenticated preparation and saved homework resume pass. [Canonical incident and evidence](docs/22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).

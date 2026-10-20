@@ -1,5 +1,9 @@
 # 20 — קטלוג Use Cases
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+UC-C1 lets a Hebrew-speaking beginner enter through oral/decoding foundations or a returning learner demonstrate separate placement skills, choose a daily budget and resume the server-selected learning activity. Interrupted/provider-limited work retains drafts and stable receipts; progression follows the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## Admin recent activity ? 2026-10-16
 
 UC-ADM-ACT-01: a verified administrator reviews, pages, refreshes and opens recent activity; failed feeds can retry independently and writes retain existing permission/MFA checks. [Canonical use case](46_ADMIN_ACTIVITY_DASHBOARD.md).

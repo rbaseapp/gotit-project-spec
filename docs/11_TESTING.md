@@ -1,5 +1,9 @@
 # 11 — אסטרטגיית בדיקות ואיכות
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+The independent English runtime has fast, PostgreSQL, Web, gateway, synthetic real-provider and authenticated DEV browser evidence. The canonical runtime contract records the exact counts and limits; synthetic speech is not microphone conversation or expert phoneme review. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 - Homework source-schema regression
 
 Backend main: typecheck, 256 fast tests, build, full formatting and focused disposable PostgreSQL personal-course integration pass. A read-only live DEV diagnostic reproduced HTTP 400 on the old schema and accepted the corrected source-ID protocol with generation plus independent review. After owner-authorized deployment of f0233a3, real preparation returned 200 in 15,662 ms and authenticated browser resume opened task 3 of 4. The isolated DEV branch passed 272 fast cases, typecheck/build, changed-file formatting and the focused disposable course integration. [Exact scope and release boundary](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).

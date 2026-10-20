@@ -1,5 +1,9 @@
 # 08 — מודל נתונים ומיגרציות
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+Migration `1792530000000_english-zero-c1-runtime.js` adds five `product_gotit.structured_program_*` tables and nullable `private_lesson_sessions.curriculum_context`. Legacy packs, installations and learning evidence are preserved. The canonical runtime contract owns schema semantics and guarded rollback. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-16 ? Multilingual concepts and shared images
 
 Adds `lexical_concepts`, `concept_expressions`, `concept_image_assets` through forward migration `1792191000000`; application-scoped meanings and versioned language-independent media. [44 ? Multilingual concepts and shared images](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md).

@@ -1,5 +1,9 @@
 # 07 — חוזי API
 
+## Structured English zero-to-C1 ? 2026-10-21
+
+The owner-scoped `/api/v1/structured-english` routes and the mutually exclusive private-lesson `curriculumLessonId` context are defined in the canonical runtime contract. Public projections keep assessment keys private; operation UUIDs bind exact payloads and revisions. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+
 ## 2026-10-17 - Homework provider evidence protocol
 
 POST /api/v1/courses/homework/:id/prepare retains its public command, response and error contracts. Only the internal provider task schema changes to sourceId; the server resolves it to the exact saved sourceQuote before review/persistence. Unknown IDs cannot mutate saved work. [Canonical contract](22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
