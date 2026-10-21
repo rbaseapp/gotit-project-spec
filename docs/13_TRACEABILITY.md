@@ -580,3 +580,5 @@ FR-C1-01 curriculum/version/catalog preservation → Backend `curriculum` module
 
 
 2026-10-21 UI correction: FR-C1-06 reuses the existing program map, word browser, unit preparation and homework presentation; existing stylesheet parity and navigation/state tests are recorded in the canonical UI restoration section.
+
+FR-C1-06 smart-practice entry: `test/structured-english.test.tsx` covers fresh-word guidance without implicit exposure, explicit confirmation before practice, attempt resume, eligible-mode fallback and locked-unit behavior. See the canonical smart-practice entry correction.
