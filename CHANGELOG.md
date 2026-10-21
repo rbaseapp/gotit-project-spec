@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Route unit teacher links to the scoped tutor
+
+Recognize `curriculum` in the private-lesson application entry so a paid learner's unit lesson opens the original preparation/tutor screen with the existing authored lesson context. Previously the correct unit URL fell through to the course catalog. Preserve original UI, generic course entry and server prerequisites. [Cause, regression and DEV evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#scoped-teacher-entry-correction).
+
 ## 2026-10-21 - Reuse original smart games for the new unit vocabulary
 
 Connect the new curriculum's complete unit word pool to the existing smart game engine and its original UI, replacing the vocabulary questionnaire entry. Add owner/version-bound practice mapping and atomic curriculum evidence from original practice receipts, with saved game resume and active-time accounting. Preserve legacy words/history and all CSS. [Current contract and evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#existing-smart-game-path-for-unit-vocabulary).
