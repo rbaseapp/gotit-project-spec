@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Open study and practice from Smart Practice
+
+Replace the ineffective focus-only CTA action with visible navigation to the existing study-card presentation and automatic entry into the first exercise after explicit familiarity confirmation. Preserve server evidence, safe start retries and existing CSS. [Behavior and acceptance](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#visible-study-card-entry).
+
 ## 2026-10-21 - Explain and enable smart-practice entry
 
 Replace the unexplained disabled word-page CTA in a fresh unlocked unit with guided entry to word introduction; resume an unfinished word attempt or start an eligible game when available. Preserve explicit exposure, server progression and existing styling. [Behavior and verification](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#smart-practice-entry-correction).
