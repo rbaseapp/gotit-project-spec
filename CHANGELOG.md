@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Reuse original smart games for the new unit vocabulary
+
+Connect the new curriculum's complete unit word pool to the existing smart game engine and its original UI, replacing the vocabulary questionnaire entry. Add owner/version-bound practice mapping and atomic curriculum evidence from original practice receipts, with saved game resume and active-time accounting. Preserve legacy words/history and all CSS. [Current contract and evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#existing-smart-game-path-for-unit-vocabulary).
+
 ## 2026-10-21 - Open study and practice from Smart Practice
 
 Replace the ineffective focus-only CTA action with visible navigation to the existing study-card presentation and automatic entry into the first exercise after explicit familiarity confirmation. Preserve server evidence, safe start retries and existing CSS. [Behavior and acceptance](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#visible-study-card-entry).
