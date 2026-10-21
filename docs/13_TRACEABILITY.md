@@ -584,3 +584,5 @@ FR-C1-01 curriculum/version/catalog preservation → Backend `curriculum` module
 FR-C1-06 smart-practice entry: `test/structured-english.test.tsx` covers fresh-word guidance without implicit exposure, explicit confirmation before practice, attempt resume, eligible-mode fallback and locked-unit behavior. See the canonical smart-practice entry correction.
 
 FR-C1-06 visible entry supersedes focus-only guidance: the same learner regression now requires the study screen to replace the word browser, then confirms familiarity and observes the first real exercise; lost-start retry preserves its operation without repeating exposure. See the canonical visible study-card entry.
+
+FR-C1-02/06 original smart games supersede the interim questionnaire entry: Web navigation tests require the existing scoped game route; focus-game tests traverse all five modes and complete the whole selected pool across flashcards/matching boards. Backend `curriculum-practice.integration.test.ts` verifies all 12 P01 targets, ownership/locked-unit rejection, preserved historical items, creation/answer replay and atomic curriculum evidence. See the canonical existing smart game path contract.

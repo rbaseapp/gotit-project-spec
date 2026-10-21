@@ -2,6 +2,8 @@
 
 ## Structured English zero-to-C1 ? 2026-10-21
 
+The smart-game bridge adds optional `practiceItems` to versioned enrollment JSON and private curriculum selection metadata to existing practice-session JSON. Explicit unit entry materializes dedicated normal owned learning items/translations/examples/skill rows; original practice attempts update the curriculum projection atomically. No new schema migration; historical library/pack evidence remains intact. [Current data/receipt contract](48_ENGLISH_ZERO_C1_RUNTIME.md#existing-smart-game-path-for-unit-vocabulary).
+
 Migration `1792530000000_english-zero-c1-runtime.js` adds five `product_gotit.structured_program_*` tables and nullable `private_lesson_sessions.curriculum_context`. Legacy packs, installations and learning evidence are preserved. The canonical runtime contract owns schema semantics and guarded rollback. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
 
 ## 2026-10-16 ? Multilingual concepts and shared images

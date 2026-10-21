@@ -2,6 +2,8 @@
 
 ## Structured English zero-to-C1 ? 2026-10-21
 
+Vocabulary smart games reuse `POST /api/v1/practice/sessions` with optional `curriculumUnitId` and `sourceLanguageCode=en`, mutually exclusive with legacy scope, explicit items and reading. Session DTOs add optional unit id/title; `GET /api/v1/structured-english` adds the owned active `practiceSessions` map. Existing exercise/answer/replay routes remain authoritative. [Exact selection, compatibility and evidence](48_ENGLISH_ZERO_C1_RUNTIME.md#existing-smart-game-path-for-unit-vocabulary).
+
 The owner-scoped `/api/v1/structured-english` routes and the mutually exclusive private-lesson `curriculumLessonId` context are defined in the canonical runtime contract. Public projections keep assessment keys private; operation UUIDs bind exact payloads and revisions. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
 
 ## 2026-10-17 - Homework provider evidence protocol
