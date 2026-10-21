@@ -462,3 +462,8 @@ bytes, schedule/consents and delivery; Web owns nine DEV category compositions.
 Migration, bounded payloads, configuration, privacy, worker semantics, verification,
 DEV release and remaining exact-design gaps are owned by the
 [current settings contract](42_SETTINGS_DESIGN_DEV.md#current-contract--2026-10-22).
+
+
+## 2026-10-22 ? Subscription plan selection (DEV)
+
+FR-BILL-007 / P14 / UC-08 / SCR-13: reference-based pricing UI, Core/Paddle catalog truth, period-specific checkout, comparison and minute packs. [Canonical behavior, validation and release evidence](SUBSCRIPTION_PRICING_DEV.md).

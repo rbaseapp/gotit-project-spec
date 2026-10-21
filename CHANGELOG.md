@@ -727,3 +727,8 @@ Realtime previews and credential-free snapshots, and measured lesson statistics.
 ## 2026-10-16 - Automatic lexical meaning assignment
 
 Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792194000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+
+## 2026-10-22 ? Subscription pricing screen
+
+Web plan selection follows the selected reference with actual Core/Paddle offerings. [Behavior and release evidence](docs/SUBSCRIPTION_PRICING_DEV.md).
