@@ -151,6 +151,34 @@
     "No authenticated full lesson or physical microphone acceptance",
     "One provider quality check is not a guarantee for all future generated plans",
     "Preparation took about 70 seconds in the accepted provider sample",
-    "No retention or abandonment experiment"
-  ]
+    "No retention or abandonment experiment",
+    "Hosted Web CI has five browser failures outside the changed adaptive lesson screens",
+    "One existing high-severity Vite dependency finding remains; dependency versions were not changed"
+  ],
+  "hostedWebCi": {
+    "runId": 39621687034,
+    "jobId": 119296526469,
+    "url": "https://github.com/rbaseapp/gotIt-front/actions/runs/39621687034",
+    "commit": "e4f9a329af3a4d2d550bb88121a4370240523a2d",
+    "conclusion": "failure",
+    "typecheck": "passed",
+    "lint": "passed",
+    "unit": "passed",
+    "browserPassed": 490,
+    "browserFailed": 5,
+    "failures": [
+      "drag-drop.spec.ts:100 touch at 320px",
+      "figma-families.spec.ts:109 Learn heading at 320/390/1487px",
+      "learning-map.spec.ts:445 levels overflow at 320px"
+    ],
+    "affectedScreensUnchangedFromAdaptiveBase": "ebd5653",
+    "remoteBuildGatewayAudit": "skipped after browser failure; build and gateway passed locally"
+  },
+  "existingWebDependencyAudit": {
+    "high": 1,
+    "package": "vite",
+    "version": "7.3.6",
+    "packageAndLockfileUnchangedFromAdaptiveBase": true,
+    "upgradePerformed": false
+  }
 }
