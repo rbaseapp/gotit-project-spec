@@ -1,0 +1,21 @@
+@startuml
+actor Learner
+participant Web
+participant "GotIt Backend" as API
+database "Product PostgreSQL" as DB
+Learner -> Web: Choose content / skip / restore
+alt Choose content
+ Web -> API: Read active version + selected lesson
+ API -> DB: Resolve owned current content
+ API --> Web: Actual selected context / stale conflict
+else Skip or restore
+ Web -> Learner: Confirm unfinished unit scope (unit only)
+ Web -> API: Explicit choice + revision + operation UUID
+ API -> DB: Scoped lock / receipt replay / compare revision
+ DB -> DB: Save navigation choice separately from evidence
+ DB --> API: Committed choice receipt
+ API --> Web: Updated path / conflict
+ Web -> Learner: Completed / skipped / remaining + next action
+end
+note over API,DB: No fabricated attempts, mastery, XP, streak or placement
+@enduml
