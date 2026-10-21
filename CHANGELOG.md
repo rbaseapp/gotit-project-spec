@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Restore existing English program UI
+
+Restore the previous illustrated unit map, level/word browsers, lesson preparation and homework presentation while retaining the new curriculum and server learning rules. Remove the separate curriculum stylesheet and use the original program URL. [Scope and verification](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#original-ui-restoration--2026-10-21).
+
 ## 2026-10-21 - Structured English zero-to-C1
 
 Implement an independent versioned 84-unit English/Hebrew path with phonics, per-target game progression, spaced retrieval, authored AI teacher phases and Realtime context, 2,016 postlesson tasks, dose-gated personal readings, new-text checkpoints and four-skill exit assessment. Preserve and hide legacy catalog programs without migrating their evidence. Add owner-scoped receipts/leases and resumable work. [Canonical behavior and DEV evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md).
