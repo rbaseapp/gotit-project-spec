@@ -4,6 +4,8 @@
 
 Smart Practice opens the original multi-game renderer at `/learn/session/smart` with the selected `curriculumUnit` and the entire unit word pool. It resumes an owned active game session, including its checkpoint. The original map/word list and game UI remain; the interim study-card/questionnaire entry is superseded. [Current flow](48_ENGLISH_ZERO_C1_RUNTIME.md#existing-smart-game-path-for-unit-vocabulary).
 
+The unit map's teacher action opens `/private-lesson?curriculum=<lessonId>` in the original unit preparation/tutor screen, including for paid learners. It must not fall through to the generic course catalog. Existing authored lesson identity, minute choice, support language and return-to-unit context are preserved. [Entry correction](48_ENGLISH_ZERO_C1_RUNTIME.md#scoped-teacher-entry-correction).
+
 SCR-C1 uses the original `/english-learning` route and existing map/word/lesson UI (`/english-zero-c1` is an alias): enrollment, the original three-group unit browser with six CEFR bands in its content, vocabulary/phonics, resumable teacher/postlesson work, personal readings, unseen and separate skill diagnostics. Program discovery and the DEV dashboard link here. Loading, locked, retry, draft and RTL states are covered in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
 
 ## 2026-10-17 — SCR-ADM-WORD automatic completion
