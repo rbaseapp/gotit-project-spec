@@ -476,3 +476,13 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## Settings live contracts - 2026-10-22
+
+FR-SETTINGS-LIVE-001..006 / UC-SETTINGS-LIVE-001..003 supersede the historical
+settings exclusions for provider methods, persisted name/photo and reminder
+scheduling. Core owns verified same-account linking; Product owns private profile
+bytes, schedule/consents and delivery; Web owns nine DEV category compositions.
+Migration, bounded payloads, configuration, privacy, worker semantics, verification,
+DEV release and remaining exact-design gaps are owned by the
+[current settings contract](42_SETTINGS_DESIGN_DEV.md#current-contract--2026-10-22).

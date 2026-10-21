@@ -159,3 +159,12 @@ Billing: `PADDLE_ENVIRONMENT`, `PADDLE_API_KEY`, `PADDLE_WEBHOOK_SECRET`,
 - `/ready` נכשל כאשר DB לא זמין;
 - תרחישי email verification/reset הושלמו לפני פתיחת password auth לציבור.
 
+## Settings live contracts - 2026-10-22
+
+FR-SETTINGS-LIVE-001..006 / UC-SETTINGS-LIVE-001..003 supersede the historical
+settings exclusions for provider methods, persisted name/photo and reminder
+scheduling. Core owns verified same-account linking; Product owns private profile
+bytes, schedule/consents and delivery; Web owns nine DEV category compositions.
+Migration, bounded payloads, configuration, privacy, worker semantics, verification,
+DEV release and remaining exact-design gaps are owned by the
+[current settings contract](42_SETTINGS_DESIGN_DEV.md#current-contract--2026-10-22).

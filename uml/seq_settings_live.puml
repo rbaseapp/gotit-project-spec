@@ -1,0 +1,43 @@
+@startuml
+title DEV settings: verified identity, private photo and reminder consent
+actor Learner
+participant Web
+participant Gateway
+participant Core
+participant Provider
+participant Product
+database DB
+participant Worker
+Learner -> Web: Open account settings
+Web -> Gateway: GET auth/methods (current session)
+Gateway -> Core: Allowlisted request and public application key
+Core -> DB: Read scoped OAuth identities/password credential
+Core --> Web: Google / Facebook / Email connected + available
+opt Explicit OAuth linking
+  Learner -> Provider: Provider consent
+  Provider --> Web: Credential
+  Web -> Core: POST auth/methods/google or facebook
+  Core -> Provider: Verify credential and audience
+  Core -> DB: Lock current user; same verified email; reject foreign identity
+  Core --> Web: Updated methods; unchanged session/account
+end
+Learner -> Web: Select photo, preview, Save
+Web -> Web: Decode, crop, strip metadata, bound JPEG
+Web -> Product: PATCH profile with bounded image/name
+Product -> Core: Authenticate session
+Product -> DB: Scoped profile update
+Product --> Web: Persisted profile and header avatar
+Learner -> Web: Choose channel consent, days, minute, quiet hours; Save
+opt Newly enabled Push
+  Web -> Learner: Browser permission
+  Web -> Product: Register browser subscription
+end
+Web -> Product: PATCH changed notification preferences
+Product -> DB: Preserve omitted fields and verified recipient
+loop Every minute
+  Worker -> DB: Check timezone, day, due activity, consent, quiet window
+  Worker -> DB: Enqueue unique occurrence; claim lease; recheck consent
+  Worker -> Provider: Email or Web Push when configured
+  Worker -> DB: Record sent / failed / uncertain / suppressed
+end
+@enduml

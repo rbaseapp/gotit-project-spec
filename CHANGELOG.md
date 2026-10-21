@@ -1,5 +1,15 @@
 # יומן שינויים
 
+## 2026-10-22 - Settings account and reminder contracts (DEV)
+
+Replace unavailable/Apple provider placeholders with scoped Google/Facebook/Email
+status and verified linking; persist account name/photo; implement reminder minute,
+days, quiet hours, new opt-in kinds and configured email/Push delivery. Nine DEV
+category compositions use real owner APIs. Local/integration/live round-trip
+checks pass; literal 1:1 visual fidelity and real provider receipt remain partial.
+[Canonical scope, contracts and release evidence](docs/42_SETTINGS_DESIGN_DEV.md#current-contract--2026-10-22).
+
+
 ## 2026-10-17 - Homework source-schema correction
 
 Reproduce DEV strict-schema rejection caused by newline-bearing saved quotes. Replace raw quote enums with server-owned source IDs, preserve exact evidence, add safe provider diagnostics and regression coverage. Main local gates and read-only provider acceptance pass. The isolated DEV patch f0233a3 is now published and Live; authenticated preparation and saved homework resume pass. [Canonical incident and evidence](docs/22_PERSONAL_COURSES_IMPLEMENTATION.md#homework-source-identifiers-and-safe-provider-diagnostics---2026-10-17).
