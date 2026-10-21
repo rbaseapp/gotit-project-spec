@@ -588,3 +588,8 @@ FR-C1-06 visible entry supersedes focus-only guidance: the same learner regressi
 FR-C1-02/06 original smart games supersede the interim questionnaire entry: Web navigation tests require the existing scoped game route; focus-game tests traverse all five modes and complete the whole selected pool across flashcards/matching boards. Backend `curriculum-practice.integration.test.ts` verifies all 12 P01 targets, ownership/locked-unit rejection, preserved historical items, creation/answer replay and atomic curriculum evidence. See the canonical existing smart game path contract.
 
 FR-C1-04/06 scoped teacher entry: `test/private-lesson-entry.test.tsx` renders the actual application route with paid access and P01-L1, P01-L2 and C101-L1 URLs, asserting tutor rather than course catalog. `test/private-lesson.test.tsx` verifies the original unit preparation UI and the start request's curriculum lesson identity, guided mode, English/Hebrew, beginner support and selected duration. See the canonical scoped teacher entry correction.
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).

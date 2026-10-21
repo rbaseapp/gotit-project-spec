@@ -273,3 +273,8 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 AI assignment accepts only candidate UUIDs from the trusted application. Saved context is bounded/untrusted input; shared concepts retain generic lexical output, not raw source sentences. Worker usage is owner-scoped and quota bounded. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).

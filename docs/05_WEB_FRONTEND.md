@@ -476,3 +476,8 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).

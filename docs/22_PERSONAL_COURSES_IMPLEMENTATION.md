@@ -356,3 +356,8 @@ only the isolated DEV release branch was published/deployed. Main's newer Admin
 request-context adapter is preserved locally. The prepared DEV patch contains all
 source-ID, exact-evidence, safe-diagnostic and regression changes supported by its
 actual deployed baseline. Production main was not pushed by this task.
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).

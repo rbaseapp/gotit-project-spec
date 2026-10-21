@@ -399,3 +399,8 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 FR-CON-07 automatic durable assignment; FR-CON-08 AI disambiguation and existing/new meaning selection; FR-CON-09 historical-word backfill. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).

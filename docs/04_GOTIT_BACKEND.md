@@ -226,3 +226,8 @@ FR-CON-07/08 removes manual setup from image replacement: cards offer an inline 
 ## Automatic concept assignment - 2026-10-16
 
 Every learner-word creation/edit path enqueues automatic meaning work transactionally. The bounded worker uses AI, records scoped revision-aware bindings and retries durable failures. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
