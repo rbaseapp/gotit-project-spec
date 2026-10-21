@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Remove duplicate learning-path controls
+
+Replace the noisy duplicate stage panel with small skip/restore menus in the original roadmap and existing personal-course syllabus. Keep the existing unit selectors, real progress and command contracts. Local verification is complete; remote publication and DEV rollout await restoration of the existing browser connection. [Decision, checks and delivery blocker](docs/49_LEARNING_PATH_CHOICES.md#ui-correction-after-owner-review-2026-10-21).
+
 ## 2026-10-21 - Route unit teacher links to the scoped tutor
 
 Recognize `curriculum` in the private-lesson application entry so a paid learner's unit lesson opens the original preparation/tutor screen with the existing authored lesson context. Previously the correct unit URL fell through to the course catalog. Preserve original UI, generic course entry and server prerequisites. [Cause, regression and DEV evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#scoped-teacher-entry-correction).
