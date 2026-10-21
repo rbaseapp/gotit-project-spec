@@ -2,7 +2,7 @@
 
 ## 2026-10-21 - Remove duplicate learning-path controls
 
-Replace the noisy duplicate stage panel with small skip/restore menus in the original roadmap and existing personal-course syllabus. Keep the existing unit selectors, real progress and command contracts. Local verification is complete and Web commit `9a95e23` is published to GitHub; DEV rollout remains pending. [Decision, checks and delivery blocker](docs/49_LEARNING_PATH_CHOICES.md#ui-correction-after-owner-review-2026-10-21).
+Replace the noisy duplicate stage panel with small skip/restore menus in the original roadmap and existing personal-course syllabus. Keep the existing unit selectors, real progress and command contracts. Web commit `9a95e23` is published to GitHub and Live on DEV; public asset/readiness checks passed. [Decision, checks, deployment and acceptance limits](docs/49_LEARNING_PATH_CHOICES.md#ui-correction-after-owner-review-2026-10-21).
 
 ## 2026-10-21 - Route unit teacher links to the scoped tutor
 
