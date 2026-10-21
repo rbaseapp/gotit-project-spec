@@ -2,6 +2,46 @@
 
 Implementation date: 2026-10-21. Program `english-zero-c1`, immutable content version `2026-10-21.1`.
 
+## Introduction titles and postlesson participants — 2026-10-21
+
+FR-LESS-INTRO-001 also covers the authored program. P01 is now titled **שלום, מציגים את עצמנו**;
+both P01 lesson titles, map/dropdown labels, teaching phases and postlesson prompts use that
+objective instead of a fictional learner name. P01 self-introduction exercises and A101
+personal-profile tasks ask for the learner's own name/details. The tutor models their own
+selected identity; comprehension questions about an actual third person remain text-based.
+
+`assets/english-zero-c1/introduction-update.json` is a forward runtime correction layered over
+the unchanged published import. Unit, lesson, target and enrollment identities and the original
+migration/database snapshot remain intact. It changes 2 units and 4 lessons, retaining all
+lesson/task counts and progress. `curriculumParticipants` resolves only the server-owned
+`teacherName`/`teacherNameHe` slots. Unit views use the saved English tutor preference;
+private voice lessons resolve the final requested tutor. Postlesson snapshots use the tutor
+from the actual completed source lesson, with scoped preference/default fallback for old
+text lessons or unavailable sources. A later tutor preference change cannot rewrite an
+already-created question bank. Existing activity snapshots/receipts retain their original
+wording and answer contract; newly created postlesson practice uses the correction.
+
+P01-L2 postlesson comprehension includes the matching passage alongside its questions.
+Question, passage, private anchor and audio text are resolved together before persistence.
+The shared introduction acceptance policy also reaches the curriculum teacher/evaluator.
+No new learner identity field, API shape, migration or grade/progress reset is introduced.
+
+Local checks on the combined DEV source: 328 fast tests and build passed; 3 disposable
+PostgreSQL integrations cover tutor identity/owner isolation, own-name answers, replay,
+frozen postlesson questions, retained teacher completion, and the existing runtime and
+multi-game practice. The new participant case passed again after the final content correction.
+The combined source retains DEV completion fix `f56a85b` in addition to content commit `6c25221`.
+Combined Backend `9de278698c51bf2ad3ca12444a2d5fd83b767cdf` is DEV Live on
+`srv-dar6ei7f3r2c73balbp0`, deploy `dep-dbci9359fdbs73a0uaag` (45.8 seconds).
+Backend/Web readiness returned 200 and unauthenticated unit access returned 401.
+After reloading the existing authenticated unit map, its main title, both lesson titles,
+unit selector and skip labels showed the correction; progress remained **5 of 14**.
+No learner answer, attempt or live voice lesson was submitted in that account. Postlesson
+answers and frozen tutor identity were verified in disposable PostgreSQL with provider fakes.
+No migration, production deploy, service branch/Auto-Deploy change or frontend deployment
+was required. Already-started attempts retain their stored content and replay contract.
+[Exact deployment and acceptance evidence](evidence/2026-10-21-introduction-names/content-followup.json).
+
 ## Scope and source
 
 The user authorised implementing the independently authored proposal in DEV, replacing the visible previous prepared English program while retaining its database records and learner history. The previous program is not the curriculum source. Core, production services and the user's dirty main worktrees are outside this release.

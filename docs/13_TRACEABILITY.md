@@ -602,4 +602,6 @@ Lesson exhaustion/repetition → [canonical 48](48_ADAPTIVE_PRIVATE_LESSONS_PROP
 
 P12 / UC-07 / SCR-10 → כלל משותף ב־`private-lesson.teachers.ts` → הכנה,
 planner/review/repair, הערכה ו־Realtime → `private-lesson-introductions.test.ts`.
+הרחבה לתוכן המחבר, P01/A101 ותרגול אחרי השיעור → `curriculum-introductions.test.ts`,
+`curriculum-introductions.integration.test.ts`; [חוזה התוכן](48_ENGLISH_ZERO_C1_RUNTIME.md#introduction-titles-and-postlesson-participants--2026-10-21).
 [התנהגות, עץ המקור, ראיות וגבולות](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#15-היכרות-בשמות-המשתתפים--תיקון-מקומי-2026-10-21).

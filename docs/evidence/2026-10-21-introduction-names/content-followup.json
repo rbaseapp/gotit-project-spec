@@ -1,0 +1,53 @@
+{
+  "environment": "DEV",
+  "commit": "9de278698c51bf2ad3ca12444a2d5fd83b767cdf",
+  "contentCommit": "6c2522136f38aa70a151dd54d3b1e8bc2c1c5ce4",
+  "previousLiveCommit": "f56a85b18c1530c97473bcd7d168d0b7153e35e1",
+  "previousLiveFixRetained": true,
+  "serviceId": "srv-dar6ei7f3r2c73balbp0",
+  "deployId": "dep-dbci9359fdbs73a0uaag",
+  "status": "live",
+  "durationSeconds": 45.8,
+  "checksAt": "2026-10-21T20:47:38.874592+00:00",
+  "checks": [
+    {
+      "url": "https://gotit-dev-backend.onrender.com/ready",
+      "expectedStatus": 200,
+      "status": 200,
+      "passed": true
+    },
+    {
+      "url": "https://gotit-dev.rbaseapp.com/ready",
+      "expectedStatus": 200,
+      "status": 200,
+      "passed": true
+    },
+    {
+      "url": "https://gotit-dev-backend.onrender.com/api/v1/structured-english/units/P01",
+      "expectedStatus": 401,
+      "status": 401,
+      "passed": true
+    }
+  ],
+  "localFastTests": 328,
+  "disposablePostgresTests": 3,
+  "typecheck": true,
+  "build": true,
+  "runtimeSnapshotVersionRetained": "2026-10-21.1",
+  "migrationExecuted": false,
+  "configurationChanged": false,
+  "productionChanged": false,
+  "liveLearnerAnswerSubmitted": false,
+  "liveVoiceLessonTested": false,
+  "authenticatedUi": {
+    "unitTitleCorrect": true,
+    "bothLessonTitlesCorrect": true,
+    "unitSelectorCorrect": true,
+    "completedSteps": 5,
+    "totalSteps": 14,
+    "progressPreserved": true,
+    "learnerAnswersSubmitted": 0,
+    "postlessonOpened": false
+  },
+  "autoDeployChanged": false
+}

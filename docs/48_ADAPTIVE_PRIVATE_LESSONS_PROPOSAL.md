@@ -553,3 +553,10 @@ Auto-Deploy נשאר כבוי, ואין שינוי בענף השירות, בהג
 שיעור חדש ייווצר עם הכלל החדש; שיעור קיים שומר את החוזה והתוכן הקודמים.
 rollback הוא פריסה ידנית של בסיס `3a8c3f3` בשירות DEV בלבד, ללא down migration.
 [רשומת פריסה ובדיקות](evidence/2026-10-21-introduction-names/release.json).
+
+### 15.2 הרחבת התיקון לתוכן המסלול
+
+הכותרות, הדוגמאות, שאלות ההבנה והתרגול שאחרי שיעור מתוקנים גם בחומר המחבר,
+מעבר להנחיות המורה. [החוזה המלא ומסלול התוכן](48_ENGLISH_ZERO_C1_RUNTIME.md#introduction-titles-and-postlesson-participants--2026-10-21).
+Backend `9de2786` במצב DEV Live; הכותרות אומתו בחשבון הקיים לאחר רענון, ללא
+הגשת תשובות. [ראיות הפריסה](evidence/2026-10-21-introduction-names/content-followup.json).
