@@ -1,0 +1,44 @@
+{
+  "authorizedEnvironment": "DEV",
+  "liveAtUtc": "2026-10-21T21:41:21Z",
+  "liveAtJerusalem": "2026-10-22T00:41:21+03:00",
+  "frontend": {
+    "commit": "10e7c9da2506f2d14d22ca38c635c82762c81af9",
+    "branch": "feat/program-map-uiux-20261022",
+    "service": "srv-dar6dng473hc73a0ns1g",
+    "deploy": "dep-dbcj2fgm7kps73bsma20",
+    "status": "Deploy succeeded / service live",
+    "configuredBranchUnchanged": "feat/lesson-conversation-v3-dev",
+    "autoDeployDisabled": true,
+    "previousCommit": "9a95e23fa40549bcc19ab93cbf54e087cd59b5ec",
+    "previousDeploy": "dep-dbci0j3jremc73flqd0g"
+  },
+  "readiness": { "url": "https://gotit-dev.rbaseapp.com/ready", "status": 200, "homeStatus": 200 },
+  "servedMapCss": {
+    "path": "/assets/StructuredEnglishPage-CgFozJlH.css",
+    "status": 200,
+    "sha256": "ac7234a785789ff717a2d66723020d65dac915fadd82afc261d6bce74958d0b0",
+    "containsSecondaryMapAction": true,
+    "containsScopedMinimumWidthFix": true
+  },
+  "authenticatedAcceptance": {
+    "url": "https://gotit-dev.rbaseapp.com/english-learning?view=map&unit=P01",
+    "updatedIntroductionNames": true,
+    "secondaryEntryAndHint": true,
+    "lockedPracticeHasNoEntryAction": true,
+    "confirmationOpenedAndCancelled": true,
+    "progressBeforeAndAfter": "5/14 (36%)",
+    "heroAndSidebarRemaining": 7,
+    "browserErrorsAndWarnings": [],
+    "learningOrSkipMutations": false,
+    "screenshots": ["dev-map.jpg", "dev-confirmation.jpg", "render-live.jpg"]
+  },
+  "localChecks": {
+    "focusedTests": 27,
+    "gatewayTests": 23,
+    "typecheckLintBuild": "passed",
+    "responsiveWidths": [320, 390, 768, 1490],
+    "fullSuite": "420 passed, one dedicated-English-path lazy-loading failure reproduced on unmodified DEV base 9a95e23"
+  },
+  "unchanged": ["production", "backend", "core", "chrome extension", "database", "environment configuration"]
+}

@@ -75,7 +75,7 @@ Core, Chrome and database were unchanged. Existing specification edits preserved
 Owner-selected visual: [UnitStartHere board](https://claude.ai/artifact/QxCJLacpzBzSSFVDuaotRV#play-491bf3f68d1b).
 Implemented locally in Web branch `feat/program-map-uiux-20261022`, based on
 observed live DEV `9a95e23` and preserving the independently released summary fix
-`6ef43ba`. This follow-up has **not been deployed**.
+`6ef43ba`. The initial review was local; the authorized DEV release is recorded below.
 
 Exact local Web implementation commit: `10e7c9d`.
 
@@ -118,3 +118,30 @@ normal production build. The existing product shell, fonts and branded WebP
 are retained; this is an interaction/design adaptation, not a pixel-identical
 copy of the mock's header, illustration or illustrative content. No Backend,
 Core, Chrome, API, database, configuration or migration changes are required.
+
+### DEV deployment - 2026-10-22
+
+User explicitly authorized DEV deployment after local review. Exact Web commit
+`10e7c9da2506f2d14d22ca38c635c82762c81af9` was pushed to
+`feat/program-map-uiux-20261022` and deployed with Render's specific-commit flow
+on existing DEV service `srv-dar6dng473hc73a0ns1g`. Deployment
+`dep-dbcj2fgm7kps73bsma20` reports **Deploy succeeded**; the frontend listened
+on port 10000 and Render reported live at 2026-10-22 00:41:21 Asia/Jerusalem
+(2026-10-21T21:41:21Z). Configured branch and disabled Auto-Deploy were retained.
+
+Authenticated acceptance on `/english-learning?view=map&unit=P01` verified the
+new instruction/secondary entry, updated own-name titles, locked postlesson
+practice without an entry CTA, and the different-step confirmation followed by
+explicit cancellation. Progress stayed **5/14 (36%)**; hero/sidebar remaining
+counts both read **7**. Browser error/warning logs were empty. No lesson, provider
+or skip/restore mutation was started during live acceptance. Existing local
+responsive and skip/restore evidence remains applicable to the identical commit.
+
+`/ready` and `/` returned 200. The live map-loaded stylesheet
+`/assets/StructuredEnglishPage-CgFozJlH.css` returned 200 and contains both the
+secondary-action and scoped minimum-width rules; SHA-256
+`ac7234a785789ff717a2d66723020d65dac915fadd82afc261d6bce74958d0b0`.
+Exact release observations and screenshots are retained in
+[release.json](evidence/2026-10-22-program-map-uiux/release.json).
+Previous DEV release was `9a95e23` / `dep-dbci0j3jremc73flqd0g`.
+Production, Backend, Core, Chrome, database and environment settings were unchanged.

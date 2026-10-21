@@ -5,8 +5,9 @@
 Adapt the owner-selected unit-map board using existing product components:
 primary continuation, hover/focus secondary entry, touch menus and explicit
 confirmation; preserve separate reversible skips and authoritative learning.
-Fix scoped 320px overflow and consistent remaining counts. Locally verified;
-not deployed. [Scope, evidence and baseline test limitation](docs/41_PROGRAM_MAP_DESIGN_DEV.md#2026-10-22---quiet-secondary-step-selection).
+Fix scoped 320px overflow and consistent remaining counts. Locally verified and
+deployed to DEV as `10e7c9d` / `dep-dbcj2fgm7kps73bsma20`, with authenticated
+map/confirmation acceptance and readiness 200. [Scope, evidence and baseline test limitation](docs/41_PROGRAM_MAP_DESIGN_DEV.md#2026-10-22---quiet-secondary-step-selection).
 
 ## 2026-10-21 - Route unit teacher links to the scoped tutor
 
