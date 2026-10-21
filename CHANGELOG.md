@@ -1,5 +1,9 @@
 # יומן שינויים
 
+## 2026-10-21 - Explain and enable smart-practice entry
+
+Replace the unexplained disabled word-page CTA in a fresh unlocked unit with guided entry to word introduction; resume an unfinished word attempt or start an eligible game when available. Preserve explicit exposure, server progression and existing styling. [Behavior and verification](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#smart-practice-entry-correction).
+
 ## 2026-10-21 - Restore existing English program UI
 
 Restore the previous illustrated unit map, level/word browsers, lesson preparation and homework presentation while retaining the new curriculum and server learning rules. Remove the separate curriculum stylesheet and use the original program URL. [Scope and verification](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#original-ui-restoration--2026-10-21).
