@@ -741,3 +741,8 @@ Realtime previews and credential-free snapshots, and measured lesson statistics.
 ## 2026-10-16 - Automatic lexical meaning assignment
 
 Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792194000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+
+## 2026-10-21 - Free learning paths and reversible skips
+
+FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](docs/49_LEARNING_PATH_CHOICES.md).
