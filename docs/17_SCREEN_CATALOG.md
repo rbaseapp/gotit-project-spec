@@ -2,7 +2,7 @@
 
 ## Structured English zero-to-C1 ? 2026-10-21
 
-SCR-C1 is `/english-zero-c1`: enrollment, six-band unit map, vocabulary/phonics, resumable teacher/postlesson work, personal readings, unseen and separate skill diagnostics. Program discovery and the DEV dashboard link here. Loading, locked, retry, draft and RTL states are covered in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
+SCR-C1 uses the original `/english-learning` route and existing map/word/lesson UI (`/english-zero-c1` is an alias): enrollment, the original three-group unit browser with six CEFR bands in its content, vocabulary/phonics, resumable teacher/postlesson work, personal readings, unseen and separate skill diagnostics. Program discovery and the DEV dashboard link here. Loading, locked, retry, draft and RTL states are covered in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
 
 ## 2026-10-17 — SCR-ADM-WORD automatic completion
 
