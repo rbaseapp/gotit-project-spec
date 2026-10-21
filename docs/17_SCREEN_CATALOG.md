@@ -2,6 +2,8 @@
 
 ## Structured English zero-to-C1 ? 2026-10-21
 
+Smart Practice opens the existing study-card presentation (`view=study`) when the selected unlocked unit has no introduced words. Explicit familiarity confirmation continues automatically into the server-issued recognition exercise; a focus change alone is not accepted as completed navigation. [Current flow](48_ENGLISH_ZERO_C1_RUNTIME.md#visible-study-card-entry).
+
 SCR-C1 uses the original `/english-learning` route and existing map/word/lesson UI (`/english-zero-c1` is an alias): enrollment, the original three-group unit browser with six CEFR bands in its content, vocabulary/phonics, resumable teacher/postlesson work, personal readings, unseen and separate skill diagnostics. Program discovery and the DEV dashboard link here. Loading, locked, retry, draft and RTL states are covered in the canonical runtime contract. [Canonical implementation and DEV evidence](48_ENGLISH_ZERO_C1_RUNTIME.md).
 
 ## 2026-10-17 — SCR-ADM-WORD automatic completion
