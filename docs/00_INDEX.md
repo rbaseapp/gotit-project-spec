@@ -188,3 +188,7 @@ Automatic AI meaning assignment, durable jobs and historical-word backfill are i
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## Adaptive private lessons — DEV release, 2026-10-21
+
+[48 — Adaptive private lessons](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21) owns the common planner, independent review/exclusions, authoritative activities, compatibility and exact DEV deployment evidence.

@@ -461,3 +461,7 @@ Apply migration 1792192000000 before Backend/Admin. Existing OPENAI_API_KEY enab
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — Adaptive private lessons, DEV Live
+
+Dedicated migration `1792640000000` applied after a fresh DEV backup; runtime preflight passed. Exact Backend/Web/Admin commits are Live, four readiness checks and encoded lesson deep links passed, and one real synthetic provider check passed with 17 reviewed activities. Preserve the additive schema and old-session compatibility on rollback. [Canonical rollout and limits](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).

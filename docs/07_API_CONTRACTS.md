@@ -448,3 +448,7 @@ Capture/media contracts remain unchanged. Admin word reads add conceptAssignment
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — Negotiated adaptive private lessons
+
+DEV setup advertises `interactionCapabilities.adaptiveLessons`; opted-in starts submit `interactionProtocol: adaptive-v1`. Activity actions bind `eventId`, `activityId` and revision, preserve receipts and expose one current task. Old guided commands remain accepted only through their legacy record adapter. Completion reads server evidence for adaptive lessons. [Canonical schemas, errors, timeouts and rollout](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md).

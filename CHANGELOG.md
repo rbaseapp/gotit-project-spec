@@ -746,3 +746,7 @@ Implemented local AI classification, durable versioned queue/bindings, historica
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](docs/49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — Adaptive private lessons deployed to DEV
+
+Common adaptive planning and server activity progression cover current and future unit, course, standalone and structured lessons. Preserves concurrently delivered path choices and legacy sessions. DEV migration, three exact-source Live deployments, real synthetic provider acceptance and final checks are recorded in [document 48](docs/48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).

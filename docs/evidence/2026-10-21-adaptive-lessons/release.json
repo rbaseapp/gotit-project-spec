@@ -1,0 +1,156 @@
+{
+  "at": "2026-10-21T15:24:25.425662+00:00",
+  "environment": "DEV",
+  "branch": "release/adaptive-lessons-dev-20261021",
+  "productionChanged": false,
+  "services": [
+    {
+      "component": "backend",
+      "service": "srv-dar6ei7f3r2c73balbp0",
+      "commit": "3a8c3f3ac0576e97ce8d16499dd4886dc1c2fe64",
+      "deploy": "dep-dbcdfeui0phs7383rscg",
+      "status": "Live",
+      "durationSeconds": 39.6
+    },
+    {
+      "component": "web",
+      "service": "srv-dar6dng473hc73a0ns1g",
+      "commit": "e4f9a329af3a4d2d550bb88121a4370240523a2d",
+      "deploy": "dep-dbcd7161egvs73a9jb8g",
+      "status": "Live",
+      "durationSeconds": 82
+    },
+    {
+      "component": "admin",
+      "service": "srv-dbael83bc2fs73b3u7f0",
+      "commit": "b126ff87b29101f2e1d7c8f4d57d7b67a8278483",
+      "deploy": "dep-dbcd71ff3r2c739lpi9g",
+      "status": "Live",
+      "durationSeconds": 96
+    }
+  ],
+  "migration": {
+    "name": "1792640000000_adaptive-lesson-activity-budget",
+    "database": "gotit_dev",
+    "separateRuntimeRole": "gotit_runtime",
+    "afterPending": [],
+    "constraint": [
+      {
+        "definition": "CHECK (((revision >= 0) AND (revision <= 1000)))"
+      }
+    ],
+    "runtime": {
+      "schema": "ok",
+      "privileges": "ok",
+      "role": "product-only",
+      "operationalTables": 47
+    },
+    "backupBytes": 24736831,
+    "backupSha256": "87351604359dcec328f4b9c3a1b2e6f5534c5823547d26041da3f5308e14ddaa",
+    "downExecuted": false
+  },
+  "verification": {
+    "backendFast": 320,
+    "adaptiveFocusedIncludingProviderBoundary": 21,
+    "postgresCombined": 12,
+    "postgresAdaptiveRepeated": 10,
+    "backendBuild": true,
+    "dockerBuild": true,
+    "webCheck": {
+      "unit": 412,
+      "files": 66,
+      "gatewaySecurity": 23,
+      "typecheck": true,
+      "lint": true,
+      "build": true
+    },
+    "browserFixtures": 15,
+    "adminCheck": {
+      "tests": 54,
+      "typecheck": true,
+      "build": true
+    }
+  },
+  "provider": {
+    "status": "passed",
+    "synthetic": true,
+    "lessonId": "P01-L1",
+    "model": "gpt-6-sol",
+    "elapsedMs": 69862,
+    "durationSeconds": 600,
+    "planDigest": "00bc6dbbd4ccc812a2ace332fe55ce227ce71f59712571370de7079fde298f3a",
+    "requirements": {
+      "durationSeconds": 600,
+      "minimumActivities": 17,
+      "minimumCore": 3,
+      "minimumSupport": 2,
+      "minimumExtension": 4,
+      "minimumKinds": 4,
+      "recommendedPlannedSeconds": 900,
+      "minimumShortIndependentExitTasks": 1,
+      "maximumExitTaskSeconds": 30,
+      "closingReserveSeconds": 30,
+      "maxFamilyAttempts": 2,
+      "maxWeakObjectiveRevisits": 2,
+      "speechRate": "slow",
+      "oralOnly": false
+    },
+    "activities": 17,
+    "kinds": [
+      "meaning",
+      "guided_use",
+      "recall",
+      "contrast",
+      "role_play",
+      "transfer",
+      "information_gap"
+    ],
+    "routes": {
+      "core": 11,
+      "support": 2,
+      "extension": 4
+    },
+    "excludedActivities": [
+      "s01",
+      "s04",
+      "e02",
+      "e04",
+      "e07"
+    ],
+    "verification": "Local synthetic learner using exported DEV provider configuration and actual authored lesson scope; no database or learner writes"
+  },
+  "liveSmoke": {
+    "at": "2026-10-21T15:22:30.877Z",
+    "services": [
+      {
+        "origin": "https://gotit-dev.rbaseapp.com",
+        "status": 200
+      },
+      {
+        "origin": "https://gotit-dev-backend.onrender.com",
+        "status": 200
+      },
+      {
+        "origin": "https://gotit-admin-dev.onrender.com",
+        "status": 200
+      },
+      {
+        "origin": "https://rbase-dev-core-platforms.onrender.com",
+        "status": 200
+      }
+    ],
+    "entry": "/assets/index-6skXFVhw.js",
+    "lessonAsset": "PrivateLessonPage-StXueDKR.js",
+    "lessonSha256": "ea6fdecb95ef467afbe5b4456ec3bdf5b522a514a126313f22c61d7e14f709aa",
+    "adaptiveProtocolDelivered": true,
+    "deepLink": 200,
+    "encodedPath": 400,
+    "protectedActivity": 401
+  },
+  "limits": [
+    "No authenticated full lesson or physical microphone acceptance",
+    "One provider quality check is not a guarantee for all future generated plans",
+    "Preparation took about 70 seconds in the accepted provider sample",
+    "No retention or abandonment experiment"
+  ]
+}

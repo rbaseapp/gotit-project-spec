@@ -306,3 +306,7 @@ Forward migration 1792194000000 adds concept_assignment_jobs and learning_item_c
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — Adaptive lesson activity revision budget
+
+DEV migration `1792640000000_adaptive-lesson-activity-budget` expands the existing `private_lesson_activities` revision constraint to 0–1000. Existing content is not backfilled. Temporary private banks/receipts are scoped and purged atomically after reporting/deletion or by retention cleanup; reports retain aggregate activity counts. [Canonical persistence and rollout](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md).

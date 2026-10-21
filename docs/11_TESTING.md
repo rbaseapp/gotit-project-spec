@@ -552,3 +552,7 @@ Automatic-concept tests exercise the Arabic owner example, concurrent reuse, pro
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — Adaptive lesson DEV release evidence
+
+Backend 320 fast, PostgreSQL 12 combined/10 adaptive repeat, Web check 412 unit + 23 gateway/security, 15 browser fixtures and Admin 54 checks passed. One synthetic provider run on actual P01-L1 scope approved 17 activities after excluding five; preparation took 69,862 ms. Exact sources, live smoke, deployment links and limits are owned by [48, section 14](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).
