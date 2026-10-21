@@ -538,3 +538,9 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons, DEV Live
 
 Current and future unit/course/standalone/structured lesson starts negotiate a shared duration-aware bank, semantic review and exclusion, bounded focused repairs and authoritative activity progression. Legacy sessions remain compatible. Three exact-source DEV deployments and one synthetic real-provider acceptance are recorded in [48, section 14](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21); no production or physical-microphone acceptance is implied.
+
+## 2026-10-21 — היכרות בשמות המשתתפים: תיקון מקומי
+
+הנחיות התכנון, הביקורת, ההערכה והמורה שומרות על שם הלומד ועל המורה שנבחר.
+תיקון זה מאומת מקומית ונפרס ל־DEV בקומיט `b195bd7`; שיחה חיה טרם אומתה.
+[החוזה והבדיקות](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#15-היכרות-בשמות-המשתתפים--תיקון-מקומי-2026-10-21).

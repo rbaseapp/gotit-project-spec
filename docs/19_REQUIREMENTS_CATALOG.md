@@ -404,3 +404,9 @@ FR-CON-07 automatic durable assignment; FR-CON-08 AI disambiguation and existing
 ## 2026-10-21 - Free learning paths and reversible skips
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
+
+## 2026-10-21 — FR-LESS-INTRO-001: שמות אמיתיים במשחקי היכרות
+
+הלומד מציג את עצמו בשמו; המורה מדגים בשמו הנבחר ומשמש כדמות נוספת כשנדרש.
+אין לדרוש זהות מומצאת או לפסול שם עצמי בגלל שם בדוגמה.
+[חוזה, קבלה ואימות מקומי](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#15-היכרות-בשמות-המשתתפים--תיקון-מקומי-2026-10-21).

@@ -597,3 +597,9 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons, DEV
 
 Lesson exhaustion/repetition → [canonical 48](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md) → duration-aware bank + reviewed exclusions + bounded focused repair + server CAS/evidence → 320 Backend fast, 12 PostgreSQL, 412 Web/23 gateway, 15 browser fixtures and 54 Admin checks; exact DEV source, migration and synthetic real-provider evidence in section 14. Physical microphone and retention outcomes remain unverified.
+
+## 2026-10-21 — FR-LESS-INTRO-001
+
+P12 / UC-07 / SCR-10 → כלל משותף ב־`private-lesson.teachers.ts` → הכנה,
+planner/review/repair, הערכה ו־Realtime → `private-lesson-introductions.test.ts`.
+[התנהגות, עץ המקור, ראיות וגבולות](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#15-היכרות-בשמות-המשתתפים--תיקון-מקומי-2026-10-21).

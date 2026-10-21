@@ -750,3 +750,10 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons deployed to DEV
 
 Common adaptive planning and server activity progression cover current and future unit, course, standalone and structured lessons. Preserves concurrently delivered path choices and legacy sessions. DEV migration, three exact-source Live deployments, real synthetic provider acceptance and final checks are recorded in [document 48](docs/48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).
+
+## 2026-10-21 — שמות המשתתפים בתרגילי היכרות
+
+- תיקון מקומי בענף נפרד: הלומד משתמש בשמו, והמורה בשמו הנבחר; שם שונה מדוגמה אינו שגיאה.
+- הכלל חל בתכנון, ביקורת ותיקון, בהערכה ובהנחיות Realtime, כולל החלפות פרומפט.
+- 323 בדיקות Backend, typecheck ו־build עברו. Backend `b195bd7` נפרס ל־DEV, במצב Live; בדיקות readiness ודרישת הזדהות עברו. אין אימות ספק חי לתיקון זה.
+- [חוזה וגבולות](docs/48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#15-היכרות-בשמות-המשתתפים--תיקון-מקומי-2026-10-21).

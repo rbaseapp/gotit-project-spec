@@ -1,0 +1,48 @@
+{
+  "environment": "DEV",
+  "sourceBranch": "fix/lesson-introduction-names-20261021",
+  "commit": "b195bd796ec2df444a5bb50ed399902c1c57658d",
+  "previousCommit": "3a8c3f3ac0576e97ce8d16499dd4886dc1c2fe64",
+  "serviceId": "srv-dar6ei7f3r2c73balbp0",
+  "deployId": "dep-dbchdhcs728c7395osp0",
+  "deployUrl": "https://dashboard.render.com/web/srv-dar6ei7f3r2c73balbp0/deploys/dep-dbchdhcs728c7395osp0",
+  "status": "live",
+  "durationSeconds": 51.1,
+  "startedAt": "2026-10-21T22:47:17+03:00",
+  "healthCheckedAt": "2026-10-21T19:48:37.875588+00:00",
+  "checks": [
+    {
+      "url": "https://gotit-dev-backend.onrender.com/ready",
+      "status": 200
+    },
+    {
+      "url": "https://gotit-dev-backend.onrender.com/api/v1/private-lessons/setup",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "url": "https://gotit-dev.rbaseapp.com/ready",
+      "status": 200
+    }
+  ],
+  "startupLog": {
+    "listening": true,
+    "live": true,
+    "startupFailureObserved": false
+  },
+  "verification": {
+    "localFastTests": 323,
+    "localFocusedTests": 71,
+    "typecheck": true,
+    "build": true,
+    "hostedCiTriggered": false,
+    "liveProviderConversation": false
+  },
+  "autoDeployEnabled": false,
+  "serviceBranchChanged": false,
+  "migrationExecuted": false,
+  "configurationChanged": false,
+  "productionChanged": false,
+  "otherComponentsDeployed": false,
+  "existingSessionsRetainPreviousContent": true
+}
