@@ -69,3 +69,52 @@ contract/data diagnosis remains separate from this Web design delivery.
 Web docs/program-map/evidence/release.json and dev-desktop-final.png /
 dev-mobile-final.png own exact local release observations. Production, Backend,
 Core, Chrome and database were unchanged. Existing specification edits preserved.
+
+## 2026-10-22 - Quiet secondary step selection
+
+Owner-selected visual: [UnitStartHere board](https://claude.ai/artifact/QxCJLacpzBzSSFVDuaotRV#play-491bf3f68d1b).
+Implemented locally in Web branch `feat/program-map-uiux-20261022`, based on
+observed live DEV `9a95e23` and preserving the independently released summary fix
+`6ef43ba`. This follow-up has **not been deployed**.
+
+Exact local Web implementation commit: `10e7c9d`.
+
+FR-MAP-CHOICE-001: only the current step and its matching hero continuation use
+the yellow primary action. Other available unfinished steps have an outlined
+green-text action revealed on hover or keyboard focus. At narrow widths or on
+touch pointers, entry is offered through the existing stage options menu. A
+contextual instruction explains where to find it. Locked postlesson practice
+retains its source dependency and explanation, without a disabled entry CTA.
+
+UC-MAP-CHOICE-001: selecting a different step opens the shared accessible modal.
+Cancellation or Escape restores trigger focus and causes no navigation or write.
+Confirmation invokes the existing scoped activity callback or route. Current
+availability is re-resolved from the latest model before opening. Existing
+explicit skip/restore actions remain available. As approved in [49](49_LEARNING_PATH_CHOICES.md),
+opening content does **not** silently skip earlier work; the dialog states this
+instead of reproducing the mock's automatic-skip claim. Completed reviews and
+all server evidence/availability rules remain unchanged.
+
+NFR-MAP-CHOICE-001: eight localized instruction/dialog catalogs, reduced-motion
+support, 44px secondary/touch targets, actual RTL browser checks at viewport
+widths 320/390/768/1490. Client and scroll widths match (305/375/753/1475 after
+scrollbar gutters). The map-only body minimum-width override fixes 320px overflow.
+Goal and hero remaining counts both exclude explicitly skipped steps; completed
+progress remains based on actual completed steps.
+
+Evidence: Web `design-qa.md`, `docs/program-map/uiux-20261022/verification.json`
+and the adjacent source, comparison, desktop/mobile and confirmation captures.
+27 focused cases, typecheck, lint, build and 23 gateway checks passed. Full Vitest
+reported 420 passes and one lazy-loading failure in the dedicated English-path
+case of `test/live.test.tsx`; the same failure was reproduced on unmodified
+`9a95e23`. No full-green suite or authenticated DEV acceptance is asserted.
+Local Playwright CLI acceptance (explicitly authorized after CUA disconnected)
+verified hover, responsive menus, confirmation/cancel focus, protected practice,
+explicit skip/restore and unchanged completion, with no new console errors.
+
+The local `/design-preview/` entry uses the real shared component with clearly
+labeled in-memory fixtures, has no API/provider writes, and is excluded from the
+normal production build. The existing product shell, fonts and branded WebP
+are retained; this is an interaction/design adaptation, not a pixel-identical
+copy of the mock's header, illustration or illustrative content. No Backend,
+Core, Chrome, API, database, configuration or migration changes are required.

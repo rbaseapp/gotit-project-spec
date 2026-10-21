@@ -594,6 +594,12 @@ FR-C1-04/06 scoped teacher entry: `test/private-lesson-entry.test.tsx` renders t
 
 FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and personal courses allow direct content selection, with reversible skips stored separately from completed learning. Backend/Web ownership, exact API/data contracts, invariants, acceptance and DEV release evidence are maintained in the [canonical feature contract](49_LEARNING_PATH_CHOICES.md).
 
+FR-MAP-CHOICE-001 / UC-MAP-CHOICE-001 / NFR-MAP-CHOICE-001: quiet secondary
+selection, touch-menu entry and accessible confirmation in `ProgramUnitMap` /
+`LearningPathControls`, with responsive and no-evidence-write acceptance in
+`test/program-map-choice.test.tsx` and local browser evidence. [Scope and local
+status](41_PROGRAM_MAP_DESIGN_DEV.md#2026-10-22---quiet-secondary-step-selection).
+
 ## 2026-10-21 — Adaptive private lessons, DEV
 
 Lesson exhaustion/repetition → [canonical 48](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md) → duration-aware bank + reviewed exclusions + bounded focused repair + server CAS/evidence → 320 Backend fast, 12 PostgreSQL, 412 Web/23 gateway, 15 browser fixtures and 54 Admin checks; exact DEV source, migration and synthetic real-provider evidence in section 14. Physical microphone and retention outcomes remain unverified.

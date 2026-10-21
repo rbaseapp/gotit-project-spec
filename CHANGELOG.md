@@ -1,5 +1,13 @@
 # יומן שינויים
 
+## 2026-10-22 - Quiet secondary actions in the program map
+
+Adapt the owner-selected unit-map board using existing product components:
+primary continuation, hover/focus secondary entry, touch menus and explicit
+confirmation; preserve separate reversible skips and authoritative learning.
+Fix scoped 320px overflow and consistent remaining counts. Locally verified;
+not deployed. [Scope, evidence and baseline test limitation](docs/41_PROGRAM_MAP_DESIGN_DEV.md#2026-10-22---quiet-secondary-step-selection).
+
 ## 2026-10-21 - Route unit teacher links to the scoped tutor
 
 Recognize `curriculum` in the private-lesson application entry so a paid learner's unit lesson opens the original preparation/tutor screen with the existing authored lesson context. Previously the correct unit URL fell through to the course catalog. Preserve original UI, generic course entry and server prerequisites. [Cause, regression and DEV evidence](docs/48_ENGLISH_ZERO_C1_RUNTIME.md#scoped-teacher-entry-correction).
