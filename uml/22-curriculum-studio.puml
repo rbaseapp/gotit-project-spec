@@ -1,0 +1,42 @@
+@startuml
+title Curriculum drafts and remembered Admin editing
+actor Administrator
+participant "Admin browser" as Browser
+participant "Admin gateway" as Gateway
+participant "rbase Core" as Core
+participant "GotIt Backend" as Product
+database "Product database" as DB
+participant "AI provider" as AI
+Administrator -> Browser: Verify authenticator (once per 30 days)
+Browser -> Gateway: OTP + current bearer login
+Gateway -> Core: Verify TOTP
+Core --> Gateway: Signed application/account/revision proof
+Gateway --> Browser: HttpOnly SameSite cookie; lifetime only in JSON
+Administrator -> Browser: Edit / request proposal / rehearse
+Browser -> Gateway: Context + draft + stable operation UUID
+Gateway -> Core: Check account, permissions and remembered proof
+Gateway -> Product: Fixed authoring route + bearer + proof
+Product -> Core: Independently authorize content.write
+Product -> DB: Claim/replay scoped generation operation
+alt Proposal or semantic review
+  Product -> AI: Bounded structured content request
+  AI --> Product: Candidate
+  Product -> Product: Validate schema / scope / links
+else Text or practice rehearsal
+  Product -> Product: Shared planner/director or homework engine
+  Product -> AI: Answer assessment when required
+end
+Product -> DB: Result receipt + audit metadata
+Product --> Browser: Reviewable result (no learner evidence)
+Administrator -> Browser: Accept selected changes
+Browser -> Product: Save draft via authorized gateway
+Product -> DB: Append draft snapshot
+Administrator -> Browser: Explicitly publish
+Browser -> Product: Publish with current revision and reason
+Product -> Core: Recheck authorization
+Product -> DB: Atomic content update + immutable snapshot + receipt
+note over Product,DB
+ Existing learner evidence and in-flight lesson snapshots remain historical.
+ Reading acknowledgements bind an exact content hash and grant no mastery.
+end note
+@enduml

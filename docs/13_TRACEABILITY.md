@@ -597,3 +597,7 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons, DEV
 
 Lesson exhaustion/repetition → [canonical 48](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md) → duration-aware bank + reviewed exclusions + bounded focused repair + server CAS/evidence → 320 Backend fast, 12 PostgreSQL, 412 Web/23 gateway, 15 browser fixtures and 54 Admin checks; exact DEV source, migration and synthetic real-provider evidence in section 14. Physical microphone and retention outcomes remain unverified.
+
+## 2026-10-26 — Curriculum studio, Admin DEV
+
+FR-STUDIO-01–08 → structured authoring, grounded practice, drafts/history and remembered MFA → 336 Backend, seven PostgreSQL, 56 Admin and 36 Core checks; exact hosted smoke and acceptance limits are recorded. [Canonical release evidence](49_CURRICULUM_STUDIO.md).

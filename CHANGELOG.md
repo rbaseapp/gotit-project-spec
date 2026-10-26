@@ -750,3 +750,7 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons deployed to DEV
 
 Common adaptive planning and server activity progression cover current and future unit, course, standalone and structured lessons. Preserves concurrently delivered path choices and legacy sessions. DEV migration, three exact-source Live deployments, real synthetic provider acceptance and final checks are recorded in [document 48](docs/48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).
+
+## 2026-10-26 — Curriculum studio, Admin DEV
+
+Deployed curriculum studio and monthly editing verification to Admin DEV with matching Core/Backend. Learner Web changes remain local; no content publication or production mutation. [Canonical release evidence](docs/49_CURRICULUM_STUDIO.md).

@@ -1,0 +1,137 @@
+{
+  "environment": "DEV",
+  "productionChanged": false,
+  "services": [
+    {
+      "component": "Core",
+      "commit": "1e5a70ec6cfffd5f34cfd8173cf6ca070168fb79",
+      "previousCommit": "4d8ec3efa0e1059aa6fb9eeb8dd0b4a5709f1e3c",
+      "service": "srv-dar6gp942hec73d6b8bg",
+      "deploy": "dep-dbfjnm29lscs73addsdg",
+      "status": "live",
+      "finishedAt": "2026-10-26T11:39:45.805Z"
+    },
+    {
+      "component": "Backend",
+      "commit": "26d700dbf6cfe79b502764919dd0936610d932d0",
+      "previousCommit": "05411acd751af48b9c5993fc4985df229caa687e",
+      "service": "srv-dar6ei7f3r2c73balbp0",
+      "deploy": "dep-dbfjoq2jnfac73cl1lc0",
+      "status": "live",
+      "finishedAt": "2026-10-26T11:42:05.975Z"
+    },
+    {
+      "component": "Admin",
+      "commit": "3e30ebe8a61f3cf4eb059429806b36ac2ddd8b93",
+      "previousCommit": "b126ff87b29101f2e1d7c8f4d57d7b67a8278483",
+      "service": "srv-dbael83bc2fs73b3u7f0",
+      "deploy": "dep-dbfjol1srm7s73f86neg",
+      "status": "live",
+      "finishedAt": "2026-10-26T11:42:26.501Z"
+    }
+  ],
+  "verification": {
+    "coreTests": 36,
+    "coreBuild": true,
+    "adminTests": 56,
+    "adminTypecheckBuild": true,
+    "backendTests": 336,
+    "backendBuild": true,
+    "backendDockerBuild": true,
+    "postgresTests": 7,
+    "backendFormatting": {
+      "passed": false,
+      "filesReported": 292,
+      "scope": "Full repository; includes unchanged DEV baseline files. No formatting cleanup in this release."
+    }
+  },
+  "smoke": {
+    "at": "2026-10-26T11:44:35.474Z",
+    "environment": "DEV",
+    "health": [
+      {
+        "url": "https://gotit-admin-dev.onrender.com/ready",
+        "status": 200,
+        "body": {
+          "status": "ready",
+          "service": "gotit-admin"
+        }
+      },
+      {
+        "url": "https://gotit-dev-backend.onrender.com/ready",
+        "status": 200,
+        "body": {
+          "status": "ready",
+          "service": "gotit-backend",
+          "dependencies": {
+            "database": "ok"
+          },
+          "requestId": "84c38d1e-da45-4da5-9fd5-116dab54fac9"
+        }
+      },
+      {
+        "url": "https://rbase-dev-core-platforms.onrender.com/ready",
+        "status": 200,
+        "body": {
+          "status": "ready"
+        }
+      }
+    ],
+    "anonymous": [
+      {
+        "path": "/admin-api/authoring",
+        "status": 401
+      },
+      {
+        "path": "/admin-api/units/00000000-0000-4000-8000-000000000001/history",
+        "status": 401
+      }
+    ],
+    "adminBuild": {
+      "rootStatus": 200,
+      "asset": "/assets/index-BLQEqyNt.js",
+      "assetStatus": 200,
+      "sha256": "1c05492b8fdb7bce7afd4de39da2169d6aca2b2bac8c973852227ef725cbb047",
+      "matchesVerifiedBuild": true
+    }
+  },
+  "migration": {
+    "at": "2026-10-26T11:40:26.036Z",
+    "identity": {
+      "db": "gotit_dev",
+      "role": "gotit_dev_user"
+    },
+    "pending": [
+      "1792970000000_curriculum-studio"
+    ],
+    "preflight": {
+      "schema": "ok",
+      "privileges": "ok",
+      "role": "product-only",
+      "operationalTables": 47
+    },
+    "newTables": {
+      "history": true,
+      "readings": true,
+      "sequence": true
+    },
+    "applied": "1792970000000_curriculum-studio"
+  },
+  "backup": {
+    "bytes": 24840508,
+    "sha256": "bcbe586e8f974404ab5e1d6bda063483a10fdca905f88e54af1cebc7b810733a",
+    "entries": 486
+  },
+  "limits": [
+    "No authenticated hosted editing, MFA-cookie, or live AI-provider acceptance in this rollout",
+    "Learner Web changes remain local and were not deployed",
+    "Existing original working trees remain uncommitted; release worktrees preserve the newer live DEV fixes",
+    "Transient cold-start request errors preceded Admin Live; Core old instance shutdown emitted SIGTERM; post-release application errors checked separately"
+  ],
+  "postLiveErrorLogs": {
+    "since": "2026-10-26T11:43:00Z",
+    "Admin": 0,
+    "Backend": 0,
+    "Core": 0
+  }
+}

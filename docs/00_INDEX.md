@@ -192,3 +192,7 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## Adaptive private lessons — DEV release, 2026-10-21
 
 [48 — Adaptive private lessons](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21) owns the common planner, independent review/exclusions, authoritative activities, compatibility and exact DEV deployment evidence.
+
+## 2026-10-26 — Curriculum studio, Admin DEV
+
+Admin curriculum studio, drafts/history, AI proposals and 30-day editing verification are Live in DEV. Learner Web updates remain local. [Canonical release evidence](49_CURRICULUM_STUDIO.md).

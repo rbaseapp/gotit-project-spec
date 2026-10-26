@@ -465,3 +465,7 @@ FR-PATH-CHOICES / UC-PATH-CHOICES / P-LEARNING-NAVIGATION: prepared programs and
 ## 2026-10-21 — Adaptive private lessons, DEV Live
 
 Dedicated migration `1792640000000` applied after a fresh DEV backup; runtime preflight passed. Exact Backend/Web/Admin commits are Live, four readiness checks and encoded lesson deep links passed, and one real synthetic provider check passed with 17 reviewed activities. Preserve the additive schema and old-session compatibility on rollback. [Canonical rollout and limits](48_ADAPTIVE_PRIVATE_LESSONS_PROPOSAL.md#14-פריסת-dev-ובדיקת-ספק--2026-10-21).
+
+## 2026-10-26 — Curriculum studio, Admin DEV
+
+Core/Backend/Admin are Live in DEV after a verified backup, additive migration and restricted runtime grants. Production is unchanged; retain schema on code rollback. [Canonical release evidence](49_CURRICULUM_STUDIO.md).
