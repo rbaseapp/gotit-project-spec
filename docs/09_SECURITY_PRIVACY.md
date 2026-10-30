@@ -269,3 +269,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 AI assignment accepts only candidate UUIDs from the trusted application. Saved context is bounded/untrusted input; shared concepts retain generic lexical output, not raw source sentences. Worker usage is owner-scoped and quota bounded. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Only the current server-authenticated application role grants administrator access; cached Chrome roles and client input never grant server authority. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

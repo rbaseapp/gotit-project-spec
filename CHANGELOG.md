@@ -717,3 +717,7 @@ Realtime previews and credential-free snapshots, and measured lesson statistics.
 ## 2026-10-16 - Automatic lexical meaning assignment
 
 Implemented local AI classification, durable versioned queue/bindings, historical backfill and Admin status. New migration 1792194000000; live rollout pending. [Contract](docs/44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Fix administrator PRO eligibility in Chrome, remove admin commercial AI/minute quotas, and clarify unlimited access in Web. No account promotion or paid subscription was created. [Canonical contract and release](docs/50_ADMIN_PRO_ACCESS.md).

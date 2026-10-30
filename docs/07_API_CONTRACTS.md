@@ -437,3 +437,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Capture/media contracts remain unchanged. Admin word reads add conceptAssignmentStatus and sanitized conceptAssignmentError; per-item bindings take precedence over lexical fallback. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Minute balance has additive optional unlimited=true for admin; reading quota uses its existing nullable contract. No route or request shape changes. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

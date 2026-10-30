@@ -226,3 +226,7 @@ FR-CON-07/08 removes manual setup from image replacement: cards offer an inline 
 ## Automatic concept assignment - 2026-10-16
 
 Every learner-word creation/edit path enqueues automatic meaning work transactionally. The bounded worker uses AI, records scoped revision-aware bindings and retries durable failures. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Trusted administrator scopes bypass commercial daily AI, monthly reading and purchased-minute allowances. Technical request/ownership checks remain. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

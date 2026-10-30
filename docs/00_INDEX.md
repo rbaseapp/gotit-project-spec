@@ -181,3 +181,7 @@ Admin editing, Realtime sections/stages/parameters, browser and provider request
 ## Automatic concept assignment - 2026-10-16
 
 Automatic AI meaning assignment, durable jobs and historical-word backfill are implemented locally; see the canonical concepts contract. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Unlimited PRO access for current administrators in Web and Chrome; production release and extension rollout limits. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

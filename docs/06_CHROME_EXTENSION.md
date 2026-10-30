@@ -152,3 +152,7 @@ Chrome `_locales` וה־UI תומכים ar/de/en/es/fr/he/ru/zh. ה־popup וה�
 - permission חדש מוצדק ומתועד.
 - tests ל־state/messages/settings/i18n ו־`verify-build` עוברים.
 - נבדק ידנית Chrome profile נקי ו־Web Store build.
+
+## 2026-10-30 - Administrator PRO access
+
+Current Core roles are refreshed at bootstrap; popup/options/content share the administrator-or-paid PRO predicate. v1.4.6 builds are local until installed/reloaded or published. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

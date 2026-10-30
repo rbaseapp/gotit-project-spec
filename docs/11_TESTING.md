@@ -543,3 +543,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Automatic-concept tests exercise the Arabic owner example, concurrent reuse, provider failure/replay, stale revisions, scope, queue priority and migration/backfill on disposable PostgreSQL. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Backend 249, Web 258 plus 20 gateway, and Chrome 67 checks passed. Read-only reported-account billing verification passed; installed Chrome and authenticated HTTP acceptance remain unverified. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

@@ -476,3 +476,7 @@ with existing supported settings, isolated category saves, eight locales and
 320px RTL/LTR. Unsupported account actions remain explicitly unavailable per
 owner selection. No API/schema/Core/Backend/Chrome change. Local validation and
 exact deployment status are owned by the [canonical settings contract](42_SETTINGS_DESIGN_DEV.md).
+
+## 2026-10-30 - Administrator PRO access
+
+Administrator billing, reading and tutor screens show unlimited PRO access; finite balances do not imply a purchase requirement. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

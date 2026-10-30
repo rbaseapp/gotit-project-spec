@@ -757,3 +757,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 SCR-ADM-WORD now shows automatic waiting/checking/retry states and refreshes list/detail every ten seconds. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Chrome popup/options AI method selection and Web subscription/billing/article/tutor screens reflect current administrator access rather than paid-plan state alone. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

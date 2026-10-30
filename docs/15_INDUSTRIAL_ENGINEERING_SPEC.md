@@ -383,3 +383,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Process: confirm/save word -> durable queue -> AI meaning resolution -> existing/new concept -> scoped binding -> shared image. Control points: claim, owner/revision checks, candidate allowlist, quotas and retry. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 — Current administrator capability resolution
+
+P01 authentication and P10 entitlement checks now refresh Chrome roles through Core before choosing PRO capabilities. Owning services independently enforce current administrator exemptions; no learning-evidence or payment process changes. [Contract and release](50_ADMIN_PRO_ACCESS.md).

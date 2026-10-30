@@ -452,3 +452,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Apply migration 1792192000000 before Backend/Admin. Existing OPENAI_API_KEY enables processing; OPENAI_CONCEPT_MODEL optionally overrides translation/private-lesson model selection. Rehearse generated-column/index locks and bounded historical backfill costs. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Backend/Web production fixes deploy from the previous Live commits without migrations or Core/account/billing changes. Extension installation/publication is a separate step. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

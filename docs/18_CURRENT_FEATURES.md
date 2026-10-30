@@ -525,3 +525,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Automatic AI meaning assignment and historical-word backfill are locally implemented and verified; rollout remains pending. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Administrator PRO access is implemented and verified; backend/frontend production release evidence and Chrome installation limits are recorded separately. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

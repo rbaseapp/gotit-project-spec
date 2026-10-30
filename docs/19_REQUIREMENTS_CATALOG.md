@@ -395,3 +395,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 FR-CON-07 automatic durable assignment; FR-CON-08 AI disambiguation and existing/new meaning selection; FR-CON-09 historical-word backfill. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+FR-ADMIN-PRO: every current administrator receives all PRO learning capabilities without commercial usage quotas; ordinary-account restrictions and scoped ownership are preserved. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

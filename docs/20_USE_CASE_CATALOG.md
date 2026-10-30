@@ -409,3 +409,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 UC-CON-04: new-language word resolves to an existing meaning or a new one; UC-CON-05: provider failure resumes from a durable job; UC-CON-06: old saved words are classified by bounded backfill. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+Existing admin opens Chrome or Web -> current role verified -> full PRO features/unlimited usage displayed -> owning service independently authorizes the operation. Demotion removes the exemption. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).

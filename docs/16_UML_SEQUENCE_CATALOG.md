@@ -164,3 +164,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 Automatic sequence: capture transaction commits word+job -> worker claims -> AI descriptor -> indexed candidates -> AI decision -> short revision-checked publication transaction -> Admin refresh and image reuse. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 — Current administrator capability resolution
+
+P01 authentication and P10 entitlement checks now refresh Chrome roles through Core before choosing PRO capabilities. Owning services independently enforce current administrator exemptions; no learning-evidence or payment process changes. [Contract and release](50_ADMIN_PRO_ACCESS.md).

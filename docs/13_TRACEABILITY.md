@@ -573,3 +573,7 @@ and deployment remain separate.
 ## Automatic concept assignment - 2026-10-16
 
 FR-CON-07-09 map automatic assignment/backfill to queue triggers, semantic provider/worker, effective image bindings and Admin pending/retry status, with fast/PostgreSQL/browser evidence. [Canonical contract](44_MULTILINGUAL_CONCEPTS_AND_IMAGES.md#automatic-assignment---2026-10-16).
+
+## 2026-10-30 - Administrator PRO access
+
+FR-ADMIN-PRO: current administrator role -> centralized Chrome capability + Backend quota/minute exemption + Web labels -> promotion/demotion, ordinary exhaustion and no purchased-grant spending regressions. [Canonical contract and release](50_ADMIN_PRO_ACCESS.md).
