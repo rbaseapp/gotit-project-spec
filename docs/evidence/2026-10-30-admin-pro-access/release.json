@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-30T10:41:55.827Z",
+  "environment": "Production",
+  "services": {
+    "backend": {
+      "id": "srv-dak3h50jo6nc73bc43h0",
+      "sha": "9bc79a7c193d9a4bb481df325f5b78a375b08820",
+      "url": "https://gotit-backend.onrender.com",
+      "deploy": "dep-dbi76kui0phs73d26q1g",
+      "status": "live",
+      "finishedAt": "2026-10-30T10:37:57.461256Z",
+      "readyStatus": 200,
+      "applicationErrorLogs": 0,
+      "moreErrors": false
+    },
+    "front": {
+      "id": "srv-dal8smbm8hqs73fabfng",
+      "sha": "39f3087d82f8a9ee3ad0a39064abb2c49eb53957",
+      "url": "https://gotit.rbaseapp.com",
+      "deploy": "dep-dbi77cflk1mc73fg15j0",
+      "status": "live",
+      "finishedAt": "2026-10-30T10:39:38.607304Z",
+      "readyStatus": 200,
+      "applicationErrorLogs": 0,
+      "moreErrors": false
+    }
+  },
+  "verification": {
+    "backendFast": 249,
+    "backendBuild": true,
+    "web": {
+      "tests": 258,
+      "gateway": 20,
+      "typecheck": true,
+      "lint": true,
+      "build": true
+    },
+    "chrome": {
+      "tests": 67,
+      "productionBuild": true,
+      "devBuild": true,
+      "storePackaged": true,
+      "storePublished": false,
+      "installedExtensionReloaded": false
+    }
+  },
+  "account": {
+    "checkedAt": "2026-10-30T10:38:20.803Z",
+    "environment": "Production",
+    "readOnly": true,
+    "role": "admin",
+    "verified": true,
+    "tier": "paid",
+    "access": true,
+    "source": "administrator",
+    "plan": "admin",
+    "entitlementCount": 7
+  },
+  "extensionArtifact": {
+    "version": "1.4.6",
+    "storeKeyAbsent": true,
+    "containsCurrentCoreRoleCheck": true,
+    "sameProductionWorker": true,
+    "zipBytes": 195456,
+    "zipSha256": "3bb6f1c6e1c49b16995169f7d6f77675920b23d13252743112b2b3ec23aa8adb"
+  },
+  "limits": [
+    "Local Docker engine unavailable; actual Docker deployment built successfully on Render",
+    "No authenticated browser/installed-extension acceptance; browser access host unavailable",
+    "No migration, Core/account mutation or subscription/payment operation",
+    "DEV role for the reported email is user and was not changed",
+    "Existing original working-tree edits, including concurrent Chrome session recovery, were preserved"
+  ],
+  "webAsset": {
+    "path": "/assets/index-DctNF3gR.js",
+    "status": 200,
+    "sha256": "18f07eff0b717d2d250426097ac15191f83fe4fee2896daf336ba090cf4071c0",
+    "containsAdminUnlimitedCopy": true
+  }
+}
